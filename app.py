@@ -3,7 +3,7 @@ import sys
 def upgrade_pip():
     subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "pip"])
 
-upgrade_pip()
+#upgrade_pip()
 import sys
 from plotting.plotting import visualize_plots, visualize_table
 def install_package(package):
