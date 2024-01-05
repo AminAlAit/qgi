@@ -43,8 +43,8 @@ from streamlit_extras.customize_running import center_running
 st.set_page_config(layout = "wide", page_title = "QG Intelligence", page_icon = "📈")
 center_running()
 st.sidebar.markdown("# QG Intelligence")
-old_ppr_df = pd.read_csv(r"/workspaces/qgi/data/ppr/new_ppr.csv")
-new_ppr_df = pd.read_csv(r"/workspaces/qgi/data/ppr/old_ppr.csv")
+old_ppr_df = pd.read_csv(r"\data\ppr\new_ppr.csv")
+new_ppr_df = pd.read_csv(r"\data\ppr\old_ppr.csv")
 
 
 # def image_to_base64(img_path, output_size = (64, 64)):
