@@ -1,4 +1,5 @@
 import subprocess
+import sys
 def upgrade_pip():
     subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "pip"])
 
