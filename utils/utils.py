@@ -283,7 +283,9 @@ def apply_advanced_filters(display_df: pd.DataFrame, DISPLAY_DF_NEW_COLUMN_NAMES
 
 def get_country_a_from_user():
     countries_df = get_countries_a_list()
+    st.dataframe(countries_df)
     countries_df.sort_values("country")
+    st.dataframe(countries_df)
     return st.sidebar.selectbox("Select Any Country", [""] + list(countries_df["country"])), countries_df
 
 
@@ -336,11 +338,12 @@ def get_country_b_and_id_from_user(display_df: pd.DataFrame, DISPLAY_DF_NEW_COLU
     st.write(countries_a_ids)
     if not isinstance(display_df, pd.DataFrame) or len(display_df) == 0:
         return ["", "", display_df]
-    
+
+
     ## Country B Filtering
     pattern_power_score_col_name = DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_PATTERN_POWER_SCORE_RENAME"]
     country_b_col_name           = DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"]
-    
+
     countries_b = [""] + remove_duplicates(list(display_df[country_b_col_name]))
 
     # countries_b_ids = remove_duplicates(display_df.sort_values(by = pattern_power_score_col_name, ascending = False)\
