@@ -332,6 +332,8 @@ def replace_country_ids_with_names(df, column_name, countries_a, countries_a_ids
 
 
 def get_country_b_and_id_from_user(display_df: pd.DataFrame, DISPLAY_DF_NEW_COLUMN_NAMES: dict, countries_a, countries_a_ids) -> str:
+    st.write(countries_a)
+    st.write(countries_a_ids)
     if not isinstance(display_df, pd.DataFrame) or len(display_df) == 0:
         return ["", "", display_df]
     
