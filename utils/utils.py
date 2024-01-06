@@ -36,8 +36,7 @@ def process_display_dataframe(df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_a, coun
 
     if len(df) < 1:
         return df
-    
-    st.dataframe(df)
+
     st.write(countries_a)
     st.write(countries_a_ids)
 
@@ -52,13 +51,17 @@ def process_display_dataframe(df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_a, coun
         "Power":             DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_PATTERN_POWER_SCORE_RENAME"]
     }, inplace = True)
 
+    st.dataframe(df)
+
     # Get country mapping using DatabaseManager
     #country_mapping_query = "SELECT id, name_1 FROM country"
     #country_mapping_df = db.execute_this_query(country_mapping_query)
     country_mapping = dict(zip(countries_a_ids, countries_a))
 
     # Replace country IDs with names
-    df[DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"]] = df[DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"]].map(country_mapping)
+    #df[DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"]] = df[DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"]].map(country_mapping)
+    df = replace_country_ids_with_names(df, DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"], countries_a, countries_a_ids)
+    st.dataframe(df)
 
     # Convert correlation to percentage
     if DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_AVERAGE_CORRELATION_RENAME"] in df.columns:
