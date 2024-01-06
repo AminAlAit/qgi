@@ -95,19 +95,17 @@ def str_to_list(s):
 def convert_names_to_ids(df, countries_df, column_name):
     country_to_id = dict(zip(countries_df["id"], countries_df["country"]))
 
-    new_col = []
-    other = []
-    for country_id in df[column_name]:
-        for map_id in list(country_to_id.keys()):
-            if str(country_id) == str(map_id):
-                new_col.append(country_to_id[map_id])
-            else:
-                other.append(country_id)
-    st.write(len(new_col))
-    st.write(len(other))
-    st.write(len(list(set(other))))
-    st.write(list(set(other)))
-    df[column_name] = new_col
+    st.write(country_to_id)
+
+    df[column_name] = df[column_name].map(country_to_id)
+    
+    # for country_id in df[column_name]:
+    #     for map_id in list(country_to_id.keys()):
+    #         if str(country_id) == str(map_id):
+    #             new_col.append(country_to_id[map_id])
+    #         else:
+    #             other.append(country_id)
+    # df[column_name] = new_col
 
     return df
 
