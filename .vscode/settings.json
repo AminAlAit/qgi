@@ -1,7 +1,9 @@
 {
     "cSpell.words": [
+        "apply_advanced_filters",
         "dataframe",
         "dotlottie",
-        "echarts"
+        "echarts",
+        "streamlit"
     ]
 }

@@ -1,19 +1,15 @@
-import subprocess
+"""main script"""
+
 import sys
-def install_package(package):
-    #subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "pip"])
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-install_package("streamlit-echarts")
-install_package("streamlit-extras")
-install_package("streamlit-lottie")
+import subprocess
 import pandas as pd
+import streamlit as st
 from utils.patterns import compare_rankings, extract_and_rank_patterns_for_country
 from plotting.plotting import visualize_plots, visualize_table
 from utils.utils import (
     apply_advanced_filters,
     get_country_a_from_user,
     get_country_b_and_id_from_user,
-    get_id_by_value,
     get_pattern_length_from_user,
     get_start_year_a,
     get_start_year_b,
@@ -21,12 +17,16 @@ from utils.utils import (
     prepare_display_df_for_viz,
     process_display_dataframe,
     rename_display_df_columns,
-    run_requirements,
-)
+    run_requirements)
+def install_package(package):
+    """dummy docstring"""
+    #subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "pip"])
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+install_package("streamlit-echarts")
+install_package("streamlit-extras")
+install_package("streamlit-lottie")
 run_requirements()
-import streamlit as st
 from streamlit_extras.customize_running import center_running
-import os
 
 
 ## TODO optimize requirements.txt to include only libraries we use
@@ -36,7 +36,7 @@ import os
 ## TODO country_a South Africa, Antigua and Barbuda returns error
 ## TODO categorize indexes
 ## TODO consolidate all strings in the streamlit project into global variables, for better centralization maybe have another constant.py script here too.
-## TODO checkout similar page-runtime settings 
+## TODO checkout similar page-runtime settings
 st.set_page_config(layout = "wide", page_title = "QG Intelligence", page_icon = "📈")
 center_running()
 
