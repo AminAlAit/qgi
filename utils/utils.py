@@ -99,6 +99,52 @@ def str_to_list(s):
     return list(ast.literal_eval(s))
 
 
+def convert_names_to_ids(df, countries_df, column_name):
+    # Creating a mapping dictionary from the lookup DataFrame for reverse mapping
+    country_to_id = dict(zip(countries_df["country"], countries_df["id"]))
+
+    # Mapping the country names to IDs
+    df[column_name] = df[column_name].map(country_to_id)
+
+    return df
+
+
+def get_country_id(countries_df, country_name):
+    """
+    Return the ID for a given country name.
+
+    Parameters:
+    countries_df (pd.DataFrame): DataFrame containing 'country' and 'id' columns.
+    country_name (str): The name of the country.
+
+    Returns:
+    str: The ID of the given country, or None if not found.
+    """
+    match = countries_df[countries_df["country"] == country_name]
+    if not match.empty:
+        return match["id"].iloc[0]
+    else:
+        return None
+
+
+def get_country_name(countries_df, country_id):
+    """
+    Return the country name for a given ID.
+
+    Parameters:
+    countries_df (pd.DataFrame): DataFrame containing 'country' and 'id' columns.
+    country_id (str): The ID of the country.
+
+    Returns:
+    str: The name of the country corresponding to the given ID, or None if not found.
+    """
+    match = countries_df[countries_df["id"] == country_id]
+    if not match.empty:
+        return match["country"].iloc[0]
+    else:
+        return None
+
+
 def combine_values(df_row):
     # Convert string representations to lists
     values_a = str_to_list(df_row["index_values_a"])

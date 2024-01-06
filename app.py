@@ -7,6 +7,7 @@ import streamlit as st
 from utils.patterns import compare_rankings, extract_and_rank_patterns_for_country
 from plotting.plotting import visualize_plots, visualize_table
 from utils.utils import (
+    get_country_id,
     apply_advanced_filters,
     get_country_a_from_user,
     get_country_b_and_id_from_user,
@@ -71,8 +72,8 @@ def show_search_page():
     country_a, countries_df                          = get_country_a_from_user()
     display_message                                  = f"\n### All Patterns for {country_a}"
     countries_ids, countries_a                       = list(countries_df["id"]), list(countries_df["country"])
-    
-    country_a_id                                     = get_id_by_value(countries_ids, countries_a, country_a)
+
+    country_a_id                                     = get_country_id(countries_df, country_a)
     display_df                                       = extract_and_rank_patterns_for_country(country_a_id, country_a)
 
     DISPLAY_DF_NEW_COLUMN_NAMES                      = rename_display_df_columns(country_a)
