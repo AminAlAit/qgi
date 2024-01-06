@@ -62,24 +62,24 @@ def extract_and_rank_patterns_for_country(country_a_id: str, country_a):
         return pd.DataFrame()
     try:
         grouped = pd.read_csv(COUNTRIES_PATH + country_a_id + "_" + country_a + "_patterns.csv")
-        st.write(list(grouped))
-        # Converting columns into numericals
-        grouped["pattern_length_fk"] = pd.to_numeric(grouped["pattern_length_fk"], errors = "coerce")
-        grouped["correlation"]       = pd.to_numeric(grouped["correlation"],       errors = "coerce")
+        return grouped
+        # # Converting columns into numericals
+        # grouped["pattern_length_fk"] = pd.to_numeric(grouped["pattern_length_fk"], errors = "coerce")
+        # grouped["correlation"]       = pd.to_numeric(grouped["correlation"],       errors = "coerce")
 
-        # Group by "country_b_id_fk" and "pattern_length"
-        grouped = grouped.groupby(["country_b_id_fk", "pattern_length_fk", "start_year_a_fk", "start_year_b_fk"]).agg(
-            indexes  = ("index_name_fk", "nunique"),
-            avg_corr = ("correlation", "mean")
-        ).reset_index()
+        # # Group by "country_b_id_fk" and "pattern_length"
+        # grouped = grouped.groupby(["country_b_id_fk", "pattern_length_fk", "start_year_a_fk", "start_year_b_fk"]).agg(
+        #     indexes  = ("index_name_fk", "nunique"),
+        #     avg_corr = ("correlation", "mean")
+        # ).reset_index()
         
         # Calculate the "Power" score using weighted sum
-        grouped["Power"] = (grouped["pattern_length_fk"] * WEIGHT_PATTERN_LENGTH +
-                            grouped["indexes"]           * WEIGHT_INDEXES +
-                            grouped["avg_corr"]          * WEIGHT_AVERAGE_CORR)
+        # grouped["Power"] = (grouped["pattern_length_fk"] * WEIGHT_PATTERN_LENGTH +
+        #                     grouped["indexes"]           * WEIGHT_INDEXES +
+        #                     grouped["avg_corr"]          * WEIGHT_AVERAGE_CORR)
         
-        display_df_cols = ["country_b_id_fk", "start_year_a_fk", "start_year_b_fk", "pattern_length_fk", "indexes", "avg_corr", "Power"]
-        grouped         = pd.DataFrame(grouped)[display_df_cols]
+        # display_df_cols = ["country_b_id_fk", "start_year_a_fk", "start_year_b_fk", "pattern_length_fk", "indexes", "avg_corr", "Power"]
+        # grouped         = pd.DataFrame(grouped)[display_df_cols]
 
         # Sort the DataFrame based on the "Power" score
         sorted_patterns = grouped.sort_values(by = "Power", ascending = False)
