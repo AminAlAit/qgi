@@ -48,14 +48,10 @@ def process_display_dataframe(df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_df):
         "Power":             DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_PATTERN_POWER_SCORE_RENAME"]
     }, inplace = True)
 
-    st.dataframe(df)
-
     # Replace country IDs with names
     st.write(DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"])
     st.dataframe(countries_df)
     df = convert_names_to_ids(df, countries_df, DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"])
-
-    st.dataframe(df)
 
     # Convert correlation to percentage
     if DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_AVERAGE_CORRELATION_RENAME"] in df.columns:
@@ -101,7 +97,7 @@ def str_to_list(s):
 def convert_names_to_ids(df, countries_df, column_name):
     # Creating a mapping dictionary from the lookup DataFrame for reverse mapping
     country_to_id = dict(zip(countries_df["country"], countries_df["id"]))
-
+    st.write(country_to_id)
     # Mapping the country names to IDs
     df[column_name] = df[column_name].map(country_to_id)
 
