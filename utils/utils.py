@@ -279,6 +279,8 @@ def get_country_a_from_user():
 
 
 def get_id_by_value(countries_a_ids, countries_a, country_a):
+    if country_a == "":
+        return ""
     return countries_a_ids[countries_a.index(country_a)]
 
 
