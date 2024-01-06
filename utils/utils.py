@@ -93,6 +93,7 @@ def str_to_list(s):
 
 
 def convert_names_to_ids(df, countries_df, column_name):
+    st.write("111111111111111111111111111111")
     country_to_id = dict(zip(countries_df['country'], countries_df['id']))
 
     st.write(country_to_id)
