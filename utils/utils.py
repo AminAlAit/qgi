@@ -49,8 +49,6 @@ def process_display_dataframe(df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_df):
     }, inplace = True)
 
     # Replace country IDs with names
-    st.write(DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"])
-
     df = convert_names_to_ids(df, countries_df, DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"])
 
     # Convert correlation to percentage
@@ -97,18 +95,17 @@ def str_to_list(s):
 def convert_names_to_ids(df, countries_df, column_name):
     country_to_id = dict(zip(countries_df["id"], countries_df["country"]))
 
-    st.write(df[column_name][0])
-    st.write(str(type(df[column_name][0])))
-    
-    st.write(countries_df["id"][0])
-    st.write(str(type(countries_df["id"][0])))
-
     new_col = []
+    other = []
     for country_id in df[column_name]:
         for map_id in list(country_to_id.keys()):
             if str(country_id) == str(map_id):
                 new_col.append(country_to_id[map_id])
+            else:
+                other.append(country_id)
     df[column_name] = new_col
+    
+    st.write(other)
 
     return df
 
