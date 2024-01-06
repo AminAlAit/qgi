@@ -40,7 +40,7 @@ def clean_list_edges(lst):
     return lst
 
 
-def plot_index_values(db, df_row, method, align):
+def plot_index_values(df_row, method, align):
     st.markdown(f"### {substitute_index_display_names(df_row)}")
 
     # Combine values into a DataFrame
@@ -229,7 +229,7 @@ def visualize_table(df, display_message):
             use_container_width = True)
 
 
-def visualize_plots(db, df, five_params, col1, col2, method, align):
+def visualize_plots(df, five_params, col1, col2, method, align):
     if isinstance(df, pd.DataFrame) and len(df) > 0 and validate_five_params(five_params):
         # if not warnings.empty:
         #     st.markdown(f"### {country_a} can Learn from These Past Patterns")
@@ -252,8 +252,8 @@ def visualize_plots(db, df, five_params, col1, col2, method, align):
             if i == 1:
                 i = 2
                 with col1:
-                    plot_index_values(db, row, method, align)
+                    plot_index_values(row, method, align)
             elif i == 2:
                 i = 1
                 with col2:
-                    plot_index_values(db, row, method, align)
+                    plot_index_values(row, method, align)

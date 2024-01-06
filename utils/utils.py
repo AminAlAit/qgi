@@ -16,7 +16,7 @@ COUNTRY_PATTERN_TABLE_NAME                  = "country_pattern"
 COUNTRY_PATTERN_COUNTRY_A_ID_FK_COLUMN_NAME = "country_a_id_fk"
 
 
-def process_display_dataframe(db, df, DISPLAY_DF_NEW_COLUMN_NAMES):
+def process_display_dataframe(df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_a, countries_a_ids):
     """
     Processes a DataFrame by renaming columns, replacing country IDs with names, and converting correlation values to percentages.
 
@@ -40,9 +40,9 @@ def process_display_dataframe(db, df, DISPLAY_DF_NEW_COLUMN_NAMES):
     }, inplace = True)
 
     # Get country mapping using DatabaseManager
-    country_mapping_query = "SELECT id, name_1 FROM country"
-    country_mapping_df = db.execute_this_query(country_mapping_query)
-    country_mapping = dict(zip(country_mapping_df['id'], country_mapping_df['name_1']))
+    #country_mapping_query = "SELECT id, name_1 FROM country"
+    #country_mapping_df = db.execute_this_query(country_mapping_query)
+    country_mapping = dict(zip(countries_a_ids, countries_a))
 
     # Replace country IDs with names
     df[DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"]] = df[DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"]].map(country_mapping)
@@ -300,7 +300,7 @@ def rename_display_df_columns(country_a: str) -> dict:
     }
 
 
-def replace_country_ids_with_names(df, column_name, db):
+def replace_country_ids_with_names(df, column_name, countries_a, countries_a_ids):
     """
     Replaces country IDs in a specified column with country names.
 
@@ -315,14 +315,14 @@ def replace_country_ids_with_names(df, column_name, db):
 
     if column_name in df.columns:
         # Replace each country ID in the column with its corresponding country name
-        df[column_name] = df[column_name].apply(lambda x: db.get_value_by_id("country", x, "name_1") if pd.notnull(x) else x)
+        df[column_name] = df[column_name].apply(lambda x: get_value_by_id(countries_a_ids, countries_a, x) if pd.notnull(x) else x)
     else:
         print(f"Column '{column_name}' not found in the DataFrame.")
 
     return df
 
 
-def get_country_b_and_id_from_user(db, display_df: pd.DataFrame, DISPLAY_DF_NEW_COLUMN_NAMES: dict) -> str:
+def get_country_b_and_id_from_user(display_df: pd.DataFrame, DISPLAY_DF_NEW_COLUMN_NAMES: dict, countries_a, countries_a_ids) -> str:
     if not isinstance(display_df, pd.DataFrame) or len(display_df) == 0:
         return ["", "", display_df]
     
@@ -344,7 +344,7 @@ def get_country_b_and_id_from_user(db, display_df: pd.DataFrame, DISPLAY_DF_NEW_
         st.sidebar.selectbox("Select Second Country", [countries_b[1]])
         country_b = countries_b[1]
 
-    country_b_id = db.get_id_by_value("country", country_b, "name_1")
+    country_b_id = get_id_by_value(countries_a_ids, countries_a, country_b)
     return [country_b, country_b_id, display_df]
 
 
@@ -367,7 +367,6 @@ def get_pattern_length_from_user(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, countr
     return [patt_len, display_message, display_df]
 
 def get_start_year_a(
-    db,
     display_message,
     display_df,
     country_a,
@@ -393,8 +392,14 @@ def get_start_year_a(
     query += f"AND `pattern_length_fk` = {patt_len} "
     query += f"AND `correlation` >= {min_corr} AND `correlation` <= {max_corr}"
     #query += f"AND `correlation` BETWEEN {min_corr} AND {max_corr}"
-    df     = db.execute_this_query(query)
-    
+    #df     = db.execute_this_query(query)
+
+    df = pd.read_csv(COUNTRIES_PATH + country_a_id + "_" + country_a + "_patterns.csv")
+    df = df[df["country_b_id_fk"] == country_b_id]
+    df = df[df["pattern_length_fk"] == patt_len]
+    df = df[df["avg_corr"] >= min_corr]
+    df = df[df["avg_corr"] <= max_corr]
+
     df["correlation"] = pd.to_numeric(df["correlation"], errors = "coerce")
     df                = filter_by_grouping_indexes(df, min_ind, max_ind)[0]
 
@@ -404,9 +409,9 @@ def get_start_year_a(
     else:
         st.sidebar.selectbox("Starting Year for " + country_a, [start_years_a[1]])
         start_year_a = start_years_a[1]
-    
+
     display_message = f"### All Patterns between {country_a} ({start_year_a}) and {country_b}"
-    
+
     return [start_year_a, display_message, display_df]
 
 
@@ -429,7 +434,7 @@ def get_start_year_b(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, start_year_a, coun
     return [start_year_b, display_df, display_message]
 
 
-def prepare_display_df_for_viz(db, display_df: pd.DataFrame, five_params: list):
+def prepare_display_df_for_viz(display_df: pd.DataFrame, country_a, five_params: list, countries_a, countries_a_ids):
     for param in five_params:
         if param == "":
             return display_df
@@ -440,19 +445,25 @@ def prepare_display_df_for_viz(db, display_df: pd.DataFrame, five_params: list):
     start_year_a = five_params[3]
     start_year_b = five_params[4]
     
-    query =  f"SELECT * FROM {COUNTRY_PATTERN_TABLE_NAME} " 
+    query =  f"SELECT * FROM {COUNTRY_PATTERN_TABLE_NAME} "
     query += f"WHERE `country_a_id_fk` = {country_a_id} "
     query += f"AND `country_b_id_fk` = {country_b_id} "
     query += f"AND `pattern_length_fk` = {patt_len} "
     query += f"AND `start_year_a_fk` = {start_year_a} "
     query += f"AND `start_year_b_fk` = {start_year_b}"
-    
-    display_df = db.execute_this_query(query)
+    #display_df = db.execute_this_query(query)
+
+    # country_b_id_fk,start_year_a_fk,start_year_b_fk,pattern_length_fk,indexes,avg_corr,Power
+    df = pd.read_csv(COUNTRIES_PATH + country_a_id + "_" + country_a + "_patterns.csv")
+    df = df[df["country_b_id_fk"] == country_b_id]
+    df = df[df["pattern_length_fk"] == patt_len]
+    df = df[df["start_year_a_fk"] == start_year_a]
+    df = df[df["start_year_b_fk"] == start_year_b]
 
     display_df.drop("unique_id", axis = 1, inplace = True)
     display_df = display_df.sort_values(by = "correlation", ascending = False)
-    display_df = replace_country_ids_with_names(display_df, "country_a_id_fk", db)
-    display_df = replace_country_ids_with_names(display_df, "country_b_id_fk", db)
+    display_df = replace_country_ids_with_names(display_df, "country_a_id_fk", countries_a, countries_a_ids)
+    display_df = replace_country_ids_with_names(display_df, "country_b_id_fk", countries_a, countries_a_ids)
     return display_df
 
 
@@ -466,10 +477,6 @@ def validate_five_params(lst):
 def merge_dataframes(df1, df2):
     combined_df = pd.concat([df1, df2], ignore_index = True)
     return combined_df
-
-
-def get_country_id_of_country_name(db, country_name):
-    return db.get_id_by_value("country", country_name, "name_1")
 
 
 def transformation_method_radio_buttons(five_params):

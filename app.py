@@ -77,22 +77,22 @@ def show_search_page():
     display_df                                       = extract_and_rank_patterns_for_country(country_a_id, country_a)
 
     DISPLAY_DF_NEW_COLUMN_NAMES                      = rename_display_df_columns(country_a)
-    display_df                                       = process_display_dataframe(db, display_df, DISPLAY_DF_NEW_COLUMN_NAMES)
+    display_df                                       = process_display_dataframe(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_a, countries_a_ids)
     display_df, min_corr, max_corr, min_ind, max_ind = apply_advanced_filters(display_df, DISPLAY_DF_NEW_COLUMN_NAMES)
 
-    country_b, country_b_id, display_df              = get_country_b_and_id_from_user(db, display_df, DISPLAY_DF_NEW_COLUMN_NAMES)
+    country_b, country_b_id, display_df              = get_country_b_and_id_from_user(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_a, countries_a_ids)
     patt_len, display_message, display_df            = get_pattern_length_from_user(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, country_a, country_b)
 
-    start_year_a, display_message, display_df        = get_start_year_a(db, display_message, display_df, country_a, country_a_id, country_b, country_b_id, patt_len, DISPLAY_DF_NEW_COLUMN_NAMES, min_corr, max_corr, min_ind, max_ind) # if patt_len != "" and display_message != "" else ["", "", display_df, ""]
+    start_year_a, display_message, display_df        = get_start_year_a(display_message, display_df, country_a, country_a_id, country_b, country_b_id, patt_len, DISPLAY_DF_NEW_COLUMN_NAMES, min_corr, max_corr, min_ind, max_ind) # if patt_len != "" and display_message != "" else ["", "", display_df, ""]
     start_year_b, display_df, display_message        = get_start_year_b(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, start_year_a, country_b, display_message, country_a)
 
-    display_df                                       = prepare_display_df_for_viz(db, display_df, [country_a_id, country_b_id, patt_len, start_year_a, start_year_b])
+    display_df                                       = prepare_display_df_for_viz(display_df, country_a, [country_a_id, country_b_id, patt_len, start_year_a, start_year_b], countries_a, countries_a_ids)
 
     five_params                                      = [country_a_id, country_a_id, patt_len, start_year_a, start_year_b]
     align, method                                    = plotting_transformations(five_params)
 
     visualize_table(display_df, display_message)
-    visualize_plots(db, display_df, five_params, col1, col2, method, align)
+    visualize_plots(display_df, five_params, col1, col2, method, align)
 
 
 show_search_page()

@@ -57,28 +57,6 @@ REGION_COLORS = {
 }
 
 
-def extract_and_rank_patterns_for_country_if_loop(country, rank_patterns = True):
-    try:
-        # Fetch data from the country-specific patterns table
-        table_name = f"{country}_patterns"
-        db = DatabaseManager()
-        df = db.fetch_table_data(table_name, close_connections = True)
-
-        # Group by "country_b" and "pattern_length", count unique "unique_id"
-        pattern_strength = df.groupby(["country_b", "pattern_length"])["index_name"].nunique()
-
-        # Sort the patterns by their strength if ranking is enabled
-        if rank_patterns:
-            sorted_patterns = pattern_strength.sort_values(ascending = False)
-            return sorted_patterns
-        else:
-            return pattern_strength
-
-    except Exception as e:
-        print(f"Error: {e}")
-        return None
-
-
 def extract_and_rank_patterns_for_country(country_a_id: str, country_a):
     try:
         grouped = pd.read_csv(COUNTRIES_PATH + country_a_id + "_" + country_a + "_pattern.csv")
@@ -107,37 +85,6 @@ def extract_and_rank_patterns_for_country(country_a_id: str, country_a):
 
     except Exception as e:
         print(f"Error occured in `extract_and_rank_patterns_for_country`: {e}")
-        return None
-
-
-def get_pattern_details(country, partner_country, pattern_length, start_year_a, start_year_b):
-    try:
-        # Define the table name
-        table_name = f"{country}_patterns"
-
-        # Fetch data from the country-specific patterns table
-        db = DatabaseManager()
-        df = db.fetch_table_data(table_name)
-
-        # Filter the DataFrame for the selected partner country and pattern length
-        filtered_df = df[(df["country_b"]  == partner_country) &\
-                     (df["pattern_length"] == pattern_length)  &\
-                     (df["start_year_a"]   == start_year_a)    &\
-                     (df["start_year_b"]   == start_year_b)]
-
-        # Selecting the required columns
-        details_columns = ["org", "version", "main_name", "index_name", "country_a", "country_b",
-                           "start_year_a", "end_year_a", "index_values_a", 
-                           "start_year_b", "end_year_b", "index_values_b", 
-                           "creation_date", "matrix_profile"]
-
-        # Extracting the details
-        pattern_details = filtered_df[details_columns]
-
-        return pattern_details
-
-    except Exception as e:
-        print(f"Error: {e}")
         return None
 
 
