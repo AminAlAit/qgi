@@ -26,8 +26,10 @@ from utils.utils import (
 run_requirements()
 import streamlit as st
 from streamlit_extras.customize_running import center_running
+import os
 
 
+st.write(os.getcwd())
 ## TODO optimize requirements.txt to include only libraries we use
 ## TODO resolve the library importing mess
 ## TODO see if you can work with "dotlottie" files instead of normal files. "dotlottie" file sizes are less. Or transition to URLs.

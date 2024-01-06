@@ -14,6 +14,10 @@ COUNTRY_PATTERN_TABLE_NAME                  = "country_pattern"
 COUNTRY_PATTERN_COUNTRY_A_ID_FK_COLUMN_NAME = "country_a_id_fk"
 
 
+def run_requirements():
+    subprocess.run(BAT_PATH, shell = True)
+
+
 def process_display_dataframe(df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_a, countries_a_ids):
     """
     Processes a DataFrame by renaming columns, replacing country IDs with names, and converting correlation values to percentages.
@@ -84,10 +88,6 @@ def get_countries_a_list():
     countries_df["id"]         = country_ids
     countries_df["country"]    = country_names
     return countries_df
-
-
-def run_requirements():
-    subprocess.run(BAT_PATH, shell = True)
 
 
 def str_to_list(s):
