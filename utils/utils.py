@@ -102,7 +102,7 @@ def convert_names_to_ids(df, countries_df, column_name):
     for country_id in df[column_name]:
         for map_id in list(country_to_id.keys()):
             if str(country_id) == str(map_id):
-                new_col.append(country_to_id["map_id"])
+                new_col.append(country_to_id[map_id])
     
     st.write(new_col)
     
