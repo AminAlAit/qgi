@@ -36,8 +36,6 @@ def process_display_dataframe(df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_df):
 
     if len(df) < 1:
         return df
-    
-    st.write(countries_df)
 
     # Rename columns
     df.rename(columns = {
@@ -54,7 +52,7 @@ def process_display_dataframe(df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_df):
 
     # Replace country IDs with names
     id_to_country = dict(zip(countries_df["id"], countries_df["country"]))
-    df["country_b_id_fk"] = df["country_b_id_fk"].map(id_to_country)
+    df[DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"]] = df[DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"]].map(id_to_country)
 
     st.dataframe(df)
 
