@@ -61,6 +61,7 @@ def extract_and_rank_patterns_for_country(country_a_id: str, country_a):
     if country_a == ""  or country_a_id == "":
         return pd.DataFrame()
     try:
+        st.write(COUNTRIES_PATH + country_a_id + "_" + country_a + "_pattern.csv")
         grouped = pd.read_csv(COUNTRIES_PATH + country_a_id + "_" + country_a + "_pattern.csv")
         st.dataframe(grouped)
         # Converting columns into numericals
