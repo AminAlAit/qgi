@@ -284,7 +284,7 @@ def apply_advanced_filters(display_df: pd.DataFrame, DISPLAY_DF_NEW_COLUMN_NAMES
 def get_country_a_from_user():
     countries_df = get_countries_a_list()
     st.dataframe(countries_df)
-    countries_df.sort_values("country")
+    countries_df.sort_values(by = "country")
     st.dataframe(countries_df)
     return st.sidebar.selectbox("Select Any Country", [""] + list(countries_df["country"])), countries_df
 
