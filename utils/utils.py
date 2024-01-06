@@ -36,7 +36,7 @@ def process_display_dataframe(df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_df):
 
     if len(df) < 1:
         return df
-
+    st.dataframe(df)
     # Rename columns
     df.rename(columns = {
         "country_b_id_fk":   DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"],
@@ -50,7 +50,7 @@ def process_display_dataframe(df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_df):
 
     # Replace country IDs with names
     st.write(DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"])
-    st.dataframe(countries_df)
+    
     df = convert_names_to_ids(df, countries_df, DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"])
 
     # Convert correlation to percentage
