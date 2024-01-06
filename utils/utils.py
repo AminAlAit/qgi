@@ -301,6 +301,8 @@ def get_id_by_value(countries_a_ids, countries_a, country_a):
 
 
 def get_value_by_id(countries_a_ids, countries_a, country_a_id):
+    st.write(countries_a_ids.index(country_a_id))
+    st.write(str(type(countries_a_ids.index(country_a_id))))
     return countries_a[countries_a_ids.index(country_a_id)]
 
 
