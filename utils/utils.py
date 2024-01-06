@@ -51,8 +51,7 @@ def process_display_dataframe(df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_df):
     st.dataframe(df)
 
     # Replace country IDs with names
-    id_to_country = dict(zip(countries_df["id"], countries_df["country"]))
-    df[DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"]] = df[DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"]].map(id_to_country)
+    df = convert_names_to_ids(df, countries_df, DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"])
 
     st.dataframe(df)
 
