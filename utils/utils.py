@@ -37,9 +37,6 @@ def process_display_dataframe(df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_a, coun
     if len(df) < 1:
         return df
 
-    st.write(countries_a)
-    st.write(countries_a_ids)
-
     # Rename columns
     df.rename(columns = {
         "country_b_id_fk":   DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"],
