@@ -29,7 +29,6 @@ from streamlit_extras.customize_running import center_running
 import os
 
 
-st.write(os.getcwd())
 ## TODO optimize requirements.txt to include only libraries we use
 ## TODO resolve the library importing mess
 ## TODO see if you can work with "dotlottie" files instead of normal files. "dotlottie" file sizes are less. Or transition to URLs.
@@ -40,6 +39,9 @@ st.write(os.getcwd())
 ## TODO checkout similar page-runtime settings 
 st.set_page_config(layout = "wide", page_title = "QG Intelligence", page_icon = "📈")
 center_running()
+
+
+st.write(os.getcwd())
 st.sidebar.markdown("# QG Intelligence")
 old_ppr_df = pd.read_csv("data/ppr/old_ppr.csv")
 new_ppr_df = pd.read_csv("data/ppr/new_ppr.csv")
