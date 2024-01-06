@@ -80,7 +80,7 @@ def show_search_page():
     display_df                                       = process_display_dataframe(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_df)
     display_df, min_corr, max_corr, min_ind, max_ind = apply_advanced_filters(display_df, DISPLAY_DF_NEW_COLUMN_NAMES)
 
-    country_b, country_b_id, display_df              = get_country_b_and_id_from_user(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_a, countries_ids)
+    country_b, country_b_id, display_df              = get_country_b_and_id_from_user(display_df, countries_df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_a, countries_ids)
     patt_len, display_message, display_df            = get_pattern_length_from_user(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, country_a, country_b)
 
     start_year_a, display_message, display_df        = get_start_year_a(display_message, display_df, country_a, country_a_id, country_b, country_b_id, patt_len, DISPLAY_DF_NEW_COLUMN_NAMES, min_corr, max_corr, min_ind, max_ind)
