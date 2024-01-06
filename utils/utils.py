@@ -95,11 +95,11 @@ def str_to_list(s):
 
 
 def convert_names_to_ids(df, countries_df, column_name):
-    # Creating a mapping dictionary from the lookup DataFrame for reverse mapping
     country_to_id = dict(zip(countries_df["country"], countries_df["id"]))
     st.write(country_to_id)
-    # Mapping the country names to IDs
     df[column_name] = df[column_name].map(country_to_id)
+
+    st.dataframe(df[column_name])
 
     return df
 
