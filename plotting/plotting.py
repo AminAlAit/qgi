@@ -183,7 +183,7 @@ def logarithmic_scaling(list_a, list_b):
 
     log_scaled_a = [math.log(x) if x > 0 and not pd.isna(x) else None for x in numeric_a]
     log_scaled_b = [math.log(x) if x > 0 and not pd.isna(x) else None for x in numeric_b]
-    
+
     log_scaled_a = replace_item_in_list(log_scaled_a, "nan", "")
     log_scaled_b = replace_item_in_list(log_scaled_b, "nan", "")
 

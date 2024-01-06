@@ -15,6 +15,9 @@ COUNTRY_PATTERN_COUNTRY_A_ID_FK_COLUMN_NAME = "country_a_id_fk"
 
 
 def run_requirements():
+    ## TODO WARNING: You are using pip version 22.0.3; however, version 23.3.2 is available.
+    # You should consider upgrading via the '/home/adminuser/venv/bin/python -m pip install --upgrade pip' command.
+    # /bin/sh: 1: /mount/src/qgi/.bat: Permission denied
     subprocess.run(BAT_PATH, shell = True)
 
 
