@@ -7,8 +7,8 @@ import streamlit                        as st
 st.set_page_config(layout = "wide") #, page_title = "Trojan Geopolitics", page_icon = "📈")
 center_running()
 st.title("Pattern Power Rankings")
-old_ppr_df = pd.read_csv(r"C:\Users\Amin\Desktop\trojan\trojan 2.0\data\ppr\old_ppr.csv")
-new_ppr_df = pd.read_csv(r"C:\Users\Amin\Desktop\trojan\trojan 2.0\data\ppr\new_ppr.csv")
+old_ppr_df = pd.read_csv("data/ppr/old_ppr.csv")
+new_ppr_df = pd.read_csv("data/ppr/new_ppr.csv")
 
 
 

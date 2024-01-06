@@ -6,7 +6,7 @@ from database.db_manager import DatabaseManager
 
 
 
-BAT_PATH                                    = r"C:\Users\Amin\Desktop\trojan\trojan 2.0\streamlit\.bat"
+BAT_PATH                                    = ".bat"
 COUNTRY_ID_COLUMN                           = "id"
 CORRELATION_COLUMN                          = "correlation_column"
 COUNTRY_TABLE_NAME                          = "country"
@@ -170,36 +170,6 @@ def filter_by_grouping_indexes(dataframe, min_ind, max_ind):
     dataframe = dataframe[~dataframe.index.isin(filtered_data.index)]
     
     return filtered_data, dataframe
-
-
-def replace_country_ids_with_names(df):
-    """
-    Replaces country IDs in 'country_a_id_fk' and 'country_b_id_fk' with country names and renames these columns.
-
-    Parameters:
-    - df (pd.DataFrame): The DataFrame containing the country IDs.
-
-    Returns:
-    - pd.DataFrame: The DataFrame with country IDs replaced by country names.
-    """
-    db = DatabaseManager()
-    # Columns to replace and their new names
-    columns_to_replace = {
-        "country_a_id_fk": "country_a",
-        "country_b_id_fk": "country_b"
-    }
-
-    for old_col, new_col in columns_to_replace.items():
-        if old_col in df.columns:
-            # Replace each ID in the column with its corresponding country name
-            df[new_col] = df[old_col].apply(lambda x: db.get_value_by_id("country", x, "name_1") if x else None)
-    
-    # Drop old columns if new columns have been successfully created
-    for old_col in columns_to_replace:
-        if old_col in df.columns and columns_to_replace[old_col] in df.columns:
-            df.drop(columns=[old_col], inplace=True)
-
-    return df
 
 
 def percentage_str_to_float(percentage_str):
