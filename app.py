@@ -76,7 +76,7 @@ def show_search_page():
     display_df                                       = extract_and_rank_patterns_for_country(country_a_id, country_a)
 
     DISPLAY_DF_NEW_COLUMN_NAMES                      = rename_display_df_columns(country_a)
-    display_df                                       = process_display_dataframe(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_a, countries_ids)
+    display_df                                       = process_display_dataframe(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_df)
     display_df, min_corr, max_corr, min_ind, max_ind = apply_advanced_filters(display_df, DISPLAY_DF_NEW_COLUMN_NAMES)
 
     country_b, country_b_id, display_df              = get_country_b_and_id_from_user(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_a, countries_ids)

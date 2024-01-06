@@ -21,7 +21,7 @@ def run_requirements():
     subprocess.run(BAT_PATH, shell = True)
 
 
-def process_display_dataframe(df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_a, countries_a_ids):
+def process_display_dataframe(df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_df):
     """
     Processes a DataFrame by renaming columns, replacing country IDs with names, and converting correlation values to percentages.
 
@@ -37,8 +37,7 @@ def process_display_dataframe(df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_a, coun
     if len(df) < 1:
         return df
     
-    st.write(countries_a)
-    st.write(countries_a_ids)
+    st.write(countries_df)
 
     # Rename columns
     df.rename(columns = {
@@ -53,14 +52,10 @@ def process_display_dataframe(df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_a, coun
 
     st.dataframe(df)
 
-    # Get country mapping using DatabaseManager
-    #country_mapping_query = "SELECT id, name_1 FROM country"
-    #country_mapping_df = db.execute_this_query(country_mapping_query)
-    country_mapping = dict(zip(countries_a_ids, countries_a))
-
     # Replace country IDs with names
-    #df[DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"]] = df[DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"]].map(country_mapping)
-    df = replace_country_ids_with_names(df, DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"], countries_a, countries_a_ids)
+    id_to_country = dict(zip(countries_df["id"], countries_df["country"]))
+    df["country_b_id_fk"] = df["country_b_id_fk"].map(id_to_country)
+
     st.dataframe(df)
 
     # Convert correlation to percentage
@@ -119,7 +114,7 @@ def combine_values(df_row):
     # Create year range
     years_a = list(range(start_year_a, end_year_a))
     years_b = list(range(start_year_b, end_year_b))
-    
+
     # Create DataFrames from the inputs
     df_a = pd.DataFrame({"Year": years_a, "Value_A": values_a})
     df_b = pd.DataFrame({"Year": years_b, "Value_B": values_b})
@@ -294,18 +289,6 @@ def get_country_a_from_user():
     return st.sidebar.selectbox("Select Any Country", [""] + list(countries_df["country"])), countries_df
 
 
-def get_id_by_value(countries_a_ids, countries_a, country_a):
-    if country_a == "":
-        return ""
-    return countries_a_ids[countries_a.index(country_a)]
-
-
-def get_value_by_id(countries_a_ids, countries_a, country_a_id):
-    st.write(countries_a_ids.index(country_a_id))
-    st.write(str(type(countries_a_ids.index(country_a_id))))
-    return countries_a[countries_a_ids.index(country_a_id)]
-
-
 def rename_display_df_columns(country_a: str) -> dict:
     return {
         "DISPLAY_DF_COUNTRY_B_RENAME":           country_a + " has Patterns with",
@@ -316,28 +299,6 @@ def rename_display_df_columns(country_a: str) -> dict:
         "DISPLAY_DF_AVERAGE_CORRELATION_RENAME": "Pattern's Average Correlation",
         "DISPLAY_DF_PATTERN_POWER_SCORE_RENAME": "Pattern Power Score"
     }
-
-
-def replace_country_ids_with_names(df, column_name, countries_a, countries_a_ids):
-    """
-    Replaces country IDs in a specified column with country names.
-
-    Parameters:
-    - df (pd.DataFrame): The DataFrame to be processed.
-    - column_name (str): The name of the column containing country IDs.
-    - db: An instance of the database manager class.
-
-    Returns:
-    - pd.DataFrame: The DataFrame with country IDs replaced by country names.
-    """
-
-    if column_name in df.columns:
-        # Replace each country ID in the column with its corresponding country name
-        df[column_name] = df[column_name].apply(lambda x: get_value_by_id(countries_a_ids, countries_a, x) if pd.notnull(x) else x)
-    else:
-        print(f"Column '{column_name}' not found in the DataFrame.")
-
-    return df
 
 
 def get_country_b_and_id_from_user(display_df: pd.DataFrame, DISPLAY_DF_NEW_COLUMN_NAMES: dict, countries_a, countries_a_ids) -> str:
