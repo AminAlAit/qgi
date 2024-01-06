@@ -60,7 +60,7 @@ REGION_COLORS = {
 def extract_and_rank_patterns_for_country(country_a_id: str, country_a):
     try:
         grouped = pd.read_csv(COUNTRIES_PATH + country_a_id + "_" + country_a + "_pattern.csv")
-
+        st.dataframe(grouped)
         # Converting columns into numericals
         grouped["pattern_length_fk"] = pd.to_numeric(grouped["pattern_length_fk"], errors = "coerce")
         grouped["correlation"]       = pd.to_numeric(grouped["correlation"],       errors = "coerce")
