@@ -17,6 +17,7 @@ from utils.utils import (
     apply_advanced_filters,
     get_country_a_from_user,
     get_country_b_and_id_from_user,
+    get_id_by_value,
     get_pattern_length_from_user,
     get_start_year_a,
     get_start_year_b,
@@ -43,8 +44,8 @@ from streamlit_extras.customize_running import center_running
 st.set_page_config(layout = "wide", page_title = "QG Intelligence", page_icon = "📈")
 center_running()
 st.sidebar.markdown("# QG Intelligence")
-old_ppr_df = pd.read_csv('data/ppr/old_ppr.csv')
-new_ppr_df = pd.read_csv('data/ppr/new_ppr.csv')
+old_ppr_df = pd.read_csv("data/ppr/old_ppr.csv")
+new_ppr_df = pd.read_csv("data/ppr/new_ppr.csv")
 
 
 # def image_to_base64(img_path, output_size = (64, 64)):
@@ -67,13 +68,13 @@ def show_search_page():
     st.markdown("___")
     
     # Discovery section
-    db                                               = DatabaseManager()
+    #db                                               = DatabaseManager()
     col1, col2                                       = st.columns(2)
-    country_a                                        = get_country_a_from_user()
+    country_a, countries_a, countries_a_ids          = get_country_a_from_user()
     display_message                                  = f"\n### All Patterns for {country_a}"
 
-    country_a_id                                     = db.get_id_by_value("country", country_a, "name_1")
-    display_df                                       = extract_and_rank_patterns_for_country(db, country_a_id)
+    country_a_id                                     = get_id_by_value(countries_a_ids, countries_a, country_a)
+    display_df                                       = extract_and_rank_patterns_for_country(country_a_id, country_a)
 
     DISPLAY_DF_NEW_COLUMN_NAMES                      = rename_display_df_columns(country_a)
     display_df                                       = process_display_dataframe(db, display_df, DISPLAY_DF_NEW_COLUMN_NAMES)

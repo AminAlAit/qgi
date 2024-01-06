@@ -10,6 +10,7 @@ WEIGHT_PATTERN_LENGTH      = 0.1
 WEIGHT_INDEXES             = 0.3
 WEIGHT_AVERAGE_CORR        = 0.6
 COUNTRY_PATTERN_TABLE_NAME = "country_pattern"
+COUNTRIES_PATH             = "data/countries/"
 
 
 REGION_COUNTRIES = {
@@ -78,10 +79,9 @@ def extract_and_rank_patterns_for_country_if_loop(country, rank_patterns = True)
         return None
 
 
-def extract_and_rank_patterns_for_country(db: DatabaseManager, country_a_id: str):
+def extract_and_rank_patterns_for_country(country_a_id: str, country_a):
     try:
-        query = f"SELECT * FROM `{COUNTRY_PATTERN_TABLE_NAME}` WHERE country_a_id_fk = '{country_a_id}'"
-        grouped = db.execute_this_query(query)
+        grouped = pd.read_csv(COUNTRIES_PATH + country_a_id + "_" + country_a + "_pattern.csv")
 
         # Converting columns into numericals
         grouped["pattern_length_fk"] = pd.to_numeric(grouped["pattern_length_fk"], errors = "coerce")

@@ -1,4 +1,5 @@
 import ast
+import os
 import subprocess
 import streamlit as st
 import pandas as pd
@@ -7,6 +8,7 @@ from database.db_manager import DatabaseManager
 
 
 BAT_PATH                                    = ".bat"
+COUNTRIES_PATH                              = "data/countries/"
 COUNTRY_ID_COLUMN                           = "id"
 CORRELATION_COLUMN                          = "correlation_column"
 COUNTRY_TABLE_NAME                          = "country"
@@ -55,12 +57,28 @@ def process_display_dataframe(db, df, DISPLAY_DF_NEW_COLUMN_NAMES):
     return df
 
 
-def get_countries_a_list(db = None):
-    db            = DatabaseManager()
-    query         = f"SELECT DISTINCT `{COUNTRY_PATTERN_COUNTRY_A_ID_FK_COLUMN_NAME}` FROM country_pattern"
-    country_a_ids = list(db.execute_this_query(query)[COUNTRY_PATTERN_COUNTRY_A_ID_FK_COLUMN_NAME])
-    countries_a   = [db.get_value_by_id("country", country_id, "name_1") for country_id in country_a_ids]
-    return [""] + countries_a
+def get_country_names_and_ids(directory):
+    country_names = []
+    country_ids = []
+
+    # Iterate over all files in the specified directory
+    for filename in os.listdir(directory):
+        if filename.endswith("_patterns.csv"):  # Check if the file is a CSV file
+            parts = filename.split('_')  # Split the filename into parts
+
+            # Extract ID and country name
+            country_id = parts[0]
+            country_name = '_'.join(parts[1:-1])
+
+            country_ids.append(country_id)
+            country_names.append(country_name)
+
+    return country_names, country_ids
+
+
+def get_countries_a_list():
+    country_names, country_ids = get_country_names_and_ids(COUNTRIES_PATH)
+    return [[""] + country_names, country_ids]
 
 
 def run_requirements():
@@ -256,7 +274,16 @@ def apply_advanced_filters(display_df: pd.DataFrame, DISPLAY_DF_NEW_COLUMN_NAMES
 
 
 def get_country_a_from_user():
-        return st.sidebar.selectbox("Select Any Country", get_countries_a_list())
+    countries_a_sidebar_list, countries_a_ids = get_countries_a_list()
+    return st.sidebar.selectbox("Select Any Country", countries_a_sidebar_list), countries_a_sidebar_list[1:], countries_a_ids
+
+
+def get_id_by_value(countries_a_ids, countries_a, country_a):
+    return countries_a_ids[countries_a.index(country_a)]
+
+
+def get_value_by_id(countries_a_ids, countries_a, country_a_id):
+    return countries_a[countries_a_ids.index(country_a_id)]
 
 
 def rename_display_df_columns(country_a: str) -> dict:
