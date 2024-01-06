@@ -103,7 +103,10 @@ def convert_names_to_ids(df, countries_df, column_name):
                 new_col.append(country_to_id[map_id])
             else:
                 other.append(country_id)
-    st.dataframe(pd.DataFrame(pd.Series(other)))
+    st.write(len(new_col))
+    st.write(len(other))
+    st.write(len(list(set(other))))
+    st.write(list(set(other)))
     df[column_name] = new_col
 
     return df
