@@ -5,7 +5,7 @@ import streamlit as st
 import pandas as pd
 
 
-BAT_PATH                                    = ".bat"
+BAT_PATH                                    = "/mount/src/qgi/.bat"
 COUNTRIES_PATH                              = "data/countries/"
 COUNTRY_ID_COLUMN                           = "id"
 CORRELATION_COLUMN                          = "correlation_column"

@@ -41,7 +41,6 @@ st.set_page_config(layout = "wide", page_title = "QG Intelligence", page_icon = 
 center_running()
 
 
-st.write(os.getcwd())
 st.sidebar.markdown("# QG Intelligence")
 old_ppr_df = pd.read_csv("data/ppr/old_ppr.csv")
 new_ppr_df = pd.read_csv("data/ppr/new_ppr.csv")
