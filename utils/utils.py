@@ -3,8 +3,6 @@ import os
 import subprocess
 import streamlit as st
 import pandas as pd
-from database.db_manager import DatabaseManager
-
 
 
 BAT_PATH                                    = ".bat"
@@ -82,7 +80,10 @@ def get_country_names_and_ids(directory):
 
 def get_countries_a_list():
     country_names, country_ids = get_country_names_and_ids(COUNTRIES_PATH)
-    return [[""] + country_names, country_ids]
+    countries_df               = pd.DataFrame()
+    countries_df["id"]         = country_ids
+    countries_df["country"]    = country_names
+    return countries_df
 
 
 def run_requirements():
@@ -278,8 +279,9 @@ def apply_advanced_filters(display_df: pd.DataFrame, DISPLAY_DF_NEW_COLUMN_NAMES
 
 
 def get_country_a_from_user():
-    countries_a_sidebar_list, countries_a_ids = get_countries_a_list()
-    return st.sidebar.selectbox("Select Any Country", countries_a_sidebar_list), countries_a_sidebar_list[1:], countries_a_ids
+    countries_df = get_countries_a_list()
+    countries_df.sort_values("country")
+    return st.sidebar.selectbox("Select Any Country", [""] + list(countries_df["country"])), countries_df
 
 
 def get_id_by_value(countries_a_ids, countries_a, country_a):
