@@ -132,14 +132,45 @@ def color_countries(val):
     return ""
 
 
+def manual_merge_dfs(df1, df2, key_columns):
+    """
+    Manually merges two dataframes on the specified key columns.
+
+    Parameters:
+    df1 (pd.DataFrame): First DataFrame.
+    df2 (pd.DataFrame): Second DataFrame.
+    key_columns (list): List of columns to merge on.
+
+    Returns:
+    pd.DataFrame: Merged DataFrame.
+    """
+    merged_data = []
+
+    # Iterating through each row of the first dataframe
+    for _, row1 in df1.iterrows():
+        # Finding the matching row in the second dataframe
+        match = df2[(df2[key_columns] == row1[key_columns]).all(axis=1)]
+
+        # If a match is found, append the combined row to the merged data
+        if not match.empty:
+            combined_row = row1.append(match.iloc[0].drop(key_columns))
+            merged_data.append(combined_row)
+
+    # Create a dataframe from the merged data
+    return pd.DataFrame(merged_data).reset_index(drop=True)
+
+
 def compare_rankings(old_df, new_df):
     # Merge the old and new dataframes based on key columns
-    merged_df = pd.merge(
-        old_df,
-        new_df,
-        on=["country_a_id_fk", "country_b_id_fk", "start_year_a_fk", "start_year_b_fk", "pattern_length_fk"],
-        suffixes=("_old", "_new")
-    )
+    # merged_df = pd.merge(
+    #     old_df,
+    #     new_df,
+    #     on=["country_a_id_fk", "country_b_id_fk", "start_year_a_fk", "start_year_b_fk", "pattern_length_fk"],
+    #     suffixes=("_old", "_new")
+    # )
+
+    merged_df = manual_merge_dfs(old_df, new_df, ["country_a_id_fk", "country_b_id_fk", "start_year_a_fk", "start_year_b_fk", "pattern_length_fk"])
+    st.dataframe(merged_df)
 
     # Calculate the change in ranking
     merged_df["Rank_Change"] = merged_df["Power_old"] - merged_df["Power_new"]

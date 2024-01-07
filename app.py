@@ -61,10 +61,10 @@ new_ppr_df = pd.read_csv("data/ppr/new_ppr.csv")
 def show_search_page():
     # Pattern Power Ranking Section
     #st.title("Pattern Power Rankings")
-    ppr_df = compare_rankings(old_ppr_df, new_ppr_df)
-    with st.expander("Pattern Power Rankings"):
-        st.dataframe(ppr_df, use_container_width = True)
-    st.markdown("___")
+    # ppr_df = compare_rankings(old_ppr_df, new_ppr_df)
+    # with st.expander("Pattern Power Rankings"):
+    #     st.dataframe(ppr_df, use_container_width = True)
+    # st.markdown("___")
 
     # Discovery section
     #db                                               = DatabaseManager()
