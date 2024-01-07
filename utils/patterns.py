@@ -157,7 +157,7 @@ def compare_rankings(old_df, new_df):
             return "⏸️"
 
     merged_df["Rank_Change_Emoji"] = merged_df.apply(rank_change_emoji, axis=1)
-    merged_df["Rank_Change_Info"]  = merged_df["Rank_Change_Emoji"] + " " + merged_df["Rank_Change"].fillna(0).astype(int).astype(str)
+    merged_df["Rank_Change_Info"] = merged_df["Rank_Change_Emoji"].astype(str) + " " + merged_df["Rank_Change"].fillna(0).astype(int).astype(str)
 
     # Format Average Correlation as percentage
     merged_df["avg_corr_new"] = (merged_df["avg_corr_new"] * 100).round(2).astype(str) + "%"
