@@ -60,6 +60,7 @@ new_ppr_df = pd.read_csv("data/ppr/new_ppr.csv")
 
 def show_search_page():
     # Pattern Power Ranking Section
+    ## TODO fix PPR
     #st.title("Pattern Power Rankings")
     # ppr_df = compare_rankings(old_ppr_df, new_ppr_df)
     # with st.expander("Pattern Power Rankings"):

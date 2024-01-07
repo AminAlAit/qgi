@@ -440,7 +440,7 @@ def get_start_year_b(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, start_year_a, coun
 def prepare_display_df_for_viz(display_df: pd.DataFrame, country_a, country_b, five_params: list, countries_a, countries_a_ids, countries_df):
     for param in five_params:
         if param == "":
-            return display_df
+            return display_df, pd.DataFrame()
     
     country_a_id = five_params[0]
     country_b_id = five_params[1]
