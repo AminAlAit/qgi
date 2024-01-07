@@ -16,6 +16,8 @@ def substitute_index_display_names(df_row: pd.Series) -> str:
     },
     ]
     
+    st.write(df_row)
+
     for sub_name in names_that_need_changing:
         if sub_name["org_fk"] == df_row["org_fk"] and sub_name["main_name_fk"] == df_row["main_name_fk"] and sub_name["index_name_fk"] == df_row["index_name_fk"]:
             return sub_name["new_name"]
@@ -41,6 +43,7 @@ def clean_list_edges(lst):
 
 
 def plot_index_values(df_row, method, align):
+    ## TODO st.markdown(f"### {substitute_index_display_names(df_row)}")
     st.markdown(f"### {substitute_index_display_names(df_row)}")
 
     # Combine values into a DataFrame

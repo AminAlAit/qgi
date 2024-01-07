@@ -217,7 +217,9 @@ def remove_duplicates(lst):
 
 def filter_by_grouping_indexes(df, country_a, min_ind, max_ind):
     # Group the DataFrame by the specified columns
-    grouped["country_a_id_fk"] = [country_a for _ in len(df)]
+
+    df["country_a_id_fk"] = [country_a for _ in range(len(df))]
+
     grouped = df.groupby(["country_a_id_fk", "country_b_id_fk", "pattern_length_fk", "start_year_a_fk", "start_year_b_fk"])
 
     # Calculate the count of rows in each group
@@ -374,6 +376,7 @@ def get_pattern_length_from_user(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, countr
     
     return [patt_len, display_message, display_df]
 
+
 def get_start_year_a(
     display_message,
     display_df,
@@ -454,16 +457,23 @@ def prepare_display_df_for_viz(display_df: pd.DataFrame, country_a, five_params:
     #display_df = db.execute_this_query(query)
 
     # country_b_id_fk,start_year_a_fk,start_year_b_fk,pattern_length_fk,indexes,avg_corr,Power
-    df = pd.read_csv(COUNTRIES_PATH + country_a_id + "_" + country_a + "_patterns.csv")
+    df = pd.read_csv(COUNTRIES_PATH + str(country_a_id) + "_" + country_a + "_solos_patterns.csv")
+    st.write("111111111111111")
+    st.dataframe(df)
     df = df[df["country_b_id_fk"] == country_b_id]
-    df = df[df["pattern_length_fk"] == patt_len]
-    df = df[df["start_year_a_fk"] == start_year_a]
-    df = df[df["start_year_b_fk"] == start_year_b]
+    st.dataframe(df)
+    df = df[df["pattern_length_fk"] == str(patt_len)]
+    st.dataframe(df)
+    df = df[df["start_year_a_fk"] == str(start_year_a)]
+    st.dataframe(df)
+    df = df[df["start_year_b_fk"] == str(start_year_b)]
 
-    display_df.drop("unique_id", axis = 1, inplace = True)
-    display_df = display_df.sort_values(by = "correlation", ascending = False)
-    display_df = replace_country_ids_with_names(display_df, "country_a_id_fk", countries_a, countries_a_ids)
-    display_df = replace_country_ids_with_names(display_df, "country_b_id_fk", countries_a, countries_a_ids)
+    st.dataframe(df)
+
+    #display_df.drop("unique_id", axis = 1, inplace = True)
+    display_df = display_df.sort_values(by = "Pattern's Average Correlation", ascending = False)
+    #display_df = replace_country_ids_with_names(display_df, "country_a_id_fk", countries_a, countries_a_ids)
+    #display_df = replace_country_ids_with_names(display_df, "country_b_id_fk", countries_a, countries_a_ids)
     return display_df
 
 
