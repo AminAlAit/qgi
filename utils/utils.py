@@ -37,6 +37,7 @@ def process_display_dataframe(df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_df):
     if len(df) < 1:
         return df
 
+
     # Rename columns
     df.rename(columns = {
         "country_b_id_fk":   DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"],
@@ -49,7 +50,11 @@ def process_display_dataframe(df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_df):
     }, inplace = True)
 
     # Replace country IDs with names
-    df = convert_names_to_ids(df, countries_df, DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"])
+    country_names = []
+    for country_id in df[DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"]]:
+        country_names.append(get_country_name(countries_df, country_id))
+
+    df[DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"]] = country_names
 
     # Convert correlation to percentage
     if DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_AVERAGE_CORRELATION_RENAME"] in df.columns:
@@ -92,16 +97,6 @@ def str_to_list(s):
     return list(ast.literal_eval(s))
 
 
-def convert_names_to_ids(df, countries_df, column_name):
-    st.write("111111111111111111111111111111")
-    country_to_id = dict(zip(countries_df['country'], countries_df['id']))
-
-    st.write(country_to_id)
-    df[column_name] = df[column_name].map(country_to_id)
-
-    return df
-
-
 def get_country_id(countries_df, country_name):
     """
     Return the ID for a given country name.
@@ -131,7 +126,7 @@ def get_country_name(countries_df, country_id):
     Returns:
     str: The name of the country corresponding to the given ID, or None if not found.
     """
-    match = countries_df[countries_df["id"] == country_id]
+    match = countries_df[countries_df["id"] == str(country_id)]
     if not match.empty:
         return match["country"].iloc[0]
     else:
@@ -220,9 +215,10 @@ def remove_duplicates(lst):
     return result
 
 
-def filter_by_grouping_indexes(dataframe, min_ind, max_ind):
+def filter_by_grouping_indexes(df, country_a, min_ind, max_ind):
     # Group the DataFrame by the specified columns
-    grouped = dataframe.groupby(["country_a_id_fk", "country_b_id_fk", "pattern_length_fk", "start_year_a_fk", "start_year_b_fk"])
+    grouped["country_a_id_fk"] = [country_a for _ in len(df)]
+    grouped = df.groupby(["country_a_id_fk", "country_b_id_fk", "pattern_length_fk", "start_year_a_fk", "start_year_b_fk"])
 
     # Calculate the count of rows in each group
     group_counts = grouped.size().reset_index(name = "count")
@@ -231,12 +227,12 @@ def filter_by_grouping_indexes(dataframe, min_ind, max_ind):
     filtered_groups = group_counts[(group_counts["count"] >= min_ind) & (group_counts["count"] <= max_ind)]
 
     # Get the rows corresponding to the filtered groups
-    filtered_data = dataframe.merge(filtered_groups, on = ["country_a_id_fk", "country_b_id_fk", "pattern_length_fk", "start_year_a_fk", "start_year_b_fk"])
+    filtered_df = df.merge(filtered_groups, on = ["country_a_id_fk", "country_b_id_fk", "pattern_length_fk", "start_year_a_fk", "start_year_b_fk"])
     
     # Delete the rows from the original DataFrame
-    dataframe = dataframe[~dataframe.index.isin(filtered_data.index)]
+    df = df[~df.index.isin(filtered_df.index)]
     
-    return filtered_data, dataframe
+    return filtered_df, df
 
 
 def percentage_str_to_float(percentage_str):
@@ -340,7 +336,7 @@ def rename_display_df_columns(country_a: str) -> dict:
     }
 
 
-def get_country_b_and_id_from_user(display_df: pd.DataFrame, DISPLAY_DF_NEW_COLUMN_NAMES: dict, countries_a, countries_a_ids) -> str:
+def get_country_b_and_id_from_user(display_df: pd.DataFrame, countries_df, DISPLAY_DF_NEW_COLUMN_NAMES: dict, countries_a, countries_a_ids) -> str:
     if not isinstance(display_df, pd.DataFrame) or len(display_df) == 0:
         return ["", "", display_df]
 
@@ -348,15 +344,7 @@ def get_country_b_and_id_from_user(display_df: pd.DataFrame, DISPLAY_DF_NEW_COLU
     pattern_power_score_col_name = DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_PATTERN_POWER_SCORE_RENAME"]
     country_b_col_name           = DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_COUNTRY_B_RENAME"]
 
-    st.dataframe(display_df)
-
     countries_b = [""] + remove_duplicates(list(display_df[country_b_col_name]))
-
-    # countries_b_ids = remove_duplicates(display_df.sort_values(by = pattern_power_score_col_name, ascending = False)\
-    #     [country_b_col_name].tolist())
-
-    # countries_b = [""] + [db.get_value_by_id("country", country_id, "name_1") for country_id in countries_b_ids]
-    # display_df  = replace_country_ids_with_names(display_df, country_b_col_name, db)
 
     if len(countries_b) > 2:
         country_b = st.sidebar.selectbox("Select Second Country", countries_b)
@@ -364,7 +352,7 @@ def get_country_b_and_id_from_user(display_df: pd.DataFrame, DISPLAY_DF_NEW_COLU
         st.sidebar.selectbox("Select Second Country", [countries_b[1]])
         country_b = countries_b[1]
 
-    country_b_id = get_id_by_value(countries_a_ids, countries_a, country_b)
+    country_b_id = get_country_id(countries_df, country_b)
     return [country_b, country_b_id, display_df]
 
 
@@ -406,22 +394,14 @@ def get_start_year_a(
     #warnings          = warnings[warnings[DISPLAY_DF_PATTERN_LENGTH_RENAME] == country_b]
     display_df        = display_df[display_df[pattern_length_col_name] == patt_len]
 
-    query  = f"SELECT * FROM {COUNTRY_PATTERN_TABLE_NAME} "
-    query += f"WHERE `country_a_id_fk` = {country_a_id} "
-    query += f"AND `country_b_id_fk` = {country_b_id} "
-    query += f"AND `pattern_length_fk` = {patt_len} "
-    query += f"AND `correlation` >= {min_corr} AND `correlation` <= {max_corr}"
-    #query += f"AND `correlation` BETWEEN {min_corr} AND {max_corr}"
-    #df     = db.execute_this_query(query)
-
     df = pd.read_csv(COUNTRIES_PATH + country_a_id + "_" + country_a + "_patterns.csv")
     df = df[df["country_b_id_fk"] == country_b_id]
     df = df[df["pattern_length_fk"] == patt_len]
     df = df[df["avg_corr"] >= min_corr]
     df = df[df["avg_corr"] <= max_corr]
 
-    df["correlation"] = pd.to_numeric(df["correlation"], errors = "coerce")
-    df                = filter_by_grouping_indexes(df, min_ind, max_ind)[0]
+    df["avg_corr"] = pd.to_numeric(df["avg_corr"], errors = "coerce")
+    df                = filter_by_grouping_indexes(df, country_a, min_ind, max_ind)[0]
 
     start_years_a = [""] + list(set(display_df[start_year_a_col_name]))
     if len(start_years_a) > 2:
