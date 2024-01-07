@@ -16,7 +16,7 @@ def substitute_index_display_names(df_row: pd.Series) -> str:
     },
     ]
     
-    st.write(df_row)
+    #st.write(df_row)
 
     for sub_name in names_that_need_changing:
         if sub_name["org_fk"] == df_row["org_fk"] and sub_name["main_name_fk"] == df_row["main_name_fk"] and sub_name["index_name_fk"] == df_row["index_name_fk"]:

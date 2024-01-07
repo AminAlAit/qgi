@@ -86,13 +86,12 @@ def show_search_page():
     start_year_a, display_message, display_df        = get_start_year_a(display_message, display_df, country_a, country_a_id, country_b, country_b_id, patt_len, DISPLAY_DF_NEW_COLUMN_NAMES, min_corr, max_corr, min_ind, max_ind)
     start_year_b, display_df, display_message        = get_start_year_b(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, start_year_a, country_b, display_message, country_a)
 
-    display_df                                       = prepare_display_df_for_viz(display_df, country_a, [country_a_id, country_b_id, patt_len, start_year_a, start_year_b], countries_a, countries_ids)
+    display_df, plotting_df                          = prepare_display_df_for_viz(display_df, country_a, country_b, [country_a_id, country_b_id, patt_len, start_year_a, start_year_b], countries_a, countries_ids, countries_df)
 
     five_params                                      = [country_a_id, country_a_id, patt_len, start_year_a, start_year_b]
     align, method                                    = plotting_transformations(five_params)
 
     visualize_table(display_df, display_message)
-    visualize_plots(display_df, five_params, col1, col2, method, align)
-
+    visualize_plots(plotting_df, five_params, col1, col2, method, align)
 
 show_search_page()

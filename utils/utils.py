@@ -437,7 +437,7 @@ def get_start_year_b(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, start_year_a, coun
     return [start_year_b, display_df, display_message]
 
 
-def prepare_display_df_for_viz(display_df: pd.DataFrame, country_a, five_params: list, countries_a, countries_a_ids):
+def prepare_display_df_for_viz(display_df: pd.DataFrame, country_a, country_b, five_params: list, countries_a, countries_a_ids, countries_df):
     for param in five_params:
         if param == "":
             return display_df
@@ -447,34 +447,23 @@ def prepare_display_df_for_viz(display_df: pd.DataFrame, country_a, five_params:
     patt_len     = five_params[2]
     start_year_a = five_params[3]
     start_year_b = five_params[4]
-    
-    query =  f"SELECT * FROM {COUNTRY_PATTERN_TABLE_NAME} "
-    query += f"WHERE `country_a_id_fk` = {country_a_id} "
-    query += f"AND `country_b_id_fk` = {country_b_id} "
-    query += f"AND `pattern_length_fk` = {patt_len} "
-    query += f"AND `start_year_a_fk` = {start_year_a} "
-    query += f"AND `start_year_b_fk` = {start_year_b}"
-    #display_df = db.execute_this_query(query)
 
-    # country_b_id_fk,start_year_a_fk,start_year_b_fk,pattern_length_fk,indexes,avg_corr,Power
     df = pd.read_csv(COUNTRIES_PATH + str(country_a_id) + "_" + country_a + "_solos_patterns.csv")
-    st.write("111111111111111")
-    st.dataframe(df)
-    df = df[df["country_b_id_fk"] == country_b_id]
-    st.dataframe(df)
-    df = df[df["pattern_length_fk"] == str(patt_len)]
-    st.dataframe(df)
-    df = df[df["start_year_a_fk"] == str(start_year_a)]
-    st.dataframe(df)
-    df = df[df["start_year_b_fk"] == str(start_year_b)]
+    df = df[df["country_b_id_fk"] == int(country_b_id)]
+    df = df[df["pattern_length_fk"] == int(patt_len)]
+    df = df[df["start_year_a_fk"] == int(start_year_a)]
+    df = df[df["start_year_b_fk"] == int(start_year_b)]
+    df.drop("unique_id", axis = 1, inplace = True)
 
-    st.dataframe(df)
-
-    #display_df.drop("unique_id", axis = 1, inplace = True)
     display_df = display_df.sort_values(by = "Pattern's Average Correlation", ascending = False)
-    #display_df = replace_country_ids_with_names(display_df, "country_a_id_fk", countries_a, countries_a_ids)
-    #display_df = replace_country_ids_with_names(display_df, "country_b_id_fk", countries_a, countries_a_ids)
-    return display_df
+
+    display_df["country_a_id_fk"] = [country_a for _ in range(len(display_df))]
+    display_df["country_b_id_fk"] = [country_b for _ in range(len(display_df))]
+
+    df["country_a_id_fk"] = [country_a for _ in range(len(df))]
+    df["country_b_id_fk"] = [country_b for _ in range(len(df))]
+
+    return display_df, df
 
 
 def validate_five_params(lst):
