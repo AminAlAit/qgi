@@ -73,14 +73,15 @@ def get_country_names_and_ids(directory):
     # Iterate over all files in the specified directory
     for filename in os.listdir(directory):
         if filename.endswith("_patterns.csv"):  # Check if the file is a CSV file
-            parts = filename.split('_')  # Split the filename into parts
+            if "solos" not in filename:
+                parts = filename.split('_')  # Split the filename into parts
 
-            # Extract ID and country name
-            country_id = parts[0]
-            country_name = '_'.join(parts[1:-1])
+                # Extract ID and country name
+                country_id = parts[0]
+                country_name = '_'.join(parts[1:-1])
 
-            country_ids.append(country_id)
-            country_names.append(country_name)
+                country_ids.append(country_id)
+                country_names.append(country_name)
 
     return country_names, country_ids
 
