@@ -1,5 +1,5 @@
 # Quantitative Geopolitics Intelligence (QG Intel)
-
+ 
 ## Overview
 Quantitative Geopolitics Intelligence (QG Intel) is an advanced analytical platform designed to unveil intricate patterns in geopolitical data. By harnessing a vast array of reputable data sources, including the World Bank, the Fund for Peace, Our World in Data, IMF, Freedom House, ACLED, SIPRI, and more, QG Intel synthesizes diverse datasets to reveal and interpret the subtle choreography of geopolitical trends.
 
