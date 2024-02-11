@@ -71,6 +71,9 @@ def show_search_page():
     #db                                               = DatabaseManager()
     col1, col2                                       = st.columns(2)
     country_a, countries_df                          = get_country_a_from_user()
+    st.write("///////////")
+    st.write(country_a)
+    st.write("///////////")
     display_message                                  = f"\n### All Patterns for {country_a}"
     countries_ids, countries_a                       = list(countries_df["id"]), list(countries_df["country"])
 
