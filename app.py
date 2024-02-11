@@ -60,20 +60,17 @@ new_ppr_df = pd.read_csv("data/ppr/new_ppr.csv")
 
 def show_search_page():
     # Pattern Power Ranking Section
-    ## TODO fix PPR
-    #st.title("Pattern Power Rankings")
-    # ppr_df = compare_rankings(old_ppr_df, new_ppr_df)
-    # with st.expander("Pattern Power Rankings"):
-    #     st.dataframe(ppr_df, use_container_width = True)
-    # st.markdown("___")
+    ppr_df = compare_rankings(old_ppr_df, new_ppr_df)
+
+    with st.expander("Pattern Power Rankings"):
+        st.dataframe(ppr_df, use_container_width = True)
+    st.markdown("___")
 
     # Discovery section
     #db                                               = DatabaseManager()
     col1, col2                                       = st.columns(2)
     country_a, countries_df                          = get_country_a_from_user()
-    st.write("///////////")
     st.write(country_a)
-    st.write("///////////")
     display_message                                  = f"\n### All Patterns for {country_a}"
     countries_ids, countries_a                       = list(countries_df["id"]), list(countries_df["country"])
 
