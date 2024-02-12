@@ -1,0 +1,252 @@
+,id,name_1,name_2,name_3,name_4,name_5,name_6,name_7,name_8,name_9,name_10,alpha_2,alpha_3,numeric_code
+0,1,Afghanistan,Islamic Republic of Afghanistan,,,,,,,,,AF,AFG,4.0
+1,2,Albania,Republic of Albania,,,,,,,,,AL,ALB,8.0
+2,3,Algeria,People's Democratic Republic of Algeria,,,,,,,,,DZ,DZA,12.0
+3,4,American Samoa,Samoa,,,,,,,,,AS,ASM,16.0
+4,5,Andorra,Principality of Andorra,,,,,,,,,AD,AND,20.0
+5,6,Angola,Republic of Angola,,,,,,,,,AO,AGO,24.0
+6,7,Anguilla,,,,,,,,,,AI,AIA,660.0
+7,8,Antarctica,,,,,,,,,,AQ,ATA,10.0
+8,9,Antigua and Barbuda,,,,,,,,,,AG,ATG,28.0
+9,10,Argentina,Argentine Republic,,,,,,,,,AR,ARG,32.0
+10,11,Armenia,Republic of Armenia,,,,,,,,,AM,ARM,51.0
+11,12,Aruba,,,,,,,,,,AW,ABW,533.0
+12,13,Australia,,,,,,,,,,AU,AUS,36.0
+13,14,Austria,Republic of Austria,,,,,,,,,AT,AUT,40.0
+14,15,Azerbaijan,Republic of Azerbaijan,,,,,,,,,AZ,AZE,31.0
+15,16,Bahamas,Commonwealth of the Bahamas,"Bahamas, The",,,,,,,,BS,BHS,44.0
+16,17,Bahrain,Kingdom of Bahrain,,,,,,,,,BH,BHR,48.0
+17,18,Bangladesh,People's Republic of Bangladesh,,,,,,,,,BD,BGD,50.0
+18,19,Barbados,,,,,,,,,,BB,BRB,52.0
+19,20,Belarus,Republic of Belarus,,,,,,,,,BY,BLR,112.0
+20,21,Belgium,Kingdom of Belgium,,,,,,,,,BE,BEL,56.0
+21,22,Belize,,,,,,,,,,BZ,BLZ,84.0
+22,23,Benin,Republic of Benin,,,,,,,,,BJ,BEN,204.0
+23,24,Bermuda,,,,,,,,,,BM,BMU,60.0
+24,25,Bhutan,Kingdom of Bhutan,,,,,,,,,BT,BTN,64.0
+25,26,Bolivia,"Bolivia, Plurinational State of",Plurinational State of Bolivia,Bolivia (Plurinational State of),,,,,,,BO,BOL,68.0
+26,27,"Bonaire, Sint Eustatius and Saba","Bonaire, Sint Eustatius and Saba",,,,,,,,,BQ,BES,535.0
+27,28,Bosnia and Herzegovina,Republic of Bosnia and Herzegovina,,,,,,,,,BA,BIH,70.0
+28,29,Botswana,Republic of Botswana,,,,,,,,,BW,BWA,72.0
+29,30,Bouvet Island,,,,,,,,,,BV,BVT,74.0
+30,31,Brazil,Federative Republic of Brazil,,,,,,,,,BR,BRA,76.0
+31,32,British Indian Ocean Territory,,,,,,,,,,IO,IOT,86.0
+32,33,Brunei,Brunei Darussalam,,,,,,,,,BN,BRN,96.0
+33,34,Bulgaria,Republic of Bulgaria,,,,,,,,,BG,BGR,100.0
+34,35,Burkina Faso,,,,,,,,,,BF,BFA,854.0
+35,36,Burundi,Republic of Burundi,,,,,,,,,BI,BDI,108.0
+36,37,Cabo Verde,Republic of Cabo Verde,Cape Verde,,,,,,,,CV,CPV,132.0
+37,38,Cambodia,Kingdom of Cambodia,,,,,,,,,KH,KHM,116.0
+38,39,Cameroon,Republic of Cameroon,,,,,,,,,CM,CMR,120.0
+39,40,Canada,,,,,,,,,,CA,CAN,124.0
+40,41,Cayman Islands,,,,,,,,,,KY,CYM,136.0
+41,42,Central African Republic,,,,,,,,,,CF,CAF,140.0
+42,43,Chad,Republic of Chad,,,,,,,,,TD,TCD,148.0
+43,44,Chile,Republic of Chile,,,,,,,,,CL,CHL,152.0
+44,45,China,People's Republic of China,,,,,,,,,CN,CHN,156.0
+45,46,Christmas Island,,,,,,,,,,CX,CXR,162.0
+46,47,Cocos (Keeling) Islands,,,,,,,,,,CC,CCK,166.0
+47,48,Colombia,Republic of Colombia,,,,,,,,,CO,COL,170.0
+48,49,Comoros,Union of the Comoros,,,,,,,,,KM,COM,174.0
+49,50,Republic of the Congo,The Democratic Republic of the Congo,"Congo, The Democratic Republic of the",République démocratique du Congo,Congo - Kinshasa,"Congo, Republic",Congo (Democratic Republic of the),"Congo, Dem. Rep.",Congo Democratic Republic,"Congo, DR",CD,COD,180.0
+50,51,Cook Islands,,,,,,,,,,CK,COK,184.0
+51,52,Costa Rica,Republic of Costa Rica,,,,,,,,,CR,CRI,188.0
+52,53,Croatia,Republic of Croatia,,,,,,,,,HR,HRV,191.0
+53,54,Cuba,Republic of Cuba,,,,,,,,,CU,CUB,192.0
+54,55,Curaçao,Curaçao,Curacao,,,,,,,,CW,CUW,531.0
+55,56,Cyprus,Republic of Cyprus,,,,,,,,,CY,CYP,196.0
+56,57,Czechia,Czech Republic,,,,,,,,,CZ,CZE,203.0
+57,58,Denmark,Kingdom of Denmark,,,,,,,,,DK,DNK,208.0
+58,59,Djibouti,Republic of Djibouti,,,,,,,,,DJ,DJI,262.0
+59,60,Dominica,Commonwealth of Dominica,,,,,,,,,DM,DMA,212.0
+60,61,Dominican Republic,Dominican,,,,,,,,,DO,DOM,214.0
+61,62,Ecuador,Republic of Ecuador,,,,,,,,,EC,ECU,218.0
+62,63,Egypt,Arab Republic of Egypt,"Egypt, Arab Rep.",,,,,,,,EG,EGY,818.0
+63,64,El Salvador,Republic of El Salvador,,,,,,,,,SV,SLV,222.0
+64,65,Equatorial Guinea,Republic of Equatorial Guinea,,,,,,,,,GQ,GNQ,226.0
+65,66,Eritrea,the State of Eritrea,,,,,,,,,ER,ERI,232.0
+66,67,Estonia,Republic of Estonia,,,,,,,,,EE,EST,233.0
+67,68,Eswatini,Kingdom of Eswatini,Swaziland,Eswatini (Kingdom of),,,,,,,SZ,SWZ,748.0
+68,69,Ethiopia,Federal Democratic Republic of Ethiopia,,,,,,,,,ET,ETH,231.0
+69,70,Falkland Islands (Malvinas),Malvinas,,,,,,,,,FK,FLK,238.0
+70,71,Faroe Islands,,,,,,,,,,FO,FRO,234.0
+71,72,Fiji,Republic of Fiji,,,,,,,,,FJ,FJI,242.0
+72,73,Finland,Republic of Finland,,,,,,,,,FI,FIN,246.0
+73,74,France,French Republic,,,,,,,,,FR,FRA,250.0
+74,75,French Guiana,,,,,,,,,,GF,GUF,254.0
+75,76,French Polynesia,,,,,,,,,,PF,PYF,258.0
+76,77,French Southern Territories,,,,,,,,,,TF,ATF,260.0
+77,78,Gabon,Gabonese Republic,,,,,,,,,GA,GAB,266.0
+78,79,Gambia,Republic of the Gambia,"Gambia, The",,,,,,,,GM,GMB,270.0
+79,80,Georgia,,,,,,,,,,GE,GEO,268.0
+80,81,Germany,Federal Republic of Germany,,,,,,,,,DE,DEU,276.0
+81,82,Ghana,Republic of Ghana,,,,,,,,,GH,GHA,288.0
+82,83,Gibraltar,,,,,,,,,,GI,GIB,292.0
+83,84,Greece,Hellenic Republic,,,,,,,,,GR,GRC,300.0
+84,85,Greenland,,,,,,,,,,GL,GRL,304.0
+85,86,Grenada,,,,,,,,,,GD,GRD,308.0
+86,87,Guadeloupe,,,,,,,,,,GP,GLP,312.0
+87,88,Guam,,,,,,,,,,GU,GUM,316.0
+88,89,Guatemala,Republic of Guatemala,,,,,,,,,GT,GTM,320.0
+89,90,Guernsey,,,,,,,,,,GG,GGY,831.0
+90,91,Guinea,Republic of Guinea,,,,,,,,,GN,GIN,324.0
+91,92,Guinea-Bissau,Republic of Guinea-Bissau,Guinea Bissau,,,,,,,,GW,GNB,624.0
+92,93,Guyana,Republic of Guyana,,,,,,,,,GY,GUY,328.0
+93,94,Haiti,Republic of Haiti,,,,,,,,,HT,HTI,332.0
+94,95,Heard Island and McDonald Islands,,,,,,,,,,HM,HMD,334.0
+95,96,Honduras,Republic of Honduras,,,,,,,,,HN,HND,340.0
+96,97,Hong Kong,Hong Kong Special Administrative Region of China,"Hong Kong, China (SAR)","Hong Kong SAR, China",,,,,,,HK,HKG,344.0
+97,98,Hungary,Hungary,,,,,,,,,HU,HUN,348.0
+98,99,Iceland,Republic of Iceland,,,,,,,,,IS,ISL,352.0
+99,100,India,Republic of India,,,,,,,,,IN,IND,356.0
+100,101,Indonesia,Republic of Indonesia,,,,,,,,,ID,IDN,360.0
+101,102,Iran,"Iran, Islamic Republic of",Iran (Islamic Republic of),"Iran, Islamic Rep.",,,,,,,IR,IRN,364.0
+102,103,Iraq,Republic of Iraq,,,,,,,,,IQ,IRQ,368.0
+103,104,Ireland,,,,,,,,,,IE,IRL,372.0
+104,105,Isle of Man,,,,,,,,,,IM,IMN,833.0
+105,106,Israel,State of Israel,,,,,,,,,IL,ISR,376.0
+106,107,Italy,Italian Republic,,,,,,,,,IT,ITA,380.0
+107,108,Ivory Coast,Côte d'Ivoire,Côte d’Ivoire,C��te d'Ivoire,Cote d'Ivoire,,,,,,CI,CIV,384.0
+108,109,Jamaica,,,,,,,,,,JM,JAM,388.0
+109,110,Japan,,,,,,,,,,JP,JPN,392.0
+110,111,Jersey,,,,,,,,,,JE,JEY,832.0
+111,112,Jordan,Hashemite Kingdom of Jordan,,,,,,,,,JO,JOR,400.0
+112,113,Kazakhstan,Republic of Kazakhstan,,,,,,,,,KZ,KAZ,398.0
+113,114,Kenya,Republic of Kenya,,,,,,,,,KE,KEN,404.0
+114,115,Kiribati,Republic of Kiribati,,,,,,,,,KI,KIR,296.0
+115,116,Kosovo,Kosovo (Disputed Territory),,,,,,,,,XK,XXK,
+116,117,Kuwait,State of Kuwait,,,,,,,,,KW,KWT,414.0
+117,118,Kyrgyzstan,Kyrgyz Republic,,,,,,,,,KG,KGZ,417.0
+118,119,Laos,Lao People's Democratic Republic,Lao PDR,,,,,,,,LA,LAO,418.0
+119,120,Latvia,Republic of Latvia,,,,,,,,,LV,LVA,428.0
+120,121,Lebanon,Lebanese Republic,,,,,,,,,LB,LBN,422.0
+121,122,Lesotho,Kingdom of Lesotho,,,,,,,,,LS,LSO,426.0
+122,123,Liberia,Republic of Liberia,,,,,,,,,LR,LBR,430.0
+123,124,Libya,Libya,,,,,,,,,LY,LBY,434.0
+124,125,Liechtenstein,Principality of Liechtenstein,,,,,,,,,LI,LIE,438.0
+125,126,Lithuania,Republic of Lithuania,,,,,,,,,LT,LTU,440.0
+126,127,Luxembourg,Grand Duchy of Luxembourg,,,,,,,,,LU,LUX,442.0
+127,128,Macao,Macao Special Administrative Region of China,"Macao SAR, China",,,,,,,,MO,MAC,446.0
+128,129,Madagascar,Republic of Madagascar,,,,,,,,,MG,MDG,450.0
+129,130,Malawi,Republic of Malawi,,,,,,,,,MW,MWI,454.0
+130,131,Malaysia,,,,,,,,,,MY,MYS,458.0
+131,132,Maldives,Republic of Maldives,,,,,,,,,MV,MDV,462.0
+132,133,Mali,Republic of Mali,,,,,,,,,ML,MLI,466.0
+133,134,Malta,Republic of Malta,,,,,,,,,MT,MLT,470.0
+134,135,Marshall Islands,Republic of the Marshall Islands,,,,,,,,,MH,MHL,584.0
+135,136,Martinique,,,,,,,,,,MQ,MTQ,474.0
+136,137,Mauritania,Islamic Republic of Mauritania,,,,,,,,,MR,MRT,478.0
+137,138,Mauritius,Republic of Mauritius,,,,,,,,,MU,MUS,480.0
+138,139,Mayotte,,,,,,,,,,YT,MYT,175.0
+139,140,Mexico,United Mexican States,,,,,,,,,MX,MEX,484.0
+140,141,Micronesia,"Micronesia, Federated States of",Micronesia (Federated States of),"Micronesia, Fed. Sts.",,,,,,,FM,FSM,583.0
+141,142,Moldova,"Moldova, Republic of",Republic of Moldova,Moldova (Republic of),,,,,,,MD,MDA,498.0
+142,143,Monaco,Principality of Monaco,,,,,,,,,MC,MCO,492.0
+143,144,Mongolia,,,,,,,,,,MN,MNG,496.0
+144,145,Montenegro,Montenegro,,,,,,,,,ME,MNE,499.0
+145,146,Montserrat,,,,,,,,,,MS,MSR,500.0
+146,147,Morocco,Kingdom of Morocco,,,,,,,,,MA,MAR,504.0
+147,148,Mozambique,Republic of Mozambique,,,,,,,,,MZ,MOZ,508.0
+148,149,Myanmar,Republic of Myanmar,Myanmar (Burma),,,,,,,,MM,MMR,104.0
+149,150,Namibia,Republic of Namibia,,,,,,,,,,NAM,516.0
+150,151,Nauru,Republic of Nauru,,,,,,,,,NR,NRU,520.0
+151,152,Nepal,Federal Democratic Republic of Nepal,,,,,,,,,NP,NPL,524.0
+152,153,Netherlands,Kingdom of the Netherlands,,,,,,,,,NL,NLD,528.0
+153,154,Netherlands Antilles,,,,,,,,,,AN,ANT,
+154,155,New Caledonia,,,,,,,,,,NC,NCL,540.0
+155,156,New Zealand,,,,,,,,,,NZ,NZL,554.0
+156,157,Nicaragua,Republic of Nicaragua,,,,,,,,,NI,NIC,558.0
+157,158,Niger,Republic of the Niger,,,,,,,,,NE,NER,562.0
+158,159,Nigeria,Federal Republic of Nigeria,,,,,,,,,NG,NGA,566.0
+159,160,Niue,Niue,,,,,,,,,NU,NIU,570.0
+160,161,Norfolk Island,,,,,,,,,,NF,NFK,574.0
+161,162,North Korea,"Korea, Democratic People's Republic of",Democratic People's Republic of Korea,Korea (Democratic People's Rep. of),"Korea, Dem. People's Rep.","Korea, North",,,,,KP,PRK,408.0
+162,163,North Macedonia,Republic of North Macedonia,Macedonia,,,,,,,,MK,MKD,807.0
+163,164,Northern Mariana Islands,Commonwealth of the Northern Mariana Islands,,,,,,,,,MP,MNP,580.0
+164,165,Norway,Kingdom of Norway,,,,,,,,,NO,NOR,578.0
+165,166,Oman,Sultanate of Oman,,,,,,,,,OM,OMN,512.0
+166,167,Pakistan,Islamic Republic of Pakistan,,,,,,,,,PK,PAK,586.0
+167,168,Palau,Republic of Palau,,,,,,,,,PW,PLW,585.0
+168,169,Palestine,"Palestine, State of",Palestinian Territories,Israel and West Bank,West Bank and Gaza,,,,,,PS,PSE,275.0
+169,170,Panama,Republic of Panama,,,,,,,,,PA,PAN,591.0
+170,171,Papua New Guinea,Independent State of Papua New Guinea,,,,,,,,,PG,PNG,598.0
+171,172,Paraguay,Republic of Paraguay,,,,,,,,,PY,PRY,600.0
+172,173,Peru,Republic of Peru,,,,,,,,,PE,PER,604.0
+173,174,Philippines,Republic of the Philippines,,,,,,,,,PH,PHL,608.0
+174,175,Pitcairn,,,,,,,,,,PN,PCN,612.0
+175,176,Poland,Republic of Poland,,,,,,,,,PL,POL,616.0
+176,177,Portugal,Portuguese Republic,,,,,,,,,PT,PRT,620.0
+177,178,Puerto Rico,,,,,,,,,,PR,PRI,630.0
+178,179,Qatar,State of Qatar,,,,,,,,,QA,QAT,634.0
+179,180,Republic of the Congo,"Congo, Rep.",Congo - Brazzaville,Brazzaville,Congo Republic,"Congo, Republic",,,,,CG,COG,178.0
+180,181,Romania,,,,,,,,,,RO,ROU,642.0
+181,182,Russia,Russian Federation,,,,,,,,,RU,RUS,643.0
+182,183,Rwanda,Rwandese Republic,,,,,,,,,RW,RWA,646.0
+183,184,Réunion,Reunion,,,,,,,,,RE,REU,638.0
+184,185,Saint Barthélemy,,,,,,,,,,BL,BLM,652.0
+185,186,"Saint Helena, Ascension and Tristan da Cunha",,,,,,,,,,SH,SHN,654.0
+186,187,Saint Kitts and Nevis,St. Kitts and Nevis,,,,,,,,,KN,KNA,659.0
+187,188,Saint Lucia,St. Lucia,,,,,,,,,LC,LCA,662.0
+188,189,Saint Martin (French part),Saint Martin,St. Martin (French part),,,,,,,,MF,MAF,663.0
+189,190,Saint Pierre and Miquelon,,,,,,,,,,PM,SPM,666.0
+190,191,Saint Vincent and the Grenadines,St. Vincent and the Grenadines,,,,,,,,,VC,VCT,670.0
+191,192,Samoa,Independent State of Samoa,,,,,,,,,WS,WSM,882.0
+192,193,San Marino,Republic of San Marino,,,,,,,,,SM,SMR,674.0
+193,194,Sao Tome and Principe,Democratic Republic of Sao Tome and Principe,,,,,,,,,ST,STP,678.0
+194,195,Saudi Arabia,Kingdom of Saudi Arabia,,,,,,,,,SA,SAU,682.0
+195,196,Senegal,Republic of Senegal,,,,,,,,,SN,SEN,686.0
+196,197,Serbia,Republic of Serbia,,,,,,,,,RS,SRB,688.0
+197,198,Seychelles,Republic of Seychelles,,,,,,,,,SC,SYC,690.0
+198,199,Sierra Leone,Republic of Sierra Leone,,,,,,,,,SL,SLE,694.0
+199,200,Singapore,Republic of Singapore,,,,,,,,,SG,SGP,702.0
+200,201,Sint Maarten (Dutch part),Sint Maarten (Dutch part),Sint Maarten,,,,,,,,SX,SXM,534.0
+201,202,Slovakia,Slovak Republic,,,,,,,,,SK,SVK,703.0
+202,203,Slovenia,Republic of Slovenia,,,,,,,,,SI,SVN,705.0
+203,204,Solomon Islands,,,,,,,,,,SB,SLB,90.0
+204,205,Somalia,Federal Republic of Somalia,,,,,,,,,SO,SOM,706.0
+205,206,South Africa,Republic of South Africa,,,,,,,,,ZA,ZAF,710.0
+206,207,South Georgia and the South Sandwich Islands,,,,,,,,,,GS,SGS,239.0
+207,208,South Korea,"Korea, Republic of",Korea (Republic of),"Korea, Rep.","Korea, South",,,,,,KR,KOR,410.0
+208,209,South Sudan,Republic of South Sudan,,,,,,,,,SS,SSD,728.0
+209,210,Spain,Kingdom of Spain,,,,,,,,,ES,ESP,724.0
+210,211,Sri Lanka,Democratic Socialist Republic of Sri Lanka,,,,,,,,,LK,LKA,144.0
+211,212,Sudan,Republic of the Sudan,,,,,,,,,SD,SDN,729.0
+212,213,Suriname,Republic of Suriname,,,,,,,,,SR,SUR,740.0
+213,214,Svalbard and Jan Mayen,,,,,,,,,,SJ,SJM,744.0
+214,215,Sweden,Kingdom of Sweden,,,,,,,,,SE,SWE,752.0
+215,216,Switzerland,Swiss Confederation,,,,,,,,,CH,CHE,756.0
+216,217,Syria,Syrian Arab Republic,,,,,,,,,SY,SYR,760.0
+217,218,Taiwan,"Taiwan, Province of China",,,,,,,,,TW,TWN,158.0
+218,219,Tajikistan,Republic of Tajikistan,,,,,,,,,TJ,TJK,762.0
+219,220,Tanzania,"Tanzania, United Republic of",United Republic of Tanzania,Tanzania (United Republic of),,,,,,,TZ,TZA,834.0
+220,221,Thailand,Kingdom of Thailand,,,,,,,,,TH,THA,764.0
+221,222,Timor-Leste,Democratic Republic of Timor-Leste,Timor Leste,,,,,,,,TL,TLS,626.0
+222,223,Togo,Togolese Republic,,,,,,,,,TG,TGO,768.0
+223,224,Tokelau,,,,,,,,,,TK,TKL,772.0
+224,225,Tonga,Kingdom of Tonga,,,,,,,,,TO,TON,776.0
+225,226,Trinidad and Tobago,Republic of Trinidad and Tobago,,,,,,,,,TT,TTO,780.0
+226,227,Tunisia,Republic of Tunisia,,,,,,,,,TN,TUN,788.0
+227,228,Turkiye,Republic of Turkey,Türkiye,Turkey,,,,,,,TR,TUR,792.0
+228,229,Turkmenistan,,,,,,,,,,TM,TKM,795.0
+229,230,Turks and Caicos Islands,,,,,,,,,,TC,TCA,796.0
+230,231,Tuvalu,,,,,,,,,,TV,TUV,798.0
+231,232,Uganda,Republic of Uganda,,,,,,,,,UG,UGA,800.0
+232,233,Ukraine,,,,,,,,,,UA,UKR,804.0
+233,234,United Arab Emirates,UAE,,,,,,,,,AE,ARE,784.0
+234,235,United Kingdom,United Kingdom of Great Britain and Northern Ireland,UK,,,,,,,,GB,GBR,826.0
+235,236,United States,United States of America,USA,US,,,,,,,US,USA,840.0
+236,237,United States Minor Outlying Islands,,,,,,,,,,UM,UMI,581.0
+237,238,Uruguay,Eastern Republic of Uruguay,,,,,,,,,UY,URY,858.0
+238,239,Uzbekistan,Republic of Uzbekistan,,,,,,,,,UZ,UZB,860.0
+239,240,Vanuatu,Republic of Vanuatu,,,,,,,,,VU,VUT,548.0
+240,241,Vatican City,Holy See (Vatican City State),,,,,,,,,VA,VAT,336.0
+241,242,Venezuela,"Venezuela, Bolivarian Republic of",Bolivarian Republic of Venezuela,Venezuela (Bolivarian Republic of),"Venezuela, RB",,,,,,VE,VEN,862.0
+242,243,Vietnam,Viet Nam,Socialist Republic of Viet Nam,,,,,,,,VN,VNM,704.0
+243,244,"Virgin Islands, British",British Virgin Islands,,,,,,,,,VG,VGB,92.0
+244,245,"Virgin Islands, U.S.",Virgin Islands of the United States,Us Virgin Islands,Virgin Islands (U.S.),,,,,,,VI,VIR,850.0
+245,246,Wallis and Futuna,,,,,,,,,,WF,WLF,876.0
+246,247,Western Sahara,,,,,,,,,,EH,ESH,732.0
+247,248,Yemen,Republic of Yemen,"Yemen, Rep.",,,,,,,,YE,YEM,887.0
+248,249,Zambia,Republic of Zambia,,,,,,,,,ZM,ZMB,894.0
+249,250,Zimbabwe,Republic of Zimbabwe,,,,,,,,,ZW,ZWE,716.0
+250,251,Aland Islands,Åland Islands,,,,,,,,,AX,ALA,248.0

@@ -1,6 +1,8 @@
 import math
 import numpy as np
 import pandas as pd
+from constant.sectors import FINANCE_ECONOMY_SECTOR, HUMAN_RIGHTS_DEVELOPMENT, INVESTMENTS_SECTOR, MILITARY_SECTOR, POLITICAL_STATE_SECTOR, SOCIAL_SECTOR, SOVEREIGNTY, TRADE_SECTOR
+from database.db_manager import get_alpha2_by_name, get_country_b_counts_for_country_a
 from utils.utils import combine_values, replace_item_in_list, round_list_items, validate_five_params
 from streamlit_echarts import st_echarts, JsCode
 import streamlit as st
@@ -43,8 +45,9 @@ def clean_list_edges(lst):
 
 
 def plot_index_values(df_row, method, align):
-    ## TODO st.markdown(f"### {substitute_index_display_names(df_row)}")
-    st.markdown(f"### {substitute_index_display_names(df_row)}")
+    st.markdown(f"##### {df_row['org_fk']}")
+    #st.markdown(f"### {substitute_index_display_names(df_row)}")
+    st.markdown(f"### {df_row['index_name_fk']}")
 
     # Combine values into a DataFrame
     merged_df = combine_values(df_row)
@@ -61,7 +64,7 @@ def plot_index_values(df_row, method, align):
         values_a = clean_list_edges(values_a)
         values_b = clean_list_edges(values_b)
         
-        alt_x_values = ["Year " + str(x_val + 1) for x_val in range(len(merged_df["Year"].tolist()))]
+        alt_x_values = ["Year " + str(x_val + 1) for x_val in range(len(merged_df["Year"].tolist()) - 1)]
 
     country_a = df_row["country_a_id_fk"] # db.get_value_by_id("country", df_row["country_a_id_fk"], "name_1")
     country_b = df_row["country_b_id_fk"] # db.get_value_by_id("country", df_row["country_b_id_fk"], "name_1")
@@ -116,8 +119,9 @@ def plot_index_values(df_row, method, align):
         #"dblclick":"function(params) { return [params.type, params.name, params.value] }"
     }
 
-    st_echarts(options = option, events = events, height = "400px", width = "100%")
-    
+
+    st_echarts(options = option, events = events, height = "400px", width = "100%", key = df_row["index_name_fk"])
+
 
 def index_to_base_year(list1, list2):
     # Helper function to perform indexing on a single list
@@ -220,8 +224,8 @@ def apply_method_on_plots(method, values_a, values_b):
     return values_a, values_b
 
 
-def visualize_table(df, display_message):
-    if df is not None and len(df) > 0:
+def visualize_table(df, display_message, plotting_df, params_validation):
+    if df is not None and len(df) > 0 and not params_validation:
         st.markdown(display_message)
 
         st.dataframe(
@@ -230,9 +234,19 @@ def visualize_table(df, display_message):
                 "Starting Year A": st.column_config.NumberColumn(format = "%d")
             },
             use_container_width = True)
+    # else:
+    #     st.markdown(display_message)
+    # 
+    #     st.dataframe(
+    #         dataframe_explorer(plotting_df, case = False), 
+    #         column_config = {
+    #             "Starting Year A": st.column_config.NumberColumn(format = "%d")
+    #         },
+    #         use_container_width = True)
 
 
-def visualize_plots(df, five_params, col1, col2, method, align):
+
+def visualize_plots(df, five_params, page_cols, method, align):
     if isinstance(df, pd.DataFrame) and len(df) > 0 and validate_five_params(five_params):
         # if not warnings.empty:
         #     st.markdown(f"### {country_a} can Learn from These Past Patterns")
@@ -246,17 +260,129 @@ def visualize_plots(df, five_params, col1, col2, method, align):
         #         DISPLAY_DF_AVERAGE_CORRELATION_RENAME,
         #         DISPLAY_DF_PATTERN_POWER_SCORE_RENAME
         #         ]], use_container_width = True)
-        graphs_rows = []
+        #graphs_rows = []
         i = 1
-        for index, row in df.iterrows():
-            
-            #display_df.loc[index] = replace_country_ids_in_row(row)
-            graphs_rows.append(row)
+        for _, row in df.iterrows():
+            #graphs_rows.append(row)
             if i == 1:
                 i = 2
-                with col1:
+                with page_cols[0]:
                     plot_index_values(row, method, align)
             elif i == 2:
-                i = 1
-                with col2:
+                i = 3
+                with page_cols[1]:
                     plot_index_values(row, method, align)
+            elif i == 3:
+                i = 1
+                with page_cols[2]:
+                    plot_index_values(row, method, align)
+
+
+def categorize_indexes(df):
+    sector_mapping = {
+        "Investments": INVESTMENTS_SECTOR,
+        "Trade": TRADE_SECTOR,
+        "Finance & \nEconomy": FINANCE_ECONOMY_SECTOR,
+        "Military": MILITARY_SECTOR,
+        "Human Rights & \nDevelopment": HUMAN_RIGHTS_DEVELOPMENT,
+        "Sovereignty": SOVEREIGNTY,
+        "Social": SOCIAL_SECTOR,
+        "Political \n& State": POLITICAL_STATE_SECTOR,
+        "Other": []
+    }
+
+    # Reverse mapping for easier lookup
+    index_to_sector = {}
+    for sector, indexes in sector_mapping.items():
+        for index in indexes:
+            index_to_sector[index] = sector
+
+    # Add a new column for sector
+    df["Sector"] = df["index_name_fk"].apply(lambda x: index_to_sector.get(x, "Other"))
+    return df
+
+
+def aggregate_data_for_chart(df):
+    categorized_df = categorize_indexes(df)
+    sector_counts = categorized_df["Sector"].value_counts().reset_index()
+    sector_counts.columns = ["Sector", "Count"]
+    return sector_counts
+
+
+def generate_doughnut_chart(df):
+    sector_counts = aggregate_data_for_chart(df)
+    chart_data = [{"value": row['Count'], "name": row['Sector']} for index, row in sector_counts.iterrows()]
+
+    options = {
+        "tooltip": {"trigger": "item"},
+        "legend": {"top": "5%", "left": "center", "textStyle": {"color": "#ffffff"}},  # Making legend text white as well
+        "series": [
+            {
+                "name": "Sectors",
+                "type": "pie",
+                "radius": ["40%", "70%"],
+                "avoidLabelOverlap": False,
+                "itemStyle": {
+                    "borderRadius": 10,
+                    "borderColor": "#fff",
+                    "borderWidth": 2,
+                },
+                "label": {
+                    "show": False,
+                    "position": "center",
+                    "color": "#ffffff"  # Making label text white
+                },
+                "emphasis": {
+                    "label": {
+                        "show": True,
+                        "fontSize": "30",
+                        "fontWeight": "bold",
+                        "color": "#ffffff"  # Making emphasized label text white
+                    }
+                },
+                "labelLine": {"show": False},
+                "data": chart_data,
+            }
+        ],
+    }
+    st_echarts(options=options, height="500px")
+
+
+def couple_countries_dashboard(five_params, countries, display_df, pattern_power_score, countries_df, plotting_df):
+    country_a_id, country_b_id, patt_len, start_year_a, start_year_b = five_params
+    country_a, country_b                                             = countries
+
+    if validate_five_params(five_params):
+        col1, col2, col3, col4, col5 = st.columns(5)
+        with col1:
+            ## Pattern Partners Country A
+            st.markdown("#### Pattern Partners")
+            df = get_country_b_counts_for_country_a(country_a_id, country_a, countries_df)
+            df.set_index("Country", inplace = True)
+            st.dataframe(df, use_container_width = True)
+        with col2: 
+            ## Country A
+            st.image(f"https://flagcdn.com/h240/{get_alpha2_by_name(country_a).lower()}.png")
+            st.markdown(f"<h1 style='text-align: center;'>{country_a}</h1>", unsafe_allow_html = True)
+            st.markdown(f"<h3 style='text-align: center;'>{str(int(start_year_a))} - {str(int(start_year_a) + patt_len)}</h3>", unsafe_allow_html = True)
+        with col3:
+            ## Mid screen: Indexes
+            #st.markdown(f"<h1 style='text-align: center;'>{len(display_df)}</h1>", unsafe_allow_html = True)
+            #st.markdown("<h4 style='text-align: center;'>Indexes</h4>", unsafe_allow_html = True)
+            # PPS
+            st.markdown(f"<h1 style='text-align: center;'>{pattern_power_score}</h1>", unsafe_allow_html = True)
+            st.markdown("<h4 style='text-align: center;'>Pattern Power Score</h4>", unsafe_allow_html = True)
+            generate_doughnut_chart(plotting_df)
+        with col4:
+            ## Country B
+            st.image(f"https://flagcdn.com/h240/{get_alpha2_by_name(country_b).lower()}.png")
+            st.markdown(f"<h1 style='text-align: center;'>{country_b}</h1>", unsafe_allow_html = True)
+            st.markdown(f"<h3 style='text-align: center;'>{str(int(start_year_b))} - {str(int(start_year_b) + patt_len)}</h3>", unsafe_allow_html = True)
+        with col5:
+            ## Pattern Partners Country B
+            st.markdown("#### Pattern Partners")
+            df = get_country_b_counts_for_country_a(country_b_id, country_b, countries_df)
+            df.set_index("Country", inplace = True)
+            st.dataframe(df, use_container_width = True)
+        
+        #st.markdown("___")

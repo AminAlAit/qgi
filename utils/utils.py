@@ -4,9 +4,12 @@ import subprocess
 import streamlit as st
 import pandas as pd
 
+from constant.index_names_subs import INDEX_NAMES_THAT_NEED_CHANGING, MAIN_NAMES_THAT_NEED_CHANGING
+
 
 BAT_PATH                                    = "/mount/src/qgi/.bat"
 COUNTRIES_PATH                              = "data/countries/"
+COUNTRY_DICTIONARY_PATH                     = "data/country.csv"
 COUNTRY_ID_COLUMN                           = "id"
 CORRELATION_COLUMN                          = "correlation_column"
 COUNTRY_TABLE_NAME                          = "country"
@@ -511,3 +514,53 @@ def plotting_transformations(five_params):
         )
 
     return align, method
+
+
+def get_pattern_power_score(display_df, start_year_b, DISPLAY_DF_NEW_COLUMN_NAMES):
+    if (display_df is None or len(display_df) < 1) or start_year_b is None:
+        return 0
+    elif len(display_df) == 1:
+        pps = round(list(display_df[DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_PATTERN_POWER_SCORE_RENAME"]])[0], 4)    
+        return pps
+
+    filtered_df = display_df[display_df[DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_START_YEAR_B_RENAME"]] == start_year_b]
+    if len(filtered_df) == 1:
+        pps = round(list(filtered_df[DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_PATTERN_POWER_SCORE_RENAME"]])[0], 4)
+        return pps
+    return 0
+
+
+def update_names_of_main_and_index_names(df: pd.DataFrame, five_params) -> pd.DataFrame:
+    """
+    Update the 'index_name_fk' column in the DataFrame using the substitute_index_display_names function.
+
+    Parameters:
+    - df (pd.DataFrame): The DataFrame to update.
+
+    Returns:
+    - pd.DataFrame: The updated DataFrame with new values in the 'index_name_fk' column.
+    """
+    if not validate_five_params(five_params):
+        return df
+
+    # Apply the substitute function to each row's index and main index names
+    df["main_name_fk"]  = df.apply(substitute_main_names,          axis = 1)
+    df["index_name_fk"] = df.apply(substitute_index_display_names, axis = 1)
+    df = df.drop(["creation_date"], axis = 1)
+    df = df.drop_duplicates()
+    return df
+
+
+def substitute_index_display_names(df_row: pd.Series) -> str:
+    for alt_dict in INDEX_NAMES_THAT_NEED_CHANGING:
+        if alt_dict["org_fk"] == df_row["org_fk"] and alt_dict["main_name_fk"] == df_row["main_name_fk"] and alt_dict["index_name_fk"] == df_row["index_name_fk"]:
+            return alt_dict["new_name"]
+    return df_row["index_name_fk"]
+
+def substitute_main_names(df_row: pd.Series) -> str:
+    for alt_dict in MAIN_NAMES_THAT_NEED_CHANGING:
+        if alt_dict["org_fk"] == df_row["org_fk"] and alt_dict["main_name_fk"] == df_row["main_name_fk"]:
+            if "index_name_fk" in alt_dict and alt_dict["index_name_fk"] == df_row["index_name_fk"]:
+                return alt_dict["new_name"]
+            return alt_dict["new_name"]
+    return df_row["main_name_fk"]

@@ -1,7 +1,4 @@
-import math
 import pandas as pd
-from database.db_manager import DatabaseManager
-import streamlit as st
 from datetime import datetime
 
 
@@ -161,37 +158,7 @@ def manual_merge_dfs(df1, df2, key_columns):
 
 
 def compare_rankings(old_df, new_df):
-    # Merge the old and new dataframes based on key columns
-    # merged_df = pd.merge(
-    #     old_df,
-    #     new_df,
-    #     on=["country_a_id_fk", "country_b_id_fk", "start_year_a_fk", "start_year_b_fk", "pattern_length_fk"],
-    #     suffixes=("_old", "_new")
-    # )
-
-    #merged_df = manual_merge_dfs(old_df, new_df, ["country_a_id_fk", "country_b_id_fk", "start_year_a_fk", "start_year_b_fk", "pattern_length_fk"])
     merged_df = new_df
-
-    # Calculate the change in ranking
-    # merged_df["Rank_Change"] = merged_df["Power_old"] - merged_df["Power_new"]
-
-    # Add emoji and count to a new column
-    # def rank_change_emoji(row):
-    #     if pd.isna(row["Rank_Change"]) or math.isinf(row["Rank_Change"]):
-    #         return "⏸️"
-    #     rank_change = int(row["Rank_Change"])  # Convert to integer
-    #    if rank_change > 0:
-    #         return "⏫ " + str(rank_change) if rank_change > 5 else "🔼 " + str(rank_change)
-    #     elif rank_change < 0:
-    #        return "⏬ " + str(-rank_change) if rank_change < -5 else "🔽 " + str(-rank_change)
-    #     else:
-    #        return "⏸️"
-
-    # merged_df["Rank_Change_Emoji"] = merged_df.apply(rank_change_emoji, axis=1)
-    # merged_df["Rank_Change_Info"] = merged_df["Rank_Change_Emoji"].astype(str) + " " + merged_df["Rank_Change"].fillna(0).astype(int).astype(str)
-
-    # Format Average Correlation as percentage
-    # merged_df["avg_corr_new"] = (merged_df["avg_corr_new"] * 100).round(2).astype(str) + "%"
     merged_df["avg_corr"] = (merged_df["avg_corr"] * 100).round(2).astype(str) + "%"
 
     # Remove commas from Year columns and convert to proper format
@@ -203,9 +170,6 @@ def compare_rankings(old_df, new_df):
     merged_df["indexes"] = merged_df["indexes"].fillna(0).astype(int)
     #merged_df["indexes_new"] = merged_df["indexes_new"].fillna(0).astype(int)
 
-    # Drop unnecessary columns and reorder
-    # final_df = merged_df.drop(columns=["Unnamed: 0_old", "indexes_old", "Unnamed: 0_new", "Power_old", "avg_corr_old", "Rank_Change", "Rank_Change_Emoji"])
-    #final_df = merged_df.drop(columns=["indexes", "Power", "avg_corr"])
     merged_df.rename(columns={
         "Rank_Change_Info": " ",
         "country_a_id_fk": "Country A",

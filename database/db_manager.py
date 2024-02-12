@@ -5,100 +5,170 @@ import mysql.connector as mysql_connector
 import pandas          as pd
 import streamlit as st
 
-
-# TODO have common DB_CREDENTIALS
-DB_CREDENTIALS = {
-    "user":     "root", 
-    "password": "5465", 
-    "host":     "127.0.0.1", 
-    "database": "qgi_db"
-}
-DB_COUNTRY_B_STR      = "country_b"
-DB_PATTERN_LENGTH_STR = "pattern_length"
-DB_START_YEAR_A_STR   = "start_year_a"
-DB_START_YEAR_B_STR   = "start_year_b"
+from utils.utils import COUNTRY_DICTIONARY_PATH, get_country_name
 
 
-class DatabaseManager:
-    def __init__(self):
-        self.conn = self._connect_to_database()
+def get_country_b_counts_for_country_a(country_id, country_name, countries_df):   
+    # Step 1: Execute query to get country_b_id_fk where country_a_id_fk equals given value
+    # Step 2: Extract and rank patterns for country_id
+    # Define weights for calculating the Power score
+    WEIGHT_PATTERN_LENGTH = 0.2
+    WEIGHT_INDEXES        = 0.3
+    WEIGHT_AVERAGE_CORR   = 0.5
 
-    def _connect_to_database(self, max_retries = 99999, retry_delay = 1):
-        attempt = 0
-        remarkable_attempts = [100, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000]
-        while attempt < max_retries:
-            try:
-                connection = mysql_connector.connect(
-                    user     = DB_CREDENTIALS["user"],
-                    password = DB_CREDENTIALS["password"],
-                    host     = DB_CREDENTIALS["host"],
-                    database = DB_CREDENTIALS["database"]
-                )
-                return connection
-            except Error as err:
-                attempt += 1
-                if attempt in remarkable_attempts:
-                    print(f"Attempt {attempt}: {err}")
-                time.sleep(retry_delay)
-                if attempt >= max_retries:
-                    raise Exception("Could not connect to MySQL.")
+    # Extract patterns for country_id
+    patterns_df = pd.read_csv(r"data/countries/" + country_id + "_" + country_name + "_patterns.csv")
 
-    def execute_this_query(self, query: str = ""):
-        cursor = self.conn.cursor()
-        cursor.execute(query)
-        data         = cursor.fetchall()
-        column_names = [desc[0] for desc in cursor.description]
-        df           = pd.DataFrame(data, columns = column_names)
-        cursor.close()
-        return df
+    # Convert columns to numericals
+    patterns_df["pattern_length_fk"] = pd.to_numeric(patterns_df["pattern_length_fk"], errors="coerce")
+    patterns_df["correlation"] = pd.to_numeric(patterns_df["avg_corr"], errors="coerce")
 
-    def list_tables(self):
-        cursor = self.conn.cursor()
-        cursor.execute("SHOW TABLES")
-        tables = cursor.fetchall()
-        cursor.close()
-        return [table[0] for table in tables]
+    # Calculate Power score
+    patterns_df["Power"] = (
+        patterns_df["pattern_length_fk"] * WEIGHT_PATTERN_LENGTH +
+        patterns_df["indexes"] * WEIGHT_INDEXES +
+        patterns_df["avg_corr"] * WEIGHT_AVERAGE_CORR
+    )
 
-    def delete_table(self, table_name):
-        cursor = self.conn.cursor()
-        query = f"DROP TABLE IF EXISTS {table_name}"
-        cursor.execute(query)
-        self.conn.commit()
-        cursor.close()
+    # Sort by Power score
+    patterns_grouped_sorted = patterns_df.sort_values(by="Power", ascending=False)
+    
+    patterns_grouped_sorted = patterns_grouped_sorted[patterns_grouped_sorted["indexes"] > 1]
 
-    def delete_all_contents_of(self, table_name):
-        cursor = self.conn.cursor()
-        query  = f"DELETE FROM {table_name}"
-        cursor.execute(query)
-        self.conn.commit()
-        cursor.close()
+    # Step 3: Convert the data to a list
+    country_b_ids = patterns_grouped_sorted["country_b_id_fk"].tolist()
 
-    def get_value_by_id(self, table, id, column):
-        cursor = self.conn.cursor()
-        query  = f"SELECT `{column}` FROM `{table}` WHERE id = %s"
-        cursor.execute(query, (id,))
-        result = cursor.fetchone()
-        cursor.close()
-        return result[0] if result else None
+    # Step 4: Group and count the country IDs
+    counts_df = pd.DataFrame(country_b_ids, columns=["country_b_id_fk"]).value_counts().reset_index(name="count")
 
-    def get_id_by_value(self, table, value, column=None):
-        cursor = self.conn.cursor()
-        if column:
-            query = f"SELECT id FROM `{table}` WHERE `{column}` = %s"
-            cursor.execute(query, (value,))
-        else:
-            cursor.execute(f"SHOW COLUMNS FROM `{table}`")
-            columns = [col[0] for col in cursor.fetchall()]
-            for col in columns:
-                query = f"SELECT id FROM `{table}` WHERE `{col}` = %s"
-                cursor.execute(query, (value,))
-        result = cursor.fetchone()
-        cursor.close()
-        return result[0] if result else None
+    # Step 5: Sort by count in descending order
+    counts_df = counts_df.sort_values(by="count", ascending=False)
 
-    def close_connection(self):
-        if self.conn.is_connected():
-            self.conn.close()
+    # Step 6: Replace country IDs with names
+    # counts_df["country_b_id_fk"] = counts_df["country_b_id_fk"].apply(lambda x: get_value_by_id("country", x, "name_1"))
+    counts_df["country_b_id_fk"] = counts_df["country_b_id_fk"].apply(lambda x: get_country_name(countries_df, x))
+
+    # Step 7: Rename columns to "Country" and "Patterns"
+    counts_df.rename(columns={"country_b_id_fk": "Country", "count": "Patterns"}, inplace=True)
+
+    # Step 8: Drop the index column
+    counts_df.reset_index(drop = True, inplace = True)
+
+    return counts_df
+
+
+def get_alpha2_by_name(country_name: str) -> str:
+    """
+    Retrieves the ISO 3166-1 alpha-2 country code for a given country name.
+
+    Parameters:
+    - country_name (str): The name of the country.
+
+    Returns:
+    - str: The ISO 3166-1 alpha-2 country code.
+    """
+    countries_df = pd.read_csv(COUNTRY_DICTIONARY_PATH)
+    match = countries_df[countries_df["name_1"] == country_name]
+    if not match.empty:
+        return match["alpha_2"].iloc[0]
+    else:
+        return None
+
+
+
+# # TODO have common DB_CREDENTIALS
+# DB_CREDENTIALS = {
+#     "user":     "root", 
+#     "password": "5465", 
+#     "host":     "127.0.0.1", 
+#     "database": "qgi_db"
+# }
+# DB_COUNTRY_B_STR      = "country_b"
+# DB_PATTERN_LENGTH_STR = "pattern_length"
+# DB_START_YEAR_A_STR   = "start_year_a"
+# DB_START_YEAR_B_STR   = "start_year_b"
+
+
+# class DatabaseManager:
+#     def __init__(self):
+#         self.conn = self._connect_to_database()
+# 
+#     def _connect_to_database(self, max_retries = 99999, retry_delay = 1):
+#         attempt = 0
+#         remarkable_attempts = [100, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000]
+#         while attempt < max_retries:
+#             try:
+#                 connection = mysql_connector.connect(
+#                     user     = DB_CREDENTIALS["user"],
+#                     password = DB_CREDENTIALS["password"],
+#                     host     = DB_CREDENTIALS["host"],
+#                     database = DB_CREDENTIALS["database"]
+#                 )
+#                 return connection
+#             except Error as err:
+#                 attempt += 1
+#                 if attempt in remarkable_attempts:
+#                     print(f"Attempt {attempt}: {err}")
+#                 time.sleep(retry_delay)
+#                 if attempt >= max_retries:
+#                     raise Exception("Could not connect to MySQL.")
+# 
+#     def execute_this_query(self, query: str = ""):
+#         cursor = self.conn.cursor()
+#         cursor.execute(query)
+#         data         = cursor.fetchall()
+#         column_names = [desc[0] for desc in cursor.description]
+#         df           = pd.DataFrame(data, columns = column_names)
+#         cursor.close()
+#         return df
+# 
+#     def list_tables(self):
+#         cursor = self.conn.cursor()
+#         cursor.execute("SHOW TABLES")
+#         tables = cursor.fetchall()
+#         cursor.close()
+#         return [table[0] for table in tables]
+# 
+#     def delete_table(self, table_name):
+#         cursor = self.conn.cursor()
+#         query = f"DROP TABLE IF EXISTS {table_name}"
+#         cursor.execute(query)
+#         self.conn.commit()
+#         cursor.close()
+# 
+#     def delete_all_contents_of(self, table_name):
+#         cursor = self.conn.cursor()
+#         query  = f"DELETE FROM {table_name}"
+#         cursor.execute(query)
+#         self.conn.commit()
+#         cursor.close()
+# 
+#     def get_value_by_id(self, table, id, column):
+#         cursor = self.conn.cursor()
+#         query  = f"SELECT `{column}` FROM `{table}` WHERE id = %s"
+#         cursor.execute(query, (id,))
+#         result = cursor.fetchone()
+#         cursor.close()
+#         return result[0] if result else None
+# 
+#     def get_id_by_value(self, table, value, column=None):
+#         cursor = self.conn.cursor()
+#         if column:
+#             query = f"SELECT id FROM `{table}` WHERE `{column}` = %s"
+#             cursor.execute(query, (value,))
+#         else:
+#             cursor.execute(f"SHOW COLUMNS FROM `{table}`")
+#             columns = [col[0] for col in cursor.fetchall()]
+#             for col in columns:
+#                 query = f"SELECT id FROM `{table}` WHERE `{col}` = %s"
+#                 cursor.execute(query, (value,))
+#         result = cursor.fetchone()
+#         cursor.close()
+#         return result[0] if result else None
+# 
+#     def close_connection(self):
+#         if self.conn.is_connected():
+#             self.conn.close()
 
 ###################################################################################
 # def return_mysql_connection(max_retries: int = 99999, retry_delay: int = 1,):
