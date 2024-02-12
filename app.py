@@ -62,10 +62,56 @@ new_ppr_df = pd.read_csv("data/ppr/new_ppr.csv")
 
 
 def show_search_page():
+    with st.expander("Hey, welcome to **QG Intelligence**!"):
+        st.markdown("""
+            # Welcome to QG Intelligence
+
+            QGI is a powerful tool designed to demonstrate and visualise over a **million** patterns 
+            between any two countries, providing insights into political, economic and social 
+            dynamics. A pattern, in our context, is a set of correlations across various indexes 
+            that indicate a significant relationship between two countries over a specific period.
+
+            ### Understanding Patterns
+            A pattern between two countries comprises five key elements:
+            - **Country A Name:** The initiating country in the pattern.
+            - **Country B Name:** The responding country in the pattern.
+            - **Pattern Length (in years):** The duration over which the pattern extends.
+            - **Starting Year for Country A:** The year from which the pattern begins for Country A.
+            - **Starting Year for Country B:** The corresponding starting year for Country B.
+
+            Each pattern is supported by at least two indexes that highly correlate during the 
+            pattern length, illustrating synchronous, mirrored activities and trends in sectors 
+            such as Economy, Finance, Investments, Sovereignty, Society, Human Rights, Military, 
+            and Energy, among others.
+
+            ### How to Use QGI
+            To explore the geopolitical patterns:
+            1. **Expand the Sidebar Menu:** If not visible, click on the ">" symbol at the top 
+                left of the screen to reveal the menu.
+            2. **Input Parameters:** Sequentially input Country A, Country B, pattern length, 
+                and the starting years for each country. With each input, QGI will fetch and 
+                display relevant patterns and their details, allowing for an iterative 
+                selection process.
+
+            ### Pattern's Power Score
+            The displayed patterns are sorted using a formula that accounts for three metrics, 
+            enabling users to discern the most significant relationships quickly.
+            The Pattern Power Score is determined by the following three metrics:
+            1. **Pattern Length**: The duration of the pattern measured in calendar years.
+            2. **Number of Indexes:** The total indexes involved in the pattern.
+            3. **Average Correlation:** The mean correlation value of these indexes, signifying 
+                the pattern's intensity and coherence.
+
+            For inspiration, you can explore the Pattern Power Ranking in the expander box below 
+            this one. 
+            
+            Good luck in your journey!
+
+        """)
     # Pattern Power Ranking Section
     ppr_df = compare_rankings(old_ppr_df, new_ppr_df)
 
-    with st.expander("Pattern Power Rankings"):
+    with st.expander("Pattern Power Ranking"):
         st.dataframe(ppr_df, use_container_width = True)
     st.markdown("___")
 
