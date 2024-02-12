@@ -315,7 +315,7 @@ def generate_doughnut_chart(df):
 
     options = {
         "tooltip": {"trigger": "item"},
-        "legend": {"top": "5%", "left": "center", "textStyle": {"color": "#ffffff"}},  # Making legend text white as well
+        "legend": {"top": "5%", "left": "center", "textStyle": {"color": "#808080"}},  # Making legend text white as well
         "series": [
             {
                 "name": "Sectors",
@@ -330,14 +330,14 @@ def generate_doughnut_chart(df):
                 "label": {
                     "show": False,
                     "position": "center",
-                    "color": "#ffffff"  # Making label text white
+                    "color": "#808080"  # Making label text white
                 },
                 "emphasis": {
                     "label": {
                         "show": True,
                         "fontSize": "30",
                         "fontWeight": "bold",
-                        "color": "#ffffff"  # Making emphasized label text white
+                        "color": "#808080"  # Making emphasized label text white
                     }
                 },
                 "labelLine": {"show": False},
