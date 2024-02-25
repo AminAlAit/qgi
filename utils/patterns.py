@@ -1,5 +1,6 @@
 import pandas as pd
 from datetime import datetime
+import streamlit as st
 
 
 # Assign weights to each metric
@@ -157,6 +158,7 @@ def manual_merge_dfs(df1, df2, key_columns):
     return pd.DataFrame(merged_data).reset_index(drop=True)
 
 
+@st.cache_data(ttl=600)
 def compare_rankings(old_df, new_df):
     merged_df = new_df
     merged_df["avg_corr"] = (merged_df["avg_corr"] * 100).round(2).astype(str) + "%"
@@ -186,6 +188,7 @@ def compare_rankings(old_df, new_df):
     final_df = final_df[pd.notna(final_df["Pattern Power Ranking"])]
     final_df = final_df.head(2000) # `.style` can not style more than a certain limit, so 7000 is a safe maximum number to use. 
     #final_df = final_df[final_df["Sources"] > 1]
-    final_df = final_df.style.applymap(color_countries, subset=["Country A", "Country B"])
+    #final_df = final_df.style.applymap(color_countries, subset=["Country A", "Country B"])
+    final_df.index = [i + 1 for i in range(len(final_df))]
 
     return final_df
