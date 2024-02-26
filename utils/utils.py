@@ -5,6 +5,7 @@ import streamlit as st
 import pandas as pd
 
 from constant.index_names_subs import INDEX_NAMES_THAT_NEED_CHANGING, MAIN_NAMES_THAT_NEED_CHANGING
+from constant.tips import GET_TIP_PATTERN_LENGTH_RANGE_SLIDER, GET_TIP_STARTING_YEAR_SLIDER, GET_TIP_YEAR_GAP_RANGE_SLIDER, TIP_ALIGN_TOGGLE, TIP_COUNTRY_A_SELECT, TIP_COUNTRY_B_SELECT, GET_TIP_CORRELATION_RANGE_SLIDER, TIP_SELECT_PATTERN_LENGTH, TIP_TRANSFORMATION_CAPTIONS, TIP_TRANSFORMATION_RADIO
 
 
 BAT_PATH                                    = "/mount/src/qgi/.bat"
@@ -219,26 +220,26 @@ def remove_duplicates(lst):
     return result
 
 
-def filter_by_grouping_indexes(df, country_a, min_ind, max_ind):
-    # Group the DataFrame by the specified columns
-
-    df["country_a_id_fk"] = [country_a for _ in range(len(df))]
-
-    grouped = df.groupby(["country_a_id_fk", "country_b_id_fk", "pattern_length_fk", "start_year_a_fk", "start_year_b_fk"])
-
-    # Calculate the count of rows in each group
-    group_counts = grouped.size().reset_index(name = "count")
-
-    # Filter the groups based on the count
-    filtered_groups = group_counts[(group_counts["count"] >= min_ind) & (group_counts["count"] <= max_ind)]
-
-    # Get the rows corresponding to the filtered groups
-    filtered_df = df.merge(filtered_groups, on = ["country_a_id_fk", "country_b_id_fk", "pattern_length_fk", "start_year_a_fk", "start_year_b_fk"])
-    
-    # Delete the rows from the original DataFrame
-    df = df[~df.index.isin(filtered_df.index)]
-    
-    return filtered_df, df
+# def filter_by_grouping_indexes(df, country_a, min_ind, max_ind):
+#     # Group the DataFrame by the specified columns
+# 
+#     df["country_a_id_fk"] = [country_a for _ in range(len(df))]
+# 
+#     grouped = df.groupby(["country_a_id_fk", "country_b_id_fk", "pattern_length_fk", "start_year_a_fk", "start_year_b_fk"])
+# 
+#     # Calculate the count of rows in each group
+#     group_counts = grouped.size().reset_index(name = "count")
+# 
+#     # Filter the groups based on the count
+#     filtered_groups = group_counts[(group_counts["count"] >= min_ind) & (group_counts["count"] <= max_ind)]
+# 
+#     # Get the rows corresponding to the filtered groups
+#     filtered_df = df.merge(filtered_groups, on = ["country_a_id_fk", "country_b_id_fk", "pattern_length_fk", "start_year_a_fk", "start_year_b_fk"])
+#     
+#     # Delete the rows from the original DataFrame
+#     df = df[~df.index.isin(filtered_df.index)]
+#    
+#     return filtered_df, df
 
 
 def percentage_str_to_float(percentage_str):
@@ -254,7 +255,7 @@ def sidebar_correlation_filter(display_df: pd.DataFrame, DISPLAY_DF_NEW_COLUMN_N
     max_corr = max(display_df["correlation_float"])
     
     # Create a slider using the min and max values
-    min_corr, max_corr = st.slider("Correlation Range", min_corr, max_corr, (min_corr, max_corr))
+    min_corr, max_corr = st.slider("Correlation Range", min_corr, max_corr, (min_corr, max_corr), help = GET_TIP_CORRELATION_RANGE_SLIDER(min_corr, max_corr))
     # Filter the DataFrame based on the correlation range
     display_df = display_df[(display_df["correlation_float"] >= min_corr) & (display_df["correlation_float"] <= max_corr)]
     # Optionally, drop the temporary float column if no longer needed
@@ -263,28 +264,34 @@ def sidebar_correlation_filter(display_df: pd.DataFrame, DISPLAY_DF_NEW_COLUMN_N
     return [display_df, min_corr, max_corr]
 
 
-def sidebar_indexes_number_filter(display_df: pd.DataFrame, DISPLAY_DF_NUMBER_OF_INDEXES_RENAME) -> pd.DataFrame:
-    ## Filter the DataFrame based on the selected number of indexes
-    max_nb_indexes = max(display_df[DISPLAY_DF_NUMBER_OF_INDEXES_RENAME])
-    min_nb_indexes = min(display_df[DISPLAY_DF_NUMBER_OF_INDEXES_RENAME])
-    if min_nb_indexes < max_nb_indexes:
-        min_ind, max_ind = st.slider("Number of Indexes", min_nb_indexes, max_nb_indexes, (2, max_nb_indexes))
-        display_df       = display_df[(display_df[DISPLAY_DF_NUMBER_OF_INDEXES_RENAME] >= min_ind) \
-                                    & (display_df[DISPLAY_DF_NUMBER_OF_INDEXES_RENAME] <= max_ind)]
-    else:
-        min_ind, max_ind = (1, 1)
-        display_df       = display_df[(display_df[DISPLAY_DF_NUMBER_OF_INDEXES_RENAME] >= min_ind) \
-                                    & (display_df[DISPLAY_DF_NUMBER_OF_INDEXES_RENAME] <= max_ind)]
-
-    return [display_df, min_ind, max_ind]
+# def sidebar_indexes_number_filter(display_df: pd.DataFrame, DISPLAY_DF_NUMBER_OF_INDEXES_RENAME) -> pd.DataFrame:
+#     ## Filter the DataFrame based on the selected number of indexes
+#     max_nb_indexes = max(display_df[DISPLAY_DF_NUMBER_OF_INDEXES_RENAME])
+#     min_nb_indexes = min(display_df[DISPLAY_DF_NUMBER_OF_INDEXES_RENAME])
+#     if min_nb_indexes < max_nb_indexes:
+#         min_ind, max_ind = st.slider("Number of Indexes", min_nb_indexes, max_nb_indexes, (2, max_nb_indexes))
+#         display_df       = display_df[(display_df[DISPLAY_DF_NUMBER_OF_INDEXES_RENAME] >= min_ind) \
+#                                     & (display_df[DISPLAY_DF_NUMBER_OF_INDEXES_RENAME] <= max_ind)]
+#     else:
+#         min_ind, max_ind = (1, 1)
+#         display_df       = display_df[(display_df[DISPLAY_DF_NUMBER_OF_INDEXES_RENAME] >= min_ind) \
+#                                     & (display_df[DISPLAY_DF_NUMBER_OF_INDEXES_RENAME] <= max_ind)]
+# 
+#     return [display_df, min_ind, max_ind]
 
 
 def sidebar_pattern_lengths_filter(display_df: pd.DataFrame, DISPLAY_DF_PATTERN_LENGTH_RENAME: str) -> pd.DataFrame:
     ## Filter the DataFrame based on the selected pattern length range
-    max_pattern_lengths = max(display_df[DISPLAY_DF_PATTERN_LENGTH_RENAME])
-    min_pattern_lengths = min(display_df[DISPLAY_DF_PATTERN_LENGTH_RENAME])
-    if min_pattern_lengths < max_pattern_lengths:
-        min_patt_len, max_patt_len = st.slider("Pattern Length Range", min_pattern_lengths, max_pattern_lengths, (min_pattern_lengths, max_pattern_lengths))
+    max_pattern_length = max(display_df[DISPLAY_DF_PATTERN_LENGTH_RENAME])
+    min_pattern_length = min(display_df[DISPLAY_DF_PATTERN_LENGTH_RENAME])
+    if min_pattern_length < max_pattern_length:
+        min_patt_len, max_patt_len = st.slider(
+            "Pattern Length Range", 
+            min_pattern_length, 
+            max_pattern_length, 
+            (min_pattern_length, max_pattern_length),
+            help = GET_TIP_PATTERN_LENGTH_RANGE_SLIDER(min_pattern_length, max_pattern_length)
+        )
         display_df = display_df[(display_df[DISPLAY_DF_PATTERN_LENGTH_RENAME] >= min_patt_len) \
                             & (display_df[DISPLAY_DF_PATTERN_LENGTH_RENAME] <= max_patt_len)]
     else:
@@ -295,7 +302,7 @@ def sidebar_pattern_lengths_filter(display_df: pd.DataFrame, DISPLAY_DF_PATTERN_
     return display_df
 
 
-def sidebar_years_gap_filter(display_df: pd.DataFrame, DISPLAY_DF_START_YEAR_B_RENAME: str, DISPLAY_DF_START_YEAR_A_RENAME: str) -> pd.DataFrame:
+def sidebar_years_gap_filter(display_df: pd.DataFrame, DISPLAY_DF_START_YEAR_B_RENAME: str, DISPLAY_DF_START_YEAR_A_RENAME: str, country_a) -> pd.DataFrame:
     ## Filter the DataFrame based on the selected year gap
     max_gap = (display_df[DISPLAY_DF_START_YEAR_B_RENAME] - display_df[DISPLAY_DF_START_YEAR_A_RENAME]).max()
     year_gap = st.slider(
@@ -304,30 +311,31 @@ def sidebar_years_gap_filter(display_df: pd.DataFrame, DISPLAY_DF_START_YEAR_B_R
         max_value = max_gap,
         value     = 0,
         step      = 1,
-        key       = "year_gap_slider"
+        key       = "year_gap_slider",
+        help      = GET_TIP_YEAR_GAP_RANGE_SLIDER(0, max_gap, country_a)
     )
     display_df = display_df[(abs(display_df[DISPLAY_DF_START_YEAR_B_RENAME] - display_df[DISPLAY_DF_START_YEAR_A_RENAME])) >= year_gap]
 
     return display_df
 
 
-def apply_advanced_filters(display_df: pd.DataFrame, DISPLAY_DF_NEW_COLUMN_NAMES) -> pd.DataFrame:
+def apply_advanced_filters(display_df: pd.DataFrame, DISPLAY_DF_NEW_COLUMN_NAMES, country_a) -> pd.DataFrame:
     if not isinstance(display_df, pd.DataFrame) or len(display_df) == 0:
         return [display_df, "", "", "", ""]
 
     ## Sidebar sliders for advanced options 
     with st.sidebar.expander("Advanced Filters"):
         display_df, min_corr, max_corr = sidebar_correlation_filter(display_df, DISPLAY_DF_NEW_COLUMN_NAMES)
-        display_df, min_ind, max_ind   = sidebar_indexes_number_filter(display_df, DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_NUMBER_OF_INDEXES_RENAME"])
+        #display_df, min_ind, max_ind   = sidebar_indexes_number_filter(display_df, DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_NUMBER_OF_INDEXES_RENAME"])
         display_df                     = sidebar_pattern_lengths_filter(display_df, DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_PATTERN_LENGTH_RENAME"])
-        display_df                     = sidebar_years_gap_filter(display_df, DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_START_YEAR_B_RENAME"], DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_START_YEAR_A_RENAME"])
-        return display_df, min_corr, max_corr, min_ind, max_ind
+        display_df                     = sidebar_years_gap_filter(display_df, DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_START_YEAR_B_RENAME"], DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_START_YEAR_A_RENAME"], country_a)
+        return display_df, min_corr, max_corr #, min_ind, max_ind
 
 
 def get_country_a_from_user():
     countries_df = get_countries_a_list()
     countries_df = countries_df.sort_values(by = "country")
-    return st.sidebar.selectbox("Select Any Country", [""] + list(countries_df["country"])), countries_df
+    return st.sidebar.selectbox("Country A", [""] + list(countries_df["country"]), help=TIP_COUNTRY_A_SELECT), countries_df
 
 
 def rename_display_df_columns(country_a: str) -> dict:
@@ -353,9 +361,9 @@ def get_country_b_and_id_from_user(display_df: pd.DataFrame, countries_df, DISPL
     countries_b = [""] + remove_duplicates(list(display_df[country_b_col_name]))
 
     if len(countries_b) > 2:
-        country_b = st.sidebar.selectbox("Select Second Country", countries_b)
+        country_b = st.sidebar.selectbox("Country B", countries_b, help = TIP_COUNTRY_B_SELECT)
     else:
-        st.sidebar.selectbox("Select Second Country", [countries_b[1]])
+        st.sidebar.selectbox("Select Second Country", [countries_b[1]], help = TIP_COUNTRY_B_SELECT)
         country_b = countries_b[1]
 
     country_b_id = get_country_id(countries_df, country_b)
@@ -373,9 +381,9 @@ def get_pattern_length_from_user(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, countr
     ## Pattern Length Filtering
     patt_lengths = [""] + list(set(display_df[DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_PATTERN_LENGTH_RENAME"]]))
     if len(patt_lengths) > 2:
-        patt_len = st.sidebar.selectbox("Pattern Length", patt_lengths)
+        patt_len = st.sidebar.selectbox("Pattern Length", patt_lengths, help = TIP_SELECT_PATTERN_LENGTH)
     else:
-        st.sidebar.selectbox("Pattern Length", [patt_lengths[1]])
+        st.sidebar.selectbox("Pattern Length", [patt_lengths[1]], help = TIP_SELECT_PATTERN_LENGTH)
         patt_len = patt_lengths[1]
     
     return [patt_len, display_message, display_df]
@@ -390,9 +398,9 @@ def get_start_year_a(
     country_b_id,
     patt_len,
     DISPLAY_DF_NEW_COLUMN_NAMES,
-    min_corr, max_corr, min_ind, max_ind) -> list:
+    min_corr, max_corr) -> list:
     
-    if not patt_len or patt_len == "" or min_corr == "" or max_corr == "" or min_ind == "" or max_ind == "":
+    if not patt_len or patt_len == "" or min_corr == "" or max_corr == "":
         return ["", "", display_df]
 
     pattern_length_col_name = DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_PATTERN_LENGTH_RENAME"]
@@ -408,13 +416,13 @@ def get_start_year_a(
     df = df[df["avg_corr"] <= max_corr]
 
     df["avg_corr"] = pd.to_numeric(df["avg_corr"], errors = "coerce")
-    df                = filter_by_grouping_indexes(df, country_a, min_ind, max_ind)[0]
+    # df             = filter_by_grouping_indexes(df, country_a, min_ind, max_ind)[0]
 
     start_years_a = [""] + list(set(display_df[start_year_a_col_name]))
     if len(start_years_a) > 2:
-        start_year_a = st.sidebar.selectbox("Starting Year for " + country_a, start_years_a)
+        start_year_a = st.sidebar.selectbox("Starting Year for " + country_a, start_years_a, help = GET_TIP_STARTING_YEAR_SLIDER(country_a))
     else:
-        st.sidebar.selectbox("Starting Year for " + country_a, [start_years_a[1]])
+        st.sidebar.selectbox("Starting Year for " + country_a, [start_years_a[1]], help = GET_TIP_STARTING_YEAR_SLIDER(country_a))
         start_year_a = start_years_a[1]
 
     display_message = f"### All Patterns between {country_a} ({start_year_a}) and {country_b}"
@@ -431,9 +439,9 @@ def get_start_year_b(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, start_year_a, coun
 
     start_years_b = [""] + list(set(display_df[DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_START_YEAR_B_RENAME"]]))
     if len(start_years_b) > 2:
-        start_year_b = st.sidebar.selectbox("Starting Year for " + country_b, start_years_b)
+        start_year_b = st.sidebar.selectbox("Starting Year for " + country_b, start_years_b, help = GET_TIP_STARTING_YEAR_SLIDER(country_b))
     else:
-        st.sidebar.selectbox("Starting Year for " + country_b, [start_years_b[1]])
+        st.sidebar.selectbox("Starting Year for " + country_b, [start_years_b[1]], help = GET_TIP_STARTING_YEAR_SLIDER(country_b))
         start_year_b = start_years_b[1]
     
     display_message   = f"### All Patterns between {country_a} ({start_year_a}) and {country_b} ({start_year_b})"
@@ -499,18 +507,20 @@ def plotting_transformations(five_params):
     method = "Raw Representation"
     if validate_five_params(five_params):
         if five_params[-1] != five_params[-2]:
-            align = st.sidebar.toggle("Align Index Couples")
+            align = st.sidebar.toggle("Align Index Couples", help = TIP_ALIGN_TOGGLE)
 
         method = st.sidebar.radio(
             "Choose Transformation Method",
-            (
-                "Raw Representation",
+            [
+                "Original Representation",
                 "Normalize",
                 "Standardize",
                 "Base Year Indexing",
                 "Logarithmic Scaling",
                 "Growth Rates/Ratios"
-            )
+            ],
+            captions=TIP_TRANSFORMATION_CAPTIONS,
+            help=TIP_TRANSFORMATION_RADIO
         )
 
     return align, method

@@ -355,34 +355,42 @@ def couple_countries_dashboard(five_params, countries, display_df, pattern_power
     if validate_five_params(five_params):
         col1, col2, col3, col4, col5 = st.columns(5)
         with col1:
+            #with st.container(border=True, height = 672):
             ## Pattern Partners Country A
             st.markdown("#### Pattern Partners")
             df = get_country_b_counts_for_country_a(country_a_id, country_a, countries_df)
             df.set_index("Country", inplace = True)
-            st.dataframe(df, use_container_width = True)
+            st.dataframe(df, use_container_width = True, height = 430) #, height=650)
         with col2: 
+            #with st.container(border = True, height = 672):
             ## Country A
-            st.image(f"https://flagcdn.com/h240/{get_alpha2_by_name(country_a).lower()}.png")
-            st.markdown(f"<h1 style='text-align: center;'>{country_a}</h1>", unsafe_allow_html = True)
+            with st.container(border = True):
+                st.image(f"https://flagcdn.com/h240/{get_alpha2_by_name(country_a).lower()}.png")
+            st.markdown(f"<h2 style='text-align: center;'>{country_a}</h2>", unsafe_allow_html = True)
             st.markdown(f"<h3 style='text-align: center;'>{str(int(start_year_a))} - {str(int(start_year_a) + patt_len)}</h3>", unsafe_allow_html = True)
         with col3:
             ## Mid screen: Indexes
             #st.markdown(f"<h1 style='text-align: center;'>{len(display_df)}</h1>", unsafe_allow_html = True)
             #st.markdown("<h4 style='text-align: center;'>Indexes</h4>", unsafe_allow_html = True)
+            #with st.container(border=True):
             # PPS
-            st.markdown(f"<h1 style='text-align: center;'>{pattern_power_score}</h1>", unsafe_allow_html = True)
+            st.markdown(f"<h2 style='text-align: center;'>{pattern_power_score}</h2>", unsafe_allow_html = True)
             st.markdown("<h4 style='text-align: center;'>Pattern Power Score</h4>", unsafe_allow_html = True)
+            # pie chart
             generate_doughnut_chart(plotting_df)
         with col4:
+            #with st.container(border=True, height = 672):
             ## Country B
-            st.image(f"https://flagcdn.com/h240/{get_alpha2_by_name(country_b).lower()}.png")
-            st.markdown(f"<h1 style='text-align: center;'>{country_b}</h1>", unsafe_allow_html = True)
+            with st.container(border = True):
+                st.image(f"https://flagcdn.com/h240/{get_alpha2_by_name(country_b).lower()}.png")    
+            st.markdown(f"<h2 style='text-align: center;'>{country_b}</h2>", unsafe_allow_html = True)
             st.markdown(f"<h3 style='text-align: center;'>{str(int(start_year_b))} - {str(int(start_year_b) + patt_len)}</h3>", unsafe_allow_html = True)
         with col5:
+            #with st.container(border=True, height = 672):
             ## Pattern Partners Country B
             st.markdown("#### Pattern Partners")
             df = get_country_b_counts_for_country_a(country_b_id, country_b, countries_df)
             df.set_index("Country", inplace = True)
-            st.dataframe(df, use_container_width = True)
+            st.dataframe(df, use_container_width = True, height = 430)
         
         #st.markdown("___")

@@ -32,6 +32,13 @@ install_package("streamlit-lottie")
 run_requirements()
 from streamlit_extras.customize_running import center_running
 
+import sys
+import subprocess
+def install_package(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+install_package("streamlit-modal")
+from streamlit_modal import Modal
+
 
 ## TODO optimize requirements.txt to include only libraries we use
 ## TODO resolve the library importing mess
@@ -45,20 +52,28 @@ st.set_page_config(layout = "wide", page_title = "QG Intelligence", page_icon = 
 center_running()
 
 
-st.sidebar.markdown("# QG Intelligence")
+#st.sidebar.markdown("# QG Intelligence")
 old_ppr_df = pd.read_csv("data/ppr/old_ppr.csv")
 new_ppr_df = pd.read_csv("data/ppr/new_ppr.csv")
 
 
-# def image_to_base64(img_path, output_size = (64, 64)):
-#     # Check if the image path exists
-#     if os.path.exists(img_path):
-#         with Image.open(img_path) as img:
-#             img      = img.resize(output_size)
-#             buffered = io.BytesIO()
-#             img.save(buffered, format = "PNG")
-#             return f"data:image/png;base64,{base64.b64encode(buffered.getvalue()).decode()}"
-#     return ""
+if "show_patterns_popup" not in st.session_state:
+    st.session_state["show_patterns_popup"] = True
+if st.session_state["show_patterns_popup"]:
+    with Modal(key = "Demo Key", title = "Welcome to the Patterns Portal! :wave:").container():
+        st.markdown("""
+            Before browsing the millions of patterns, here are some some tips on how to do so:
+
+            Every pattern is composed of 5 elements: 
+            - Country A: select any country in the beginning, so you can see who has patterns with it.
+            - Country B: then, you can select which country to pair with.
+            - Pattern Length (in years): then, you can refine your search by selecting the pattern's length.
+            - Starting Year A: select when tha pattern should start for Country A.
+            - Starting Year B: finally, select when the pattern should start for Country B.
+            
+            Inputting these 5 key elements, will present you with the pattern dashboard. Go crazy! 🤘
+        """)
+    st.session_state["show_patterns_popup"] = False
 
 
 def show_search_page():
@@ -111,7 +126,7 @@ def show_search_page():
     # Pattern Power Ranking Section
     ppr_df = compare_rankings(old_ppr_df, new_ppr_df)
 
-    with st.expander("Pattern Power Ranking"):
+    with st.expander("You can take some inspiration from the Pattern Power Ranking table here"):
         st.dataframe(ppr_df, use_container_width = True)
     st.markdown("___")
 
@@ -126,13 +141,13 @@ def show_search_page():
 
     DISPLAY_DF_NEW_COLUMN_NAMES                      = rename_display_df_columns(country_a)
     display_df                                       = process_display_dataframe(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_df)
-    display_df, min_corr, max_corr, min_ind, max_ind = apply_advanced_filters(display_df, DISPLAY_DF_NEW_COLUMN_NAMES)
+    display_df, min_corr, max_corr                   = apply_advanced_filters(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, country_a)
 
     country_b, country_b_id, display_df              = get_country_b_and_id_from_user(display_df, countries_df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_a, countries_ids)
     patt_len, display_message, display_df            = get_pattern_length_from_user(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, country_a, country_b)
     couple_of_countries                              = [country_a, country_b]
 
-    start_year_a, display_message, display_df        = get_start_year_a(display_message, display_df, country_a, country_a_id, country_b, country_b_id, patt_len, DISPLAY_DF_NEW_COLUMN_NAMES, min_corr, max_corr, min_ind, max_ind)
+    start_year_a, display_message, display_df        = get_start_year_a(display_message, display_df, country_a, country_a_id, country_b, country_b_id, patt_len, DISPLAY_DF_NEW_COLUMN_NAMES, min_corr, max_corr)
     start_year_b, display_df, display_message        = get_start_year_b(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, start_year_a, country_b, display_message, country_a)
 
     pattern_power_score                              = get_pattern_power_score(display_df, start_year_b, DISPLAY_DF_NEW_COLUMN_NAMES)

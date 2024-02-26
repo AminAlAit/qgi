@@ -77,6 +77,7 @@ streamlit-lottie==0.0.5
 streamlit-option-menu==0.3.6
 streamlit-toggle-switch==1.0.2
 streamlit-vertical-slider==2.5.5
+streamlit-modal==0.1.2
 tenacity==8.2.3
 toml==0.10.2
 tomli==2.0.1
