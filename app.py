@@ -31,7 +31,7 @@ install_package("streamlit-extras")
 install_package("streamlit-lottie")
 run_requirements()
 from streamlit_extras.customize_running import center_running
-
+from st_pages import show_pages_from_config
 import sys
 import subprocess
 def install_package(package):
@@ -51,6 +51,7 @@ from streamlit_modal import Modal
 st.set_page_config(layout = "wide", page_title = "QG Intelligence", page_icon = "📈")
 center_running()
 
+show_pages_from_config()
 
 #st.sidebar.markdown("# QG Intelligence")
 old_ppr_df = pd.read_csv("data/ppr/old_ppr.csv")
@@ -141,7 +142,7 @@ def show_search_page():
 
     DISPLAY_DF_NEW_COLUMN_NAMES                      = rename_display_df_columns(country_a)
     display_df                                       = process_display_dataframe(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_df)
-    display_df, min_corr, max_corr                   = apply_advanced_filters(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, country_a)
+    display_df, min_corr, max_corr, __, ___          = apply_advanced_filters(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, country_a)
 
     country_b, country_b_id, display_df              = get_country_b_and_id_from_user(display_df, countries_df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_a, countries_ids)
     patt_len, display_message, display_df            = get_pattern_length_from_user(display_df, DISPLAY_DF_NEW_COLUMN_NAMES, country_a, country_b)

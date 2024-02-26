@@ -5,7 +5,9 @@ import streamlit                        as st
 st.set_page_config(layout = "wide", page_title = "Say Hi!", page_icon = "👋")
 center_running()
 
+
 st.header(":mailbox: Get it touch!")
+
 
 # "https://qgintelligence.streamlit.app"
 

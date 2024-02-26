@@ -329,7 +329,7 @@ def apply_advanced_filters(display_df: pd.DataFrame, DISPLAY_DF_NEW_COLUMN_NAMES
         #display_df, min_ind, max_ind   = sidebar_indexes_number_filter(display_df, DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_NUMBER_OF_INDEXES_RENAME"])
         display_df                     = sidebar_pattern_lengths_filter(display_df, DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_PATTERN_LENGTH_RENAME"])
         display_df                     = sidebar_years_gap_filter(display_df, DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_START_YEAR_B_RENAME"], DISPLAY_DF_NEW_COLUMN_NAMES["DISPLAY_DF_START_YEAR_A_RENAME"], country_a)
-        return display_df, min_corr, max_corr #, min_ind, max_ind
+        return display_df, min_corr, max_corr, 0, 0 ## TODO fix: remove these zeros. 
 
 
 def get_country_a_from_user():
