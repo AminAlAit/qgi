@@ -332,10 +332,52 @@ def apply_advanced_filters(display_df: pd.DataFrame, DISPLAY_DF_NEW_COLUMN_NAMES
         return display_df, min_corr, max_corr, 0, 0 ## TODO fix: remove these zeros. 
 
 
+#@st.cache_data(ttl=300)
 def get_country_a_from_user():
+    countries_list, countries_df = get_sorted_countries_list(True)
+    return st.sidebar.selectbox("Country A", countries_list, help=TIP_COUNTRY_A_SELECT), countries_df
+
+
+@st.cache_data(ttl=300)
+def get_sorted_countries_list(return_countries_df = True):
     countries_df = get_countries_a_list()
     countries_df = countries_df.sort_values(by = "country")
-    return st.sidebar.selectbox("Country A", [""] + list(countries_df["country"]), help=TIP_COUNTRY_A_SELECT), countries_df
+    if return_countries_df:
+        return [""] + list(countries_df["country"]), countries_df
+    return [""] + list(countries_df["country"])
+
+
+def find_csv_files(root_path):
+    """
+    Finds all CSV files in the given root path and its subdirectories
+    that start with 'MAIN - ' and end with '.csv'.
+    
+    Parameters:
+    - root_path (str): The root directory path to start the search from.
+    
+    Returns:
+    - list: A list of paths to the CSV files that match the criteria.
+    """
+    csv_files = []
+    for subdir, dirs, files in os.walk(root_path):
+        for file in files:
+            if file.startswith("MAIN - ") and file.endswith(".csv"):
+                csv_files.append(os.path.join(subdir, file))
+    
+    return csv_files
+
+PATTERNIZED_INDEXES = ""
+
+@st.cache_data(ttl=300)
+def FETCHING_INDEXES(csv_files):
+    index_dfs = []
+    index_names = []
+    for index_path in csv_files:
+        index_name = index_path.split("/")[-1].replace("MAIN - ", "").replace(".csv", "")
+        # if index_name in PATTERNIZED_INDEXES:
+        index_names.append(index_name)
+        index_dfs.append(pd.read_csv(index_path))
+    return [pd.DataFrame()] + index_dfs, [""] + index_names
 
 
 def rename_display_df_columns(country_a: str) -> dict:

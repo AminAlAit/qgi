@@ -8,16 +8,33 @@
 ## TODO checkout similar page-runtime settings
 
 
-# from st_pages import show_pages_from_config
-# show_pages_from_config()
+import sys
+import subprocess
+from utils.utils import run_requirements
+def install_package(package):
+    """dummy docstring"""
+    #subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "pip"])
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+run_requirements()
+install_package("streamlit-modal")
+install_package("streamlit-echarts")
+install_package("streamlit-extras")
+install_package("streamlit-lottie")
+
+
+# References: 
+# https://discuss.streamlit.io/t/new-package-st-pages-change-page-names-and-icons-in-sidebar-without-changing-filenames/33969/56
+# https://st-pages.streamlit.app
 
 import streamlit as st
 from st_pages import Page, add_page_title, show_pages
 show_pages(
     [
-        Page("pages/0_Base.py",    "Base", ""),
-        Page("pages/9_Contact.py", "Contact", "")
+        # Page("pages/0_Base.py",         "Base",         ""),
+        Page("pages/1_Patterns.py",       "Patterns",     ""),
+        # Page("pages/2_Experimental.py", "Experimental", ""),
+        Page("pages/9_Contact.py",        "Contact",      "")
     ]
 )
 
-st.experimental_rerun()
+st.rerun()

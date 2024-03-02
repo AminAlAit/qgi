@@ -1,7 +1,7 @@
-"""main script"""
+"""Patterns script"""
 
-import sys
-import subprocess
+from streamlit_extras.customize_running import center_running
+from streamlit_modal import Modal
 import pandas as pd
 import streamlit as st
 from utils.patterns import compare_rankings, extract_and_rank_patterns_for_country
@@ -19,36 +19,16 @@ from utils.utils import (
     prepare_display_df_for_viz,
     process_display_dataframe,
     rename_display_df_columns,
-    run_requirements,
     update_names_of_main_and_index_names,
     validate_five_params)
-def install_package(package):
-    """dummy docstring"""
-    #subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "pip"])
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-install_package("streamlit-echarts")
-install_package("streamlit-extras")
-install_package("streamlit-lottie")
-run_requirements()
-from streamlit_extras.customize_running import center_running
-from st_pages import show_pages_from_config
-import sys
-import subprocess
-def install_package(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-install_package("streamlit-modal")
-from streamlit_modal import Modal
 
 
+## App init commands
 st.set_page_config(layout = "wide", page_title = "QG Intelligence", page_icon = "📈")
 center_running()
 
 
-#st.sidebar.markdown("# QG Intelligence")
-old_ppr_df = pd.read_csv("data/ppr/old_ppr.csv")
-new_ppr_df = pd.read_csv("data/ppr/new_ppr.csv")
-
-
+## Splash window
 if "show_patterns_popup" not in st.session_state:
     st.session_state["show_patterns_popup"] = True
 if st.session_state["show_patterns_popup"]:
@@ -68,6 +48,12 @@ if st.session_state["show_patterns_popup"]:
     st.session_state["show_patterns_popup"] = False
 
 
+## Page data load
+old_ppr_df = pd.read_csv("data/ppr/old_ppr.csv")
+new_ppr_df = pd.read_csv("data/ppr/new_ppr.csv")
+
+
+## Page body logic
 def show_search_page():
     with st.expander("Hey, welcome to **QG Intelligence**!"):
         st.markdown("""
