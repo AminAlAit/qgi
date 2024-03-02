@@ -30,11 +30,11 @@ import streamlit as st
 from st_pages import Page, add_page_title, show_pages
 show_pages(
     [
-        # Page("pages/0_Base.py",          "Base",         ""),
-        # Page("pages/1_Patterns.py",      "Patterns",     ""),
-        Page("pages/0_Base.py",           "Patterns",     ""),
-        Page("pages/2_Experimental.py",  "Experimental", ""),
-        Page("pages/9_Contact.py",        "Contact",      "")
+        # Page("pages/0_Base.py",          "Base",         "📈"),
+        # Page("pages/1_Patterns.py",      "Patterns",     "📈"),
+        Page("pages/0_Base.py",           "Patterns",     "📈"),
+        Page("pages/2_Experimental.py",  "Under Construction 🚧🏗️", "🚧"),
+        Page("pages/9_Contact.py",        "Contact",      "📬")
     ]
 )
 
