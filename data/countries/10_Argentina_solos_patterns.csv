@@ -1447,14 +1447,14 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 1994458,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,159,3,1.0,2007,"1.9,1.9,2.1",2013,"9.5,9.5,9.9",2023-12-15 04:17:26
 2547754,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,159,3,1.0,2007,"4.0,4.0,4.5",2013,"9.8,9.8,9.9",2023-12-15 15:01:40
 2907607,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,159,3,0.92857,2007,"4.6,4.5,4.8",2013,"7.5,7.3,7.6",2023-12-16 07:46:32
-650540,The Fund For Peace,Fragile State Index,Total,2023,10,195,3,0.91766,2007,"41.4,41.4,44.7",2007,"76.5,76.9,77.5",2023-12-13 18:01:40
-1994484,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,195,3,1.0,2007,"1.9,1.9,2.1",2007,"7.3,7.3,8.0",2023-12-15 04:17:28
-2547788,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,195,3,1.0,2007,"4.0,4.0,4.5",2007,"7.7,7.7,8.0",2023-12-15 15:01:43
-2907643,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,195,3,0.94491,2007,"4.6,4.5,4.8",2007,"2.3,2.3,2.7",2023-12-16 07:46:34
 650803,The Fund For Peace,Fragile State Index,Total,2023,10,134,3,0.91766,2007,"41.4,41.4,44.7",2007,"48.5,48.3,48.8",2023-12-13 18:01:57
 2547897,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,134,3,1.0,2007,"4.0,4.0,4.5",2007,"3.9,3.9,4.0",2023-12-15 15:01:49
 2907760,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,134,3,0.94491,2007,"4.6,4.5,4.8",2007,"3.5,3.5,3.9",2023-12-16 07:46:42
 3602659,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,134,3,1.0,2007,"5.2,5.2,5.5",2007,"4.5,4.5,4.6",2023-12-17 04:54:25
+650540,The Fund For Peace,Fragile State Index,Total,2023,10,195,3,0.91766,2007,"41.4,41.4,44.7",2007,"76.5,76.9,77.5",2023-12-13 18:01:40
+1994484,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,195,3,1.0,2007,"1.9,1.9,2.1",2007,"7.3,7.3,8.0",2023-12-15 04:17:28
+2547788,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,195,3,1.0,2007,"4.0,4.0,4.5",2007,"7.7,7.7,8.0",2023-12-15 15:01:43
+2907643,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,195,3,0.94491,2007,"4.6,4.5,4.8",2007,"2.3,2.3,2.7",2023-12-16 07:46:34
 650117,The Fund For Peace,Fragile State Index,Total,2023,10,196,3,0.98783,2007,"41.4,41.4,44.7",2006,"66.1,66.9,70.9",2023-12-13 18:01:11
 1994270,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,196,3,0.92857,2007,"1.9,1.9,2.1",2006,"5.5,5.2,6.0",2023-12-15 04:17:09
 2547573,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,196,3,1.0,2007,"4.0,4.0,4.5",2006,"5.2,5.2,6.0",2023-12-15 15:01:30
@@ -2648,18 +2648,18 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 32382395,OECD,FDI Stocks (Inward),FDI Stocks - Inward (% of GDP),2024,10,21,3,0.97571,2005,"18.862767928973,25.547887463352,22.855853098013",2014,"92.739718404644,112.68700942179,108.68341024971",2024-01-21 12:00:17
 36728914,OECD,Trade in Goods & Services - Net Trade,Exports,2024,10,21,3,0.99431,2005,"25912.093,25137.407,21992.943",2014,"6949.878,6556.001,2548.995",2024-02-01 04:16:25
 38724895,OECD,Trade in Goods & Services,Exports,2024,10,21,3,0.99431,2005,"25912.093,25137.407,21992.943",2014,"6949.878,6556.001,2548.995",2024-02-02 23:57:23
-2547779,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,118,3,1.0,2007,"4.0,4.0,4.5",2007,"6.8,6.8,7.2",2023-12-15 15:01:42
-2907634,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,118,3,0.94491,2007,"4.6,4.5,4.8",2007,"7.5,7.5,7.6",2023-12-16 07:46:34
-3602557,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,118,3,1.0,2007,"5.2,5.2,5.5",2007,"8.0,8.0,8.3",2023-12-17 04:54:19
 1994529,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,26,3,1.0,2007,"1.9,1.9,2.1",2007,"6.2,6.2,6.4",2023-12-15 04:17:31
 2907699,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,26,3,0.94491,2007,"4.6,4.5,4.8",2007,"6.4,6.4,7.0",2023-12-16 07:46:38
 3602614,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,26,3,1.0,2007,"5.2,5.2,5.5",2007,"8.5,8.5,8.7",2023-12-17 04:54:22
-1994498,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,42,3,1.0,2007,"1.9,1.9,2.1",2006,"8.9,8.9,9.4",2023-12-15 04:17:29
-2547809,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,42,3,1.0,2007,"4.0,4.0,4.5",2006,"8.8,8.8,8.9",2023-12-15 15:01:44
-3602588,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,42,3,0.94491,2007,"5.2,5.2,5.5",2006,"8.5,8.6,8.8",2023-12-17 04:54:21
 650286,The Fund For Peace,Fragile State Index,Total,2023,10,14,3,0.94491,2007,"41.4,41.4,44.7",2010,"27.2,27.3,27.5",2023-12-13 18:01:23
 1994360,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,14,3,1.0,2007,"1.9,1.9,2.1",2010,"1.1,1.1,1.4",2023-12-15 04:17:17
 2547656,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,14,3,1.0,2007,"4.0,4.0,4.5",2010,"3.8,3.8,4.0",2023-12-15 15:01:35
+1994498,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,42,3,1.0,2007,"1.9,1.9,2.1",2006,"8.9,8.9,9.4",2023-12-15 04:17:29
+2547809,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,42,3,1.0,2007,"4.0,4.0,4.5",2006,"8.8,8.8,8.9",2023-12-15 15:01:44
+3602588,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,42,3,0.94491,2007,"5.2,5.2,5.5",2006,"8.5,8.6,8.8",2023-12-17 04:54:21
+2547779,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,118,3,1.0,2007,"4.0,4.0,4.5",2007,"6.8,6.8,7.2",2023-12-15 15:01:42
+2907634,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,118,3,0.94491,2007,"4.6,4.5,4.8",2007,"7.5,7.5,7.6",2023-12-16 07:46:34
+3602557,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,118,3,1.0,2007,"5.2,5.2,5.5",2007,"8.0,8.0,8.3",2023-12-17 04:54:19
 650832,The Fund For Peace,Fragile State Index,Total,2023,10,129,3,0.9994,2007,"41.4,41.4,44.7",2007,"76.5,76.7,81.6",2023-12-13 18:01:58
 2547905,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,129,3,1.0,2007,"4.0,4.0,4.5",2007,"5.1,5.1,5.6",2023-12-15 15:01:50
 3602674,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,129,3,0.94491,2007,"5.2,5.2,5.5",2007,"7.0,7.2,7.6",2023-12-17 04:54:26
@@ -2931,12 +2931,12 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 32329396,OECD,FDI Flows (Outward),FDI Flows - Outward (% of GDP),2024,10,206,3,0.94842,2005,"0.65349677154373,1.0404489251303,0.51913942532849",2020,"-0.57667316044874,-0.03306599787659,-0.53335797996379",2024-01-21 07:33:28
 36729264,OECD,Trade in Goods & Services - Net Trade,Exports,2024,10,206,3,0.99027,2005,"25912.093,25137.407,21992.943",2020,"172.526,-223.176,-7139.244",2024-02-01 04:16:47
 38725245,OECD,Trade in Goods & Services,Exports,2024,10,206,3,0.99027,2005,"25912.093,25137.407,21992.943",2020,"172.526,-223.176,-7139.244",2024-02-02 23:57:44
-650847,The Fund For Peace,Fragile State Index,Total,2023,10,68,3,0.94491,2007,"41.4,41.4,44.7",2013,"85.6,85.8,86.2",2023-12-13 18:01:59
-2547909,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,68,3,1.0,2007,"4.0,4.0,4.5",2013,"3.6,3.6,3.7",2023-12-15 15:01:50
-2907778,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,68,3,0.94491,2007,"4.6,4.5,4.8",2013,"8.9,8.9,9.3",2023-12-16 07:46:43
 650489,The Fund For Peace,Fragile State Index,Total,2023,10,152,3,0.94491,2007,"41.4,41.4,44.7",2007,"93.6,94.2,95.4",2023-12-13 18:01:36
 2907618,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,152,3,0.94491,2007,"4.6,4.5,4.8",2007,"8.2,8.2,8.5",2023-12-16 07:46:33
 3602549,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,152,3,1.0,2007,"5.2,5.2,5.5",2007,"9.2,9.2,9.3",2023-12-17 04:54:18
+650847,The Fund For Peace,Fragile State Index,Total,2023,10,68,3,0.94491,2007,"41.4,41.4,44.7",2013,"85.6,85.8,86.2",2023-12-13 18:01:59
+2547909,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,68,3,1.0,2007,"4.0,4.0,4.5",2013,"3.6,3.6,3.7",2023-12-15 15:01:50
+2907778,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,68,3,0.94491,2007,"4.6,4.5,4.8",2013,"8.9,8.9,9.3",2023-12-16 07:46:43
 4533037,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,10,118,6,0.96889,2006,"4.0,4.0,4.0,4.0,3.8,3.5",2006,"7.5,7.4,7.4,7.5,7.3,7.0",2023-12-18 08:05:12
 32153152,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,10,118,6,0.9563,2006,"2.96,2.68,2.48,2.57,2.44,2.19",2006,"5.72,4.52,4.26,4.4,4.34,3.73",2024-01-19 01:26:34
 32382601,OECD,FDI Stocks (Inward),FDI Stocks - Inward (% of GDP),2024,10,84,3,0.98657,2005,"18.862767928973,25.547887463352,22.855853098013",2018,"16.8530049338,21.997384943444,20.686816894246",2024-01-21 12:00:25
@@ -3470,14 +3470,14 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 36729555,OECD,Trade in Goods & Services - Net Trade,Exports,2024,10,53,5,0.96364,2004,"23877.944,25912.093,25137.407,21992.943,15208.696",2003,"-2936.192,-2753.853,-3006.843,-3307.221,-3727.274",2024-02-01 04:17:07
 37965034,OECD,Trade in Goods & Services,Imports,2024,10,53,5,0.99956,2004,"35218.504,40800.014,45284.695,54178.738,61526.56",2003,"19156.602,20169.059,21223.087,22971.149,24365.612",2024-02-02 08:16:45
 38725536,OECD,Trade in Goods & Services,Exports,2024,10,53,5,0.96364,2004,"23877.944,25912.093,25137.407,21992.943,15208.696",2003,"-2936.192,-2753.853,-3006.843,-3307.221,-3727.274",2024-02-02 23:58:02
-35973988,OECD,Trade in Goods & Services - Net Trade,Imports,2024,10,31,5,0.99369,2004,"35218.504,40800.014,45284.695,54178.738,61526.56",2004,"117059.029,125793.192,148137.314,177109.418,207263.554",2024-01-31 13:53:58
-36729517,OECD,Trade in Goods & Services - Net Trade,Exports,2024,10,31,5,0.96951,2004,"23877.944,25912.093,25137.407,21992.943,15208.696",2004,"48507.069,55740.387,42177.822,24959.773,-4367.393",2024-02-01 04:17:05
-37964758,OECD,Trade in Goods & Services,Imports,2024,10,31,5,0.99369,2004,"35218.504,40800.014,45284.695,54178.738,61526.56",2004,"117059.029,125793.192,148137.314,177109.418,207263.554",2024-02-02 08:16:28
-38725498,OECD,Trade in Goods & Services,Exports,2024,10,31,5,0.96951,2004,"23877.944,25912.093,25137.407,21992.943,15208.696",2004,"48507.069,55740.387,42177.822,24959.773,-4367.393",2024-02-02 23:58:00
 35974549,OECD,Trade in Goods & Services - Net Trade,Imports,2024,10,156,5,0.9891,2004,"35218.504,40800.014,45284.695,54178.738,61526.56",2000,"23361.67,24359.82,26152.041,29595.199,33550.514",2024-01-31 13:54:30
 36729586,OECD,Trade in Goods & Services - Net Trade,Exports,2024,10,156,5,0.9741,2004,"23877.944,25912.093,25137.407,21992.943,15208.696",2000,"8992.318,9057.584,9782.384,7302.876,4518.132",2024-02-01 04:17:10
 37965319,OECD,Trade in Goods & Services,Imports,2024,10,156,5,0.9891,2004,"35218.504,40800.014,45284.695,54178.738,61526.56",2000,"23361.67,24359.82,26152.041,29595.199,33550.514",2024-02-02 08:17:01
 38725567,OECD,Trade in Goods & Services,Exports,2024,10,156,5,0.9741,2004,"23877.944,25912.093,25137.407,21992.943,15208.696",2000,"8992.318,9057.584,9782.384,7302.876,4518.132",2024-02-02 23:58:05
+35973988,OECD,Trade in Goods & Services - Net Trade,Imports,2024,10,31,5,0.99369,2004,"35218.504,40800.014,45284.695,54178.738,61526.56",2004,"117059.029,125793.192,148137.314,177109.418,207263.554",2024-01-31 13:53:58
+36729517,OECD,Trade in Goods & Services - Net Trade,Exports,2024,10,31,5,0.96951,2004,"23877.944,25912.093,25137.407,21992.943,15208.696",2004,"48507.069,55740.387,42177.822,24959.773,-4367.393",2024-02-01 04:17:05
+37964758,OECD,Trade in Goods & Services,Imports,2024,10,31,5,0.99369,2004,"35218.504,40800.014,45284.695,54178.738,61526.56",2004,"117059.029,125793.192,148137.314,177109.418,207263.554",2024-02-02 08:16:28
+38725498,OECD,Trade in Goods & Services,Exports,2024,10,31,5,0.96951,2004,"23877.944,25912.093,25137.407,21992.943,15208.696",2004,"48507.069,55740.387,42177.822,24959.773,-4367.393",2024-02-02 23:58:00
 35974288,OECD,Trade in Goods & Services - Net Trade,Imports,2024,10,98,5,0.99298,2004,"35218.504,40800.014,45284.695,54178.738,61526.56",2015,"99881.467,103348.039,112025.704,119826.619,129659.635",2024-01-31 13:54:15
 36729561,OECD,Trade in Goods & Services - Net Trade,Exports,2024,10,98,5,0.97016,2004,"23877.944,25912.093,25137.407,21992.943,15208.696",2015,"9679.038,10380.35,9067.105,7302.14,4365.196",2024-02-01 04:17:08
 37965058,OECD,Trade in Goods & Services,Imports,2024,10,98,5,0.99298,2004,"35218.504,40800.014,45284.695,54178.738,61526.56",2015,"99881.467,103348.039,112025.704,119826.619,129659.635",2024-02-02 08:16:46
@@ -4147,12 +4147,12 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 4532029,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,10,216,4,0.98319,2009,"4.0,3.8,3.5,3.3",2019,"1.7,1.4,1.1,1.0",2023-12-18 08:04:15
 1994814,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,63,4,0.99591,2009,"2.1,2.4,2.7,3.0",2009,"6.2,6.5,6.8,7.0",2023-12-15 04:17:48
 4532208,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,10,63,4,0.96291,2009,"4.0,3.8,3.5,3.3",2009,"6.2,6.0,5.7,5.7",2023-12-18 08:04:25
-4532513,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,10,20,4,0.99553,2009,"4.0,3.8,3.5,3.3",2013,"3.9,3.7,3.4,3.1",2023-12-18 08:04:41
-5780406,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,10,20,4,0.96225,2009,"4.0,3.8,4.0,3.8",2013,"8.3,8.1,8.4,8.1",2023-12-19 09:13:16
-4532253,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,10,108,4,0.99553,2009,"4.0,3.8,3.5,3.3",2009,"8.4,8.2,7.9,7.6",2023-12-18 08:04:27
-5780393,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,10,108,4,0.96225,2009,"4.0,3.8,4.0,3.8",2009,"8.5,8.3,8.6,8.3",2023-12-19 09:13:14
 4532274,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,10,250,4,0.99553,2009,"4.0,3.8,3.5,3.3",2016,"8.1,7.9,7.6,7.3",2023-12-18 08:04:28
 5780394,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,10,250,4,0.96225,2009,"4.0,3.8,4.0,3.8",2016,"8.4,8.2,8.5,8.2",2023-12-19 09:13:14
+4532253,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,10,108,4,0.99553,2009,"4.0,3.8,3.5,3.3",2009,"8.4,8.2,7.9,7.6",2023-12-18 08:04:27
+5780393,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,10,108,4,0.96225,2009,"4.0,3.8,4.0,3.8",2009,"8.5,8.3,8.6,8.3",2023-12-19 09:13:14
+4532513,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,10,20,4,0.99553,2009,"4.0,3.8,3.5,3.3",2013,"3.9,3.7,3.4,3.1",2023-12-18 08:04:41
+5780406,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,10,20,4,0.96225,2009,"4.0,3.8,4.0,3.8",2013,"8.3,8.1,8.4,8.1",2023-12-19 09:13:16
 31623479,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,10,40,4,0.99274,2005,"43.7,47.0,57.9,69.6",2019,"598.6,611.6,666.2,700.6",2024-01-17 14:34:40
 36729298,OECD,Trade in Goods & Services - Net Trade,Exports,2024,10,40,4,0.97155,2005,"25912.093,25137.407,21992.943,15208.696",2019,"-35906.317,-29895.971,-64163.949,-92945.486",2024-02-01 04:16:50
 38725279,OECD,Trade in Goods & Services,Exports,2024,10,40,4,0.97155,2005,"25912.093,25137.407,21992.943,15208.696",2019,"-35906.317,-29895.971,-64163.949,-92945.486",2024-02-02 23:57:47
@@ -4250,10 +4250,10 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 4532547,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,10,19,4,0.99976,2009,"4.0,3.8,3.5,3.3",2013,"6.2,5.9,5.4,5.1",2023-12-18 08:04:43
 1994756,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,176,4,0.95618,2009,"2.1,2.4,2.7,3.0",2008,"2.0,2.3,2.4,2.5",2023-12-15 04:17:45
 4532070,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,10,176,4,0.98724,2009,"4.0,3.8,3.5,3.3",2008,"6.4,6.1,5.9,5.6",2023-12-18 08:04:17
-1994834,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,50,4,1.0,2009,"2.1,2.4,2.7,3.0",2020,"8.5,8.6,8.7,8.8",2023-12-15 04:17:49
-4532251,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,10,50,4,0.94295,2009,"4.0,3.8,3.5,3.3",2020,"6.9,6.8,6.7,6.4",2023-12-18 08:04:27
 1994828,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,149,4,1.0,2009,"2.1,2.4,2.7,3.0",2020,"8.799999999999999,8.9,9.0,9.1",2023-12-15 04:17:49
 4532239,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,10,149,4,0.94295,2009,"4.0,3.8,3.5,3.3",2020,"6.800000000000001,6.5,6.4,6.3",2023-12-18 08:04:26
+1994834,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,50,4,1.0,2009,"2.1,2.4,2.7,3.0",2020,"8.5,8.6,8.7,8.8",2023-12-15 04:17:49
+4532251,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,10,50,4,0.94295,2009,"4.0,3.8,3.5,3.3",2020,"6.9,6.8,6.7,6.4",2023-12-18 08:04:27
 31623884,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,10,13,4,0.94106,2005,"43.7,47.0,57.9,69.6",2000,"383.0,366.9,409.6,505.8",2024-01-17 14:36:13
 36729270,OECD,Trade in Goods & Services - Net Trade,Exports,2024,10,13,4,0.98641,2005,"25912.093,25137.407,21992.943,15208.696",2000,"36018.214,33876.775,20312.909,5676.268",2024-02-01 04:16:48
 38725251,OECD,Trade in Goods & Services,Exports,2024,10,13,4,0.98641,2005,"25912.093,25137.407,21992.943,15208.696",2000,"36018.214,33876.775,20312.909,5676.268",2024-02-02 23:57:45
@@ -4663,10 +4663,10 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 38725282,OECD,Trade in Goods & Services,Exports,2024,10,44,4,0.92026,2005,"25912.093,25137.407,21992.943,15208.696",2003,"20050.692,21661.997,16750.944,14404.314",2024-02-02 23:57:47
 651277,The Fund For Peace,Fragile State Index,Total,2023,10,249,4,0.94545,2006,"40.8,41.4,41.4,44.7",2009,"84.2,83.9,83.8,85.9",2023-12-13 18:02:28
 3602742,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,249,4,0.92717,2006,"5.2,5.2,5.2,5.5",2009,"7.1,7.3,7.3,7.7",2023-12-17 04:54:31
-4532198,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,10,130,4,0.91009,2009,"4.0,3.8,3.5,3.3",2014,"8.4,8.1,8.1,7.9",2023-12-18 08:04:24
-5780385,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,10,130,4,0.96225,2009,"4.0,3.8,4.0,3.8",2014,"6.5,6.2,6.4,6.2",2023-12-19 09:13:14
 4531831,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,10,124,4,0.91009,2009,"4.0,3.8,3.5,3.3",2016,"6.5,6.3,6.3,6.0",2023-12-18 08:04:04
 5780344,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,10,124,4,0.96225,2009,"4.0,3.8,4.0,3.8",2016,"9.3,9.1,9.4,9.1",2023-12-19 09:13:11
+4532198,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,10,130,4,0.91009,2009,"4.0,3.8,3.5,3.3",2014,"8.4,8.1,8.1,7.9",2023-12-18 08:04:24
+5780385,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,10,130,4,0.96225,2009,"4.0,3.8,4.0,3.8",2014,"6.5,6.2,6.4,6.2",2023-12-19 09:13:14
 31623394,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,10,74,4,0.99952,2005,"43.7,47.0,57.9,69.6",2005,"727.1,744.5,819.2,890.0",2024-01-17 14:34:24
 36729354,OECD,Trade in Goods & Services - Net Trade,Exports,2024,10,74,4,0.90364,2005,"25912.093,25137.407,21992.943,15208.696",2005,"18948.833,22325.796,5288.443,-70.605",2024-02-01 04:16:53
 38725335,OECD,Trade in Goods & Services,Exports,2024,10,74,4,0.90364,2005,"25912.093,25137.407,21992.943,15208.696",2005,"18948.833,22325.796,5288.443,-70.605",2024-02-02 23:57:50
@@ -4816,78 +4816,78 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 32383149,OECD,FDI Stocks (Inward),FDI Stocks - Inward (% of GDP),2024,10,182,4,0.90398,2005,"18.862767928973,25.547887463352,22.855853098013,20.576002257931",2008,"11.933763288964,27.975114888044,28.342843466825,19.988142271239",2024-01-21 12:00:47
 32383151,OECD,FDI Stocks (Inward),FDI Stocks - Inward (% of GDP),2024,10,182,4,0.90398,2005,"18.862767928973,25.547887463352,22.855853098013,20.576002257931",2008,"11.933763288964,27.975114888044,28.342843466825,19.988142271239",2024-01-21 12:00:47
 32383153,OECD,FDI Stocks (Inward),FDI Stocks - Inward (% of GDP),2024,10,182,4,0.90398,2005,"18.862767928973,25.547887463352,22.855853098013,20.576002257931",2008,"11.933763288964,27.975114888044,28.342843466825,19.988142271239",2024-01-21 12:00:47
-6686018,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,25,3,1.0,2013,"2.0,2.3,2.0",2013,"6.9,7.2,6.9",2023-12-20 04:46:42
-7133233,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,25,3,1.0,2013,"3.8,3.9,4.0",2013,"7.3,7.6,7.9",2023-12-20 13:24:51
-32607312,OECD,FDI Total Restrictiveness Index,Transport,2024,10,118,3,1.0,1997,"0.25,0.5,0.5",2016,"0.105,0.33,0.33",2024-01-26 11:52:37
-32616935,OECD,FDI Total Restrictiveness Index,Financial Services,2024,10,118,3,1.0,1997,"0.013,0.025,0.025",2016,"0.126,0.137,0.137",2024-01-26 18:39:43
-2547873,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,229,3,1.0,2007,"4.0,4.0,4.5",2007,"6.2,6.2,6.5",2023-12-15 15:01:48
-3602631,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,229,3,1.0,2007,"5.2,5.2,5.5",2007,"7.3,7.3,7.6",2023-12-17 04:54:23
-1994439,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,236,3,1.0,2007,"1.9,1.9,2.1",2007,"1.3,1.3,1.4",2023-12-15 04:17:25
-2547735,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,236,3,1.0,2007,"4.0,4.0,4.5",2007,"3.2,3.2,3.3",2023-12-15 15:01:39
-1994287,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,170,3,1.0,2007,"1.9,1.9,2.1",2007,"5.0,5.0,5.1",2023-12-15 04:17:10
-2547590,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,170,3,1.0,2007,"4.0,4.0,4.5",2007,"4.4,4.4,4.6",2023-12-15 15:01:31
-6686066,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,204,3,1.0,2013,"2.0,2.3,2.0",2018,"4.1000000000000005,4.4,4.1",2023-12-20 04:46:45
-7133328,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,204,3,1.0,2013,"3.8,3.9,4.0",2018,"8.5,8.8,9.1",2023-12-20 13:24:58
-1994493,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,91,3,1.0,2007,"1.9,1.9,2.1",2006,"8.1,8.1,8.4",2023-12-15 04:17:29
-2547803,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,91,3,1.0,2007,"4.0,4.0,4.5",2006,"8.1,8.1,8.5",2023-12-15 15:01:43
-2547801,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,1,3,1.0,2007,"4.0,4.0,4.5",2006,"9.1,9.1,9.5",2023-12-15 15:01:43
-3602580,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,1,3,1.0,2007,"5.2,5.2,5.5",2006,"8.0,8.0,8.1",2023-12-17 04:54:20
-1994395,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,177,3,1.0,2007,"1.9,1.9,2.1",2007,"1.0,1.0,1.1",2023-12-15 04:17:21
-2547699,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,177,3,1.0,2007,"4.0,4.0,4.5",2007,"2.5,2.5,2.6",2023-12-15 15:01:37
-1994534,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,25,3,1.0,2007,"1.9,1.9,2.1",2007,"4.6,4.6,5.5",2023-12-15 04:17:32
-2547869,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,25,3,1.0,2007,"4.0,4.0,4.5",2007,"7.0,7.0,7.9",2023-12-15 15:01:47
-2547907,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,132,3,1.0,2007,"4.0,4.0,4.5",2007,"4.9,4.9,5.2",2023-12-15 15:01:50
-3602675,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,132,3,1.0,2007,"5.2,5.2,5.5",2007,"4.9,4.9,5.2",2023-12-17 04:54:26
-1994504,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,28,3,1.0,2007,"1.9,1.9,2.1",2007,"7.3,7.3,7.4",2023-12-15 04:17:30
-3602592,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,28,3,1.0,2007,"5.2,5.2,5.5",2007,"7.2,7.2,7.3",2023-12-17 04:54:21
-2547687,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,215,3,1.0,2007,"4.0,4.0,4.5",2006,"1.0,1.0,1.3",2023-12-15 15:01:36
-3602508,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,215,3,1.0,2007,"5.2,5.2,5.5",2006,"2.0,2.0,2.1",2023-12-17 04:54:15
-6685929,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,138,3,1.0,2013,"2.0,2.3,2.0",2013,"2.2,2.5,2.2",2023-12-20 04:46:37
-7133068,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,138,3,1.0,2013,"3.8,3.9,4.0",2013,"4.6,4.9,5.2",2023-12-20 13:24:42
-1994291,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,181,3,1.0,2007,"1.9,1.9,2.1",2007,"3.4,3.4,4.3",2023-12-15 04:17:11
-2547596,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,181,3,1.0,2007,"4.0,4.0,4.5",2007,"5.2,5.2,5.5",2023-12-15 15:01:31
 6686082,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,122,3,1.0,2013,"2.0,2.3,2.0",2013,"4.9,5.2,4.9",2023-12-20 04:46:46
 7133356,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,122,3,1.0,2013,"3.8,3.9,4.0",2013,"7.2,7.5,7.8",2023-12-20 13:25:00
-1994357,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,110,3,1.0,2007,"1.9,1.9,2.1",2008,"2.0,2.0,2.1",2023-12-15 04:17:17
-3602494,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,110,3,1.0,2007,"5.2,5.2,5.5",2008,"2.5,2.5,2.6",2023-12-17 04:54:14
-32607316,OECD,FDI Total Restrictiveness Index,Transport,2024,10,200,3,1.0,1997,"0.25,0.5,0.5",2018,"0.6,0.613,0.613",2024-01-26 11:52:37
-32616943,OECD,FDI Total Restrictiveness Index,Financial Services,2024,10,200,3,1.0,1997,"0.013,0.025,0.025",2018,"0.048,0.0589999999999999,0.0589999999999999",2024-01-26 18:39:44
-650752,The Fund For Peace,Fragile State Index,Total,2023,10,89,3,1.0,2007,"41.4,41.4,44.7",2008,"80.6,80.6,81.2",2023-12-13 18:01:53
-2907722,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,89,3,1.0,2007,"4.6,4.5,4.8",2008,"6.7,6.6,6.9",2023-12-16 07:46:39
-6685846,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,124,3,1.0,2013,"2.0,2.3,2.0",2019,"7.7,8.0,7.7",2023-12-20 04:46:32
-7132956,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,124,3,1.0,2013,"3.8,3.9,4.0",2019,"9.7,9.8,9.9",2023-12-20 13:24:35
-6686071,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,194,3,1.0,2013,"2.0,2.3,2.0",2013,"4.3,4.6,4.3",2023-12-20 04:46:45
-7133341,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,194,3,1.0,2013,"3.8,3.9,4.0",2013,"7.3,7.6,7.9",2023-12-20 13:24:59
 1994423,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,238,3,1.0,2007,"1.9,1.9,2.1",2007,"3.0,3.0,3.3",2023-12-15 04:17:23
 3602521,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,238,3,1.0,2007,"5.2,5.2,5.5",2007,"5.1,5.1,5.2",2023-12-17 04:54:16
-6685881,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,79,3,1.0,2013,"2.0,2.3,2.0",2013,"6.4,6.7,6.4",2023-12-20 04:46:34
-7133018,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,79,3,1.0,2013,"3.8,3.9,4.0",2013,"6.9,7.2,7.5",2023-12-20 13:24:39
-1994501,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,36,3,1.0,2007,"1.9,1.9,2.1",2007,"6.8,6.8,7.3",2023-12-15 04:17:29
-2547812,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,36,3,1.0,2007,"4.0,4.0,4.5",2007,"6.7,6.7,7.5",2023-12-15 15:01:44
-6685862,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,82,3,1.0,2013,"2.0,2.3,2.0",2013,"5.5,5.8,5.5",2023-12-20 04:46:33
-7132981,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,82,3,1.0,2013,"3.8,3.9,4.0",2013,"6.0,6.3,6.6",2023-12-20 13:24:37
-6686054,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,145,3,1.0,2013,"2.0,2.3,2.0",2013,"4.5,4.8,4.5",2023-12-20 04:46:44
-7133311,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,145,3,1.0,2013,"3.8,3.9,4.0",2013,"5.3,5.6,5.9",2023-12-20 13:24:57
-2547560,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,212,3,1.0,2007,"4.0,4.0,4.5",2010,"9.9,9.9,10.0",2023-12-15 15:01:29
-2907453,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,212,3,1.0,2007,"4.6,4.5,4.8",2010,"6.7,6.4,7.3",2023-12-16 07:46:24
-2547818,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,199,3,1.0,2007,"4.0,4.0,4.5",2013,"5.9,5.9,6.2",2023-12-15 15:01:44
-3602596,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,199,3,1.0,2007,"5.2,5.2,5.5",2013,"8.5,8.5,8.8",2023-12-17 04:54:21
-650477,The Fund For Peace,Fragile State Index,Total,2023,10,183,3,1.0,2007,"41.4,41.4,44.7",2012,"89.3,89.3,90.5",2023-12-13 18:01:36
-1994461,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,183,3,1.0,2007,"1.9,1.9,2.1",2012,"5.5,5.5,5.9",2023-12-15 04:17:27
-2547847,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,197,3,1.0,2007,"4.0,4.0,4.5",2013,"8.0,8.0,8.1",2023-12-15 15:01:46
-2907701,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,197,3,1.0,2007,"4.6,4.5,4.8",2013,"6.5,6.4,6.7",2023-12-16 07:46:38
-1994434,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,210,3,1.0,2007,"1.9,1.9,2.1",2008,"5.2,5.2,5.3",2023-12-15 04:17:24
-2547727,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,210,3,1.0,2007,"4.0,4.0,4.5",2008,"6.2,6.2,6.3",2023-12-15 15:01:39
-2547755,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,239,3,1.0,2007,"4.0,4.0,4.5",2007,"7.1,7.1,7.4",2023-12-15 15:01:41
-3602541,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,239,3,1.0,2007,"5.2,5.2,5.5",2007,"8.6,8.6,8.7",2023-12-17 04:54:17
-6685854,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,2,3,1.0,2013,"2.0,2.3,2.0",2016,"3.3,3.6,3.3000000000000003",2023-12-20 04:46:32
-7132967,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,2,3,1.0,2013,"3.8,3.9,4.0",2016,"6.4,6.7,7.0",2023-12-20 13:24:36
+1994291,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,181,3,1.0,2007,"1.9,1.9,2.1",2007,"3.4,3.4,4.3",2023-12-15 04:17:11
+2547596,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,181,3,1.0,2007,"4.0,4.0,4.5",2007,"5.2,5.2,5.5",2023-12-15 15:01:31
+1994493,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,91,3,1.0,2007,"1.9,1.9,2.1",2006,"8.1,8.1,8.4",2023-12-15 04:17:29
+2547803,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,91,3,1.0,2007,"4.0,4.0,4.5",2006,"8.1,8.1,8.5",2023-12-15 15:01:43
+1994504,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,28,3,1.0,2007,"1.9,1.9,2.1",2007,"7.3,7.3,7.4",2023-12-15 04:17:30
+3602592,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,28,3,1.0,2007,"5.2,5.2,5.5",2007,"7.2,7.2,7.3",2023-12-17 04:54:21
+2547801,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,1,3,1.0,2007,"4.0,4.0,4.5",2006,"9.1,9.1,9.5",2023-12-15 15:01:43
+3602580,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,1,3,1.0,2007,"5.2,5.2,5.5",2006,"8.0,8.0,8.1",2023-12-17 04:54:20
 32607313,OECD,FDI Total Restrictiveness Index,Transport,2024,10,182,3,1.0,1997,"0.25,0.5,0.5",2011,"0.117,0.35,0.35",2024-01-26 11:52:37
 32616940,OECD,FDI Total Restrictiveness Index,Financial Services,2024,10,182,3,1.0,1997,"0.013,0.025,0.025",2011,"0.174,0.175,0.175",2024-01-26 18:39:44
-32607314,OECD,FDI Total Restrictiveness Index,Transport,2024,10,182,3,1.0,1997,"0.25,0.5,0.5",2015,"0.35,0.486,0.486",2024-01-26 11:52:37
-32616941,OECD,FDI Total Restrictiveness Index,Financial Services,2024,10,182,3,1.0,1997,"0.013,0.025,0.025",2015,"0.175,0.184,0.184",2024-01-26 18:39:44
+1994501,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,36,3,1.0,2007,"1.9,1.9,2.1",2007,"6.8,6.8,7.3",2023-12-15 04:17:29
+2547812,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,36,3,1.0,2007,"4.0,4.0,4.5",2007,"6.7,6.7,7.5",2023-12-15 15:01:44
+650477,The Fund For Peace,Fragile State Index,Total,2023,10,183,3,1.0,2007,"41.4,41.4,44.7",2012,"89.3,89.3,90.5",2023-12-13 18:01:36
+1994461,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,183,3,1.0,2007,"1.9,1.9,2.1",2012,"5.5,5.5,5.9",2023-12-15 04:17:27
+2547755,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,239,3,1.0,2007,"4.0,4.0,4.5",2007,"7.1,7.1,7.4",2023-12-15 15:01:41
+3602541,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,239,3,1.0,2007,"5.2,5.2,5.5",2007,"8.6,8.6,8.7",2023-12-17 04:54:17
+6685862,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,82,3,1.0,2013,"2.0,2.3,2.0",2013,"5.5,5.8,5.5",2023-12-20 04:46:33
+7132981,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,82,3,1.0,2013,"3.8,3.9,4.0",2013,"6.0,6.3,6.6",2023-12-20 13:24:37
+6685846,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,124,3,1.0,2013,"2.0,2.3,2.0",2019,"7.7,8.0,7.7",2023-12-20 04:46:32
+7132956,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,124,3,1.0,2013,"3.8,3.9,4.0",2019,"9.7,9.8,9.9",2023-12-20 13:24:35
+1994287,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,170,3,1.0,2007,"1.9,1.9,2.1",2007,"5.0,5.0,5.1",2023-12-15 04:17:10
+2547590,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,170,3,1.0,2007,"4.0,4.0,4.5",2007,"4.4,4.4,4.6",2023-12-15 15:01:31
+1994534,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,25,3,1.0,2007,"1.9,1.9,2.1",2007,"4.6,4.6,5.5",2023-12-15 04:17:32
+2547869,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,25,3,1.0,2007,"4.0,4.0,4.5",2007,"7.0,7.0,7.9",2023-12-15 15:01:47
+2547818,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,199,3,1.0,2007,"4.0,4.0,4.5",2013,"5.9,5.9,6.2",2023-12-15 15:01:44
+3602596,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,199,3,1.0,2007,"5.2,5.2,5.5",2013,"8.5,8.5,8.8",2023-12-17 04:54:21
+1994395,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,177,3,1.0,2007,"1.9,1.9,2.1",2007,"1.0,1.0,1.1",2023-12-15 04:17:21
+2547699,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,177,3,1.0,2007,"4.0,4.0,4.5",2007,"2.5,2.5,2.6",2023-12-15 15:01:37
 2907735,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,19,3,1.0,2007,"4.6,4.5,4.8",2019,"5.7,5.4,6.3",2023-12-16 07:46:40
 3602641,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,19,3,1.0,2007,"5.2,5.2,5.5",2019,"4.3,4.3,4.6",2023-12-17 04:54:24
+650752,The Fund For Peace,Fragile State Index,Total,2023,10,89,3,1.0,2007,"41.4,41.4,44.7",2008,"80.6,80.6,81.2",2023-12-13 18:01:53
+2907722,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,89,3,1.0,2007,"4.6,4.5,4.8",2008,"6.7,6.6,6.9",2023-12-16 07:46:39
+32607312,OECD,FDI Total Restrictiveness Index,Transport,2024,10,118,3,1.0,1997,"0.25,0.5,0.5",2016,"0.105,0.33,0.33",2024-01-26 11:52:37
+32616935,OECD,FDI Total Restrictiveness Index,Financial Services,2024,10,118,3,1.0,1997,"0.013,0.025,0.025",2016,"0.126,0.137,0.137",2024-01-26 18:39:43
+2547847,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,197,3,1.0,2007,"4.0,4.0,4.5",2013,"8.0,8.0,8.1",2023-12-15 15:01:46
+2907701,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,197,3,1.0,2007,"4.6,4.5,4.8",2013,"6.5,6.4,6.7",2023-12-16 07:46:38
+2547873,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,229,3,1.0,2007,"4.0,4.0,4.5",2007,"6.2,6.2,6.5",2023-12-15 15:01:48
+3602631,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,229,3,1.0,2007,"5.2,5.2,5.5",2007,"7.3,7.3,7.6",2023-12-17 04:54:23
+2547687,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,215,3,1.0,2007,"4.0,4.0,4.5",2006,"1.0,1.0,1.3",2023-12-15 15:01:36
+3602508,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,215,3,1.0,2007,"5.2,5.2,5.5",2006,"2.0,2.0,2.1",2023-12-17 04:54:15
+1994439,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,236,3,1.0,2007,"1.9,1.9,2.1",2007,"1.3,1.3,1.4",2023-12-15 04:17:25
+2547735,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,236,3,1.0,2007,"4.0,4.0,4.5",2007,"3.2,3.2,3.3",2023-12-15 15:01:39
+6686018,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,25,3,1.0,2013,"2.0,2.3,2.0",2013,"6.9,7.2,6.9",2023-12-20 04:46:42
+7133233,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,25,3,1.0,2013,"3.8,3.9,4.0",2013,"7.3,7.6,7.9",2023-12-20 13:24:51
+1994434,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,210,3,1.0,2007,"1.9,1.9,2.1",2008,"5.2,5.2,5.3",2023-12-15 04:17:24
+2547727,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,210,3,1.0,2007,"4.0,4.0,4.5",2008,"6.2,6.2,6.3",2023-12-15 15:01:39
+6685854,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,2,3,1.0,2013,"2.0,2.3,2.0",2016,"3.3,3.6,3.3000000000000003",2023-12-20 04:46:32
+7132967,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,2,3,1.0,2013,"3.8,3.9,4.0",2016,"6.4,6.7,7.0",2023-12-20 13:24:36
+32607316,OECD,FDI Total Restrictiveness Index,Transport,2024,10,200,3,1.0,1997,"0.25,0.5,0.5",2018,"0.6,0.613,0.613",2024-01-26 11:52:37
+32616943,OECD,FDI Total Restrictiveness Index,Financial Services,2024,10,200,3,1.0,1997,"0.013,0.025,0.025",2018,"0.048,0.0589999999999999,0.0589999999999999",2024-01-26 18:39:44
+1994357,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,110,3,1.0,2007,"1.9,1.9,2.1",2008,"2.0,2.0,2.1",2023-12-15 04:17:17
+3602494,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,110,3,1.0,2007,"5.2,5.2,5.5",2008,"2.5,2.5,2.6",2023-12-17 04:54:14
+2547560,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,212,3,1.0,2007,"4.0,4.0,4.5",2010,"9.9,9.9,10.0",2023-12-15 15:01:29
+2907453,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,212,3,1.0,2007,"4.6,4.5,4.8",2010,"6.7,6.4,7.3",2023-12-16 07:46:24
+32607314,OECD,FDI Total Restrictiveness Index,Transport,2024,10,182,3,1.0,1997,"0.25,0.5,0.5",2015,"0.35,0.486,0.486",2024-01-26 11:52:37
+32616941,OECD,FDI Total Restrictiveness Index,Financial Services,2024,10,182,3,1.0,1997,"0.013,0.025,0.025",2015,"0.175,0.184,0.184",2024-01-26 18:39:44
+6686054,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,145,3,1.0,2013,"2.0,2.3,2.0",2013,"4.5,4.8,4.5",2023-12-20 04:46:44
+7133311,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,145,3,1.0,2013,"3.8,3.9,4.0",2013,"5.3,5.6,5.9",2023-12-20 13:24:57
+6686071,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,194,3,1.0,2013,"2.0,2.3,2.0",2013,"4.3,4.6,4.3",2023-12-20 04:46:45
+7133341,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,194,3,1.0,2013,"3.8,3.9,4.0",2013,"7.3,7.6,7.9",2023-12-20 13:24:59
+6686066,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,204,3,1.0,2013,"2.0,2.3,2.0",2018,"4.1000000000000005,4.4,4.1",2023-12-20 04:46:45
+7133328,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,204,3,1.0,2013,"3.8,3.9,4.0",2018,"8.5,8.8,9.1",2023-12-20 13:24:58
+6685881,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,79,3,1.0,2013,"2.0,2.3,2.0",2013,"6.4,6.7,6.4",2023-12-20 04:46:34
+7133018,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,79,3,1.0,2013,"3.8,3.9,4.0",2013,"6.9,7.2,7.5",2023-12-20 13:24:39
+2547907,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,132,3,1.0,2007,"4.0,4.0,4.5",2007,"4.9,4.9,5.2",2023-12-15 15:01:50
+3602675,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,132,3,1.0,2007,"5.2,5.2,5.5",2007,"4.9,4.9,5.2",2023-12-17 04:54:26
+6685929,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,138,3,1.0,2013,"2.0,2.3,2.0",2013,"2.2,2.5,2.2",2023-12-20 04:46:37
+7133068,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,138,3,1.0,2013,"3.8,3.9,4.0",2013,"4.6,4.9,5.2",2023-12-20 13:24:42
 2349721,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,10,81,3,1.0,2006,"2.8,2.7,2.7",2020,"2.6,2.3,2.3",2023-12-15 11:09:18
 35972215,OECD,Trade in Goods & Services - Net Trade,Imports,2024,10,81,3,0.99999,2006,"45284.695,54178.738,61526.56",2020,"1431167.368,1558320.63,1661706.927",2024-01-31 13:52:06
 37962985,OECD,Trade in Goods & Services,Imports,2024,10,81,3,0.99999,2006,"45284.695,54178.738,61526.56",2020,"1431167.368,1558320.63,1661706.927",2024-02-02 08:14:31
@@ -5195,12 +5195,12 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 32449650,OECD,FDI Stocks (Outward),FDI Stocks - Outward (% of GDP),2024,10,100,3,0.99814,2005,"11.633757380788,11.048622985846,9.5056135336358",2015,"6.4766616050822,6.2903351355354,5.9129678481623",2024-01-21 14:25:39
 36729081,OECD,Trade in Goods & Services - Net Trade,Exports,2024,10,100,3,0.98143,2005,"25912.093,25137.407,21992.943",2015,"-49301.075,-48899.293,-114821.677",2024-02-01 04:16:36
 38725062,OECD,Trade in Goods & Services,Exports,2024,10,100,3,0.98143,2005,"25912.093,25137.407,21992.943",2015,"-49301.075,-48899.293,-114821.677",2024-02-02 23:57:34
-650731,The Fund For Peace,Fragile State Index,Total,2023,10,158,3,0.98783,2007,"41.4,41.4,44.7",2014,"97.9,97.8,98.4",2023-12-13 18:01:52
-2547870,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,158,3,1.0,2007,"4.0,4.0,4.5",2014,"7.5,7.5,7.7",2023-12-15 15:01:48
-1994348,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,202,3,1.0,2007,"1.9,1.9,2.1",2008,"2.0,2.0,2.1",2023-12-15 04:17:16
-2547646,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,202,3,0.98783,2007,"4.0,4.0,4.5",2008,"4.2,4.3,4.8",2023-12-15 15:01:34
 1994447,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,67,3,0.98783,2007,"1.9,1.9,2.1",2006,"2.0,2.1,2.6",2023-12-15 04:17:26
 2547742,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,67,3,1.0,2007,"4.0,4.0,4.5",2006,"4.5,4.5,5.1",2023-12-15 15:01:40
+1994348,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,202,3,1.0,2007,"1.9,1.9,2.1",2008,"2.0,2.0,2.1",2023-12-15 04:17:16
+2547646,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,202,3,0.98783,2007,"4.0,4.0,4.5",2008,"4.2,4.3,4.8",2023-12-15 15:01:34
+650731,The Fund For Peace,Fragile State Index,Total,2023,10,158,3,0.98783,2007,"41.4,41.4,44.7",2014,"97.9,97.8,98.4",2023-12-13 18:01:52
+2547870,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,158,3,1.0,2007,"4.0,4.0,4.5",2014,"7.5,7.5,7.7",2023-12-15 15:01:48
 1994497,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,123,3,0.98936,2007,"1.9,1.9,2.1",2018,"6.660250792477015,6.7,6.914197977500817",2023-12-15 04:17:29
 2907664,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,123,3,0.99842,2007,"4.6,4.5,4.8",2018,"8.0,7.9,8.254325069340153",2023-12-16 07:46:36
 31183462,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,10,107,3,1.0,2004,"0.88,0.85,0.79",2020,"1.74,1.72,1.68",2024-01-17 01:35:15
@@ -5419,10 +5419,10 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 2349709,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,10,126,3,1.0,2006,"2.8,2.7,2.7",2010,"3.2,2.8,2.8",2023-12-15 11:09:18
 35972589,OECD,Trade in Goods & Services - Net Trade,Imports,2024,10,126,3,0.98398,2006,"45284.695,54178.738,61526.56",2010,"21154.714,24162.37,25411.492",2024-01-31 13:52:24
 37963359,OECD,Trade in Goods & Services,Imports,2024,10,126,3,0.98398,2006,"45284.695,54178.738,61526.56",2010,"21154.714,24162.37,25411.492",2024-02-02 08:14:51
-650522,The Fund For Peace,Fragile State Index,Total,2023,10,18,3,0.99662,2007,"41.4,41.4,44.7",2006,"96.3,95.9,100.3",2023-12-13 18:01:39
-2907636,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,18,3,0.98198,2007,"4.6,4.5,4.8",2006,"7.0,6.9,7.1",2023-12-16 07:46:34
 1994302,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,221,3,0.99662,2007,"1.9,1.9,2.1",2013,"7.8,7.9,8.9",2023-12-15 04:17:12
 2547607,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,221,3,0.98198,2007,"4.0,4.0,4.5",2013,"8.1,8.0,8.5",2023-12-15 15:01:32
+650522,The Fund For Peace,Fragile State Index,Total,2023,10,18,3,0.99662,2007,"41.4,41.4,44.7",2006,"96.3,95.9,100.3",2023-12-13 18:01:39
+2907636,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,18,3,0.98198,2007,"4.6,4.5,4.8",2006,"7.0,6.9,7.1",2023-12-16 07:46:34
 650795,The Fund For Peace,Fragile State Index,Total,2023,10,99,3,0.99977,2007,"41.4,41.4,44.7",2007,"21.1,20.9,29.0",2023-12-13 18:01:56
 2907756,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,99,3,0.97832,2007,"4.6,4.5,4.8",2007,"3.5,3.0,6.7",2023-12-16 07:46:41
 32278579,OECD,FDI Flows (Inward),FDI Flows - Inward (% of GDP),2024,10,57,3,0.99938,2005,"2.6244668835254,2.3624384302824,2.2340099490915",2018,"4.4218478451473,4.0027661731091,3.8258275299083",2024-01-21 05:29:48
@@ -5534,18 +5534,18 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 37073638,OECD,Trade in Goods & Services,Net Trade,2024,10,206,3,0.98781,2004,"59096.447,66712.106,70422.102",2013,"89895.158,93172.993,96023.876",2024-02-01 12:50:41
 650511,The Fund For Peace,Fragile State Index,Total,2023,10,217,3,0.975,2007,"41.4,41.4,44.7",2010,"87.9,85.9,94.5",2023-12-13 18:01:38
 1994476,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,217,3,0.99587,2007,"1.9,1.9,2.1",2010,"7.6,7.5,8.5",2023-12-15 04:17:28
-2547679,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,216,3,1.0,2007,"4.0,4.0,4.5",2013,"3.5,3.5,3.6",2023-12-15 15:01:36
-3602506,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,216,3,0.97073,2007,"5.2,5.2,5.5",2013,"2.3,2.4,2.7",2023-12-17 04:54:15
 1994538,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,158,3,0.97073,2007,"1.9,1.9,2.1",2013,"8.3,8.4,8.7",2023-12-15 04:17:32
 3602630,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,158,3,1.0,2007,"5.2,5.2,5.5",2013,"7.9,7.9,8.4",2023-12-17 04:54:23
-2907625,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,130,3,1.0,2007,"4.6,4.5,4.8",2013,"8.4,8.3,8.6",2023-12-16 07:46:33
-3602551,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,130,3,0.97073,2007,"5.2,5.2,5.5",2013,"8.0,8.1,8.4",2023-12-17 04:54:18
-2547829,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,121,3,1.0,2007,"4.0,4.0,4.5",2018,"8.2,8.2,8.22043333917241",2023-12-15 15:01:45
-2907688,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,121,3,0.97073,2007,"4.6,4.5,4.8",2018,"6.1000000000000005,6.0,7.0",2023-12-16 07:46:37
 1994375,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,40,3,1.0,2007,"1.9,1.9,2.1",2012,"1.8,1.8,2.1",2023-12-15 04:17:19
 2547672,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,40,3,0.97073,2007,"4.0,4.0,4.5",2012,"3.0,3.1,3.4",2023-12-15 15:01:36
+2547679,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,216,3,1.0,2007,"4.0,4.0,4.5",2013,"3.5,3.5,3.6",2023-12-15 15:01:36
+3602506,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,216,3,0.97073,2007,"5.2,5.2,5.5",2013,"2.3,2.4,2.7",2023-12-17 04:54:15
+2547829,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,121,3,1.0,2007,"4.0,4.0,4.5",2018,"8.2,8.2,8.22043333917241",2023-12-15 15:01:45
+2907688,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,121,3,0.97073,2007,"4.6,4.5,4.8",2018,"6.1000000000000005,6.0,7.0",2023-12-16 07:46:37
 1994424,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,238,3,0.97073,2007,"1.9,1.9,2.1",2009,"3.3,3.4,3.7",2023-12-15 04:17:24
 2547716,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,238,3,1.0,2007,"4.0,4.0,4.5",2009,"2.0,2.0,2.4",2023-12-15 15:01:38
+2907625,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,130,3,1.0,2007,"4.6,4.5,4.8",2013,"8.4,8.3,8.6",2023-12-16 07:46:33
+3602551,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,130,3,0.97073,2007,"5.2,5.2,5.5",2013,"8.0,8.1,8.4",2023-12-17 04:54:18
 31183455,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,10,107,3,0.97399,2004,"0.88,0.85,0.79",2005,"1.6,1.52,1.45",2024-01-17 01:35:15
 35085414,OECD,Trade in Goods & Services - Net Trade,Net Trade,2024,10,107,3,0.99088,2004,"59096.447,66712.106,70422.102",2005,"461815.546,500193.93,531192.611",2024-01-30 19:58:37
 37073170,OECD,Trade in Goods & Services,Net Trade,2024,10,107,3,0.99088,2004,"59096.447,66712.106,70422.102",2005,"461815.546,500193.93,531192.611",2024-02-01 12:50:18
@@ -5707,10 +5707,10 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 38725101,OECD,Trade in Goods & Services,Exports,2024,10,126,3,0.98045,2005,"25912.093,25137.407,21992.943",2004,"-1834.267,-2170.444,-2719.201",2024-02-02 23:57:36
 650529,The Fund For Peace,Fragile State Index,Total,2023,10,149,3,0.9996,2007,"41.4,41.4,44.7",2020,"94.0,93.79999999999998,100.0",2023-12-13 18:01:39
 2907639,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,149,3,0.96458,2007,"4.6,4.5,4.8",2020,"5.0,4.8,7.5",2023-12-16 07:46:34
-650230,The Fund For Peace,Fragile State Index,Total,2023,10,140,3,0.9934,2007,"41.4,41.4,44.7",2007,"72.6,72.2,75.4",2023-12-13 18:01:19
-1994320,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,140,3,0.97073,2007,"1.9,1.9,2.1",2007,"6.1,5.8,7.0",2023-12-15 04:17:14
 6685954,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,69,3,0.97073,2013,"2.0,2.3,2.0",2006,"7.6,7.9,7.5",2023-12-20 04:46:38
 7133106,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,69,3,0.9934,2013,"3.8,3.9,4.0",2006,"6.3,6.7,7.3",2023-12-20 13:24:44
+650230,The Fund For Peace,Fragile State Index,Total,2023,10,140,3,0.9934,2007,"41.4,41.4,44.7",2007,"72.6,72.2,75.4",2023-12-13 18:01:19
+1994320,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,140,3,0.97073,2007,"1.9,1.9,2.1",2007,"6.1,5.8,7.0",2023-12-15 04:17:14
 32151759,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,10,140,3,0.94604,2005,"3.47,2.96,2.68",2001,"2.08,1.98,1.8",2024-01-19 01:25:04
 36729140,OECD,Trade in Goods & Services - Net Trade,Exports,2024,10,140,3,1.0,2005,"25912.093,25137.407,21992.943",2001,"-25955.068,-28790.188,-40312.177",2024-02-01 04:16:39
 38725121,OECD,Trade in Goods & Services,Exports,2024,10,140,3,1.0,2005,"25912.093,25137.407,21992.943",2001,"-25955.068,-28790.188,-40312.177",2024-02-02 23:57:37
@@ -5803,16 +5803,16 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 31183814,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,10,53,3,0.94842,2004,"0.88,0.85,0.79",2005,"1.75,1.67,1.62",2024-01-17 01:35:30
 35085284,OECD,Trade in Goods & Services - Net Trade,Net Trade,2024,10,53,3,0.99646,2004,"59096.447,66712.106,70422.102",2005,"18216.244,19663.928,20638.337",2024-01-30 19:58:30
 37073040,OECD,Trade in Goods & Services,Net Trade,2024,10,53,3,0.99646,2004,"59096.447,66712.106,70422.102",2005,"18216.244,19663.928,20638.337",2024-02-01 12:50:12
-1994260,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,124,3,0.96077,2007,"1.9,1.9,2.1",2009,"5.4,5.2,5.9",2023-12-15 04:17:08
-2547563,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,124,3,1.0,2007,"4.0,4.0,4.5",2009,"5.8,5.8,6.0",2023-12-15 15:01:29
 6685891,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,11,3,1.0,2013,"2.0,2.3,2.0",2014,"6.7,7.0,6.7",2023-12-20 04:46:35
 7133029,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,11,3,0.96077,2013,"3.8,3.9,4.0",2014,"6.5,6.8,6.9",2023-12-20 13:24:40
-6686038,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,19,3,1.0,2013,"2.0,2.3,2.0",2013,"2.7,3.0,2.7",2023-12-20 04:46:44
-7133271,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,19,3,0.96077,2013,"3.8,3.9,4.0",2013,"5.0,5.3,5.4",2023-12-20 13:24:54
 6686046,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,141,3,1.0,2013,"2.0,2.3,2.0",2018,"3.6,3.9,3.6",2023-12-20 04:46:44
 7133296,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,141,3,0.96077,2013,"3.8,3.9,4.0",2018,"9.75,9.9,9.95",2023-12-20 13:24:56
 6685860,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,117,3,1.0,2013,"2.0,2.3,2.0",2014,"3.7,4.0,3.7",2023-12-20 04:46:33
 7132975,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,117,3,0.96077,2013,"3.8,3.9,4.0",2014,"4.1,4.4,4.5",2023-12-20 13:24:36
+6686038,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,19,3,1.0,2013,"2.0,2.3,2.0",2013,"2.7,3.0,2.7",2023-12-20 04:46:44
+7133271,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,19,3,0.96077,2013,"3.8,3.9,4.0",2013,"5.0,5.3,5.4",2023-12-20 13:24:54
+1994260,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,124,3,0.96077,2007,"1.9,1.9,2.1",2009,"5.4,5.2,5.9",2023-12-15 04:17:08
+2547563,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,124,3,1.0,2007,"4.0,4.0,4.5",2009,"5.8,5.8,6.0",2023-12-15 15:01:29
 1994519,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,169,3,0.96077,2007,"1.9,1.9,2.1",2007,"5.3,5.5,6.0",2023-12-15 04:17:31
 2547833,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,169,3,1.0,2007,"4.0,4.0,4.5",2007,"9.0,9.0,9.3",2023-12-15 15:01:45
 38822900,OECD,Inflation (CPI) Index,Food,2024,10,31,3,0.97887,2018,"32.73381,58.36288,46.96305",2010,"6.096094,8.846192,8.129188",2024-02-04 14:43:15
@@ -6012,10 +6012,10 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 32382918,OECD,FDI Stocks (Inward),FDI Stocks - Inward (% of GDP),2024,10,203,3,0.97663,2005,"18.862767928973,25.547887463352,22.855853098013",2008,"21.453461957427,22.299754844838,22.12643439413",2024-01-21 12:00:37
 1994515,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,15,3,0.97538,2007,"1.9,1.9,2.1",2019,"5.8,5.938549971908307,6.4",2023-12-15 04:17:30
 2907682,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,15,3,0.97863,2007,"4.6,4.5,4.8",2019,"4.4,4.352511675852315,4.7",2023-12-16 07:46:37
-2907759,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,234,3,0.95382,2007,"4.6,4.5,4.8",2019,"2.2,1.9,2.4",2023-12-16 07:46:42
-3602658,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,234,3,1.0,2007,"5.2,5.2,5.5",2019,"2.8,2.8,3.3",2023-12-17 04:54:25
 650623,The Fund For Peace,Fragile State Index,Total,2023,10,223,3,0.95382,2007,"41.4,41.4,44.7",2008,"86.8,87.2,88.1",2023-12-13 18:01:45
 3602597,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,223,3,1.0,2007,"5.2,5.2,5.5",2008,"7.5,7.5,7.6",2023-12-17 04:54:21
+2907759,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,234,3,0.95382,2007,"4.6,4.5,4.8",2019,"2.2,1.9,2.4",2023-12-16 07:46:42
+3602658,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,234,3,1.0,2007,"5.2,5.2,5.5",2019,"2.8,2.8,3.3",2023-12-17 04:54:25
 32329325,OECD,FDI Flows (Outward),FDI Flows - Outward (% of GDP),2024,10,182,3,0.96273,2005,"0.65349677154373,1.0404489251303,0.51913942532849",2020,"0.45689322315048,3.6025065644099,0.53959229137796",2024-01-21 07:33:24
 32329326,OECD,FDI Flows (Outward),FDI Flows - Outward (% of GDP),2024,10,182,3,0.96273,2005,"0.65349677154373,1.0404489251303,0.51913942532849",2020,"0.45689322315048,3.6025065644099,0.53959229137796",2024-01-21 07:33:24
 32329327,OECD,FDI Flows (Outward),FDI Flows - Outward (% of GDP),2024,10,182,3,0.96273,2005,"0.65349677154373,1.0404489251303,0.51913942532849",2020,"0.45689322315048,3.6025065644099,0.53959229137796",2024-01-21 07:33:24
@@ -6051,10 +6051,10 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 37072955,OECD,Trade in Goods & Services,Net Trade,2024,10,74,3,0.99208,2004,"59096.447,66712.106,70422.102",2003,"532270.463,560789.784,583084.654",2024-02-01 12:50:07
 1994448,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,67,3,0.97073,2007,"1.9,1.9,2.1",2009,"2.5,2.6,2.9",2023-12-15 04:17:26
 2547743,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,67,3,0.98198,2007,"4.0,4.0,4.5",2009,"4.9,5.0,5.4",2023-12-15 15:01:40
-650452,The Fund For Peace,Fragile State Index,Total,2023,10,166,3,0.98198,2007,"41.4,41.4,44.7",2010,"48.7,49.3,51.7",2023-12-13 18:01:34
-1994450,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,166,3,0.97073,2007,"1.9,1.9,2.1",2010,"5.2,5.3,5.6",2023-12-15 04:17:26
 2907757,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,99,3,0.98198,2007,"4.6,4.5,4.8",2019,"3.1,2.8000000000000003,3.4",2023-12-16 07:46:41
 3602653,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,99,3,0.97073,2007,"5.2,5.2,5.5",2019,"0.9,1.0,1.3",2023-12-17 04:54:25
+650452,The Fund For Peace,Fragile State Index,Total,2023,10,166,3,0.98198,2007,"41.4,41.4,44.7",2010,"48.7,49.3,51.7",2023-12-13 18:01:34
+1994450,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,166,3,0.97073,2007,"1.9,1.9,2.1",2010,"5.2,5.3,5.6",2023-12-15 04:17:26
 31183486,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,10,74,3,0.97622,2004,"0.88,0.85,0.79",2016,"1.92,1.91,1.84",2024-01-17 01:35:16
 35085210,OECD,Trade in Goods & Services - Net Trade,Net Trade,2024,10,74,3,0.97632,2004,"59096.447,66712.106,70422.102",2016,"759463.466,792772.718,828661.421",2024-01-30 19:58:26
 37072966,OECD,Trade in Goods & Services,Net Trade,2024,10,74,3,0.97632,2004,"59096.447,66712.106,70422.102",2016,"759463.466,792772.718,828661.421",2024-02-01 12:50:08
@@ -6161,54 +6161,54 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 31183679,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,10,156,3,1.0,2004,"0.88,0.85,0.79",2011,"1.16,1.12,1.04",2024-01-17 01:35:24
 35085634,OECD,Trade in Goods & Services - Net Trade,Net Trade,2024,10,156,3,0.95875,2004,"59096.447,66712.106,70422.102",2011,"43396.807,44716.654,44777.252",2024-01-30 19:58:49
 37073390,OECD,Trade in Goods & Services,Net Trade,2024,10,156,3,0.95875,2004,"59096.447,66712.106,70422.102",2011,"43396.807,44716.654,44777.252",2024-02-01 12:50:30
-650277,The Fund For Peace,Fragile State Index,Total,2023,10,153,3,0.94491,2007,"41.4,41.4,44.7",2008,"27.3,27.0,27.9",2023-12-13 18:01:22
-1994353,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,153,3,1.0,2007,"1.9,1.9,2.1",2008,"1.0,1.0,1.1",2023-12-15 04:17:17
-1994470,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,63,3,1.0,2007,"1.9,1.9,2.1",2007,"6.1,6.1,6.2",2023-12-15 04:17:27
-2547766,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,63,3,0.94491,2007,"4.0,4.0,4.5",2007,"7.8,7.7,8.0",2023-12-15 15:01:41
-1994373,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,40,3,1.0,2007,"1.9,1.9,2.1",2007,"1.0,1.0,1.1",2023-12-15 04:17:19
-2907547,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,40,3,0.94491,2007,"4.6,4.5,4.8",2007,"1.5,1.5,2.0",2023-12-16 07:46:29
-2547562,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,124,3,1.0,2007,"4.0,4.0,4.5",2007,"5.6,5.6,5.8",2023-12-15 15:01:29
-2907455,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,124,3,0.94491,2007,"4.6,4.5,4.8",2007,"5.3,5.3,5.5",2023-12-16 07:46:24
-650666,The Fund For Peace,Fragile State Index,Total,2023,10,169,3,0.94491,2007,"41.4,41.4,44.7",2014,"79.5,79.4,79.7",2023-12-13 18:01:48
-2547835,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,169,3,1.0,2007,"4.0,4.0,4.5",2014,"9.7,9.7,9.8",2023-12-15 15:01:45
-2907620,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,48,3,0.94491,2007,"4.6,4.5,4.8",2007,"3.8,3.8,4.3",2023-12-16 07:46:33
-3602550,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,48,3,1.0,2007,"5.2,5.2,5.5",2007,"8.4,8.4,8.5",2023-12-17 04:54:18
-2907479,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,117,3,0.94491,2007,"4.6,4.5,4.8",2019,"2.4,2.4,3.0",2023-12-16 07:46:25
-3602459,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,117,3,1.0,2007,"5.2,5.2,5.5",2019,"3.9,3.9,4.2",2023-12-17 04:54:11
-1994323,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,233,3,1.0,2007,"1.9,1.9,2.1",2007,"3.0,3.0,3.3",2023-12-15 04:17:14
-2907512,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,233,3,0.94491,2007,"4.6,4.5,4.8",2007,"5.0,5.0,5.5",2023-12-16 07:46:27
-1994552,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,9,3,1.0,2007,"1.9,1.9,2.1",2013,"4.9,4.9,5.2",2023-12-15 04:17:33
-2907727,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,9,3,0.94491,2007,"4.6,4.5,4.8",2013,"4.5,4.5,5.0",2023-12-16 07:46:40
-1994359,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,14,3,1.0,2007,"1.9,1.9,2.1",2008,"1.0,1.0,1.1",2023-12-15 04:17:17
-2547655,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,14,3,0.94491,2007,"4.0,4.0,4.5",2008,"3.5,3.6,3.8",2023-12-15 15:01:35
-1994305,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,148,3,1.0,2007,"1.9,1.9,2.1",2016,"6.7,6.7,6.726179737340116",2023-12-15 04:17:12
-3602472,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,148,3,0.94491,2007,"5.2,5.2,5.5",2016,"8.9,8.8,9.1",2023-12-17 04:54:12
-2907613,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,211,3,0.94491,2007,"4.6,4.5,4.8",2007,"6.0,6.0,6.1",2023-12-16 07:46:33
-3602546,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,211,3,1.0,2007,"5.2,5.2,5.5",2007,"8.2,8.2,8.5",2023-12-17 04:54:18
-6686055,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,145,3,0.94491,2013,"2.0,2.3,2.0",2015,"4.5,4.8,4.6",2023-12-20 04:46:44
-7133313,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,145,3,1.0,2013,"3.8,3.9,4.0",2015,"5.9,6.2,6.5",2023-12-20 13:24:57
-650273,The Fund For Peace,Fragile State Index,Total,2023,10,200,3,0.94491,2007,"41.4,41.4,44.7",2008,"33.3,33.8,34.8",2023-12-13 18:01:22
-1994351,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,200,3,1.0,2007,"1.9,1.9,2.1",2008,"1.0,1.0,1.5",2023-12-15 04:17:16
-2547719,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,84,3,1.0,2007,"4.0,4.0,4.5",2006,"3.5,3.5,4.3",2023-12-15 15:01:38
-2907585,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,84,3,0.94491,2007,"4.6,4.5,4.8",2006,"3.5,3.5,3.7",2023-12-16 07:46:31
-1994578,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,99,3,0.94491,2007,"1.9,1.9,2.1",2018,"0.8,0.7,1.0",2023-12-15 04:17:34
-3602652,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,99,3,1.0,2007,"5.2,5.2,5.5",2018,"0.9,0.9,1.0",2023-12-17 04:54:25
-6685983,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,162,3,0.94491,2013,"2.0,2.3,2.0",2015,"4.3,4.6,4.4",2023-12-20 04:46:40
-7133172,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,162,3,1.0,2013,"3.8,3.9,4.0",2015,"8.8,9.3,9.8",2023-12-20 13:24:47
-1994406,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,126,3,1.0,2007,"1.9,1.9,2.1",2007,"2.0,2.0,2.1",2023-12-15 04:17:22
-2907566,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,126,3,0.94491,2007,"4.6,4.5,4.8",2007,"4.5,4.5,4.7",2023-12-16 07:46:30
 650291,The Fund For Peace,Fragile State Index,Total,2023,10,58,3,0.94491,2007,"41.4,41.4,44.7",2009,"23.2,22.9,23.8",2023-12-13 18:01:23
 2547659,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,58,3,1.0,2007,"4.0,4.0,4.5",2009,"3.0,3.0,3.3",2023-12-15 15:01:35
 2907591,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,210,3,0.94491,2007,"4.6,4.5,4.8",2007,"3.4,3.4,4.0",2023-12-16 07:46:31
 3602526,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,210,3,1.0,2007,"5.2,5.2,5.5",2007,"5.0,5.0,5.2",2023-12-17 04:54:16
+1994470,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,63,3,1.0,2007,"1.9,1.9,2.1",2007,"6.1,6.1,6.2",2023-12-15 04:17:27
+2547766,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,63,3,0.94491,2007,"4.0,4.0,4.5",2007,"7.8,7.7,8.0",2023-12-15 15:01:41
+2547562,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,124,3,1.0,2007,"4.0,4.0,4.5",2007,"5.6,5.6,5.8",2023-12-15 15:01:29
+2907455,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,124,3,0.94491,2007,"4.6,4.5,4.8",2007,"5.3,5.3,5.5",2023-12-16 07:46:24
+1994373,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,40,3,1.0,2007,"1.9,1.9,2.1",2007,"1.0,1.0,1.1",2023-12-15 04:17:19
+2907547,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,40,3,0.94491,2007,"4.6,4.5,4.8",2007,"1.5,1.5,2.0",2023-12-16 07:46:29
+2907479,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,117,3,0.94491,2007,"4.6,4.5,4.8",2019,"2.4,2.4,3.0",2023-12-16 07:46:25
+3602459,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,117,3,1.0,2007,"5.2,5.2,5.5",2019,"3.9,3.9,4.2",2023-12-17 04:54:11
+1994406,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,126,3,1.0,2007,"1.9,1.9,2.1",2007,"2.0,2.0,2.1",2023-12-15 04:17:22
+2907566,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,126,3,0.94491,2007,"4.6,4.5,4.8",2007,"4.5,4.5,4.7",2023-12-16 07:46:30
 2907597,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,67,3,0.94491,2007,"4.6,4.5,4.8",2007,"3.7,3.7,4.4",2023-12-16 07:46:32
 3602530,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,67,3,1.0,2007,"5.2,5.2,5.5",2007,"4.9,4.9,5.4",2023-12-17 04:54:17
-6685850,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,227,3,0.94491,2013,"2.0,2.3,2.0",2013,"4.2,4.4,4.1",2023-12-20 04:46:32
-7132965,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,227,3,1.0,2013,"3.8,3.9,4.0",2013,"6.3,6.6,6.9",2023-12-20 13:24:36
+6686055,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,145,3,0.94491,2013,"2.0,2.3,2.0",2015,"4.5,4.8,4.6",2023-12-20 04:46:44
+7133313,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,145,3,1.0,2013,"3.8,3.9,4.0",2015,"5.9,6.2,6.5",2023-12-20 13:24:57
+1994578,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,99,3,0.94491,2007,"1.9,1.9,2.1",2018,"0.8,0.7,1.0",2023-12-15 04:17:34
+3602652,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,99,3,1.0,2007,"5.2,5.2,5.5",2018,"0.9,0.9,1.0",2023-12-17 04:54:25
+1994305,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,148,3,1.0,2007,"1.9,1.9,2.1",2016,"6.7,6.7,6.726179737340116",2023-12-15 04:17:12
+3602472,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,148,3,0.94491,2007,"5.2,5.2,5.5",2016,"8.9,8.8,9.1",2023-12-17 04:54:12
+1994359,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,14,3,1.0,2007,"1.9,1.9,2.1",2008,"1.0,1.0,1.1",2023-12-15 04:17:17
+2547655,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,14,3,0.94491,2007,"4.0,4.0,4.5",2008,"3.5,3.6,3.8",2023-12-15 15:01:35
 2907706,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,119,3,0.94491,2007,"4.6,4.5,4.8",2007,"7.1,7.1,7.5",2023-12-16 07:46:38
 3602618,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,119,3,1.0,2007,"5.2,5.2,5.5",2007,"5.7,5.7,6.0",2023-12-17 04:54:22
+1994552,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,9,3,1.0,2007,"1.9,1.9,2.1",2013,"4.9,4.9,5.2",2023-12-15 04:17:33
+2907727,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,9,3,0.94491,2007,"4.6,4.5,4.8",2013,"4.5,4.5,5.0",2023-12-16 07:46:40
+1994323,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,233,3,1.0,2007,"1.9,1.9,2.1",2007,"3.0,3.0,3.3",2023-12-15 04:17:14
+2907512,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,233,3,0.94491,2007,"4.6,4.5,4.8",2007,"5.0,5.0,5.5",2023-12-16 07:46:27
 650812,The Fund For Peace,Fragile State Index,Total,2023,10,204,3,0.94491,2007,"41.4,41.4,44.7",2012,"85.6,85.2,86.4",2023-12-13 18:01:57
 3602663,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,204,3,1.0,2007,"5.2,5.2,5.5",2012,"8.3,8.3,8.6",2023-12-17 04:54:25
+6685983,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,162,3,0.94491,2013,"2.0,2.3,2.0",2015,"4.3,4.6,4.4",2023-12-20 04:46:40
+7133172,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,162,3,1.0,2013,"3.8,3.9,4.0",2015,"8.8,9.3,9.8",2023-12-20 13:24:47
+650666,The Fund For Peace,Fragile State Index,Total,2023,10,169,3,0.94491,2007,"41.4,41.4,44.7",2014,"79.5,79.4,79.7",2023-12-13 18:01:48
+2547835,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,169,3,1.0,2007,"4.0,4.0,4.5",2014,"9.7,9.7,9.8",2023-12-15 15:01:45
+650277,The Fund For Peace,Fragile State Index,Total,2023,10,153,3,0.94491,2007,"41.4,41.4,44.7",2008,"27.3,27.0,27.9",2023-12-13 18:01:22
+1994353,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,153,3,1.0,2007,"1.9,1.9,2.1",2008,"1.0,1.0,1.1",2023-12-15 04:17:17
+2907620,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,48,3,0.94491,2007,"4.6,4.5,4.8",2007,"3.8,3.8,4.3",2023-12-16 07:46:33
+3602550,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,48,3,1.0,2007,"5.2,5.2,5.5",2007,"8.4,8.4,8.5",2023-12-17 04:54:18
+2547719,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,84,3,1.0,2007,"4.0,4.0,4.5",2006,"3.5,3.5,4.3",2023-12-15 15:01:38
+2907585,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,84,3,0.94491,2007,"4.6,4.5,4.8",2006,"3.5,3.5,3.7",2023-12-16 07:46:31
+650273,The Fund For Peace,Fragile State Index,Total,2023,10,200,3,0.94491,2007,"41.4,41.4,44.7",2008,"33.3,33.8,34.8",2023-12-13 18:01:22
+1994351,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,200,3,1.0,2007,"1.9,1.9,2.1",2008,"1.0,1.0,1.5",2023-12-15 04:17:16
+6685850,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,227,3,0.94491,2013,"2.0,2.3,2.0",2013,"4.2,4.4,4.1",2023-12-20 04:46:32
+7132965,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,227,3,1.0,2013,"3.8,3.9,4.0",2013,"6.3,6.6,6.9",2023-12-20 13:24:36
+2907613,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,211,3,0.94491,2007,"4.6,4.5,4.8",2007,"6.0,6.0,6.1",2023-12-16 07:46:33
+3602546,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,211,3,1.0,2007,"5.2,5.2,5.5",2007,"8.2,8.2,8.5",2023-12-17 04:54:18
 31183756,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,10,140,3,0.9894,2004,"0.88,0.85,0.79",2020,"0.74,0.68,0.61",2024-01-17 01:35:28
 35085555,OECD,Trade in Goods & Services - Net Trade,Net Trade,2024,10,140,3,0.96391,2004,"59096.447,66712.106,70422.102",2020,"441765.654,473648.634,514772.844",2024-01-30 19:58:44
 37073311,OECD,Trade in Goods & Services,Net Trade,2024,10,140,3,0.96391,2004,"59096.447,66712.106,70422.102",2020,"441765.654,473648.634,514772.844",2024-02-01 12:50:25
@@ -6504,24 +6504,24 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 31183432,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,10,235,3,0.99834,2004,"0.88,0.85,0.79",2003,"2.55,2.5,2.42",2024-01-17 01:35:14
 35085223,OECD,Trade in Goods & Services - Net Trade,Net Trade,2024,10,235,3,0.94771,2004,"59096.447,66712.106,70422.102",2003,"575568.778,604564.109,650242.671",2024-01-30 19:58:27
 37072979,OECD,Trade in Goods & Services,Net Trade,2024,10,235,3,0.94771,2004,"59096.447,66712.106,70422.102",2003,"575568.778,604564.109,650242.671",2024-02-01 12:50:09
+1994281,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,53,3,1.0,2007,"1.9,1.9,2.1",2007,"3.9,3.9,4.3",2023-12-15 04:17:10
+2907474,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,53,3,0.92857,2007,"4.6,4.5,4.8",2007,"5.7,5.3,5.9",2023-12-16 07:46:25
 650287,The Fund For Peace,Fragile State Index,Total,2023,10,14,3,0.92857,2007,"41.4,41.4,44.7",2012,"27.5,26.9,28.5",2023-12-13 18:01:23
 2907538,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,14,3,1.0,2007,"4.6,4.5,4.8",2012,"2.0,1.9,2.2",2023-12-16 07:46:28
+650275,The Fund For Peace,Fragile State Index,Total,2023,10,200,3,0.92857,2007,"41.4,41.4,44.7",2010,"34.8,35.1,35.6",2023-12-13 18:01:22
+1994352,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,200,3,1.0,2007,"1.9,1.9,2.1",2010,"1.5,1.5,1.8",2023-12-15 04:17:17
 650775,The Fund For Peace,Fragile State Index,Total,2023,10,141,3,1.0,2007,"41.4,41.4,44.7",2011,"71.9,71.9,72.9",2023-12-13 18:01:55
 3602643,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,141,3,0.92857,2007,"5.2,5.2,5.5",2011,"7.2,7.5,8.0",2023-12-17 04:54:24
 650272,The Fund For Peace,Fragile State Index,Total,2023,10,200,3,0.92857,2007,"41.4,41.4,44.7",2007,"33.0,33.3,33.8",2023-12-13 18:01:22
 2547649,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,200,3,1.0,2007,"4.0,4.0,4.5",2007,"3.0,3.0,3.1",2023-12-15 15:01:34
-2547756,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,239,3,1.0,2007,"4.0,4.0,4.5",2010,"7.4,7.4,7.7",2023-12-15 15:01:41
-2907610,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,239,3,0.92857,2007,"4.6,4.5,4.8",2010,"7.0,6.8,7.1",2023-12-16 07:46:32
-1994281,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,53,3,1.0,2007,"1.9,1.9,2.1",2007,"3.9,3.9,4.3",2023-12-15 04:17:10
-2907474,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,53,3,0.92857,2007,"4.6,4.5,4.8",2007,"5.7,5.3,5.9",2023-12-16 07:46:25
+650464,The Fund For Peace,Fragile State Index,Total,2023,10,232,3,0.92857,2007,"41.4,41.4,44.7",2007,"96.4,96.1,96.9",2023-12-13 18:01:35
+3602536,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,232,3,1.0,2007,"5.2,5.2,5.5",2007,"8.5,8.5,8.7",2023-12-17 04:54:17
 1994512,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,45,3,0.92857,2007,"1.9,1.9,2.1",2011,"5.7,6.0,6.5",2023-12-15 04:17:30
 2547820,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,45,3,1.0,2007,"4.0,4.0,4.5",2011,"7.9,7.9,8.3",2023-12-15 15:01:45
 2547865,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,137,3,1.0,2007,"4.0,4.0,4.5",2021,"7.3,7.3,7.6",2023-12-15 15:01:47
 3602628,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,137,3,0.92857,2007,"5.2,5.2,5.5",2021,"6.4,6.7,7.2",2023-12-17 04:54:23
-650275,The Fund For Peace,Fragile State Index,Total,2023,10,200,3,0.92857,2007,"41.4,41.4,44.7",2010,"34.8,35.1,35.6",2023-12-13 18:01:22
-1994352,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,200,3,1.0,2007,"1.9,1.9,2.1",2010,"1.5,1.5,1.8",2023-12-15 04:17:17
-650464,The Fund For Peace,Fragile State Index,Total,2023,10,232,3,0.92857,2007,"41.4,41.4,44.7",2007,"96.4,96.1,96.9",2023-12-13 18:01:35
-3602536,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,232,3,1.0,2007,"5.2,5.2,5.5",2007,"8.5,8.5,8.7",2023-12-17 04:54:17
+2547756,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,239,3,1.0,2007,"4.0,4.0,4.5",2010,"7.4,7.4,7.7",2023-12-15 15:01:41
+2907610,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,239,3,0.92857,2007,"4.6,4.5,4.8",2010,"7.0,6.8,7.1",2023-12-16 07:46:32
 38822917,OECD,Inflation (CPI) Index,Food,2024,10,57,3,0.97123,2018,"32.73381,58.36288,46.96305",2003,"-2.182826,3.409606,-0.2519444",2024-02-04 14:43:16
 38864821,OECD,Inflation (CPI) Index,"Total less Food, less Energy",2024,10,57,3,0.95714,2018,"34.27723,53.54831,42.01509",2003,"0.1187392,2.760108,1.857098",2024-02-04 16:13:16
 38822980,OECD,Inflation (CPI) Index,Food,2024,10,120,3,0.9574,2018,"32.73381,58.36288,46.96305",2010,"-0.2896264,8.449147,2.313369",2024-02-04 14:43:18
@@ -6650,22 +6650,22 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 31183313,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,10,126,3,0.91882,2004,"0.88,0.85,0.79",2009,"1.08,0.88,0.79",2024-01-17 01:35:08
 35085473,OECD,Trade in Goods & Services - Net Trade,Net Trade,2024,10,126,3,0.97885,2004,"59096.447,66712.106,70422.102",2009,"17879.277,20808.213,23835.156",2024-01-30 19:58:40
 37073229,OECD,Trade in Goods & Services,Net Trade,2024,10,126,3,0.97885,2004,"59096.447,66712.106,70422.102",2009,"17879.277,20808.213,23835.156",2024-02-01 12:50:21
-6686016,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,137,3,0.91766,2013,"2.0,2.3,2.0",2013,"8.3,8.8,8.5",2023-12-20 04:46:42
-7133226,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,137,3,1.0,2013,"3.8,3.9,4.0",2013,"7.9,8.2,8.5",2023-12-20 13:24:50
+6686047,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,93,3,0.91766,2013,"2.0,2.3,2.0",2013,"3.8,4.1,3.6",2023-12-20 04:46:44
+7133300,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,93,3,1.0,2013,"3.8,3.9,4.0",2013,"5.9,6.2,6.5",2023-12-20 13:24:56
 1994412,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,52,3,1.0,2007,"1.9,1.9,2.1",2010,"2.5,2.5,2.8",2023-12-15 04:17:22
 2547705,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,52,3,0.91766,2007,"4.0,4.0,4.5",2010,"3.9,4.1,4.4",2023-12-15 15:01:38
 1994377,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,156,3,1.0,2007,"1.9,1.9,2.1",2010,"1.1,1.1,1.4",2023-12-15 04:17:19
 2547676,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,156,3,0.91766,2007,"4.0,4.0,4.5",2010,"3.3,3.5,3.8",2023-12-15 15:01:36
-2547660,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,58,3,1.0,2007,"4.0,4.0,4.5",2013,"3.4,3.4,3.6",2023-12-15 15:01:35
-3602498,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,58,3,0.91766,2007,"5.2,5.2,5.5",2013,"1.6,1.8,2.1",2023-12-17 04:54:14
-6686047,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,93,3,0.91766,2013,"2.0,2.3,2.0",2013,"3.8,4.1,3.6",2023-12-20 04:46:44
-7133300,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,93,3,1.0,2013,"3.8,3.9,4.0",2013,"5.9,6.2,6.5",2023-12-20 13:24:56
 1994525,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,6,3,0.91766,2007,"1.9,1.9,2.1",2015,"6.0,6.2,6.5",2023-12-15 04:17:31
 3602612,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,6,3,1.0,2007,"5.2,5.2,5.5",2015,"9.6,9.6,9.9",2023-12-17 04:54:22
 6685849,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,196,3,0.91766,2013,"2.0,2.3,2.0",2014,"7.3,7.8,7.5",2023-12-20 04:46:32
 7132959,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,196,3,1.0,2013,"3.8,3.9,4.0",2014,"6.2,6.5,6.8",2023-12-20 13:24:35
+6686016,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,137,3,0.91766,2013,"2.0,2.3,2.0",2013,"8.3,8.8,8.5",2023-12-20 04:46:42
+7133226,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,137,3,1.0,2013,"3.8,3.9,4.0",2013,"7.9,8.2,8.5",2023-12-20 13:24:50
 1994441,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,236,3,1.0,2007,"1.9,1.9,2.1",2010,"1.6,1.6,1.9",2023-12-15 04:17:25
 2547737,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,236,3,0.91766,2007,"4.0,4.0,4.5",2010,"3.4,3.6,3.9",2023-12-15 15:01:39
+2547660,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,58,3,1.0,2007,"4.0,4.0,4.5",2013,"3.4,3.4,3.6",2023-12-15 15:01:35
+3602498,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,58,3,0.91766,2007,"5.2,5.2,5.5",2013,"1.6,1.8,2.1",2023-12-17 04:54:14
 31183489,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,10,98,3,0.99485,2004,"0.88,0.85,0.79",2004,"1.47,1.41,1.22",2024-01-17 01:35:16
 35085300,OECD,Trade in Goods & Services - Net Trade,Net Trade,2024,10,98,3,0.94046,2004,"59096.447,66712.106,70422.102",2004,"51768.867,58434.278,69839.761",2024-01-30 19:58:31
 37073056,OECD,Trade in Goods & Services,Net Trade,2024,10,98,3,0.94046,2004,"59096.447,66712.106,70422.102",2004,"51768.867,58434.278,69839.761",2024-02-01 12:50:13
@@ -6702,18 +6702,18 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 38724952,OECD,Trade in Goods & Services,Exports,2024,10,48,3,0.948,2005,"25912.093,25137.407,21992.943",2020,"-21362.387,-31147.265,-41346.837",2024-02-02 23:57:27
 1994374,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,40,3,0.97073,2007,"1.9,1.9,2.1",2009,"1.1,1.2,1.5",2023-12-15 04:17:19
 2547671,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,40,3,0.94491,2007,"4.0,4.0,4.5",2009,"3.0,3.1,3.3",2023-12-15 15:01:36
-2547724,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,208,3,0.94491,2007,"4.0,4.0,4.5",2020,"2.4000000000000004,2.3,2.6",2023-12-15 15:01:39
-3602524,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,208,3,0.97073,2007,"5.2,5.2,5.5",2020,"2.1,2.2,2.5",2023-12-17 04:54:16
-650221,The Fund For Peace,Fragile State Index,Total,2023,10,79,3,0.97073,2007,"41.4,41.4,44.7",2011,"80.9,80.6,81.8",2023-12-13 18:01:18
-3602476,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,79,3,0.94491,2007,"5.2,5.2,5.5",2011,"6.6,6.5,6.8",2023-12-17 04:54:12
-2907605,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,232,3,0.94491,2007,"4.6,4.5,4.8",2021,"6.2,6.2,6.4",2023-12-16 07:46:32
-3602537,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,232,3,0.97073,2007,"5.2,5.2,5.5",2021,"7.0,7.1,7.4",2023-12-17 04:54:17
 2907570,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,52,3,0.94491,2007,"4.6,4.5,4.8",2021,"5.2,5.2,5.5",2023-12-16 07:46:30
 3602517,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,52,3,0.97073,2007,"5.2,5.2,5.5",2021,"4.7,4.8,5.1",2023-12-17 04:54:15
+2907605,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,232,3,0.94491,2007,"4.6,4.5,4.8",2021,"6.2,6.2,6.4",2023-12-16 07:46:32
+3602537,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,232,3,0.97073,2007,"5.2,5.2,5.5",2021,"7.0,7.1,7.4",2023-12-17 04:54:17
 1994457,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,159,3,0.97073,2007,"1.9,1.9,2.1",2011,"9.1,9.2,9.5",2023-12-15 04:17:26
 3602539,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,159,3,0.94491,2007,"5.2,5.2,5.5",2011,"9.0,8.9,9.2",2023-12-17 04:54:17
+650221,The Fund For Peace,Fragile State Index,Total,2023,10,79,3,0.97073,2007,"41.4,41.4,44.7",2011,"80.9,80.6,81.8",2023-12-13 18:01:18
+3602476,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,79,3,0.94491,2007,"5.2,5.2,5.5",2011,"6.6,6.5,6.8",2023-12-17 04:54:12
 2547827,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,242,3,0.97073,2007,"4.0,4.0,4.5",2017,"7.2,7.3,7.6",2023-12-15 15:01:45
 3602604,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,242,3,0.94491,2007,"5.2,5.2,5.5",2017,"6.7,6.6000000000000005,6.9",2023-12-17 04:54:22
+2547724,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,208,3,0.94491,2007,"4.0,4.0,4.5",2020,"2.4000000000000004,2.3,2.6",2023-12-15 15:01:39
+3602524,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,208,3,0.97073,2007,"5.2,5.2,5.5",2020,"2.1,2.2,2.5",2023-12-17 04:54:16
 1994557,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,226,3,0.97073,2007,"1.9,1.9,2.1",2021,"6.9,7.0,7.3",2023-12-15 04:17:33
 3602639,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,226,3,0.94491,2007,"5.2,5.2,5.5",2021,"4.5,4.4,4.7",2023-12-17 04:54:24
 650672,The Fund For Peace,Fragile State Index,Total,2023,10,174,3,0.99761,2007,"41.4,41.4,44.7",2007,"83.2,83.4,85.8",2023-12-13 18:01:48
@@ -6745,20 +6745,20 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 32151343,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,10,181,3,0.93224,2005,"3.47,2.96,2.68",2002,"7.15,6.8,6.06",2024-01-19 01:24:41
 36729184,OECD,Trade in Goods & Services - Net Trade,Exports,2024,10,181,3,0.96688,2005,"25912.093,25137.407,21992.943",2002,"3774.311,2352.986,487.973",2024-02-01 04:16:42
 38725165,OECD,Trade in Goods & Services,Exports,2024,10,181,3,0.96688,2005,"25912.093,25137.407,21992.943",2002,"3774.311,2352.986,487.973",2024-02-02 23:57:40
-1994368,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,21,3,0.98198,2007,"1.9,1.9,2.1",2015,"2.0,1.9,2.4",2023-12-15 04:17:18
-2547665,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,21,3,0.92857,2007,"4.0,4.0,4.5",2015,"4.1,4.4,4.9",2023-12-15 15:01:35
 2547633,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,113,3,0.92857,2007,"4.0,4.0,4.5",2013,"6.2,6.5,7.0",2023-12-15 15:01:33
 2907516,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,113,3,0.98198,2007,"4.6,4.5,4.8",2013,"6.2,5.9,6.5",2023-12-16 07:46:27
+1994368,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,21,3,0.98198,2007,"1.9,1.9,2.1",2015,"2.0,1.9,2.4",2023-12-15 04:17:18
+2547665,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,21,3,0.92857,2007,"4.0,4.0,4.5",2015,"4.1,4.4,4.9",2023-12-15 15:01:35
 2547828,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,121,3,0.98198,2007,"4.0,4.0,4.5",2012,"8.4,8.5,8.9",2023-12-15 15:01:45
 2907687,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,121,3,0.92857,2007,"4.6,4.5,4.8",2012,"5.5,5.3,5.6",2023-12-16 07:46:37
 38822904,OECD,Inflation (CPI) Index,Food,2024,10,40,3,0.91055,2018,"32.73381,58.36288,46.96305",2004,"1.774419,2.292356,2.272548",2024-02-04 14:43:15
 38864804,OECD,Inflation (CPI) Index,"Total less Food, less Energy",2024,10,40,3,0.99999,2018,"34.27723,53.54831,42.01509",2004,"1.857259,2.213552,2.002025",2024-02-04 16:13:16
 38822982,OECD,Inflation (CPI) Index,Food,2024,10,140,3,0.92843,2018,"32.73381,58.36288,46.96305",2011,"4.359802,8.122442,5.172226",2024-02-04 14:43:19
 38864871,OECD,Inflation (CPI) Index,"Total less Food, less Energy",2024,10,140,3,0.98199,2018,"34.27723,53.54831,42.01509",2011,"3.40738,4.111508,3.80639",2024-02-04 16:13:19
-650734,The Fund For Peace,Fragile State Index,Total,2023,10,92,3,0.90993,2007,"41.4,41.4,44.7",2007,"88.8,91.3,94.8",2023-12-13 18:01:52
-2547874,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,92,3,1.0,2007,"4.0,4.0,4.5",2007,"5.4,5.4,5.8",2023-12-15 15:01:48
 1994469,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,35,3,0.90993,2007,"1.9,1.9,2.1",2014,"6.9,7.4,8.1",2023-12-15 04:17:27
 3602553,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,35,3,1.0,2007,"5.2,5.2,5.5",2014,"8.1,8.1,8.4",2023-12-17 04:54:18
+650734,The Fund For Peace,Fragile State Index,Total,2023,10,92,3,0.90993,2007,"41.4,41.4,44.7",2007,"88.8,91.3,94.8",2023-12-13 18:01:52
+2547874,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,92,3,1.0,2007,"4.0,4.0,4.5",2007,"5.4,5.4,5.8",2023-12-15 15:01:48
 31183873,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,10,200,3,0.97073,2004,"0.88,0.85,0.79",2002,"4.92,4.87,4.42",2024-01-17 01:35:33
 35085739,OECD,Trade in Goods & Services - Net Trade,Net Trade,2024,10,200,3,0.94677,2004,"59096.447,66712.106,70422.102",2002,"205142.691,233597.44,278913.68",2024-01-30 19:58:54
 37073495,OECD,Trade in Goods & Services,Net Trade,2024,10,200,3,0.94677,2004,"59096.447,66712.106,70422.102",2002,"205142.691,233597.44,278913.68",2024-02-01 12:50:35
@@ -6816,14 +6816,14 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 32329349,OECD,FDI Flows (Outward),FDI Flows - Outward (% of GDP),2024,10,203,3,0.94688,2005,"0.65349677154373,1.0404489251303,0.51913942532849",2010,"-0.03846450678021,0.38841918563088,-0.55467359081807",2024-01-21 07:33:26
 32329351,OECD,FDI Flows (Outward),FDI Flows - Outward (% of GDP),2024,10,203,3,0.94688,2005,"0.65349677154373,1.0404489251303,0.51913942532849",2010,"-0.03846450678021,0.38841918563088,-0.55467359081807",2024-01-21 07:33:26
 32329353,OECD,FDI Flows (Outward),FDI Flows - Outward (% of GDP),2024,10,203,3,0.94688,2005,"0.65349677154373,1.0404489251303,0.51913942532849",2010,"-0.03846450678021,0.38841918563088,-0.55467359081807",2024-01-21 07:33:26
-1994329,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,172,3,0.96077,2007,"1.9,1.9,2.1",2006,"4.5,4.3,5.0",2023-12-15 04:17:14
-3602481,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,172,3,0.94491,2007,"5.2,5.2,5.5",2006,"7.5,7.4,7.7",2023-12-17 04:54:12
-6685890,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,11,3,0.94491,2013,"2.0,2.3,2.0",2012,"6.8,7.0,6.7",2023-12-20 04:46:35
-7133027,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,11,3,0.96077,2013,"3.8,3.9,4.0",2012,"6.1,6.2,6.5",2023-12-20 13:24:39
 6685886,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,140,3,0.94491,2013,"2.0,2.3,2.0",2008,"4.0,4.3,4.1",2023-12-20 04:46:34
 7133021,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,140,3,0.96077,2013,"3.8,3.9,4.0",2008,"6.5,6.6,6.9",2023-12-20 13:24:39
 6686008,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,62,3,0.94491,2013,"2.0,2.3,2.0",2008,"6.0,6.3,6.1",2023-12-20 04:46:42
 7133212,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,62,3,0.96077,2013,"3.8,3.9,4.0",2008,"5.7,6.0,6.1",2023-12-20 13:24:50
+1994329,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,172,3,0.96077,2007,"1.9,1.9,2.1",2006,"4.5,4.3,5.0",2023-12-15 04:17:14
+3602481,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,172,3,0.94491,2007,"5.2,5.2,5.5",2006,"7.5,7.4,7.7",2023-12-17 04:54:12
+6685890,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,11,3,0.94491,2013,"2.0,2.3,2.0",2012,"6.8,7.0,6.7",2023-12-20 04:46:35
+7133027,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,11,3,0.96077,2013,"3.8,3.9,4.0",2012,"6.1,6.2,6.5",2023-12-20 13:24:39
 6686017,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,219,3,0.94491,2013,"2.0,2.3,2.0",2008,"6.1,6.4,6.2",2023-12-20 04:46:42
 7133229,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,219,3,0.96077,2013,"3.8,3.9,4.0",2008,"6.2,6.5,6.6",2023-12-20 13:24:51
 32151416,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,10,210,3,0.90333,2005,"3.47,2.96,2.68",2000,"4.4,4.24,3.77",2024-01-19 01:24:45
@@ -6837,14 +6837,14 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 31183655,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,10,44,3,0.93025,2004,"0.88,0.85,0.79",2010,"2.25,2.26,2.05",2024-01-17 01:35:23
 35084993,OECD,Trade in Goods & Services - Net Trade,Net Trade,2024,10,44,3,0.96318,2004,"59096.447,66712.106,70422.102",2010,"66332.641,69776.771,70002.253",2024-01-30 19:58:14
 37072749,OECD,Trade in Goods & Services,Net Trade,2024,10,44,3,0.96318,2004,"59096.447,66712.106,70422.102",2010,"66332.641,69776.771,70002.253",2024-02-01 12:49:53
-650194,The Fund For Peace,Fragile State Index,Total,2023,10,148,3,0.90419,2007,"41.4,41.4,44.7",2015,"86.9,87.8,89.0",2023-12-13 18:01:16
-2907501,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,148,3,1.0,2007,"4.6,4.5,4.8",2015,"7.8,7.7,8.0",2023-12-16 07:46:26
+2547571,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,131,3,0.90419,2007,"4.0,4.0,4.5",2008,"5.9,6.2,6.6",2023-12-15 15:01:30
+3602453,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,131,3,1.0,2007,"5.2,5.2,5.5",2008,"6.9,6.9,7.0",2023-12-17 04:54:10
 1994379,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,216,3,1.0,2007,"1.9,1.9,2.1",2008,"1.0,1.0,1.2",2023-12-15 04:17:19
 2547678,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,216,3,0.90419,2007,"4.0,4.0,4.5",2008,"2.6,2.9,3.3",2023-12-15 15:01:36
 1994487,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,103,3,1.0,2007,"1.9,1.9,2.1",2010,"9.5,9.5,9.9",2023-12-15 04:17:28
 2547794,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,103,3,0.90419,2007,"4.0,4.0,4.5",2010,"9.3,9.0,9.7",2023-12-15 15:01:43
-2547571,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,131,3,0.90419,2007,"4.0,4.0,4.5",2008,"5.9,6.2,6.6",2023-12-15 15:01:30
-3602453,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,10,131,3,1.0,2007,"5.2,5.2,5.5",2008,"6.9,6.9,7.0",2023-12-17 04:54:10
+650194,The Fund For Peace,Fragile State Index,Total,2023,10,148,3,0.90419,2007,"41.4,41.4,44.7",2015,"86.9,87.8,89.0",2023-12-13 18:01:16
+2907501,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,148,3,1.0,2007,"4.6,4.5,4.8",2015,"7.8,7.7,8.0",2023-12-16 07:46:26
 650792,The Fund For Peace,Fragile State Index,Total,2023,10,145,3,0.97552,2007,"41.4,41.4,44.7",2018,"55.33841976081583,55.3,55.46679468409825",2023-12-13 18:01:56
 2547893,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,145,3,0.92857,2007,"4.0,4.0,4.5",2018,"8.200000000000001,8.5,9.0",2023-12-15 15:01:49
 650440,The Fund For Peace,Fragile State Index,Total,2023,10,67,3,0.97542,2007,"41.4,41.4,44.7",2015,"43.7,43.4,44.7",2023-12-13 18:01:33
@@ -6936,10 +6936,10 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 32382595,OECD,FDI Stocks (Inward),FDI Stocks - Inward (% of GDP),2024,10,235,3,0.93212,2005,"18.862767928973,25.547887463352,22.855853098013",2016,"54.102306927703,70.114000805049,69.370636867123",2024-01-21 12:00:25
 6685991,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,157,3,0.98783,2013,"2.0,2.3,2.0",2007,"5.1,5.7,5.2",2023-12-20 04:46:41
 7133183,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,157,3,0.91225,2013,"3.8,3.9,4.0",2007,"5.7,6.5,6.6",2023-12-20 13:24:48
-1994263,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,124,3,0.97073,2007,"1.9,1.9,2.1",2014,"9.2,9.3,9.6",2023-12-15 04:17:08
-2547566,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,124,3,0.92857,2007,"4.0,4.0,4.5",2014,"7.5,7.8,8.3",2023-12-15 15:01:29
 1994532,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,102,3,0.97073,2007,"1.9,1.9,2.1",2008,"8.5,8.6,8.9",2023-12-15 04:17:31
 2547853,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,102,3,0.92857,2007,"4.0,4.0,4.5",2008,"7.3,7.6,8.1",2023-12-15 15:01:47
+1994263,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,124,3,0.97073,2007,"1.9,1.9,2.1",2014,"9.2,9.3,9.6",2023-12-15 04:17:08
+2547566,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,124,3,0.92857,2007,"4.0,4.0,4.5",2014,"7.5,7.8,8.3",2023-12-15 15:01:29
 1994403,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,74,3,0.97073,2007,"1.9,1.9,2.1",2012,"2.2,2.3,2.6",2023-12-15 04:17:22
 2547702,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,74,3,0.92857,2007,"4.0,4.0,4.5",2012,"5.6,5.9,6.4",2023-12-15 15:01:37
 32151589,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,10,228,3,0.99867,2005,"3.47,2.96,2.68",2006,"6.88,6.58,6.38",2024-01-19 01:24:54
@@ -7031,12 +7031,12 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 31183287,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,10,203,3,0.90479,2004,"0.88,0.85,0.79",2010,"1.6,1.29,1.17",2024-01-17 01:35:07
 35085799,OECD,Trade in Goods & Services - Net Trade,Net Trade,2024,10,203,3,0.96566,2004,"59096.447,66712.106,70422.102",2010,"27059.282,28917.89,29061.304",2024-01-30 19:58:58
 37073555,OECD,Trade in Goods & Services,Net Trade,2024,10,203,3,0.96566,2004,"59096.447,66712.106,70422.102",2010,"27059.282,28917.89,29061.304",2024-02-01 12:50:38
-1994581,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,72,3,0.94491,2007,"1.9,1.9,2.1",2009,"6.7,6.8,7.0",2023-12-15 04:17:35
-2547899,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,72,3,0.94491,2007,"4.0,4.0,4.5",2009,"7.3,7.4,7.6",2023-12-15 15:01:49
-6686070,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,194,3,0.94491,2013,"2.0,2.3,2.0",2010,"4.1,4.3,4.0",2023-12-20 04:46:45
-7133338,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,194,3,0.94491,2013,"3.8,3.9,4.0",2010,"6.5,6.9,7.0",2023-12-20 13:24:59
 650652,The Fund For Peace,Fragile State Index,Total,2023,10,121,3,0.94491,2007,"41.4,41.4,44.7",2013,"86.3,86.9,88.1",2023-12-13 18:01:47
 1994517,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,121,3,0.94491,2007,"1.9,1.9,2.1",2013,"8.5,8.6,8.8",2023-12-15 04:17:31
+6686070,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,194,3,0.94491,2013,"2.0,2.3,2.0",2010,"4.1,4.3,4.0",2023-12-20 04:46:45
+7133338,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,194,3,0.94491,2013,"3.8,3.9,4.0",2010,"6.5,6.9,7.0",2023-12-20 13:24:59
+1994581,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,72,3,0.94491,2007,"1.9,1.9,2.1",2009,"6.7,6.8,7.0",2023-12-15 04:17:35
+2547899,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,72,3,0.94491,2007,"4.0,4.0,4.5",2009,"7.3,7.4,7.6",2023-12-15 15:01:49
 6685861,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,10,82,3,0.94491,2013,"2.0,2.3,2.0",2010,"5.3,5.5,5.2",2023-12-20 04:46:33
 7132978,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,10,82,3,0.94491,2013,"3.8,3.9,4.0",2010,"5.2,5.6,5.7",2023-12-20 13:24:37
 650506,The Fund For Peace,Fragile State Index,Total,2023,10,63,3,0.94491,2007,"41.4,41.4,44.7",2012,"90.4,90.6,91.0",2023-12-13 18:01:38
@@ -7242,12 +7242,12 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 37963084,OECD,Trade in Goods & Services,Imports,2024,10,74,3,0.90568,2006,"45284.695,54178.738,61526.56",2010,"629920.607,666691.393,668026.267",2024-02-02 08:14:37
 650484,The Fund For Peace,Fragile State Index,Total,2023,10,69,3,0.95632,2007,"41.4,41.4,44.7",2011,"98.2,97.9,98.9",2023-12-13 18:01:36
 1994466,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,69,3,0.91766,2007,"1.9,1.9,2.1",2011,"7.9,8.1,8.4",2023-12-15 04:17:27
+1994399,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,235,3,0.94491,2007,"1.9,1.9,2.1",2015,"2.5,2.4,2.7",2023-12-15 04:17:21
+2547701,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,235,3,0.92857,2007,"4.0,4.0,4.5",2015,"5.6,5.9,6.4",2023-12-15 15:01:37
 650252,The Fund For Peace,Fragile State Index,Total,2023,10,23,3,0.92857,2007,"41.4,41.4,44.7",2021,"72.8,72.5,73.30000000000001",2023-12-13 18:01:21
 2907523,The Fund For Peace,Fragile State Index,E1: Economy,2023,10,23,3,0.94491,2007,"4.6,4.5,4.8",2021,"6.7,6.7,6.8",2023-12-16 07:46:28
 650136,The Fund For Peace,Fragile State Index,Total,2023,10,31,3,0.94491,2007,"41.4,41.4,44.7",2014,"61.4,62.7,65.3",2023-12-13 18:01:12
 1994279,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,31,3,0.92857,2007,"1.9,1.9,2.1",2014,"5.6,5.9,6.4",2023-12-15 04:17:09
-1994399,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,235,3,0.94491,2007,"1.9,1.9,2.1",2015,"2.5,2.4,2.7",2023-12-15 04:17:21
-2547701,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,235,3,0.92857,2007,"4.0,4.0,4.5",2015,"5.6,5.9,6.4",2023-12-15 15:01:37
 31183468,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,10,58,3,0.95382,2004,"0.88,0.85,0.79",2012,"1.35,1.23,1.15",2024-01-17 01:35:15
 35085120,OECD,Trade in Goods & Services - Net Trade,Net Trade,2024,10,58,3,0.92744,2004,"59096.447,66712.106,70422.102",2012,"154539.141,157029.385,161942.603",2024-01-30 19:58:21
 37072876,OECD,Trade in Goods & Services,Net Trade,2024,10,58,3,0.92744,2004,"59096.447,66712.106,70422.102",2012,"154539.141,157029.385,161942.603",2024-02-01 12:50:03
@@ -7571,10 +7571,10 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 31183440,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,10,235,3,0.92857,2004,"0.88,0.85,0.79",2015,"2.04,1.98,1.95",2024-01-17 01:35:14
 35085229,OECD,Trade in Goods & Services - Net Trade,Net Trade,2024,10,235,3,0.9049,2004,"59096.447,66712.106,70422.102",2015,"815304.692,837924.351,894614.59",2024-01-30 19:58:27
 37072985,OECD,Trade in Goods & Services,Net Trade,2024,10,235,3,0.9049,2004,"59096.447,66712.106,70422.102",2015,"815304.692,837924.351,894614.59",2024-02-01 12:50:09
-650350,The Fund For Peace,Fragile State Index,Total,2023,10,13,3,0.90784,2007,"41.4,41.4,44.7",2010,"27.3,28.1,29.2",2023-12-13 18:01:28
-2547697,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,13,3,0.91766,2007,"4.0,4.0,4.5",2010,"3.4,3.6,3.9",2023-12-15 15:01:37
 650355,The Fund For Peace,Fragile State Index,Total,2023,10,177,3,0.90784,2007,"41.4,41.4,44.7",2010,"33.1,32.3,34.2",2023-12-13 18:01:28
 1994397,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,10,177,3,0.91766,2007,"1.9,1.9,2.1",2010,"1.4,1.6,1.9",2023-12-15 04:17:21
+650350,The Fund For Peace,Fragile State Index,Total,2023,10,13,3,0.90784,2007,"41.4,41.4,44.7",2010,"27.3,28.1,29.2",2023-12-13 18:01:28
+2547697,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,10,13,3,0.91766,2007,"4.0,4.0,4.5",2010,"3.4,3.6,3.9",2023-12-15 15:01:37
 32151762,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,10,140,3,0.91554,2005,"3.47,2.96,2.68",2004,"1.7,1.61,1.38",2024-01-19 01:25:04
 36729141,OECD,Trade in Goods & Services - Net Trade,Exports,2024,10,140,3,0.91041,2005,"25912.093,25137.407,21992.943",2004,"-45912.108,-47600.193,-48829.102",2024-02-01 04:16:39
 38725122,OECD,Trade in Goods & Services,Exports,2024,10,140,3,0.91041,2005,"25912.093,25137.407,21992.943",2004,"-45912.108,-47600.193,-48829.102",2024-02-02 23:57:37
