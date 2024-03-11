@@ -1,1 +1,1 @@
-unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b_id_fk,pattern_length_fk,correlation,start_year_a_fk,index_values_a,start_year_b_fk,index_values_b,creation_date
+unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b_id_fk,pattern_length_fk,correlation,start_year_a_fk,index_values_a,start_year_b_fk,index_values_b,creation_date,Sector
