@@ -1,4 +1,5 @@
 import ast
+import math
 import os
 import subprocess
 import streamlit as st
@@ -633,7 +634,7 @@ def final_touches_to_df(df):
     df.rename(columns = {"orgs": "Organizations"}, inplace = True)
     df = switch_columns(df)
     df = convert_str_to_list(df, "Sectors")
-    #df = populate_flags_col(df)
+    df = populate_flags_col(df)
     return df
 
 
@@ -719,15 +720,14 @@ def get_country_name_by_id(country_id: str) -> str:
 
 
 def populate_flags_col(df):
-    countries_b_col = list(df[list(df)[0]])
-    
-    flags_col = []
-    for country_name in countries_b_col:
-        alpha2 = get_alpha2_by_name(country_name)
-        if isinstance(alpha2, str) and len(alpha2) == 2:
-            flags_col.append(f"https://flagcdn.com/h240/{alpha2.lower()}.png")
+    flags = []
+    for country_name in list(df[list(df)[0]]):
+        alpha_2 = get_alpha2_by_name(country_name)
+        if isinstance(alpha_2, str): #and str(alpha_2).lower() == "nan":
+            flags.append(":" + alpha_2.lower() + ":")
         else:
-            flags_col.append("NaN")
+            flags.append("NaN")
+            
 
-    df.insert(0, "Flags", flags_col)
+    df[" "] = flags
     return df
