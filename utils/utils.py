@@ -518,7 +518,7 @@ def prepare_display_df_for_viz(display_df: pd.DataFrame, country_a, country_b, f
     df = df[df["start_year_b_fk"] == int(start_year_b)]
     df.drop("unique_id", axis = 1, inplace = True)
 
-    display_df = display_df.sort_values(by = "Average Correlation", ascending = False)
+    display_df = display_df.sort_values(by = "Correlation", ascending = False)
 
     display_df["country_a_id_fk"] = [country_a for _ in range(len(display_df))]
     display_df["country_b_id_fk"] = [country_b for _ in range(len(display_df))]
