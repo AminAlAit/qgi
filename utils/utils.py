@@ -3,9 +3,18 @@ import os
 import subprocess
 import streamlit as st
 import pandas as pd
-
 from constant.index_names_subs import INDEX_NAMES_THAT_NEED_CHANGING, MAIN_NAMES_THAT_NEED_CHANGING
-from constant.tips import GET_TIP_PATTERN_LENGTH_RANGE_SLIDER, GET_TIP_STARTING_YEAR_SLIDER, GET_TIP_YEAR_GAP_RANGE_SLIDER, TIP_ALIGN_TOGGLE, TIP_COUNTRY_A_SELECT, TIP_COUNTRY_B_SELECT, GET_TIP_CORRELATION_RANGE_SLIDER, TIP_SELECT_PATTERN_LENGTH, TIP_TRANSFORMATION_CAPTIONS, TIP_TRANSFORMATION_RADIO
+from constant.tips import (
+    GET_TIP_PATTERN_LENGTH_RANGE_SLIDER,
+    GET_TIP_STARTING_YEAR_SLIDER,
+    GET_TIP_YEAR_GAP_RANGE_SLIDER,
+    TIP_ALIGN_TOGGLE,
+    TIP_COUNTRY_A_SELECT,
+    TIP_COUNTRY_B_SELECT,
+    GET_TIP_CORRELATION_RANGE_SLIDER,
+    TIP_SELECT_PATTERN_LENGTH,
+    TIP_TRANSFORMATION_CAPTIONS,
+    TIP_TRANSFORMATION_RADIO)
 
 
 BAT_PATH                                    = "/mount/src/qgi/.bat"
@@ -385,9 +394,9 @@ def rename_display_df_columns(country_a: str) -> dict:
         "DISPLAY_DF_COUNTRY_B_RENAME":           country_a + " has Patterns with",
         "DISPLAY_DF_START_YEAR_A_RENAME":        "Starting Year for " + country_a,
         "DISPLAY_DF_START_YEAR_B_RENAME":        "Starting Year for Second Country",
-        "DISPLAY_DF_PATTERN_LENGTH_RENAME":      "Pattern Length (in years)",
+        "DISPLAY_DF_PATTERN_LENGTH_RENAME":      "Pattern Length",
         "DISPLAY_DF_NUMBER_OF_INDEXES_RENAME":   "Number of Indexes",
-        "DISPLAY_DF_AVERAGE_CORRELATION_RENAME": "Pattern's Average Correlation",
+        "DISPLAY_DF_AVERAGE_CORRELATION_RENAME": "Correlation",
         "DISPLAY_DF_PATTERN_POWER_SCORE_RENAME": "Pattern Power Score"
     }
 
@@ -609,6 +618,7 @@ def substitute_index_display_names(df_row: pd.Series) -> str:
             return alt_dict["new_name"]
     return df_row["index_name_fk"]
 
+
 def substitute_main_names(df_row: pd.Series) -> str:
     for alt_dict in MAIN_NAMES_THAT_NEED_CHANGING:
         if alt_dict["org_fk"] == df_row["org_fk"] and alt_dict["main_name_fk"] == df_row["main_name_fk"]:
@@ -616,3 +626,108 @@ def substitute_main_names(df_row: pd.Series) -> str:
                 return alt_dict["new_name"]
             return alt_dict["new_name"]
     return df_row["main_name_fk"]
+
+
+def final_touches_to_df(df):
+    df = df.drop(["country_a_id_fk"], axis = 1)
+    df.rename(columns = {"orgs": "Organizations"}, inplace = True)
+    df = switch_columns(df)
+    df = convert_str_to_list(df, "Sectors")
+    #df = populate_flags_col(df)
+    return df
+
+
+def switch_columns(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Switches the 6th and 7th columns of a given DataFrame.
+
+    Parameters:
+    - df: The DataFrame whose columns are to be switched.
+
+    Returns:
+    - A DataFrame with the 6th and 7th columns switched.
+    """
+    # Ensure that the DataFrame has at least 7 columns
+    if df.shape[1] < 7:
+        raise ValueError("DataFrame must have at least 7 columns to switch the 6th and 7th columns.")
+    
+    # Generating a new column order
+    new_order = list(range(df.shape[1]))
+    new_order[5], new_order[6] = new_order[6], new_order[5]  # Switching the positions of the 6th and 7th columns
+    
+    # Reordering the DataFrame columns
+    return df.iloc[:, new_order]
+
+
+def convert_str_to_list(df: pd.DataFrame, column_name: str) -> pd.DataFrame:
+    """
+    Converts a DataFrame column that contains string representations of lists
+    into actual lists for each row.
+
+    Parameters:
+    - df: The DataFrame containing the column to convert.
+    - column_name: The name of the column to convert.
+
+    Returns:
+    - A DataFrame with the specified column converted from string representations of lists to actual lists.
+    """
+    if column_name in df.columns:
+        # Using `ast.literal_eval` to safely evaluate the string as a Python expression
+        df[column_name] = df[column_name].apply(ast.literal_eval)
+    else:
+        raise ValueError(f"Column '{column_name}' not found in DataFrame.")
+    
+    return df
+
+
+def get_alpha2_by_name(country_name: str) -> str:
+    """
+    Retrieves the ISO 3166-1 alpha-2 country code for a given country name, searching all columns.
+
+    Parameters:
+    - country_name (str): The name of the country.
+
+    Returns:
+    - str: The ISO 3166-1 alpha-2 country code if found, otherwise None.
+    """
+    countries_df = pd.read_csv(COUNTRY_DICTIONARY_PATH)
+    # Search across all columns for the country_name
+    match_index = countries_df.apply(lambda row: country_name in row.values, axis=1)
+    match = countries_df[match_index]
+    if not match.empty:
+        return match["alpha_2"].iloc[0]
+    else:
+        return None
+
+
+def get_country_name_by_id(country_id: str) -> str:
+    """
+    Retrieves the ISO 3166-1 alpha-2 country code for a given country name.
+
+    Parameters:
+    - country_name (str): The name of the country.
+
+    Returns:
+    - str: The ISO 3166-1 alpha-2 country code.
+    """
+    countries_df = pd.read_csv(COUNTRY_DICTIONARY_PATH)
+    match = countries_df[countries_df["id"] == country_id]
+    if not match.empty:
+        return match["name_1"].iloc[0]
+    else:
+        return None
+
+
+def populate_flags_col(df):
+    countries_b_col = list(df[list(df)[0]])
+    
+    flags_col = []
+    for country_name in countries_b_col:
+        alpha2 = get_alpha2_by_name(country_name)
+        if isinstance(alpha2, str) and len(alpha2) == 2:
+            flags_col.append(f"https://flagcdn.com/h240/{alpha2.lower()}.png")
+        else:
+            flags_col.append("NaN")
+
+    df.insert(0, "Flags", flags_col)
+    return df

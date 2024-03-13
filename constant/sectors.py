@@ -63,3 +63,8 @@ POLITICAL_STATE_SECTOR = [
     "P2: Public Services",
     "Fragile State Index - Total"
 ]
+
+
+ENERGY_SECTOR = [
+    "Primary Energy Supply"
+]

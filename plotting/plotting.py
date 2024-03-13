@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from constant.sectors import FINANCE_ECONOMY_SECTOR, HUMAN_RIGHTS_DEVELOPMENT, INVESTMENTS_SECTOR, MILITARY_SECTOR, POLITICAL_STATE_SECTOR, SOCIAL_SECTOR, SOVEREIGNTY, TRADE_SECTOR
 from database.db_manager import get_alpha2_by_name, get_country_b_counts_for_country_a
-from utils.utils import combine_values, replace_item_in_list, round_list_items, validate_five_params
+from utils.utils import combine_values, final_touches_to_df, replace_item_in_list, round_list_items, validate_five_params
 from streamlit_echarts import st_echarts, JsCode
 import streamlit as st
 from streamlit_extras.dataframe_explorer import dataframe_explorer
@@ -17,8 +17,6 @@ def substitute_index_display_names(df_row: pd.Series) -> str:
         "new_name":      "Fragile State Index - Total"
     },
     ]
-    
-    #st.write(df_row)
 
     for sub_name in names_that_need_changing:
         if sub_name["org_fk"] == df_row["org_fk"] and sub_name["main_name_fk"] == df_row["main_name_fk"] and sub_name["index_name_fk"] == df_row["index_name_fk"]:
@@ -224,26 +222,78 @@ def apply_method_on_plots(method, values_a, values_b):
     return values_a, values_b
 
 
-def visualize_table(df, display_message, plotting_df, params_validation):
+def visualize_table(df, display_message, params_validation):
     if df is not None and len(df) > 0 and not params_validation:
         st.markdown(display_message)
 
-        st.dataframe(
-            dataframe_explorer(df, case = False), 
-            column_config = {
-                "Starting Year A": st.column_config.NumberColumn(format = "%d")
-            },
-            use_container_width = True)
-    # else:
-    #     st.markdown(display_message)
-    # 
-    #     st.dataframe(
-    #         dataframe_explorer(plotting_df, case = False), 
-    #         column_config = {
-    #             "Starting Year A": st.column_config.NumberColumn(format = "%d")
-    #         },
-    #         use_container_width = True)
+        df = final_touches_to_df(df)
 
+        ## TODO improve sector fileration
+        ###################################################################################################
+        unique_sectors = sorted(set(x for l in df["Sectors"] for x in l))
+        selected_sectors = st.multiselect("Filter based on Sectors:", unique_sectors)
+        if selected_sectors:
+            df = df[df["Sectors"].apply(lambda x: all(sector in x for sector in selected_sectors))]
+
+
+        # # Initialize session state for selected sectors if not already done
+        # if "selected_sectors" not in st.session_state:
+        #     st.session_state.selected_sectors = []
+
+        # # Function to filter DataFrame based on selected sectors
+        # def filter_df_by_sectors(df, sectors):
+        #     if sectors:
+        #         return df[df["Sectors"].apply(lambda x: all(sector in x for sector in sectors))]
+        #     return df
+
+        # # Always start with the original DataFrame to determine selectable options
+        # filtered_df = filter_df_by_sectors(df, st.session_state.selected_sectors)
+
+        # # Determine selectable options based on the filtered DataFrame
+        # selectable_options = sorted(set(x for l in filtered_df["Sectors"] for x in l))
+
+        # # Update multiselect with selectable options (includes previously selected sectors)
+        # selected_sectors = st.multiselect("Filter based on sectors:", options=selectable_options, default=st.session_state.selected_sectors)
+
+        # # Update session state with the latest selection
+        # st.session_state.selected_sectors = selected_sectors
+
+        # # Refilter DataFrame based on the updated selection
+        # df = filter_df_by_sectors(df, selected_sectors)
+        ###################################################################################################
+
+        flags_column                                   = "Flags"
+        country_b_column                               = [col for col in list(df) if "has Patterns with" in col][0]
+        country_b                                      = country_b_column.split(" ")[0]
+        starting_year_column_a, starting_year_column_b = [col for col in list(df) if "Starting Year" in col]
+        sectors_column                                 = "Sectors"
+        pattern_length_column                          = "Pattern Length"
+        number_of_indexes_column                       = "Number of Indexes"
+        organizations_column                           = "Organizations"
+        correlation_column                             = "Correlation"
+        pattern_power_score_column                     = "Pattern Power Score"
+
+        st.dataframe(
+            df, # dataframe_explorer(df, case = False), 
+            column_config = {
+                ## TODO save tips strings in the tips.py script
+                #flags_column:               st.column_config.ImageColumn(flags_column, help = "**Flags** of all the **countries** " + country_b + " currently has patterns with"),
+                country_b_column:           st.column_config.Column(help = "All the **countries** " + country_b + " currently has patterns with"), 
+                starting_year_column_a:     st.column_config.NumberColumn(format = "%d", help = "At which **year** these patterns start at for " + country_b),
+                starting_year_column_b:     st.column_config.NumberColumn(format = "%d", help = "At which **year** these patterns start at for the second country"),
+                pattern_length_column:      st.column_config.NumberColumn(help = "**Measure of Length**: **How long** the patterns are in terms of **years**"),
+                number_of_indexes_column:   st.column_config.NumberColumn(help = "**Measure of Strength**: how many **indexes** each pattern has"),
+                organizations_column:       st.column_config.NumberColumn(help = "How many **organizations** are behind the indexes in these patterns"),
+                correlation_column:         st.column_config.Column(help = "**Measure of Strength**: The Average **correlation** of all indexes"),
+                pattern_power_score_column: st.column_config.NumberColumn(help = "This metric summarizes **'Pattern Length'**, **'Number of Indexes'** and **'Correlation'**"),
+                sectors_column:             st.column_config.ListColumn(
+                    sectors_column,
+                    help  = "**Sectors** these patterns cover",
+                    width = "medium"
+                )
+            },
+            use_container_width = True
+        )
 
 
 def visualize_plots(df, five_params, page_cols, method, align):

@@ -60,6 +60,7 @@ def extract_and_rank_patterns_for_country(country_a_id: str, country_a):
         return pd.DataFrame()
     try:
         grouped = pd.read_csv(COUNTRIES_PATH + country_a_id + "_" + country_a + "_patterns.csv")
+
         return grouped
         # # Converting columns into numericals
         # grouped["pattern_length_fk"] = pd.to_numeric(grouped["pattern_length_fk"], errors = "coerce")
@@ -159,9 +160,20 @@ def manual_merge_dfs(df1, df2, key_columns):
 
 
 @st.cache_data(ttl=600)
-def compare_rankings(old_df, new_df):
-    merged_df = new_df
-    merged_df["avg_corr"] = (merged_df["avg_corr"] * 100).round(2).astype(str) + "%"
+def compare_rankings(old_df, new_df, make_countries_index = True):
+    # Merge the old and new dataframes based on key columns
+    merged_df = pd.merge(
+        old_df,
+        new_df,
+        on=["country_a_id_fk", "country_b_id_fk", "start_year_a_fk", "start_year_b_fk", "pattern_length_fk"],
+        suffixes=("_old", "_new")
+    )
+
+    # Calculate the change in ranking
+    merged_df["Rank_Change"] = merged_df["Power_old"] - merged_df["Power_new"]
+
+    # Format Average Correlation as percentage
+    merged_df["avg_corr_new"] = (merged_df["avg_corr_new"] * 100).round(2).astype(str) + "%"
 
     # Remove commas from Year columns and convert to proper format
     merged_df["start_year_a_fk"] = merged_df["start_year_a_fk"].fillna(0).astype(int).astype(str)
@@ -169,26 +181,40 @@ def compare_rankings(old_df, new_df):
 
     # Convert Pattern Length and Number of Indexes to integer
     merged_df["pattern_length_fk"] = merged_df["pattern_length_fk"].fillna(0).astype(int)
-    merged_df["indexes"] = merged_df["indexes"].fillna(0).astype(int)
-    #merged_df["indexes_new"] = merged_df["indexes_new"].fillna(0).astype(int)
+    merged_df["indexes_new"] = merged_df["indexes_new"].fillna(0).astype(int)
 
-    merged_df.rename(columns={
+    # Drop unnecessary columns and reorder
+    final_df = merged_df.drop(columns=["indexes_old", "Power_old", "avg_corr_old", "Rank_Change", "orgs_old"])
+
+    final_df.rename(columns={
         "Rank_Change_Info": " ",
         "country_a_id_fk": "Country A",
         "country_b_id_fk": "Country B",
         "start_year_a_fk": "Starting Year A",
         "start_year_b_fk": "Starting Year B",
         "pattern_length_fk": "Pattern Length",
-        "Power": "Pattern Power Ranking",
-        "indexes": "Number of Indexes",
-        "avg_corr": "Average Correlation"
+        "Power_new": "Pattern Power Ranking",
+        "indexes_new": "Number of Indexes",
+        "avg_corr_new": "Average Correlation",
+        "orgs_new": "Organizations"
     }, inplace = True)
 
-    final_df = merged_df[["Country A", "Country B", "Starting Year A", "Starting Year B", "Pattern Length", "Number of Indexes", "Average Correlation", "Pattern Power Ranking"]]
+    #final_df = final_df[[" ", "Country A", "Country B", "Starting Year A", "Starting Year B", "Pattern Length", "Number of Indexes", "Average Correlation", "Organizations", "Pattern Power Ranking"]]
+    final_df = final_df[["Country A", "Country B", "Starting Year A", "Starting Year B", "Pattern Length", "Number of Indexes", "Average Correlation", "Organizations", "Pattern Power Ranking"]]
     final_df = final_df[pd.notna(final_df["Pattern Power Ranking"])]
-    final_df = final_df.head(2000) # `.style` can not style more than a certain limit, so 7000 is a safe maximum number to use. 
-    #final_df = final_df[final_df["Sources"] > 1]
-    #final_df = final_df.style.applymap(color_countries, subset=["Country A", "Country B"])
-    final_df.index = [i + 1 for i in range(len(final_df))]
+    final_df = final_df.sort_values(by = "Pattern Power Ranking", ascending = False)
+    
+    # final_df = final_df.head(1000) # `.style` can not style more than a certain limit, so 7000 is a safe maximum number to use. 
+    # final_df = final_df[final_df["Organizations"] > 1]
+    # final_df = final_df.iloc[:, 1:]
 
+    if make_countries_index:
+        final_df.set_index(["Country A", "Country B"], inplace = True)
+    
+    #final_df = final_df.style.applymap(color_countries, subset=["Country A", "Country B"])
     return final_df
+
+
+@st.cache_data(ttl=600)
+def get_base_dot_plot_data(ppr_df):
+    return ppr_df.sort_values("Pattern Power Ranking", ascending=False).groupby(["Pattern Length", "Number of Indexes"])
