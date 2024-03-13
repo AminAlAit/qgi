@@ -634,7 +634,6 @@ def final_touches_to_df(df):
     df.rename(columns = {"orgs": "Organizations"}, inplace = True)
     df = switch_columns(df)
     df = convert_str_to_list(df, "Sectors")
-    df = populate_flags_col(df)
     return df
 
 
@@ -717,17 +716,3 @@ def get_country_name_by_id(country_id: str) -> str:
         return match["name_1"].iloc[0]
     else:
         return None
-
-
-def populate_flags_col(df):
-    flags = []
-    for country_name in list(df[list(df)[0]]):
-        alpha_2 = get_alpha2_by_name(country_name)
-        if isinstance(alpha_2, str): #and str(alpha_2).lower() == "nan":
-            flags.append(":" + alpha_2.lower() + ":")
-        else:
-            flags.append("NaN")
-            
-
-    df[" "] = flags
-    return df

@@ -277,7 +277,6 @@ def visualize_table(df, display_message, params_validation):
             df, # dataframe_explorer(df, case = False), 
             column_config = {
                 ## TODO save tips strings in the tips.py script
-                flags_column:               st.column_config.ImageColumn(flags_column, help = "**Flags** of all the **countries** " + country_b + " currently has patterns with"),
                 country_b_column:           st.column_config.Column(help = "All the **countries** " + country_b + " currently has patterns with"), 
                 starting_year_column_a:     st.column_config.NumberColumn(format = "%d", help = "At which **year** these patterns start at for " + country_b),
                 starting_year_column_b:     st.column_config.NumberColumn(format = "%d", help = "At which **year** these patterns start at for the second country"),
