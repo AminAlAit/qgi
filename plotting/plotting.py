@@ -498,7 +498,7 @@ def display_timeline(five_params, events_df, country_a, start_year_a, country_b,
 
 
 def get_events(df, country_a, year_range_a, country_b, year_range_b):
-    if country_a not in df["Country"] or country_b not in df["Country"]:
+    if country_a not in list(set(df["Country"])) or country_b not in list(set(df["Country"])):
         return None
 
     # Filter data for both countries within their respective year ranges
