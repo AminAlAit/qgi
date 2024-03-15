@@ -8,6 +8,9 @@
 ## TODO checkout similar page-runtime settings
 ## TODO save strings in constant, to avoid magic strings
 
+import sys
+import subprocess
+subprocess.check_call([sys.executable, "-m", "pip", "install", "streamlit-timeline"])
 
 # References: 
 # https://discuss.streamlit.io/t/new-package-st-pages-change-page-names-and-icons-in-sidebar-without-changing-filenames/33969/56

@@ -6,12 +6,13 @@ import pandas as pd
 import streamlit as st
 from constant.constant import NEW_PPR_PATH, OLD_PPR_PATH
 from utils.patterns import compare_rankings, extract_and_rank_patterns_for_country
-from plotting.plotting import couple_countries_dashboard, visualize_plots, visualize_table
+from plotting.plotting import couple_countries_dashboard, display_timeline, visualize_plots, visualize_table
 from utils.utils import (
     get_country_id,
     apply_advanced_filters,
     get_country_a_from_user,
     get_country_b_and_id_from_user,
+    get_events_df,
     get_pattern_length_from_user,
     get_pattern_power_score,
     get_start_year_a,
@@ -56,6 +57,7 @@ new_ppr_df = pd.read_csv(NEW_PPR_PATH)
 
 ## Page body logic
 def show_search_page():
+    events_df = get_events_df()
     with st.expander("Hey, welcome to **QG Intelligence**!"):
         st.markdown("""
             # Welcome to QG Intelligence
@@ -143,6 +145,8 @@ def show_search_page():
     align, method                                    = plotting_transformations(five_params)
 
     couple_countries_dashboard(five_params, couple_of_countries, display_df, pattern_power_score, countries_df, plotting_df)
+    display_timeline(five_params, events_df, country_a, start_year_a, country_b, start_year_b, patt_len)
+
     col1, col2, col3 = st.columns(3)
     visualize_table(display_df, display_message, validate_five_params(five_params))
     visualize_plots(plotting_df, five_params, [col1, col2, col3], method, align)

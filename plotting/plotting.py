@@ -7,6 +7,10 @@ from utils.utils import combine_values, final_touches_to_df, replace_item_in_lis
 from streamlit_echarts import st_echarts, JsCode
 import streamlit as st
 from streamlit_extras.dataframe_explorer import dataframe_explorer
+# import sys
+# import subprocess
+# subprocess.check_call([sys.executable, "-m", "pip", "install", "streamlit-timeline"])
+import streamlit_timeline as st_t
 
 
 def substitute_index_display_names(df_row: pd.Series) -> str:
@@ -443,3 +447,103 @@ def couple_countries_dashboard(five_params, countries, display_df, pattern_power
             st.dataframe(df, use_container_width = True, height = 430)
         
         #st.markdown("___")
+
+
+def display_timeline(five_params, events_df, country_a, start_year_a, country_b, start_year_b, patt_len):
+    if validate_five_params(five_params):
+        # Alt: https://github.com/giswqs/streamlit-timeline
+        # https://github.com/innerdoc/nlp-history-timeline
+        # https://github.com/innerdoc/streamlit-timeline
+        # https://pypi.org/project/streamlit-timeline/
+        # https://timeline.knightlab.com/docs/json-format.html#json-slide
+        st.markdown("___")
+        # with open(r"C:\Users\Amin\Desktop\trojan\trojan 2.0\data\events\JSON\sample.json", "r") as f:
+        #     data = f.read()
+        
+        events = get_events(
+            events_df, 
+            country_a, 
+            (start_year_a, start_year_a + patt_len),
+            country_b,
+            (start_year_b, start_year_b + patt_len)
+        )
+        
+        st_t.timeline(events, height = 750)
+        st.markdown("___")
+
+
+def display_timeline(five_params, events_df, country_a, start_year_a, country_b, start_year_b, patt_len):
+    if validate_five_params(five_params):
+        # Alt: https://github.com/giswqs/streamlit-timeline
+        # https://github.com/innerdoc/nlp-history-timeline
+        # https://github.com/innerdoc/streamlit-timeline
+        # https://pypi.org/project/streamlit-timeline/
+        # https://timeline.knightlab.com/docs/json-format.html#json-slide
+        st.markdown("___")
+        # with open(r"C:\Users\Amin\Desktop\trojan\trojan 2.0\data\events\JSON\sample.json", "r") as f:
+        #     data = f.read()
+        
+        events = get_events(
+            events_df, 
+            country_a, 
+            (start_year_a, start_year_a + patt_len),
+            country_b,
+            (start_year_b, start_year_b + patt_len)
+        )
+
+        st_t.timeline(events, height = 750)
+        st.markdown("___")
+
+
+def get_events(df, country_a, year_range_a, country_b, year_range_b):
+    # Filter data for both countries within their respective year ranges
+    df_filtered = df[((df["Country"] == country_a) & (df["Year"].between(*year_range_a))) |
+                     ((df["Country"] == country_b) & (df["Year"].between(*year_range_b)))]
+    
+    # Sort by year for proper chronological order in the timeline
+    df_filtered.sort_values(by='Year', inplace=True)
+    
+    # Combining Events together
+    df_filtered["Event"] = "<b>" + df_filtered["Raw Event"].fillna("Missing Event").astype(str) + "</b>" + ": " + df_filtered["Desc"].fillna("No Description Available").astype(str) + "<br>"
+    # df_filtered["Event"] = "<b>" + df_filtered["Raw Event"] + "</b>" + ": " + df_filtered["Desc"] + "<br>"
+
+    formatted_df = df_filtered.groupby(["Year", "Country"])["Event"]
+    formatted_df = formatted_df.apply("".join).reset_index()
+    formatted_df = formatted_df.sort_values(by=["Year", "Country"])
+    
+    # Initialize the JSON structure
+    timeline = {
+        "title": {
+            "media": {
+              "url": "",  # URL to a relevant image or left empty
+              "caption": "",
+              "credit": ""
+            },
+            "text": {
+              "headline": f"Timeline of Events:<br>{country_a} & {country_b}",
+              "text": "" #f"<p>An exploration of key events in {country_a} and {country_b} over selected years.</p>"
+            }
+        },
+        "events": []
+    }
+    
+
+    # Populate the events
+    for _, row in formatted_df.iterrows():
+        event = {
+            "start_date": {
+                "year": str(row["Year"])
+            },
+            "text": {
+                "headline": "<b>" + row["Country"] + "</b>",
+                "text": row["Event"]
+            },
+            "media": {
+                "url": "",  # Optional: URL to an image or video related to the event
+                "caption": "",
+                "credit": ""
+            }
+        }
+        timeline["events"].append(event)
+    
+    return timeline

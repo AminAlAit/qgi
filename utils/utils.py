@@ -4,6 +4,7 @@ import os
 import subprocess
 import streamlit as st
 import pandas as pd
+from constant.constant import ALL_COUNTRIES_EVENTS_CSV_PATH
 from constant.index_names_subs import INDEX_NAMES_THAT_NEED_CHANGING, MAIN_NAMES_THAT_NEED_CHANGING
 from constant.tips import (
     GET_TIP_PATTERN_LENGTH_RANGE_SLIDER,
@@ -716,3 +717,12 @@ def get_country_name_by_id(country_id: str) -> str:
         return match["name_1"].iloc[0]
     else:
         return None
+
+
+@st.cache_data(ttl=600)
+def get_events_df():
+    df = pd.read_csv(ALL_COUNTRIES_EVENTS_CSV_PATH)
+    for col in list(df):
+        if "Unnamed" in col:
+            df = df.drop([col], axis = 1)
+    return df 
