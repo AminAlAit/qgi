@@ -479,7 +479,7 @@ def display_timeline(five_params, events_df, country_a, start_year_a, country_b,
         # https://github.com/innerdoc/streamlit-timeline
         # https://pypi.org/project/streamlit-timeline/
         # https://timeline.knightlab.com/docs/json-format.html#json-slide
-        st.markdown("___")
+        
         # with open(r"C:\Users\Amin\Desktop\trojan\trojan 2.0\data\events\JSON\sample.json", "r") as f:
         #     data = f.read()
         
@@ -491,11 +491,16 @@ def display_timeline(five_params, events_df, country_a, start_year_a, country_b,
             (start_year_b, start_year_b + patt_len)
         )
 
-        st_t.timeline(events, height = 750)
-        st.markdown("___")
+        if events is not None:
+            st.markdown("___")
+            st_t.timeline(events, height = 750)
+            st.markdown("___")
 
 
 def get_events(df, country_a, year_range_a, country_b, year_range_b):
+    if country_a not in df["Country"] or country_b not in df["Country"]:
+        return None
+
     # Filter data for both countries within their respective year ranges
     df_filtered = df[((df["Country"] == country_a) & (df["Year"].between(*year_range_a))) |
                      ((df["Country"] == country_b) & (df["Year"].between(*year_range_b)))]
@@ -547,3 +552,4 @@ def get_events(df, country_a, year_range_a, country_b, year_range_b):
         timeline["events"].append(event)
     
     return timeline
+
