@@ -332,21 +332,9 @@ def visualize_plots(df, five_params, page_cols, method, align):
 
 
 def categorize_indexes(df):
-    sector_mapping = {
-        "Investments": INVESTMENTS_SECTOR,
-        "Trade": TRADE_SECTOR,
-        "Finance & \nEconomy": FINANCE_ECONOMY_SECTOR,
-        "Military": MILITARY_SECTOR,
-        "Human Rights & \nDevelopment": HUMAN_RIGHTS_DEVELOPMENT,
-        "Sovereignty": SOVEREIGNTY,
-        "Social": SOCIAL_SECTOR,
-        "Political \n& State": POLITICAL_STATE_SECTOR,
-        "Other": []
-    }
-
     # Reverse mapping for easier lookup
     index_to_sector = {}
-    for sector, indexes in sector_mapping.items():
+    for sector, indexes in SECTOR_MAPPING.items():
         for index in indexes:
             index_to_sector[index] = sector
 
