@@ -1,17 +1,7 @@
 import streamlit as st
 import pandas as pd
 from constant.constant import NEW_PPR_PATH, OLD_PPR_PATH
-from constant.sectors import (
-    INVESTMENTS_SECTOR,
-    TRADE_SECTOR,
-    FINANCE_ECONOMY_SECTOR,
-    MILITARY_SECTOR,
-    HUMAN_RIGHTS_DEVELOPMENT,
-    SOVEREIGNTY,
-    SOCIAL_SECTOR,
-    POLITICAL_STATE_SECTOR,
-    ENERGY_SECTOR
-)
+from constant.sectors import ALL_SECTORS, SECTOR_MAPPING
 from constant.tips import (
     BASE_PPR_LEADERBOARD,
 )
@@ -102,24 +92,20 @@ def show_base_page():
     col1, col2 = st.columns([1, 3])
     with col1:
         with st.container(border = True, height = 640):
-            indexes  = INVESTMENTS_SECTOR + FINANCE_ECONOMY_SECTOR + SOCIAL_SECTOR + TRADE_SECTOR + MILITARY_SECTOR + HUMAN_RIGHTS_DEVELOPMENT + POLITICAL_STATE_SECTOR + SOVEREIGNTY + ENERGY_SECTOR
+            indexes  = [item for sublist in ALL_SECTORS for item in sublist]
             df       = pd.DataFrame({"Indexes": indexes})
             df.index = [i + 1 for i in range(len(df))]
             #st.dataframe(df, height = 640)
             st.table(df)
     with col2:
         with st.container(border = True, height = 640):
-            data = [
-                {"value": len(INVESTMENTS_SECTOR),       "name": f"Investments ({len(INVESTMENTS_SECTOR)} indexes)"},
-                {"value": len(FINANCE_ECONOMY_SECTOR),   "name": f"Finance & Economy ({len(FINANCE_ECONOMY_SECTOR)} indexes)"},
-                {"value": len(SOCIAL_SECTOR),            "name": f"Social ({len(SOCIAL_SECTOR)} indexes)"},
-                {"value": len(TRADE_SECTOR),             "name": f"Trade ({len(TRADE_SECTOR)} indexes)"},
-                {"value": len(MILITARY_SECTOR),          "name": f"Military ({len(MILITARY_SECTOR)} indexes)"},
-                {"value": len(HUMAN_RIGHTS_DEVELOPMENT), "name": f"Human Rights & Development ({len(HUMAN_RIGHTS_DEVELOPMENT)} indexes)"},
-                {"value": len(POLITICAL_STATE_SECTOR),   "name": f"Political State ({len(POLITICAL_STATE_SECTOR)} indexes)"},
-                {"value": len(SOVEREIGNTY),              "name": f"Sovereignty ({len(SOVEREIGNTY)} indexes)"},
-                {"value": len(ENERGY_SECTOR),            "name": f"Energy ({len(ENERGY_SECTOR)} indexes)"},
-            ]
+            data = []
+            for key, value in SECTOR_MAPPING.items():
+                sector_length = len(value)
+                data.append({
+                    "value": sector_length,
+                    "name":  f"{key} ({sector_length} indexes)"
+                })
             
             option = {
                 "legend": {
