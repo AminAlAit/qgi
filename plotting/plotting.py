@@ -1,7 +1,7 @@
 import math
 import numpy as np
 import pandas as pd
-from constant.sectors import FINANCE_ECONOMY_SECTOR, HUMAN_RIGHTS_DEVELOPMENT, INVESTMENTS_SECTOR, MILITARY_SECTOR, POLITICAL_STATE_SECTOR, SOCIAL_SECTOR, SOVEREIGNTY, TRADE_SECTOR
+from constant.sectors import SECTOR_MAPPING
 from database.db_manager import get_alpha2_by_name, get_country_b_counts_for_country_a
 from utils.utils import combine_values, final_touches_to_df, replace_item_in_list, round_list_items, validate_five_params
 from streamlit_echarts import st_echarts, JsCode
