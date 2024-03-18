@@ -1,6 +1,7 @@
 country_b_id_fk,start_year_a_fk,start_year_b_fk,pattern_length_fk,indexes,avg_corr,orgs,Power,Sectors,country_a_id_fk
-202,2006,2007,14,8,0.9387575,1,4.3632545,"['Sovereignty', 'Social Sector', 'Political State Sector', 'Finance Economy Sector', 'Human Rights Development']",181
-202,2006,2008,14,8,0.9367525,1,4.3620515,"['Sovereignty', 'Social Sector', 'Human Rights Development', 'Finance Economy Sector']",181
+34,1990,1990,32,2,0.96254,1,4.377524,['Unknown'],181
+202,2006,2007,14,8,0.9387575,1,4.3632545,"['Political State Sector', 'Human Rights Development', 'Social Sector', 'Sovereignty', 'Finance Economy Sector']",181
+202,2006,2008,14,8,0.9367525,1,4.3620515,"['Finance Economy Sector', 'Human Rights Development', 'Social Sector', 'Sovereignty']",181
 176,1995,1995,28,3,0.9867342857142857,1,4.292040571428571,"['Unknown', 'Trade Sector']",181
 34,1995,1995,28,3,0.9865461538461537,1,4.291927692307692,"['Unknown', 'Trade Sector']",181
 126,1995,1995,28,3,0.9861223076923077,1,4.291673384615384,"['Unknown', 'Trade Sector']",181
@@ -66,6 +67,7 @@ country_b_id_fk,start_year_a_fk,start_year_b_fk,pattern_length_fk,indexes,avg_co
 21,1995,1995,28,3,0.9632093333333333,1,4.2779256,"['Unknown', 'Trade Sector']",181
 14,1995,1995,28,3,0.9630269230769232,1,4.277816153846154,"['Unknown', 'Trade Sector']",181
 13,1995,1995,28,3,0.9626773333333334,1,4.2776064,"['Unknown', 'Trade Sector']",181
+34,1990,1990,31,2,0.9626514285714285,1,4.277590857142857,['Unknown'],181
 13,1995,1994,28,3,0.9622786666666667,1,4.2773672000000005,"['Unknown', 'Trade Sector']",181
 98,1995,1995,28,3,0.9615357142857144,1,4.276921428571429,"['Unknown', 'Trade Sector']",181
 236,1995,1994,28,3,0.9611339999999999,1,4.2766804,"['Unknown', 'Trade Sector']",181
@@ -101,14 +103,14 @@ country_b_id_fk,start_year_a_fk,start_year_b_fk,pattern_length_fk,indexes,avg_co
 104,1995,1994,28,3,0.9460473333333332,1,4.2676284,"['Unknown', 'Trade Sector']",181
 21,1995,1990,28,3,0.9455133333333333,1,4.267308,"['Unknown', 'Trade Sector']",181
 104,1995,1995,28,3,0.9442653333333334,1,4.2665592000000006,"['Unknown', 'Trade Sector']",181
-202,2006,2008,13,8,0.9436424999999999,1,4.2661855,"['Sovereignty', 'Social Sector', 'Political State Sector', 'Finance Economy Sector', 'Human Rights Development']",181
+202,2006,2008,13,8,0.9436424999999999,1,4.2661855,"['Political State Sector', 'Human Rights Development', 'Social Sector', 'Sovereignty', 'Finance Economy Sector']",181
 153,1995,1994,28,3,0.9413806666666668,1,4.2648284,"['Unknown', 'Trade Sector']",181
 53,1995,1995,28,3,0.9402869230769231,1,4.264172153846154,"['Unknown', 'Trade Sector']",181
 52,1995,1993,28,3,0.9397757142857143,1,4.263865428571429,"['Unknown', 'Trade Sector']",181
 52,1995,1991,28,3,0.9397628571428571,1,4.263857714285715,"['Unknown', 'Trade Sector']",181
 235,1995,1990,28,3,0.936092,1,4.2616552,"['Unknown', 'Trade Sector']",181
-202,2006,2007,13,8,0.93513,1,4.261078,"['Sovereignty', 'Social Sector', 'Political State Sector', 'Finance Economy Sector', 'Human Rights Development']",181
-202,2006,2006,13,8,0.9350625,1,4.2610375000000005,"['Sovereignty', 'Social Sector', 'Political State Sector', 'Finance Economy Sector', 'Human Rights Development']",181
+202,2006,2007,13,8,0.93513,1,4.261078,"['Political State Sector', 'Human Rights Development', 'Social Sector', 'Sovereignty', 'Finance Economy Sector']",181
+202,2006,2006,13,8,0.9350625,1,4.2610375000000005,"['Political State Sector', 'Human Rights Development', 'Social Sector', 'Sovereignty', 'Finance Economy Sector']",181
 235,1995,1991,28,3,0.9323173333333333,1,4.2593904,"['Unknown', 'Trade Sector']",181
 153,1995,1995,28,3,0.9309353333333333,1,4.2585612,"['Unknown', 'Trade Sector']",181
 235,1995,1992,28,3,0.9303946666666666,1,4.258236800000001,"['Unknown', 'Trade Sector']",181
@@ -192,6 +194,7 @@ country_b_id_fk,start_year_a_fk,start_year_b_fk,pattern_length_fk,indexes,avg_co
 21,1995,1994,27,3,0.962296,1,4.1773776,"['Unknown', 'Trade Sector']",181
 106,1995,1996,27,3,0.9622259999999999,1,4.1773356,"['Unknown', 'Trade Sector']",181
 13,1995,1996,27,3,0.961816,1,4.1770896,"['Unknown', 'Trade Sector']",181
+34,1990,1990,30,2,0.9609228571428571,1,4.176553714285714,['Unknown'],181
 153,1995,1992,27,3,0.9607046666666667,1,4.1764228,"['Unknown', 'Trade Sector']",181
 156,1995,1994,27,3,0.9603286666666667,1,4.1761972,"['Unknown', 'Trade Sector']",181
 58,1995,1992,27,3,0.960292,1,4.1761752,"['Unknown', 'Trade Sector']",181
@@ -239,7 +242,7 @@ country_b_id_fk,start_year_a_fk,start_year_b_fk,pattern_length_fk,indexes,avg_co
 104,1995,1996,27,3,0.9428746666666666,1,4.1657248,"['Unknown', 'Trade Sector']",181
 110,1995,1996,27,3,0.9428586666666666,1,4.1657152,"['Unknown', 'Trade Sector']",181
 21,1995,1990,27,3,0.942802,1,4.1656812,"['Unknown', 'Trade Sector']",181
-142,2006,2006,15,7,0.9427857142857142,1,4.165671428571429,"['Political State Sector', 'Social Sector', 'Human Rights Development', 'Finance Economy Sector']",181
+142,2006,2006,15,7,0.9427857142857142,1,4.165671428571429,"['Political State Sector', 'Finance Economy Sector', 'Human Rights Development', 'Social Sector']",181
 52,1995,1994,27,3,0.9426942857142857,1,4.165616571428571,"['Unknown', 'Trade Sector']",181
 104,1995,1995,27,3,0.9425720000000001,1,4.1655432,"['Unknown', 'Trade Sector']",181
 52,1995,1992,27,3,0.9405214285714286,1,4.164312857142857,"['Unknown', 'Trade Sector']",181
@@ -340,6 +343,7 @@ country_b_id_fk,start_year_a_fk,start_year_b_fk,pattern_length_fk,indexes,avg_co
 81,1995,1990,26,3,0.9608206666666667,1,4.0764924,"['Unknown', 'Trade Sector']",181
 153,1995,1992,26,3,0.9606560000000001,1,4.0763936,"['Unknown', 'Trade Sector']",181
 21,1995,1994,26,3,0.9605526666666667,1,4.0763316,"['Unknown', 'Trade Sector']",181
+34,1990,1990,29,2,0.9599033333333333,1,4.075942,['Unknown'],181
 228,1995,1990,26,3,0.9598473333333334,1,4.0759084,"['Unknown', 'Trade Sector']",181
 106,1995,1996,26,3,0.9594193333333333,1,4.0756516,"['Unknown', 'Trade Sector']",181
 110,1995,1993,26,3,0.959394,1,4.0756364,"['Unknown', 'Trade Sector']",181
@@ -392,7 +396,7 @@ country_b_id_fk,start_year_a_fk,start_year_b_fk,pattern_length_fk,indexes,avg_co
 21,1995,1991,26,3,0.9455593333333334,1,4.0673356,"['Unknown', 'Trade Sector']",181
 98,1995,1993,26,3,0.9453114285714286,1,4.0671868571428575,"['Unknown', 'Trade Sector']",181
 215,1995,1995,26,3,0.9448186666666667,1,4.0668912,"['Unknown', 'Trade Sector']",181
-202,2006,2006,14,7,0.9442028571428571,1,4.066521714285714,"['Sovereignty', 'Social Sector', 'Political State Sector', 'Finance Economy Sector', 'Human Rights Development']",181
+202,2006,2006,14,7,0.9442028571428571,1,4.066521714285714,"['Political State Sector', 'Human Rights Development', 'Social Sector', 'Sovereignty', 'Finance Economy Sector']",181
 98,1995,1996,26,3,0.9439599999999999,1,4.066376,"['Unknown', 'Trade Sector']",181
 52,1995,1993,26,3,0.9436285714285715,1,4.066177142857143,"['Unknown', 'Trade Sector']",181
 104,1995,1997,26,3,0.943536,1,4.0661216,"['Unknown', 'Trade Sector']",181
@@ -407,10 +411,10 @@ country_b_id_fk,start_year_a_fk,start_year_b_fk,pattern_length_fk,indexes,avg_co
 52,1995,1992,26,3,0.9346985714285714,1,4.0608191428571425,"['Unknown', 'Trade Sector']",181
 235,1995,1991,26,3,0.929022,1,4.0574132,"['Unknown', 'Trade Sector']",181
 52,1995,1991,26,3,0.92763,1,4.056578,"['Unknown', 'Trade Sector']",181
-202,2006,2007,17,6,0.9275666666666668,1,4.05654,"['Social Sector', 'Human Rights Development', 'Finance Economy Sector']",181
+202,2006,2007,17,6,0.9275666666666668,1,4.05654,"['Finance Economy Sector', 'Human Rights Development', 'Social Sector']",181
 235,1995,1992,26,3,0.9271866666666667,1,4.056312,"['Unknown', 'Trade Sector']",181
 48,1995,1994,26,3,0.9263153333333333,1,4.0557891999999995,"['Unknown', 'Trade Sector']",181
-34,2006,2007,14,7,0.92631,1,4.055786,"['Sovereignty', 'Social Sector', 'Human Rights Development', 'Finance Economy Sector']",181
+34,2006,2007,14,7,0.92631,1,4.055786,"['Finance Economy Sector', 'Human Rights Development', 'Social Sector', 'Sovereignty']",181
 235,1995,1993,26,3,0.9251326666666666,1,4.0550796,"['Unknown', 'Trade Sector']",181
 153,1995,1995,26,3,0.9235260000000001,1,4.0541156,"['Unknown', 'Trade Sector']",181
 235,1995,1994,26,3,0.9199973333333332,1,4.0519984,"['Unknown', 'Trade Sector']",181
@@ -556,6 +560,7 @@ country_b_id_fk,start_year_a_fk,start_year_b_fk,pattern_length_fk,indexes,avg_co
 81,1995,1991,25,3,0.9596513333333334,1,3.9757908,"['Unknown', 'Trade Sector']",181
 52,1995,1997,25,3,0.9594242857142857,1,3.9756545714285716,"['Unknown', 'Trade Sector']",181
 110,1995,1991,25,3,0.9594153333333334,1,3.9756492,"['Unknown', 'Trade Sector']",181
+34,1990,1990,25,3,0.9591863636363637,2,3.9755118181818183,"['Finance Economy Sector', 'Unknown']",181
 48,1995,1990,28,2,0.959005,1,3.9754030000000005,['Trade Sector'],181
 216,1995,1993,25,3,0.9589326666666668,1,3.9753596,"['Unknown', 'Trade Sector']",181
 81,1995,1990,25,3,0.9585686666666666,1,3.9751412,"['Unknown', 'Trade Sector']",181
@@ -589,7 +594,7 @@ country_b_id_fk,start_year_a_fk,start_year_b_fk,pattern_length_fk,indexes,avg_co
 21,1995,1995,25,3,0.955092,1,3.9730552,"['Unknown', 'Trade Sector']",181
 228,1995,1990,25,3,0.9549246666666668,1,3.9729548,"['Unknown', 'Trade Sector']",181
 21,1995,1993,25,3,0.9548506666666666,1,3.9729104,"['Unknown', 'Trade Sector']",181
-53,2006,2006,16,6,0.9544683333333334,1,3.9726809999999997,"['Sovereignty', 'Social Sector', 'Political State Sector', 'Finance Economy Sector', 'Human Rights Development']",181
+53,2006,2006,16,6,0.9544683333333334,1,3.9726809999999997,"['Political State Sector', 'Human Rights Development', 'Social Sector', 'Sovereignty', 'Finance Economy Sector']",181
 74,1995,1993,28,2,0.9541623076923076,1,3.972497384615385,"['Unknown', 'Trade Sector']",181
 110,1995,1994,25,3,0.9539706666666666,1,3.9723824,"['Unknown', 'Trade Sector']",181
 21,1995,1996,25,3,0.953446,1,3.9720676,"['Unknown', 'Trade Sector']",181
@@ -626,11 +631,3 @@ country_b_id_fk,start_year_a_fk,start_year_b_fk,pattern_length_fk,indexes,avg_co
 74,1995,1994,28,2,0.9464292307692308,1,3.967857538461539,"['Unknown', 'Trade Sector']",181
 215,1995,1994,25,3,0.9456046666666666,1,3.9673628,"['Unknown', 'Trade Sector']",181
 104,1995,1998,25,3,0.9453153333333333,1,3.9671892,"['Unknown', 'Trade Sector']",181
-58,1995,1991,25,3,0.945094,1,3.9670563999999997,"['Unknown', 'Trade Sector']",181
-56,1995,1995,28,2,0.94493,1,3.9669580000000004,['Trade Sector'],181
-203,1995,1998,25,3,0.9448053846153847,1,3.9668832307692306,"['Unknown', 'Trade Sector']",181
-98,1995,1994,25,3,0.94445,1,3.9666699999999997,"['Unknown', 'Trade Sector']",181
-210,1995,1995,28,2,0.9442938461538462,1,3.966576307692308,"['Unknown', 'Trade Sector']",181
-14,1995,1996,25,3,0.9442584615384616,1,3.966555076923077,"['Unknown', 'Trade Sector']",181
-203,1995,1990,28,2,0.944245,1,3.9665470000000003,['Trade Sector'],181
-104,1995,1997,25,3,0.944216,1,3.9665296,"['Unknown', 'Trade Sector']",181

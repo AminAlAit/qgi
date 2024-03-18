@@ -1,46 +1,46 @@
 country_b_id_fk,start_year_a_fk,start_year_b_fk,pattern_length_fk,indexes,avg_corr,orgs,Power,Sectors,country_a_id_fk
 23,2008,2001,11,3,0.9714833333333334,1,2.58289,['Military Sector'],116
-221,2008,2007,11,2,0.9461900000000001,2,2.2677140000000002,"['Military Sector', 'Finance Economy Sector']",116
-226,2008,2002,11,2,0.9375899999999999,2,2.262554,"['Military Sector', 'Finance Economy Sector']",116
-100,2008,2007,11,2,0.925915,2,2.2555490000000002,"['Military Sector', 'Finance Economy Sector']",116
-96,2008,2012,11,2,0.9189,2,2.2513400000000003,"['Military Sector', 'Finance Economy Sector']",116
-211,2008,2005,11,2,0.915815,2,2.249489,"['Military Sector', 'Finance Economy Sector']",116
-100,2008,2008,11,2,0.9038299999999999,2,2.242298,"['Military Sector', 'Finance Economy Sector']",116
+221,2008,2007,11,2,0.9461900000000001,2,2.2677140000000002,"['Finance Economy Sector', 'Military Sector']",116
+226,2008,2002,11,2,0.9375899999999999,2,2.262554,"['Finance Economy Sector', 'Military Sector']",116
+100,2008,2007,11,2,0.925915,2,2.2555490000000002,"['Finance Economy Sector', 'Military Sector']",116
+96,2008,2012,11,2,0.9189,2,2.2513400000000003,"['Finance Economy Sector', 'Military Sector']",116
+211,2008,2005,11,2,0.915815,2,2.249489,"['Finance Economy Sector', 'Military Sector']",116
+100,2008,2008,11,2,0.9038299999999999,2,2.242298,"['Finance Economy Sector', 'Military Sector']",116
 23,2008,2001,10,2,0.97639,1,2.185834,['Military Sector'],116
-23,2008,2001,7,3,0.9763466666666667,2,2.185808,"['Military Sector', 'Finance Economy Sector']",116
-38,2008,2008,7,3,0.9741866666666666,2,2.184512,"['Military Sector', 'Finance Economy Sector']",116
-200,2009,2009,10,2,0.9586650000000001,2,2.175199,"['Military Sector', 'Finance Economy Sector']",116
-208,2009,2009,10,2,0.94824,2,2.168944,"['Military Sector', 'Finance Economy Sector']",116
-96,2008,2012,7,3,0.9440399999999999,2,2.166424,"['Military Sector', 'Finance Economy Sector']",116
-106,2009,2009,10,2,0.9431149999999999,2,2.165869,"['Military Sector', 'Finance Economy Sector']",116
-226,2009,2003,10,2,0.938565,2,2.163139,"['Military Sector', 'Finance Economy Sector']",116
-206,2009,2002,10,2,0.937665,2,2.162599,"['Military Sector', 'Finance Economy Sector']",116
-221,2009,2009,10,2,0.937635,2,2.1625810000000003,"['Military Sector', 'Finance Economy Sector']",116
-203,2008,2000,7,3,0.9372166666666667,2,2.16233,"['Military Sector', 'Finance Economy Sector']",116
-156,2009,2002,10,2,0.9363349999999999,2,2.161801,"['Military Sector', 'Finance Economy Sector']",116
-120,2008,2001,7,3,0.9356266666666667,2,2.161376,"['Military Sector', 'Finance Economy Sector']",116
-61,2009,2003,10,2,0.929855,2,2.157913,"['Military Sector', 'Finance Economy Sector']",116
-238,2009,2009,10,2,0.9291400000000001,2,2.157484,"['Military Sector', 'Finance Economy Sector']",116
-120,2008,2000,7,3,0.92846,2,2.157076,"['Military Sector', 'Finance Economy Sector']",116
-133,2008,2014,7,3,0.9235000000000001,2,2.1541,"['Military Sector', 'Finance Economy Sector']",116
-152,2009,2009,10,2,0.922995,2,2.153797,"['Military Sector', 'Finance Economy Sector']",116
-100,2009,2008,10,2,0.91922,2,2.151532,"['Military Sector', 'Finance Economy Sector']",116
-64,2009,2009,10,2,0.91582,2,2.149492,"['Military Sector', 'Finance Economy Sector']",116
-61,2009,2006,10,2,0.915505,2,2.149303,"['Military Sector', 'Finance Economy Sector']",116
+23,2008,2001,7,3,0.9763466666666667,2,2.185808,"['Finance Economy Sector', 'Military Sector']",116
+38,2008,2008,7,3,0.9741866666666666,2,2.184512,"['Finance Economy Sector', 'Military Sector']",116
+200,2009,2009,10,2,0.9586650000000001,2,2.175199,"['Finance Economy Sector', 'Military Sector']",116
+208,2009,2009,10,2,0.94824,2,2.168944,"['Finance Economy Sector', 'Military Sector']",116
+96,2008,2012,7,3,0.9440399999999999,2,2.166424,"['Finance Economy Sector', 'Military Sector']",116
+106,2009,2009,10,2,0.9431149999999999,2,2.165869,"['Finance Economy Sector', 'Military Sector']",116
+226,2009,2003,10,2,0.938565,2,2.163139,"['Finance Economy Sector', 'Military Sector']",116
+206,2009,2002,10,2,0.937665,2,2.162599,"['Finance Economy Sector', 'Military Sector']",116
+221,2009,2009,10,2,0.937635,2,2.1625810000000003,"['Finance Economy Sector', 'Military Sector']",116
+203,2008,2000,7,3,0.9372166666666667,2,2.16233,"['Finance Economy Sector', 'Military Sector']",116
+156,2009,2002,10,2,0.9363349999999999,2,2.161801,"['Finance Economy Sector', 'Military Sector']",116
+120,2008,2001,7,3,0.9356266666666667,2,2.161376,"['Finance Economy Sector', 'Military Sector']",116
+61,2009,2003,10,2,0.929855,2,2.157913,"['Finance Economy Sector', 'Military Sector']",116
+238,2009,2009,10,2,0.9291400000000001,2,2.157484,"['Finance Economy Sector', 'Military Sector']",116
+120,2008,2000,7,3,0.92846,2,2.157076,"['Finance Economy Sector', 'Military Sector']",116
+133,2008,2014,7,3,0.9235000000000001,2,2.1541,"['Finance Economy Sector', 'Military Sector']",116
+152,2009,2009,10,2,0.922995,2,2.153797,"['Finance Economy Sector', 'Military Sector']",116
+100,2009,2008,10,2,0.91922,2,2.151532,"['Finance Economy Sector', 'Military Sector']",116
+64,2009,2009,10,2,0.91582,2,2.149492,"['Finance Economy Sector', 'Military Sector']",116
+61,2009,2006,10,2,0.915505,2,2.149303,"['Finance Economy Sector', 'Military Sector']",116
 203,2008,2000,10,2,0.913025,1,2.147815,['Military Sector'],116
 23,2008,2001,9,2,0.9812700000000001,1,2.088762,['Military Sector'],116
 233,2008,2013,9,2,0.93774,1,2.062644,['Military Sector'],116
-200,2010,2010,9,2,0.931665,2,2.058999,"['Military Sector', 'Finance Economy Sector']",116
-106,2010,2010,9,2,0.930345,2,2.058207,"['Military Sector', 'Finance Economy Sector']",116
+200,2010,2010,9,2,0.931665,2,2.058999,"['Finance Economy Sector', 'Military Sector']",116
+106,2010,2010,9,2,0.930345,2,2.058207,"['Finance Economy Sector', 'Military Sector']",116
 203,2008,2000,9,2,0.92535,1,2.0552099999999998,['Military Sector'],116
-221,2010,2010,9,2,0.924605,2,2.054763,"['Military Sector', 'Finance Economy Sector']",116
-208,2010,2010,9,2,0.91851,2,2.051106,"['Military Sector', 'Finance Economy Sector']",116
+221,2010,2010,9,2,0.924605,2,2.054763,"['Finance Economy Sector', 'Military Sector']",116
+208,2010,2010,9,2,0.91851,2,2.051106,"['Finance Economy Sector', 'Military Sector']",116
 120,2008,2000,9,2,0.91743,1,2.050458,['Military Sector'],116
-130,2010,2001,9,2,0.91157,2,2.046942,"['Military Sector', 'Finance Economy Sector']",116
-181,2010,2010,9,2,0.91059,2,2.046354,"['Military Sector', 'Finance Economy Sector']",116
-142,2010,2010,9,2,0.909465,2,2.045679,"['Military Sector', 'Finance Economy Sector']",116
-152,2010,2010,9,2,0.90537,2,2.043222,"['Military Sector', 'Finance Economy Sector']",116
-61,2010,2004,9,2,0.904115,2,2.042469,"['Military Sector', 'Finance Economy Sector']",116
+130,2010,2001,9,2,0.91157,2,2.046942,"['Finance Economy Sector', 'Military Sector']",116
+181,2010,2010,9,2,0.91059,2,2.046354,"['Finance Economy Sector', 'Military Sector']",116
+142,2010,2010,9,2,0.909465,2,2.045679,"['Finance Economy Sector', 'Military Sector']",116
+152,2010,2010,9,2,0.90537,2,2.043222,"['Finance Economy Sector', 'Military Sector']",116
+61,2010,2004,9,2,0.904115,2,2.042469,"['Finance Economy Sector', 'Military Sector']",116
 23,2008,2001,8,2,0.98197,1,1.989182,['Military Sector'],116
 233,2008,2013,8,2,0.941345,1,1.964807,['Military Sector'],116
 96,2008,2012,8,2,0.92655,1,1.95593,['Military Sector'],116
@@ -48,332 +48,332 @@ country_b_id_fk,start_year_a_fk,start_year_b_fk,pattern_length_fk,indexes,avg_co
 120,2008,2000,8,2,0.91958,1,1.9517479999999998,['Military Sector'],116
 133,2008,2014,8,2,0.9132549999999999,1,1.9479529999999998,['Military Sector'],116
 120,2008,2015,8,2,0.907195,1,1.9443169999999999,['Military Sector'],116
-210,2009,2016,4,3,0.97693,2,1.8861579999999998,"['Military Sector', 'Finance Economy Sector']",116
-23,2009,2002,4,3,0.9717933333333333,2,1.8830759999999998,"['Military Sector', 'Finance Economy Sector']",116
-113,2009,2011,4,3,0.9639666666666667,2,1.87838,"['Military Sector', 'Finance Economy Sector']",116
-232,2009,2003,4,3,0.9561533333333333,2,1.8736919999999997,"['Military Sector', 'Finance Economy Sector']",116
-211,2009,2006,4,3,0.95566,2,1.8733959999999996,"['Military Sector', 'Finance Economy Sector']",116
-26,2009,2016,4,3,0.9548566666666667,2,1.8729139999999997,"['Military Sector', 'Finance Economy Sector']",116
-137,2009,2019,4,3,0.9523266666666667,2,1.8713959999999998,"['Military Sector', 'Finance Economy Sector']",116
-236,2008,2001,7,2,0.95028,2,1.870168,"['Military Sector', 'Finance Economy Sector']",116
+210,2009,2016,4,3,0.97693,2,1.8861579999999998,"['Finance Economy Sector', 'Military Sector']",116
+23,2009,2002,4,3,0.9717933333333333,2,1.8830759999999998,"['Finance Economy Sector', 'Military Sector']",116
+113,2009,2011,4,3,0.9639666666666667,2,1.87838,"['Finance Economy Sector', 'Military Sector']",116
+232,2009,2003,4,3,0.9561533333333333,2,1.8736919999999997,"['Finance Economy Sector', 'Military Sector']",116
+211,2009,2006,4,3,0.95566,2,1.8733959999999996,"['Finance Economy Sector', 'Military Sector']",116
+26,2009,2016,4,3,0.9548566666666667,2,1.8729139999999997,"['Finance Economy Sector', 'Military Sector']",116
+137,2009,2019,4,3,0.9523266666666667,2,1.8713959999999998,"['Finance Economy Sector', 'Military Sector']",116
+236,2008,2001,7,2,0.95028,2,1.870168,"['Finance Economy Sector', 'Military Sector']",116
 233,2008,2013,7,2,0.949945,1,1.869967,['Military Sector'],116
-20,2009,2017,4,3,0.9481700000000001,2,1.8689019999999998,"['Military Sector', 'Finance Economy Sector']",116
-93,2009,2006,4,3,0.9457233333333334,2,1.8674339999999998,"['Military Sector', 'Finance Economy Sector']",116
-126,2008,2015,7,2,0.94234,2,1.8654039999999998,"['Military Sector', 'Finance Economy Sector']",116
-18,2008,2008,7,2,0.939775,2,1.863865,"['Military Sector', 'Finance Economy Sector']",116
-98,2009,2019,4,3,0.9395066666666666,2,1.8637039999999998,"['Military Sector', 'Finance Economy Sector']",116
-73,2009,2002,4,3,0.9380000000000001,2,1.8627999999999998,"['Military Sector', 'Finance Economy Sector']",116
-123,2008,2009,7,2,0.93721,2,1.862326,"['Military Sector', 'Finance Economy Sector']",116
-120,2008,2015,7,2,0.93431,2,1.860586,"['Military Sector', 'Finance Economy Sector']",116
-14,2008,2015,7,2,0.931735,2,1.859041,"['Military Sector', 'Finance Economy Sector']",116
-62,2008,2006,7,2,0.930695,2,1.8584170000000002,"['Military Sector', 'Finance Economy Sector']",116
-183,2008,2013,7,2,0.9179299999999999,2,1.850758,"['Military Sector', 'Finance Economy Sector']",116
-159,2008,2007,7,2,0.913125,2,1.8478750000000002,"['Military Sector', 'Finance Economy Sector']",116
-20,2008,2008,7,2,0.912165,2,1.847299,"['Military Sector', 'Finance Economy Sector']",116
-113,2008,2000,7,2,0.91204,2,1.847224,"['Military Sector', 'Finance Economy Sector']",116
+20,2009,2017,4,3,0.9481700000000001,2,1.8689019999999998,"['Finance Economy Sector', 'Military Sector']",116
+93,2009,2006,4,3,0.9457233333333334,2,1.8674339999999998,"['Finance Economy Sector', 'Military Sector']",116
+126,2008,2015,7,2,0.94234,2,1.8654039999999998,"['Finance Economy Sector', 'Military Sector']",116
+18,2008,2008,7,2,0.939775,2,1.863865,"['Finance Economy Sector', 'Military Sector']",116
+98,2009,2019,4,3,0.9395066666666666,2,1.8637039999999998,"['Finance Economy Sector', 'Military Sector']",116
+73,2009,2002,4,3,0.9380000000000001,2,1.8627999999999998,"['Finance Economy Sector', 'Military Sector']",116
+123,2008,2009,7,2,0.93721,2,1.862326,"['Finance Economy Sector', 'Military Sector']",116
+120,2008,2015,7,2,0.93431,2,1.860586,"['Finance Economy Sector', 'Military Sector']",116
+14,2008,2015,7,2,0.931735,2,1.859041,"['Finance Economy Sector', 'Military Sector']",116
+62,2008,2006,7,2,0.930695,2,1.8584170000000002,"['Finance Economy Sector', 'Military Sector']",116
+183,2008,2013,7,2,0.9179299999999999,2,1.850758,"['Finance Economy Sector', 'Military Sector']",116
+159,2008,2007,7,2,0.913125,2,1.8478750000000002,"['Finance Economy Sector', 'Military Sector']",116
+20,2008,2008,7,2,0.912165,2,1.847299,"['Finance Economy Sector', 'Military Sector']",116
+113,2008,2000,7,2,0.91204,2,1.847224,"['Finance Economy Sector', 'Military Sector']",116
 220,2008,2012,7,2,0.91054,1,1.846324,['Military Sector'],116
-120,2008,2016,7,2,0.9033100000000001,2,1.841986,"['Military Sector', 'Finance Economy Sector']",116
-112,2008,2014,7,2,0.90144,2,1.840864,"['Military Sector', 'Finance Economy Sector']",116
-106,2009,2006,6,2,0.994245,2,1.7965470000000003,"['Military Sector', 'Finance Economy Sector']",116
+120,2008,2016,7,2,0.9033100000000001,2,1.841986,"['Finance Economy Sector', 'Military Sector']",116
+112,2008,2014,7,2,0.90144,2,1.840864,"['Finance Economy Sector', 'Military Sector']",116
+106,2009,2006,6,2,0.994245,2,1.7965470000000003,"['Finance Economy Sector', 'Military Sector']",116
 23,2008,2001,6,2,0.98648,1,1.7918880000000001,['Military Sector'],116
 38,2008,2008,6,2,0.979935,1,1.7879610000000001,['Military Sector'],116
-208,2009,2012,6,2,0.97647,2,1.785882,"['Military Sector', 'Finance Economy Sector']",116
+208,2009,2012,6,2,0.97647,2,1.785882,"['Finance Economy Sector', 'Military Sector']",116
 220,2008,2013,6,2,0.975185,1,1.7851110000000001,['Military Sector'],116
-107,2009,2002,6,2,0.9692000000000001,2,1.7815200000000002,"['Military Sector', 'Finance Economy Sector']",116
-174,2009,2006,6,2,0.96844,2,1.7810640000000002,"['Military Sector', 'Finance Economy Sector']",116
-74,2009,2002,6,2,0.9675849999999999,2,1.780551,"['Military Sector', 'Finance Economy Sector']",116
+107,2009,2002,6,2,0.9692000000000001,2,1.7815200000000002,"['Finance Economy Sector', 'Military Sector']",116
+174,2009,2006,6,2,0.96844,2,1.7810640000000002,"['Finance Economy Sector', 'Military Sector']",116
+74,2009,2002,6,2,0.9675849999999999,2,1.780551,"['Finance Economy Sector', 'Military Sector']",116
 203,2008,2000,6,2,0.9668300000000001,1,1.7800980000000002,['Military Sector'],116
-20,2009,2017,6,2,0.9661599999999999,2,1.779696,"['Military Sector', 'Finance Economy Sector']",116
-121,2009,2008,6,2,0.96443,2,1.778658,"['Military Sector', 'Finance Economy Sector']",116
+20,2009,2017,6,2,0.9661599999999999,2,1.779696,"['Finance Economy Sector', 'Military Sector']",116
+121,2009,2008,6,2,0.96443,2,1.778658,"['Finance Economy Sector', 'Military Sector']",116
 120,2008,2001,6,2,0.96221,1,1.7773260000000002,['Military Sector'],116
-22,2009,2012,6,2,0.961625,2,1.7769750000000002,"['Military Sector', 'Finance Economy Sector']",116
-23,2009,2002,6,2,0.959805,2,1.7758830000000003,"['Military Sector', 'Finance Economy Sector']",116
-93,2009,2006,6,2,0.959085,2,1.7754510000000001,"['Military Sector', 'Finance Economy Sector']",116
+22,2009,2012,6,2,0.961625,2,1.7769750000000002,"['Finance Economy Sector', 'Military Sector']",116
+23,2009,2002,6,2,0.959805,2,1.7758830000000003,"['Finance Economy Sector', 'Military Sector']",116
+93,2009,2006,6,2,0.959085,2,1.7754510000000001,"['Finance Economy Sector', 'Military Sector']",116
 233,2008,2013,6,2,0.9589650000000001,1,1.775379,['Military Sector'],116
-58,2009,2002,6,2,0.95847,2,1.7750820000000003,"['Military Sector', 'Finance Economy Sector']",116
+58,2009,2002,6,2,0.95847,2,1.7750820000000003,"['Finance Economy Sector', 'Military Sector']",116
 250,2008,2010,6,2,0.956035,1,1.7736210000000001,['Military Sector'],116
 114,2008,2000,6,2,0.95548,1,1.7732880000000002,['Military Sector'],116
-133,2009,2006,6,2,0.954925,2,1.772955,"['Military Sector', 'Finance Economy Sector']",116
-26,2009,2006,6,2,0.954055,2,1.7724330000000001,"['Military Sector', 'Finance Economy Sector']",116
-114,2009,2006,6,2,0.9533750000000001,2,1.7720250000000002,"['Military Sector', 'Finance Economy Sector']",116
-235,2009,2002,6,2,0.9530350000000001,2,1.771821,"['Military Sector', 'Finance Economy Sector']",116
-127,2009,2002,6,2,0.9528099999999999,2,1.771686,"['Military Sector', 'Finance Economy Sector']",116
-39,2009,2002,6,2,0.952645,2,1.7715870000000002,"['Military Sector', 'Finance Economy Sector']",116
-114,2009,2016,6,2,0.95223,2,1.771338,"['Military Sector', 'Finance Economy Sector']",116
-156,2009,2009,6,2,0.9521850000000001,2,1.7713110000000003,"['Military Sector', 'Finance Economy Sector']",116
-73,2009,2002,6,2,0.95192,2,1.7711520000000003,"['Military Sector', 'Finance Economy Sector']",116
-183,2009,2007,6,2,0.9518599999999999,2,1.7711160000000001,"['Military Sector', 'Finance Economy Sector']",116
+133,2009,2006,6,2,0.954925,2,1.772955,"['Finance Economy Sector', 'Military Sector']",116
+26,2009,2006,6,2,0.954055,2,1.7724330000000001,"['Finance Economy Sector', 'Military Sector']",116
+114,2009,2006,6,2,0.9533750000000001,2,1.7720250000000002,"['Finance Economy Sector', 'Military Sector']",116
+235,2009,2002,6,2,0.9530350000000001,2,1.771821,"['Finance Economy Sector', 'Military Sector']",116
+127,2009,2002,6,2,0.9528099999999999,2,1.771686,"['Finance Economy Sector', 'Military Sector']",116
+39,2009,2002,6,2,0.952645,2,1.7715870000000002,"['Finance Economy Sector', 'Military Sector']",116
+114,2009,2016,6,2,0.95223,2,1.771338,"['Finance Economy Sector', 'Military Sector']",116
+156,2009,2009,6,2,0.9521850000000001,2,1.7713110000000003,"['Finance Economy Sector', 'Military Sector']",116
+73,2009,2002,6,2,0.95192,2,1.7711520000000003,"['Finance Economy Sector', 'Military Sector']",116
+183,2009,2007,6,2,0.9518599999999999,2,1.7711160000000001,"['Finance Economy Sector', 'Military Sector']",116
 117,2008,2014,6,2,0.9511149999999999,1,1.7706690000000003,['Military Sector'],116
-215,2009,2009,6,2,0.951095,2,1.7706570000000001,"['Military Sector', 'Finance Economy Sector']",116
+215,2009,2009,6,2,0.951095,2,1.7706570000000001,"['Finance Economy Sector', 'Military Sector']",116
 133,2008,2014,6,2,0.9509350000000001,1,1.7705610000000003,['Military Sector'],116
-103,2009,2006,6,2,0.9501,2,1.77006,"['Military Sector', 'Finance Economy Sector']",116
-59,2009,2001,6,2,0.94986,2,1.7699160000000003,"['Military Sector', 'Finance Economy Sector']",116
-152,2009,2003,6,2,0.949515,2,1.7697090000000002,"['Military Sector', 'Finance Economy Sector']",116
-220,2009,2012,6,2,0.949105,2,1.769463,"['Military Sector', 'Finance Economy Sector']",116
-21,2009,2002,6,2,0.9487099999999999,2,1.7692260000000002,"['Military Sector', 'Finance Economy Sector']",116
-176,2009,2009,6,2,0.948685,2,1.7692110000000003,"['Military Sector', 'Finance Economy Sector']",116
-104,2009,2002,6,2,0.94859,2,1.7691540000000003,"['Military Sector', 'Finance Economy Sector']",116
-134,2009,2003,6,2,0.948305,2,1.768983,"['Military Sector', 'Finance Economy Sector']",116
-153,2009,2002,6,2,0.9475800000000001,2,1.7685480000000002,"['Military Sector', 'Finance Economy Sector']",116
-106,2009,2015,6,2,0.9465699999999999,2,1.7679420000000001,"['Military Sector', 'Finance Economy Sector']",116
-138,2009,2006,6,2,0.9459500000000001,2,1.76757,"['Military Sector', 'Finance Economy Sector']",116
-113,2009,2006,6,2,0.94589,2,1.7675340000000002,"['Military Sector', 'Finance Economy Sector']",116
-211,2009,2006,6,2,0.945365,2,1.7672190000000003,"['Military Sector', 'Finance Economy Sector']",116
-61,2009,2006,6,2,0.94505,2,1.76703,"['Military Sector', 'Finance Economy Sector']",116
-48,2009,2006,6,2,0.94499,2,1.7669940000000002,"['Military Sector', 'Finance Economy Sector']",116
-89,2009,2011,6,2,0.9448799999999999,2,1.766928,"['Military Sector', 'Finance Economy Sector']",116
-120,2009,2016,6,2,0.94433,2,1.7665980000000001,"['Military Sector', 'Finance Economy Sector']",116
-117,2009,2002,6,2,0.9440850000000001,2,1.7664510000000002,"['Military Sector', 'Finance Economy Sector']",116
-215,2009,2002,6,2,0.94377,2,1.7662620000000002,"['Military Sector', 'Finance Economy Sector']",116
-221,2009,2006,6,2,0.94354,2,1.766124,"['Military Sector', 'Finance Economy Sector']",116
-210,2009,2002,6,2,0.94275,2,1.7656500000000002,"['Military Sector', 'Finance Economy Sector']",116
-152,2009,2009,6,2,0.94267,2,1.7656020000000001,"['Military Sector', 'Finance Economy Sector']",116
-69,2009,2003,6,2,0.94183,2,1.765098,"['Military Sector', 'Finance Economy Sector']",116
-200,2009,2009,6,2,0.9403900000000001,2,1.764234,"['Military Sector', 'Finance Economy Sector']",116
-200,2009,2006,6,2,0.94017,2,1.7641020000000003,"['Military Sector', 'Finance Economy Sector']",116
-181,2009,2016,6,2,0.94007,2,1.764042,"['Military Sector', 'Finance Economy Sector']",116
+103,2009,2006,6,2,0.9501,2,1.77006,"['Finance Economy Sector', 'Military Sector']",116
+59,2009,2001,6,2,0.94986,2,1.7699160000000003,"['Finance Economy Sector', 'Military Sector']",116
+152,2009,2003,6,2,0.949515,2,1.7697090000000002,"['Finance Economy Sector', 'Military Sector']",116
+220,2009,2012,6,2,0.949105,2,1.769463,"['Finance Economy Sector', 'Military Sector']",116
+21,2009,2002,6,2,0.9487099999999999,2,1.7692260000000002,"['Finance Economy Sector', 'Military Sector']",116
+176,2009,2009,6,2,0.948685,2,1.7692110000000003,"['Finance Economy Sector', 'Military Sector']",116
+104,2009,2002,6,2,0.94859,2,1.7691540000000003,"['Finance Economy Sector', 'Military Sector']",116
+134,2009,2003,6,2,0.948305,2,1.768983,"['Finance Economy Sector', 'Military Sector']",116
+153,2009,2002,6,2,0.9475800000000001,2,1.7685480000000002,"['Finance Economy Sector', 'Military Sector']",116
+106,2009,2015,6,2,0.9465699999999999,2,1.7679420000000001,"['Finance Economy Sector', 'Military Sector']",116
+138,2009,2006,6,2,0.9459500000000001,2,1.76757,"['Finance Economy Sector', 'Military Sector']",116
+113,2009,2006,6,2,0.94589,2,1.7675340000000002,"['Finance Economy Sector', 'Military Sector']",116
+211,2009,2006,6,2,0.945365,2,1.7672190000000003,"['Finance Economy Sector', 'Military Sector']",116
+61,2009,2006,6,2,0.94505,2,1.76703,"['Finance Economy Sector', 'Military Sector']",116
+48,2009,2006,6,2,0.94499,2,1.7669940000000002,"['Finance Economy Sector', 'Military Sector']",116
+89,2009,2011,6,2,0.9448799999999999,2,1.766928,"['Finance Economy Sector', 'Military Sector']",116
+120,2009,2016,6,2,0.94433,2,1.7665980000000001,"['Finance Economy Sector', 'Military Sector']",116
+117,2009,2002,6,2,0.9440850000000001,2,1.7664510000000002,"['Finance Economy Sector', 'Military Sector']",116
+215,2009,2002,6,2,0.94377,2,1.7662620000000002,"['Finance Economy Sector', 'Military Sector']",116
+221,2009,2006,6,2,0.94354,2,1.766124,"['Finance Economy Sector', 'Military Sector']",116
+210,2009,2002,6,2,0.94275,2,1.7656500000000002,"['Finance Economy Sector', 'Military Sector']",116
+152,2009,2009,6,2,0.94267,2,1.7656020000000001,"['Finance Economy Sector', 'Military Sector']",116
+69,2009,2003,6,2,0.94183,2,1.765098,"['Finance Economy Sector', 'Military Sector']",116
+200,2009,2009,6,2,0.9403900000000001,2,1.764234,"['Finance Economy Sector', 'Military Sector']",116
+200,2009,2006,6,2,0.94017,2,1.7641020000000003,"['Finance Economy Sector', 'Military Sector']",116
+181,2009,2016,6,2,0.94007,2,1.764042,"['Finance Economy Sector', 'Military Sector']",116
 227,2008,2013,6,2,0.939925,1,1.7639550000000002,['Military Sector'],116
-147,2009,2006,6,2,0.93924,2,1.763544,"['Military Sector', 'Finance Economy Sector']",116
-131,2009,2001,6,2,0.93921,2,1.7635260000000001,"['Military Sector', 'Finance Economy Sector']",116
-159,2009,2006,6,2,0.93771,2,1.762626,"['Military Sector', 'Finance Economy Sector']",116
-174,2009,2011,6,2,0.937515,2,1.762509,"['Military Sector', 'Finance Economy Sector']",116
-183,2009,2013,6,2,0.93685,2,1.7621100000000003,"['Military Sector', 'Finance Economy Sector']",116
-106,2009,2012,6,2,0.936795,2,1.7620770000000001,"['Military Sector', 'Finance Economy Sector']",116
-147,2009,2002,6,2,0.93674,2,1.7620440000000002,"['Military Sector', 'Finance Economy Sector']",116
-126,2009,2016,6,2,0.936465,2,1.7618790000000002,"['Military Sector', 'Finance Economy Sector']",116
-18,2009,2009,6,2,0.935955,2,1.7615730000000003,"['Military Sector', 'Finance Economy Sector']",116
-56,2009,2003,6,2,0.93562,2,1.7613720000000002,"['Military Sector', 'Finance Economy Sector']",116
-177,2009,2003,6,2,0.93509,2,1.7610540000000001,"['Military Sector', 'Finance Economy Sector']",116
-112,2009,2015,6,2,0.9350700000000001,2,1.7610420000000002,"['Military Sector', 'Finance Economy Sector']",116
-208,2009,2009,6,2,0.934965,2,1.7609790000000003,"['Military Sector', 'Finance Economy Sector']",116
+147,2009,2006,6,2,0.93924,2,1.763544,"['Finance Economy Sector', 'Military Sector']",116
+131,2009,2001,6,2,0.93921,2,1.7635260000000001,"['Finance Economy Sector', 'Military Sector']",116
+159,2009,2006,6,2,0.93771,2,1.762626,"['Finance Economy Sector', 'Military Sector']",116
+174,2009,2011,6,2,0.937515,2,1.762509,"['Finance Economy Sector', 'Military Sector']",116
+183,2009,2013,6,2,0.93685,2,1.7621100000000003,"['Finance Economy Sector', 'Military Sector']",116
+106,2009,2012,6,2,0.936795,2,1.7620770000000001,"['Finance Economy Sector', 'Military Sector']",116
+147,2009,2002,6,2,0.93674,2,1.7620440000000002,"['Finance Economy Sector', 'Military Sector']",116
+126,2009,2016,6,2,0.936465,2,1.7618790000000002,"['Finance Economy Sector', 'Military Sector']",116
+18,2009,2009,6,2,0.935955,2,1.7615730000000003,"['Finance Economy Sector', 'Military Sector']",116
+56,2009,2003,6,2,0.93562,2,1.7613720000000002,"['Finance Economy Sector', 'Military Sector']",116
+177,2009,2003,6,2,0.93509,2,1.7610540000000001,"['Finance Economy Sector', 'Military Sector']",116
+112,2009,2015,6,2,0.9350700000000001,2,1.7610420000000002,"['Finance Economy Sector', 'Military Sector']",116
+208,2009,2009,6,2,0.934965,2,1.7609790000000003,"['Finance Economy Sector', 'Military Sector']",116
 96,2008,2012,6,2,0.9335500000000001,1,1.7601300000000002,['Military Sector'],116
-56,2009,2016,6,2,0.9303250000000001,2,1.7581950000000002,"['Military Sector', 'Finance Economy Sector']",116
-100,2009,2009,6,2,0.929645,2,1.7577870000000002,"['Military Sector', 'Finance Economy Sector']",116
-62,2009,2001,6,2,0.92881,2,1.7572860000000001,"['Military Sector', 'Finance Economy Sector']",116
-250,2009,2010,6,2,0.928695,2,1.7572170000000003,"['Military Sector', 'Finance Economy Sector']",116
-93,2009,2007,6,2,0.928245,2,1.7569470000000003,"['Military Sector', 'Finance Economy Sector']",116
-133,2009,2002,6,2,0.925675,2,1.755405,"['Military Sector', 'Finance Economy Sector']",116
-228,2009,2001,6,2,0.923655,2,1.7541930000000001,"['Military Sector', 'Finance Economy Sector']",116
-1,2009,2006,6,2,0.92069,2,1.7524140000000001,"['Military Sector', 'Finance Economy Sector']",116
-101,2009,2002,6,2,0.9203,2,1.75218,"['Military Sector', 'Finance Economy Sector']",116
-133,2009,2015,6,2,0.918805,2,1.7512830000000001,"['Military Sector', 'Finance Economy Sector']",116
+56,2009,2016,6,2,0.9303250000000001,2,1.7581950000000002,"['Finance Economy Sector', 'Military Sector']",116
+100,2009,2009,6,2,0.929645,2,1.7577870000000002,"['Finance Economy Sector', 'Military Sector']",116
+62,2009,2001,6,2,0.92881,2,1.7572860000000001,"['Finance Economy Sector', 'Military Sector']",116
+250,2009,2010,6,2,0.928695,2,1.7572170000000003,"['Finance Economy Sector', 'Military Sector']",116
+93,2009,2007,6,2,0.928245,2,1.7569470000000003,"['Finance Economy Sector', 'Military Sector']",116
+133,2009,2002,6,2,0.925675,2,1.755405,"['Finance Economy Sector', 'Military Sector']",116
+228,2009,2001,6,2,0.923655,2,1.7541930000000001,"['Finance Economy Sector', 'Military Sector']",116
+1,2009,2006,6,2,0.92069,2,1.7524140000000001,"['Finance Economy Sector', 'Military Sector']",116
+101,2009,2002,6,2,0.9203,2,1.75218,"['Finance Economy Sector', 'Military Sector']",116
+133,2009,2015,6,2,0.918805,2,1.7512830000000001,"['Finance Economy Sector', 'Military Sector']",116
 120,2008,2000,6,2,0.91846,1,1.7510760000000003,['Military Sector'],116
 131,2008,2000,6,2,0.91805,1,1.75083,['Military Sector'],116
-226,2009,2003,6,2,0.9158850000000001,2,1.7495310000000002,"['Military Sector', 'Finance Economy Sector']",116
+226,2009,2003,6,2,0.9158850000000001,2,1.7495310000000002,"['Finance Economy Sector', 'Military Sector']",116
 126,2008,2015,6,2,0.91573,1,1.749438,['Military Sector'],116
-58,2009,2016,6,2,0.915505,2,1.7493030000000003,"['Military Sector', 'Finance Economy Sector']",116
-122,2009,2002,6,2,0.9148799999999999,2,1.7489280000000003,"['Military Sector', 'Finance Economy Sector']",116
-57,2009,2003,6,2,0.91396,2,1.7483760000000002,"['Military Sector', 'Finance Economy Sector']",116
-92,2009,2016,6,2,0.91389,2,1.7483340000000003,"['Military Sector', 'Finance Economy Sector']",116
-150,2009,2003,6,2,0.91309,2,1.7478540000000002,"['Military Sector', 'Finance Economy Sector']",116
+58,2009,2016,6,2,0.915505,2,1.7493030000000003,"['Finance Economy Sector', 'Military Sector']",116
+122,2009,2002,6,2,0.9148799999999999,2,1.7489280000000003,"['Finance Economy Sector', 'Military Sector']",116
+57,2009,2003,6,2,0.91396,2,1.7483760000000002,"['Finance Economy Sector', 'Military Sector']",116
+92,2009,2016,6,2,0.91389,2,1.7483340000000003,"['Finance Economy Sector', 'Military Sector']",116
+150,2009,2003,6,2,0.91309,2,1.7478540000000002,"['Finance Economy Sector', 'Military Sector']",116
 159,2008,2007,6,2,0.9124749999999999,1,1.7474850000000002,['Military Sector'],116
 226,2008,2002,6,2,0.909025,1,1.7454150000000002,['Military Sector'],116
 152,2008,2001,6,2,0.908355,1,1.7450130000000001,['Military Sector'],116
-35,2009,2007,6,2,0.90766,2,1.744596,"['Military Sector', 'Finance Economy Sector']",116
-100,2009,2015,6,2,0.90754,2,1.7445240000000002,"['Military Sector', 'Finance Economy Sector']",116
+35,2009,2007,6,2,0.90766,2,1.744596,"['Finance Economy Sector', 'Military Sector']",116
+100,2009,2015,6,2,0.90754,2,1.7445240000000002,"['Finance Economy Sector', 'Military Sector']",116
 89,2009,2011,5,2,0.988225,1,1.692935,['Military Sector'],116
 23,2009,2002,5,2,0.97752,1,1.686512,['Military Sector'],116
-227,2008,2018,5,2,0.97537,2,1.685222,"['Military Sector', 'Finance Economy Sector']",116
+227,2008,2018,5,2,0.97537,2,1.685222,"['Finance Economy Sector', 'Military Sector']",116
 112,2009,2015,5,2,0.96722,1,1.680332,['Military Sector'],116
-202,2008,2018,5,2,0.9652799999999999,2,1.679168,"['Military Sector', 'Finance Economy Sector']",116
+202,2008,2018,5,2,0.9652799999999999,2,1.679168,"['Finance Economy Sector', 'Military Sector']",116
 222,2009,2018,5,2,0.96035,1,1.6762100000000002,['Military Sector'],116
-150,2008,2007,5,2,0.9581550000000001,2,1.674893,"['Military Sector', 'Finance Economy Sector']",116
-68,2008,2007,5,2,0.9578,2,1.67468,"['Military Sector', 'Finance Economy Sector']",116
-14,2008,2015,5,2,0.956255,2,1.673753,"['Military Sector', 'Finance Economy Sector']",116
-38,2008,2008,5,2,0.9528099999999999,2,1.671686,"['Military Sector', 'Finance Economy Sector']",116
-114,2008,2000,5,2,0.95217,2,1.671302,"['Military Sector', 'Finance Economy Sector']",116
-39,2008,2005,5,2,0.9518800000000001,2,1.671128,"['Military Sector', 'Finance Economy Sector']",116
-203,2008,2000,5,2,0.949405,2,1.6696430000000002,"['Military Sector', 'Finance Economy Sector']",116
+150,2008,2007,5,2,0.9581550000000001,2,1.674893,"['Finance Economy Sector', 'Military Sector']",116
+68,2008,2007,5,2,0.9578,2,1.67468,"['Finance Economy Sector', 'Military Sector']",116
+14,2008,2015,5,2,0.956255,2,1.673753,"['Finance Economy Sector', 'Military Sector']",116
+38,2008,2008,5,2,0.9528099999999999,2,1.671686,"['Finance Economy Sector', 'Military Sector']",116
+114,2008,2000,5,2,0.95217,2,1.671302,"['Finance Economy Sector', 'Military Sector']",116
+39,2008,2005,5,2,0.9518800000000001,2,1.671128,"['Finance Economy Sector', 'Military Sector']",116
+203,2008,2000,5,2,0.949405,2,1.6696430000000002,"['Finance Economy Sector', 'Military Sector']",116
 93,2009,2006,5,2,0.94901,1,1.669406,['Military Sector'],116
-203,2008,2001,5,2,0.9412,2,1.66472,"['Military Sector', 'Finance Economy Sector']",116
+203,2008,2001,5,2,0.9412,2,1.66472,"['Finance Economy Sector', 'Military Sector']",116
 82,2009,2010,5,2,0.94092,1,1.664552,['Military Sector'],116
-126,2008,2015,5,2,0.940555,2,1.664333,"['Military Sector', 'Finance Economy Sector']",116
+126,2008,2015,5,2,0.940555,2,1.664333,"['Finance Economy Sector', 'Military Sector']",116
 73,2009,2002,5,2,0.9397599999999999,1,1.663856,['Military Sector'],116
-98,2008,2018,5,2,0.93789,2,1.662734,"['Military Sector', 'Finance Economy Sector']",116
-211,2008,2005,5,2,0.93537,2,1.661222,"['Military Sector', 'Finance Economy Sector']",116
-96,2008,2012,5,2,0.934455,2,1.660673,"['Military Sector', 'Finance Economy Sector']",116
-120,2008,2015,5,2,0.9344,2,1.6606400000000001,"['Military Sector', 'Finance Economy Sector']",116
+98,2008,2018,5,2,0.93789,2,1.662734,"['Finance Economy Sector', 'Military Sector']",116
+211,2008,2005,5,2,0.93537,2,1.661222,"['Finance Economy Sector', 'Military Sector']",116
+96,2008,2012,5,2,0.934455,2,1.660673,"['Finance Economy Sector', 'Military Sector']",116
+120,2008,2015,5,2,0.9344,2,1.6606400000000001,"['Finance Economy Sector', 'Military Sector']",116
 216,2009,2018,5,2,0.9341349999999999,1,1.6604809999999999,['Military Sector'],116
-67,2008,2000,5,2,0.9324250000000001,2,1.6594550000000001,"['Military Sector', 'Finance Economy Sector']",116
+67,2008,2000,5,2,0.9324250000000001,2,1.6594550000000001,"['Finance Economy Sector', 'Military Sector']",116
 202,2009,2018,5,2,0.929585,1,1.6577510000000002,['Military Sector'],116
-196,2008,2005,5,2,0.925605,2,1.655363,"['Military Sector', 'Finance Economy Sector']",116
-118,2008,2001,5,2,0.925465,2,1.6552790000000002,"['Military Sector', 'Finance Economy Sector']",116
-96,2008,2008,5,2,0.924695,2,1.654817,"['Military Sector', 'Finance Economy Sector']",116
-92,2008,2018,5,2,0.92387,2,1.654322,"['Military Sector', 'Finance Economy Sector']",116
-107,2008,2015,5,2,0.9236599999999999,2,1.654196,"['Military Sector', 'Finance Economy Sector']",116
+196,2008,2005,5,2,0.925605,2,1.655363,"['Finance Economy Sector', 'Military Sector']",116
+118,2008,2001,5,2,0.925465,2,1.6552790000000002,"['Finance Economy Sector', 'Military Sector']",116
+96,2008,2008,5,2,0.924695,2,1.654817,"['Finance Economy Sector', 'Military Sector']",116
+92,2008,2018,5,2,0.92387,2,1.654322,"['Finance Economy Sector', 'Military Sector']",116
+107,2008,2015,5,2,0.9236599999999999,2,1.654196,"['Finance Economy Sector', 'Military Sector']",116
 211,2009,2006,5,2,0.9225099999999999,1,1.6535060000000001,['Military Sector'],116
-57,2008,2018,5,2,0.919265,2,1.6515590000000002,"['Military Sector', 'Finance Economy Sector']",116
-243,2008,2005,5,2,0.9185099999999999,2,1.651106,"['Military Sector', 'Finance Economy Sector']",116
-93,2008,2014,5,2,0.91391,2,1.648346,"['Military Sector', 'Finance Economy Sector']",116
-81,2008,2018,5,2,0.910885,2,1.646531,"['Military Sector', 'Finance Economy Sector']",116
-219,2009,2017,4,2,0.99596,2,1.597576,"['Military Sector', 'Finance Economy Sector']",116
-157,2009,2006,4,2,0.993105,2,1.595863,"['Military Sector', 'Finance Economy Sector']",116
-106,2009,2006,4,2,0.99301,2,1.595806,"['Military Sector', 'Finance Economy Sector']",116
-74,2009,2016,4,2,0.99295,2,1.59577,"['Military Sector', 'Finance Economy Sector']",116
+57,2008,2018,5,2,0.919265,2,1.6515590000000002,"['Finance Economy Sector', 'Military Sector']",116
+243,2008,2005,5,2,0.9185099999999999,2,1.651106,"['Finance Economy Sector', 'Military Sector']",116
+93,2008,2014,5,2,0.91391,2,1.648346,"['Finance Economy Sector', 'Military Sector']",116
+81,2008,2018,5,2,0.910885,2,1.646531,"['Finance Economy Sector', 'Military Sector']",116
+219,2009,2017,4,2,0.99596,2,1.597576,"['Finance Economy Sector', 'Military Sector']",116
+157,2009,2006,4,2,0.993105,2,1.595863,"['Finance Economy Sector', 'Military Sector']",116
+106,2009,2006,4,2,0.99301,2,1.595806,"['Finance Economy Sector', 'Military Sector']",116
+74,2009,2016,4,2,0.99295,2,1.59577,"['Finance Economy Sector', 'Military Sector']",116
 89,2009,2011,4,2,0.99078,1,1.594468,['Military Sector'],116
-152,2009,2009,4,2,0.9884200000000001,2,1.5930520000000001,"['Military Sector', 'Finance Economy Sector']",116
-35,2009,2006,4,2,0.9876849999999999,2,1.5926109999999998,"['Military Sector', 'Finance Economy Sector']",116
-14,2009,2016,4,2,0.986595,2,1.5919569999999998,"['Military Sector', 'Finance Economy Sector']",116
-200,2009,2016,4,2,0.9839199999999999,2,1.5903519999999998,"['Military Sector', 'Finance Economy Sector']",116
-106,2009,2009,4,2,0.9827049999999999,2,1.589623,"['Military Sector', 'Finance Economy Sector']",116
-208,2009,2012,4,2,0.98202,2,1.5892119999999998,"['Military Sector', 'Finance Economy Sector']",116
-110,2009,2002,4,2,0.979935,2,1.587961,"['Military Sector', 'Finance Economy Sector']",116
-39,2009,2006,4,2,0.977965,2,1.586779,"['Military Sector', 'Finance Economy Sector']",116
-33,2009,2009,4,2,0.9766600000000001,2,1.5859960000000002,"['Military Sector', 'Finance Economy Sector']",116
+152,2009,2009,4,2,0.9884200000000001,2,1.5930520000000001,"['Finance Economy Sector', 'Military Sector']",116
+35,2009,2006,4,2,0.9876849999999999,2,1.5926109999999998,"['Finance Economy Sector', 'Military Sector']",116
+14,2009,2016,4,2,0.986595,2,1.5919569999999998,"['Finance Economy Sector', 'Military Sector']",116
+200,2009,2016,4,2,0.9839199999999999,2,1.5903519999999998,"['Finance Economy Sector', 'Military Sector']",116
+106,2009,2009,4,2,0.9827049999999999,2,1.589623,"['Finance Economy Sector', 'Military Sector']",116
+208,2009,2012,4,2,0.98202,2,1.5892119999999998,"['Finance Economy Sector', 'Military Sector']",116
+110,2009,2002,4,2,0.979935,2,1.587961,"['Finance Economy Sector', 'Military Sector']",116
+39,2009,2006,4,2,0.977965,2,1.586779,"['Finance Economy Sector', 'Military Sector']",116
+33,2009,2009,4,2,0.9766600000000001,2,1.5859960000000002,"['Finance Economy Sector', 'Military Sector']",116
 112,2009,2007,4,2,0.976535,1,1.585921,['Military Sector'],116
-227,2009,2019,4,2,0.9750449999999999,2,1.585027,"['Military Sector', 'Finance Economy Sector']",116
-148,2009,2006,4,2,0.9740249999999999,2,1.584415,"['Military Sector', 'Finance Economy Sector']",116
+227,2009,2019,4,2,0.9750449999999999,2,1.585027,"['Finance Economy Sector', 'Military Sector']",116
+148,2009,2006,4,2,0.9740249999999999,2,1.584415,"['Finance Economy Sector', 'Military Sector']",116
 82,2009,2010,4,2,0.973695,1,1.584217,['Military Sector'],116
-174,2009,2006,4,2,0.97292,2,1.583752,"['Military Sector', 'Finance Economy Sector']",116
+174,2009,2006,4,2,0.97292,2,1.583752,"['Finance Economy Sector', 'Military Sector']",116
 122,2009,2008,4,2,0.972715,1,1.583629,['Military Sector'],116
 112,2009,2015,4,2,0.97231,1,1.583386,['Military Sector'],116
-196,2009,2006,4,2,0.971695,2,1.583017,"['Military Sector', 'Finance Economy Sector']",116
-21,2009,2016,4,2,0.971225,2,1.582735,"['Military Sector', 'Finance Economy Sector']",116
-100,2009,2015,4,2,0.97113,2,1.582678,"['Military Sector', 'Finance Economy Sector']",116
-215,2009,2009,4,2,0.9711000000000001,2,1.5826600000000002,"['Military Sector', 'Finance Economy Sector']",116
-142,2009,2006,4,2,0.9709099999999999,2,1.5825459999999998,"['Military Sector', 'Finance Economy Sector']",116
-176,2009,2009,4,2,0.97079,2,1.582474,"['Military Sector', 'Finance Economy Sector']",116
-238,2009,2011,4,2,0.97061,2,1.582366,"['Military Sector', 'Finance Economy Sector']",116
+196,2009,2006,4,2,0.971695,2,1.583017,"['Finance Economy Sector', 'Military Sector']",116
+21,2009,2016,4,2,0.971225,2,1.582735,"['Finance Economy Sector', 'Military Sector']",116
+100,2009,2015,4,2,0.97113,2,1.582678,"['Finance Economy Sector', 'Military Sector']",116
+215,2009,2009,4,2,0.9711000000000001,2,1.5826600000000002,"['Finance Economy Sector', 'Military Sector']",116
+142,2009,2006,4,2,0.9709099999999999,2,1.5825459999999998,"['Finance Economy Sector', 'Military Sector']",116
+176,2009,2009,4,2,0.97079,2,1.582474,"['Finance Economy Sector', 'Military Sector']",116
+238,2009,2011,4,2,0.97061,2,1.582366,"['Finance Economy Sector', 'Military Sector']",116
 147,2009,2019,4,2,0.96468,1,1.578808,['Military Sector'],116
-165,2009,2009,4,2,0.96368,2,1.578208,"['Military Sector', 'Finance Economy Sector']",116
+165,2009,2009,4,2,0.96368,2,1.578208,"['Finance Economy Sector', 'Military Sector']",116
 63,2009,2019,4,2,0.96272,1,1.577632,['Military Sector'],116
-172,2009,2006,4,2,0.962695,2,1.577617,"['Military Sector', 'Finance Economy Sector']",116
-2,2009,2006,4,2,0.96229,2,1.5773739999999998,"['Military Sector', 'Finance Economy Sector']",116
-15,2009,2006,4,2,0.96055,2,1.57633,"['Military Sector', 'Finance Economy Sector']",116
-103,2009,2009,4,2,0.9605,2,1.5763,"['Military Sector', 'Finance Economy Sector']",116
+172,2009,2006,4,2,0.962695,2,1.577617,"['Finance Economy Sector', 'Military Sector']",116
+2,2009,2006,4,2,0.96229,2,1.5773739999999998,"['Finance Economy Sector', 'Military Sector']",116
+15,2009,2006,4,2,0.96055,2,1.57633,"['Finance Economy Sector', 'Military Sector']",116
+103,2009,2009,4,2,0.9605,2,1.5763,"['Finance Economy Sector', 'Military Sector']",116
 152,2009,2003,4,2,0.960375,1,1.576225,['Military Sector'],116
-222,2009,2011,4,2,0.9601999999999999,2,1.57612,"['Military Sector', 'Finance Economy Sector']",116
-106,2009,2019,4,2,0.95975,2,1.57585,"['Military Sector', 'Finance Economy Sector']",116
-58,2009,2002,4,2,0.9594750000000001,2,1.575685,"['Military Sector', 'Finance Economy Sector']",116
-181,2009,2016,4,2,0.959365,2,1.575619,"['Military Sector', 'Finance Economy Sector']",116
-26,2009,2012,4,2,0.958855,2,1.575313,"['Military Sector', 'Finance Economy Sector']",116
-144,2009,2010,4,2,0.958245,2,1.5749469999999999,"['Military Sector', 'Finance Economy Sector']",116
-226,2009,2011,4,2,0.9581299999999999,2,1.574878,"['Military Sector', 'Finance Economy Sector']",116
-57,2009,2006,4,2,0.9574849999999999,2,1.574491,"['Military Sector', 'Finance Economy Sector']",116
-216,2009,2006,4,2,0.9573,2,1.5743800000000001,"['Military Sector', 'Finance Economy Sector']",116
+222,2009,2011,4,2,0.9601999999999999,2,1.57612,"['Finance Economy Sector', 'Military Sector']",116
+106,2009,2019,4,2,0.95975,2,1.57585,"['Finance Economy Sector', 'Military Sector']",116
+58,2009,2002,4,2,0.9594750000000001,2,1.575685,"['Finance Economy Sector', 'Military Sector']",116
+181,2009,2016,4,2,0.959365,2,1.575619,"['Finance Economy Sector', 'Military Sector']",116
+26,2009,2012,4,2,0.958855,2,1.575313,"['Finance Economy Sector', 'Military Sector']",116
+144,2009,2010,4,2,0.958245,2,1.5749469999999999,"['Finance Economy Sector', 'Military Sector']",116
+226,2009,2011,4,2,0.9581299999999999,2,1.574878,"['Finance Economy Sector', 'Military Sector']",116
+57,2009,2006,4,2,0.9574849999999999,2,1.574491,"['Finance Economy Sector', 'Military Sector']",116
+216,2009,2006,4,2,0.9573,2,1.5743800000000001,"['Finance Economy Sector', 'Military Sector']",116
 222,2009,2018,4,2,0.95724,1,1.574344,['Military Sector'],116
-44,2009,2009,4,2,0.9570449999999999,2,1.574227,"['Military Sector', 'Finance Economy Sector']",116
-72,2009,2002,4,2,0.956735,2,1.574041,"['Military Sector', 'Finance Economy Sector']",116
+44,2009,2009,4,2,0.9570449999999999,2,1.574227,"['Finance Economy Sector', 'Military Sector']",116
+72,2009,2002,4,2,0.956735,2,1.574041,"['Finance Economy Sector', 'Military Sector']",116
 40,2009,2006,4,2,0.95669,1,1.574014,['Military Sector'],116
-145,2009,2016,4,2,0.95631,2,1.5737860000000001,"['Military Sector', 'Finance Economy Sector']",116
+145,2009,2016,4,2,0.95631,2,1.5737860000000001,"['Finance Economy Sector', 'Military Sector']",116
 238,2009,2016,4,2,0.9562949999999999,1,1.5737769999999998,['Military Sector'],116
 109,2009,2017,4,2,0.95593,1,1.5735579999999998,['Military Sector'],116
-34,2009,2006,4,2,0.95543,2,1.573258,"['Military Sector', 'Finance Economy Sector']",116
-129,2009,2006,4,2,0.9542649999999999,2,1.572559,"['Military Sector', 'Finance Economy Sector']",116
+34,2009,2006,4,2,0.95543,2,1.573258,"['Finance Economy Sector', 'Military Sector']",116
+129,2009,2006,4,2,0.9542649999999999,2,1.572559,"['Finance Economy Sector', 'Military Sector']",116
 81,2009,2006,4,2,0.9538150000000001,1,1.572289,['Military Sector'],116
-84,2009,2016,4,2,0.953425,2,1.572055,"['Military Sector', 'Finance Economy Sector']",116
-107,2009,2016,4,2,0.953415,2,1.572049,"['Military Sector', 'Finance Economy Sector']",116
-107,2009,2002,4,2,0.95337,2,1.572022,"['Military Sector', 'Finance Economy Sector']",116
-163,2009,2006,4,2,0.9532700000000001,2,1.571962,"['Military Sector', 'Finance Economy Sector']",116
-130,2009,2018,4,2,0.952895,2,1.5717370000000002,"['Military Sector', 'Finance Economy Sector']",116
-13,2009,2009,4,2,0.9528300000000001,2,1.571698,"['Military Sector', 'Finance Economy Sector']",116
-22,2009,2012,4,2,0.95271,2,1.571626,"['Military Sector', 'Finance Economy Sector']",116
-147,2009,2016,4,2,0.95247,2,1.571482,"['Military Sector', 'Finance Economy Sector']",116
-110,2009,2009,4,2,0.95197,2,1.5711819999999999,"['Military Sector', 'Finance Economy Sector']",116
-39,2009,2002,4,2,0.95131,2,1.570786,"['Military Sector', 'Finance Economy Sector']",116
-216,2009,2002,4,2,0.9510449999999999,2,1.570627,"['Military Sector', 'Finance Economy Sector']",116
-33,2009,2004,4,2,0.95087,2,1.570522,"['Military Sector', 'Finance Economy Sector']",116
-167,2009,2014,4,2,0.95079,2,1.570474,"['Military Sector', 'Finance Economy Sector']",116
+84,2009,2016,4,2,0.953425,2,1.572055,"['Finance Economy Sector', 'Military Sector']",116
+107,2009,2016,4,2,0.953415,2,1.572049,"['Finance Economy Sector', 'Military Sector']",116
+107,2009,2002,4,2,0.95337,2,1.572022,"['Finance Economy Sector', 'Military Sector']",116
+163,2009,2006,4,2,0.9532700000000001,2,1.571962,"['Finance Economy Sector', 'Military Sector']",116
+130,2009,2018,4,2,0.952895,2,1.5717370000000002,"['Finance Economy Sector', 'Military Sector']",116
+13,2009,2009,4,2,0.9528300000000001,2,1.571698,"['Finance Economy Sector', 'Military Sector']",116
+22,2009,2012,4,2,0.95271,2,1.571626,"['Finance Economy Sector', 'Military Sector']",116
+147,2009,2016,4,2,0.95247,2,1.571482,"['Finance Economy Sector', 'Military Sector']",116
+110,2009,2009,4,2,0.95197,2,1.5711819999999999,"['Finance Economy Sector', 'Military Sector']",116
+39,2009,2002,4,2,0.95131,2,1.570786,"['Finance Economy Sector', 'Military Sector']",116
+216,2009,2002,4,2,0.9510449999999999,2,1.570627,"['Finance Economy Sector', 'Military Sector']",116
+33,2009,2004,4,2,0.95087,2,1.570522,"['Finance Economy Sector', 'Military Sector']",116
+167,2009,2014,4,2,0.95079,2,1.570474,"['Finance Economy Sector', 'Military Sector']",116
 98,2009,2015,4,2,0.950615,1,1.570369,['Military Sector'],116
-172,2009,2009,4,2,0.95034,2,1.570204,"['Military Sector', 'Finance Economy Sector']",116
-35,2009,2003,4,2,0.9500550000000001,2,1.570033,"['Military Sector', 'Finance Economy Sector']",116
-167,2009,2002,4,2,0.949535,2,1.569721,"['Military Sector', 'Finance Economy Sector']",116
-130,2009,2007,4,2,0.949465,2,1.5696789999999998,"['Military Sector', 'Finance Economy Sector']",116
-21,2009,2002,4,2,0.94902,2,1.5694119999999998,"['Military Sector', 'Finance Economy Sector']",116
+172,2009,2009,4,2,0.95034,2,1.570204,"['Finance Economy Sector', 'Military Sector']",116
+35,2009,2003,4,2,0.9500550000000001,2,1.570033,"['Finance Economy Sector', 'Military Sector']",116
+167,2009,2002,4,2,0.949535,2,1.569721,"['Finance Economy Sector', 'Military Sector']",116
+130,2009,2007,4,2,0.949465,2,1.5696789999999998,"['Finance Economy Sector', 'Military Sector']",116
+21,2009,2002,4,2,0.94902,2,1.5694119999999998,"['Finance Economy Sector', 'Military Sector']",116
 130,2009,2003,4,2,0.9488099999999999,1,1.569286,['Military Sector'],116
-69,2009,2015,4,2,0.948275,2,1.568965,"['Military Sector', 'Finance Economy Sector']",116
-163,2009,2002,4,2,0.948035,2,1.5688209999999998,"['Military Sector', 'Finance Economy Sector']",116
-171,2009,2010,4,2,0.9478800000000001,2,1.5687280000000001,"['Military Sector', 'Finance Economy Sector']",116
-53,2009,2006,4,2,0.947775,2,1.568665,"['Military Sector', 'Finance Economy Sector']",116
-74,2009,2002,4,2,0.947485,2,1.5684909999999999,"['Military Sector', 'Finance Economy Sector']",116
-235,2009,2005,4,2,0.947335,2,1.5684010000000002,"['Military Sector', 'Finance Economy Sector']",116
-156,2009,2005,4,2,0.946915,2,1.568149,"['Military Sector', 'Finance Economy Sector']",116
-81,2009,2019,4,2,0.9469,2,1.56814,"['Military Sector', 'Finance Economy Sector']",116
-114,2009,2016,4,2,0.94689,2,1.5681340000000001,"['Military Sector', 'Finance Economy Sector']",116
-120,2009,2016,4,2,0.9467300000000001,2,1.568038,"['Military Sector', 'Finance Economy Sector']",116
-200,2009,2009,4,2,0.9465600000000001,2,1.567936,"['Military Sector', 'Finance Economy Sector']",116
-176,2009,2003,4,2,0.9461999999999999,2,1.56772,"['Military Sector', 'Finance Economy Sector']",116
-103,2009,2006,4,2,0.945875,2,1.5675249999999998,"['Military Sector', 'Finance Economy Sector']",116
-133,2009,2006,4,2,0.9455549999999999,2,1.567333,"['Military Sector', 'Finance Economy Sector']",116
-166,2009,2010,4,2,0.9450350000000001,2,1.567021,"['Military Sector', 'Finance Economy Sector']",116
-206,2009,2003,4,2,0.9449799999999999,2,1.5669879999999998,"['Military Sector', 'Finance Economy Sector']",116
-26,2009,2006,4,2,0.9445399999999999,2,1.5667239999999998,"['Military Sector', 'Finance Economy Sector']",116
-31,2009,2009,4,2,0.944445,2,1.5666669999999998,"['Military Sector', 'Finance Economy Sector']",116
-156,2009,2009,4,2,0.944175,2,1.5665049999999998,"['Military Sector', 'Finance Economy Sector']",116
-176,2009,2016,4,2,0.94397,2,1.566382,"['Military Sector', 'Finance Economy Sector']",116
+69,2009,2015,4,2,0.948275,2,1.568965,"['Finance Economy Sector', 'Military Sector']",116
+163,2009,2002,4,2,0.948035,2,1.5688209999999998,"['Finance Economy Sector', 'Military Sector']",116
+171,2009,2010,4,2,0.9478800000000001,2,1.5687280000000001,"['Finance Economy Sector', 'Military Sector']",116
+53,2009,2006,4,2,0.947775,2,1.568665,"['Finance Economy Sector', 'Military Sector']",116
+74,2009,2002,4,2,0.947485,2,1.5684909999999999,"['Finance Economy Sector', 'Military Sector']",116
+235,2009,2005,4,2,0.947335,2,1.5684010000000002,"['Finance Economy Sector', 'Military Sector']",116
+156,2009,2005,4,2,0.946915,2,1.568149,"['Finance Economy Sector', 'Military Sector']",116
+81,2009,2019,4,2,0.9469,2,1.56814,"['Finance Economy Sector', 'Military Sector']",116
+114,2009,2016,4,2,0.94689,2,1.5681340000000001,"['Finance Economy Sector', 'Military Sector']",116
+120,2009,2016,4,2,0.9467300000000001,2,1.568038,"['Finance Economy Sector', 'Military Sector']",116
+200,2009,2009,4,2,0.9465600000000001,2,1.567936,"['Finance Economy Sector', 'Military Sector']",116
+176,2009,2003,4,2,0.9461999999999999,2,1.56772,"['Finance Economy Sector', 'Military Sector']",116
+103,2009,2006,4,2,0.945875,2,1.5675249999999998,"['Finance Economy Sector', 'Military Sector']",116
+133,2009,2006,4,2,0.9455549999999999,2,1.567333,"['Finance Economy Sector', 'Military Sector']",116
+166,2009,2010,4,2,0.9450350000000001,2,1.567021,"['Finance Economy Sector', 'Military Sector']",116
+206,2009,2003,4,2,0.9449799999999999,2,1.5669879999999998,"['Finance Economy Sector', 'Military Sector']",116
+26,2009,2006,4,2,0.9445399999999999,2,1.5667239999999998,"['Finance Economy Sector', 'Military Sector']",116
+31,2009,2009,4,2,0.944445,2,1.5666669999999998,"['Finance Economy Sector', 'Military Sector']",116
+156,2009,2009,4,2,0.944175,2,1.5665049999999998,"['Finance Economy Sector', 'Military Sector']",116
+176,2009,2016,4,2,0.94397,2,1.566382,"['Finance Economy Sector', 'Military Sector']",116
 134,2009,2003,4,2,0.943955,1,1.566373,['Military Sector'],116
 11,2009,2017,4,2,0.943935,1,1.5663610000000001,['Military Sector'],116
-18,2009,2014,4,2,0.94377,2,1.566262,"['Military Sector', 'Finance Economy Sector']",116
-18,2009,2009,4,2,0.9437249999999999,2,1.5662349999999998,"['Military Sector', 'Finance Economy Sector']",116
-234,2009,2009,4,2,0.943555,2,1.566133,"['Military Sector', 'Finance Economy Sector']",116
-203,2009,2006,4,2,0.94287,2,1.565722,"['Military Sector', 'Finance Economy Sector']",116
-109,2009,2000,4,2,0.94272,2,1.565632,"['Military Sector', 'Finance Economy Sector']",116
+18,2009,2014,4,2,0.94377,2,1.566262,"['Finance Economy Sector', 'Military Sector']",116
+18,2009,2009,4,2,0.9437249999999999,2,1.5662349999999998,"['Finance Economy Sector', 'Military Sector']",116
+234,2009,2009,4,2,0.943555,2,1.566133,"['Finance Economy Sector', 'Military Sector']",116
+203,2009,2006,4,2,0.94287,2,1.565722,"['Finance Economy Sector', 'Military Sector']",116
+109,2009,2000,4,2,0.94272,2,1.565632,"['Finance Economy Sector', 'Military Sector']",116
 198,2009,2002,4,2,0.9425049999999999,1,1.565503,['Military Sector'],116
-159,2009,2000,4,2,0.94194,2,1.565164,"['Military Sector', 'Finance Economy Sector']",116
-48,2009,2006,4,2,0.9419299999999999,2,1.5651579999999998,"['Military Sector', 'Finance Economy Sector']",116
-14,2009,2002,4,2,0.94191,2,1.565146,"['Military Sector', 'Finance Economy Sector']",116
-56,2009,2016,4,2,0.94156,2,1.5649359999999999,"['Military Sector', 'Finance Economy Sector']",116
-174,2009,2011,4,2,0.941395,2,1.5648369999999998,"['Military Sector', 'Finance Economy Sector']",116
-15,2009,2011,4,2,0.940855,2,1.5645129999999998,"['Military Sector', 'Finance Economy Sector']",116
-38,2009,2009,4,2,0.939895,2,1.5639370000000001,"['Military Sector', 'Finance Economy Sector']",116
-235,2009,2002,4,2,0.939345,2,1.563607,"['Military Sector', 'Finance Economy Sector']",116
-63,2009,2008,4,2,0.938985,2,1.563391,"['Military Sector', 'Finance Economy Sector']",116
-181,2009,2019,4,2,0.93892,2,1.563352,"['Military Sector', 'Finance Economy Sector']",116
-13,2009,2006,4,2,0.938635,2,1.563181,"['Military Sector', 'Finance Economy Sector']",116
-220,2009,2012,4,2,0.937715,2,1.5626289999999998,"['Military Sector', 'Finance Economy Sector']",116
-156,2009,2019,4,2,0.937655,2,1.5625930000000001,"['Military Sector', 'Finance Economy Sector']",116
-153,2009,2006,4,2,0.93763,2,1.5625779999999998,"['Military Sector', 'Finance Economy Sector']",116
+159,2009,2000,4,2,0.94194,2,1.565164,"['Finance Economy Sector', 'Military Sector']",116
+48,2009,2006,4,2,0.9419299999999999,2,1.5651579999999998,"['Finance Economy Sector', 'Military Sector']",116
+14,2009,2002,4,2,0.94191,2,1.565146,"['Finance Economy Sector', 'Military Sector']",116
+56,2009,2016,4,2,0.94156,2,1.5649359999999999,"['Finance Economy Sector', 'Military Sector']",116
+174,2009,2011,4,2,0.941395,2,1.5648369999999998,"['Finance Economy Sector', 'Military Sector']",116
+15,2009,2011,4,2,0.940855,2,1.5645129999999998,"['Finance Economy Sector', 'Military Sector']",116
+38,2009,2009,4,2,0.939895,2,1.5639370000000001,"['Finance Economy Sector', 'Military Sector']",116
+235,2009,2002,4,2,0.939345,2,1.563607,"['Finance Economy Sector', 'Military Sector']",116
+63,2009,2008,4,2,0.938985,2,1.563391,"['Finance Economy Sector', 'Military Sector']",116
+181,2009,2019,4,2,0.93892,2,1.563352,"['Finance Economy Sector', 'Military Sector']",116
+13,2009,2006,4,2,0.938635,2,1.563181,"['Finance Economy Sector', 'Military Sector']",116
+220,2009,2012,4,2,0.937715,2,1.5626289999999998,"['Finance Economy Sector', 'Military Sector']",116
+156,2009,2019,4,2,0.937655,2,1.5625930000000001,"['Finance Economy Sector', 'Military Sector']",116
+153,2009,2006,4,2,0.93763,2,1.5625779999999998,"['Finance Economy Sector', 'Military Sector']",116
 35,2009,2017,4,2,0.937595,1,1.562557,['Military Sector'],116
 202,2009,2018,4,2,0.937265,1,1.5623589999999998,['Military Sector'],116
-61,2009,2006,4,2,0.937245,2,1.562347,"['Military Sector', 'Finance Economy Sector']",116
+61,2009,2006,4,2,0.937245,2,1.562347,"['Finance Economy Sector', 'Military Sector']",116
 131,2009,2001,4,2,0.936785,1,1.562071,['Military Sector'],116
-100,2009,2009,4,2,0.9361349999999999,2,1.561681,"['Military Sector', 'Finance Economy Sector']",116
-150,2009,2009,4,2,0.935495,2,1.561297,"['Military Sector', 'Finance Economy Sector']",116
-113,2009,2006,4,2,0.93495,2,1.56097,"['Military Sector', 'Finance Economy Sector']",116
+100,2009,2009,4,2,0.9361349999999999,2,1.561681,"['Finance Economy Sector', 'Military Sector']",116
+150,2009,2009,4,2,0.935495,2,1.561297,"['Finance Economy Sector', 'Military Sector']",116
+113,2009,2006,4,2,0.93495,2,1.56097,"['Finance Economy Sector', 'Military Sector']",116
 2,2009,2017,4,2,0.9348449999999999,1,1.5609069999999998,['Military Sector'],116
-35,2009,2001,4,2,0.93353,2,1.5601180000000001,"['Military Sector', 'Finance Economy Sector']",116
-29,2009,2009,4,2,0.933365,2,1.560019,"['Military Sector', 'Finance Economy Sector']",116
-121,2009,2008,4,2,0.93295,2,1.5597699999999999,"['Military Sector', 'Finance Economy Sector']",116
+35,2009,2001,4,2,0.93353,2,1.5601180000000001,"['Finance Economy Sector', 'Military Sector']",116
+29,2009,2009,4,2,0.933365,2,1.560019,"['Finance Economy Sector', 'Military Sector']",116
+121,2009,2008,4,2,0.93295,2,1.5597699999999999,"['Finance Economy Sector', 'Military Sector']",116
 177,2009,2003,4,2,0.932835,1,1.559701,['Military Sector'],116
 91,2009,2000,4,2,0.93255,1,1.55953,['Military Sector'],116
-153,2009,2002,4,2,0.9311849999999999,2,1.558711,"['Military Sector', 'Finance Economy Sector']",116
-123,2009,2010,4,2,0.930555,2,1.558333,"['Military Sector', 'Finance Economy Sector']",116
+153,2009,2002,4,2,0.9311849999999999,2,1.558711,"['Finance Economy Sector', 'Military Sector']",116
+123,2009,2010,4,2,0.930555,2,1.558333,"['Finance Economy Sector', 'Military Sector']",116
 216,2009,2018,4,2,0.930325,1,1.558195,['Military Sector'],116
-157,2009,2013,4,2,0.929335,2,1.557601,"['Military Sector', 'Finance Economy Sector']",116
-159,2009,2006,4,2,0.9290849999999999,2,1.557451,"['Military Sector', 'Finance Economy Sector']",116
-131,2009,2006,4,2,0.92901,2,1.5574059999999998,"['Military Sector', 'Finance Economy Sector']",116
-127,2009,2002,4,2,0.928625,2,1.557175,"['Military Sector', 'Finance Economy Sector']",116
-215,2009,2002,4,2,0.92853,2,1.557118,"['Military Sector', 'Finance Economy Sector']",116
-145,2009,2006,4,2,0.928455,2,1.557073,"['Military Sector', 'Finance Economy Sector']",116
-39,2009,2001,4,2,0.928405,2,1.557043,"['Military Sector', 'Finance Economy Sector']",116
-142,2009,2019,4,2,0.92824,2,1.556944,"['Military Sector', 'Finance Economy Sector']",116
-243,2009,2008,4,2,0.927485,2,1.5564909999999998,"['Military Sector', 'Finance Economy Sector']",116
-72,2009,2005,4,2,0.9271400000000001,2,1.556284,"['Military Sector', 'Finance Economy Sector']",116
-6,2009,2004,4,2,0.926295,2,1.555777,"['Military Sector', 'Finance Economy Sector']",116
-205,2009,2019,4,2,0.92595,2,1.55557,"['Military Sector', 'Finance Economy Sector']",116
-67,2009,2002,4,2,0.92471,2,1.554826,"['Military Sector', 'Finance Economy Sector']",116
+157,2009,2013,4,2,0.929335,2,1.557601,"['Finance Economy Sector', 'Military Sector']",116
+159,2009,2006,4,2,0.9290849999999999,2,1.557451,"['Finance Economy Sector', 'Military Sector']",116
+131,2009,2006,4,2,0.92901,2,1.5574059999999998,"['Finance Economy Sector', 'Military Sector']",116
+127,2009,2002,4,2,0.928625,2,1.557175,"['Finance Economy Sector', 'Military Sector']",116
+215,2009,2002,4,2,0.92853,2,1.557118,"['Finance Economy Sector', 'Military Sector']",116
+145,2009,2006,4,2,0.928455,2,1.557073,"['Finance Economy Sector', 'Military Sector']",116
+39,2009,2001,4,2,0.928405,2,1.557043,"['Finance Economy Sector', 'Military Sector']",116
+142,2009,2019,4,2,0.92824,2,1.556944,"['Finance Economy Sector', 'Military Sector']",116
+243,2009,2008,4,2,0.927485,2,1.5564909999999998,"['Finance Economy Sector', 'Military Sector']",116
+72,2009,2005,4,2,0.9271400000000001,2,1.556284,"['Finance Economy Sector', 'Military Sector']",116
+6,2009,2004,4,2,0.926295,2,1.555777,"['Finance Economy Sector', 'Military Sector']",116
+205,2009,2019,4,2,0.92595,2,1.55557,"['Finance Economy Sector', 'Military Sector']",116
+67,2009,2002,4,2,0.92471,2,1.554826,"['Finance Economy Sector', 'Military Sector']",116
 171,2009,2003,4,2,0.9240299999999999,1,1.554418,['Military Sector'],116
-40,2009,2009,4,2,0.923465,2,1.554079,"['Military Sector', 'Finance Economy Sector']",116
-104,2009,2002,4,2,0.922875,2,1.553725,"['Military Sector', 'Finance Economy Sector']",116
-250,2009,2011,4,2,0.922845,2,1.553707,"['Military Sector', 'Finance Economy Sector']",116
-203,2009,2002,4,2,0.921115,2,1.5526689999999999,"['Military Sector', 'Finance Economy Sector']",116
-72,2009,2016,4,2,0.9209350000000001,2,1.5525609999999999,"['Military Sector', 'Finance Economy Sector']",116
-210,2009,2002,4,2,0.92045,2,1.55227,"['Military Sector', 'Finance Economy Sector']",116
-129,2009,2016,4,2,0.91896,2,1.5513759999999999,"['Military Sector', 'Finance Economy Sector']",116
-37,2009,2006,4,2,0.918025,2,1.550815,"['Military Sector', 'Finance Economy Sector']",116
-18,2009,2002,4,2,0.91776,2,1.550656,"['Military Sector', 'Finance Economy Sector']",116
-28,2009,2019,4,2,0.91773,2,1.550638,"['Military Sector', 'Finance Economy Sector']",116
-14,2009,2006,4,2,0.91772,2,1.550632,"['Military Sector', 'Finance Economy Sector']",116
-197,2009,2001,4,2,0.917575,2,1.550545,"['Military Sector', 'Finance Economy Sector']",116
-183,2009,2013,4,2,0.9175,2,1.5505,"['Military Sector', 'Finance Economy Sector']",116
-62,2009,2011,4,2,0.9156599999999999,2,1.5493959999999998,"['Military Sector', 'Finance Economy Sector']",116
+40,2009,2009,4,2,0.923465,2,1.554079,"['Finance Economy Sector', 'Military Sector']",116
+104,2009,2002,4,2,0.922875,2,1.553725,"['Finance Economy Sector', 'Military Sector']",116
+250,2009,2011,4,2,0.922845,2,1.553707,"['Finance Economy Sector', 'Military Sector']",116
+203,2009,2002,4,2,0.921115,2,1.5526689999999999,"['Finance Economy Sector', 'Military Sector']",116
+72,2009,2016,4,2,0.9209350000000001,2,1.5525609999999999,"['Finance Economy Sector', 'Military Sector']",116
+210,2009,2002,4,2,0.92045,2,1.55227,"['Finance Economy Sector', 'Military Sector']",116
+129,2009,2016,4,2,0.91896,2,1.5513759999999999,"['Finance Economy Sector', 'Military Sector']",116
+37,2009,2006,4,2,0.918025,2,1.550815,"['Finance Economy Sector', 'Military Sector']",116
+18,2009,2002,4,2,0.91776,2,1.550656,"['Finance Economy Sector', 'Military Sector']",116
+28,2009,2019,4,2,0.91773,2,1.550638,"['Finance Economy Sector', 'Military Sector']",116
+14,2009,2006,4,2,0.91772,2,1.550632,"['Finance Economy Sector', 'Military Sector']",116
+197,2009,2001,4,2,0.917575,2,1.550545,"['Finance Economy Sector', 'Military Sector']",116
+183,2009,2013,4,2,0.9175,2,1.5505,"['Finance Economy Sector', 'Military Sector']",116
+62,2009,2011,4,2,0.9156599999999999,2,1.5493959999999998,"['Finance Economy Sector', 'Military Sector']",116
 100,2009,2003,4,2,0.9151,1,1.5490599999999999,['Military Sector'],116
-208,2009,2009,4,2,0.91099,2,1.5465939999999998,"['Military Sector', 'Finance Economy Sector']",116
-117,2009,2010,4,2,0.910205,2,1.5461230000000001,"['Military Sector', 'Finance Economy Sector']",116
-11,2009,2011,4,2,0.9096500000000001,2,1.54579,"['Military Sector', 'Finance Economy Sector']",116
-137,2009,2016,4,2,0.907165,2,1.544299,"['Military Sector', 'Finance Economy Sector']",116
-106,2009,2002,4,2,0.905975,2,1.543585,"['Military Sector', 'Finance Economy Sector']",116
-56,2009,2019,4,2,0.90547,2,1.543282,"['Military Sector', 'Finance Economy Sector']",116
+208,2009,2009,4,2,0.91099,2,1.5465939999999998,"['Finance Economy Sector', 'Military Sector']",116
+117,2009,2010,4,2,0.910205,2,1.5461230000000001,"['Finance Economy Sector', 'Military Sector']",116
+11,2009,2011,4,2,0.9096500000000001,2,1.54579,"['Finance Economy Sector', 'Military Sector']",116
+137,2009,2016,4,2,0.907165,2,1.544299,"['Finance Economy Sector', 'Military Sector']",116
+106,2009,2002,4,2,0.905975,2,1.543585,"['Finance Economy Sector', 'Military Sector']",116
+56,2009,2019,4,2,0.90547,2,1.543282,"['Finance Economy Sector', 'Military Sector']",116
 152,2009,2003,3,2,0.99996,1,1.499976,['Military Sector'],116
 153,2009,2015,3,2,0.99987,1,1.499922,['Military Sector'],116
 89,2009,2009,3,2,0.99963,1,1.499778,['Military Sector'],116
