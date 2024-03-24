@@ -4,7 +4,7 @@ from streamlit_extras.customize_running import center_running
 from streamlit_modal import Modal
 import pandas as pd
 import streamlit as st
-from constant.constant import NEW_PPR_PATH, OLD_PPR_PATH
+from constant.constant import PPR_PATH
 from utils.patterns import compare_rankings, extract_and_rank_patterns_for_country
 from plotting.plotting import couple_countries_dashboard, display_timeline, visualize_plots, visualize_table
 from utils.utils import (
@@ -51,8 +51,7 @@ if st.session_state["show_patterns_popup"]:
 
 
 ## Page data load
-old_ppr_df = pd.read_csv(OLD_PPR_PATH)
-new_ppr_df = pd.read_csv(NEW_PPR_PATH)
+
 
 
 ## Page body logic
@@ -105,14 +104,15 @@ def show_search_page():
 
         """)
     # Pattern Power Ranking Section
-    ppr_df = compare_rankings(old_ppr_df, new_ppr_df)
+    ppr_df = pd.read_csv(PPR_PATH)
+    ppr_df = compare_rankings(ppr_df)
 
     with st.expander("You can take some inspiration from the Pattern Power Ranking table here"):
         # unique_sectors = sorted(set(x for l in ppr_df["Sectors"] for x in l))
         # selected_sectors = st.multiselect("Filter based on Sectors:", unique_sectors)
         # if selected_sectors:
         #     ppr_df = ppr_df[ppr_df["Sectors"].apply(lambda x: all(sector in x for sector in selected_sectors))]
-        
+        ppr_df.index = [i + 1 for i in range(len(ppr_df))]
         st.dataframe(ppr_df, use_container_width = True)
     st.markdown("___")
 
@@ -142,13 +142,13 @@ def show_search_page():
     five_params                                      = [country_a_id, country_b_id, patt_len, start_year_a, start_year_b]
     plotting_df                                      = update_names_of_main_and_index_names(plotting_df, five_params)
 
-    align, method                                    = plotting_transformations(five_params)
+    #align, method                                    = plotting_transformations(five_params)
 
     couple_countries_dashboard(five_params, couple_of_countries, display_df, pattern_power_score, countries_df, plotting_df)
     display_timeline(five_params, events_df, country_a, start_year_a, country_b, start_year_b, patt_len)
 
     col1, col2, col3 = st.columns(3)
     visualize_table(display_df, display_message, validate_five_params(five_params))
-    visualize_plots(plotting_df, five_params, [col1, col2, col3], method, align)
+    visualize_plots(plotting_df, five_params, [col1, col2, col3])
 
 show_search_page()

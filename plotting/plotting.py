@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from constant.sectors import SECTOR_MAPPING
 from database.db_manager import get_alpha2_by_name, get_country_b_counts_for_country_a
-from utils.utils import combine_values, final_touches_to_df, replace_item_in_list, round_list_items, validate_five_params
+from utils.utils import combine_values, final_touches_to_df, get_index_metadata, replace_item_in_list, round_list_items, validate_five_params
 from streamlit_echarts import st_echarts, JsCode
 import streamlit as st
 from streamlit_extras.dataframe_explorer import dataframe_explorer
@@ -46,83 +46,115 @@ def clean_list_edges(lst):
     return lst
 
 
-def plot_index_values(df_row, method, align):
-    st.markdown(f"##### {df_row['org_fk']}")
-    #st.markdown(f"### {substitute_index_display_names(df_row)}")
-    st.markdown(f"### {df_row['index_name_fk']}")
+def plot_index_values(df_row):
+    # st.write(df_row)
+    with st.expander(df_row["index_name_fk"], expanded=True):
+        st.markdown(f"##### {df_row['org_fk']}")
+        #st.markdown(f"### {substitute_index_display_names(df_row)}")
+        st.markdown(f"### {df_row['index_name_fk']}")
 
-    # Combine values into a DataFrame
-    merged_df = combine_values(df_row)
+        merged_df = combine_values(df_row)
+        values_a = round_list_items(replace_item_in_list(list(merged_df["Value_A"]), "nan", ""))
+        values_b = round_list_items(replace_item_in_list(list(merged_df["Value_B"]), "nan", ""))
 
-    values_a = round_list_items(replace_item_in_list(list(merged_df["Value_A"]), "nan", ""))
-    values_b = round_list_items(replace_item_in_list(list(merged_df["Value_B"]), "nan", ""))
-    
-    if method != "" or method == "Raw Representation":
-        values_a, values_b = apply_method_on_plots(method, values_a, values_b)
-    
-    alt_x_values = merged_df["Year"].tolist()
-    
-    if align:
-        values_a = clean_list_edges(values_a)
-        values_b = clean_list_edges(values_b)
+        with st.popover("Modify plot representation"):
+            align = False
+            if df_row["start_year_a_fk"] != df_row["start_year_b_fk"]:
+                align = st.toggle("Align Index Couples", key = "toggle_" + df_row["index_name_fk"], help = "Aligns both index segments to start from the same year. ")
+
+            method = st.radio(
+                "Choose Representation method", 
+                ["Raw Representation", "Normalize", "Standardize", "Base Year Indexing", "Logarithmic Scaling", "Growth Rates"],
+                key = f"temp_{df_row['index_name_fk']}",
+                help = ""
+            )
+
         
-        alt_x_values = ["Year " + str(x_val + 1) for x_val in range(len(merged_df["Year"].tolist()) - 1)]
+        if method != "" or method == "Raw Representation":
+            values_a, values_b = apply_method_on_plots(method, values_a, values_b)
+        
+        alt_x_values = merged_df["Year"].tolist()
+        
+        if align:
+            values_a = clean_list_edges(values_a)
+            values_b = clean_list_edges(values_b)
+            
+            alt_x_values = ["Year " + str(x_val + 1) for x_val in range(len(merged_df["Year"].tolist()) - 1)]
 
-    country_a = df_row["country_a_id_fk"] # db.get_value_by_id("country", df_row["country_a_id_fk"], "name_1")
-    country_b = df_row["country_b_id_fk"] # db.get_value_by_id("country", df_row["country_b_id_fk"], "name_1")
+        country_a = df_row["country_a_id_fk"] # db.get_value_by_id("country", df_row["country_a_id_fk"], "name_1")
+        country_b = df_row["country_b_id_fk"] # db.get_value_by_id("country", df_row["country_b_id_fk"], "name_1")
 
-    # Prepare data for ECharts
-    option = {
-        "title": {
-            #"text": df_row["index_name"],
-            "subtext": "Correlation: " + str(round(float(df_row["correlation"]) * 100, 2)) + "%",
-            #"sublink": "http://example.com/",
-        },
-        "xAxis": {
-            "type": "category",
-            "boundaryGap": False,
-            "data": alt_x_values if align else merged_df["Year"].tolist(),
-        },
-        "tooltip": {"trigger": "axis"},
-        # "tooltip": {
-        #     "trigger": "axis",
-        #     "axisPointer": {"type": "shadow"},
-        #     "formatter": JsCode(
-        #         "function(params){var tar;if(params[1].value!=='-'){tar=params[1]}else{tar=params[0]}return tar.name+'<br/>'+tar.seriesName+' : '+tar.value}"
-        #     ).js_code,
-        # },
-        "legend": {"data": [country_a, country_b]},
-        "grid": {"left": "3%", "right": "4%", "bottom": "3%", "containLabel": True},
-        #"toolbox": {"feature": {"saveAsImage": {}}}, <<< add image saving function + watermark
-        "yAxis": {"type": "value"},
-        "series": [
-            {
-                #"areaStyle": {},
-                "name": country_a ,
-                #"label": {"show": True},
-                "data": values_a, 
-                "type": "line", # "bar"
-                "name": country_a, 
-                "emphasis": {"focus": "series"}
-            }, 
-            {
-                #"areaStyle": {}
-                "name": country_b,
-                #"label": {"show": True},
-                "data": values_b, 
-                "type": "line", # "bar"
-                "name": country_b,
-                "emphasis": {"focus": "series"}
-            }
-        ],
-    }
-    events = {
-        #"click": "function(params) { console.log(params.name); return params.name }",
-        #"dblclick":"function(params) { return [params.type, params.name, params.value] }"
-    }
+        # Prepare data for ECharts
+        option = {
+            "title": {
+                #"text": df_row["index_name"],
+                "subtext": "Correlation: " + str(round(float(df_row["correlation"]) * 100, 2)) + "%",
+                #"sublink": "http://example.com/",
+            },
+            "xAxis": {
+                "type": "category",
+                "boundaryGap": False,
+                "data": alt_x_values if align else merged_df["Year"].tolist(),
+            },
+            "tooltip": {"trigger": "axis"},
+            # "tooltip": {
+            #     "trigger": "axis",
+            #     "axisPointer": {"type": "shadow"},
+            #     "formatter": JsCode(
+            #         "function(params){var tar;if(params[1].value!=='-'){tar=params[1]}else{tar=params[0]}return tar.name+'<br/>'+tar.seriesName+' : '+tar.value}"
+            #     ).js_code,
+            # },
+            "legend": {"data": [country_a, country_b]},
+            "grid": {"left": "3%", "right": "4%", "bottom": "3%", "containLabel": True},
+            #"toolbox": {"feature": {"saveAsImage": {}}}, <<< add image saving function + watermark
+            "yAxis": {"type": "value"},
+            "series": [
+                {
+                    #"areaStyle": {},
+                    "name": country_a ,
+                    #"label": {"show": True},
+                    "data": values_a, 
+                    "type": "line", # "bar"
+                    "name": country_a, 
+                    "emphasis": {"focus": "series"}
+                }, 
+                {
+                    #"areaStyle": {}
+                    "name": country_b,
+                    #"label": {"show": True},
+                    "data": values_b, 
+                    "type": "line", # "bar"
+                    "name": country_b,
+                    "emphasis": {"focus": "series"}
+                }
+            ],
+        }
+        events = {
+            #"click": "function(params) { console.log(params.name); return params.name }",
+            #"dblclick":"function(params) { return [params.type, params.name, params.value] }"
+        }
 
+        st_echarts(options = option, events = events, height = "400px", width = "100%", key = df_row["index_name_fk"])
 
-    st_echarts(options = option, events = events, height = "400px", width = "100%", key = df_row["index_name_fk"])
+        metadata = get_index_metadata(df_row)
+        if metadata is not None:
+            description, tips, source, citation = metadata
+            description_col, tips_col, source_col = st.columns([1, 1, 1], gap = "small")
+            with description_col:
+                with st.popover("Description"):
+                    st.markdown(description)
+            with tips_col:
+                with st.popover("Tips 💡"):
+                    st.markdown(tips)
+            with source_col:
+                with st.popover("Source 🔗"):
+                    st.markdown(source)
+            st.markdown("""<style>.big-font {font-size:12px !important;}</style>""", unsafe_allow_html = True)
+            st.markdown(f'<p class="big-font">{citation}</p>', unsafe_allow_html = True)
+        else:
+            coming_soon_message = "Index metadata coming soon ⏳"
+            st.markdown("""<style>.big-font {font-size:12px !important;}</style>""", unsafe_allow_html = True)
+            st.markdown(f'<p class="big-font">{coming_soon_message}</p>', unsafe_allow_html = True)
 
 
 def index_to_base_year(list1, list2):
@@ -232,41 +264,14 @@ def visualize_table(df, display_message, params_validation):
 
         df = final_touches_to_df(df)
 
-        ## TODO improve sector fileration
-        ###################################################################################################
-        unique_sectors = sorted(set(x for l in df["Sectors"] for x in l))
-        selected_sectors = st.multiselect("Filter based on Sectors:", unique_sectors)
-        if selected_sectors:
-            df = df[df["Sectors"].apply(lambda x: all(sector in x for sector in selected_sectors))]
+        if "Sectors" in list(df):
+            df["Sectors"] = df["Sectors"].apply(lambda x: sorted(set(["Other" if i == "Unknown" else i for i in x]), key=lambda y: (y == "Other", y)))
+            unique_sectors   = sorted(set(x for l in df["Sectors"] for x in l))
+            selected_sectors = st.multiselect("Filter based on Sectors:", unique_sectors)
+            if selected_sectors:
+                df = df[df["Sectors"].apply(lambda x: all(sector in x for sector in selected_sectors))]
 
-
-        # # Initialize session state for selected sectors if not already done
-        # if "selected_sectors" not in st.session_state:
-        #     st.session_state.selected_sectors = []
-
-        # # Function to filter DataFrame based on selected sectors
-        # def filter_df_by_sectors(df, sectors):
-        #     if sectors:
-        #         return df[df["Sectors"].apply(lambda x: all(sector in x for sector in sectors))]
-        #     return df
-
-        # # Always start with the original DataFrame to determine selectable options
-        # filtered_df = filter_df_by_sectors(df, st.session_state.selected_sectors)
-
-        # # Determine selectable options based on the filtered DataFrame
-        # selectable_options = sorted(set(x for l in filtered_df["Sectors"] for x in l))
-
-        # # Update multiselect with selectable options (includes previously selected sectors)
-        # selected_sectors = st.multiselect("Filter based on sectors:", options=selectable_options, default=st.session_state.selected_sectors)
-
-        # # Update session state with the latest selection
-        # st.session_state.selected_sectors = selected_sectors
-
-        # # Refilter DataFrame based on the updated selection
-        # df = filter_df_by_sectors(df, selected_sectors)
-        ###################################################################################################
-
-        flags_column                                   = "Flags"
+        #flags_column                                   = "Flags"
         country_b_column                               = [col for col in list(df) if "has Patterns with" in col][0]
         country_b                                      = country_b_column.split(" ")[0]
         starting_year_column_a, starting_year_column_b = [col for col in list(df) if "Starting Year" in col]
@@ -299,36 +304,23 @@ def visualize_table(df, display_message, params_validation):
         )
 
 
-def visualize_plots(df, five_params, page_cols, method, align):
+def visualize_plots(df, five_params, page_cols):
     if isinstance(df, pd.DataFrame) and len(df) > 0 and validate_five_params(five_params):
-        # if not warnings.empty:
-        #     st.markdown(f"### {country_a} can Learn from These Past Patterns")
-        #     st.dataframe(warnings[[
-        #         DISPLAY_DF_COUNTRY_B_RENAME,
-        #         DISPLAY_DF_START_YEAR_A_RENAME,
-        #         DISPLAY_DF_START_YEAR_B_RENAME,
-        #         "Year Gap",
-        #         DISPLAY_DF_PATTERN_LENGTH_RENAME,
-        #         DISPLAY_DF_NUMBER_OF_INDEXES_RENAME,
-        #         DISPLAY_DF_AVERAGE_CORRELATION_RENAME,
-        #         DISPLAY_DF_PATTERN_POWER_SCORE_RENAME
-        #         ]], use_container_width = True)
-        #graphs_rows = []
         i = 1
         for _, row in df.iterrows():
             #graphs_rows.append(row)
             if i == 1:
                 i = 2
                 with page_cols[0]:
-                    plot_index_values(row, method, align)
+                    plot_index_values(row)
             elif i == 2:
                 i = 3
                 with page_cols[1]:
-                    plot_index_values(row, method, align)
+                    plot_index_values(row)
             elif i == 3:
                 i = 1
                 with page_cols[2]:
-                    plot_index_values(row, method, align)
+                    plot_index_values(row)
 
 
 def categorize_indexes(df):

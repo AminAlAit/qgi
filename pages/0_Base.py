@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from constant.constant import NEW_PPR_PATH, OLD_PPR_PATH
+from constant.constant import PPR_PATH
 from constant.sectors import ALL_SECTORS, SECTOR_MAPPING
 from constant.tips import (
     BASE_PPR_LEADERBOARD,
@@ -14,15 +14,11 @@ st.set_page_config(layout = "wide", page_title = "QG Intelligence", page_icon = 
 center_running()
 
 
-old_ppr_df = pd.read_csv(OLD_PPR_PATH)
-new_ppr_df = pd.read_csv(NEW_PPR_PATH)
-
-
 def show_base_page():
     st.markdown("# QG Intelligence")
-
+    ppr_df = pd.read_csv(PPR_PATH)
     col1, col2 = st.columns([3, 1])
-    ppr_df = compare_rankings(old_ppr_df, new_ppr_df, make_countries_index = False)
+    ppr_df = compare_rankings(ppr_df, make_countries_index = False)
 
     with col1:
         with st.container(border = True):

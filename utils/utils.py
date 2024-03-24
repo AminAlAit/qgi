@@ -5,7 +5,7 @@ import subprocess
 import streamlit as st
 import pandas as pd
 from constant.constant import ALL_COUNTRIES_EVENTS_CSV_PATH
-from constant.index_names_subs import INDEX_NAMES_THAT_NEED_CHANGING, MAIN_NAMES_THAT_NEED_CHANGING
+from constant.index_metadata import INDEX_NAMES_THAT_NEED_CHANGING, MAIN_NAMES_THAT_NEED_CHANGING, INDEX_METADATA
 from constant.tips import (
     GET_TIP_PATTERN_LENGTH_RANGE_SLIDER,
     GET_TIP_STARTING_YEAR_SLIDER,
@@ -351,11 +351,13 @@ def get_country_a_from_user():
 
 @st.cache_data(ttl=300)
 def get_sorted_countries_list(return_countries_df = True):
-    countries_df = get_countries_a_list()
-    countries_df = countries_df.sort_values(by = "country")
+    countries_df   = get_countries_a_list()
+    countries_df   = countries_df.sort_values(by = "country")
+    countries_list = sorted(list(set(countries_df["country"])))
+
     if return_countries_df:
-        return [""] + list(countries_df["country"]), countries_df
-    return [""] + list(countries_df["country"])
+        return [""] + countries_list, countries_df
+    return [""] + countries_list
 
 
 def find_csv_files(root_path):
@@ -634,7 +636,8 @@ def final_touches_to_df(df):
     df = df.drop(["country_a_id_fk"], axis = 1)
     df.rename(columns = {"orgs": "Organizations"}, inplace = True)
     df = switch_columns(df)
-    df = convert_str_to_list(df, "Sectors")
+    if "Sectors" in list(df):
+        df = convert_str_to_list(df, "Sectors")
     return df
 
 
@@ -726,3 +729,22 @@ def get_events_df():
         if "Unnamed" in col:
             df = df.drop([col], axis = 1)
     return df 
+
+
+def get_index_metadata(solo_pattern: pd.Series):
+    org        = solo_pattern["org_fk"]
+    main       = solo_pattern["main_name_fk"]
+    index_name = solo_pattern["index_name_fk"]
+    
+    orgs = INDEX_METADATA.keys()
+    if org in orgs:
+        org_metadata = INDEX_METADATA[org]
+        for index_metadata in org_metadata:
+            if main == index_metadata["main_name"] and index_name == index_metadata["index_name"]:
+                description = index_metadata["description"]
+                tips        = index_metadata["tips"]
+                source      = index_metadata["source"]
+                citation    = index_metadata["citation"]
+                return [description, tips, source, citation]
+    else:
+        return None
