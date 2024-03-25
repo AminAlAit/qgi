@@ -2,6 +2,7 @@ import math
 import numpy as np
 import pandas as pd
 from constant.sectors import SECTOR_MAPPING
+from constant.tips import TIP_TRANSFORMATION_CAPTIONS, TIP_TRANSFORMATION_RADIO
 from database.db_manager import get_alpha2_by_name, get_country_b_counts_for_country_a
 from utils.utils import combine_values, final_touches_to_df, get_index_metadata, replace_item_in_list, round_list_items, validate_five_params
 from streamlit_echarts import st_echarts, JsCode
@@ -66,7 +67,8 @@ def plot_index_values(df_row):
                 "Choose Representation method", 
                 ["Raw Representation", "Normalize", "Standardize", "Base Year Indexing", "Logarithmic Scaling", "Growth Rates"],
                 key = f"temp_{df_row['index_name_fk']}",
-                help = ""
+                captions=TIP_TRANSFORMATION_CAPTIONS,
+                help=TIP_TRANSFORMATION_RADIO
             )
 
         
