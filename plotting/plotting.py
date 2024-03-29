@@ -70,7 +70,6 @@ def plot_index_values(df_row):
                 captions=TIP_TRANSFORMATION_CAPTIONS,
                 help=TIP_TRANSFORMATION_RADIO
             )
-
         
         if method != "" or method == "Raw Representation":
             values_a, values_b = apply_method_on_plots(method, values_a, values_b)
