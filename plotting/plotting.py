@@ -1,6 +1,7 @@
 import math
 import numpy as np
 import pandas as pd
+from constant.constant import EVENTS_CSVS_FOLDER_PATH
 from constant.sectors import SECTOR_MAPPING
 from constant.tips import TIP_TRANSFORMATION_CAPTIONS, TIP_TRANSFORMATION_RADIO
 from database.db_manager import get_alpha2_by_name, get_country_b_counts_for_country_a
@@ -83,6 +84,11 @@ def get_annotations(similar_events):
 
 
 def plot_index_values(df_row):
+    country_a = df_row['country_a_id_fk']
+    country_b = df_row['country_b_id_fk']
+    events_a = pd.read_csv(EVENTS_CSVS_FOLDER_PATH + country_a + ".csv")
+    events_b = pd.read_csv(EVENTS_CSVS_FOLDER_PATH + country_b + ".csv")
+
     # st.write(df_row)
     with st.expander(df_row["index_name_fk"], expanded=True):
         st.markdown(f"##### {df_row['org_fk']}")
