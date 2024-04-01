@@ -12,7 +12,6 @@ from utils.utils import (
     apply_advanced_filters,
     get_country_a_from_user,
     get_country_b_and_id_from_user,
-    get_events_df,
     get_pattern_length_from_user,
     get_pattern_power_score,
     get_start_year_a,
@@ -56,7 +55,6 @@ if st.session_state["show_patterns_popup"]:
 
 ## Page body logic
 def show_search_page():
-    events_df = get_events_df()
     with st.expander("Hey, welcome to **QG Intelligence**!"):
         st.markdown("""
             # Welcome to QG Intelligence
