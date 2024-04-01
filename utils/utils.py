@@ -754,8 +754,11 @@ def get_correlated_events_details(pattern):
     start_year_b = pattern['start_year_b_fk']
     pattern_length = pattern['pattern_length_fk']
     
-    events_a = pd.read_csv(EVENTS_CSVS_FOLDER_PATH + "/" + country_a + ".csv")
-    events_b = pd.read_csv(EVENTS_CSVS_FOLDER_PATH + "/" + country_b + ".csv")
+    # st.write("/workspaces/qgi/data/events/Azerbaijan.csv")
+    # st.dataframe(pd.read_csv('/workspaces/qgi/data/events/Azerbaijan.csv'))
+
+    events_a = pd.read_csv(EVENTS_CSVS_FOLDER_PATH + country_a + ".csv")
+    events_b = pd.read_csv(EVENTS_CSVS_FOLDER_PATH + country_b + ".csv")
 
     # Find the country names from the events DataFrame
     country_a_name = events_a[events_a['Country'] == country_a]['Country'].unique().tolist()[0]
