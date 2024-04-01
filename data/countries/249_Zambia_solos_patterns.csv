@@ -338,8 +338,6 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 7267386,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,212,7,0.9375,2009,"7.5,7.3,7.3,7.0,7.2,6.9,6.6",2017,"9.7,9.2,8.9,8.6,8.7,8.4,8.1",2023-12-20 15:59:37,Sovereignty
 3996892,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,200,7,0.95921,2009,"7.1,7.3,7.3,7.7,8.0,8.3,8.6",2007,"2.5,2.9,3.0,3.1,3.4,3.7,3.7",2023-12-17 11:42:44,Human Rights Development
 5927096,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,200,7,0.95522,2009,"5.6,5.9,6.1,6.4,6.7,6.8,6.8",2007,"4.0,4.3,4.3,4.4,4.7,5.0,4.9",2023-12-19 12:14:07,Human Rights Development
-5927198,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,180,7,0.98334,2009,"5.6,5.9,6.1,6.4,6.7,6.8,6.8",2013,"7.5,7.6,7.9,8.2,8.5,8.508523809367782,8.4",2023-12-19 12:14:18,Human Rights Development
-7267674,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,180,7,0.92942,2009,"7.5,7.3,7.3,7.0,7.2,6.9,6.6",2013,"8.2,7.9,7.6,7.3,7.1,6.8,6.5",2023-12-20 15:59:51,Sovereignty
 5927189,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,179,7,0.97435,2009,"5.6,5.9,6.1,6.4,6.7,6.8,6.8",2010,"4.7,5.0,5.3,5.6,5.9,6.2,6.5",2023-12-19 12:14:17,Human Rights Development
 7267666,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,179,7,0.92887,2009,"7.5,7.3,7.3,7.0,7.2,6.9,6.6",2010,"5.0,4.6,4.3,4.0,3.7,3.2,2.9",2023-12-20 15:59:51,Sovereignty
 3996923,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,66,7,0.92197,2009,"7.1,7.3,7.3,7.7,8.0,8.3,8.6",2006,"6.0,5.9,5.9,6.0,6.2,6.5,6.9",2023-12-17 11:42:46,Human Rights Development
@@ -411,9 +409,7 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 3002521,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,31,3,0.97073,2010,"8.0,7.7,8.1",2012,"3.6,3.3,3.6",2023-12-16 09:35:41,Finance Economy Sector
 5925872,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,31,3,0.9934,2010,"5.9,6.1,6.4",2012,"5.0,5.3,5.6",2023-12-19 12:12:43,Human Rights Development
 32205647,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,31,3,0.99675,2010,"7.65,6.75,6.31",2012,"3.7,3.55,3.45",2024-01-19 03:13:59,Military Sector
-2665166,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,180,3,1.0,2008,"5.2,5.3,5.4",2015,"6.6,6.9,7.2",2023-12-15 17:11:38,Social Sector
-4695426,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,180,3,0.96077,2008,"6.7,7.0,7.1",2015,"6.8,7.1,7.4",2023-12-18 11:01:07,Human Rights Development
-6415488,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,180,3,1.0,2008,"8.8,9.0,9.0",2015,"7.8,8.1,8.1",2023-12-19 22:06:10,Social Sector
+2664964,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,50,3,0.9934,2008,"5.2,5.3,5.4",2015,"9.5,9.7,10.0",2023-12-15 17:11:26,Social Sector
 5926001,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,44,3,0.99718,2010,"5.9,6.1,6.4",2006,"3.6,3.7,3.9",2023-12-19 12:12:50,Human Rights Development
 31244362,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,249,44,3,0.97893,2010,"1.38,1.26,1.39",2006,"2.51,2.33,2.58",2024-01-17 03:25:03,Military Sector
 32205649,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,44,3,0.98004,2010,"7.65,6.75,6.31",2006,"13.38,12.07,11.86",2024-01-19 03:13:59,Military Sector
@@ -527,8 +523,6 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 5927010,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,38,6,0.94842,2008,"5.8,5.6,5.9,6.1,6.4,6.7",2006,"6.9,7.1,7.1,7.4,7.7,8.0",2023-12-19 12:13:59,Human Rights Development
 3996810,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,223,6,0.90741,2011,"7.3,7.7,8.0,8.3,8.6,8.9",2012,"7.6,7.6,7.8,8.1,8.4,8.2",2023-12-17 11:42:39,Human Rights Development
 5108811,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,223,6,0.95197,2011,"7.6,8.0,8.0,7.7,7.4,7.2",2012,"8.2,8.3,8.4,8.1,8.0,7.8",2023-12-18 18:46:13,Political State Sector
-1216694,The Fund For Peace,Fragile State Index,Total,2023,249,180,6,0.95085,2006,"79.6,80.6,81.6,84.2,83.9,83.8",2014,"89.6,90.8,92.2,93.4,93.12762985550376,92.5",2023-12-14 06:49:21,Finance Economy Sector
-5500192,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,180,6,0.90643,2006,"7.8,7.9,7.9,8.4,8.0,7.8",2014,"8.8,9.1,9.2,9.5,9.2,8.9",2023-12-19 03:10:37,Political State Sector
 6804924,The Fund For Peace,Fragile State Index,S2: Refugees and IDPs,2023,249,150,6,0.94088,2012,"7.3,7.4,7.2,6.9,6.6,6.4",2016,"5.2,5.0,4.7,4.4,4.2,4.1",2023-12-20 07:07:10,Social Sector
 31794054,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,150,6,0.9158,2012,"23.9,25.5,28.8,23.5,18.3,20.2",2016,"180.4,189.8,186.1,166.0,144.9,154.7",2024-01-17 19:54:39,Military Sector
 2399991,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,220,6,0.94993,2008,"5.5,5.7,6.1,5.8,6.0,5.7",2007,"5.5,5.8,6.3,6.0,6.0,5.7",2023-12-15 12:08:46,Social Sector
@@ -562,12 +556,12 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 5108383,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,67,5,0.98991,2012,"8.0,8.0,7.7,7.4,7.2",2008,"4.8,4.7,4.5,4.1,3.8",2023-12-18 18:45:45,Political State Sector
 2399900,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,238,5,1.0,2012,"6.0,5.7,5.7,5.7,5.7",2010,"3.0,2.7,2.7,2.7,2.7",2023-12-15 12:08:40,Social Sector
 5108348,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,238,5,0.98909,2012,"8.0,8.0,7.7,7.4,7.2",2010,"2.6,2.5,2.2,1.7,1.6",2023-12-18 18:45:42,Political State Sector
+2399916,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,35,5,1.0,2012,"6.0,5.7,5.7,5.7,5.7",2016,"8.1,7.8,7.8,7.8,7.8",2023-12-15 12:08:41,Social Sector
+5108430,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,35,5,0.98554,2012,"8.0,8.0,7.7,7.4,7.2",2016,"7.3,7.1,6.8,6.5,6.2",2023-12-18 18:45:48,Political State Sector
 2399973,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,127,5,1.0,2012,"6.0,5.7,5.7,5.7,5.7",2010,"3.6,3.4,3.4,3.4,3.4",2023-12-15 12:08:44,Social Sector
 5108653,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,127,5,0.98554,2012,"8.0,8.0,7.7,7.4,7.2",2010,"2.7,2.5,2.2,1.9,1.6",2023-12-18 18:46:02,Political State Sector
 2399927,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,108,5,1.0,2012,"6.0,5.7,5.7,5.7,5.7",2016,"9.4,9.1,9.1,9.1,9.1",2023-12-15 12:08:42,Social Sector
 5108459,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,108,5,0.98554,2012,"8.0,8.0,7.7,7.4,7.2",2016,"8.1,7.9,7.6,7.3,7.0",2023-12-18 18:45:50,Political State Sector
-2399916,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,35,5,1.0,2012,"6.0,5.7,5.7,5.7,5.7",2016,"8.1,7.8,7.8,7.8,7.8",2023-12-15 12:08:41,Social Sector
-5108430,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,35,5,0.98554,2012,"8.0,8.0,7.7,7.4,7.2",2016,"7.3,7.1,6.8,6.5,6.2",2023-12-18 18:45:48,Political State Sector
 2399940,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,80,5,1.0,2012,"6.0,5.7,5.7,5.7,5.7",2014,"9.5,9.1,9.1,9.1,9.1",2023-12-15 12:08:43,Social Sector
 5108501,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,80,5,0.98414,2012,"8.0,8.0,7.7,7.4,7.2",2014,"8.7,8.8,8.5,8.3,8.0",2023-12-18 18:45:53,Political State Sector
 2399979,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,222,5,1.0,2012,"6.0,5.7,5.7,5.7,5.7",2010,"8.7,8.3,8.3,8.3,8.3",2023-12-15 12:08:45,Social Sector
@@ -926,8 +920,6 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 2665447,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,42,4,0.93114,2007,"5.2,5.2,5.3,5.4",2012,"8.5,8.5,9.5,9.6",2023-12-15 17:11:53,Social Sector
 2136449,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,118,4,0.92057,2007,"5.5,5.5,5.2,5.0",2007,"7.9,8.1,7.7,7.6",2023-12-15 07:01:55,Social Sector
 2665419,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,118,4,0.98644,2007,"5.2,5.2,5.3,5.4",2007,"6.8,6.8,7.2,7.4",2023-12-15 17:11:51,Social Sector
-1215876,The Fund For Peace,Fragile State Index,Total,2023,249,180,4,0.96205,2007,"80.6,81.6,84.2,83.9",2015,"90.8,92.2,93.4,93.12762985550376",2023-12-14 06:48:29,Finance Economy Sector
-2665563,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,180,4,0.94388,2007,"5.2,5.2,5.3,5.4",2015,"6.6,6.9,7.2,7.5",2023-12-15 17:11:59,Social Sector
 1215631,The Fund For Peace,Fragile State Index,Total,2023,249,114,4,0.99772,2007,"80.6,81.6,84.2,83.9",2007,"91.3,93.4,101.4,100.7",2023-12-14 06:48:13,Finance Economy Sector
 2665412,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,114,4,0.90809,2007,"5.2,5.2,5.3,5.4",2007,"6.9,7.6,8.6,8.9",2023-12-15 17:11:51,Social Sector
 1215355,The Fund For Peace,Fragile State Index,Total,2023,249,148,4,0.95722,2007,"80.6,81.6,84.2,83.9",2019,"88.7,91.69371296150742,93.9,94.29999999999998",2023-12-14 06:47:56,Finance Economy Sector
@@ -942,8 +934,6 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 2665426,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,248,4,0.94903,2007,"5.2,5.2,5.3,5.4",2008,"7.3,7.7,8.2,8.6",2023-12-15 17:11:51,Social Sector
 4695522,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,2,4,0.92881,2011,"6.8,7.1,7.4,7.7",2019,"7.8,8.1,8.3,8.3",2023-12-18 11:01:14,Human Rights Development
 6415526,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,2,4,0.97463,2011,"8.9,9.1,9.3,9.3",2019,"3.1,3.6,4.1,4.4",2023-12-19 22:06:13,Social Sector
-4695874,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,180,4,1.0,2011,"6.8,7.1,7.4,7.7",2015,"6.8,7.1,7.4,7.7",2023-12-18 11:01:45,Human Rights Development
-6415730,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,180,4,0.90326,2011,"8.9,9.1,9.3,9.3",2015,"7.8,8.1,8.1,8.17829548792862",2023-12-19 22:06:26,Social Sector
 4695876,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,204,4,1.0,2011,"6.8,7.1,7.4,7.7",2012,"5.4,5.7,6.0,6.3",2023-12-18 11:01:45,Human Rights Development
 6415731,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,204,4,0.90267,2011,"8.9,9.1,9.3,9.3",2012,"7.6,7.7,8.2,8.5",2023-12-19 22:06:26,Social Sector
 4695622,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,21,4,0.98271,2011,"6.8,7.1,7.4,7.7",2020,"2.3,2.5,2.6,2.7",2023-12-18 11:01:21,Human Rights Development
@@ -970,34 +960,34 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 6415529,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,53,4,0.92756,2011,"8.9,9.1,9.3,9.3",2020,"2.6,4.6,5.1,4.8",2023-12-19 22:06:13,Social Sector
 1215526,The Fund For Peace,Fragile State Index,Total,2023,249,84,4,0.95624,2007,"80.6,81.6,84.2,83.9",2006,"41.1,43.5,45.4,46.1",2023-12-14 06:48:06,Finance Economy Sector
 2665341,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,84,4,0.93677,2007,"5.2,5.2,5.3,5.4",2006,"3.5,3.5,4.3,4.4",2023-12-15 17:11:47,Social Sector
-2136651,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,25,4,0.94868,2007,"5.5,5.5,5.2,5.0",2018,"4.2,3.9,3.6,3.3",2023-12-15 07:02:09,Social Sector
-2665510,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,25,4,0.94388,2007,"5.2,5.2,5.3,5.4",2018,"8.200000000000001,8.5,8.8,9.1",2023-12-15 17:11:56,Social Sector
-2136750,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,145,4,0.94868,2007,"5.5,5.5,5.2,5.0",2020,"4.9,4.6,4.3,4.0",2023-12-15 07:02:15,Social Sector
-2665557,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,145,4,0.94388,2007,"5.2,5.2,5.3,5.4",2020,"9.0,9.1,9.2,9.3",2023-12-15 17:11:59,Social Sector
-2136393,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,166,4,0.94868,2007,"5.5,5.5,5.2,5.0",2020,"3.3000000000000003,3.0,2.7,2.4",2023-12-15 07:01:51,Social Sector
-2665385,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,166,4,0.94388,2007,"5.2,5.2,5.3,5.4",2020,"2.0,2.3,2.6,2.9",2023-12-15 17:11:49,Social Sector
-2136532,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,223,4,0.94868,2007,"5.5,5.5,5.2,5.0",2020,"6.7,6.4,6.1,5.8",2023-12-15 07:02:01,Social Sector
-2665457,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,223,4,0.94388,2007,"5.2,5.2,5.3,5.4",2020,"5.7,6.0,6.3,6.6",2023-12-15 17:11:53,Social Sector
-2136366,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,210,4,0.94868,2007,"5.5,5.5,5.2,5.0",2020,"3.7,3.4,3.1,2.8",2023-12-15 07:01:49,Social Sector
-2665353,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,210,4,0.94388,2007,"5.2,5.2,5.3,5.4",2020,"6.4,6.7,7.0,7.3",2023-12-15 17:11:48,Social Sector
-2136650,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,25,4,0.94868,2007,"5.5,5.5,5.2,5.0",2017,"4.5,4.2,3.9,3.6",2023-12-15 07:02:09,Social Sector
-2665509,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,25,4,0.94388,2007,"5.2,5.2,5.3,5.4",2017,"7.9,8.200000000000001,8.5,8.8",2023-12-15 17:11:56,Social Sector
 2136320,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,215,4,0.94868,2007,"5.5,5.5,5.2,5.0",2020,"3.0,2.7,2.4,2.1",2023-12-15 07:01:45,Social Sector
 2665306,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,215,4,0.94388,2007,"5.2,5.2,5.3,5.4",2020,"1.4,1.7,2.0,2.3",2023-12-15 17:11:45,Social Sector
-2136652,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,25,4,0.94868,2007,"5.5,5.5,5.2,5.0",2019,"3.9,3.6,3.3,3.0",2023-12-15 07:02:09,Social Sector
-2665511,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,25,4,0.94388,2007,"5.2,5.2,5.3,5.4",2019,"8.5,8.8,9.1,9.4",2023-12-15 17:11:56,Social Sector
-2136653,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,25,4,0.94868,2007,"5.5,5.5,5.2,5.0",2020,"3.6,3.3,3.0,2.7",2023-12-15 07:02:09,Social Sector
-2665512,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,25,4,0.94388,2007,"5.2,5.2,5.3,5.4",2020,"8.8,9.1,9.4,9.7",2023-12-15 17:11:56,Social Sector
-2136225,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,117,4,0.94868,2007,"5.5,5.5,5.2,5.0",2020,"3.3000000000000003,3.0,2.7,2.4",2023-12-15 07:01:38,Social Sector
-2665207,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,117,4,0.94388,2007,"5.2,5.2,5.3,5.4",2020,"3.8,4.1,4.4,4.7",2023-12-15 17:11:40,Social Sector
-2136260,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,147,4,0.94868,2007,"5.5,5.5,5.2,5.0",2013,"6.3,6.0,5.7,5.4",2023-12-15 07:01:40,Social Sector
-2665223,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,147,4,0.94388,2007,"5.2,5.2,5.3,5.4",2013,"6.5,6.8,7.1,7.4",2023-12-15 17:11:41,Social Sector
-2136712,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,213,4,0.94868,2007,"5.5,5.5,5.2,5.0",2019,"4.6,4.3,4.0,3.7",2023-12-15 07:02:13,Social Sector
-2665535,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,213,4,0.94388,2007,"5.2,5.2,5.3,5.4",2019,"5.8,6.1,6.4,6.7",2023-12-15 17:11:58,Social Sector
 2136713,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,213,4,0.94868,2007,"5.5,5.5,5.2,5.0",2020,"4.3,4.0,3.7,3.4",2023-12-15 07:02:13,Social Sector
 2665536,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,213,4,0.94388,2007,"5.2,5.2,5.3,5.4",2020,"6.1,6.4,6.7,7.0",2023-12-15 17:11:58,Social Sector
+2136712,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,213,4,0.94868,2007,"5.5,5.5,5.2,5.0",2019,"4.6,4.3,4.0,3.7",2023-12-15 07:02:13,Social Sector
+2665535,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,213,4,0.94388,2007,"5.2,5.2,5.3,5.4",2019,"5.8,6.1,6.4,6.7",2023-12-15 17:11:58,Social Sector
+2136260,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,147,4,0.94868,2007,"5.5,5.5,5.2,5.0",2013,"6.3,6.0,5.7,5.4",2023-12-15 07:01:40,Social Sector
+2665223,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,147,4,0.94388,2007,"5.2,5.2,5.3,5.4",2013,"6.5,6.8,7.1,7.4",2023-12-15 17:11:41,Social Sector
+2136225,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,117,4,0.94868,2007,"5.5,5.5,5.2,5.0",2020,"3.3000000000000003,3.0,2.7,2.4",2023-12-15 07:01:38,Social Sector
+2665207,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,117,4,0.94388,2007,"5.2,5.2,5.3,5.4",2020,"3.8,4.1,4.4,4.7",2023-12-15 17:11:40,Social Sector
+2136653,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,25,4,0.94868,2007,"5.5,5.5,5.2,5.0",2020,"3.6,3.3,3.0,2.7",2023-12-15 07:02:09,Social Sector
+2665512,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,25,4,0.94388,2007,"5.2,5.2,5.3,5.4",2020,"8.8,9.1,9.4,9.7",2023-12-15 17:11:56,Social Sector
+2136652,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,25,4,0.94868,2007,"5.5,5.5,5.2,5.0",2019,"3.9,3.6,3.3,3.0",2023-12-15 07:02:09,Social Sector
+2665511,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,25,4,0.94388,2007,"5.2,5.2,5.3,5.4",2019,"8.5,8.8,9.1,9.4",2023-12-15 17:11:56,Social Sector
 2136531,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,223,4,0.94868,2007,"5.5,5.5,5.2,5.0",2019,"7.0,6.7,6.4,6.1",2023-12-15 07:02:01,Social Sector
 2665456,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,223,4,0.94388,2007,"5.2,5.2,5.3,5.4",2019,"5.4,5.7,6.0,6.3",2023-12-15 17:11:53,Social Sector
+2136650,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,25,4,0.94868,2007,"5.5,5.5,5.2,5.0",2017,"4.5,4.2,3.9,3.6",2023-12-15 07:02:09,Social Sector
+2665509,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,25,4,0.94388,2007,"5.2,5.2,5.3,5.4",2017,"7.9,8.200000000000001,8.5,8.8",2023-12-15 17:11:56,Social Sector
+2136366,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,210,4,0.94868,2007,"5.5,5.5,5.2,5.0",2020,"3.7,3.4,3.1,2.8",2023-12-15 07:01:49,Social Sector
+2665353,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,210,4,0.94388,2007,"5.2,5.2,5.3,5.4",2020,"6.4,6.7,7.0,7.3",2023-12-15 17:11:48,Social Sector
+2136532,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,223,4,0.94868,2007,"5.5,5.5,5.2,5.0",2020,"6.7,6.4,6.1,5.8",2023-12-15 07:02:01,Social Sector
+2665457,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,223,4,0.94388,2007,"5.2,5.2,5.3,5.4",2020,"5.7,6.0,6.3,6.6",2023-12-15 17:11:53,Social Sector
+2136393,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,166,4,0.94868,2007,"5.5,5.5,5.2,5.0",2020,"3.3000000000000003,3.0,2.7,2.4",2023-12-15 07:01:51,Social Sector
+2665385,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,166,4,0.94388,2007,"5.2,5.2,5.3,5.4",2020,"2.0,2.3,2.6,2.9",2023-12-15 17:11:49,Social Sector
+2136750,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,145,4,0.94868,2007,"5.5,5.5,5.2,5.0",2020,"4.9,4.6,4.3,4.0",2023-12-15 07:02:15,Social Sector
+2665557,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,145,4,0.94388,2007,"5.2,5.2,5.3,5.4",2020,"9.0,9.1,9.2,9.3",2023-12-15 17:11:59,Social Sector
+2136651,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,25,4,0.94868,2007,"5.5,5.5,5.2,5.0",2018,"4.2,3.9,3.6,3.3",2023-12-15 07:02:09,Social Sector
+2665510,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,25,4,0.94388,2007,"5.2,5.2,5.3,5.4",2018,"8.200000000000001,8.5,8.8,9.1",2023-12-15 17:11:56,Social Sector
 2136296,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,113,4,0.97202,2007,"5.5,5.5,5.2,5.0",2016,"5.4,5.2,4.9,4.6",2023-12-15 07:01:43,Social Sector
 2665254,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,113,4,0.92012,2007,"5.2,5.2,5.3,5.4",2016,"7.3,7.6,7.899999999999999,8.1",2023-12-15 17:11:43,Social Sector
 1215861,The Fund For Peace,Fragile State Index,Total,2023,249,145,4,0.97138,2007,"80.6,81.6,84.2,83.9",2007,"55.6,55.8,58.0,57.3",2023-12-14 06:48:28,Finance Economy Sector
@@ -1058,8 +1048,8 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 2665264,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,120,4,0.94388,2007,"5.2,5.2,5.3,5.4",2015,"7.4,7.7,8.0,8.3",2023-12-15 17:11:43,Social Sector
 2136295,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,113,4,0.92972,2007,"5.5,5.5,5.2,5.0",2015,"5.7,5.4,5.2,4.9",2023-12-15 07:01:43,Social Sector
 2665253,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,113,4,0.94388,2007,"5.2,5.2,5.3,5.4",2015,"7.0,7.3,7.6,7.899999999999999",2023-12-15 17:11:43,Social Sector
-1215875,The Fund For Peace,Fragile State Index,Total,2023,249,180,4,0.92903,2007,"80.6,81.6,84.2,83.9",2014,"89.6,90.8,92.2,93.4",2023-12-14 06:48:29,Finance Economy Sector
-2665562,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,180,4,0.94388,2007,"5.2,5.2,5.3,5.4",2014,"6.3,6.6,6.9,7.2",2023-12-15 17:11:59,Social Sector
+2136466,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,50,4,0.98195,2007,"5.5,5.5,5.2,5.0",2014,"9.4,9.5,9.2,9.0",2023-12-15 07:01:56,Social Sector
+2665436,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,50,4,0.96699,2007,"5.2,5.2,5.3,5.4",2014,"9.6,9.5,9.7,10.0",2023-12-15 17:11:52,Social Sector
 1215277,The Fund For Peace,Fragile State Index,Total,2023,249,109,4,0.96835,2007,"80.6,81.6,84.2,83.9",2007,"65.1,65.7,68.6,67.4",2023-12-14 06:47:50,Finance Economy Sector
 2665192,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,109,4,0.90453,2007,"5.2,5.2,5.3,5.4",2007,"4.3,4.3,4.5,4.5",2023-12-15 17:11:39,Social Sector
 5107465,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,140,4,0.90983,2013,"8.0,7.7,7.4,7.2",2012,"6.6,6.1,5.8,5.9",2023-12-18 18:44:52,Political State Sector
@@ -1166,40 +1156,40 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 2665234,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,133,4,0.90453,2007,"5.2,5.2,5.3,5.4",2013,"7.6,7.5,7.6,7.9",2023-12-15 17:11:42,Social Sector
 1215475,The Fund For Peace,Fragile State Index,Total,2023,249,165,4,0.90236,2007,"80.6,81.6,84.2,83.9",2007,"17.1,16.8,18.3,18.7",2023-12-14 06:48:03,Finance Economy Sector
 2665307,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,165,4,0.90453,2007,"5.2,5.2,5.3,5.4",2007,"1.0,1.0,1.3,1.3",2023-12-15 17:11:45,Social Sector
-2664792,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,215,3,1.0,2008,"5.2,5.3,5.4",2020,"1.4,1.7,2.0",2023-12-15 17:11:16,Social Sector
-6415263,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,215,3,1.0,2008,"8.8,9.0,9.0",2020,"1.3,3.3,3.3",2023-12-19 22:05:56,Social Sector
-2664893,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,183,3,1.0,2008,"5.2,5.3,5.4",2014,"8.5,8.8,9.1",2023-12-15 17:11:21,Social Sector
-4695158,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,183,3,1.0,2008,"6.7,7.0,7.1",2014,"7.2,7.5,7.6",2023-12-18 11:00:47,Human Rights Development
-2399628,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,74,3,1.0,2006,"5.2,5.2,5.5",2007,"1.8,1.8,2.0",2023-12-15 12:08:24,Social Sector
-3996220,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,74,3,1.0,2006,"7.3,7.4,7.4",2007,"4.8,5.5,5.5",2023-12-17 11:42:00,Human Rights Development
-2135926,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,63,3,1.0,2007,"5.5,5.5,5.2",2018,"8.2,8.2,7.899999999999999",2023-12-15 07:01:20,Social Sector
-5107155,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,63,3,1.0,2007,"7.6,7.8,7.8",2018,"8.337362876791921,8.6,8.6",2023-12-18 18:44:38,Political State Sector
-2136033,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,243,3,1.0,2007,"5.5,5.5,5.2",2010,"6.0,6.0,5.7",2023-12-15 07:01:26,Social Sector
-5107256,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,243,3,1.0,2007,"7.6,7.8,7.8",2010,"7.3,7.5,7.5",2023-12-18 18:44:43,Political State Sector
-2136050,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,119,3,1.0,2007,"5.5,5.5,5.2",2007,"8.2,8.2,7.6",2023-12-15 07:01:27,Social Sector
-5107270,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,119,3,1.0,2007,"7.6,7.8,7.8",2007,"7.9,8.2,8.2",2023-12-18 18:44:43,Political State Sector
-2665048,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,220,3,1.0,2008,"5.2,5.3,5.4",2006,"6.0,6.2,6.4",2023-12-15 17:11:31,Social Sector
-6415429,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,220,3,1.0,2008,"8.8,9.0,9.0",2006,"7.0,7.4,7.4",2023-12-19 22:06:06,Social Sector
-2665040,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,6,3,1.0,2008,"5.2,5.3,5.4",2011,"6.2,6.5,6.8",2023-12-15 17:11:30,Social Sector
-6415427,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,6,3,1.0,2008,"8.8,9.0,9.0",2011,"8.6,8.9,8.9",2023-12-19 22:06:06,Social Sector
-2665153,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,145,3,1.0,2008,"5.2,5.3,5.4",2014,"7.0,7.3,7.6",2023-12-15 17:11:37,Social Sector
-4695405,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,145,3,1.0,2008,"6.7,7.0,7.1",2014,"3.3,3.6,3.7",2023-12-18 11:01:06,Human Rights Development
-2664941,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,18,3,1.0,2008,"5.2,5.3,5.4",2019,"8.0,8.3,8.6",2023-12-15 17:11:24,Social Sector
-6415339,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,18,3,1.0,2008,"8.8,9.0,9.0",2019,"7.0,7.1,7.1",2023-12-19 22:06:01,Social Sector
-2665041,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,6,3,1.0,2008,"5.2,5.3,5.4",2012,"6.5,6.8,7.1",2023-12-15 17:11:30,Social Sector
-4695294,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,6,3,1.0,2008,"6.7,7.0,7.1",2012,"5.6,5.9,6.0",2023-12-18 11:00:58,Human Rights Development
-2664882,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,3,3,1.0,2008,"5.2,5.3,5.4",2008,"7.2,7.7,8.2",2023-12-15 17:11:20,Social Sector
-6415306,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,3,3,1.0,2008,"8.8,9.0,9.0",2008,"6.1,6.7,6.7",2023-12-19 22:05:59,Social Sector
-2399610,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,104,3,1.0,2006,"5.2,5.2,5.5",2007,"1.0,1.0,1.3",2023-12-15 12:08:23,Social Sector
-3996210,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,104,3,1.0,2006,"7.3,7.4,7.4",2007,"2.9,3.0,3.0",2023-12-17 11:42:00,Human Rights Development
-2135974,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,167,3,1.0,2007,"5.5,5.5,5.2",2021,"7.9,7.9,7.6",2023-12-15 07:01:23,Social Sector
-5107197,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,167,3,1.0,2007,"7.6,7.8,7.8",2021,"7.3,7.4,7.4",2023-12-18 18:44:40,Political State Sector
-2399839,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,17,3,1.0,2006,"5.2,5.2,5.5",2009,"6.1,6.1,6.6",2023-12-15 12:08:35,Social Sector
-3996339,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,17,3,1.0,2006,"7.3,7.4,7.4",2009,"5.9,6.0,6.0",2023-12-17 11:42:08,Human Rights Development
-2399633,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,176,3,1.0,2006,"5.2,5.2,5.5",2006,"3.0,3.0,3.3",2023-12-15 12:08:24,Social Sector
-3996224,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,176,3,1.0,2006,"7.3,7.4,7.4",2006,"4.7,4.8,4.8",2023-12-17 11:42:01,Human Rights Development
 2665072,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,66,3,1.0,2008,"5.2,5.3,5.4",2007,"5.4,5.6,5.8",2023-12-15 17:11:32,Social Sector
 6415443,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,66,3,1.0,2008,"8.8,9.0,9.0",2007,"8.1,8.6,8.6",2023-12-19 22:06:07,Social Sector
+2399633,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,176,3,1.0,2006,"5.2,5.2,5.5",2006,"3.0,3.0,3.3",2023-12-15 12:08:24,Social Sector
+3996224,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,176,3,1.0,2006,"7.3,7.4,7.4",2006,"4.7,4.8,4.8",2023-12-17 11:42:01,Human Rights Development
+2399839,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,17,3,1.0,2006,"5.2,5.2,5.5",2009,"6.1,6.1,6.6",2023-12-15 12:08:35,Social Sector
+3996339,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,17,3,1.0,2006,"7.3,7.4,7.4",2009,"5.9,6.0,6.0",2023-12-17 11:42:08,Human Rights Development
+2135974,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,167,3,1.0,2007,"5.5,5.5,5.2",2021,"7.9,7.9,7.6",2023-12-15 07:01:23,Social Sector
+5107197,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,167,3,1.0,2007,"7.6,7.8,7.8",2021,"7.3,7.4,7.4",2023-12-18 18:44:40,Political State Sector
+2399610,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,104,3,1.0,2006,"5.2,5.2,5.5",2007,"1.0,1.0,1.3",2023-12-15 12:08:23,Social Sector
+3996210,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,104,3,1.0,2006,"7.3,7.4,7.4",2007,"2.9,3.0,3.0",2023-12-17 11:42:00,Human Rights Development
+2664882,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,3,3,1.0,2008,"5.2,5.3,5.4",2008,"7.2,7.7,8.2",2023-12-15 17:11:20,Social Sector
+6415306,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,3,3,1.0,2008,"8.8,9.0,9.0",2008,"6.1,6.7,6.7",2023-12-19 22:05:59,Social Sector
+2665040,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,6,3,1.0,2008,"5.2,5.3,5.4",2011,"6.2,6.5,6.8",2023-12-15 17:11:30,Social Sector
+6415427,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,6,3,1.0,2008,"8.8,9.0,9.0",2011,"8.6,8.9,8.9",2023-12-19 22:06:06,Social Sector
+2665041,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,6,3,1.0,2008,"5.2,5.3,5.4",2012,"6.5,6.8,7.1",2023-12-15 17:11:30,Social Sector
+4695294,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,6,3,1.0,2008,"6.7,7.0,7.1",2012,"5.6,5.9,6.0",2023-12-18 11:00:58,Human Rights Development
+2664941,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,18,3,1.0,2008,"5.2,5.3,5.4",2019,"8.0,8.3,8.6",2023-12-15 17:11:24,Social Sector
+6415339,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,18,3,1.0,2008,"8.8,9.0,9.0",2019,"7.0,7.1,7.1",2023-12-19 22:06:01,Social Sector
+2665153,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,145,3,1.0,2008,"5.2,5.3,5.4",2014,"7.0,7.3,7.6",2023-12-15 17:11:37,Social Sector
+4695405,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,145,3,1.0,2008,"6.7,7.0,7.1",2014,"3.3,3.6,3.7",2023-12-18 11:01:06,Human Rights Development
+2665048,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,220,3,1.0,2008,"5.2,5.3,5.4",2006,"6.0,6.2,6.4",2023-12-15 17:11:31,Social Sector
+6415429,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,220,3,1.0,2008,"8.8,9.0,9.0",2006,"7.0,7.4,7.4",2023-12-19 22:06:06,Social Sector
+2136050,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,119,3,1.0,2007,"5.5,5.5,5.2",2007,"8.2,8.2,7.6",2023-12-15 07:01:27,Social Sector
+5107270,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,119,3,1.0,2007,"7.6,7.8,7.8",2007,"7.9,8.2,8.2",2023-12-18 18:44:43,Political State Sector
+2136033,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,243,3,1.0,2007,"5.5,5.5,5.2",2010,"6.0,6.0,5.7",2023-12-15 07:01:26,Social Sector
+5107256,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,243,3,1.0,2007,"7.6,7.8,7.8",2010,"7.3,7.5,7.5",2023-12-18 18:44:43,Political State Sector
+2135926,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,63,3,1.0,2007,"5.5,5.5,5.2",2018,"8.2,8.2,7.899999999999999",2023-12-15 07:01:20,Social Sector
+5107155,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,63,3,1.0,2007,"7.6,7.8,7.8",2018,"8.337362876791921,8.6,8.6",2023-12-18 18:44:38,Political State Sector
+2399628,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,74,3,1.0,2006,"5.2,5.2,5.5",2007,"1.8,1.8,2.0",2023-12-15 12:08:24,Social Sector
+3996220,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,74,3,1.0,2006,"7.3,7.4,7.4",2007,"4.8,5.5,5.5",2023-12-17 11:42:00,Human Rights Development
+2664893,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,183,3,1.0,2008,"5.2,5.3,5.4",2014,"8.5,8.8,9.1",2023-12-15 17:11:21,Social Sector
+4695158,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,183,3,1.0,2008,"6.7,7.0,7.1",2014,"7.2,7.5,7.6",2023-12-18 11:00:47,Human Rights Development
+2664792,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,215,3,1.0,2008,"5.2,5.3,5.4",2020,"1.4,1.7,2.0",2023-12-15 17:11:16,Social Sector
+6415263,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,215,3,1.0,2008,"8.8,9.0,9.0",2020,"1.3,3.3,3.3",2023-12-19 22:05:56,Social Sector
 1213755,The Fund For Peace,Fragile State Index,Total,2023,249,131,3,0.99999,2013,"86.6,86.2,85.1",2021,"56.89999999999999,56.4,55.0",2023-12-14 06:46:17,Finance Economy Sector
 7265906,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,131,3,1.0,2013,"7.2,6.9,6.6",2021,"2.6,2.3,2.0",2023-12-20 15:58:08,Sovereignty
 1214563,The Fund For Peace,Fragile State Index,Total,2023,249,91,3,0.99998,2013,"86.6,86.2,85.1",2017,"102.4,101.6167424753827,99.4",2023-12-14 06:47:05,Finance Economy Sector
@@ -1242,8 +1232,6 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 7266510,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,80,3,1.0,2013,"7.2,6.9,6.6",2013,"7.9,7.6,7.3",2023-12-20 15:58:36,Sovereignty
 1215091,The Fund For Peace,Fragile State Index,Total,2023,249,17,3,0.99927,2013,"86.6,86.2,85.1",2014,"64.7,64.4,63.4",2023-12-14 06:47:39,Finance Economy Sector
 7266750,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,17,3,1.0,2013,"7.2,6.9,6.6",2014,"5.6,5.3,5.0",2023-12-20 15:59:01,Sovereignty
-1215166,The Fund For Peace,Fragile State Index,Total,2023,249,180,3,0.99924,2013,"86.6,86.2,85.1",2017,"93.4,93.12762985550376,92.5",2023-12-14 06:47:43,Finance Economy Sector
-7266805,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,180,3,1.0,2013,"7.2,6.9,6.6",2017,"7.1,6.8,6.5",2023-12-20 15:59:04,Sovereignty
 5499246,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,221,3,1.0,2011,"7.8,7.7,7.6",2017,"4.4,4.1000000000000005,3.8",2023-12-19 03:08:58,Political State Sector
 31793771,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,221,3,0.99914,2011,"22.0,23.9,25.5",2017,"91.3,99.0,104.6",2024-01-17 19:54:03,Military Sector
 2664841,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,210,3,1.0,2008,"5.2,5.3,5.4",2020,"6.4,6.7,7.0",2023-12-15 17:11:18,Social Sector
@@ -1288,12 +1276,12 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 31793379,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,226,3,0.99766,2011,"22.0,23.9,25.5",2014,"138.7,147.5,156.9",2024-01-17 19:53:27,Military Sector
 31244284,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,249,176,3,0.99761,2010,"1.38,1.26,1.39",2001,"1.91,1.9,1.91",2024-01-17 03:24:59,Military Sector
 32205322,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,176,3,0.99998,2010,"7.65,6.75,6.31",2001,"4.24,4.2,4.18",2024-01-19 03:13:46,Military Sector
-1213951,The Fund For Peace,Fragile State Index,Total,2023,249,140,3,0.99753,2013,"86.6,86.2,85.1",2012,"73.6,73.1,71.1",2023-12-14 06:46:28,Finance Economy Sector
-7266046,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,140,3,1.0,2013,"7.2,6.9,6.6",2012,"6.4,6.1,5.8",2023-12-20 15:58:15,Sovereignty
-1214784,The Fund For Peace,Fragile State Index,Total,2023,249,197,3,0.99753,2013,"86.6,86.2,85.1",2012,"75.0,74.4,72.0",2023-12-14 06:47:18,Finance Economy Sector
-7266592,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,197,3,1.0,2013,"7.2,6.9,6.6",2012,"7.3,7.0,6.7",2023-12-20 15:58:40,Sovereignty
 1214202,The Fund For Peace,Fragile State Index,Total,2023,249,57,3,0.99753,2013,"86.6,86.2,85.1",2013,"39.9,39.4,37.4",2023-12-14 06:46:43,Finance Economy Sector
 7266237,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,57,3,1.0,2013,"7.2,6.9,6.6",2013,"3.2,2.9,2.6",2023-12-20 15:58:24,Sovereignty
+1214784,The Fund For Peace,Fragile State Index,Total,2023,249,197,3,0.99753,2013,"86.6,86.2,85.1",2012,"75.0,74.4,72.0",2023-12-14 06:47:18,Finance Economy Sector
+7266592,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,197,3,1.0,2013,"7.2,6.9,6.6",2012,"7.3,7.0,6.7",2023-12-20 15:58:40,Sovereignty
+1213951,The Fund For Peace,Fragile State Index,Total,2023,249,140,3,0.99753,2013,"86.6,86.2,85.1",2012,"73.6,73.1,71.1",2023-12-14 06:46:28,Finance Economy Sector
+7266046,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,140,3,1.0,2013,"7.2,6.9,6.6",2012,"6.4,6.1,5.8",2023-12-20 15:58:15,Sovereignty
 5499399,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,74,3,1.0,2011,"7.8,7.7,7.6",2015,"1.5,1.3,1.1",2023-12-19 03:09:07,Political State Sector
 31793227,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,74,3,0.99747,2011,"22.0,23.9,25.5",2015,"708.2,732.5,758.7",2024-01-17 19:53:15,Military Sector
 5499465,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,210,3,0.99747,2011,"7.8,7.7,7.6",2016,"2.4,2.2,1.9436962427973972",2023-12-19 03:09:15,Political State Sector
@@ -1324,10 +1312,10 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 31793815,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,64,3,0.99664,2011,"22.0,23.9,25.5",2017,"40.8,45.9,49.1",2024-01-17 19:54:07,Military Sector
 2664748,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,206,3,0.99662,2008,"5.2,5.3,5.4",2008,"4.9,5.3,5.6",2023-12-15 17:11:07,Social Sector
 4695033,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,206,3,1.0,2008,"6.7,7.0,7.1",2008,"4.0,4.3,4.4",2023-12-18 11:00:37,Human Rights Development
-1214070,The Fund For Peace,Fragile State Index,Total,2023,249,21,3,0.99655,2013,"86.6,86.2,85.1",2011,"34.1,33.5,30.9",2023-12-14 06:46:35,Finance Economy Sector
-7266142,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,21,3,1.0,2013,"7.2,6.9,6.6",2011,"2.6,2.3,2.0",2023-12-20 15:58:19,Sovereignty
 1214984,The Fund For Peace,Fragile State Index,Total,2023,249,16,3,0.99655,2013,"86.6,86.2,85.1",2013,"54.7,54.1,51.5",2023-12-14 06:47:31,Finance Economy Sector
 7266715,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,16,3,1.0,2013,"7.2,6.9,6.6",2013,"4.3,4.0,3.7",2023-12-20 15:58:58,Sovereignty
+1214070,The Fund For Peace,Fragile State Index,Total,2023,249,21,3,0.99655,2013,"86.6,86.2,85.1",2011,"34.1,33.5,30.9",2023-12-14 06:46:35,Finance Economy Sector
+7266142,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,21,3,1.0,2013,"7.2,6.9,6.6",2011,"2.6,2.3,2.0",2023-12-20 15:58:19,Sovereignty
 1214872,The Fund For Peace,Fragile State Index,Total,2023,249,229,3,0.99651,2013,"86.6,86.2,85.1",2018,"72.62111503765558,71.4,69.05814193586684",2023-12-14 06:47:24,Finance Economy Sector
 7266653,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,229,3,1.0,2013,"7.2,6.9,6.6",2018,"3.8,3.5,3.2",2023-12-20 15:58:42,Sovereignty
 1214365,The Fund For Peace,Fragile State Index,Total,2023,249,152,3,0.99645,2013,"86.6,86.2,85.1",2020,"82.56660214637142,82.2,80.6",2023-12-14 06:46:52,Finance Economy Sector
@@ -1534,12 +1522,12 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 32205393,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,165,3,0.99675,2010,"7.65,6.75,6.31",2010,"3.39,3.33,3.29",2024-01-19 03:13:49,Military Sector
 1214154,The Fund For Peace,Fragile State Index,Total,2023,249,74,3,0.99014,2013,"86.6,86.2,85.1",2018,"32.22701109659329,32.0,30.48111107032384",2023-12-14 06:46:40,Finance Economy Sector
 7266202,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,74,3,1.0,2013,"7.2,6.9,6.6",2018,"1.8,1.5,1.2",2023-12-20 15:58:22,Sovereignty
-5499180,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,82,3,1.0,2011,"7.8,7.7,7.6",2017,"7.8,7.5,7.2",2023-12-19 03:08:55,Political State Sector
-31793213,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,82,3,0.99012,2011,"22.0,23.9,25.5",2017,"6.5,7.3,7.7",2024-01-17 19:53:14,Military Sector
-5499606,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,250,3,1.0,2011,"7.8,7.7,7.6",2013,"9.1,8.8,8.5",2023-12-19 03:09:30,Political State Sector
-31793664,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,250,3,0.99012,2011,"22.0,23.9,25.5",2013,"26.7,27.1,27.3",2024-01-17 19:53:54,Military Sector
 5499717,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,174,3,1.0,2011,"7.8,7.7,7.6",2017,"6.7,6.4,6.1",2023-12-19 03:09:42,Political State Sector
 31793727,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,174,3,0.99012,2011,"22.0,23.9,25.5",2017,"36.5,38.5,39.5",2024-01-17 19:53:59,Military Sector
+5499606,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,250,3,1.0,2011,"7.8,7.7,7.6",2013,"9.1,8.8,8.5",2023-12-19 03:09:30,Political State Sector
+31793664,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,250,3,0.99012,2011,"22.0,23.9,25.5",2013,"26.7,27.1,27.3",2024-01-17 19:53:54,Military Sector
+5499180,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,82,3,1.0,2011,"7.8,7.7,7.6",2017,"7.8,7.5,7.2",2023-12-19 03:08:55,Political State Sector
+31793213,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,82,3,0.99012,2011,"22.0,23.9,25.5",2017,"6.5,7.3,7.7",2024-01-17 19:53:14,Military Sector
 1213922,The Fund For Peace,Fragile State Index,Total,2023,249,221,3,0.9901,2013,"86.6,86.2,85.1",2017,"76.2,74.98003133114115,73.1",2023-12-14 06:46:27,Finance Economy Sector
 7266020,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,221,3,1.0,2013,"7.2,6.9,6.6",2017,"3.8,3.5,3.2",2023-12-20 15:58:13,Sovereignty
 1214976,The Fund For Peace,Fragile State Index,Total,2023,249,226,3,0.99636,2013,"86.6,86.2,85.1",2016,"57.8,56.7,54.6057398402105",2023-12-14 06:47:31,Finance Economy Sector
@@ -1580,10 +1568,10 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 31792795,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,138,3,0.99559,2011,"22.0,23.9,25.5",2016,"17.4,17.9,18.2",2024-01-17 19:52:42,Military Sector
 1213942,The Fund For Peace,Fragile State Index,Total,2023,249,78,3,0.98885,2013,"86.6,86.2,85.1",2017,"73.8,72.47628284232633,70.5",2023-12-14 06:46:28,Finance Economy Sector
 7266039,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,78,3,1.0,2013,"7.2,6.9,6.6",2017,"5.7,5.4,5.1",2023-12-20 15:58:14,Sovereignty
-1215115,The Fund For Peace,Fragile State Index,Total,2023,249,99,3,0.98872,2013,"86.6,86.2,85.1",2016,"22.8,22.5,20.3",2023-12-14 06:47:40,Finance Economy Sector
-7266768,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,99,3,1.0,2013,"7.2,6.9,6.6",2016,"4.3,4.1,3.9",2023-12-20 15:59:02,Sovereignty
 1213970,The Fund For Peace,Fragile State Index,Total,2023,249,172,3,0.98872,2013,"86.6,86.2,85.1",2017,"71.6,69.75151701076081,67.0",2023-12-14 06:46:29,Finance Economy Sector
 7266057,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,172,3,1.0,2013,"7.2,6.9,6.6",2017,"4.8,4.5,4.2",2023-12-20 15:58:15,Sovereignty
+1215115,The Fund For Peace,Fragile State Index,Total,2023,249,99,3,0.98872,2013,"86.6,86.2,85.1",2016,"22.8,22.5,20.3",2023-12-14 06:47:40,Finance Economy Sector
+7266768,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,99,3,1.0,2013,"7.2,6.9,6.6",2016,"4.3,4.1,3.9",2023-12-20 15:59:02,Sovereignty
 1214354,The Fund For Peace,Fragile State Index,Total,2023,249,69,3,0.99887,2013,"86.6,86.2,85.1",2017,"101.1,99.56909778499838,94.2",2023-12-14 06:46:52,Finance Economy Sector
 7266327,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,69,3,0.98974,2013,"7.2,6.9,6.6",2017,"8.7,8.399999999999999,7.9",2023-12-20 15:58:29,Sovereignty
 5499721,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,243,3,1.0,2011,"7.8,7.7,7.6",2012,"6.1,5.8,5.5",2023-12-19 03:09:42,Political State Sector
@@ -1608,12 +1596,12 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 31792908,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,14,3,0.99456,2011,"22.0,23.9,25.5",2015,"307.1,329.9,357.5",2024-01-17 19:52:51,Military Sector
 31244331,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,249,195,3,0.99937,2010,"1.38,1.26,1.39",2018,"9.14,8.13,9.18",2024-01-17 03:25:01,Military Sector
 32205560,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,195,3,0.98853,2010,"7.65,6.75,6.31",2018,"25.94,23.15,22.51",2024-01-19 03:13:56,Military Sector
+2665022,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,121,3,1.0,2008,"5.2,5.3,5.4",2021,"7.9,8.0,8.1",2023-12-15 17:11:29,Social Sector
+6415415,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,121,3,0.98783,2008,"8.8,9.0,9.0",2021,"5.2,5.7,5.8",2023-12-19 22:06:06,Social Sector
 2664943,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,18,3,1.0,2008,"5.2,5.3,5.4",2021,"8.6,8.7,8.8",2023-12-15 17:11:24,Social Sector
 6415340,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,18,3,0.98783,2008,"8.8,9.0,9.0",2021,"7.1,7.6,7.7",2023-12-19 22:06:01,Social Sector
 2664667,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,117,3,1.0,2008,"5.2,5.3,5.4",2020,"3.8,4.1,4.4",2023-12-15 17:11:03,Social Sector
 6415181,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,117,3,0.98783,2008,"8.8,9.0,9.0",2020,"4.1000000000000005,4.6,4.7",2023-12-19 22:05:49,Social Sector
-2665022,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,121,3,1.0,2008,"5.2,5.3,5.4",2021,"7.9,8.0,8.1",2023-12-15 17:11:29,Social Sector
-6415415,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,121,3,0.98783,2008,"8.8,9.0,9.0",2021,"5.2,5.7,5.8",2023-12-19 22:06:06,Social Sector
 1214768,The Fund For Peace,Fragile State Index,Total,2023,249,220,3,0.98775,2013,"86.6,86.2,85.1",2021,"79.3,78.2,76.6",2023-12-14 06:47:17,Finance Economy Sector
 7266581,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,220,3,1.0,2013,"7.2,6.9,6.6",2021,"6.6,6.3,6.0",2023-12-20 15:58:39,Sovereignty
 5499948,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,134,3,0.9934,2011,"7.8,7.7,7.6",2016,"2.2,2.0,1.7",2023-12-19 03:10:04,Political State Sector
@@ -1652,14 +1640,14 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 7266212,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,52,3,1.0,2013,"7.2,6.9,6.6",2013,"4.9,4.6,4.3",2023-12-20 15:58:23,Sovereignty
 5499289,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,11,3,0.9934,2011,"7.8,7.7,7.6",2006,"6.5,6.2,6.0",2023-12-19 03:09:01,Political State Sector
 31792788,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,11,3,0.99289,2011,"22.0,23.9,25.5",2006,"63.6,95.5,136.2",2024-01-17 19:52:41,Military Sector
-4694942,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,31,3,0.98624,2008,"6.7,7.0,7.1",2014,"3.8,4.1,4.3",2023-12-18 11:00:30,Human Rights Development
-6415177,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,31,3,1.0,2008,"8.8,9.0,9.0",2014,"6.7,7.6,7.6",2023-12-19 22:05:49,Social Sector
-2665130,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,192,3,1.0,2008,"5.2,5.3,5.4",2020,"4.2,4.5,4.8",2023-12-15 17:11:36,Social Sector
-4695378,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,192,3,0.98624,2008,"6.7,7.0,7.1",2020,"9.75,9.9,10.0",2023-12-18 11:01:04,Human Rights Development
-4695278,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,169,3,0.98624,2008,"6.7,7.0,7.1",2007,"3.5,3.8,4.0",2023-12-18 11:00:57,Human Rights Development
-6415416,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,169,3,1.0,2008,"8.8,9.0,9.0",2007,"7.0,7.2,7.2",2023-12-19 22:06:06,Social Sector
 3002523,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,31,3,0.98624,2010,"8.0,7.7,8.1",2021,"6.4,6.1,6.6",2023-12-16 09:35:41,Finance Economy Sector
 5925881,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,31,3,1.0,2010,"5.9,6.1,6.4",2021,"7.4,7.6,7.9",2023-12-19 12:12:43,Human Rights Development
+4695278,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,169,3,0.98624,2008,"6.7,7.0,7.1",2007,"3.5,3.8,4.0",2023-12-18 11:00:57,Human Rights Development
+6415416,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,169,3,1.0,2008,"8.8,9.0,9.0",2007,"7.0,7.2,7.2",2023-12-19 22:06:06,Social Sector
+2665130,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,192,3,1.0,2008,"5.2,5.3,5.4",2020,"4.2,4.5,4.8",2023-12-15 17:11:36,Social Sector
+4695378,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,192,3,0.98624,2008,"6.7,7.0,7.1",2020,"9.75,9.9,10.0",2023-12-18 11:01:04,Human Rights Development
+4694942,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,31,3,0.98624,2008,"6.7,7.0,7.1",2014,"3.8,4.1,4.3",2023-12-18 11:00:30,Human Rights Development
+6415177,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,31,3,1.0,2008,"8.8,9.0,9.0",2014,"6.7,7.6,7.6",2023-12-19 22:05:49,Social Sector
 5925980,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,206,3,0.98624,2010,"5.9,6.1,6.4",2007,"4.1,4.2,4.5",2023-12-19 12:12:49,Human Rights Development
 32205544,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,206,3,0.99992,2010,"7.65,6.75,6.31",2007,"4.33,4.0,3.83",2024-01-19 03:13:55,Military Sector
 5499326,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,200,3,0.9934,2011,"7.8,7.7,7.6",2015,"1.8,1.5,1.3",2023-12-19 03:09:03,Political State Sector
@@ -1724,16 +1712,16 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 7266421,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,43,3,0.9934,2013,"7.2,6.9,6.6",2016,"8.5,8.3,8.0",2023-12-20 15:58:33,Sovereignty
 5499459,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,81,3,0.9934,2011,"7.8,7.7,7.6",2015,"1.6,1.3,1.1",2023-12-19 03:09:14,Political State Sector
 31793275,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,81,3,0.9903,2011,"22.0,23.9,25.5",2015,"466.7,485.6,511.5",2024-01-17 19:53:19,Military Sector
-1215173,The Fund For Peace,Fragile State Index,Total,2023,249,204,3,0.98368,2013,"86.6,86.2,85.1",2011,"85.9,85.6,85.2",2023-12-14 06:47:44,Finance Economy Sector
-7266810,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,204,3,1.0,2013,"7.2,6.9,6.6",2011,"8.8,8.5,8.2",2023-12-20 15:59:04,Sovereignty
-1214963,The Fund For Peace,Fragile State Index,Total,2023,249,9,3,0.98368,2013,"86.6,86.2,85.1",2014,"59.0,57.8,56.2",2023-12-14 06:47:30,Finance Economy Sector
-7266700,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,9,3,1.0,2013,"7.2,6.9,6.6",2014,"6.1,5.8,5.5",2023-12-20 15:58:44,Sovereignty
-2665061,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,102,3,0.98974,2008,"5.2,5.3,5.4",2008,"7.3,7.6,8.1",2023-12-15 17:11:32,Social Sector
-4695313,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,102,3,0.99394,2008,"6.7,7.0,7.1",2008,"5.0,6.8,7.1",2023-12-18 11:00:59,Human Rights Development
 1214345,The Fund For Peace,Fragile State Index,Total,2023,249,211,3,0.99028,2013,"86.6,86.2,85.1",2016,"87.7,86.6,84.89668808927048",2023-12-14 06:46:51,Finance Economy Sector
 7266324,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,211,3,0.9934,2013,"7.2,6.9,6.6",2016,"6.5,6.3,6.0",2023-12-20 15:58:28,Sovereignty
 1214762,The Fund For Peace,Fragile State Index,Total,2023,249,6,3,0.98368,2013,"86.6,86.2,85.1",2021,"89.0,88.10000000000001,86.9",2023-12-14 06:47:17,Finance Economy Sector
 7266576,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,6,3,1.0,2013,"7.2,6.9,6.6",2021,"4.6,4.3,4.0",2023-12-20 15:58:39,Sovereignty
+1215173,The Fund For Peace,Fragile State Index,Total,2023,249,204,3,0.98368,2013,"86.6,86.2,85.1",2011,"85.9,85.6,85.2",2023-12-14 06:47:44,Finance Economy Sector
+7266810,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,204,3,1.0,2013,"7.2,6.9,6.6",2011,"8.8,8.5,8.2",2023-12-20 15:59:04,Sovereignty
+2665061,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,102,3,0.98974,2008,"5.2,5.3,5.4",2008,"7.3,7.6,8.1",2023-12-15 17:11:32,Social Sector
+4695313,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,102,3,0.99394,2008,"6.7,7.0,7.1",2008,"5.0,6.8,7.1",2023-12-18 11:00:59,Human Rights Development
+1214963,The Fund For Peace,Fragile State Index,Total,2023,249,9,3,0.98368,2013,"86.6,86.2,85.1",2014,"59.0,57.8,56.2",2023-12-14 06:47:30,Finance Economy Sector
+7266700,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,9,3,1.0,2013,"7.2,6.9,6.6",2014,"6.1,5.8,5.5",2023-12-20 15:58:44,Sovereignty
 5499472,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,203,3,0.9934,2011,"7.8,7.7,7.6",2015,"2.0,1.7,1.5",2023-12-19 03:09:16,Political State Sector
 31792918,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,203,3,0.99027,2011,"22.0,23.9,25.5",2015,"193.5,216.6,228.2",2024-01-17 19:52:51,Military Sector
 5499813,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,182,3,1.0,2011,"7.8,7.7,7.6",2009,"5.7,5.5,5.3",2023-12-19 03:09:52,Political State Sector
@@ -1782,18 +1770,18 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 32205943,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,112,3,0.98622,2010,"7.65,6.75,6.31",2010,"17.93,15.15,12.64",2024-01-19 03:14:11,Military Sector
 5499870,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,22,3,1.0,2011,"7.8,7.7,7.6",2018,"5.6000000000000005,5.3,5.0",2023-12-19 03:09:57,Political State Sector
 31793680,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,22,3,0.98207,2011,"22.0,23.9,25.5",2018,"60.9,62.6,65.4",2024-01-17 19:53:56,Military Sector
-2399585,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,206,3,0.98198,2006,"5.2,5.2,5.5",2006,"4.0,3.9,4.4",2023-12-15 12:08:21,Social Sector
-3996194,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,206,3,1.0,2006,"7.3,7.4,7.4",2006,"8.0,8.5,8.5",2023-12-17 11:41:59,Human Rights Development
-2664860,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,236,3,1.0,2008,"5.2,5.3,5.4",2020,"6.199999999999999,6.5,6.8",2023-12-15 17:11:19,Social Sector
-6415298,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,236,3,0.98198,2008,"8.8,9.0,9.0",2020,"3.0,5.0,5.5",2023-12-19 22:05:58,Social Sector
-2665031,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,173,3,1.0,2008,"5.2,5.3,5.4",2017,"7.4,7.7,8.0",2023-12-15 17:11:30,Social Sector
-6415418,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,173,3,0.98198,2008,"8.8,9.0,9.0",2017,"5.0,6.5,6.2",2023-12-19 22:06:06,Social Sector
+2664747,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,206,3,0.98198,2008,"5.2,5.3,5.4",2007,"4.7,4.9,5.3",2023-12-15 17:11:07,Social Sector
+6415234,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,206,3,1.0,2008,"8.8,9.0,9.0",2007,"8.2,8.4,8.4",2023-12-19 22:05:54,Social Sector
 2664760,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,200,3,1.0,2008,"5.2,5.3,5.4",2021,"2.2,2.5,2.8",2023-12-15 17:11:07,Social Sector
 6415240,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,200,3,0.98198,2008,"8.8,9.0,9.0",2021,"2.1,2.6,2.5",2023-12-19 22:05:54,Social Sector
 2399589,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,200,3,1.0,2006,"5.2,5.2,5.5",2007,"4.0,4.0,4.1",2023-12-15 12:08:22,Social Sector
 3996196,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,200,3,0.98198,2006,"7.3,7.4,7.4",2007,"2.5,2.9,3.0",2023-12-17 11:41:59,Human Rights Development
-2664747,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,206,3,0.98198,2008,"5.2,5.3,5.4",2007,"4.7,4.9,5.3",2023-12-15 17:11:07,Social Sector
-6415234,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,206,3,1.0,2008,"8.8,9.0,9.0",2007,"8.2,8.4,8.4",2023-12-19 22:05:54,Social Sector
+2664860,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,236,3,1.0,2008,"5.2,5.3,5.4",2020,"6.199999999999999,6.5,6.8",2023-12-15 17:11:19,Social Sector
+6415298,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,236,3,0.98198,2008,"8.8,9.0,9.0",2020,"3.0,5.0,5.5",2023-12-19 22:05:58,Social Sector
+2665031,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,173,3,1.0,2008,"5.2,5.3,5.4",2017,"7.4,7.7,8.0",2023-12-15 17:11:30,Social Sector
+6415418,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,173,3,0.98198,2008,"8.8,9.0,9.0",2017,"5.0,6.5,6.2",2023-12-19 22:06:06,Social Sector
+2399585,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,206,3,0.98198,2006,"5.2,5.2,5.5",2006,"4.0,3.9,4.4",2023-12-15 12:08:21,Social Sector
+3996194,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,206,3,1.0,2006,"7.3,7.4,7.4",2006,"8.0,8.5,8.5",2023-12-17 11:41:59,Human Rights Development
 1214407,The Fund For Peace,Fragile State Index,Total,2023,249,101,3,0.98179,2013,"86.6,86.2,85.1",2013,"78.2,76.8,75.0",2023-12-14 06:46:54,Finance Economy Sector
 7266360,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,101,3,1.0,2013,"7.2,6.9,6.6",2013,"5.9,5.6,5.3",2023-12-20 15:58:30,Sovereignty
 1213746,The Fund For Peace,Fragile State Index,Total,2023,249,131,3,0.98177,2013,"86.6,86.2,85.1",2011,"68.7,68.5,66.1",2023-12-14 06:46:17,Finance Economy Sector
@@ -1948,12 +1936,12 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 7266656,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,229,3,1.0,2013,"7.2,6.9,6.6",2021,"2.9,2.6,2.3",2023-12-20 15:58:42,Sovereignty
 5499202,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,181,3,0.97665,2011,"7.8,7.7,7.6",2016,"4.0,3.8,3.710357407219053",2023-12-19 03:08:56,Political State Sector
 31793045,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,181,3,0.99971,2011,"22.0,23.9,25.5",2016,"133.6,184.3,223.5",2024-01-17 19:53:01,Military Sector
-1214372,The Fund For Peace,Fragile State Index,Total,2023,249,48,3,0.97616,2013,"86.6,86.2,85.1",2012,"84.4,83.8,83.1",2023-12-14 06:46:52,Finance Economy Sector
-7266337,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,48,3,1.0,2013,"7.2,6.9,6.6",2012,"7.4,7.1,6.8",2023-12-20 15:58:29,Sovereignty
 1214331,The Fund For Peace,Fragile State Index,Total,2023,249,239,3,0.97616,2013,"86.6,86.2,85.1",2021,"72.00000000000001,69.6,66.80000000000001",2023-12-14 06:46:50,Finance Economy Sector
 7266313,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,239,3,1.0,2013,"7.2,6.9,6.6",2021,"4.0,3.7,3.4",2023-12-20 15:58:28,Sovereignty
 1214509,The Fund For Peace,Fragile State Index,Total,2023,249,250,3,0.97616,2013,"86.6,86.2,85.1",2013,"105.2,102.8,100.0",2023-12-14 06:47:02,Finance Economy Sector
 7266417,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,250,3,1.0,2013,"7.2,6.9,6.6",2013,"7.8,7.7,7.6",2023-12-20 15:58:32,Sovereignty
+1214372,The Fund For Peace,Fragile State Index,Total,2023,249,48,3,0.97616,2013,"86.6,86.2,85.1",2012,"84.4,83.8,83.1",2023-12-14 06:46:52,Finance Economy Sector
+7266337,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,48,3,1.0,2013,"7.2,6.9,6.6",2012,"7.4,7.1,6.8",2023-12-20 15:58:29,Sovereignty
 5926040,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,176,3,0.98061,2010,"5.9,6.1,6.4",2015,"2.5,2.9,3.2",2023-12-19 12:12:52,Human Rights Development
 32205324,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,176,3,0.99547,2010,"7.65,6.75,6.31",2015,"5.13,4.72,4.59",2024-01-19 03:13:46,Military Sector
 1213713,The Fund For Peace,Fragile State Index,Total,2023,249,212,3,0.99409,2013,"86.6,86.2,85.1",2009,"112.4,111.8,108.7",2023-12-14 06:46:15,Finance Economy Sector
@@ -1982,10 +1970,10 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 31793900,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,117,3,0.98158,2011,"22.0,23.9,25.5",2016,"1629.2,1667.8,1732.0",2024-01-17 19:54:15,Military Sector
 1214159,The Fund For Peace,Fragile State Index,Total,2023,249,126,3,0.98126,2013,"86.6,86.2,85.1",2009,"48.0,47.8,45.3",2023-12-14 06:46:40,Finance Economy Sector
 7266206,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,126,3,0.9934,2013,"7.2,6.9,6.6",2009,"4.3,4.1,3.8",2023-12-20 15:58:23,Sovereignty
-1214819,The Fund For Peace,Fragile State Index,Total,2023,249,66,3,0.98124,2013,"86.6,86.2,85.1",2021,"97.0,95.90000000000002,94.5",2023-12-14 06:47:20,Finance Economy Sector
-7266622,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,66,3,0.9934,2013,"7.2,6.9,6.6",2021,"7.1,6.9,6.6",2023-12-20 15:58:41,Sovereignty
 1213915,The Fund For Peace,Fragile State Index,Total,2023,249,163,3,0.98124,2013,"86.6,86.2,85.1",2018,"64.79715789270658,64.6,62.13086384675053",2023-12-14 06:46:27,Finance Economy Sector
 7266012,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,163,3,0.9934,2013,"7.2,6.9,6.6",2018,"6.3,6.1,5.8",2023-12-20 15:58:13,Sovereignty
+1214819,The Fund For Peace,Fragile State Index,Total,2023,249,66,3,0.98124,2013,"86.6,86.2,85.1",2021,"97.0,95.90000000000002,94.5",2023-12-14 06:47:20,Finance Economy Sector
+7266622,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,66,3,0.9934,2013,"7.2,6.9,6.6",2021,"7.1,6.9,6.6",2023-12-20 15:58:41,Sovereignty
 1214945,The Fund For Peace,Fragile State Index,Total,2023,249,89,3,0.98113,2013,"86.6,86.2,85.1",2016,"83.2,83.1,81.83670919240136",2023-12-14 06:47:29,Finance Economy Sector
 7266686,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,89,3,0.9934,2013,"7.2,6.9,6.6",2016,"5.4,5.2,4.9",2023-12-20 15:58:44,Sovereignty
 1214777,The Fund For Peace,Fragile State Index,Total,2023,249,26,3,0.97531,2013,"86.6,86.2,85.1",2020,"74.96686955912168,74.89999999999998,73.4",2023-12-14 06:47:18,Finance Economy Sector
@@ -2000,10 +1988,10 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 7266436,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,1,3,0.99213,2013,"7.2,6.9,6.6",2018,"9.4,9.1,8.63212854734157",2023-12-20 15:58:33,Sovereignty
 1214256,The Fund For Peace,Fragile State Index,Total,2023,249,203,3,0.97408,2013,"86.6,86.2,85.1",2017,"32.4,30.33350186495465,28.0",2023-12-14 06:46:46,Finance Economy Sector
 7266269,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,203,3,1.0,2013,"7.2,6.9,6.6",2017,"2.3,2.0,1.7",2023-12-20 15:58:26,Sovereignty
-1215190,The Fund For Peace,Fragile State Index,Total,2023,249,222,3,0.97384,2013,"86.6,86.2,85.1",2021,"80.9,79.3,77.5",2023-12-14 06:47:45,Finance Economy Sector
-7266814,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,222,3,1.0,2013,"7.2,6.9,6.6",2021,"8.6,8.3,8.0",2023-12-20 15:59:05,Sovereignty
 1213866,The Fund For Peace,Fragile State Index,Total,2023,249,56,3,0.97384,2013,"86.6,86.2,85.1",2008,"69.7,68.9,68.0",2023-12-14 06:46:24,Finance Economy Sector
 7265989,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,56,3,1.0,2013,"7.2,6.9,6.6",2008,"9.2,9.0,8.8",2023-12-20 15:58:12,Sovereignty
+1215190,The Fund For Peace,Fragile State Index,Total,2023,249,222,3,0.97384,2013,"86.6,86.2,85.1",2021,"80.9,79.3,77.5",2023-12-14 06:47:45,Finance Economy Sector
+7266814,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,222,3,1.0,2013,"7.2,6.9,6.6",2021,"8.6,8.3,8.0",2023-12-20 15:59:05,Sovereignty
 5499680,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,80,3,0.9934,2011,"7.8,7.7,7.6",2015,"4.8,4.5,4.3",2023-12-19 03:09:38,Political State Sector
 31792844,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,80,3,0.98035,2011,"22.0,23.9,25.5",2015,"74.4,78.5,80.1",2024-01-17 19:52:46,Military Sector
 2136029,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,173,3,0.98569,2007,"5.5,5.5,5.2",2019,"6.5,6.428108482767096,6.1",2023-12-15 07:01:26,Social Sector
@@ -2026,10 +2014,10 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 7266641,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,25,3,1.0,2013,"7.2,6.9,6.6",2021,"7.1,6.8,6.5",2023-12-20 15:58:42,Sovereignty
 5925927,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,228,3,0.97622,2010,"5.9,6.1,6.4",2006,"5.0,5.1,5.5",2023-12-19 12:12:46,Human Rights Development
 32205571,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,228,3,0.99675,2010,"7.65,6.75,6.31",2006,"6.88,6.58,6.38",2024-01-19 03:13:56,Military Sector
-5499587,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,18,3,1.0,2011,"7.8,7.7,7.6",2017,"8.1,7.8,7.5",2023-12-19 03:09:28,Political State Sector
-31793492,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,18,3,0.97284,2011,"22.0,23.9,25.5",2017,"20.5,22.6,26.7",2024-01-17 19:53:38,Military Sector
 1213936,The Fund For Peace,Fragile State Index,Total,2023,249,79,3,0.97284,2013,"86.6,86.2,85.1",2020,"82.21463956781182,80.5,78.6",2023-12-14 06:46:28,Finance Economy Sector
 7266033,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,79,3,1.0,2013,"7.2,6.9,6.6",2020,"6.397726675829536,6.1,5.8",2023-12-20 15:58:14,Sovereignty
+5499587,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,18,3,1.0,2011,"7.8,7.7,7.6",2017,"8.1,7.8,7.5",2023-12-19 03:09:28,Political State Sector
+31793492,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,18,3,0.97284,2011,"22.0,23.9,25.5",2017,"20.5,22.6,26.7",2024-01-17 19:53:38,Military Sector
 1214479,The Fund For Peace,Fragile State Index,Total,2023,249,50,3,0.97271,2013,"86.6,86.2,85.1",2020,"109.39462095485344,108.4,107.29999999999998",2023-12-14 06:47:00,Finance Economy Sector
 7266398,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,50,3,1.0,2013,"7.2,6.9,6.6",2020,"9.4,9.1,8.8",2023-12-20 15:58:32,Sovereignty
 5926230,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,15,3,0.99718,2010,"5.9,6.1,6.4",2008,"6.9,7.0,7.2",2023-12-19 12:13:02,Human Rights Development
@@ -2064,56 +2052,28 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 7266231,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,138,3,1.0,2013,"7.2,6.9,6.6",2018,"4.4,4.1,3.8",2023-12-20 15:58:24,Sovereignty
 1213824,The Fund For Peace,Fragile State Index,Total,2023,249,170,3,0.97432,2013,"86.6,86.2,85.1",2010,"59.3,57.8,56.1",2023-12-14 06:46:21,Finance Economy Sector
 7265961,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,170,3,0.99662,2013,"7.2,6.9,6.6",2010,"4.0,3.6,3.3",2023-12-20 15:58:11,Sovereignty
-1214339,The Fund For Peace,Fragile State Index,Total,2023,249,183,3,0.97091,2013,"86.6,86.2,85.1",2021,"84.99999999999999,83.7,82.30000000000001",2023-12-14 06:46:51,Finance Economy Sector
-7266322,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,183,3,1.0,2013,"7.2,6.9,6.6",2021,"6.3,6.0,5.7",2023-12-20 15:58:28,Sovereignty
 1214792,The Fund For Peace,Fragile State Index,Total,2023,249,62,3,0.97091,2013,"86.6,86.2,85.1",2013,"78.6,77.3,75.9",2023-12-14 06:47:18,Finance Economy Sector
 7266597,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,62,3,1.0,2013,"7.2,6.9,6.6",2013,"6.2,5.9,5.6",2023-12-20 15:58:40,Sovereignty
+1214339,The Fund For Peace,Fragile State Index,Total,2023,249,183,3,0.97091,2013,"86.6,86.2,85.1",2021,"84.99999999999999,83.7,82.30000000000001",2023-12-14 06:46:51,Finance Economy Sector
+7266322,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,183,3,1.0,2013,"7.2,6.9,6.6",2021,"6.3,6.0,5.7",2023-12-20 15:58:28,Sovereignty
 1214489,The Fund For Peace,Fragile State Index,Total,2023,249,108,3,0.98111,2013,"86.6,86.2,85.1",2017,"96.5,94.56151916975632,92.1",2023-12-14 06:47:00,Finance Economy Sector
 7266403,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,108,3,0.98974,2013,"7.2,6.9,6.6",2017,"9.2,8.7,8.4",2023-12-20 15:58:32,Sovereignty
 1213874,The Fund For Peace,Fragile State Index,Total,2023,249,56,3,0.97076,2013,"86.6,86.2,85.1",2017,"62.6,60.286306956278125,57.8",2023-12-14 06:46:24,Finance Economy Sector
 7265991,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,56,3,1.0,2013,"7.2,6.9,6.6",2017,"9.0,8.7,8.4",2023-12-20 15:58:12,Sovereignty
-4695110,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,138,3,0.97073,2008,"6.7,7.0,7.1",2006,"2.0,2.1,2.1",2023-12-18 11:00:43,Human Rights Development
-6415277,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,138,3,1.0,2008,"8.8,9.0,9.0",2006,"3.0,3.6,3.6",2023-12-19 22:05:57,Social Sector
-2664731,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,23,3,1.0,2008,"5.2,5.3,5.4",2008,"4.0,4.1,4.2",2023-12-15 17:11:06,Social Sector
-6415226,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,23,3,0.97073,2008,"8.8,9.0,9.0",2008,"6.9,7.5,7.7",2023-12-19 22:05:53,Social Sector
-2664978,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,167,3,1.0,2008,"5.2,5.3,5.4",2021,"8.8,8.9,9.0",2023-12-15 17:11:27,Social Sector
-6415376,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,167,3,0.97073,2008,"8.8,9.0,9.0",2021,"7.9,8.2,8.3",2023-12-19 22:06:03,Social Sector
-2665015,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,80,3,0.97073,2008,"5.2,5.3,5.4",2006,"7.4,7.6,8.1",2023-12-15 17:11:29,Social Sector
-6415409,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,80,3,1.0,2008,"8.8,9.0,9.0",2006,"6.0,6.3,6.3",2023-12-19 22:06:05,Social Sector
-4695085,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,13,3,0.97073,2008,"6.7,7.0,7.1",2006,"1.0,1.1,1.1",2023-12-18 11:00:41,Human Rights Development
-6415265,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,13,3,1.0,2008,"8.8,9.0,9.0",2006,"2.5,2.9,2.9",2023-12-19 22:05:56,Social Sector
-4695065,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,44,3,0.97073,2008,"6.7,7.0,7.1",2006,"2.0,2.1,2.1",2023-12-18 11:00:39,Human Rights Development
-6415250,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,44,3,1.0,2008,"8.8,9.0,9.0",2006,"3.0,3.8,3.8",2023-12-19 22:05:55,Social Sector
-2135816,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,56,3,1.0,2007,"5.5,5.5,5.2",2012,"5.0,5.0,4.7",2023-12-15 07:01:13,Social Sector
-5107045,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,56,3,0.97073,2007,"7.6,7.8,7.8",2012,"5.2,5.5,5.6",2023-12-18 18:44:32,Political State Sector
-4695071,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,40,3,0.97073,2008,"6.7,7.0,7.1",2006,"2.0,2.1,2.1",2023-12-18 11:00:40,Human Rights Development
-6415254,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,40,3,1.0,2008,"8.8,9.0,9.0",2006,"3.0,3.3,3.3",2023-12-19 22:05:55,Social Sector
-4695074,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,156,3,0.97073,2008,"6.7,7.0,7.1",2006,"2.0,2.1,2.1",2023-12-18 11:00:40,Human Rights Development
-6415255,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,156,3,1.0,2008,"8.8,9.0,9.0",2006,"1.0,1.1,1.1",2023-12-19 22:05:55,Social Sector
-4694922,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,196,3,0.97073,2008,"6.7,7.0,7.1",2006,"5.0,5.1,5.1",2023-12-18 11:00:29,Human Rights Development
-6415169,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,196,3,1.0,2008,"8.8,9.0,9.0",2006,"6.8,7.0,7.0",2023-12-19 22:05:48,Social Sector
-2664980,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,1,3,1.0,2008,"5.2,5.3,5.4",2008,"9.5,9.6,9.7",2023-12-15 17:11:27,Social Sector
-4695221,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,1,3,0.97073,2008,"6.7,7.0,7.1",2008,"7.0,7.2,7.2",2023-12-18 11:00:52,Human Rights Development
-2399529,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,100,3,0.97073,2006,"5.2,5.2,5.5",2006,"5.7,5.6,6.0",2023-12-15 12:08:18,Social Sector
-3996165,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,100,3,1.0,2006,"7.3,7.4,7.4",2006,"8.5,8.9,8.9",2023-12-17 11:41:57,Human Rights Development
-2665135,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,93,3,1.0,2008,"5.2,5.3,5.4",2016,"6.4,6.7,7.0",2023-12-15 17:11:36,Social Sector
-6415476,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,93,3,0.97073,2008,"8.8,9.0,9.0",2016,"5.5,5.8,5.9",2023-12-19 22:06:10,Social Sector
-4695218,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,94,3,0.97073,2008,"6.7,7.0,7.1",2008,"8.0,8.6,8.6",2023-12-18 11:00:52,Human Rights Development
-6415370,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,94,3,1.0,2008,"8.8,9.0,9.0",2008,"8.5,9.3,9.3",2023-12-19 22:06:03,Social Sector
-2136124,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,33,3,1.0,2007,"5.5,5.5,5.2",2014,"5.6,5.6,5.3",2023-12-15 07:01:32,Social Sector
-5107310,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,33,3,0.97073,2007,"7.6,7.8,7.8",2014,"7.1,8.0,8.3",2023-12-18 18:44:45,Political State Sector
-2399729,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,50,3,1.0,2006,"5.2,5.2,5.5",2014,"9.5,9.5,9.8",2023-12-15 12:08:29,Social Sector
-3996264,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,50,3,0.97073,2006,"7.3,7.4,7.4",2014,"8.5,8.8,8.9",2023-12-17 11:42:03,Human Rights Development
+4695050,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,14,3,0.97073,2008,"6.7,7.0,7.1",2006,"1.0,1.1,1.1",2023-12-18 11:00:38,Human Rights Development
+6415244,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,14,3,1.0,2008,"8.8,9.0,9.0",2006,"2.5,2.8,2.8",2023-12-19 22:05:55,Social Sector
 2399694,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,130,3,1.0,2006,"5.2,5.2,5.5",2012,"7.6,7.6,7.7",2023-12-15 12:08:27,Social Sector
 3996250,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,130,3,0.97073,2006,"7.3,7.4,7.4",2012,"7.7,8.0,8.1",2023-12-17 11:42:02,Human Rights Development
 4695102,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,126,3,1.0,2008,"6.7,7.0,7.1",2020,"4.9,5.2,5.3",2023-12-18 11:00:42,Human Rights Development
 6415273,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,126,3,0.97073,2008,"8.8,9.0,9.0",2020,"1.9,3.4,3.9",2023-12-19 22:05:57,Social Sector
 2665131,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,192,3,1.0,2008,"5.2,5.3,5.4",2021,"4.5,4.8,5.1",2023-12-15 17:11:36,Social Sector
 4695379,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,192,3,0.97073,2008,"6.7,7.0,7.1",2021,"9.9,10.0,10.0",2023-12-18 11:01:04,Human Rights Development
+2136124,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,33,3,1.0,2007,"5.5,5.5,5.2",2014,"5.6,5.6,5.3",2023-12-15 07:01:32,Social Sector
+5107310,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,33,3,0.97073,2007,"7.6,7.8,7.8",2014,"7.1,8.0,8.3",2023-12-18 18:44:45,Political State Sector
 2664952,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,248,3,1.0,2008,"5.2,5.3,5.4",2014,"9.3,9.4,9.5",2023-12-15 17:11:25,Social Sector
 4695199,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,248,3,0.97073,2008,"6.7,7.0,7.1",2014,"7.3,7.5,7.5",2023-12-18 11:00:51,Human Rights Development
-4695050,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,14,3,0.97073,2008,"6.7,7.0,7.1",2006,"1.0,1.1,1.1",2023-12-18 11:00:38,Human Rights Development
-6415244,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,14,3,1.0,2008,"8.8,9.0,9.0",2006,"2.5,2.8,2.8",2023-12-19 22:05:55,Social Sector
+4694986,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,64,3,0.97073,2008,"6.7,7.0,7.1",2016,"7.5,7.9,7.9",2023-12-18 11:00:33,Human Rights Development
+6415196,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,64,3,1.0,2008,"8.8,9.0,9.0",2016,"6.6,6.9,6.9",2023-12-19 22:05:50,Social Sector
 2665097,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,229,3,1.0,2008,"5.2,5.3,5.4",2013,"6.7,6.9,7.1",2023-12-15 17:11:34,Social Sector
 4695345,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,229,3,0.97073,2008,"6.7,7.0,7.1",2013,"4.9,5.1,5.1",2023-12-18 11:01:02,Human Rights Development
 2399566,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,140,3,1.0,2006,"5.2,5.2,5.5",2020,"5.4,5.4,5.9",2023-12-15 12:08:20,Social Sector
@@ -2124,8 +2084,36 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 6415462,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,89,3,0.97073,2008,"8.8,9.0,9.0",2009,"7.0,7.4,7.3",2023-12-19 22:06:09,Social Sector
 2135909,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,239,3,1.0,2007,"5.5,5.5,5.2",2014,"7.6,7.6,7.3",2023-12-15 07:01:19,Social Sector
 5107149,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,239,3,0.97073,2007,"7.6,7.8,7.8",2014,"9.3,9.6,9.7",2023-12-18 18:44:38,Political State Sector
-4694986,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,64,3,0.97073,2008,"6.7,7.0,7.1",2016,"7.5,7.9,7.9",2023-12-18 11:00:33,Human Rights Development
-6415196,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,64,3,1.0,2008,"8.8,9.0,9.0",2016,"6.6,6.9,6.9",2023-12-19 22:05:50,Social Sector
+2399729,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,50,3,1.0,2006,"5.2,5.2,5.5",2014,"9.5,9.5,9.8",2023-12-15 12:08:29,Social Sector
+3996264,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,50,3,0.97073,2006,"7.3,7.4,7.4",2014,"8.5,8.8,8.9",2023-12-17 11:42:03,Human Rights Development
+4695074,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,156,3,0.97073,2008,"6.7,7.0,7.1",2006,"2.0,2.1,2.1",2023-12-18 11:00:40,Human Rights Development
+6415255,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,156,3,1.0,2008,"8.8,9.0,9.0",2006,"1.0,1.1,1.1",2023-12-19 22:05:55,Social Sector
+4695218,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,94,3,0.97073,2008,"6.7,7.0,7.1",2008,"8.0,8.6,8.6",2023-12-18 11:00:52,Human Rights Development
+6415370,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,94,3,1.0,2008,"8.8,9.0,9.0",2008,"8.5,9.3,9.3",2023-12-19 22:06:03,Social Sector
+4695065,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,44,3,0.97073,2008,"6.7,7.0,7.1",2006,"2.0,2.1,2.1",2023-12-18 11:00:39,Human Rights Development
+6415250,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,44,3,1.0,2008,"8.8,9.0,9.0",2006,"3.0,3.8,3.8",2023-12-19 22:05:55,Social Sector
+4695110,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,138,3,0.97073,2008,"6.7,7.0,7.1",2006,"2.0,2.1,2.1",2023-12-18 11:00:43,Human Rights Development
+6415277,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,138,3,1.0,2008,"8.8,9.0,9.0",2006,"3.0,3.6,3.6",2023-12-19 22:05:57,Social Sector
+2664731,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,23,3,1.0,2008,"5.2,5.3,5.4",2008,"4.0,4.1,4.2",2023-12-15 17:11:06,Social Sector
+6415226,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,23,3,0.97073,2008,"8.8,9.0,9.0",2008,"6.9,7.5,7.7",2023-12-19 22:05:53,Social Sector
+2665135,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,93,3,1.0,2008,"5.2,5.3,5.4",2016,"6.4,6.7,7.0",2023-12-15 17:11:36,Social Sector
+6415476,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,93,3,0.97073,2008,"8.8,9.0,9.0",2016,"5.5,5.8,5.9",2023-12-19 22:06:10,Social Sector
+2665015,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,80,3,0.97073,2008,"5.2,5.3,5.4",2006,"7.4,7.6,8.1",2023-12-15 17:11:29,Social Sector
+6415409,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,80,3,1.0,2008,"8.8,9.0,9.0",2006,"6.0,6.3,6.3",2023-12-19 22:06:05,Social Sector
+4695085,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,13,3,0.97073,2008,"6.7,7.0,7.1",2006,"1.0,1.1,1.1",2023-12-18 11:00:41,Human Rights Development
+6415265,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,13,3,1.0,2008,"8.8,9.0,9.0",2006,"2.5,2.9,2.9",2023-12-19 22:05:56,Social Sector
+2664978,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,167,3,1.0,2008,"5.2,5.3,5.4",2021,"8.8,8.9,9.0",2023-12-15 17:11:27,Social Sector
+6415376,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,167,3,0.97073,2008,"8.8,9.0,9.0",2021,"7.9,8.2,8.3",2023-12-19 22:06:03,Social Sector
+2135816,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,56,3,1.0,2007,"5.5,5.5,5.2",2012,"5.0,5.0,4.7",2023-12-15 07:01:13,Social Sector
+5107045,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,56,3,0.97073,2007,"7.6,7.8,7.8",2012,"5.2,5.5,5.6",2023-12-18 18:44:32,Political State Sector
+4695071,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,40,3,0.97073,2008,"6.7,7.0,7.1",2006,"2.0,2.1,2.1",2023-12-18 11:00:40,Human Rights Development
+6415254,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,40,3,1.0,2008,"8.8,9.0,9.0",2006,"3.0,3.3,3.3",2023-12-19 22:05:55,Social Sector
+4694922,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,196,3,0.97073,2008,"6.7,7.0,7.1",2006,"5.0,5.1,5.1",2023-12-18 11:00:29,Human Rights Development
+6415169,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,196,3,1.0,2008,"8.8,9.0,9.0",2006,"6.8,7.0,7.0",2023-12-19 22:05:48,Social Sector
+2664980,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,1,3,1.0,2008,"5.2,5.3,5.4",2008,"9.5,9.6,9.7",2023-12-15 17:11:27,Social Sector
+4695221,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,1,3,0.97073,2008,"6.7,7.0,7.1",2008,"7.0,7.2,7.2",2023-12-18 11:00:52,Human Rights Development
+2399529,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,100,3,0.97073,2006,"5.2,5.2,5.5",2006,"5.7,5.6,6.0",2023-12-15 12:08:18,Social Sector
+3996165,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,100,3,1.0,2006,"7.3,7.4,7.4",2006,"8.5,8.9,8.9",2023-12-17 11:41:57,Human Rights Development
 3002653,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,118,3,0.97073,2010,"8.0,7.7,8.1",2010,"7.9,7.6,7.9",2023-12-16 09:35:52,Finance Economy Sector
 31244419,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,249,118,3,0.99998,2010,"1.38,1.26,1.39",2010,"1.61,1.39,1.63",2024-01-17 03:25:05,Military Sector
 3002589,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,156,3,0.97073,2010,"8.0,7.7,8.1",2012,"3.9,3.6,3.9",2023-12-16 09:35:47,Finance Economy Sector
@@ -2140,10 +2128,10 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 31793598,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,2,3,0.99602,2011,"22.0,23.9,25.5",2006,"46.0,64.2,85.1",2024-01-17 19:53:48,Military Sector
 3002745,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,33,3,0.97073,2010,"8.0,7.7,8.1",2012,"3.1,2.8,3.1",2023-12-16 09:36:00,Finance Economy Sector
 5926362,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,33,3,0.9996,2010,"5.9,6.1,6.4",2012,"6.6,6.9,7.4",2023-12-19 12:13:11,Human Rights Development
-1214115,The Fund For Peace,Fragile State Index,Total,2023,249,215,3,0.97024,2013,"86.6,86.2,85.1",2011,"22.8,21.3,19.7",2023-12-14 06:46:38,Finance Economy Sector
-7266175,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,215,3,1.0,2013,"7.2,6.9,6.6",2011,"1.6,1.3,1.0",2023-12-20 15:58:21,Sovereignty
 1215135,The Fund For Peace,Fragile State Index,Total,2023,249,234,3,0.97024,2013,"86.6,86.2,85.1",2011,"50.4,48.9,47.3",2023-12-14 06:47:41,Finance Economy Sector
 7266785,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,234,3,1.0,2013,"7.2,6.9,6.6",2011,"4.1,3.8,3.5",2023-12-20 15:59:03,Sovereignty
+1214115,The Fund For Peace,Fragile State Index,Total,2023,249,215,3,0.97024,2013,"86.6,86.2,85.1",2011,"22.8,21.3,19.7",2023-12-14 06:46:38,Finance Economy Sector
+7266175,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,215,3,1.0,2013,"7.2,6.9,6.6",2011,"1.6,1.3,1.0",2023-12-20 15:58:21,Sovereignty
 3002630,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,112,3,0.97073,2010,"8.0,7.7,8.1",2014,"6.6,6.3,6.6",2023-12-16 09:35:50,Finance Economy Sector
 5926083,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,112,3,0.99947,2010,"5.9,6.1,6.4",2014,"7.3,7.6,8.0",2023-12-19 12:12:54,Human Rights Development
 5499674,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,80,3,1.0,2011,"7.8,7.7,7.6",2006,"6.3,6.1,5.9",2023-12-19 03:09:37,Political State Sector
@@ -2264,26 +2252,26 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 7265878,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,124,3,0.98198,2013,"7.2,6.9,6.6",2009,"5.0,4.8,4.4",2023-12-20 15:58:06,Sovereignty
 4695268,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,54,3,0.97073,2008,"6.7,7.0,7.1",2021,"5.5,5.6,5.6",2023-12-18 11:00:56,Human Rights Development
 6415411,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,54,3,0.99485,2008,"8.8,9.0,9.0",2021,"5.0,5.8,5.9",2023-12-19 22:06:05,Social Sector
-1214029,The Fund For Peace,Fragile State Index,Total,2023,249,200,3,0.96557,2013,"86.6,86.2,85.1",2014,"35.9,34.4,32.9",2023-12-14 06:46:33,Finance Economy Sector
-7266111,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,200,3,1.0,2013,"7.2,6.9,6.6",2014,"2.0,1.7,1.4",2023-12-20 15:58:18,Sovereignty
-1215132,The Fund For Peace,Fragile State Index,Total,2023,249,179,3,0.96557,2013,"86.6,86.2,85.1",2021,"44.1,42.3,40.5",2023-12-14 06:47:41,Finance Economy Sector
-7266783,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,179,3,1.0,2013,"7.2,6.9,6.6",2021,"6.3,6.0,5.7",2023-12-20 15:59:03,Sovereignty
-1213836,The Fund For Peace,Fragile State Index,Total,2023,249,144,3,0.96557,2013,"86.6,86.2,85.1",2011,"59.6,58.7,57.8",2023-12-14 06:46:22,Finance Economy Sector
-7265969,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,144,3,1.0,2013,"7.2,6.9,6.6",2011,"7.1,6.8,6.5",2023-12-20 15:58:11,Sovereignty
-1214472,The Fund For Peace,Fragile State Index,Total,2023,249,195,3,0.96557,2013,"86.6,86.2,85.1",2021,"69.7,67.5,65.3",2023-12-14 06:46:58,Finance Economy Sector
-7266394,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,195,3,1.0,2013,"7.2,6.9,6.6",2021,"4.7,4.4,4.1",2023-12-20 15:58:31,Sovereignty
-1214633,The Fund For Peace,Fragile State Index,Total,2023,249,223,3,0.96557,2013,"86.6,86.2,85.1",2014,"87.8,86.8,85.8",2023-12-14 06:47:09,Finance Economy Sector
-7266488,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,223,3,1.0,2013,"7.2,6.9,6.6",2014,"6.8,6.5,6.2",2023-12-20 15:58:35,Sovereignty
-1214928,The Fund For Peace,Fragile State Index,Total,2023,249,171,3,0.96557,2013,"86.6,86.2,85.1",2021,"80.89999999999999,79.49999999999999,78.1",2023-12-14 06:47:28,Finance Economy Sector
-7266683,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,171,3,1.0,2013,"7.2,6.9,6.6",2021,"5.6,5.3,5.0",2023-12-20 15:58:44,Sovereignty
-1214560,The Fund For Peace,Fragile State Index,Total,2023,249,91,3,0.96557,2013,"86.6,86.2,85.1",2011,"102.5,101.9,101.3",2023-12-14 06:47:05,Finance Economy Sector
-7266442,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,91,3,1.0,2013,"7.2,6.9,6.6",2011,"7.6,7.3,7.0",2023-12-20 15:58:33,Sovereignty
-1214415,The Fund For Peace,Fragile State Index,Total,2023,249,101,3,0.96557,2013,"86.6,86.2,85.1",2021,"67.6,66.60000000000001,65.60000000000001",2023-12-14 06:46:55,Finance Economy Sector
-7266364,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,101,3,1.0,2013,"7.2,6.9,6.6",2021,"4.3,4.0,3.7",2023-12-20 15:58:30,Sovereignty
-1214628,The Fund For Peace,Fragile State Index,Total,2023,249,199,3,0.96557,2013,"86.6,86.2,85.1",2021,"83.4,82.39999999999999,81.39999999999999",2023-12-14 06:47:09,Finance Economy Sector
-7266486,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,199,3,1.0,2013,"7.2,6.9,6.6",2021,"6.7,6.4,6.1",2023-12-20 15:58:35,Sovereignty
 1214503,The Fund For Peace,Fragile State Index,Total,2023,249,103,3,0.96557,2013,"86.6,86.2,85.1",2021,"96.2,93.8,91.4",2023-12-14 06:47:01,Finance Economy Sector
 7266416,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,103,3,1.0,2013,"7.2,6.9,6.6",2021,"8.5,8.2,7.9",2023-12-20 15:58:32,Sovereignty
+1214928,The Fund For Peace,Fragile State Index,Total,2023,249,171,3,0.96557,2013,"86.6,86.2,85.1",2021,"80.89999999999999,79.49999999999999,78.1",2023-12-14 06:47:28,Finance Economy Sector
+7266683,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,171,3,1.0,2013,"7.2,6.9,6.6",2021,"5.6,5.3,5.0",2023-12-20 15:58:44,Sovereignty
+1214628,The Fund For Peace,Fragile State Index,Total,2023,249,199,3,0.96557,2013,"86.6,86.2,85.1",2021,"83.4,82.39999999999999,81.39999999999999",2023-12-14 06:47:09,Finance Economy Sector
+7266486,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,199,3,1.0,2013,"7.2,6.9,6.6",2021,"6.7,6.4,6.1",2023-12-20 15:58:35,Sovereignty
+1214415,The Fund For Peace,Fragile State Index,Total,2023,249,101,3,0.96557,2013,"86.6,86.2,85.1",2021,"67.6,66.60000000000001,65.60000000000001",2023-12-14 06:46:55,Finance Economy Sector
+7266364,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,101,3,1.0,2013,"7.2,6.9,6.6",2021,"4.3,4.0,3.7",2023-12-20 15:58:30,Sovereignty
+1214560,The Fund For Peace,Fragile State Index,Total,2023,249,91,3,0.96557,2013,"86.6,86.2,85.1",2011,"102.5,101.9,101.3",2023-12-14 06:47:05,Finance Economy Sector
+7266442,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,91,3,1.0,2013,"7.2,6.9,6.6",2011,"7.6,7.3,7.0",2023-12-20 15:58:33,Sovereignty
+1215132,The Fund For Peace,Fragile State Index,Total,2023,249,179,3,0.96557,2013,"86.6,86.2,85.1",2021,"44.1,42.3,40.5",2023-12-14 06:47:41,Finance Economy Sector
+7266783,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,179,3,1.0,2013,"7.2,6.9,6.6",2021,"6.3,6.0,5.7",2023-12-20 15:59:03,Sovereignty
+1214633,The Fund For Peace,Fragile State Index,Total,2023,249,223,3,0.96557,2013,"86.6,86.2,85.1",2014,"87.8,86.8,85.8",2023-12-14 06:47:09,Finance Economy Sector
+7266488,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,223,3,1.0,2013,"7.2,6.9,6.6",2014,"6.8,6.5,6.2",2023-12-20 15:58:35,Sovereignty
+1214472,The Fund For Peace,Fragile State Index,Total,2023,249,195,3,0.96557,2013,"86.6,86.2,85.1",2021,"69.7,67.5,65.3",2023-12-14 06:46:58,Finance Economy Sector
+7266394,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,195,3,1.0,2013,"7.2,6.9,6.6",2021,"4.7,4.4,4.1",2023-12-20 15:58:31,Sovereignty
+1213836,The Fund For Peace,Fragile State Index,Total,2023,249,144,3,0.96557,2013,"86.6,86.2,85.1",2011,"59.6,58.7,57.8",2023-12-14 06:46:22,Finance Economy Sector
+7265969,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,144,3,1.0,2013,"7.2,6.9,6.6",2011,"7.1,6.8,6.5",2023-12-20 15:58:11,Sovereignty
+1214029,The Fund For Peace,Fragile State Index,Total,2023,249,200,3,0.96557,2013,"86.6,86.2,85.1",2014,"35.9,34.4,32.9",2023-12-14 06:46:33,Finance Economy Sector
+7266111,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,200,3,1.0,2013,"7.2,6.9,6.6",2014,"2.0,1.7,1.4",2023-12-20 15:58:18,Sovereignty
 5499688,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,15,3,1.0,2011,"7.8,7.7,7.6",2018,"5.1000000000000005,4.8,4.5",2023-12-19 03:09:39,Political State Sector
 31792809,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,15,3,0.9655,2011,"22.0,23.9,25.5",2018,"168.1,184.5,220.7",2024-01-17 19:52:43,Military Sector
 5926395,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,72,3,0.96682,2010,"5.9,6.1,6.4",2011,"6.5,7.0,7.3",2023-12-19 12:13:13,Human Rights Development
@@ -2302,40 +2290,38 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 32205335,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,181,3,0.96438,2010,"7.65,6.75,6.31",2019,"5.45,5.24,4.97",2024-01-19 03:13:47,Military Sector
 1214526,The Fund For Peace,Fragile State Index,Total,2023,249,205,3,0.98238,2013,"86.6,86.2,85.1",2012,"114.9,113.9,112.6",2023-12-14 06:47:03,Finance Economy Sector
 7266423,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,205,3,0.98198,2013,"7.2,6.9,6.6",2012,"9.8,9.4,9.2",2023-12-20 15:58:33,Sovereignty
-3002555,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,79,3,0.97073,2010,"8.0,7.7,8.1",2013,"7.8,7.5,7.8",2023-12-16 09:35:44,Finance Economy Sector
-5925941,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,79,3,0.9934,2010,"5.9,6.1,6.4",2013,"8.0,8.3,8.6",2023-12-19 12:12:47,Human Rights Development
-2665052,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,26,3,0.9934,2008,"5.2,5.3,5.4",2007,"7.0,7.3,7.5",2023-12-15 17:11:31,Social Sector
-6415434,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,26,3,0.97073,2008,"8.8,9.0,9.0",2007,"7.4,7.7,7.8",2023-12-19 22:06:07,Social Sector
-2665042,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,6,3,0.9934,2008,"5.2,5.3,5.4",2013,"6.8,7.1,7.3",2023-12-15 17:11:30,Social Sector
-4695295,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,6,3,0.97073,2008,"6.7,7.0,7.1",2013,"5.9,6.0,6.0",2023-12-18 11:00:58,Human Rights Development
-3002698,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,169,3,0.97073,2010,"8.0,7.7,8.1",2014,"4.0,3.9,4.0",2023-12-16 09:35:56,Finance Economy Sector
-5926250,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,169,3,0.9934,2010,"5.9,6.1,6.4",2014,"7.1,7.4,7.7",2023-12-19 12:13:03,Human Rights Development
-3002682,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,199,3,0.97073,2010,"8.0,7.7,8.1",2021,"8.5,8.2,8.5",2023-12-16 09:35:55,Finance Economy Sector
-5926214,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,199,3,0.9934,2010,"5.9,6.1,6.4",2021,"5.0,5.3,5.6",2023-12-19 12:13:01,Human Rights Development
-3002572,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,96,3,0.97073,2010,"8.0,7.7,8.1",2014,"6.6,6.3,6.6",2023-12-16 09:35:45,Finance Economy Sector
-5925975,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,96,3,0.9934,2010,"5.9,6.1,6.4",2014,"6.0,6.3,6.6",2023-12-19 12:12:49,Human Rights Development
-3002509,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,29,3,0.97073,2010,"8.0,7.7,8.1",2021,"6.6,6.1,6.6",2023-12-16 09:35:40,Finance Economy Sector
-5925853,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,29,3,0.9934,2010,"5.9,6.1,6.4",2021,"4.8,4.9,5.0",2023-12-19 12:12:42,Human Rights Development
-3002588,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,40,3,0.97073,2010,"8.0,7.7,8.1",2012,"2.1,1.8,2.1",2023-12-16 09:35:47,Finance Economy Sector
-5926007,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,40,3,0.9934,2010,"5.9,6.1,6.4",2012,"1.9,2.0,2.1",2023-12-19 12:12:50,Human Rights Development
-3002690,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,157,3,0.97073,2010,"8.0,7.7,8.1",2021,"6.0,5.7,6.0",2023-12-16 09:35:56,Finance Economy Sector
-5926226,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,157,3,0.9934,2010,"5.9,6.1,6.4",2021,"7.3,7.4,7.5",2023-12-19 12:13:02,Human Rights Development
-3002758,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,180,3,0.97073,2010,"8.0,7.7,8.1",2014,"6.7,6.4,6.7",2023-12-16 09:36:01,Finance Economy Sector
-5926398,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,180,3,0.9934,2010,"5.9,6.1,6.4",2014,"7.6,7.9,8.2",2023-12-19 12:13:13,Human Rights Development
-3002715,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,66,3,0.97073,2010,"8.0,7.7,8.1",2013,"8.3,8.0,8.3",2023-12-16 09:35:58,Finance Economy Sector
-5926286,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,66,3,0.9934,2010,"5.9,6.1,6.4",2013,"9.1,9.2,9.3",2023-12-19 12:13:05,Human Rights Development
-2665182,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,129,3,0.9934,2008,"5.2,5.3,5.4",2021,"3.3,3.6,3.8",2023-12-15 17:11:39,Social Sector
-6415505,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,129,3,0.97073,2008,"8.8,9.0,9.0",2021,"9.2,9.5,9.6",2023-12-19 22:06:11,Social Sector
-3002616,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,84,3,0.97073,2010,"8.0,7.7,8.1",2021,"6.0,5.7,6.0",2023-12-16 09:35:49,Finance Economy Sector
-5926061,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,84,3,0.9934,2010,"5.9,6.1,6.4",2021,"3.3,3.6,3.9",2023-12-19 12:12:53,Human Rights Development
-3002710,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,197,3,0.97073,2010,"8.0,7.7,8.1",2021,"6.1,5.8,6.1",2023-12-16 09:35:57,Finance Economy Sector
-5926272,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,197,3,0.9934,2010,"5.9,6.1,6.4",2021,"3.5,3.6,3.7",2023-12-19 12:13:05,Human Rights Development
-3002649,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,101,3,0.97073,2010,"8.0,7.7,8.1",2014,"5.5,5.2,5.5",2023-12-16 09:35:52,Finance Economy Sector
-5926124,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,101,3,0.9934,2010,"5.9,6.1,6.4",2014,"6.2,6.8,7.4",2023-12-19 12:12:56,Human Rights Development
-3002534,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,144,3,0.97073,2010,"8.0,7.7,8.1",2021,"5.1,5.0,5.1",2023-12-16 09:35:42,Finance Economy Sector
-5925903,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,144,3,0.9934,2010,"5.9,6.1,6.4",2021,"4.0,4.1,4.2",2023-12-19 12:12:45,Human Rights Development
 3002529,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,117,3,0.97073,2010,"8.0,7.7,8.1",2015,"3.0,2.7,3.0",2023-12-16 09:35:42,Finance Economy Sector
 5925891,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,117,3,0.9934,2010,"5.9,6.1,6.4",2015,"7.3,7.6,7.9",2023-12-19 12:12:44,Human Rights Development
+3002534,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,144,3,0.97073,2010,"8.0,7.7,8.1",2021,"5.1,5.0,5.1",2023-12-16 09:35:42,Finance Economy Sector
+5925903,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,144,3,0.9934,2010,"5.9,6.1,6.4",2021,"4.0,4.1,4.2",2023-12-19 12:12:45,Human Rights Development
+3002649,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,101,3,0.97073,2010,"8.0,7.7,8.1",2014,"5.5,5.2,5.5",2023-12-16 09:35:52,Finance Economy Sector
+5926124,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,101,3,0.9934,2010,"5.9,6.1,6.4",2014,"6.2,6.8,7.4",2023-12-19 12:12:56,Human Rights Development
+3002710,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,197,3,0.97073,2010,"8.0,7.7,8.1",2021,"6.1,5.8,6.1",2023-12-16 09:35:57,Finance Economy Sector
+5926272,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,197,3,0.9934,2010,"5.9,6.1,6.4",2021,"3.5,3.6,3.7",2023-12-19 12:13:05,Human Rights Development
+3002616,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,84,3,0.97073,2010,"8.0,7.7,8.1",2021,"6.0,5.7,6.0",2023-12-16 09:35:49,Finance Economy Sector
+5926061,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,84,3,0.9934,2010,"5.9,6.1,6.4",2021,"3.3,3.6,3.9",2023-12-19 12:12:53,Human Rights Development
+2665182,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,129,3,0.9934,2008,"5.2,5.3,5.4",2021,"3.3,3.6,3.8",2023-12-15 17:11:39,Social Sector
+6415505,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,129,3,0.97073,2008,"8.8,9.0,9.0",2021,"9.2,9.5,9.6",2023-12-19 22:06:11,Social Sector
+3002715,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,66,3,0.97073,2010,"8.0,7.7,8.1",2013,"8.3,8.0,8.3",2023-12-16 09:35:58,Finance Economy Sector
+5926286,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,66,3,0.9934,2010,"5.9,6.1,6.4",2013,"9.1,9.2,9.3",2023-12-19 12:13:05,Human Rights Development
+3002690,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,157,3,0.97073,2010,"8.0,7.7,8.1",2021,"6.0,5.7,6.0",2023-12-16 09:35:56,Finance Economy Sector
+5926226,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,157,3,0.9934,2010,"5.9,6.1,6.4",2021,"7.3,7.4,7.5",2023-12-19 12:13:02,Human Rights Development
+3002509,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,29,3,0.97073,2010,"8.0,7.7,8.1",2021,"6.6,6.1,6.6",2023-12-16 09:35:40,Finance Economy Sector
+5925853,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,29,3,0.9934,2010,"5.9,6.1,6.4",2021,"4.8,4.9,5.0",2023-12-19 12:12:42,Human Rights Development
+3002572,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,96,3,0.97073,2010,"8.0,7.7,8.1",2014,"6.6,6.3,6.6",2023-12-16 09:35:45,Finance Economy Sector
+5925975,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,96,3,0.9934,2010,"5.9,6.1,6.4",2014,"6.0,6.3,6.6",2023-12-19 12:12:49,Human Rights Development
+3002682,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,199,3,0.97073,2010,"8.0,7.7,8.1",2021,"8.5,8.2,8.5",2023-12-16 09:35:55,Finance Economy Sector
+5926214,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,199,3,0.9934,2010,"5.9,6.1,6.4",2021,"5.0,5.3,5.6",2023-12-19 12:13:01,Human Rights Development
+3002698,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,169,3,0.97073,2010,"8.0,7.7,8.1",2014,"4.0,3.9,4.0",2023-12-16 09:35:56,Finance Economy Sector
+5926250,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,169,3,0.9934,2010,"5.9,6.1,6.4",2014,"7.1,7.4,7.7",2023-12-19 12:13:03,Human Rights Development
+2665042,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,6,3,0.9934,2008,"5.2,5.3,5.4",2013,"6.8,7.1,7.3",2023-12-15 17:11:30,Social Sector
+4695295,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,6,3,0.97073,2008,"6.7,7.0,7.1",2013,"5.9,6.0,6.0",2023-12-18 11:00:58,Human Rights Development
+2665052,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,26,3,0.9934,2008,"5.2,5.3,5.4",2007,"7.0,7.3,7.5",2023-12-15 17:11:31,Social Sector
+6415434,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,26,3,0.97073,2008,"8.8,9.0,9.0",2007,"7.4,7.7,7.8",2023-12-19 22:06:07,Social Sector
+3002555,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,79,3,0.97073,2010,"8.0,7.7,8.1",2013,"7.8,7.5,7.8",2023-12-16 09:35:44,Finance Economy Sector
+5925941,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,79,3,0.9934,2010,"5.9,6.1,6.4",2013,"8.0,8.3,8.6",2023-12-19 12:12:47,Human Rights Development
+3002588,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,40,3,0.97073,2010,"8.0,7.7,8.1",2012,"2.1,1.8,2.1",2023-12-16 09:35:47,Finance Economy Sector
+5926007,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,40,3,0.9934,2010,"5.9,6.1,6.4",2012,"1.9,2.0,2.1",2023-12-19 12:12:50,Human Rights Development
 5499193,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,144,3,1.0,2011,"7.8,7.7,7.6",2017,"5.4,5.1000000000000005,4.8",2023-12-19 03:08:55,Political State Sector
 31793369,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,144,3,0.96398,2011,"22.0,23.9,25.5",2017,"28.1,30.3,30.9",2024-01-17 19:53:26,Military Sector
 5499486,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,67,3,1.0,2011,"7.8,7.7,7.6",2017,"2.9,2.6,2.3",2023-12-19 03:09:17,Political State Sector
@@ -2386,52 +2372,16 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 7265903,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,131,3,1.0,2013,"7.2,6.9,6.6",2018,"3.5,3.2,2.9000000000000004",2023-12-20 15:58:08,Sovereignty
 31244253,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,249,3,3,0.96864,2010,"1.38,1.26,1.39",2005,"2.83,2.64,2.92",2024-01-17 03:24:57,Military Sector
 32205172,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,3,3,0.99277,2010,"7.65,6.75,6.31",2005,"10.46,9.16,8.8",2024-01-19 03:13:40,Military Sector
-31244346,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,249,33,3,0.96528,2010,"1.38,1.26,1.39",2011,"2.24,2.16,2.28",2024-01-17 03:25:02,Military Sector
-32205622,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,33,3,0.99606,2010,"7.65,6.75,6.31",2011,"7.55,6.97,6.78",2024-01-19 03:13:58,Military Sector
 1214711,The Fund For Peace,Fragile State Index,Total,2023,249,121,3,0.97936,2013,"86.6,86.2,85.1",2009,"93.5,90.9,87.7",2023-12-14 06:47:14,Finance Economy Sector
 7266534,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,121,3,0.98198,2013,"7.2,6.9,6.6",2009,"8.3,8.1,8.0",2023-12-20 15:58:37,Sovereignty
+31244346,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,249,33,3,0.96528,2010,"1.38,1.26,1.39",2011,"2.24,2.16,2.28",2024-01-17 03:25:02,Military Sector
+32205622,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,33,3,0.99606,2010,"7.65,6.75,6.31",2011,"7.55,6.97,6.78",2024-01-19 03:13:58,Military Sector
 5499456,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,208,3,1.0,2011,"7.8,7.7,7.6",2017,"1.9,1.6,1.3",2023-12-19 03:09:14,Political State Sector
 31793346,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,208,3,0.96121,2011,"22.0,23.9,25.5",2017,"766.6,841.7,861.0",2024-01-17 19:53:25,Military Sector
-4695346,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,92,3,0.96077,2008,"6.7,7.0,7.1",2010,"7.1,7.4,7.7",2023-12-18 11:01:02,Human Rights Development
-6415454,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,92,3,1.0,2008,"8.8,9.0,9.0",2010,"8.5,8.7,8.7",2023-12-19 22:06:08,Social Sector
-2665167,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,180,3,1.0,2008,"5.2,5.3,5.4",2016,"6.9,7.2,7.5",2023-12-15 17:11:38,Social Sector
-4695427,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,180,3,0.96077,2008,"6.7,7.0,7.1",2016,"7.1,7.4,7.7",2023-12-18 11:01:07,Human Rights Development
-4695206,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,108,3,0.96077,2008,"6.7,7.0,7.1",2015,"6.7,7.0,7.3",2023-12-18 11:00:51,Human Rights Development
-6415354,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,108,3,1.0,2008,"8.8,9.0,9.0",2015,"8.1,8.2,8.2",2023-12-19 22:06:02,Social Sector
-2665177,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,59,3,1.0,2008,"5.2,5.3,5.4",2013,"6.2,6.4,6.6",2023-12-15 17:11:38,Social Sector
-4695443,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,59,3,0.96077,2008,"6.7,7.0,7.1",2013,"5.2,5.5,5.8",2023-12-18 11:01:08,Human Rights Development
-2664873,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,112,3,0.96077,2008,"5.2,5.3,5.4",2012,"7.0,7.1,7.4",2023-12-15 17:11:20,Social Sector
-6415301,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,112,3,1.0,2008,"8.8,9.0,9.0",2012,"6.5,6.7,6.7",2023-12-19 22:05:59,Social Sector
-2665164,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,180,3,1.0,2008,"5.2,5.3,5.4",2013,"6.0,6.3,6.6",2023-12-15 17:11:38,Social Sector
-4695424,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,180,3,0.96077,2008,"6.7,7.0,7.1",2013,"6.2,6.5,6.8",2023-12-18 11:01:07,Human Rights Development
-2135976,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,1,3,1.0,2007,"5.5,5.5,5.2",2021,"10.0,10.0,9.7",2023-12-15 07:01:23,Social Sector
-5107199,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,1,3,0.96077,2007,"7.6,7.8,7.8",2021,"8.7,9.2,9.4",2023-12-18 18:44:40,Political State Sector
-2665069,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,119,3,1.0,2008,"5.2,5.3,5.4",2014,"6.0,6.3,6.6",2023-12-15 17:11:32,Social Sector
-4695318,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,119,3,0.96077,2008,"6.7,7.0,7.1",2014,"7.1,7.4,7.7",2023-12-18 11:01:00,Human Rights Development
-2665076,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,66,3,1.0,2008,"5.2,5.3,5.4",2017,"7.1,7.399999999999999,7.7",2023-12-15 17:11:32,Social Sector
-4695326,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,66,3,0.96077,2008,"6.7,7.0,7.1",2017,"8.3,8.600000000000001,8.9",2023-12-18 11:01:00,Human Rights Development
-2664685,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,147,3,1.0,2008,"5.2,5.3,5.4",2013,"6.5,6.8,7.1",2023-12-15 17:11:04,Social Sector
-4694981,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,147,3,0.96077,2008,"6.7,7.0,7.1",2013,"7.0,7.3,7.6",2023-12-18 11:00:33,Human Rights Development
-2664695,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,221,3,1.0,2008,"5.2,5.3,5.4",2014,"8.0,8.5,9.0",2023-12-15 17:11:05,Social Sector
-4694994,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,221,3,0.96077,2008,"6.7,7.0,7.1",2014,"3.8,4.1,4.4",2023-12-18 11:00:34,Human Rights Development
-4694905,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,29,3,0.96077,2008,"6.7,7.0,7.1",2016,"5.2,5.5,5.8",2023-12-18 11:00:28,Human Rights Development
-6415166,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,29,3,1.0,2008,"8.8,9.0,9.0",2016,"7.9,8.2,8.2",2023-12-19 22:05:48,Social Sector
-4695299,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,220,3,0.96077,2008,"6.7,7.0,7.1",2012,"6.1,6.4,6.7",2023-12-18 11:00:58,Human Rights Development
-6415431,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,220,3,1.0,2008,"8.8,9.0,9.0",2012,"8.2,8.6,8.6",2023-12-19 22:06:07,Social Sector
-2664750,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,206,3,1.0,2008,"5.2,5.3,5.4",2012,"5.6,5.7,5.8",2023-12-15 17:11:07,Social Sector
-4695034,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,206,3,0.96077,2008,"6.7,7.0,7.1",2012,"4.0,4.3,4.6",2023-12-18 11:00:37,Human Rights Development
-2664797,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,235,3,1.0,2008,"5.2,5.3,5.4",2010,"4.1,4.4,4.7",2023-12-15 17:11:16,Social Sector
-4695094,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,235,3,0.96077,2008,"6.7,7.0,7.1",2010,"1.8,2.1,2.4",2023-12-18 11:00:42,Human Rights Development
-4694955,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,82,3,0.96077,2008,"6.7,7.0,7.1",2014,"7.3,7.6,7.9",2023-12-18 11:00:31,Human Rights Development
-6415184,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,82,3,1.0,2008,"8.8,9.0,9.0",2014,"6.9,7.1,7.1",2023-12-19 22:05:49,Social Sector
-2665114,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,89,3,1.0,2008,"5.2,5.3,5.4",2015,"7.9,8.2,8.5",2023-12-15 17:11:35,Social Sector
-4695360,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,89,3,0.96077,2008,"6.7,7.0,7.1",2015,"6.7,7.0,7.3",2023-12-18 11:01:03,Human Rights Development
-2664892,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,183,3,1.0,2008,"5.2,5.3,5.4",2013,"8.2,8.5,8.8",2023-12-15 17:11:21,Social Sector
-4695157,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,183,3,0.96077,2008,"6.7,7.0,7.1",2013,"6.9,7.2,7.5",2023-12-18 11:00:47,Human Rights Development
+2664674,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,144,3,1.0,2008,"5.2,5.3,5.4",2013,"3.7,4.0,4.3",2023-12-15 17:11:03,Social Sector
+4694963,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,144,3,0.96077,2008,"6.7,7.0,7.1",2013,"2.5,2.8,3.1",2023-12-18 11:00:32,Human Rights Development
 2399754,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,42,3,1.0,2006,"5.2,5.2,5.5",2012,"9.1,9.1,9.7",2023-12-15 12:08:30,Social Sector
 3996286,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,42,3,0.96077,2006,"7.3,7.4,7.4",2012,"8.7,9.2,9.4",2023-12-17 11:42:04,Human Rights Development
-2665165,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,180,3,1.0,2008,"5.2,5.3,5.4",2014,"6.3,6.6,6.9",2023-12-15 17:11:38,Social Sector
-4695425,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,180,3,0.96077,2008,"6.7,7.0,7.1",2014,"6.5,6.8,7.1",2023-12-18 11:01:07,Human Rights Development
 2399739,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,94,3,1.0,2006,"5.2,5.2,5.5",2012,"9.0,9.0,9.1",2023-12-15 12:08:29,Social Sector
 3996275,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,94,3,0.96077,2006,"7.3,7.4,7.4",2012,"8.6,9.1,9.3",2023-12-17 11:42:04,Human Rights Development
 2665084,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,219,3,1.0,2008,"5.2,5.3,5.4",2013,"6.7,7.0,7.3",2023-12-15 17:11:33,Social Sector
@@ -2440,8 +2390,8 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 6415208,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,133,3,1.0,2008,"8.8,9.0,9.0",2021,"8.7,8.8,8.8",2023-12-19 22:05:51,Social Sector
 2665110,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,89,3,1.0,2008,"5.2,5.3,5.4",2011,"6.9,7.1,7.3",2023-12-15 17:11:35,Social Sector
 4695359,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,89,3,0.96077,2008,"6.7,7.0,7.1",2011,"6.5,6.8,7.1",2023-12-18 11:01:03,Human Rights Development
-2664674,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,144,3,1.0,2008,"5.2,5.3,5.4",2013,"3.7,4.0,4.3",2023-12-15 17:11:03,Social Sector
-4694963,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,144,3,0.96077,2008,"6.7,7.0,7.1",2013,"2.5,2.8,3.1",2023-12-18 11:00:32,Human Rights Development
+2665114,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,89,3,1.0,2008,"5.2,5.3,5.4",2015,"7.9,8.2,8.5",2023-12-15 17:11:35,Social Sector
+4695360,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,89,3,0.96077,2008,"6.7,7.0,7.1",2015,"6.7,7.0,7.3",2023-12-18 11:01:03,Human Rights Development
 2664686,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,147,3,1.0,2008,"5.2,5.3,5.4",2014,"6.8,7.1,7.4",2023-12-15 17:11:04,Social Sector
 4694982,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,147,3,0.96077,2008,"6.7,7.0,7.1",2014,"7.3,7.6,7.9",2023-12-18 11:00:33,Human Rights Development
 2664939,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,118,3,1.0,2008,"5.2,5.3,5.4",2014,"8.2,8.4,8.6",2023-12-15 17:11:24,Social Sector
@@ -2456,6 +2406,37 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 6415233,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,206,3,0.96077,2008,"8.8,9.0,9.0",2006,"7.7,8.2,8.4",2023-12-19 22:05:54,Social Sector
 2664655,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,2,3,1.0,2008,"5.2,5.3,5.4",2018,"4.2,4.3,4.4",2023-12-15 17:11:03,Social Sector
 4694939,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,2,3,0.96077,2008,"6.7,7.0,7.1",2018,"7.5,7.8,8.1",2023-12-18 11:00:30,Human Rights Development
+2664892,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,183,3,1.0,2008,"5.2,5.3,5.4",2013,"8.2,8.5,8.8",2023-12-15 17:11:21,Social Sector
+4695157,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,183,3,0.96077,2008,"6.7,7.0,7.1",2013,"6.9,7.2,7.5",2023-12-18 11:00:47,Human Rights Development
+2664873,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,112,3,0.96077,2008,"5.2,5.3,5.4",2012,"7.0,7.1,7.4",2023-12-15 17:11:20,Social Sector
+6415301,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,112,3,1.0,2008,"8.8,9.0,9.0",2012,"6.5,6.7,6.7",2023-12-19 22:05:59,Social Sector
+4694955,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,82,3,0.96077,2008,"6.7,7.0,7.1",2014,"7.3,7.6,7.9",2023-12-18 11:00:31,Human Rights Development
+6415184,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,82,3,1.0,2008,"8.8,9.0,9.0",2014,"6.9,7.1,7.1",2023-12-19 22:05:49,Social Sector
+2665069,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,119,3,1.0,2008,"5.2,5.3,5.4",2014,"6.0,6.3,6.6",2023-12-15 17:11:32,Social Sector
+4695318,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,119,3,0.96077,2008,"6.7,7.0,7.1",2014,"7.1,7.4,7.7",2023-12-18 11:01:00,Human Rights Development
+4695346,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,92,3,0.96077,2008,"6.7,7.0,7.1",2010,"7.1,7.4,7.7",2023-12-18 11:01:02,Human Rights Development
+6415454,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,92,3,1.0,2008,"8.8,9.0,9.0",2010,"8.5,8.7,8.7",2023-12-19 22:06:08,Social Sector
+6415351,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,50,3,0.93224,2008,"8.8,9.0,9.0",2016,"9.1,9.4,9.573279744166287",2023-12-19 22:06:02,Social Sector
+4695206,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,108,3,0.96077,2008,"6.7,7.0,7.1",2015,"6.7,7.0,7.3",2023-12-18 11:00:51,Human Rights Development
+6415354,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,108,3,1.0,2008,"8.8,9.0,9.0",2015,"8.1,8.2,8.2",2023-12-19 22:06:02,Social Sector
+2665177,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,59,3,1.0,2008,"5.2,5.3,5.4",2013,"6.2,6.4,6.6",2023-12-15 17:11:38,Social Sector
+4695443,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,59,3,0.96077,2008,"6.7,7.0,7.1",2013,"5.2,5.5,5.8",2023-12-18 11:01:08,Human Rights Development
+2135976,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,1,3,1.0,2007,"5.5,5.5,5.2",2021,"10.0,10.0,9.7",2023-12-15 07:01:23,Social Sector
+5107199,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,1,3,0.96077,2007,"7.6,7.8,7.8",2021,"8.7,9.2,9.4",2023-12-18 18:44:40,Political State Sector
+2664797,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,235,3,1.0,2008,"5.2,5.3,5.4",2010,"4.1,4.4,4.7",2023-12-15 17:11:16,Social Sector
+4695094,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,235,3,0.96077,2008,"6.7,7.0,7.1",2010,"1.8,2.1,2.4",2023-12-18 11:00:42,Human Rights Development
+2665076,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,66,3,1.0,2008,"5.2,5.3,5.4",2017,"7.1,7.399999999999999,7.7",2023-12-15 17:11:32,Social Sector
+4695326,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,66,3,0.96077,2008,"6.7,7.0,7.1",2017,"8.3,8.600000000000001,8.9",2023-12-18 11:01:00,Human Rights Development
+4695299,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,220,3,0.96077,2008,"6.7,7.0,7.1",2012,"6.1,6.4,6.7",2023-12-18 11:00:58,Human Rights Development
+6415431,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,220,3,1.0,2008,"8.8,9.0,9.0",2012,"8.2,8.6,8.6",2023-12-19 22:06:07,Social Sector
+2664750,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,206,3,1.0,2008,"5.2,5.3,5.4",2012,"5.6,5.7,5.8",2023-12-15 17:11:07,Social Sector
+4695034,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,206,3,0.96077,2008,"6.7,7.0,7.1",2012,"4.0,4.3,4.6",2023-12-18 11:00:37,Human Rights Development
+2664685,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,147,3,1.0,2008,"5.2,5.3,5.4",2013,"6.5,6.8,7.1",2023-12-15 17:11:04,Social Sector
+4694981,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,147,3,0.96077,2008,"6.7,7.0,7.1",2013,"7.0,7.3,7.6",2023-12-18 11:00:33,Human Rights Development
+4694905,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,29,3,0.96077,2008,"6.7,7.0,7.1",2016,"5.2,5.5,5.8",2023-12-18 11:00:28,Human Rights Development
+6415166,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,29,3,1.0,2008,"8.8,9.0,9.0",2016,"7.9,8.2,8.2",2023-12-19 22:05:48,Social Sector
+2664695,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,221,3,1.0,2008,"5.2,5.3,5.4",2014,"8.0,8.5,9.0",2023-12-15 17:11:05,Social Sector
+4694994,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,221,3,0.96077,2008,"6.7,7.0,7.1",2014,"3.8,4.1,4.4",2023-12-18 11:00:34,Human Rights Development
 5499516,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,232,3,0.97073,2011,"7.8,7.7,7.6",2018,"8.0,7.8,7.3",2023-12-19 03:09:20,Political State Sector
 31793590,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,232,3,0.99002,2011,"22.0,23.9,25.5",2018,"9.6,14.6,21.5",2024-01-17 19:53:47,Military Sector
 5499441,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,238,3,0.98198,2011,"7.8,7.7,7.6",2009,"3.6,3.4,3.3",2023-12-19 03:09:12,Political State Sector
@@ -2492,14 +2473,14 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 7266169,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,104,3,1.0,2013,"7.2,6.9,6.6",2021,"1.6,1.3,1.0",2023-12-20 15:58:21,Sovereignty
 1214247,The Fund For Peace,Fragile State Index,Total,2023,249,210,3,0.999,2013,"86.6,86.2,85.1",2021,"44.8,44.4,43.49999999999999",2023-12-14 06:46:45,Finance Economy Sector
 7266266,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,210,3,0.96077,2013,"7.2,6.9,6.6",2021,"1.7,1.4,1.3",2023-12-20 15:58:26,Sovereignty
-1214462,The Fund For Peace,Fragile State Index,Total,2023,249,248,3,0.96628,2013,"86.6,86.2,85.1",2021,"111.7,111.7,108.9",2023-12-14 06:46:57,Finance Economy Sector
-7266387,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,248,3,0.9934,2013,"7.2,6.9,6.6",2021,"9.7,9.4,9.2",2023-12-20 15:58:31,Sovereignty
-1214732,The Fund For Peace,Fragile State Index,Total,2023,249,173,3,0.96628,2013,"86.6,86.2,85.1",2015,"72.0,72.0,70.3",2023-12-14 06:47:15,Finance Economy Sector
-7266545,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,173,3,0.9934,2013,"7.2,6.9,6.6",2015,"4.0,3.7,3.5",2023-12-20 15:58:38,Sovereignty
-1214809,The Fund For Peace,Fragile State Index,Total,2023,249,119,3,0.96628,2013,"86.6,86.2,85.1",2015,"84.4,84.4,82.4",2023-12-14 06:47:19,Finance Economy Sector
-7266612,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,119,3,0.9934,2013,"7.2,6.9,6.6",2015,"6.6,6.3,6.1",2023-12-20 15:58:41,Sovereignty
 1213794,The Fund For Peace,Fragile State Index,Total,2023,249,34,3,0.96628,2013,"86.6,86.2,85.1",2016,"53.7,53.7,51.65420796469111",2023-12-14 06:46:20,Finance Economy Sector
 7265938,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,34,3,0.9934,2013,"7.2,6.9,6.6",2016,"4.5,4.3,4.0",2023-12-20 15:58:10,Sovereignty
+1214809,The Fund For Peace,Fragile State Index,Total,2023,249,119,3,0.96628,2013,"86.6,86.2,85.1",2015,"84.4,84.4,82.4",2023-12-14 06:47:19,Finance Economy Sector
+7266612,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,119,3,0.9934,2013,"7.2,6.9,6.6",2015,"6.6,6.3,6.1",2023-12-20 15:58:41,Sovereignty
+1214732,The Fund For Peace,Fragile State Index,Total,2023,249,173,3,0.96628,2013,"86.6,86.2,85.1",2015,"72.0,72.0,70.3",2023-12-14 06:47:15,Finance Economy Sector
+7266545,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,173,3,0.9934,2013,"7.2,6.9,6.6",2015,"4.0,3.7,3.5",2023-12-20 15:58:38,Sovereignty
+1214462,The Fund For Peace,Fragile State Index,Total,2023,249,248,3,0.96628,2013,"86.6,86.2,85.1",2021,"111.7,111.7,108.9",2023-12-14 06:46:57,Finance Economy Sector
+7266387,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,248,3,0.9934,2013,"7.2,6.9,6.6",2021,"9.7,9.4,9.2",2023-12-20 15:58:31,Sovereignty
 5499784,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,219,3,0.96077,2011,"7.8,7.7,7.6",2017,"5.6,5.3,5.2",2023-12-19 03:09:49,Political State Sector
 31793670,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,219,3,0.99878,2011,"22.0,23.9,25.5",2017,"8.8,8.9,9.0",2024-01-17 19:53:55,Military Sector
 5499626,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,162,3,0.96077,2011,"7.8,7.7,7.6",2014,"9.2,8.9,8.8",2023-12-19 03:09:33,Political State Sector
@@ -2610,10 +2591,10 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 31793047,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,181,3,0.98168,2011,"22.0,23.9,25.5",2018,"223.5,238.2,262.6",2024-01-17 19:53:01,Military Sector
 5499888,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,93,3,1.0,2011,"7.8,7.7,7.6",2017,"6.2,5.9,5.6",2023-12-19 03:09:59,Political State Sector
 31793505,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,93,3,0.95515,2011,"22.0,23.9,25.5",2017,"76.8,79.3,85.8",2024-01-17 19:53:39,Military Sector
-1215146,The Fund For Peace,Fragile State Index,Total,2023,249,134,3,0.95485,2013,"86.6,86.2,85.1",2011,"45.4,43.8,42.4",2023-12-14 06:47:42,Finance Economy Sector
-7266793,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,134,3,1.0,2013,"7.2,6.9,6.6",2011,"4.4,4.1,3.8",2023-12-20 15:59:04,Sovereignty
 1214742,The Fund For Peace,Fragile State Index,Total,2023,249,174,3,0.95485,2013,"86.6,86.2,85.1",2018,"85.49988187329669,83.1,80.99999999999999",2023-12-14 06:47:15,Finance Economy Sector
 7266556,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,174,3,1.0,2013,"7.2,6.9,6.6",2018,"6.9,6.6,6.3",2023-12-20 15:58:38,Sovereignty
+1215146,The Fund For Peace,Fragile State Index,Total,2023,249,134,3,0.95485,2013,"86.6,86.2,85.1",2011,"45.4,43.8,42.4",2023-12-14 06:47:42,Finance Economy Sector
+7266793,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,134,3,1.0,2013,"7.2,6.9,6.6",2011,"4.4,4.1,3.8",2023-12-20 15:59:04,Sovereignty
 1214361,The Fund For Peace,Fragile State Index,Total,2023,249,152,3,0.97871,2013,"86.6,86.2,85.1",2016,"91.2,91.0,87.87642693759165",2023-12-14 06:46:52,Finance Economy Sector
 7266330,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,152,3,0.97589,2013,"7.2,6.9,6.6",2016,"7.1,6.9,6.811682630531924",2023-12-20 15:58:29,Sovereignty
 5499235,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,64,3,0.96025,2011,"7.8,7.7,7.6",2018,"6.1000000000000005,5.8,5.700925046746296",2023-12-19 03:08:58,Political State Sector
@@ -2624,12 +2605,12 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 7266621,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,66,3,0.99662,2013,"7.2,6.9,6.6",2017,"7.7,7.4,7.0",2023-12-20 15:58:41,Sovereignty
 1214894,The Fund For Peace,Fragile State Index,Total,2023,249,182,3,0.95422,2013,"86.6,86.2,85.1",2018,"77.16545659420007,74.7,72.55858319621083",2023-12-14 06:47:26,Finance Economy Sector
 7266663,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,182,3,1.0,2013,"7.2,6.9,6.6",2018,"5.7,5.4,5.1000000000000005",2023-12-20 15:58:43,Sovereignty
+2665029,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,173,3,0.9934,2008,"5.2,5.3,5.4",2013,"7.0,7.3,7.5",2023-12-15 17:11:30,Social Sector
+4695284,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,173,3,0.96077,2008,"6.7,7.0,7.1",2013,"6.1,6.4,6.7",2023-12-18 11:00:57,Human Rights Development
 2664782,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,156,3,0.9934,2008,"5.2,5.3,5.4",2010,"3.3,3.5,3.8",2023-12-15 17:11:15,Social Sector
 4695075,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,156,3,0.96077,2008,"6.7,7.0,7.1",2010,"2.1,2.4,2.7",2023-12-18 11:00:40,Human Rights Development
 2665094,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,158,3,0.9934,2008,"5.2,5.3,5.4",2015,"7.5,7.7,8.0",2023-12-15 17:11:33,Social Sector
 4695342,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,158,3,0.96077,2008,"6.7,7.0,7.1",2015,"6.9,7.2,7.5",2023-12-18 11:01:02,Human Rights Development
-2665029,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,173,3,0.9934,2008,"5.2,5.3,5.4",2013,"7.0,7.3,7.5",2023-12-15 17:11:30,Social Sector
-4695284,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,173,3,0.96077,2008,"6.7,7.0,7.1",2013,"6.1,6.4,6.7",2023-12-18 11:00:57,Human Rights Development
 5926295,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,219,3,0.9934,2010,"5.9,6.1,6.4",2015,"7.6,7.9,8.2",2023-12-19 12:13:06,Human Rights Development
 32205837,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,219,3,0.96073,2010,"7.65,6.75,6.31",2015,"4.02,3.12,3.07",2024-01-19 03:14:07,Military Sector
 5499312,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,96,3,0.9934,2011,"7.8,7.7,7.6",2009,"7.1,6.9,6.6",2023-12-19 03:09:02,Political State Sector
@@ -2658,12 +2639,12 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 7265951,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,117,3,1.0,2013,"7.2,6.9,6.6",2018,"4.5,4.2,3.9",2023-12-20 15:58:10,Sovereignty
 5499950,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,134,3,0.96884,2011,"7.8,7.7,7.6",2018,"1.7,1.5,1.4227660588297515",2023-12-19 03:10:04,Political State Sector
 31793101,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,134,3,0.98397,2011,"22.0,23.9,25.5",2018,"152.3,182.4,195.2",2024-01-17 19:53:05,Military Sector
+2664953,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,248,3,0.98198,2008,"5.2,5.3,5.4",2017,"9.3,9.5,9.6",2023-12-15 17:11:25,Social Sector
+6415345,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,248,3,0.97073,2008,"8.8,9.0,9.0",2017,"9.3,9.6,9.7",2023-12-19 22:06:01,Social Sector
 2664851,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,236,3,0.98198,2008,"5.2,5.3,5.4",2009,"3.3,3.4,3.6",2023-12-15 17:11:19,Social Sector
 4695132,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,236,3,0.97073,2008,"6.7,7.0,7.1",2009,"1.0,1.1,1.1",2023-12-18 11:00:45,Human Rights Development
 4695193,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,18,3,0.97073,2008,"6.7,7.0,7.1",2014,"7.2,7.5,7.5",2023-12-18 11:00:50,Human Rights Development
 6415338,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,18,3,0.98198,2008,"8.8,9.0,9.0",2014,"7.6,8.1,8.0",2023-12-19 22:06:01,Social Sector
-2664953,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,248,3,0.98198,2008,"5.2,5.3,5.4",2017,"9.3,9.5,9.6",2023-12-15 17:11:25,Social Sector
-6415345,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,248,3,0.97073,2008,"8.8,9.0,9.0",2017,"9.3,9.6,9.7",2023-12-19 22:06:01,Social Sector
 5925887,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,117,3,0.9934,2010,"5.9,6.1,6.4",2011,"6.2,6.5,6.8",2023-12-19 12:12:44,Human Rights Development
 32205958,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,117,3,0.95922,2010,"7.65,6.75,6.31",2011,"8.96,8.8,8.58",2024-01-19 03:14:12,Military Sector
 1213816,The Fund For Peace,Fragile State Index,Total,2023,249,82,3,0.96926,2013,"86.6,86.2,85.1",2016,"71.2,69.7,68.1221863165064",2023-12-14 06:46:21,Finance Economy Sector
@@ -2818,24 +2799,24 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 31793823,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,35,3,0.98429,2011,"22.0,23.9,25.5",2010,"7.9,8.6,8.9",2024-01-17 19:54:08,Military Sector
 5499559,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,35,3,0.9934,2011,"7.8,7.7,7.6",2016,"8.9,8.7,8.399999999999999",2023-12-19 03:09:25,Political State Sector
 31793826,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,35,3,0.95153,2011,"22.0,23.9,25.5",2016,"8.0,10.0,15.5",2024-01-17 19:54:08,Military Sector
-2665047,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,6,3,1.0,2008,"5.2,5.3,5.4",2021,"8.1,8.4,8.7",2023-12-15 17:11:31,Social Sector
-6415428,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,6,3,0.94491,2008,"8.8,9.0,9.0",2021,"9.0,9.2,9.3",2023-12-19 22:06:06,Social Sector
-2665174,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,59,3,1.0,2008,"5.2,5.3,5.4",2008,"5.5,5.7,5.9",2023-12-15 17:11:38,Social Sector
-6415493,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,59,3,0.94491,2008,"8.8,9.0,9.0",2008,"7.7,8.0,7.9",2023-12-19 22:06:11,Social Sector
-2135979,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,91,3,0.94491,2007,"5.5,5.5,5.2",2013,"9.1,9.2,8.9",2023-12-15 07:01:23,Social Sector
-5107203,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,91,3,1.0,2007,"7.6,7.8,7.8",2013,"9.8,9.9,9.9",2023-12-18 18:44:40,Political State Sector
-2665057,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,62,3,1.0,2008,"5.2,5.3,5.4",2012,"6.9,7.2,7.5",2023-12-15 17:11:31,Social Sector
-6415438,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,62,3,0.94491,2008,"8.8,9.0,9.0",2012,"5.6,5.8,5.9",2023-12-19 22:06:07,Social Sector
 2135833,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,140,3,0.94491,2007,"5.5,5.5,5.2",2006,"6.0,6.1,5.8",2023-12-15 07:01:14,Social Sector
 5107060,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,140,3,1.0,2007,"7.6,7.8,7.8",2006,"5.9,6.1,6.1",2023-12-18 18:44:33,Political State Sector
-2399822,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,38,3,1.0,2006,"5.2,5.2,5.5",2012,"8.0,8.0,8.6",2023-12-15 12:08:34,Social Sector
-3996326,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,38,3,0.94491,2006,"7.3,7.4,7.4",2012,"7.1,7.3,7.4",2023-12-17 11:42:07,Human Rights Development
-4695013,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,233,3,1.0,2008,"6.7,7.0,7.1",2020,"5.503775926525209,5.8,5.9",2023-12-18 11:00:35,Human Rights Development
-6415220,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,233,3,0.94491,2008,"8.8,9.0,9.0",2020,"3.3000000000000003,4.3,4.8",2023-12-19 22:05:53,Social Sector
-2135936,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,149,3,0.94491,2007,"5.5,5.5,5.2",2007,"9.0,9.3,8.4",2023-12-15 07:01:20,Social Sector
-5107168,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,149,3,1.0,2007,"7.6,7.8,7.8",2007,"9.1,9.5,9.5",2023-12-18 18:44:38,Political State Sector
 2135961,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,250,3,0.94491,2007,"5.5,5.5,5.2",2021,"8.6,8.7,8.4",2023-12-15 07:01:22,Social Sector
 5107189,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,250,3,1.0,2007,"7.6,7.8,7.8",2021,"8.8,8.9,8.9",2023-12-18 18:44:39,Political State Sector
+2135936,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,149,3,0.94491,2007,"5.5,5.5,5.2",2007,"9.0,9.3,8.4",2023-12-15 07:01:20,Social Sector
+5107168,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,149,3,1.0,2007,"7.6,7.8,7.8",2007,"9.1,9.5,9.5",2023-12-18 18:44:38,Political State Sector
+4695013,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,233,3,1.0,2008,"6.7,7.0,7.1",2020,"5.503775926525209,5.8,5.9",2023-12-18 11:00:35,Human Rights Development
+6415220,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,233,3,0.94491,2008,"8.8,9.0,9.0",2020,"3.3000000000000003,4.3,4.8",2023-12-19 22:05:53,Social Sector
+2665057,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,62,3,1.0,2008,"5.2,5.3,5.4",2012,"6.9,7.2,7.5",2023-12-15 17:11:31,Social Sector
+6415438,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,62,3,0.94491,2008,"8.8,9.0,9.0",2012,"5.6,5.8,5.9",2023-12-19 22:06:07,Social Sector
+2135979,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,91,3,0.94491,2007,"5.5,5.5,5.2",2013,"9.1,9.2,8.9",2023-12-15 07:01:23,Social Sector
+5107203,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,91,3,1.0,2007,"7.6,7.8,7.8",2013,"9.8,9.9,9.9",2023-12-18 18:44:40,Political State Sector
+2665174,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,59,3,1.0,2008,"5.2,5.3,5.4",2008,"5.5,5.7,5.9",2023-12-15 17:11:38,Social Sector
+6415493,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,59,3,0.94491,2008,"8.8,9.0,9.0",2008,"7.7,8.0,7.9",2023-12-19 22:06:11,Social Sector
+2665047,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,6,3,1.0,2008,"5.2,5.3,5.4",2021,"8.1,8.4,8.7",2023-12-15 17:11:31,Social Sector
+6415428,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,6,3,0.94491,2008,"8.8,9.0,9.0",2021,"9.0,9.2,9.3",2023-12-19 22:06:06,Social Sector
+2399822,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,38,3,1.0,2006,"5.2,5.2,5.5",2012,"8.0,8.0,8.6",2023-12-15 12:08:34,Social Sector
+3996326,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,38,3,0.94491,2006,"7.3,7.4,7.4",2012,"7.1,7.3,7.4",2023-12-17 11:42:07,Human Rights Development
 1214670,The Fund For Peace,Fragile State Index,Total,2023,249,80,3,0.99997,2013,"86.6,86.2,85.1",2009,"91.8,90.4,86.4",2023-12-14 06:47:11,Finance Economy Sector
 7266506,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,80,3,0.94491,2013,"7.2,6.9,6.6",2009,"9.5,8.7,8.5",2023-12-20 15:58:36,Sovereignty
 5499134,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,109,3,1.0,2011,"7.8,7.7,7.6",2010,"6.2,5.9,5.6",2023-12-19 03:08:52,Political State Sector
@@ -2862,10 +2843,10 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 6415403,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,223,3,0.94491,2008,"8.8,9.0,9.0",2008,"7.7,7.9,8.0",2023-12-19 22:06:05,Social Sector
 1214180,The Fund For Peace,Fragile State Index,Total,2023,249,176,3,0.99846,2013,"86.6,86.2,85.1",2009,"49.6,49.0,46.8",2023-12-14 06:46:42,Finance Economy Sector
 7266215,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,176,3,0.94491,2013,"7.2,6.9,6.6",2009,"4.4,4.0,3.9",2023-12-20 15:58:23,Sovereignty
-5499271,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,233,3,0.9934,2011,"7.8,7.7,7.6",2011,"4.1,3.9,3.6",2023-12-19 03:09:00,Political State Sector
-31792893,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,233,3,0.94987,2011,"22.0,23.9,25.5",2011,"54.9,62.4,63.9",2024-01-17 19:52:50,Military Sector
 5499669,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,157,3,0.9934,2011,"7.8,7.7,7.6",2011,"7.3,7.0,6.8",2023-12-19 03:09:37,Political State Sector
 31793415,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,157,3,0.94987,2011,"22.0,23.9,25.5",2011,"8.7,11.7,12.3",2024-01-17 19:53:31,Military Sector
+5499271,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,233,3,0.9934,2011,"7.8,7.7,7.6",2011,"4.1,3.9,3.6",2023-12-19 03:09:00,Political State Sector
+31792893,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,233,3,0.94987,2011,"22.0,23.9,25.5",2011,"54.9,62.4,63.9",2024-01-17 19:52:50,Military Sector
 5499298,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,11,3,0.97151,2011,"7.8,7.7,7.6",2017,"3.6,3.3866166816001253,3.3",2023-12-19 03:09:01,Political State Sector
 31792791,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,11,3,0.97157,2011,"22.0,23.9,25.5",2017,"150.6,173.9,220.4",2024-01-17 19:52:42,Military Sector
 5499233,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,64,3,0.9934,2011,"7.8,7.7,7.6",2016,"6.6,6.4,6.1000000000000005",2023-12-19 03:08:58,Political State Sector
@@ -2882,12 +2863,12 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 7266554,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,174,3,0.98974,2013,"7.2,6.9,6.6",2010,"6.6,6.1,5.8",2023-12-20 15:58:38,Sovereignty
 5499349,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,44,3,0.9934,2011,"7.8,7.7,7.6",2016,"4.2,4.0,3.7",2023-12-19 03:09:04,Political State Sector
 31793431,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,44,3,0.94939,2011,"22.0,23.9,25.5",2016,"263.4,290.7,296.1",2024-01-17 19:53:32,Military Sector
+2665030,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,173,3,0.98198,2008,"5.2,5.3,5.4",2014,"7.3,7.5,7.6",2023-12-15 17:11:30,Social Sector
+4695285,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,173,3,0.96077,2008,"6.7,7.0,7.1",2014,"6.4,6.7,7.0",2023-12-18 11:00:57,Human Rights Development
 4695328,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,137,3,0.96077,2008,"6.7,7.0,7.1",2012,"5.4,5.7,6.0",2023-12-18 11:01:01,Human Rights Development
 6415445,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,137,3,0.98198,2008,"8.8,9.0,9.0",2012,"8.0,8.5,8.4",2023-12-19 22:06:08,Social Sector
 2664928,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,114,3,0.98198,2008,"5.2,5.3,5.4",2011,"8.7,8.9,9.0",2023-12-15 17:11:23,Social Sector
 4695186,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,114,3,0.96077,2008,"6.7,7.0,7.1",2011,"7.6,7.7,7.8",2023-12-18 11:00:49,Human Rights Development
-2665030,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,173,3,0.98198,2008,"5.2,5.3,5.4",2014,"7.3,7.5,7.6",2023-12-15 17:11:30,Social Sector
-4695285,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,173,3,0.96077,2008,"6.7,7.0,7.1",2014,"6.4,6.7,7.0",2023-12-18 11:00:57,Human Rights Development
 5499309,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,120,3,0.9934,2011,"7.8,7.7,7.6",2016,"3.1,2.9,2.6",2023-12-19 03:09:02,Political State Sector
 31792968,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,120,3,0.94934,2011,"22.0,23.9,25.5",2016,"204.9,247.3,367.9",2024-01-17 19:52:55,Military Sector
 1214684,The Fund For Peace,Fragile State Index,Total,2023,249,15,3,0.94241,2013,"86.6,86.2,85.1",2011,"81.9,79.8,78.2",2023-12-14 06:47:12,Finance Economy Sector
@@ -2904,22 +2885,22 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 31793304,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,26,3,0.95922,2011,"22.0,23.9,25.5",2009,"30.9,33.4,39.5",2024-01-17 19:53:21,Military Sector
 1214196,The Fund For Peace,Fragile State Index,Total,2023,249,138,3,0.94767,2013,"86.6,86.2,85.1",2016,"43.2,41.7,40.49020053885572",2023-12-14 06:46:42,Finance Economy Sector
 7266229,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,138,3,0.9934,2013,"7.2,6.9,6.6",2016,"4.9,4.7,4.4",2023-12-20 15:58:24,Sovereignty
-1214321,The Fund For Peace,Fragile State Index,Total,2023,249,239,3,0.94092,2013,"86.6,86.2,85.1",2011,"88.3,87.5,86.9",2023-12-14 06:46:50,Finance Economy Sector
-7266308,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,239,3,1.0,2013,"7.2,6.9,6.6",2011,"6.0,5.7,5.4",2023-12-20 15:58:28,Sovereignty
 1214829,The Fund For Peace,Fragile State Index,Total,2023,249,137,3,0.94092,2013,"86.6,86.2,85.1",2021,"89.10000000000001,87.89999999999999,87.0",2023-12-14 06:47:22,Finance Economy Sector
 7266629,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,137,3,1.0,2013,"7.2,6.9,6.6",2021,"6.8,6.5,6.2",2023-12-20 15:58:41,Sovereignty
 1213848,The Fund For Peace,Fragile State Index,Total,2023,249,181,3,0.94092,2013,"86.6,86.2,85.1",2010,"60.2,59.8,59.5",2023-12-14 06:46:23,Finance Economy Sector
 7265974,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,181,3,1.0,2013,"7.2,6.9,6.6",2010,"5.5,5.2,4.9",2023-12-20 15:58:11,Sovereignty
+1214321,The Fund For Peace,Fragile State Index,Total,2023,249,239,3,0.94092,2013,"86.6,86.2,85.1",2011,"88.3,87.5,86.9",2023-12-14 06:46:50,Finance Economy Sector
+7266308,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,239,3,1.0,2013,"7.2,6.9,6.6",2011,"6.0,5.7,5.4",2023-12-20 15:58:28,Sovereignty
 1213980,The Fund For Peace,Fragile State Index,Total,2023,249,113,3,0.94052,2013,"86.6,86.2,85.1",2017,"65.9,63.43851484252681,61.6",2023-12-14 06:46:30,Finance Economy Sector
 7266071,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,113,3,1.0,2013,"7.2,6.9,6.6",2017,"4.2,3.9,3.6",2023-12-20 15:58:16,Sovereignty
 1213925,The Fund For Peace,Fragile State Index,Total,2023,249,221,3,0.94021,2013,"86.6,86.2,85.1",2020,"70.81357974524154,70.89999999999999,70.0",2023-12-14 06:46:27,Finance Economy Sector
 7266023,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,221,3,1.0,2013,"7.2,6.9,6.6",2020,"2.9000000000000004,2.6,2.3",2023-12-20 15:58:14,Sovereignty
 1214854,The Fund For Peace,Fragile State Index,Total,2023,249,25,3,0.9402,2013,"86.6,86.2,85.1",2020,"69.50902262964706,68.3,67.39999999999999",2023-12-14 06:47:23,Finance Economy Sector
 7266640,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,25,3,1.0,2013,"7.2,6.9,6.6",2020,"7.4,7.1,6.8",2023-12-20 15:58:42,Sovereignty
-5926320,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,171,3,0.9934,2010,"5.9,6.1,6.4",2012,"6.1,6.2,6.3",2023-12-19 12:13:08,Human Rights Development
-32205677,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,171,3,0.94671,2010,"7.65,6.75,6.31",2012,"2.32,1.79,1.79",2024-01-19 03:14:00,Military Sector
 1214548,The Fund For Peace,Fragile State Index,Total,2023,249,167,3,0.94011,2013,"86.6,86.2,85.1",2019,"94.2,92.07809303255932,90.5",2023-12-14 06:47:04,Finance Economy Sector
 7266432,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,167,3,1.0,2013,"7.2,6.9,6.6",2019,"8.8,8.5,8.2",2023-12-20 15:58:33,Sovereignty
+5926320,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,171,3,0.9934,2010,"5.9,6.1,6.4",2012,"6.1,6.2,6.3",2023-12-19 12:13:08,Human Rights Development
+32205677,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,171,3,0.94671,2010,"7.65,6.75,6.31",2012,"2.32,1.79,1.79",2024-01-19 03:14:00,Military Sector
 3002564,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,11,3,0.98624,2010,"8.0,7.7,8.1",2008,"5.6,5.3,5.8",2023-12-16 09:35:45,Finance Economy Sector
 5925963,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,11,3,0.95382,2010,"5.9,6.1,6.4",2008,"5.5,6.1,6.4",2023-12-19 12:12:48,Human Rights Development
 5499718,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,174,3,1.0,2011,"7.8,7.7,7.6",2018,"6.4,6.1,5.8",2023-12-19 03:09:42,Political State Sector
@@ -3036,8 +3017,7 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 32205806,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,34,3,0.96214,2010,"7.65,6.75,6.31",2019,"8.74,4.21,3.93",2024-01-19 03:14:06,Military Sector
 5499286,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,113,3,1.0,2011,"7.8,7.7,7.6",2017,"4.0,3.7,3.4",2023-12-19 03:09:01,Political State Sector
 31793804,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,113,3,0.93254,2011,"22.0,23.9,25.5",2017,"76.9,81.8,99.9",2024-01-17 19:54:06,Military Sector
-1215167,The Fund For Peace,Fragile State Index,Total,2023,249,180,3,0.93251,2013,"86.6,86.2,85.1",2018,"93.12762985550376,92.5,92.06819972980338",2023-12-14 06:47:43,Finance Economy Sector
-7266806,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,180,3,1.0,2013,"7.2,6.9,6.6",2018,"6.8,6.5,6.2",2023-12-20 15:59:04,Sovereignty
+1214477,The Fund For Peace,Fragile State Index,Total,2023,249,50,3,0.99365,2013,"86.6,86.2,85.1",2018,"110.67036484651268,110.2,109.39462095485344",2023-12-14 06:47:00,Finance Economy Sector
 1214871,The Fund For Peace,Fragile State Index,Total,2023,249,229,3,0.93229,2013,"86.6,86.2,85.1",2017,"74.4,72.62111503765558,71.4",2023-12-14 06:47:24,Finance Economy Sector
 7266652,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,229,3,1.0,2013,"7.2,6.9,6.6",2017,"4.1,3.8,3.5",2023-12-20 15:58:42,Sovereignty
 1214567,The Fund For Peace,Fragile State Index,Total,2023,249,123,3,0.96115,2013,"86.6,86.2,85.1",2015,"97.3,95.5,93.8",2023-12-14 06:47:05,Finance Economy Sector
@@ -3052,20 +3032,20 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 31793783,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,243,3,0.9983,2011,"22.0,23.9,25.5",2006,"15.2,20.9,24.8",2024-01-17 19:54:04,Military Sector
 3002620,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,81,3,0.98624,2010,"8.0,7.7,8.1",2019,"1.6,1.3,1.8",2023-12-16 09:35:49,Finance Economy Sector
 32205534,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,81,3,0.94531,2010,"7.65,6.75,6.31",2019,"2.81,2.73,2.6",2024-01-19 03:13:55,Military Sector
-2664881,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,3,3,0.97073,2008,"5.2,5.3,5.4",2007,"7.0,7.2,7.7",2023-12-15 17:11:20,Social Sector
-4695147,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,3,3,0.96077,2008,"6.7,7.0,7.1",2007,"5.6,5.9,6.2",2023-12-18 11:00:46,Human Rights Development
-2664929,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,114,3,0.96077,2008,"5.2,5.3,5.4",2012,"8.9,9.0,9.3",2023-12-15 17:11:23,Social Sector
-4695187,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,114,3,0.97073,2008,"6.7,7.0,7.1",2012,"7.7,7.8,7.8",2023-12-18 11:00:49,Human Rights Development
-2664977,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,167,3,0.96077,2008,"5.2,5.3,5.4",2012,"9.6,9.7,10.0",2023-12-15 17:11:26,Social Sector
-6415374,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,167,3,0.97073,2008,"8.8,9.0,9.0",2012,"8.5,8.9,8.8",2023-12-19 22:06:03,Social Sector
 2664758,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,200,3,0.96077,2008,"5.2,5.3,5.4",2013,"2.7,2.8,3.1",2023-12-15 17:11:07,Social Sector
 6415239,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,200,3,0.97073,2008,"8.8,9.0,9.0",2013,"2.5,2.8,2.9",2023-12-19 22:05:54,Social Sector
-4695123,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,210,3,0.97073,2008,"6.7,7.0,7.1",2006,"1.5,1.6,1.6",2023-12-18 11:00:44,Human Rights Development
-6415289,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,210,3,0.96077,2008,"8.8,9.0,9.0",2006,"3.2,3.7,3.9",2023-12-19 22:05:58,Social Sector
-4695380,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,141,3,0.96077,2008,"6.7,7.0,7.1",2012,"8.1,8.4,8.7",2023-12-18 11:01:04,Human Rights Development
-6415475,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,141,3,0.97073,2008,"8.8,9.0,9.0",2012,"6.8,7.1,7.2",2023-12-19 22:06:09,Social Sector
 4695436,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,222,3,0.96077,2008,"6.7,7.0,7.1",2012,"6.1,6.4,6.7",2023-12-18 11:01:08,Human Rights Development
 6415492,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,222,3,0.97073,2008,"8.8,9.0,9.0",2012,"8.4,8.7,8.8",2023-12-19 22:06:11,Social Sector
+4695380,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,141,3,0.96077,2008,"6.7,7.0,7.1",2012,"8.1,8.4,8.7",2023-12-18 11:01:04,Human Rights Development
+6415475,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,141,3,0.97073,2008,"8.8,9.0,9.0",2012,"6.8,7.1,7.2",2023-12-19 22:06:09,Social Sector
+2664977,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,167,3,0.96077,2008,"5.2,5.3,5.4",2012,"9.6,9.7,10.0",2023-12-15 17:11:26,Social Sector
+6415374,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,167,3,0.97073,2008,"8.8,9.0,9.0",2012,"8.5,8.9,8.8",2023-12-19 22:06:03,Social Sector
+2664929,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,114,3,0.96077,2008,"5.2,5.3,5.4",2012,"8.9,9.0,9.3",2023-12-15 17:11:23,Social Sector
+4695187,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,114,3,0.97073,2008,"6.7,7.0,7.1",2012,"7.7,7.8,7.8",2023-12-18 11:00:49,Human Rights Development
+2664881,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,3,3,0.97073,2008,"5.2,5.3,5.4",2007,"7.0,7.2,7.7",2023-12-15 17:11:20,Social Sector
+4695147,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,3,3,0.96077,2008,"6.7,7.0,7.1",2007,"5.6,5.9,6.2",2023-12-18 11:00:46,Human Rights Development
+4695123,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,210,3,0.97073,2008,"6.7,7.0,7.1",2006,"1.5,1.6,1.6",2023-12-18 11:00:44,Human Rights Development
+6415289,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,210,3,0.96077,2008,"8.8,9.0,9.0",2006,"3.2,3.7,3.9",2023-12-19 22:05:58,Social Sector
 5499203,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,181,3,0.95282,2011,"7.8,7.7,7.6",2017,"3.8,3.710357407219053,3.4",2023-12-19 03:08:56,Political State Sector
 31793046,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,181,3,0.97861,2011,"22.0,23.9,25.5",2017,"184.3,223.5,238.2",2024-01-17 19:53:01,Military Sector
 1214436,The Fund For Peace,Fragile State Index,Total,2023,249,118,3,0.93796,2013,"86.6,86.2,85.1",2015,"82.2,81.1,80.3",2023-12-14 06:46:56,Finance Economy Sector
@@ -3100,10 +3080,10 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 31793746,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,67,3,0.92918,2011,"22.0,23.9,25.5",2018,"464.8,480.4,541.2",2024-01-17 19:54:01,Military Sector
 31244267,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,249,123,3,0.99964,2010,"1.38,1.26,1.39",2006,"0.48,0.31,0.5",2024-01-17 03:24:58,Military Sector
 32205231,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,123,3,0.92915,2010,"7.65,6.75,6.31",2006,"3.17,1.24,1.35",2024-01-19 03:13:42,Military Sector
-4695019,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,113,3,1.0,2008,"6.7,7.0,7.1",2020,"3.9,4.2,4.3",2023-12-18 11:00:36,Human Rights Development
-6415224,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,113,3,0.92857,2008,"8.8,9.0,9.0",2020,"3.6,4.1,4.4",2023-12-19 22:05:53,Social Sector
 2135963,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,43,3,1.0,2007,"5.5,5.5,5.2",2018,"9.5,9.5,9.2",2023-12-15 07:01:22,Social Sector
 5107191,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,43,3,0.92857,2007,"7.6,7.8,7.8",2018,"8.799999999999999,9.6,9.3",2023-12-18 18:44:40,Political State Sector
+4695019,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,113,3,1.0,2008,"6.7,7.0,7.1",2020,"3.9,4.2,4.3",2023-12-18 11:00:36,Human Rights Development
+6415224,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,113,3,0.92857,2008,"8.8,9.0,9.0",2020,"3.6,4.1,4.4",2023-12-19 22:05:53,Social Sector
 1214826,The Fund For Peace,Fragile State Index,Total,2023,249,137,3,0.92853,2013,"86.6,86.2,85.1",2018,"92.15282858350264,90.1,88.74246859603146",2023-12-14 06:47:22,Finance Economy Sector
 7266626,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,137,3,1.0,2013,"7.2,6.9,6.6",2018,"7.7,7.4,7.1000000000000005",2023-12-20 15:58:41,Sovereignty
 5925985,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,200,3,0.96682,2010,"5.9,6.1,6.4",2006,"3.5,4.0,4.3",2023-12-19 12:12:49,Human Rights Development
@@ -3212,18 +3192,18 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 32205785,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,28,3,0.98092,2010,"7.65,6.75,6.31",2009,"2.81,2.63,2.45",2024-01-19 03:14:05,Military Sector
 2136155,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,59,3,0.97073,2007,"5.5,5.5,5.2",2016,"6.6,6.5,6.2",2023-12-15 07:01:34,Social Sector
 5107326,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,59,3,0.94694,2007,"7.6,7.8,7.8",2016,"7.9,8.2,8.101691291846809",2023-12-18 18:44:46,Political State Sector
-2136091,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,65,3,0.91766,2007,"5.5,5.5,5.2",2009,"8.6,8.4,8.1",2023-12-15 07:01:30,Social Sector
-5107306,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,65,3,1.0,2007,"7.6,7.8,7.8",2009,"9.4,9.6,9.6",2023-12-18 18:44:45,Political State Sector
-2399550,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,133,3,1.0,2006,"5.2,5.2,5.5",2014,"4.9,4.9,5.2",2023-12-15 12:08:20,Social Sector
-3996176,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,133,3,0.91766,2006,"7.3,7.4,7.4",2014,"7.1,7.4,7.6",2023-12-17 11:41:58,Human Rights Development
-2664900,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,69,3,1.0,2008,"5.2,5.3,5.4",2008,"7.8,8.2,8.6",2023-12-15 17:11:22,Social Sector
-6415320,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,69,3,0.91766,2008,"8.8,9.0,9.0",2008,"8.9,9.4,9.2",2023-12-19 22:06:00,Social Sector
 2399698,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,35,3,1.0,2006,"5.2,5.2,5.5",2021,"7.8,7.8,8.2",2023-12-15 12:08:27,Social Sector
 3996255,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,35,3,0.91766,2006,"7.3,7.4,7.4",2021,"7.8,8.1,8.3",2023-12-17 11:42:03,Human Rights Development
-2136077,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,92,3,0.91766,2007,"5.5,5.5,5.2",2016,"9.1,8.9,8.6",2023-12-15 07:01:29,Social Sector
-5107292,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,92,3,1.0,2007,"7.6,7.8,7.8",2016,"8.9,9.2,9.2",2023-12-18 18:44:44,Political State Sector
 2399538,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,64,3,1.0,2006,"5.2,5.2,5.5",2007,"3.9,3.9,4.5",2023-12-15 12:08:19,Social Sector
 3996168,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,64,3,0.91766,2006,"7.3,7.4,7.4",2007,"7.3,7.6,7.8",2023-12-17 11:41:57,Human Rights Development
+2136077,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,92,3,0.91766,2007,"5.5,5.5,5.2",2016,"9.1,8.9,8.6",2023-12-15 07:01:29,Social Sector
+5107292,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,92,3,1.0,2007,"7.6,7.8,7.8",2016,"8.9,9.2,9.2",2023-12-18 18:44:44,Political State Sector
+2136091,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,65,3,0.91766,2007,"5.5,5.5,5.2",2009,"8.6,8.4,8.1",2023-12-15 07:01:30,Social Sector
+5107306,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,65,3,1.0,2007,"7.6,7.8,7.8",2009,"9.4,9.6,9.6",2023-12-18 18:44:45,Political State Sector
+2664900,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,69,3,1.0,2008,"5.2,5.3,5.4",2008,"7.8,8.2,8.6",2023-12-15 17:11:22,Social Sector
+6415320,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,69,3,0.91766,2008,"8.8,9.0,9.0",2008,"8.9,9.4,9.2",2023-12-19 22:06:00,Social Sector
+2399550,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,249,133,3,1.0,2006,"5.2,5.2,5.5",2014,"4.9,4.9,5.2",2023-12-15 12:08:20,Social Sector
+3996176,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,249,133,3,0.91766,2006,"7.3,7.4,7.4",2014,"7.1,7.4,7.6",2023-12-17 11:41:58,Human Rights Development
 3002569,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,120,3,0.99997,2010,"8.0,7.7,8.1",2016,"3.7,3.5,3.764033878600933",2023-12-16 09:35:45,Finance Economy Sector
 5925971,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,120,3,0.91766,2010,"5.9,6.1,6.4",2016,"2.8,2.8,2.825982371916365",2023-12-19 12:12:48,Human Rights Development
 5926002,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,44,3,0.97368,2010,"5.9,6.1,6.4",2012,"3.2,3.5,3.7",2023-12-19 12:12:50,Human Rights Development
@@ -3260,20 +3240,20 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 31793528,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,62,3,0.916,2011,"22.0,23.9,25.5",2012,"167.4,174.2,174.7",2024-01-17 19:53:41,Military Sector
 1213989,The Fund For Peace,Fragile State Index,Total,2023,249,11,3,0.9552,2013,"86.6,86.2,85.1",2018,"69.5452238194412,66.7,64.2",2023-12-14 06:46:31,Finance Economy Sector
 7266077,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,11,3,0.96077,2013,"7.2,6.9,6.6",2018,"6.4,6.3,6.0",2023-12-20 15:58:16,Sovereignty
-2135843,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,113,3,0.97073,2007,"5.5,5.5,5.2",2012,"6.3,6.4,6.0",2023-12-15 07:01:15,Social Sector
-5107067,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,113,3,0.94491,2007,"7.6,7.8,7.8",2012,"7.5,7.8,7.7",2023-12-18 18:44:34,Political State Sector
-4695040,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,202,3,0.97073,2008,"6.7,7.0,7.1",2020,"4.026438092545177,4.1,4.1",2023-12-18 11:00:37,Human Rights Development
-6415237,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,202,3,0.94491,2008,"8.8,9.0,9.0",2020,"1.4,2.4,2.9",2023-12-19 22:05:54,Social Sector
-4695368,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,22,3,0.97073,2008,"6.7,7.0,7.1",2010,"6.7,7.0,7.0",2023-12-18 11:01:03,Human Rights Development
-6415470,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,22,3,0.94491,2008,"8.8,9.0,9.0",2010,"6.5,6.7,6.8",2023-12-19 22:06:09,Social Sector
 4695029,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,120,3,0.97073,2008,"6.7,7.0,7.1",2020,"5.4,5.5,5.5",2023-12-18 11:00:36,Human Rights Development
 6415230,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,120,3,0.94491,2008,"8.8,9.0,9.0",2020,"2.0,3.0,3.5",2023-12-19 22:05:53,Social Sector
-2664979,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,1,3,0.94491,2008,"5.2,5.3,5.4",2007,"9.1,9.5,9.6",2023-12-15 17:11:27,Social Sector
-6415377,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,1,3,0.97073,2008,"8.8,9.0,9.0",2007,"8.5,9.1,9.3",2023-12-19 22:06:03,Social Sector
 4695319,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,119,3,0.97073,2008,"6.7,7.0,7.1",2015,"7.4,7.7,7.7",2023-12-18 11:01:00,Human Rights Development
 6415442,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,119,3,0.94491,2008,"8.8,9.0,9.0",2015,"7.1,7.4,7.3",2023-12-19 22:06:07,Social Sector
+2664979,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,1,3,0.94491,2008,"5.2,5.3,5.4",2007,"9.1,9.5,9.6",2023-12-15 17:11:27,Social Sector
+6415377,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,1,3,0.97073,2008,"8.8,9.0,9.0",2007,"8.5,9.1,9.3",2023-12-19 22:06:03,Social Sector
 4695225,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,91,3,0.97073,2008,"6.7,7.0,7.1",2008,"8.3,8.6,8.6",2023-12-18 11:00:53,Human Rights Development
 6415380,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,91,3,0.94491,2008,"8.8,9.0,9.0",2008,"7.9,8.5,8.3",2023-12-19 22:06:03,Social Sector
+4695368,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,22,3,0.97073,2008,"6.7,7.0,7.1",2010,"6.7,7.0,7.0",2023-12-18 11:01:03,Human Rights Development
+6415470,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,22,3,0.94491,2008,"8.8,9.0,9.0",2010,"6.5,6.7,6.8",2023-12-19 22:06:09,Social Sector
+4695040,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,202,3,0.97073,2008,"6.7,7.0,7.1",2020,"4.026438092545177,4.1,4.1",2023-12-18 11:00:37,Human Rights Development
+6415237,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,202,3,0.94491,2008,"8.8,9.0,9.0",2020,"1.4,2.4,2.9",2023-12-19 22:05:54,Social Sector
+2135843,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,113,3,0.97073,2007,"5.5,5.5,5.2",2012,"6.3,6.4,6.0",2023-12-15 07:01:15,Social Sector
+5107067,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,113,3,0.94491,2007,"7.6,7.8,7.8",2012,"7.5,7.8,7.7",2023-12-18 18:44:34,Political State Sector
 5499793,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,158,3,0.9934,2011,"7.8,7.7,7.6",2010,"9.7,9.5,9.2",2023-12-19 03:09:50,Political State Sector
 31793051,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,158,3,0.92213,2011,"22.0,23.9,25.5",2010,"4.1,4.9,8.4",2024-01-17 19:53:01,Military Sector
 1214406,The Fund For Peace,Fragile State Index,Total,2023,249,101,3,0.91553,2013,"86.6,86.2,85.1",2012,"80.6,78.2,76.8",2023-12-14 06:46:54,Finance Economy Sector
@@ -3352,10 +3332,10 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 31244262,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,249,137,3,0.92232,2010,"1.38,1.26,1.39",2012,"2.11,2.0,2.2",2024-01-17 03:24:58,Military Sector
 1214917,The Fund For Peace,Fragile State Index,Total,2023,249,61,3,0.90853,2013,"86.6,86.2,85.1",2020,"64.35620204936144,64.7,62.8",2023-12-14 06:47:27,Finance Economy Sector
 7266675,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,61,3,1.0,2013,"7.2,6.9,6.6",2020,"4.5,4.2,3.9",2023-12-20 15:58:43,Sovereignty
-1213802,The Fund For Peace,Fragile State Index,Total,2023,249,53,3,0.90839,2013,"86.6,86.2,85.1",2012,"56.3,54.1,52.9",2023-12-14 06:46:20,Finance Economy Sector
-7265942,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,53,3,1.0,2013,"7.2,6.9,6.6",2012,"5.3,5.0,4.7",2023-12-20 15:58:10,Sovereignty
 1215182,The Fund For Peace,Fragile State Index,Total,2023,249,222,3,0.90839,2013,"86.6,86.2,85.1",2011,"94.9,92.7,91.5",2023-12-14 06:47:44,Finance Economy Sector
 7266811,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,222,3,1.0,2013,"7.2,6.9,6.6",2011,"9.3,8.9,8.5",2023-12-20 15:59:05,Sovereignty
+1213802,The Fund For Peace,Fragile State Index,Total,2023,249,53,3,0.90839,2013,"86.6,86.2,85.1",2012,"56.3,54.1,52.9",2023-12-14 06:46:20,Finance Economy Sector
+7265942,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,53,3,1.0,2013,"7.2,6.9,6.6",2012,"5.3,5.0,4.7",2023-12-20 15:58:10,Sovereignty
 1213730,The Fund For Peace,Fragile State Index,Total,2023,249,29,3,0.91494,2013,"86.6,86.2,85.1",2016,"63.5,63.8,61.98745014345976",2023-12-14 06:46:16,Finance Economy Sector
 7265884,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,29,3,0.9934,2013,"7.2,6.9,6.6",2016,"4.3,4.1,3.8",2023-12-20 15:58:07,Sovereignty
 1214698,The Fund For Peace,Fragile State Index,Total,2023,249,54,3,0.99344,2013,"86.6,86.2,85.1",2013,"72.8,70.8,67.4",2023-12-14 06:47:13,Finance Economy Sector
@@ -3382,24 +3362,24 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 7266859,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,209,3,0.99926,2013,"7.2,6.9,6.6",2016,"10.0,9.8,9.624950491181016",2023-12-20 15:59:07,Sovereignty
 3002545,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,163,3,0.99587,2010,"8.0,7.7,8.1",2014,"5.9,5.7,6.0",2023-12-16 09:35:43,Finance Economy Sector
 32205300,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,163,3,0.91038,2010,"7.65,6.75,6.31",2014,"3.45,3.08,3.12",2024-01-19 03:13:45,Military Sector
-4695301,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,220,3,0.96077,2008,"6.7,7.0,7.1",2014,"6.7,7.0,7.3",2023-12-18 11:00:58,Human Rights Development
-6415432,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,220,3,0.94491,2008,"8.8,9.0,9.0",2014,"8.6,8.8,8.9",2023-12-19 22:06:07,Social Sector
-4695209,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,43,3,0.96077,2008,"6.7,7.0,7.1",2012,"7.7,8.0,8.3",2023-12-18 11:00:51,Human Rights Development
-6415363,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,43,3,0.94491,2008,"8.8,9.0,9.0",2012,"9.3,9.5,9.6",2023-12-19 22:06:03,Social Sector
-4695172,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,130,3,0.96077,2008,"6.7,7.0,7.1",2008,"8.2,8.3,8.4",2023-12-18 11:00:48,Human Rights Development
-6415327,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,130,3,0.94491,2008,"8.8,9.0,9.0",2008,"9.0,9.3,9.2",2023-12-19 22:06:00,Social Sector
+4695341,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,158,3,0.96077,2008,"6.7,7.0,7.1",2014,"6.6,6.9,7.2",2023-12-18 11:01:02,Human Rights Development
+6415450,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,158,3,0.94491,2008,"8.8,9.0,9.0",2014,"9.3,9.6,9.5",2023-12-19 22:06:08,Social Sector
+4695004,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,79,3,0.96077,2008,"6.7,7.0,7.1",2010,"6.2,6.5,6.8",2023-12-18 11:00:34,Human Rights Development
+6415212,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,79,3,0.94491,2008,"8.8,9.0,9.0",2010,"7.6,7.9,7.8",2023-12-19 22:05:52,Social Sector
+4695177,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,35,3,0.96077,2008,"6.7,7.0,7.1",2015,"6.9,7.2,7.5",2023-12-18 11:00:49,Human Rights Development
+6415330,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,35,3,0.94491,2008,"8.8,9.0,9.0",2015,"9.1,9.4,9.3",2023-12-19 22:06:01,Social Sector
+4694998,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,148,3,0.96077,2008,"6.7,7.0,7.1",2015,"7.4,7.7,8.0",2023-12-18 11:00:34,Human Rights Development
+6415202,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,148,3,0.94491,2008,"8.8,9.0,9.0",2015,"8.7,9.5,9.9",2023-12-19 22:05:51,Social Sector
 4695155,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,159,3,0.96077,2008,"6.7,7.0,7.1",2021,"6.5,6.6,6.7",2023-12-18 11:00:47,Human Rights Development
 6415316,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,159,3,0.94491,2008,"8.8,9.0,9.0",2021,"9.3,9.5,9.6",2023-12-19 22:06:00,Social Sector
 4695044,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,153,3,0.96077,2008,"6.7,7.0,7.1",2010,"1.9,2.2,2.5",2023-12-18 11:00:38,Human Rights Development
 6415241,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,153,3,0.94491,2008,"8.8,9.0,9.0",2010,"2.7,3.0,2.9",2023-12-19 22:05:54,Social Sector
-4695341,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,158,3,0.96077,2008,"6.7,7.0,7.1",2014,"6.6,6.9,7.2",2023-12-18 11:01:02,Human Rights Development
-6415450,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,158,3,0.94491,2008,"8.8,9.0,9.0",2014,"9.3,9.6,9.5",2023-12-19 22:06:08,Social Sector
-4694998,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,148,3,0.96077,2008,"6.7,7.0,7.1",2015,"7.4,7.7,8.0",2023-12-18 11:00:34,Human Rights Development
-6415202,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,148,3,0.94491,2008,"8.8,9.0,9.0",2015,"8.7,9.5,9.9",2023-12-19 22:05:51,Social Sector
-4695177,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,35,3,0.96077,2008,"6.7,7.0,7.1",2015,"6.9,7.2,7.5",2023-12-18 11:00:49,Human Rights Development
-6415330,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,35,3,0.94491,2008,"8.8,9.0,9.0",2015,"9.1,9.4,9.3",2023-12-19 22:06:01,Social Sector
-4695004,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,79,3,0.96077,2008,"6.7,7.0,7.1",2010,"6.2,6.5,6.8",2023-12-18 11:00:34,Human Rights Development
-6415212,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,79,3,0.94491,2008,"8.8,9.0,9.0",2010,"7.6,7.9,7.8",2023-12-19 22:05:52,Social Sector
+4695172,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,130,3,0.96077,2008,"6.7,7.0,7.1",2008,"8.2,8.3,8.4",2023-12-18 11:00:48,Human Rights Development
+6415327,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,130,3,0.94491,2008,"8.8,9.0,9.0",2008,"9.0,9.3,9.2",2023-12-19 22:06:00,Social Sector
+4695209,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,43,3,0.96077,2008,"6.7,7.0,7.1",2012,"7.7,8.0,8.3",2023-12-18 11:00:51,Human Rights Development
+6415363,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,43,3,0.94491,2008,"8.8,9.0,9.0",2012,"9.3,9.5,9.6",2023-12-19 22:06:03,Social Sector
+4695301,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,220,3,0.96077,2008,"6.7,7.0,7.1",2014,"6.7,7.0,7.3",2023-12-18 11:00:58,Human Rights Development
+6415432,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,220,3,0.94491,2008,"8.8,9.0,9.0",2014,"8.6,8.8,8.9",2023-12-19 22:06:07,Social Sector
 1214375,The Fund For Peace,Fragile State Index,Total,2023,249,48,3,0.91219,2013,"86.6,86.2,85.1",2015,"82.5,80.2,78.9",2023-12-14 06:46:53,Finance Economy Sector
 7266340,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,48,3,0.9934,2013,"7.2,6.9,6.6",2015,"6.5,6.2,6.0",2023-12-20 15:58:29,Sovereignty
 3002693,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,15,3,0.97073,2010,"8.0,7.7,8.1",2015,"4.1,3.8,4.1",2023-12-16 09:35:56,Finance Economy Sector
@@ -3480,12 +3460,12 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 4695407,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,145,3,0.96077,2008,"6.7,7.0,7.1",2019,"4.1,4.4,4.7",2023-12-18 11:01:06,Human Rights Development
 5499224,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,147,3,0.9934,2011,"7.8,7.7,7.6",2015,"5.7,5.4,5.2",2023-12-19 03:08:57,Political State Sector
 31793933,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,147,3,0.90047,2011,"22.0,23.9,25.5",2015,"94.3,94.7,97.3",2024-01-17 19:54:17,Military Sector
+1214835,The Fund For Peace,Fragile State Index,Total,2023,249,219,3,0.90021,2013,"86.6,86.2,85.1",2015,"83.4,83.8,81.8",2023-12-14 06:47:22,Finance Economy Sector
+7266632,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,219,3,0.9934,2013,"7.2,6.9,6.6",2015,"6.4,6.1,5.9",2023-12-20 15:58:41,Sovereignty
 1215224,The Fund For Peace,Fragile State Index,Total,2023,249,132,3,0.90021,2013,"86.6,86.2,85.1",2016,"74.0,74.4,72.4",2023-12-14 06:47:47,Finance Economy Sector
 7266844,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,132,3,0.9934,2013,"7.2,6.9,6.6",2016,"6.7,6.5,6.2",2023-12-20 15:59:06,Sovereignty
 1214594,The Fund For Peace,Fragile State Index,Total,2023,249,36,3,0.90021,2013,"86.6,86.2,85.1",2012,"97.5,97.6,97.1",2023-12-14 06:47:07,Finance Economy Sector
 7266461,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,36,3,0.9934,2013,"7.2,6.9,6.6",2012,"9.0,8.7,8.5",2023-12-20 15:58:34,Sovereignty
-1214835,The Fund For Peace,Fragile State Index,Total,2023,249,219,3,0.90021,2013,"86.6,86.2,85.1",2015,"83.4,83.8,81.8",2023-12-14 06:47:22,Finance Economy Sector
-7266632,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,249,219,3,0.9934,2013,"7.2,6.9,6.6",2015,"6.4,6.1,5.9",2023-12-20 15:58:41,Sovereignty
 3002711,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,102,3,0.97073,2010,"8.0,7.7,8.1",2021,"7.6,7.3,7.6",2023-12-16 09:35:57,Finance Economy Sector
 5926280,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,102,3,0.92261,2010,"5.9,6.1,6.4",2021,"9.5,9.8,9.9",2023-12-19 12:13:05,Human Rights Development
 3002587,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,21,3,0.97073,2010,"8.0,7.7,8.1",2021,"4.6,4.3,4.6",2023-12-16 09:35:47,Finance Economy Sector
@@ -3550,14 +3530,12 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 31244354,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,249,23,3,0.90841,2010,"1.38,1.26,1.39",2015,"0.8,0.67,0.92",2024-01-17 03:25:02,Military Sector
 4695113,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,138,3,0.96077,2008,"6.7,7.0,7.1",2011,"3.0,3.3,3.6",2023-12-18 11:00:43,Human Rights Development
 6415278,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,138,3,0.91766,2008,"8.8,9.0,9.0",2011,"3.3,3.6,3.8",2023-12-19 22:05:57,Social Sector
-3002594,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,73,3,0.96077,2010,"8.0,7.7,8.1",2007,"2.2,2.0,2.4",2023-12-16 09:35:47,Finance Economy Sector
-5926017,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,73,3,0.91766,2010,"5.9,6.1,6.4",2007,"1.5,1.5,1.7",2023-12-19 12:12:51,Human Rights Development
 4695201,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,249,195,3,0.96077,2008,"6.7,7.0,7.1",2013,"3.1,3.4,3.7",2023-12-18 11:00:51,Human Rights Development
 6415348,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,195,3,0.91766,2008,"8.8,9.0,9.0",2013,"5.5,6.0,5.8",2023-12-19 22:06:02,Social Sector
 3002654,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,18,3,0.96077,2010,"8.0,7.7,8.1",2006,"7.0,6.9,7.1",2023-12-16 09:35:52,Finance Economy Sector
 5926133,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,18,3,0.91766,2010,"5.9,6.1,6.4",2006,"7.8,7.8,8.0",2023-12-19 12:12:57,Human Rights Development
-2665172,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,249,180,3,0.96077,2008,"5.2,5.3,5.4",2021,"8.4,8.7,8.8",2023-12-15 17:11:38,Social Sector
-6415489,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,249,180,3,0.91766,2008,"8.8,9.0,9.0",2021,"8.0,8.3,8.5",2023-12-19 22:06:10,Social Sector
+3002594,The Fund For Peace,Fragile State Index,E1: Economy,2023,249,73,3,0.96077,2010,"8.0,7.7,8.1",2007,"2.2,2.0,2.4",2023-12-16 09:35:47,Finance Economy Sector
+5926017,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,73,3,0.91766,2010,"5.9,6.1,6.4",2007,"1.5,1.5,1.7",2023-12-19 12:12:51,Human Rights Development
 2136054,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,119,3,0.91766,2007,"5.5,5.5,5.2",2018,"5.2,5.0,4.7",2023-12-15 07:01:27,Social Sector
 5107273,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,119,3,0.96052,2007,"7.6,7.8,7.8",2018,"8.88126095444613,9.0,9.047687848225346",2023-12-18 18:44:43,Political State Sector
 1214712,The Fund For Peace,Fragile State Index,Total,2023,249,121,3,0.9174,2013,"86.6,86.2,85.1",2010,"90.9,87.7,85.8",2023-12-14 06:47:14,Finance Economy Sector
@@ -3598,10 +3576,10 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 32205779,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,223,3,0.93106,2010,"7.65,6.75,6.31",2010,"7.94,5.99,6.09",2024-01-19 03:14:05,Military Sector
 5499194,The Fund For Peace,Fragile State Index,P2: Public Services,2023,249,144,3,0.94832,2011,"7.8,7.7,7.6",2018,"5.1000000000000005,4.8,4.720149372556243",2023-12-19 03:08:55,Political State Sector
 31793370,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,249,144,3,0.90909,2011,"22.0,23.9,25.5",2018,"30.3,30.9,34.2",2024-01-17 19:53:27,Military Sector
-5926410,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,129,3,0.90008,2010,"5.9,6.1,6.4",2020,"5.804759329429396,5.8,5.9",2023-12-19 12:13:14,Human Rights Development
-32205225,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,129,3,0.95636,2010,"7.65,6.75,6.31",2020,"4.12,3.72,3.15",2024-01-19 03:13:42,Military Sector
 5926157,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,108,3,0.92261,2010,"5.9,6.1,6.4",2012,"8.3,8.6,8.7",2023-12-19 12:12:58,Human Rights Development
 31244313,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,249,108,3,0.93383,2010,"1.38,1.26,1.39",2012,"1.1,1.0,1.07",2024-01-17 03:25:00,Military Sector
+5926410,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,129,3,0.90008,2010,"5.9,6.1,6.4",2020,"5.804759329429396,5.8,5.9",2023-12-19 12:13:14,Human Rights Development
+32205225,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,129,3,0.95636,2010,"7.65,6.75,6.31",2020,"4.12,3.72,3.15",2024-01-19 03:13:42,Military Sector
 31244462,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,249,147,3,0.92778,2010,"1.38,1.26,1.39",2010,"3.39,3.3,3.46",2024-01-17 03:25:07,Military Sector
 32205974,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,147,3,0.92783,2010,"7.65,6.75,6.31",2010,"10.91,9.76,9.83",2024-01-19 03:14:13,Military Sector
 1215131,The Fund For Peace,Fragile State Index,Total,2023,249,179,3,0.90018,2013,"86.6,86.2,85.1",2020,"43.73987834909789,44.1,42.3",2023-12-14 06:47:41,Finance Economy Sector
@@ -3632,8 +3610,6 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 31244323,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,249,98,3,0.92028,2010,"1.38,1.26,1.39",2017,"1.19,1.01,1.34",2024-01-17 03:25:01,Military Sector
 5926209,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,39,3,0.91766,2010,"5.9,6.1,6.4",2006,"7.2,7.2,7.4",2023-12-19 12:13:01,Human Rights Development
 32205430,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,39,3,0.91994,2010,"7.65,6.75,6.31",2006,"9.84,9.22,7.89",2024-01-19 03:13:51,Military Sector
-2136145,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,249,180,3,0.91766,2007,"5.5,5.5,5.2",2009,"7.8,7.6,7.3",2023-12-15 07:01:33,Social Sector
-5107320,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,249,180,3,0.91766,2007,"7.6,7.8,7.8",2009,"8.6,9.1,8.9",2023-12-18 18:44:46,Political State Sector
 31244341,SIPRI,Military Expenditure,Military Expenditure - Share of GDP (%),2022,249,144,3,0.92748,2010,"1.38,1.26,1.39",2008,"0.82,0.63,0.76",2024-01-17 03:25:02,Military Sector
 32205611,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,249,144,3,0.90538,2010,"7.65,6.75,6.31",2008,"3.15,2.32,2.42",2024-01-19 03:13:58,Military Sector
 5926400,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,249,222,3,0.91766,2010,"5.9,6.1,6.4",2007,"6.9,6.9,7.0",2023-12-19 12:13:13,Human Rights Development

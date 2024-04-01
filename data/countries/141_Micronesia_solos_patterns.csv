@@ -513,10 +513,10 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 5197382,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,107,15,0.95092,2007,"6.9,6.9,6.6,6.6,6.3,6.3,6.3,6.3,6.0,5.7,5.5,5.2,4.9,4.6000000000000005,4.3",2009,"4.3,4.5,4.7,5.0,4.7,4.2,4.2,3.9,3.7,3.7,3.4,3.1,2.8,2.3,2.0",2023-12-18 20:36:31,Political State Sector
 2229409,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,141,134,15,0.95261,2007,"6.0,5.7,5.3,5.1,5.4,5.4,5.4,5.4,5.1,4.8,4.6,4.3,4.0,4.0,3.7",2009,"4.0,4.0,3.7,3.7,3.7,3.7,3.4,3.3,3.6,3.3000000000000003,3.0,2.7,2.4,2.1,1.8",2023-12-15 08:46:59,Social Sector
 5197459,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,134,15,0.94187,2007,"6.9,6.9,6.6,6.6,6.3,6.3,6.3,6.3,6.0,5.7,5.5,5.2,4.9,4.6000000000000005,4.3",2009,"4.3,4.1,3.7,4.0,4.1,3.8,3.9,3.8,3.6,3.6,3.3,3.4,3.1,3.2,2.9",2023-12-18 20:36:36,Political State Sector
-2418796,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,196,15,0.94255,2007,"5.4,5.4,5.5,5.5,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6",2008,"4.0,4.0,4.2,4.5,6.3,6.6,6.6,6.6,6.6,6.6,6.9,7.0,7.0,7.0,7.0",2023-12-15 12:32:25,Social Sector
-5197319,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,196,15,0.95171,2007,"6.9,6.9,6.6,6.6,6.3,6.3,6.3,6.3,6.0,5.7,5.5,5.2,4.9,4.6000000000000005,4.3",2008,"5.7,6.0,5.9,5.9,6.0,5.9,6.0,5.5,5.2,4.7,4.4,4.1,3.8,3.6,3.7",2023-12-18 20:36:28,Political State Sector
 2229323,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,141,138,15,0.93602,2007,"6.0,5.7,5.3,5.1,5.4,5.4,5.4,5.4,5.1,4.8,4.6,4.3,4.0,4.0,3.7",2007,"3.5,3.5,3.6,3.7,3.6,3.6,3.3,3.1,2.8,2.5,2.3,2.0,1.7,1.5039479205735793,1.2",2023-12-15 08:46:53,Social Sector
 5197369,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,138,15,0.95824,2007,"6.9,6.9,6.6,6.6,6.3,6.3,6.3,6.3,6.0,5.7,5.5,5.2,4.9,4.6000000000000005,4.3",2007,"5.1,5.1,5.3,5.1,4.7,4.4,4.1,3.8,3.5,3.2,3.0,2.7,2.4,2.1,2.1",2023-12-18 20:36:31,Political State Sector
+2418796,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,196,15,0.94255,2007,"5.4,5.4,5.5,5.5,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6",2008,"4.0,4.0,4.2,4.5,6.3,6.6,6.6,6.6,6.6,6.6,6.9,7.0,7.0,7.0,7.0",2023-12-15 12:32:25,Social Sector
+5197319,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,196,15,0.95171,2007,"6.9,6.9,6.6,6.6,6.3,6.3,6.3,6.3,6.0,5.7,5.5,5.2,4.9,4.6000000000000005,4.3",2008,"5.7,6.0,5.9,5.9,6.0,5.9,6.0,5.5,5.2,4.7,4.4,4.1,3.8,3.6,3.7",2023-12-18 20:36:28,Political State Sector
 2744090,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,194,15,0.91553,2007,"5.0,5.0,4.5,4.5,4.2,4.2,4.2,4.2,4.0,4.0,4.0,3.7,3.7,3.7,3.7",2009,"5.0,5.1,4.8,4.8,4.8,4.8,4.5,4.5,4.5,4.2,4.2,4.2,4.2,4.2,4.2",2023-12-16 04:41:12,Social Sector
 5197470,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,194,15,0.97829,2007,"6.9,6.9,6.6,6.6,6.3,6.3,6.3,6.3,6.0,5.7,5.5,5.2,4.9,4.6000000000000005,4.3",2009,"7.3,7.3,6.9,6.7,6.6,6.6,6.1,5.8,5.6,5.3,5.0,4.7,4.4,4.1,3.8",2023-12-18 20:36:37,Political State Sector
 2744046,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,35,15,0.95616,2007,"5.0,5.0,4.5,4.5,4.2,4.2,4.2,4.2,4.0,4.0,4.0,3.7,3.7,3.7,3.7",2007,"6.4,6.4,6.1,5.9,5.5,5.2,5.3,5.3,5.0,4.7,4.5,4.2,3.9,4.4,4.5",2023-12-16 04:41:09,Social Sector
@@ -746,10 +746,10 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 2418775,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,80,14,0.92816,2007,"5.4,5.4,5.5,5.5,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6",2006,"7.1,7.8,8.3,8.9,9.1,9.0,9.1,9.4,9.5,9.1,9.1,9.1,9.1,9.1",2023-12-15 12:32:24,Social Sector
 2418759,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,110,14,0.91622,2007,"5.4,5.4,5.5,5.5,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6",2008,"1.7,2.0,2.2,2.6,2.6,2.6,2.6,2.6,2.6,2.6,2.6,2.6,2.6,2.6",2023-12-15 12:32:23,Social Sector
 4791645,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,141,110,14,0.95825,2007,"8.1,8.6,8.3,8.1,8.0,8.1,8.4,8.7,9.0,9.5,9.8,9.9,9.6,9.3",2008,"2.0,2.0,2.1,1.8,2.1,2.0,2.3,2.6,2.9,3.2,3.5,3.3,3.0506762058487817,2.9",2023-12-18 12:49:36,Human Rights Development
-2418770,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,107,14,0.94346,2007,"5.4,5.4,5.5,5.5,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6",2009,"3.7,4.0,4.4,4.8,4.8,4.9,4.9,4.9,4.9,4.9,4.9,4.9,4.9,4.9",2023-12-15 12:32:24,Social Sector
-5197192,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,107,14,0.93096,2007,"6.9,6.9,6.6,6.6,6.3,6.3,6.3,6.3,6.0,5.7,5.5,5.2,4.9,4.6000000000000005",2009,"4.3,4.5,4.7,5.0,4.7,4.2,4.2,3.9,3.7,3.7,3.4,3.1,2.8,2.3",2023-12-18 20:36:20,Political State Sector
 2229217,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,141,138,14,0.91399,2007,"6.0,5.7,5.3,5.1,5.4,5.4,5.4,5.4,5.1,4.8,4.6,4.3,4.0,4.0",2007,"3.5,3.5,3.6,3.7,3.6,3.6,3.3,3.1,2.8,2.5,2.3,2.0,1.7,1.5039479205735793",2023-12-15 08:46:47,Social Sector
 5197177,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,138,14,0.96043,2007,"6.9,6.9,6.6,6.6,6.3,6.3,6.3,6.3,6.0,5.7,5.5,5.2,4.9,4.6000000000000005",2007,"5.1,5.1,5.3,5.1,4.7,4.4,4.1,3.8,3.5,3.2,3.0,2.7,2.4,2.1",2023-12-18 20:36:19,Political State Sector
+2418770,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,107,14,0.94346,2007,"5.4,5.4,5.5,5.5,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6",2009,"3.7,4.0,4.4,4.8,4.8,4.9,4.9,4.9,4.9,4.9,4.9,4.9,4.9,4.9",2023-12-15 12:32:24,Social Sector
+5197192,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,107,14,0.93096,2007,"6.9,6.9,6.6,6.6,6.3,6.3,6.3,6.3,6.0,5.7,5.5,5.2,4.9,4.6000000000000005",2009,"4.3,4.5,4.7,5.0,4.7,4.2,4.2,3.9,3.7,3.7,3.4,3.1,2.8,2.3",2023-12-18 20:36:20,Political State Sector
 2229224,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,141,166,14,0.95858,2007,"6.0,5.7,5.3,5.1,5.4,5.4,5.4,5.4,5.1,4.8,4.6,4.3,4.0,4.0",2006,"5.5,5.3,5.3,5.0,5.2,5.3,5.6,5.3,5.0,4.7,4.4,4.2,3.9,3.6",2023-12-15 08:46:47,Social Sector
 6007557,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,166,14,0.91325,2007,"2.5,2.5,3.0,2.8,2.5,2.8,3.1,3.4,3.1,3.4,3.3,3.587087923794613,3.8,3.545324396796988",2006,"6.5,6.6,6.6,6.4,6.7,6.9,7.2,7.5,7.4,7.5,7.4,7.7,7.81579409740162,7.5",2023-12-19 13:51:03,Human Rights Development
 2229276,The Fund For Peace,Fragile State Index,C1: Security Apparatus,2023,141,219,14,0.94383,2007,"6.0,5.7,5.3,5.1,5.4,5.4,5.4,5.4,5.1,4.8,4.6,4.3,4.0,4.0",2009,"7.5,7.3,7.4,7.1,7.4,7.1,6.8,6.9,6.7,6.4,6.1,6.031020278255557,5.7,5.4",2023-12-15 08:46:50,Social Sector
@@ -1233,10 +1233,10 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 5569835,The Fund For Peace,Fragile State Index,P2: Public Services,2023,141,169,12,0.90631,2007,"7.1,7.2,6.8,6.6,6.9,6.6,6.3,6.0,5.7,6.2,6.0,5.7",2012,"6.2,5.9,5.6,5.3,5.0,4.8,4.5,4.2,3.9,4.2,3.9,4.4",2023-12-19 04:38:51,Political State Sector
 2743844,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,79,12,0.91559,2007,"5.0,5.0,4.5,4.5,4.2,4.2,4.2,4.2,4.0,4.0,4.0,3.7",2009,"4.4,4.6,4.0,3.7,3.7,3.7,3.7,3.4,3.8,3.5,3.2,2.9000000000000004",2023-12-16 04:40:56,Social Sector
 3060548,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,79,12,0.92386,2007,"6.5,6.6,6.6,6.4,6.7,7.0,7.5,7.8,8.1,9.0,8.8,8.5",2009,"7.4,7.5,7.1,7.4,7.8,7.5,7.8,8.1,8.4,8.700000000000001,8.4,8.1",2023-12-16 10:41:04,Finance Economy Sector
-3060570,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,195,12,0.92615,2007,"6.5,6.6,6.6,6.4,6.7,7.0,7.5,7.8,8.1,9.0,8.8,8.5",2007,"2.3,2.3,2.7,3.1,3.4,3.4,3.6,3.9,4.4,4.7,4.5,4.42419079323928",2023-12-16 10:41:06,Finance Economy Sector
-5569814,The Fund For Peace,Fragile State Index,P2: Public Services,2023,141,195,12,0.91254,2007,"7.1,7.2,6.8,6.6,6.9,6.6,6.3,6.0,5.7,6.2,6.0,5.7",2007,"4.3,4.3,4.3,4.1,4.2,4.3,4.0,4.0,3.7,4.0,3.8,3.5",2023-12-19 04:38:50,Political State Sector
 3060543,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,2,12,0.91703,2007,"6.5,6.6,6.6,6.4,6.7,7.0,7.5,7.8,8.1,9.0,8.8,8.5",2012,"5.6,5.3,5.5,5.2,5.5,5.4,5.7,6.0,5.773246397638608,6.4,6.0,6.1",2023-12-16 10:41:04,Finance Economy Sector
 5196656,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,2,12,0.92166,2007,"6.9,6.9,6.6,6.6,6.3,6.3,6.3,6.3,6.0,5.7,5.5,5.2",2012,"7.3,7.0,6.5,6.2,5.9,5.7,6.0,5.7,5.8,5.5,5.2,5.0",2023-12-18 20:35:45,Political State Sector
+3060570,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,195,12,0.92615,2007,"6.5,6.6,6.6,6.4,6.7,7.0,7.5,7.8,8.1,9.0,8.8,8.5",2007,"2.3,2.3,2.7,3.1,3.4,3.4,3.6,3.9,4.4,4.7,4.5,4.42419079323928",2023-12-16 10:41:06,Finance Economy Sector
+5569814,The Fund For Peace,Fragile State Index,P2: Public Services,2023,141,195,12,0.91254,2007,"7.1,7.2,6.8,6.6,6.9,6.6,6.3,6.0,5.7,6.2,6.0,5.7",2007,"4.3,4.3,4.3,4.1,4.2,4.3,4.0,4.0,3.7,4.0,3.8,3.5",2023-12-19 04:38:50,Political State Sector
 2418578,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,196,12,0.91791,2007,"5.4,5.4,5.5,5.5,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6",2010,"4.2,4.5,6.3,6.6,6.6,6.6,6.6,6.6,6.9,7.0,7.0,7.0",2023-12-15 12:32:11,Social Sector
 5196652,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,196,12,0.92021,2007,"6.9,6.9,6.6,6.6,6.3,6.3,6.3,6.3,6.0,5.7,5.5,5.2",2010,"5.9,5.9,6.0,5.9,6.0,5.5,5.2,4.7,4.4,4.1,3.8,3.6",2023-12-18 20:35:45,Political State Sector
 2418621,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,107,12,0.91471,2007,"5.4,5.4,5.5,5.5,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6",2006,"2.8,3.2,3.3,3.7,4.0,4.4,4.8,4.8,4.9,4.9,4.9,4.9",2023-12-15 12:32:14,Social Sector
@@ -2589,8 +2589,6 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 1591544,The Fund For Peace,Fragile State Index,Total,2023,141,37,4,0.90727,2007,"73.5,74.0,71.9,70.6",2013,"73.7,74.1,73.5,71.5",2023-12-14 13:33:35,Finance Economy Sector
 2743077,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,37,4,0.90453,2007,"5.0,5.0,4.5,4.5",2013,"4.2,4.2,4.0,4.1",2023-12-16 04:40:04,Social Sector
 5193675,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,37,4,0.90726,2007,"6.9,6.9,6.6,6.6",2013,"6.3,6.0,5.7,5.5",2023-12-18 20:32:35,Political State Sector
-1594308,The Fund For Peace,Fragile State Index,Total,2023,141,180,7,0.9011,2009,"71.9,70.6,71.9,71.9,72.9,74.6,73.5",2012,"90.1,90.0,89.6,90.8,92.2,93.4,93.12762985550376",2023-12-14 13:36:40,Finance Economy Sector
-4791307,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,141,180,7,0.90551,2009,"8.3,8.1,8.0,8.1,8.4,8.7,9.0",2012,"6.5,6.2,6.5,6.8,7.1,7.4,7.7",2023-12-18 12:49:07,Human Rights Development
 2417800,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,81,3,1.0,2007,"5.4,5.4,5.5",2008,"1.8,1.8,2.0",2023-12-15 12:31:22,Social Sector
 2742485,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,81,3,1.0,2007,"5.0,5.0,4.5",2008,"4.9,4.9,4.7",2023-12-16 04:39:27,Social Sector
 5192971,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,81,3,1.0,2007,"6.9,6.9,6.6",2008,"2.3,2.3,2.1",2023-12-18 20:31:45,Political State Sector
@@ -2731,8 +2729,6 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 7369399,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,141,72,6,0.91755,2013,"7.9,8.2,8.3,9.2,9.5,9.75",2011,"6.6,6.6,6.9,6.9,7.2,7.4",2023-12-20 17:49:26,Sovereignty
 5194431,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,64,6,0.93771,2013,"6.3,6.3,6.0,5.7,5.5,5.2",2011,"6.5,6.2,5.9,5.6,4.8,5.0",2023-12-18 20:33:25,Political State Sector
 7369265,The Fund For Peace,Fragile State Index,X1: External Intervention,2023,141,64,6,0.92459,2013,"7.9,8.2,8.3,9.2,9.5,9.75",2011,"4.9,4.8,5.1,5.4,5.3,5.6",2023-12-20 17:49:20,Sovereignty
-3060260,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,180,6,0.92901,2009,"6.6,6.4,6.7,7.0,7.5,7.8",2015,"6.4,6.7,7.0,7.3,7.6,7.813483847210408",2023-12-16 10:40:42,Finance Economy Sector
-5569209,The Fund For Peace,Fragile State Index,P2: Public Services,2023,141,180,6,0.92981,2009,"6.8,6.6,6.9,6.6,6.3,6.0",2015,"9.1,9.2,9.5,9.2,8.9,8.6",2023-12-19 04:38:01,Political State Sector
 1593367,The Fund For Peace,Fragile State Index,Total,2023,141,3,6,0.93488,2007,"73.5,74.0,71.9,70.6,71.9,71.9",2009,"80.6,81.3,78.0,78.1,78.7,78.8",2023-12-14 13:35:43,Finance Economy Sector
 6493577,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,3,6,0.9214,2007,"7.7,7.7,7.2,7.0,7.1,6.8",2009,"6.7,6.7,6.4,6.1,5.8,5.7",2023-12-19 23:43:28,Social Sector
 3060248,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,182,6,0.94424,2009,"6.6,6.4,6.7,7.0,7.5,7.8",2012,"4.0,3.5,3.6,4.4,5.4,5.2",2023-12-16 10:40:41,Finance Economy Sector
@@ -3489,8 +3485,6 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 4245650,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,141,19,5,0.93818,2016,"8.5,8.3,8.0,7.7,7.4",2007,"7.6,7.0,7.1,6.7,6.3",2023-12-18 02:58:12,Human Rights Development
 1591788,The Fund For Peace,Fragile State Index,Total,2023,141,140,5,0.92942,2016,"77.1,76.4,74.4370879237946,73.0,71.23563007855653",2009,"75.4,76.1,75.1,73.6,73.1",2023-12-14 13:33:54,Finance Economy Sector
 4244895,The Fund For Peace,Fragile State Index,E2: Economic Inequality,2023,141,140,5,0.99792,2016,"8.5,8.3,8.0,7.7,7.4",2009,"8.2,8.0,7.7,7.5,7.2",2023-12-18 02:57:29,Human Rights Development
-4790887,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,141,180,5,0.98837,2011,"8.0,8.1,8.4,8.7,9.0",2014,"6.5,6.8,7.1,7.4,7.7",2023-12-18 12:48:39,Human Rights Development
-6007452,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,180,5,0.93891,2011,"2.5,2.8,3.1,3.4,3.1",2014,"7.6,7.9,8.2,8.5,8.508523809367782",2023-12-19 13:50:47,Human Rights Development
 4790781,The Fund For Peace,Fragile State Index,E3: Human Flight and Brain Drain,2023,141,242,5,0.9782,2011,"8.0,8.1,8.4,8.7,9.0",2015,"5.2,5.2,5.5,6.0,6.1",2023-12-18 12:48:30,Human Rights Development
 6007415,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,242,5,0.94908,2011,"2.5,2.8,3.1,3.4,3.1",2015,"8.3,8.6,8.9,9.0,9.0",2023-12-19 13:50:45,Human Rights Development
 1591951,The Fund For Peace,Fragile State Index,Total,2023,141,13,5,0.9347,2016,"77.1,76.4,74.4370879237946,73.0,71.23563007855653",2013,"25.4,26.3,24.3,22.5,22.3",2023-12-14 13:34:03,Finance Economy Sector
@@ -4337,14 +4331,14 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 21945323,World Bank,GDP (current US$),GDP (current US$),2023,141,229,4,0.99765,2007,"256787200.0,263145100.0,280284600.0,296944100.0",2016,"36169428571.4286,37926285714.2857,40765428571.4286,44220285714.2857",2024-01-05 08:20:21,Finance Economy Sector
 2742937,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,199,4,0.90726,2007,"5.0,5.0,4.5,4.5",2010,"6.7,6.5,6.2,5.9",2023-12-16 04:39:56,Social Sector
 21944623,World Bank,GDP (current US$),GDP (current US$),2023,141,199,4,0.99734,2007,"256787200.0,263145100.0,280284600.0,296944100.0",2010,"2578159479.90083,2932274241.9741,3789251962.27583,4920343203.30269",2024-01-05 08:19:25,Finance Economy Sector
-2418310,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,122,4,1.0,2007,"5.4,5.4,5.5,5.5",2013,"7.0,7.0,7.3,7.3",2023-12-15 12:31:53,Social Sector
-2743085,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,122,4,0.90453,2007,"5.0,5.0,4.5,4.5",2013,"4.7,4.7,4.4,4.1",2023-12-16 04:40:04,Social Sector
-2743067,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,49,4,1.0,2007,"5.0,5.0,4.5,4.5",2013,"5.3,5.3,5.0,5.0",2023-12-16 04:40:03,Social Sector
-5193668,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,49,4,0.90453,2007,"6.9,6.9,6.6,6.6",2013,"7.4,7.1,6.8,6.8",2023-12-18 20:32:35,Political State Sector
-2418297,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,234,4,0.90453,2007,"5.4,5.4,5.5,5.5",2007,"3.6,3.8,4.0,4.0",2023-12-15 12:31:53,Social Sector
-5193650,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,234,4,1.0,2007,"6.9,6.9,6.6,6.6",2007,"7.0,7.0,6.7,6.7",2023-12-18 20:32:33,Political State Sector
 2742771,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,212,4,1.0,2007,"5.0,5.0,4.5,4.5",2007,"10.0,10.0,9.9,9.9",2023-12-16 04:39:45,Social Sector
 5193292,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,212,4,0.90453,2007,"6.9,6.9,6.6,6.6",2007,"10.0,10.0,9.8,9.9",2023-12-18 20:32:06,Political State Sector
+2418297,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,234,4,0.90453,2007,"5.4,5.4,5.5,5.5",2007,"3.6,3.8,4.0,4.0",2023-12-15 12:31:53,Social Sector
+5193650,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,234,4,1.0,2007,"6.9,6.9,6.6,6.6",2007,"7.0,7.0,6.7,6.7",2023-12-18 20:32:33,Political State Sector
+2743067,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,49,4,1.0,2007,"5.0,5.0,4.5,4.5",2013,"5.3,5.3,5.0,5.0",2023-12-16 04:40:03,Social Sector
+5193668,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,49,4,0.90453,2007,"6.9,6.9,6.6,6.6",2013,"7.4,7.1,6.8,6.8",2023-12-18 20:32:35,Political State Sector
+2418310,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,122,4,1.0,2007,"5.4,5.4,5.5,5.5",2013,"7.0,7.0,7.3,7.3",2023-12-15 12:31:53,Social Sector
+2743085,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,122,4,0.90453,2007,"5.0,5.0,4.5,4.5",2013,"4.7,4.7,4.4,4.1",2023-12-16 04:40:04,Social Sector
 1591086,The Fund For Peace,Fragile State Index,Total,2023,141,173,4,0.93104,2007,"73.5,74.0,71.9,70.6",2009,"77.1,76.9,73.6,73.5",2023-12-14 13:33:07,Finance Economy Sector
 21944248,World Bank,GDP (current US$),GDP (current US$),2023,141,173,4,0.97301,2007,"256787200.0,263145100.0,280284600.0,296944100.0",2009,"120822986521.479,147527631520.729,171761737046.585,192649991136.09",2024-01-05 08:18:51,Finance Economy Sector
 1591283,The Fund For Peace,Fragile State Index,Total,2023,141,89,4,0.97271,2007,"73.5,74.0,71.9,70.6",2016,"83.2,83.1,81.83670919240136,81.4",2023-12-14 13:33:20,Finance Economy Sector
@@ -4355,8 +4349,7 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 21944806,World Bank,GDP (current US$),GDP (current US$),2023,141,211,4,0.93327,2007,"256787200.0,263145100.0,280284600.0,296944100.0",2010,"58636160848.9497,67753284134.9913,70447217163.6167,77000578207.3909",2024-01-05 08:19:37,Finance Economy Sector
 1591182,The Fund For Peace,Fragile State Index,Total,2023,141,219,4,0.90791,2007,"73.5,74.0,71.9,70.6",2009,"90.3,89.2,88.3,85.7",2023-12-14 13:33:14,Finance Economy Sector
 21945092,World Bank,GDP (current US$),GDP (current US$),2023,141,219,4,0.99524,2007,"256787200.0,263145100.0,280284600.0,296944100.0",2009,"4979471963.79181,5642221528.67114,6522755783.39257,7633036366.03492",2024-01-05 08:20:01,Finance Economy Sector
-1591480,The Fund For Peace,Fragile State Index,Total,2023,141,180,4,0.94734,2007,"73.5,74.0,71.9,70.6",2009,"93.1,92.5,91.4,90.1",2023-12-14 13:33:30,Finance Economy Sector
-21941664,World Bank,GDP (current US$),GDP (current US$),2023,141,180,4,0.95568,2007,"256787200.0,263145100.0,280284600.0,296944100.0",2009,"9723299908.19473,13148396205.671,15655383585.9887,17692911280.5627",2024-01-05 08:15:19,Finance Economy Sector
+21941635,World Bank,GDP (current US$),GDP (current US$),2023,141,50,4,0.99113,2007,"256787200.0,263145100.0,280284600.0,296944100.0",2009,"18648372544.7984,21565721036.3591,25839749198.8233,29306235295.3371",2024-01-05 08:15:16,Finance Economy Sector
 1591183,The Fund For Peace,Fragile State Index,Total,2023,141,219,4,0.91957,2007,"73.5,74.0,71.9,70.6",2010,"89.2,88.3,85.7,85.2",2023-12-14 13:33:14,Finance Economy Sector
 21945093,World Bank,GDP (current US$),GDP (current US$),2023,141,219,4,0.98339,2007,"256787200.0,263145100.0,280284600.0,296944100.0",2010,"5642221528.67114,6522755783.39257,7633036366.03492,8448410727.15443",2024-01-05 08:20:01,Finance Economy Sector
 2418088,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,110,4,0.93301,2007,"5.4,5.4,5.5,5.5",2006,"1.3,1.3,1.7,2.0",2023-12-15 12:31:41,Social Sector
@@ -4823,124 +4816,124 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 2742873,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,203,4,0.90453,2007,"5.0,5.0,4.5,4.5",2017,"4.5,4.5,4.2,3.9",2023-12-16 04:39:52,Social Sector
 2742946,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,142,4,0.90698,2007,"5.0,5.0,4.5,4.5",2017,"7.3,7.314764946694693,7.0,6.7",2023-12-16 04:39:56,Social Sector
 5193546,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,142,4,0.90453,2007,"6.9,6.9,6.6,6.6",2017,"6.6,6.6,6.3,6.0",2023-12-18 20:32:24,Political State Sector
-2742913,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,205,4,0.90453,2007,"5.0,5.0,4.5,4.5",2009,"9.7,9.7,9.5,9.6",2023-12-16 04:39:54,Social Sector
-5193521,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,205,4,0.90453,2007,"6.9,6.9,6.6,6.6",2009,"10.0,10.0,9.8,9.9",2023-12-18 20:32:23,Political State Sector
-2418173,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,69,4,0.90453,2007,"5.4,5.4,5.5,5.5",2008,"8.9,8.8,9.0,9.0",2023-12-15 12:31:46,Social Sector
-5193481,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,69,4,0.90453,2007,"6.9,6.9,6.6,6.6",2008,"7.9,7.9,7.7,7.5",2023-12-18 20:32:20,Political State Sector
 2742835,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,153,4,0.90453,2007,"5.0,5.0,4.5,4.5",2010,"4.7,4.4,4.1,4.1",2023-12-16 04:39:49,Social Sector
 5193375,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,153,4,0.90453,2007,"6.9,6.9,6.6,6.6",2010,"1.2,1.1,1.0,1.0",2023-12-18 20:32:12,Political State Sector
 2743011,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,16,4,0.90453,2007,"5.0,5.0,4.5,4.5",2009,"5.0,4.7,4.4,4.4",2023-12-16 04:40:00,Social Sector
 5193599,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,16,4,0.90453,2007,"6.9,6.9,6.6,6.6",2009,"5.5,5.5,5.2,4.9",2023-12-18 20:32:29,Political State Sector
+2418173,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,69,4,0.90453,2007,"5.4,5.4,5.5,5.5",2008,"8.9,8.8,9.0,9.0",2023-12-15 12:31:46,Social Sector
+5193481,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,69,4,0.90453,2007,"6.9,6.9,6.6,6.6",2008,"7.9,7.9,7.7,7.5",2023-12-18 20:32:20,Political State Sector
+2742913,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,205,4,0.90453,2007,"5.0,5.0,4.5,4.5",2009,"9.7,9.7,9.5,9.6",2023-12-16 04:39:54,Social Sector
+5193521,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,205,4,0.90453,2007,"6.9,6.9,6.6,6.6",2009,"10.0,10.0,9.8,9.9",2023-12-18 20:32:23,Political State Sector
 1590310,The Fund For Peace,Fragile State Index,Total,2023,141,100,4,0.90023,2007,"73.5,74.0,71.9,70.6",2016,"79.6,77.9,76.30850993941235,74.4",2023-12-14 13:32:18,Finance Economy Sector
 5193336,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,100,4,0.90726,2007,"6.9,6.9,6.6,6.6",2016,"4.9,4.7,4.4,4.1",2023-12-18 20:32:10,Political State Sector
 5193476,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,183,4,0.90453,2007,"6.9,6.9,6.6,6.6",2011,"7.1,6.8,6.5,6.5",2023-12-18 20:32:19,Political State Sector
 21944464,World Bank,GDP (current US$),GDP (current US$),2023,141,183,4,0.90268,2007,"256787200.0,263145100.0,280284600.0,296944100.0",2011,"6884907733.00484,7654782978.58736,7820052084.03387,8239042500.28733",2024-01-05 08:19:10,Finance Economy Sector
 1591428,The Fund For Peace,Fragile State Index,Total,2023,141,99,4,0.90096,2007,"73.5,74.0,71.9,70.6",2010,"29.8,30.1,29.1,24.7",2023-12-14 13:33:28,Finance Economy Sector
 5193644,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,99,4,0.90453,2007,"6.9,6.9,6.6,6.6",2010,"2.0,2.0,1.7,1.4",2023-12-18 20:32:33,Political State Sector
-6007224,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,68,3,1.0,2010,"2.8,2.5,2.8",2021,"8.2,7.9,8.2",2023-12-19 13:50:31,Human Rights Development
-6492393,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,68,3,1.0,2010,"7.0,7.1,6.8",2021,"8.9,9.0,8.7",2023-12-19 23:42:06,Social Sector
-3059073,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,31,3,1.0,2010,"6.4,6.7,7.0",2006,"2.7,3.2,3.7",2023-12-16 10:39:32,Finance Economy Sector
-6492086,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,31,3,1.0,2010,"7.0,7.1,6.8",2006,"6.5,6.6,6.3",2023-12-19 23:41:45,Social Sector
-2742594,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,45,3,1.0,2007,"5.0,5.0,4.5",2006,"8.0,8.0,7.8",2023-12-16 04:39:32,Social Sector
-5193115,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,45,3,1.0,2007,"6.9,6.9,6.6",2006,"8.5,8.5,8.3",2023-12-18 20:31:54,Political State Sector
-2417791,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,238,3,1.0,2007,"5.4,5.4,5.5",2007,"2.3,2.3,2.5",2023-12-15 12:31:22,Social Sector
-5192958,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,238,3,1.0,2007,"6.9,6.9,6.6",2007,"2.9,2.9,2.8",2023-12-18 20:31:44,Political State Sector
-3059088,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,82,3,1.0,2010,"6.4,6.7,7.0",2009,"5.5,5.8,6.1",2023-12-16 10:39:33,Finance Economy Sector
-6492096,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,82,3,1.0,2010,"7.0,7.1,6.8",2009,"7.0,7.1,6.8",2023-12-19 23:41:46,Social Sector
-2742355,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,212,3,1.0,2007,"5.0,5.0,4.5",2007,"10.0,10.0,9.9",2023-12-16 04:39:20,Social Sector
-5192782,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,212,3,1.0,2007,"6.9,6.9,6.6",2007,"10.0,10.0,9.8",2023-12-18 20:31:34,Political State Sector
-2417714,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,233,3,1.0,2007,"5.4,5.4,5.5",2009,"7.9,7.9,8.0",2023-12-15 12:31:16,Social Sector
-2742419,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,233,3,1.0,2007,"5.0,5.0,4.5",2009,"6.9,6.9,6.5",2023-12-16 04:39:24,Social Sector
-2417818,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,236,3,1.0,2007,"5.4,5.4,5.5",2014,"4.0,4.0,4.3",2023-12-15 12:31:24,Social Sector
-5192988,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,236,3,1.0,2007,"6.9,6.9,6.6",2014,"2.4,2.4,2.1",2023-12-18 20:31:46,Political State Sector
-2742746,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,194,3,1.0,2007,"5.0,5.0,4.5",2013,"4.8,4.8,4.5",2023-12-16 04:39:44,Social Sector
-5193277,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,194,3,1.0,2007,"6.9,6.9,6.6",2013,"6.6,6.6,6.1",2023-12-18 20:32:05,Political State Sector
-2742396,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,56,3,1.0,2007,"5.0,5.0,4.5",2007,"8.3,8.3,7.5",2023-12-16 04:39:22,Social Sector
-5192834,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,56,3,1.0,2007,"6.9,6.9,6.6",2007,"5.5,5.5,5.4",2023-12-18 20:31:37,Political State Sector
-2742582,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,162,3,1.0,2007,"5.0,5.0,4.5",2018,"5.8,5.8,5.5",2023-12-16 04:39:32,Social Sector
-5193098,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,162,3,1.0,2007,"6.9,6.9,6.6",2018,"10.0,10.0,9.911297845249694",2023-12-18 20:31:53,Political State Sector
-3059322,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,195,3,1.0,2010,"6.4,6.7,7.0",2008,"2.3,2.7,3.1",2023-12-16 10:39:45,Finance Economy Sector
-6007137,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,195,3,1.0,2010,"2.8,2.5,2.8",2008,"9.1,8.9,9.1",2023-12-19 13:50:26,Human Rights Development
-2742704,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,86,3,1.0,2007,"5.0,5.0,4.5",2013,"3.9,3.9,3.8",2023-12-16 04:39:41,Social Sector
-5193227,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,86,3,1.0,2007,"6.9,6.9,6.6",2013,"6.2,6.2,5.9",2023-12-18 20:32:02,Political State Sector
-2417802,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,81,3,1.0,2007,"5.4,5.4,5.5",2016,"2.3,2.3,2.6",2023-12-15 12:31:22,Social Sector
-5192974,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,81,3,1.0,2007,"6.9,6.9,6.6",2016,"1.0,1.0,0.7",2023-12-18 20:31:45,Political State Sector
-2417983,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,192,3,1.0,2007,"5.4,5.4,5.5",2007,"5.4,5.4,5.5",2023-12-15 12:31:35,Social Sector
-5193217,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,192,3,1.0,2007,"6.9,6.9,6.6",2007,"6.7,6.7,6.6",2023-12-18 20:32:01,Political State Sector
-6007129,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,114,3,1.0,2010,"2.8,2.5,2.8",2021,"6.3,6.2,6.3",2023-12-19 13:50:25,Human Rights Development
-6492231,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,114,3,1.0,2010,"7.0,7.1,6.8",2021,"8.3,8.4,8.1",2023-12-19 23:41:55,Social Sector
-3059456,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,20,3,1.0,2010,"6.4,6.7,7.0",2014,"6.0,6.1,6.2",2023-12-16 10:39:52,Finance Economy Sector
-6492341,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,20,3,1.0,2010,"7.0,7.1,6.8",2014,"5.5,5.6,5.3",2023-12-19 23:42:02,Social Sector
-3059519,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,49,3,1.0,2010,"6.4,6.7,7.0",2011,"7.6,7.9,8.2",2023-12-16 10:39:56,Finance Economy Sector
-6007218,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,49,3,1.0,2010,"2.8,2.5,2.8",2011,"6.6,6.3,6.6",2023-12-19 13:50:31,Human Rights Development
-2417935,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,169,3,1.0,2007,"5.4,5.4,5.5",2008,"8.0,8.0,8.2",2023-12-15 12:31:33,Social Sector
-5193140,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,169,3,1.0,2007,"6.9,6.9,6.6",2008,"7.5,7.5,7.3",2023-12-18 20:31:56,Political State Sector
-3059299,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,48,3,1.0,2010,"6.4,6.7,7.0",2017,"4.2,4.5,4.8",2023-12-16 10:39:43,Finance Economy Sector
-6492221,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,48,3,1.0,2010,"7.0,7.1,6.8",2017,"6.2,6.3,6.0",2023-12-19 23:41:55,Social Sector
-3059125,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,148,3,1.0,2010,"6.4,6.7,7.0",2017,"8.0,8.3,8.6",2023-12-16 10:39:34,Finance Economy Sector
-6007043,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,148,3,1.0,2010,"2.8,2.5,2.8",2017,"5.6,5.3,5.6",2023-12-19 13:50:20,Human Rights Development
-2417988,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,17,3,1.0,2007,"5.4,5.4,5.5",2015,"7.1,7.1,7.6",2023-12-15 12:31:35,Social Sector
-5193240,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,17,3,1.0,2007,"6.9,6.9,6.6",2015,"8.4,8.4,8.2",2023-12-18 20:32:03,Political State Sector
-2417981,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,65,3,1.0,2007,"5.4,5.4,5.5",2007,"8.5,8.5,8.6",2023-12-15 12:31:35,Social Sector
-2742674,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,65,3,1.0,2007,"5.0,5.0,4.5",2007,"7.0,7.0,6.8",2023-12-16 04:39:37,Social Sector
-2742432,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,96,3,1.0,2007,"5.0,5.0,4.5",2007,"5.3,5.3,5.0",2023-12-16 04:39:24,Social Sector
-5192882,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,96,3,1.0,2007,"6.9,6.9,6.6",2007,"7.4,7.4,7.0",2023-12-18 20:31:39,Political State Sector
-2742717,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,127,3,1.0,2007,"5.0,5.0,4.5",2016,"3.1,3.1,2.8000000000000003",2023-12-16 04:39:42,Social Sector
-5193247,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,127,3,1.0,2007,"6.9,6.9,6.6",2016,"1.0,1.0,0.7",2023-12-18 20:32:03,Political State Sector
-2742724,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,234,3,1.0,2007,"5.0,5.0,4.5",2009,"4.7,4.7,4.6",2023-12-16 04:39:43,Social Sector
-5193256,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,234,3,1.0,2007,"6.9,6.9,6.6",2009,"6.7,6.7,6.5",2023-12-18 20:32:04,Political State Sector
-3059290,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,211,3,1.0,2010,"6.4,6.7,7.0",2011,"5.3,5.6,5.9",2023-12-16 10:39:43,Finance Economy Sector
-6492212,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,211,3,1.0,2010,"7.0,7.1,6.8",2011,"7.0,7.1,6.8",2023-12-19 23:41:54,Social Sector
-3059071,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,227,3,1.0,2010,"6.4,6.7,7.0",2021,"7.8,7.9,8.0",2023-12-16 10:39:32,Finance Economy Sector
-6007028,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,227,3,1.0,2010,"2.8,2.5,2.8",2021,"5.5,5.4,5.5",2023-12-19 13:50:19,Human Rights Development
-2417844,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,35,3,1.0,2007,"5.4,5.4,5.5",2013,"7.3,7.3,7.8",2023-12-15 12:31:26,Social Sector
-2742524,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,35,3,1.0,2007,"5.0,5.0,4.5",2013,"5.3,5.3,5.0",2023-12-16 04:39:29,Social Sector
-2742681,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,226,3,1.0,2007,"5.0,5.0,4.5",2007,"5.2,5.2,4.9",2023-12-16 04:39:37,Social Sector
-5193201,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,226,3,1.0,2007,"6.9,6.9,6.6",2007,"6.4,6.4,6.1",2023-12-18 20:32:00,Political State Sector
-2417768,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,177,3,1.0,2007,"5.4,5.4,5.5",2009,"1.2,1.2,1.4",2023-12-15 12:31:20,Social Sector
-2742467,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,177,3,1.0,2007,"5.0,5.0,4.5",2009,"2.6,2.6,2.5",2023-12-16 04:39:26,Social Sector
-2742692,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,22,3,1.0,2007,"5.0,5.0,4.5",2007,"5.2,5.2,4.9",2023-12-16 04:39:38,Social Sector
-5193211,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,22,3,1.0,2007,"6.9,6.9,6.6",2007,"6.5,6.5,6.2",2023-12-18 20:32:01,Political State Sector
-2742693,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,22,3,1.0,2007,"5.0,5.0,4.5",2009,"4.9,4.9,4.4",2023-12-16 04:39:38,Social Sector
-5193212,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,22,3,1.0,2007,"6.9,6.9,6.6",2009,"6.2,6.2,6.0",2023-12-18 20:32:01,Political State Sector
-2742694,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,22,3,1.0,2007,"5.0,5.0,4.5",2013,"4.4,4.4,4.1",2023-12-16 04:39:38,Social Sector
-5193213,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,22,3,1.0,2007,"6.9,6.9,6.6",2013,"6.0,6.0,5.7",2023-12-18 20:32:01,Political State Sector
-2418009,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,132,3,1.0,2007,"5.4,5.4,5.5",2016,"8.0,8.0,8.3",2023-12-15 12:31:37,Social Sector
-2742755,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,132,3,1.0,2007,"5.0,5.0,4.5",2016,"4.8,4.8,4.5",2023-12-16 04:39:44,Social Sector
-2418007,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,132,3,1.0,2007,"5.4,5.4,5.5",2009,"7.4,7.4,7.6",2023-12-15 12:31:36,Social Sector
-2742753,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,132,3,1.0,2007,"5.0,5.0,4.5",2009,"5.2,5.2,4.9",2023-12-16 04:39:44,Social Sector
 2742588,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,199,3,1.0,2007,"5.0,5.0,4.5",2006,"7.1,7.1,6.9",2023-12-16 04:39:32,Social Sector
 5193107,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,199,3,1.0,2007,"6.9,6.9,6.6",2006,"8.0,8.0,7.7",2023-12-18 20:31:53,Political State Sector
+2418009,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,132,3,1.0,2007,"5.4,5.4,5.5",2016,"8.0,8.0,8.3",2023-12-15 12:31:37,Social Sector
+2742755,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,132,3,1.0,2007,"5.0,5.0,4.5",2016,"4.8,4.8,4.5",2023-12-16 04:39:44,Social Sector
+2742694,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,22,3,1.0,2007,"5.0,5.0,4.5",2013,"4.4,4.4,4.1",2023-12-16 04:39:38,Social Sector
+5193213,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,22,3,1.0,2007,"6.9,6.9,6.6",2013,"6.0,6.0,5.7",2023-12-18 20:32:01,Political State Sector
+2742693,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,22,3,1.0,2007,"5.0,5.0,4.5",2009,"4.9,4.9,4.4",2023-12-16 04:39:38,Social Sector
+5193212,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,22,3,1.0,2007,"6.9,6.9,6.6",2009,"6.2,6.2,6.0",2023-12-18 20:32:01,Political State Sector
+2742692,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,22,3,1.0,2007,"5.0,5.0,4.5",2007,"5.2,5.2,4.9",2023-12-16 04:39:38,Social Sector
+5193211,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,22,3,1.0,2007,"6.9,6.9,6.6",2007,"6.5,6.5,6.2",2023-12-18 20:32:01,Political State Sector
+2417768,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,177,3,1.0,2007,"5.4,5.4,5.5",2009,"1.2,1.2,1.4",2023-12-15 12:31:20,Social Sector
+2742467,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,177,3,1.0,2007,"5.0,5.0,4.5",2009,"2.6,2.6,2.5",2023-12-16 04:39:26,Social Sector
+2742681,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,226,3,1.0,2007,"5.0,5.0,4.5",2007,"5.2,5.2,4.9",2023-12-16 04:39:37,Social Sector
+5193201,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,226,3,1.0,2007,"6.9,6.9,6.6",2007,"6.4,6.4,6.1",2023-12-18 20:32:00,Political State Sector
+2417844,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,35,3,1.0,2007,"5.4,5.4,5.5",2013,"7.3,7.3,7.8",2023-12-15 12:31:26,Social Sector
+2742524,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,35,3,1.0,2007,"5.0,5.0,4.5",2013,"5.3,5.3,5.0",2023-12-16 04:39:29,Social Sector
 3059376,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,142,3,1.0,2010,"6.4,6.7,7.0",2012,"6.2,6.4,6.6",2023-12-16 10:39:48,Finance Economy Sector
 6492277,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,142,3,1.0,2010,"7.0,7.1,6.8",2012,"5.8,5.9,5.6",2023-12-19 23:41:58,Social Sector
-2742572,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,91,3,1.0,2007,"5.0,5.0,4.5",2009,"8.2,8.2,7.9",2023-12-16 04:39:31,Social Sector
-5193090,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,91,3,1.0,2007,"6.9,6.9,6.6",2009,"9.8,9.8,9.4",2023-12-18 20:31:52,Political State Sector
-2417999,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,59,3,1.0,2007,"5.4,5.4,5.5",2008,"6.9,6.9,7.1",2023-12-15 12:31:36,Social Sector
-5193274,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,59,3,1.0,2007,"6.9,6.9,6.6",2008,"7.4,7.4,7.2",2023-12-18 20:32:05,Political State Sector
-2417895,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,91,3,1.0,2007,"5.4,5.4,5.5",2014,"9.6,9.6,9.9",2023-12-15 12:31:29,Social Sector
-5193091,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,91,3,1.0,2007,"6.9,6.9,6.6",2014,"9.9,9.9,9.8",2023-12-18 20:31:52,Political State Sector
-2418012,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,122,3,1.0,2007,"5.4,5.4,5.5",2013,"7.0,7.0,7.3",2023-12-15 12:31:37,Social Sector
-2742766,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,122,3,1.0,2007,"5.0,5.0,4.5",2013,"4.7,4.7,4.4",2023-12-16 04:39:45,Social Sector
-2417803,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,210,3,1.0,2007,"5.4,5.4,5.5",2007,"5.6,5.6,5.7",2023-12-15 12:31:22,Social Sector
-5192977,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,210,3,1.0,2007,"6.9,6.9,6.6",2007,"1.4,1.4,1.3",2023-12-18 20:31:45,Political State Sector
-2417807,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,203,3,1.0,2007,"5.4,5.4,5.5",2007,"1.1,1.1,1.3",2023-12-15 12:31:23,Social Sector
-5192979,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,203,3,1.0,2007,"6.9,6.9,6.6",2007,"3.2,3.2,3.0",2023-12-18 20:31:45,Political State Sector
-2417704,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,79,3,1.0,2007,"5.4,5.4,5.5",2007,"5.9,5.9,6.2",2023-12-15 12:31:15,Social Sector
-5192860,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,79,3,1.0,2007,"6.9,6.9,6.6",2007,"7.9,7.9,7.8",2023-12-18 20:31:38,Political State Sector
-2742521,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,130,3,1.0,2007,"5.0,5.0,4.5",2017,"5.6,5.6,5.3",2023-12-16 04:39:29,Social Sector
-5193036,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,130,3,1.0,2007,"6.9,6.9,6.6",2017,"6.4,6.4,6.1",2023-12-18 20:31:49,Political State Sector
+3059071,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,227,3,1.0,2010,"6.4,6.7,7.0",2021,"7.8,7.9,8.0",2023-12-16 10:39:32,Finance Economy Sector
+6007028,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,227,3,1.0,2010,"2.8,2.5,2.8",2021,"5.5,5.4,5.5",2023-12-19 13:50:19,Human Rights Development
+3059290,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,211,3,1.0,2010,"6.4,6.7,7.0",2011,"5.3,5.6,5.9",2023-12-16 10:39:43,Finance Economy Sector
+6492212,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,211,3,1.0,2010,"7.0,7.1,6.8",2011,"7.0,7.1,6.8",2023-12-19 23:41:54,Social Sector
+2742724,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,234,3,1.0,2007,"5.0,5.0,4.5",2009,"4.7,4.7,4.6",2023-12-16 04:39:43,Social Sector
+5193256,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,234,3,1.0,2007,"6.9,6.9,6.6",2009,"6.7,6.7,6.5",2023-12-18 20:32:04,Political State Sector
+2742717,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,127,3,1.0,2007,"5.0,5.0,4.5",2016,"3.1,3.1,2.8000000000000003",2023-12-16 04:39:42,Social Sector
+5193247,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,127,3,1.0,2007,"6.9,6.9,6.6",2016,"1.0,1.0,0.7",2023-12-18 20:32:03,Political State Sector
+2742432,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,96,3,1.0,2007,"5.0,5.0,4.5",2007,"5.3,5.3,5.0",2023-12-16 04:39:24,Social Sector
+5192882,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,96,3,1.0,2007,"6.9,6.9,6.6",2007,"7.4,7.4,7.0",2023-12-18 20:31:39,Political State Sector
+2417981,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,65,3,1.0,2007,"5.4,5.4,5.5",2007,"8.5,8.5,8.6",2023-12-15 12:31:35,Social Sector
+2742674,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,65,3,1.0,2007,"5.0,5.0,4.5",2007,"7.0,7.0,6.8",2023-12-16 04:39:37,Social Sector
+2417988,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,17,3,1.0,2007,"5.4,5.4,5.5",2015,"7.1,7.1,7.6",2023-12-15 12:31:35,Social Sector
+5193240,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,17,3,1.0,2007,"6.9,6.9,6.6",2015,"8.4,8.4,8.2",2023-12-18 20:32:03,Political State Sector
+3059125,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,148,3,1.0,2010,"6.4,6.7,7.0",2017,"8.0,8.3,8.6",2023-12-16 10:39:34,Finance Economy Sector
+6007043,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,148,3,1.0,2010,"2.8,2.5,2.8",2017,"5.6,5.3,5.6",2023-12-19 13:50:20,Human Rights Development
 2417661,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,34,3,1.0,2007,"5.4,5.4,5.5",2009,"4.6,4.6,5.3",2023-12-15 12:31:12,Social Sector
 5192807,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,34,3,1.0,2007,"6.9,6.9,6.6",2009,"6.0,6.0,5.9",2023-12-18 20:31:35,Political State Sector
-2742713,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,33,3,1.0,2007,"5.0,5.0,4.5",2016,"5.9,5.9,5.6000000000000005",2023-12-16 04:39:42,Social Sector
-5193238,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,33,3,1.0,2007,"6.9,6.9,6.6",2016,"8.3,8.3,8.0",2023-12-18 20:32:03,Political State Sector
-2417997,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,204,3,1.0,2007,"5.4,5.4,5.5",2013,"8.0,8.0,8.2",2023-12-15 12:31:36,Social Sector
-2742738,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,204,3,1.0,2007,"5.0,5.0,4.5",2013,"6.8,6.8,6.5",2023-12-16 04:39:43,Social Sector
-2742652,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,92,3,1.0,2007,"5.0,5.0,4.5",2017,"5.2,5.2,4.9",2023-12-16 04:39:36,Social Sector
-5193179,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,92,3,1.0,2007,"6.9,6.9,6.6",2017,"9.2,9.2,8.9",2023-12-18 20:31:58,Political State Sector
-2742762,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,68,3,1.0,2007,"5.0,5.0,4.5",2016,"3.4,3.4,3.1",2023-12-16 04:39:45,Social Sector
-5193286,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,68,3,1.0,2007,"6.9,6.9,6.6",2016,"8.8,8.8,8.567996466882283",2023-12-18 20:32:06,Political State Sector
+2742572,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,91,3,1.0,2007,"5.0,5.0,4.5",2009,"8.2,8.2,7.9",2023-12-16 04:39:31,Social Sector
+5193090,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,91,3,1.0,2007,"6.9,6.9,6.6",2009,"9.8,9.8,9.4",2023-12-18 20:31:52,Political State Sector
+3059299,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,48,3,1.0,2010,"6.4,6.7,7.0",2017,"4.2,4.5,4.8",2023-12-16 10:39:43,Finance Economy Sector
+6492221,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,48,3,1.0,2010,"7.0,7.1,6.8",2017,"6.2,6.3,6.0",2023-12-19 23:41:55,Social Sector
 2742559,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,205,3,1.0,2007,"5.0,5.0,4.5",2009,"9.7,9.7,9.5",2023-12-16 04:39:31,Social Sector
 5193078,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,205,3,1.0,2007,"6.9,6.9,6.6",2009,"10.0,10.0,9.8",2023-12-18 20:31:52,Political State Sector
+2742762,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,68,3,1.0,2007,"5.0,5.0,4.5",2016,"3.4,3.4,3.1",2023-12-16 04:39:45,Social Sector
+5193286,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,68,3,1.0,2007,"6.9,6.9,6.6",2016,"8.8,8.8,8.567996466882283",2023-12-18 20:32:06,Political State Sector
+2742652,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,92,3,1.0,2007,"5.0,5.0,4.5",2017,"5.2,5.2,4.9",2023-12-16 04:39:36,Social Sector
+5193179,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,92,3,1.0,2007,"6.9,6.9,6.6",2017,"9.2,9.2,8.9",2023-12-18 20:31:58,Political State Sector
+2417997,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,204,3,1.0,2007,"5.4,5.4,5.5",2013,"8.0,8.0,8.2",2023-12-15 12:31:36,Social Sector
+2742738,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,204,3,1.0,2007,"5.0,5.0,4.5",2013,"6.8,6.8,6.5",2023-12-16 04:39:43,Social Sector
+2742713,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,33,3,1.0,2007,"5.0,5.0,4.5",2016,"5.9,5.9,5.6000000000000005",2023-12-16 04:39:42,Social Sector
+5193238,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,33,3,1.0,2007,"6.9,6.9,6.6",2016,"8.3,8.3,8.0",2023-12-18 20:32:03,Political State Sector
+2742521,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,130,3,1.0,2007,"5.0,5.0,4.5",2017,"5.6,5.6,5.3",2023-12-16 04:39:29,Social Sector
+5193036,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,130,3,1.0,2007,"6.9,6.9,6.6",2017,"6.4,6.4,6.1",2023-12-18 20:31:49,Political State Sector
+2417999,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,59,3,1.0,2007,"5.4,5.4,5.5",2008,"6.9,6.9,7.1",2023-12-15 12:31:36,Social Sector
+5193274,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,59,3,1.0,2007,"6.9,6.9,6.6",2008,"7.4,7.4,7.2",2023-12-18 20:32:05,Political State Sector
+2417704,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,79,3,1.0,2007,"5.4,5.4,5.5",2007,"5.9,5.9,6.2",2023-12-15 12:31:15,Social Sector
+5192860,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,79,3,1.0,2007,"6.9,6.9,6.6",2007,"7.9,7.9,7.8",2023-12-18 20:31:38,Political State Sector
+2417807,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,203,3,1.0,2007,"5.4,5.4,5.5",2007,"1.1,1.1,1.3",2023-12-15 12:31:23,Social Sector
+5192979,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,203,3,1.0,2007,"6.9,6.9,6.6",2007,"3.2,3.2,3.0",2023-12-18 20:31:45,Political State Sector
+2417803,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,210,3,1.0,2007,"5.4,5.4,5.5",2007,"5.6,5.6,5.7",2023-12-15 12:31:22,Social Sector
+5192977,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,210,3,1.0,2007,"6.9,6.9,6.6",2007,"1.4,1.4,1.3",2023-12-18 20:31:45,Political State Sector
+2418012,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,122,3,1.0,2007,"5.4,5.4,5.5",2013,"7.0,7.0,7.3",2023-12-15 12:31:37,Social Sector
+2742766,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,122,3,1.0,2007,"5.0,5.0,4.5",2013,"4.7,4.7,4.4",2023-12-16 04:39:45,Social Sector
+2417895,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,91,3,1.0,2007,"5.4,5.4,5.5",2014,"9.6,9.6,9.9",2023-12-15 12:31:29,Social Sector
+5193091,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,91,3,1.0,2007,"6.9,6.9,6.6",2014,"9.9,9.9,9.8",2023-12-18 20:31:52,Political State Sector
+2418007,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,132,3,1.0,2007,"5.4,5.4,5.5",2009,"7.4,7.4,7.6",2023-12-15 12:31:36,Social Sector
+2742753,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,132,3,1.0,2007,"5.0,5.0,4.5",2009,"5.2,5.2,4.9",2023-12-16 04:39:44,Social Sector
+2417935,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,169,3,1.0,2007,"5.4,5.4,5.5",2008,"8.0,8.0,8.2",2023-12-15 12:31:33,Social Sector
+5193140,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,169,3,1.0,2007,"6.9,6.9,6.6",2008,"7.5,7.5,7.3",2023-12-18 20:31:56,Political State Sector
+3059088,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,82,3,1.0,2010,"6.4,6.7,7.0",2009,"5.5,5.8,6.1",2023-12-16 10:39:33,Finance Economy Sector
+6492096,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,82,3,1.0,2010,"7.0,7.1,6.8",2009,"7.0,7.1,6.8",2023-12-19 23:41:46,Social Sector
+2417714,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,233,3,1.0,2007,"5.4,5.4,5.5",2009,"7.9,7.9,8.0",2023-12-15 12:31:16,Social Sector
+2742419,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,233,3,1.0,2007,"5.0,5.0,4.5",2009,"6.9,6.9,6.5",2023-12-16 04:39:24,Social Sector
+2742355,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,212,3,1.0,2007,"5.0,5.0,4.5",2007,"10.0,10.0,9.9",2023-12-16 04:39:20,Social Sector
+5192782,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,212,3,1.0,2007,"6.9,6.9,6.6",2007,"10.0,10.0,9.8",2023-12-18 20:31:34,Political State Sector
+2417818,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,236,3,1.0,2007,"5.4,5.4,5.5",2014,"4.0,4.0,4.3",2023-12-15 12:31:24,Social Sector
+5192988,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,236,3,1.0,2007,"6.9,6.9,6.6",2014,"2.4,2.4,2.1",2023-12-18 20:31:46,Political State Sector
+2417791,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,238,3,1.0,2007,"5.4,5.4,5.5",2007,"2.3,2.3,2.5",2023-12-15 12:31:22,Social Sector
+5192958,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,238,3,1.0,2007,"6.9,6.9,6.6",2007,"2.9,2.9,2.8",2023-12-18 20:31:44,Political State Sector
+2742594,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,45,3,1.0,2007,"5.0,5.0,4.5",2006,"8.0,8.0,7.8",2023-12-16 04:39:32,Social Sector
+5193115,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,45,3,1.0,2007,"6.9,6.9,6.6",2006,"8.5,8.5,8.3",2023-12-18 20:31:54,Political State Sector
+3059073,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,31,3,1.0,2010,"6.4,6.7,7.0",2006,"2.7,3.2,3.7",2023-12-16 10:39:32,Finance Economy Sector
+6492086,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,31,3,1.0,2010,"7.0,7.1,6.8",2006,"6.5,6.6,6.3",2023-12-19 23:41:45,Social Sector
+6007224,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,68,3,1.0,2010,"2.8,2.5,2.8",2021,"8.2,7.9,8.2",2023-12-19 13:50:31,Human Rights Development
+6492393,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,68,3,1.0,2010,"7.0,7.1,6.8",2021,"8.9,9.0,8.7",2023-12-19 23:42:06,Social Sector
+3059519,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,49,3,1.0,2010,"6.4,6.7,7.0",2011,"7.6,7.9,8.2",2023-12-16 10:39:56,Finance Economy Sector
+6007218,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,49,3,1.0,2010,"2.8,2.5,2.8",2011,"6.6,6.3,6.6",2023-12-19 13:50:31,Human Rights Development
+2742704,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,86,3,1.0,2007,"5.0,5.0,4.5",2013,"3.9,3.9,3.8",2023-12-16 04:39:41,Social Sector
+5193227,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,86,3,1.0,2007,"6.9,6.9,6.6",2013,"6.2,6.2,5.9",2023-12-18 20:32:02,Political State Sector
+6007129,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,114,3,1.0,2010,"2.8,2.5,2.8",2021,"6.3,6.2,6.3",2023-12-19 13:50:25,Human Rights Development
+6492231,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,114,3,1.0,2010,"7.0,7.1,6.8",2021,"8.3,8.4,8.1",2023-12-19 23:41:55,Social Sector
+2417983,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,192,3,1.0,2007,"5.4,5.4,5.5",2007,"5.4,5.4,5.5",2023-12-15 12:31:35,Social Sector
+5193217,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,192,3,1.0,2007,"6.9,6.9,6.6",2007,"6.7,6.7,6.6",2023-12-18 20:32:01,Political State Sector
+2417802,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,81,3,1.0,2007,"5.4,5.4,5.5",2016,"2.3,2.3,2.6",2023-12-15 12:31:22,Social Sector
+5192974,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,81,3,1.0,2007,"6.9,6.9,6.6",2016,"1.0,1.0,0.7",2023-12-18 20:31:45,Political State Sector
+3059456,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,20,3,1.0,2010,"6.4,6.7,7.0",2014,"6.0,6.1,6.2",2023-12-16 10:39:52,Finance Economy Sector
+6492341,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,20,3,1.0,2010,"7.0,7.1,6.8",2014,"5.5,5.6,5.3",2023-12-19 23:42:02,Social Sector
+3059322,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,195,3,1.0,2010,"6.4,6.7,7.0",2008,"2.3,2.7,3.1",2023-12-16 10:39:45,Finance Economy Sector
+6007137,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,195,3,1.0,2010,"2.8,2.5,2.8",2008,"9.1,8.9,9.1",2023-12-19 13:50:26,Human Rights Development
+2742582,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,162,3,1.0,2007,"5.0,5.0,4.5",2018,"5.8,5.8,5.5",2023-12-16 04:39:32,Social Sector
+5193098,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,162,3,1.0,2007,"6.9,6.9,6.6",2018,"10.0,10.0,9.911297845249694",2023-12-18 20:31:53,Political State Sector
+2742396,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,56,3,1.0,2007,"5.0,5.0,4.5",2007,"8.3,8.3,7.5",2023-12-16 04:39:22,Social Sector
+5192834,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,56,3,1.0,2007,"6.9,6.9,6.6",2007,"5.5,5.5,5.4",2023-12-18 20:31:37,Political State Sector
+2742746,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,194,3,1.0,2007,"5.0,5.0,4.5",2013,"4.8,4.8,4.5",2023-12-16 04:39:44,Social Sector
+5193277,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,194,3,1.0,2007,"6.9,6.9,6.6",2013,"6.6,6.6,6.1",2023-12-18 20:32:05,Political State Sector
 2742599,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,142,3,0.99914,2007,"5.0,5.0,4.5",2017,"7.3,7.314764946694693,7.0",2023-12-16 04:39:33,Social Sector
 5193120,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,142,3,1.0,2007,"6.9,6.9,6.6",2017,"6.6,6.6,6.3",2023-12-18 20:31:54,Political State Sector
 3059499,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,234,3,0.99902,2010,"6.4,6.7,7.0",2008,"2.6,3.2,3.9",2023-12-16 10:39:55,Finance Economy Sector
@@ -4955,14 +4948,14 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 6492153,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,44,3,1.0,2010,"7.0,7.1,6.8",2017,"4.9,5.0,4.7",2023-12-19 23:41:50,Social Sector
 2742520,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,130,3,1.0,2007,"5.0,5.0,4.5",2013,"5.7,5.7,5.4",2023-12-16 04:39:29,Social Sector
 5193035,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,130,3,0.99124,2007,"6.9,6.9,6.6",2013,"7.5,7.6,6.9",2023-12-18 20:31:49,Political State Sector
-3059479,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,192,3,0.98974,2010,"6.4,6.7,7.0",2012,"5.4,5.9,6.2",2023-12-16 10:39:54,Finance Economy Sector
-6492358,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,192,3,1.0,2010,"7.0,7.1,6.8",2012,"6.7,6.8,6.5",2023-12-19 23:42:04,Social Sector
-3059474,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,22,3,0.98974,2010,"6.4,6.7,7.0",2014,"5.6,5.9,6.4",2023-12-16 10:39:53,Finance Economy Sector
-6007200,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,22,3,1.0,2010,"2.8,2.5,2.8",2014,"4.4,4.1,4.4",2023-12-19 13:50:30,Human Rights Development
-3059058,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,196,3,0.98974,2010,"6.4,6.7,7.0",2006,"5.2,5.7,6.0",2023-12-16 10:39:31,Finance Economy Sector
-6007026,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,196,3,1.0,2010,"2.8,2.5,2.8",2006,"6.0,5.6,6.0",2023-12-19 13:50:19,Human Rights Development
 3059431,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,102,3,0.98974,2010,"6.4,6.7,7.0",2018,"6.4,6.9,7.2",2023-12-16 10:39:51,Finance Economy Sector
 6007173,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,102,3,1.0,2010,"2.8,2.5,2.8",2018,"9.2,8.9,9.2",2023-12-19 13:50:28,Human Rights Development
+3059058,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,196,3,0.98974,2010,"6.4,6.7,7.0",2006,"5.2,5.7,6.0",2023-12-16 10:39:31,Finance Economy Sector
+6007026,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,196,3,1.0,2010,"2.8,2.5,2.8",2006,"6.0,5.6,6.0",2023-12-19 13:50:19,Human Rights Development
+3059474,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,22,3,0.98974,2010,"6.4,6.7,7.0",2014,"5.6,5.9,6.4",2023-12-16 10:39:53,Finance Economy Sector
+6007200,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,22,3,1.0,2010,"2.8,2.5,2.8",2014,"4.4,4.1,4.4",2023-12-19 13:50:30,Human Rights Development
+3059479,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,192,3,0.98974,2010,"6.4,6.7,7.0",2012,"5.4,5.9,6.2",2023-12-16 10:39:54,Finance Economy Sector
+6492358,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,192,3,1.0,2010,"7.0,7.1,6.8",2012,"6.7,6.8,6.5",2023-12-19 23:42:04,Social Sector
 3059205,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,235,3,0.98974,2010,"6.4,6.7,7.0",2018,"3.6,3.9,4.4",2023-12-16 10:39:38,Finance Economy Sector
 6007081,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,235,3,0.99882,2010,"2.8,2.5,2.8",2018,"1.7836200764450427,1.5,1.8",2023-12-19 13:50:22,Human Rights Development
 2742413,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,228,3,0.99227,2007,"5.0,5.0,4.5",2019,"10.0,9.959586720458177,9.7",2023-12-16 04:39:23,Social Sector
@@ -4971,28 +4964,28 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 5193158,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,197,3,0.98783,2007,"6.9,6.9,6.6",2008,"7.4,7.3,6.8",2023-12-18 20:31:57,Political State Sector
 3059126,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,228,3,0.9954,2010,"6.4,6.7,7.0",2008,"4.6,5.3,5.8",2023-12-16 10:39:35,Finance Economy Sector
 6492121,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,228,3,0.98974,2010,"7.0,7.1,6.8",2008,"6.7,6.8,6.3",2023-12-19 23:41:48,Social Sector
-3059214,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,52,3,1.0,2010,"6.4,6.7,7.0",2008,"4.6,5.0,5.4",2023-12-16 10:39:39,Finance Economy Sector
-6492174,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,52,3,0.98198,2010,"7.0,7.1,6.8",2008,"5.6,5.7,5.5",2023-12-19 23:41:51,Social Sector
-2742602,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,80,3,0.98198,2007,"5.0,5.0,4.5",2009,"8.5,8.4,8.0",2023-12-16 04:39:33,Social Sector
-5193123,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,80,3,1.0,2007,"6.9,6.9,6.6",2009,"9.0,9.0,8.4",2023-12-18 20:31:54,Political State Sector
-2417838,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,152,3,1.0,2007,"5.4,5.4,5.5",2012,"8.2,8.2,8.3",2023-12-15 12:31:25,Social Sector
-5193025,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,152,3,0.98198,2007,"6.9,6.9,6.6",2012,"8.0,8.1,7.6",2023-12-18 20:31:48,Political State Sector
-3059343,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,167,3,0.98198,2010,"6.4,6.7,7.0",2011,"6.6,7.2,7.5",2023-12-16 10:39:46,Finance Economy Sector
-6007148,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,167,3,1.0,2010,"2.8,2.5,2.8",2011,"8.7,8.6,8.7",2023-12-19 13:50:26,Human Rights Development
-3059512,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,59,3,0.98198,2010,"6.4,6.7,7.0",2011,"6.0,6.6,6.9",2023-12-16 10:39:56,Finance Economy Sector
-6007215,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,59,3,1.0,2010,"2.8,2.5,2.8",2011,"7.0,6.8,7.0",2023-12-19 13:50:31,Human Rights Development
 3059166,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,14,3,1.0,2010,"6.4,6.7,7.0",2008,"1.9,2.3,2.7",2023-12-16 10:39:37,Finance Economy Sector
 6492147,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,14,3,0.98198,2010,"7.0,7.1,6.8",2008,"2.8,2.9,2.7",2023-12-19 23:41:50,Social Sector
-2742375,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,2,3,1.0,2007,"5.0,5.0,4.5",2008,"5.4,5.4,4.9",2023-12-16 04:39:21,Social Sector
-5192802,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,2,3,0.98198,2007,"6.9,6.9,6.6",2008,"7.2,7.3,6.8",2023-12-18 20:31:35,Political State Sector
-3059162,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,153,3,0.98198,2010,"6.4,6.7,7.0",2010,"3.0,3.2,3.3",2023-12-16 10:39:36,Finance Economy Sector
-6007061,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,153,3,1.0,2010,"2.8,2.5,2.8",2010,"1.3,1.0,1.3",2023-12-19 13:50:21,Human Rights Development
-2742667,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,171,3,1.0,2007,"5.0,5.0,4.5",2011,"6.9,6.9,6.6",2023-12-16 04:39:36,Social Sector
-5193188,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,171,3,0.98198,2007,"6.9,6.9,6.6",2011,"7.5,7.6,7.1",2023-12-18 20:31:59,Political State Sector
-3059306,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,114,3,1.0,2010,"6.4,6.7,7.0",2012,"7.3,7.6,7.9",2023-12-16 10:39:44,Finance Economy Sector
-6492228,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,114,3,0.98198,2010,"7.0,7.1,6.8",2012,"8.9,9.1,8.7",2023-12-19 23:41:55,Social Sector
 2417750,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,44,3,1.0,2007,"5.4,5.4,5.5",2012,"1.4,1.4,1.7",2023-12-15 12:31:19,Social Sector
 5192906,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,44,3,0.98198,2007,"6.9,6.9,6.6",2012,"3.7,3.8,3.3",2023-12-18 20:31:41,Political State Sector
+3059306,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,114,3,1.0,2010,"6.4,6.7,7.0",2012,"7.3,7.6,7.9",2023-12-16 10:39:44,Finance Economy Sector
+6492228,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,114,3,0.98198,2010,"7.0,7.1,6.8",2012,"8.9,9.1,8.7",2023-12-19 23:41:55,Social Sector
+2742667,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,171,3,1.0,2007,"5.0,5.0,4.5",2011,"6.9,6.9,6.6",2023-12-16 04:39:36,Social Sector
+5193188,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,171,3,0.98198,2007,"6.9,6.9,6.6",2011,"7.5,7.6,7.1",2023-12-18 20:31:59,Political State Sector
+3059162,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,153,3,0.98198,2010,"6.4,6.7,7.0",2010,"3.0,3.2,3.3",2023-12-16 10:39:36,Finance Economy Sector
+6007061,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,153,3,1.0,2010,"2.8,2.5,2.8",2010,"1.3,1.0,1.3",2023-12-19 13:50:21,Human Rights Development
+2742375,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,2,3,1.0,2007,"5.0,5.0,4.5",2008,"5.4,5.4,4.9",2023-12-16 04:39:21,Social Sector
+5192802,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,2,3,0.98198,2007,"6.9,6.9,6.6",2008,"7.2,7.3,6.8",2023-12-18 20:31:35,Political State Sector
+3059214,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,52,3,1.0,2010,"6.4,6.7,7.0",2008,"4.6,5.0,5.4",2023-12-16 10:39:39,Finance Economy Sector
+6492174,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,52,3,0.98198,2010,"7.0,7.1,6.8",2008,"5.6,5.7,5.5",2023-12-19 23:41:51,Social Sector
+3059512,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,59,3,0.98198,2010,"6.4,6.7,7.0",2011,"6.0,6.6,6.9",2023-12-16 10:39:56,Finance Economy Sector
+6007215,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,59,3,1.0,2010,"2.8,2.5,2.8",2011,"7.0,6.8,7.0",2023-12-19 13:50:31,Human Rights Development
+3059343,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,167,3,0.98198,2010,"6.4,6.7,7.0",2011,"6.6,7.2,7.5",2023-12-16 10:39:46,Finance Economy Sector
+6007148,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,167,3,1.0,2010,"2.8,2.5,2.8",2011,"8.7,8.6,8.7",2023-12-19 13:50:26,Human Rights Development
+2417838,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,152,3,1.0,2007,"5.4,5.4,5.5",2012,"8.2,8.2,8.3",2023-12-15 12:31:25,Social Sector
+5193025,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,152,3,0.98198,2007,"6.9,6.9,6.6",2012,"8.0,8.1,7.6",2023-12-18 20:31:48,Political State Sector
+2742602,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,80,3,0.98198,2007,"5.0,5.0,4.5",2009,"8.5,8.4,8.0",2023-12-16 04:39:33,Social Sector
+5193123,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,80,3,1.0,2007,"6.9,6.9,6.6",2009,"9.0,9.0,8.4",2023-12-18 20:31:54,Political State Sector
 3059378,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,80,3,0.99863,2010,"6.4,6.7,7.0",2008,"5.4,6.0,6.5",2023-12-16 10:39:48,Finance Economy Sector
 6492282,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,80,3,0.98198,2010,"7.0,7.1,6.8",2008,"6.3,6.4,6.2",2023-12-19 23:41:59,Social Sector
 3059501,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,134,3,0.99662,2010,"6.4,6.7,7.0",2008,"3.5,3.9,4.2",2023-12-16 10:39:55,Finance Economy Sector
@@ -5007,26 +5000,26 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 6492290,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,121,3,0.98198,2010,"7.0,7.1,6.8",2015,"5.7,5.8,5.6",2023-12-19 23:41:59,Social Sector
 3059296,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,48,3,0.98974,2010,"6.4,6.7,7.0",2008,"3.8,4.3,4.6",2023-12-16 10:39:43,Finance Economy Sector
 6492218,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,48,3,0.98198,2010,"7.0,7.1,6.8",2008,"6.8,6.9,6.7",2023-12-19 23:41:55,Social Sector
-2742462,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,215,3,0.97073,2007,"5.0,5.0,4.5",2018,"1.8,1.7,1.4",2023-12-16 04:39:26,Social Sector
-5192929,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,215,3,1.0,2007,"6.9,6.9,6.6",2018,"0.8,0.8,0.5",2023-12-18 20:31:42,Political State Sector
-2742718,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,127,3,0.97073,2007,"5.0,5.0,4.5",2018,"2.8000000000000003,2.7,2.4000000000000004",2023-12-16 04:39:42,Social Sector
-5193248,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,127,3,1.0,2007,"6.9,6.9,6.6",2018,"0.7,0.7,0.5",2023-12-18 20:32:03,Political State Sector
-2742455,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,156,3,0.97073,2007,"5.0,5.0,4.5",2018,"3.3000000000000003,3.2,2.9000000000000004",2023-12-16 04:39:26,Social Sector
-5192914,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,156,3,1.0,2007,"6.9,6.9,6.6",2018,"0.6000000000000001,0.6,0.5",2023-12-18 20:31:41,Political State Sector
-2742720,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,99,3,0.97073,2007,"5.0,5.0,4.5",2018,"1.1,1.0,0.7",2023-12-16 04:39:42,Social Sector
-5193252,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,99,3,1.0,2007,"6.9,6.9,6.6",2018,"1.0,1.0,0.7",2023-12-18 20:32:04,Political State Sector
-3059295,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,152,3,0.97073,2010,"6.4,6.7,7.0",2015,"6.8,7.0,7.5",2023-12-16 10:39:43,Finance Economy Sector
-6007118,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,152,3,1.0,2010,"2.8,2.5,2.8",2015,"7.7,7.4,7.7",2023-12-19 13:50:25,Human Rights Development
 2417805,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,210,3,1.0,2007,"5.4,5.4,5.5",2014,"6.1,6.1,6.3",2023-12-15 12:31:23,Social Sector
 5192978,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,210,3,0.97073,2007,"6.9,6.9,6.6",2014,"3.4,3.3,3.0",2023-12-18 20:31:45,Political State Sector
+2742447,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,58,3,0.97073,2007,"5.0,5.0,4.5",2018,"4.4,4.3,4.0",2023-12-16 04:39:25,Social Sector
+5192902,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,58,3,1.0,2007,"6.9,6.9,6.6",2018,"0.9,0.9,0.6000000000000001",2023-12-18 20:31:41,Political State Sector
+3059051,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,29,3,0.97073,2010,"6.4,6.7,7.0",2009,"5.6,6.1,6.3",2023-12-16 10:39:31,Finance Economy Sector
+6007019,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,29,3,1.0,2010,"2.8,2.5,2.8",2009,"5.0,4.8,5.0",2023-12-19 13:50:18,Human Rights Development
 2417995,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,134,3,0.97073,2007,"5.4,5.4,5.5",2008,"1.6,1.7,2.0",2023-12-15 12:31:36,Social Sector
 5193259,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,134,3,1.0,2007,"6.9,6.9,6.6",2008,"4.3,4.3,4.1",2023-12-18 20:32:04,Political State Sector
 2742458,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,104,3,0.97073,2007,"5.0,5.0,4.5",2018,"1.1,1.0,0.7",2023-12-16 04:39:26,Social Sector
 5192921,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,104,3,1.0,2007,"6.9,6.9,6.6",2018,"0.7,0.7,0.4501988618136809",2023-12-18 20:31:42,Political State Sector
-3059051,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,29,3,0.97073,2010,"6.4,6.7,7.0",2009,"5.6,6.1,6.3",2023-12-16 10:39:31,Finance Economy Sector
-6007019,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,29,3,1.0,2010,"2.8,2.5,2.8",2009,"5.0,4.8,5.0",2023-12-19 13:50:18,Human Rights Development
-2742447,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,58,3,0.97073,2007,"5.0,5.0,4.5",2018,"4.4,4.3,4.0",2023-12-16 04:39:25,Social Sector
-5192902,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,58,3,1.0,2007,"6.9,6.9,6.6",2018,"0.9,0.9,0.6000000000000001",2023-12-18 20:31:41,Political State Sector
+3059295,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,152,3,0.97073,2010,"6.4,6.7,7.0",2015,"6.8,7.0,7.5",2023-12-16 10:39:43,Finance Economy Sector
+6007118,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,152,3,1.0,2010,"2.8,2.5,2.8",2015,"7.7,7.4,7.7",2023-12-19 13:50:25,Human Rights Development
+2742720,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,99,3,0.97073,2007,"5.0,5.0,4.5",2018,"1.1,1.0,0.7",2023-12-16 04:39:42,Social Sector
+5193252,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,99,3,1.0,2007,"6.9,6.9,6.6",2018,"1.0,1.0,0.7",2023-12-18 20:32:04,Political State Sector
+2742462,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,215,3,0.97073,2007,"5.0,5.0,4.5",2018,"1.8,1.7,1.4",2023-12-16 04:39:26,Social Sector
+5192929,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,215,3,1.0,2007,"6.9,6.9,6.6",2018,"0.8,0.8,0.5",2023-12-18 20:31:42,Political State Sector
+2742455,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,156,3,0.97073,2007,"5.0,5.0,4.5",2018,"3.3000000000000003,3.2,2.9000000000000004",2023-12-16 04:39:26,Social Sector
+5192914,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,156,3,1.0,2007,"6.9,6.9,6.6",2018,"0.6000000000000001,0.6,0.5",2023-12-18 20:31:41,Political State Sector
+2742718,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,127,3,0.97073,2007,"5.0,5.0,4.5",2018,"2.8000000000000003,2.7,2.4000000000000004",2023-12-16 04:39:42,Social Sector
+5193248,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,127,3,1.0,2007,"6.9,6.9,6.6",2018,"0.7,0.7,0.5",2023-12-18 20:32:03,Political State Sector
 2742495,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,3,3,0.96458,2007,"5.0,5.0,4.5",2015,"8.2,7.9,7.1",2023-12-16 04:39:28,Social Sector
 5193001,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,3,3,1.0,2007,"6.9,6.9,6.6",2015,"7.8,7.8,6.9",2023-12-18 20:31:47,Political State Sector
 3059111,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,147,3,0.96077,2010,"6.4,6.7,7.0",2017,"4.8,5.1,5.2",2023-12-16 10:39:34,Finance Economy Sector
@@ -5043,56 +5036,14 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 6492287,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,242,3,0.95382,2010,"7.0,7.1,6.8",2008,"6.5,6.8,6.3",2023-12-19 23:41:59,Social Sector
 3059155,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,206,3,0.9473,2010,"6.4,6.7,7.0",2019,"7.3,7.507130193326294,8.3",2023-12-16 10:39:36,Finance Economy Sector
 6007057,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,206,3,1.0,2010,"2.8,2.5,2.8",2019,"4.2,3.9,4.2",2023-12-19 13:50:21,Human Rights Development
-2417830,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,232,3,1.0,2007,"5.4,5.4,5.5",2017,"8.6,8.6,8.9",2023-12-15 12:31:24,Social Sector
-2742498,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,232,3,0.94491,2007,"5.0,5.0,4.5",2017,"8.5,8.6,8.3",2023-12-16 04:39:28,Social Sector
-6007214,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,204,3,1.0,2010,"2.8,2.5,2.8",2021,"4.0,3.9,4.0",2023-12-19 13:50:31,Human Rights Development
-6492381,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,204,3,0.94491,2010,"7.0,7.1,6.8",2021,"7.4,7.4,7.1",2023-12-19 23:42:05,Social Sector
-3059150,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,206,3,1.0,2010,"6.4,6.7,7.0",2010,"5.0,5.3,5.6",2023-12-16 10:39:36,Finance Economy Sector
-6492140,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,206,3,0.94491,2010,"7.0,7.1,6.8",2010,"8.4,8.4,8.1",2023-12-19 23:41:49,Social Sector
-2417705,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,79,3,1.0,2007,"5.4,5.4,5.5",2009,"6.2,6.2,6.8",2023-12-15 12:31:15,Social Sector
-2742414,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,79,3,0.94491,2007,"5.0,5.0,4.5",2009,"4.4,4.6,4.0",2023-12-16 04:39:23,Social Sector
-6007047,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,140,3,1.0,2010,"2.8,2.5,2.8",2015,"6.5,6.2,6.5",2023-12-19 13:50:20,Human Rights Development
-6492128,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,140,3,0.94491,2010,"7.0,7.1,6.8",2015,"6.2,6.2,6.1",2023-12-19 23:41:48,Social Sector
-2742672,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,89,3,1.0,2007,"5.0,5.0,4.5",2006,"7.1,7.1,6.9",2023-12-16 04:39:37,Social Sector
-5193193,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,89,3,0.94491,2007,"6.9,6.9,6.6",2006,"7.5,7.4,7.2",2023-12-18 20:31:59,Political State Sector
-2417778,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,52,3,1.0,2007,"5.4,5.4,5.5",2009,"3.2,3.2,3.5",2023-12-15 12:31:21,Social Sector
-5192946,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,52,3,0.94491,2007,"6.9,6.9,6.6",2009,"4.1,3.9,3.5",2023-12-18 20:31:43,Political State Sector
-6007181,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,229,3,0.94491,2010,"2.8,2.5,2.8",2013,"8.7,8.5,8.8",2023-12-19 13:50:29,Human Rights Development
-6492325,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,229,3,1.0,2010,"7.0,7.1,6.8",2013,"5.9,6.0,5.7",2023-12-19 23:42:01,Social Sector
-3059469,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,19,3,1.0,2010,"6.4,6.7,7.0",2008,"5.0,5.2,5.4",2023-12-16 10:39:53,Finance Economy Sector
-6492350,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,19,3,0.94491,2010,"7.0,7.1,6.8",2008,"4.1,4.1,4.0",2023-12-19 23:42:03,Social Sector
-2417728,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,23,3,1.0,2007,"5.4,5.4,5.5",2014,"6.1,6.1,7.0",2023-12-15 12:31:17,Social Sector
-5192877,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,23,3,0.94491,2007,"6.9,6.9,6.6",2014,"6.1,6.2,5.9",2023-12-18 20:31:39,Political State Sector
-2417701,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,228,3,0.94491,2007,"5.4,5.4,5.5",2006,"6.9,7.1,7.5",2023-12-15 12:31:15,Social Sector
-5192858,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,228,3,1.0,2007,"6.9,6.9,6.6",2006,"6.1,6.1,6.0",2023-12-18 20:31:38,Political State Sector
-6007216,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,59,3,1.0,2010,"2.8,2.5,2.8",2020,"7.4,7.2,7.4",2023-12-19 13:50:31,Human Rights Development
-6492384,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,59,3,0.94491,2010,"7.0,7.1,6.8",2020,"7.5,7.5,7.2",2023-12-19 23:42:05,Social Sector
-3059175,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,40,3,1.0,2010,"6.4,6.7,7.0",2008,"1.5,2.0,2.5",2023-12-16 10:39:37,Finance Economy Sector
-6492154,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,40,3,0.94491,2010,"7.0,7.1,6.8",2008,"3.3,3.3,3.2",2023-12-19 23:41:50,Social Sector
-3059164,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,153,3,1.0,2010,"6.4,6.7,7.0",2012,"3.3,3.5,3.7",2023-12-16 10:39:36,Finance Economy Sector
-6007062,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,153,3,0.94491,2010,"2.8,2.5,2.8",2012,"1.3,1.0,1.2",2023-12-19 13:50:21,Human Rights Development
-3059156,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,202,3,1.0,2010,"6.4,6.7,7.0",2008,"4.2,4.6,5.0",2023-12-16 10:39:36,Finance Economy Sector
-6492141,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,202,3,0.94491,2010,"7.0,7.1,6.8",2008,"4.3,4.3,4.1",2023-12-19 23:41:49,Social Sector
-3059513,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,59,3,1.0,2010,"6.4,6.7,7.0",2012,"6.6,6.9,7.2",2023-12-16 10:39:56,Finance Economy Sector
-6492383,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,59,3,0.94491,2010,"7.0,7.1,6.8",2012,"8.3,8.3,8.1",2023-12-19 23:42:05,Social Sector
-2417840,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,130,3,0.94491,2007,"5.4,5.4,5.5",2007,"7.5,7.6,7.8",2023-12-15 12:31:25,Social Sector
-2742518,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,130,3,1.0,2007,"5.0,5.0,4.5",2007,"6.0,6.0,5.9",2023-12-16 04:39:29,Social Sector
-2742663,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,61,3,0.94491,2007,"5.0,5.0,4.5",2008,"6.1,6.0,5.8",2023-12-16 04:39:36,Social Sector
-5193184,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,61,3,1.0,2007,"6.9,6.9,6.6",2008,"5.8,5.8,5.6",2023-12-18 20:31:59,Political State Sector
-3059067,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,227,3,1.0,2010,"6.4,6.7,7.0",2014,"6.3,6.6,6.9",2023-12-16 10:39:32,Finance Economy Sector
-6492083,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,227,3,0.94491,2010,"7.0,7.1,6.8",2014,"4.7,4.7,4.4",2023-12-19 23:41:45,Social Sector
-2742398,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,56,3,1.0,2007,"5.0,5.0,4.5",2013,"7.3,7.3,7.0",2023-12-16 04:39:23,Social Sector
-5192836,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,56,3,0.94491,2007,"6.9,6.9,6.6",2013,"5.5,5.6,5.3",2023-12-18 20:31:37,Political State Sector
-2742356,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,212,3,1.0,2007,"5.0,5.0,4.5",2012,"10.0,10.0,9.9",2023-12-16 04:39:20,Social Sector
-5192784,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,212,3,0.94491,2007,"6.9,6.9,6.6",2012,"9.5,9.6,9.3",2023-12-18 20:31:34,Political State Sector
-2742478,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,98,3,1.0,2007,"5.0,5.0,4.5",2021,"3.6,3.6,3.3",2023-12-16 04:39:27,Social Sector
-5192952,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,98,3,0.94491,2007,"6.9,6.9,6.6",2021,"6.4,6.5,6.2",2023-12-18 20:31:44,Political State Sector
 3059094,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,181,3,1.0,2010,"6.4,6.7,7.0",2010,"5.6,5.8,6.0",2023-12-16 10:39:33,Finance Economy Sector
 6007036,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,181,3,0.94491,2010,"2.8,2.5,2.8",2010,"4.3,4.0,4.2",2023-12-19 13:50:19,Human Rights Development
 2742568,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,167,3,1.0,2007,"5.0,5.0,4.5",2014,"10.0,10.0,9.7",2023-12-16 04:39:31,Social Sector
 5193083,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,167,3,0.94491,2007,"6.9,6.9,6.6",2014,"8.5,8.6,8.3",2023-12-18 20:31:52,Political State Sector
 3059336,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,205,3,1.0,2010,"6.4,6.7,7.0",2008,"9.4,9.5,9.6",2023-12-16 10:39:45,Finance Economy Sector
 6492251,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,205,3,0.94491,2010,"7.0,7.1,6.8",2008,"9.8,9.8,9.6",2023-12-19 23:41:57,Social Sector
+2417932,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,249,3,0.94491,2007,"5.4,5.4,5.5",2008,"5.5,5.7,6.1",2023-12-15 12:31:32,Social Sector
+5193136,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,249,3,1.0,2007,"6.9,6.9,6.6",2008,"7.8,7.8,7.5",2023-12-18 20:31:55,Political State Sector
 6007012,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,212,3,1.0,2010,"2.8,2.5,2.8",2008,"9.9,9.8,9.9",2023-12-19 13:50:18,Human Rights Development
 6492074,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,212,3,0.94491,2010,"7.0,7.1,6.8",2008,"9.0,9.0,8.8",2023-12-19 23:41:44,Social Sector
 6007202,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,192,3,0.94491,2010,"2.8,2.5,2.8",2010,"4.5,4.2,4.4",2023-12-19 13:50:30,Human Rights Development
@@ -5103,8 +5054,8 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 5193021,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,211,3,0.94491,2007,"6.9,6.9,6.6",2014,"8.3,8.0,7.4",2023-12-18 20:31:48,Political State Sector
 2742506,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,211,3,1.0,2007,"5.0,5.0,4.5",2008,"9.8,9.8,9.6",2023-12-16 04:39:28,Social Sector
 5193018,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,211,3,0.94491,2007,"6.9,6.9,6.6",2008,"9.2,9.0,8.6",2023-12-18 20:31:48,Political State Sector
-2417932,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,249,3,0.94491,2007,"5.4,5.4,5.5",2008,"5.5,5.7,6.1",2023-12-15 12:31:32,Social Sector
-5193136,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,249,3,1.0,2007,"6.9,6.9,6.6",2008,"7.8,7.8,7.5",2023-12-18 20:31:55,Political State Sector
+2417877,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,108,3,1.0,2007,"5.4,5.4,5.5",2009,"8.5,8.5,9.1",2023-12-15 12:31:28,Social Sector
+2742547,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,108,3,0.94491,2007,"5.0,5.0,4.5",2009,"9.0,8.9,8.7",2023-12-16 04:39:30,Social Sector
 3059413,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,6,3,1.0,2010,"6.4,6.7,7.0",2008,"4.0,4.5,5.0",2023-12-16 10:39:50,Finance Economy Sector
 6492301,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,6,3,0.94491,2010,"7.0,7.1,6.8",2008,"8.6,8.6,8.4",2023-12-19 23:42:00,Social Sector
 2742593,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,223,3,1.0,2007,"5.0,5.0,4.5",2013,"4.8,4.8,4.5",2023-12-16 04:39:32,Social Sector
@@ -5117,12 +5068,54 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 5193276,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,194,3,1.0,2007,"6.9,6.9,6.6",2009,"7.3,7.3,6.9",2023-12-18 20:32:05,Political State Sector
 2742707,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,198,3,1.0,2007,"5.0,5.0,4.5",2009,"5.0,5.0,4.8",2023-12-16 04:39:42,Social Sector
 5193230,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,198,3,0.94491,2007,"6.9,6.9,6.6",2009,"7.1,7.0,6.8",2023-12-18 20:32:02,Political State Sector
-2417877,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,108,3,1.0,2007,"5.4,5.4,5.5",2009,"8.5,8.5,9.1",2023-12-15 12:31:28,Social Sector
-2742547,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,108,3,0.94491,2007,"5.0,5.0,4.5",2009,"9.0,8.9,8.7",2023-12-16 04:39:30,Social Sector
 2742682,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,226,3,1.0,2007,"5.0,5.0,4.5",2009,"4.9,4.9,4.7",2023-12-16 04:39:37,Social Sector
 5193202,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,226,3,0.94491,2007,"6.9,6.9,6.6",2009,"6.1,5.9,5.5",2023-12-18 20:32:00,Political State Sector
+2742356,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,212,3,1.0,2007,"5.0,5.0,4.5",2012,"10.0,10.0,9.9",2023-12-16 04:39:20,Social Sector
+5192784,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,212,3,0.94491,2007,"6.9,6.9,6.6",2012,"9.5,9.6,9.3",2023-12-18 20:31:34,Political State Sector
 3059047,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,212,3,1.0,2010,"6.4,6.7,7.0",2021,"9.1,9.2,9.3",2023-12-16 10:39:31,Finance Economy Sector
 6492076,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,212,3,0.94491,2010,"7.0,7.1,6.8",2021,"9.1,9.1,8.8",2023-12-19 23:41:44,Social Sector
+2742478,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,98,3,1.0,2007,"5.0,5.0,4.5",2021,"3.6,3.6,3.3",2023-12-16 04:39:27,Social Sector
+5192952,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,98,3,0.94491,2007,"6.9,6.9,6.6",2021,"6.4,6.5,6.2",2023-12-18 20:31:44,Political State Sector
+6007214,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,204,3,1.0,2010,"2.8,2.5,2.8",2021,"4.0,3.9,4.0",2023-12-19 13:50:31,Human Rights Development
+6492381,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,204,3,0.94491,2010,"7.0,7.1,6.8",2021,"7.4,7.4,7.1",2023-12-19 23:42:05,Social Sector
+2742398,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,56,3,1.0,2007,"5.0,5.0,4.5",2013,"7.3,7.3,7.0",2023-12-16 04:39:23,Social Sector
+5192836,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,56,3,0.94491,2007,"6.9,6.9,6.6",2013,"5.5,5.6,5.3",2023-12-18 20:31:37,Political State Sector
+2417728,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,23,3,1.0,2007,"5.4,5.4,5.5",2014,"6.1,6.1,7.0",2023-12-15 12:31:17,Social Sector
+5192877,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,23,3,0.94491,2007,"6.9,6.9,6.6",2014,"6.1,6.2,5.9",2023-12-18 20:31:39,Political State Sector
+2417830,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,232,3,1.0,2007,"5.4,5.4,5.5",2017,"8.6,8.6,8.9",2023-12-15 12:31:24,Social Sector
+2742498,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,232,3,0.94491,2007,"5.0,5.0,4.5",2017,"8.5,8.6,8.3",2023-12-16 04:39:28,Social Sector
+3059150,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,206,3,1.0,2010,"6.4,6.7,7.0",2010,"5.0,5.3,5.6",2023-12-16 10:39:36,Finance Economy Sector
+6492140,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,206,3,0.94491,2010,"7.0,7.1,6.8",2010,"8.4,8.4,8.1",2023-12-19 23:41:49,Social Sector
+2417705,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,79,3,1.0,2007,"5.4,5.4,5.5",2009,"6.2,6.2,6.8",2023-12-15 12:31:15,Social Sector
+2742414,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,79,3,0.94491,2007,"5.0,5.0,4.5",2009,"4.4,4.6,4.0",2023-12-16 04:39:23,Social Sector
+6007047,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,140,3,1.0,2010,"2.8,2.5,2.8",2015,"6.5,6.2,6.5",2023-12-19 13:50:20,Human Rights Development
+6492128,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,140,3,0.94491,2010,"7.0,7.1,6.8",2015,"6.2,6.2,6.1",2023-12-19 23:41:48,Social Sector
+3059067,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,227,3,1.0,2010,"6.4,6.7,7.0",2014,"6.3,6.6,6.9",2023-12-16 10:39:32,Finance Economy Sector
+6492083,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,227,3,0.94491,2010,"7.0,7.1,6.8",2014,"4.7,4.7,4.4",2023-12-19 23:41:45,Social Sector
+2417778,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,52,3,1.0,2007,"5.4,5.4,5.5",2009,"3.2,3.2,3.5",2023-12-15 12:31:21,Social Sector
+5192946,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,52,3,0.94491,2007,"6.9,6.9,6.6",2009,"4.1,3.9,3.5",2023-12-18 20:31:43,Political State Sector
+6007181,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,229,3,0.94491,2010,"2.8,2.5,2.8",2013,"8.7,8.5,8.8",2023-12-19 13:50:29,Human Rights Development
+6492325,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,229,3,1.0,2010,"7.0,7.1,6.8",2013,"5.9,6.0,5.7",2023-12-19 23:42:01,Social Sector
+3059469,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,19,3,1.0,2010,"6.4,6.7,7.0",2008,"5.0,5.2,5.4",2023-12-16 10:39:53,Finance Economy Sector
+6492350,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,19,3,0.94491,2010,"7.0,7.1,6.8",2008,"4.1,4.1,4.0",2023-12-19 23:42:03,Social Sector
+2742672,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,89,3,1.0,2007,"5.0,5.0,4.5",2006,"7.1,7.1,6.9",2023-12-16 04:39:37,Social Sector
+5193193,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,89,3,0.94491,2007,"6.9,6.9,6.6",2006,"7.5,7.4,7.2",2023-12-18 20:31:59,Political State Sector
+2417701,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,228,3,0.94491,2007,"5.4,5.4,5.5",2006,"6.9,7.1,7.5",2023-12-15 12:31:15,Social Sector
+5192858,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,228,3,1.0,2007,"6.9,6.9,6.6",2006,"6.1,6.1,6.0",2023-12-18 20:31:38,Political State Sector
+3059175,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,40,3,1.0,2010,"6.4,6.7,7.0",2008,"1.5,2.0,2.5",2023-12-16 10:39:37,Finance Economy Sector
+6492154,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,40,3,0.94491,2010,"7.0,7.1,6.8",2008,"3.3,3.3,3.2",2023-12-19 23:41:50,Social Sector
+3059164,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,153,3,1.0,2010,"6.4,6.7,7.0",2012,"3.3,3.5,3.7",2023-12-16 10:39:36,Finance Economy Sector
+6007062,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,153,3,0.94491,2010,"2.8,2.5,2.8",2012,"1.3,1.0,1.2",2023-12-19 13:50:21,Human Rights Development
+3059156,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,202,3,1.0,2010,"6.4,6.7,7.0",2008,"4.2,4.6,5.0",2023-12-16 10:39:36,Finance Economy Sector
+6492141,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,202,3,0.94491,2010,"7.0,7.1,6.8",2008,"4.3,4.3,4.1",2023-12-19 23:41:49,Social Sector
+3059513,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,59,3,1.0,2010,"6.4,6.7,7.0",2012,"6.6,6.9,7.2",2023-12-16 10:39:56,Finance Economy Sector
+6492383,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,59,3,0.94491,2010,"7.0,7.1,6.8",2012,"8.3,8.3,8.1",2023-12-19 23:42:05,Social Sector
+2417840,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,130,3,0.94491,2007,"5.4,5.4,5.5",2007,"7.5,7.6,7.8",2023-12-15 12:31:25,Social Sector
+2742518,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,130,3,1.0,2007,"5.0,5.0,4.5",2007,"6.0,6.0,5.9",2023-12-16 04:39:29,Social Sector
+2742663,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,61,3,0.94491,2007,"5.0,5.0,4.5",2008,"6.1,6.0,5.8",2023-12-16 04:39:36,Social Sector
+5193184,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,61,3,1.0,2007,"6.9,6.9,6.6",2008,"5.8,5.8,5.6",2023-12-18 20:31:59,Political State Sector
+6007216,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,59,3,1.0,2010,"2.8,2.5,2.8",2020,"7.4,7.2,7.4",2023-12-19 13:50:31,Human Rights Development
+6492384,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,59,3,0.94491,2010,"7.0,7.1,6.8",2020,"7.5,7.5,7.2",2023-12-19 23:42:05,Social Sector
 3059481,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,192,3,0.99973,2010,"6.4,6.7,7.0",2020,"6.038755757841343,6.5,7.0",2023-12-16 10:39:54,Finance Economy Sector
 6492359,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,192,3,0.94491,2010,"7.0,7.1,6.8",2020,"5.199999999999999,5.2,4.9",2023-12-19 23:42:04,Social Sector
 3059259,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,236,3,0.99863,2010,"6.4,6.7,7.0",2007,"1.8,2.3,2.9",2023-12-16 10:39:41,Finance Economy Sector
@@ -5147,12 +5140,12 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 6492360,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,93,3,0.94491,2010,"7.0,7.1,6.8",2008,"6.3,6.3,6.1",2023-12-19 23:42:04,Social Sector
 3059304,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,63,3,0.9934,2010,"6.4,6.7,7.0",2014,"7.9,8.1,8.4",2023-12-16 10:39:44,Finance Economy Sector
 6492225,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,63,3,0.94491,2010,"7.0,7.1,6.8",2014,"7.1,7.1,6.8",2023-12-19 23:41:55,Social Sector
+3059050,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,29,3,0.98974,2010,"6.4,6.7,7.0",2008,"5.3,5.6,6.1",2023-12-16 10:39:31,Finance Economy Sector
+6492079,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,29,3,0.94491,2010,"7.0,7.1,6.8",2008,"9.2,9.2,9.0",2023-12-19 23:41:45,Social Sector
 3059202,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,235,3,0.98974,2010,"6.4,6.7,7.0",2009,"2.5,3.0,3.3",2023-12-16 10:39:38,Finance Economy Sector
 6492169,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,235,3,0.94491,2010,"7.0,7.1,6.8",2009,"3.2,3.2,2.9",2023-12-19 23:41:51,Social Sector
 3059457,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,65,3,0.98974,2010,"6.4,6.7,7.0",2008,"3.9,4.4,4.7",2023-12-16 10:39:52,Finance Economy Sector
 6007190,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,65,3,0.94491,2010,"2.8,2.5,2.8",2008,"9.5,9.2,9.4",2023-12-19 13:50:29,Human Rights Development
-3059050,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,29,3,0.98974,2010,"6.4,6.7,7.0",2008,"5.3,5.6,6.1",2023-12-16 10:39:31,Finance Economy Sector
-6492079,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,29,3,0.94491,2010,"7.0,7.1,6.8",2008,"9.2,9.2,9.0",2023-12-19 23:41:45,Social Sector
 3059356,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,42,3,0.93326,2010,"6.4,6.7,7.0",2013,"7.7,7.8,8.3",2023-12-16 10:39:47,Finance Economy Sector
 6492261,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,42,3,1.0,2010,"7.0,7.1,6.8",2013,"8.6,8.7,8.4",2023-12-19 23:41:57,Social Sector
 3059218,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,176,3,0.93326,2010,"6.4,6.7,7.0",2013,"3.5,4.0,4.1",2023-12-16 10:39:39,Finance Economy Sector
@@ -5187,6 +5180,50 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 6492266,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,36,3,1.0,2010,"7.0,7.1,6.8",2017,"9.3,9.4,9.1",2023-12-19 23:41:58,Social Sector
 3059090,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,144,3,0.97435,2010,"6.4,6.7,7.0",2006,"4.5,5.2,5.5",2023-12-16 10:39:33,Finance Economy Sector
 6492102,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,144,3,0.94491,2010,"7.0,7.1,6.8",2006,"6.0,6.0,5.8",2023-12-19 23:41:46,Social Sector
+2417969,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,182,3,1.0,2007,"5.4,5.4,5.5",2012,"8.0,8.0,8.1",2023-12-15 12:31:34,Social Sector
+5193181,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,182,3,0.91766,2007,"6.9,6.9,6.6",2012,"7.9,8.1,7.6",2023-12-18 20:31:59,Political State Sector
+2417855,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,217,3,1.0,2007,"5.4,5.4,5.5",2009,"7.8,7.8,7.9",2023-12-15 12:31:26,Social Sector
+5193047,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,217,3,0.91766,2007,"6.9,6.9,6.6",2009,"8.8,8.6,8.3",2023-12-18 20:31:50,Political State Sector
+2742571,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,1,3,0.91766,2007,"5.0,5.0,4.5",2016,"8.6,8.4,8.1",2023-12-16 04:39:31,Social Sector
+5193087,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,1,3,1.0,2007,"6.9,6.9,6.6",2016,"9.1,9.1,9.073801435523972",2023-12-18 20:31:52,Political State Sector
+2742590,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,199,3,0.91766,2007,"5.0,5.0,4.5",2010,"6.7,6.5,6.2",2023-12-16 04:39:32,Social Sector
+5193108,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,199,3,1.0,2007,"6.9,6.9,6.6",2010,"7.7,7.7,7.6",2023-12-18 20:31:53,Political State Sector
+2742758,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,37,3,1.0,2007,"5.0,5.0,4.5",2009,"4.4,4.4,4.2",2023-12-16 04:39:45,Social Sector
+5193283,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,37,3,0.91766,2007,"6.9,6.9,6.6",2009,"7.4,7.2,6.9",2023-12-18 20:32:06,Political State Sector
+2417918,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,142,3,0.91766,2007,"5.4,5.4,5.5",2007,"7.5,7.7,8.0",2023-12-15 12:31:31,Social Sector
+2742597,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,142,3,1.0,2007,"5.0,5.0,4.5",2007,"7.3,7.3,7.1",2023-12-16 04:39:33,Social Sector
+2742680,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,9,3,1.0,2007,"5.0,5.0,4.5",2016,"3.9,3.9,3.6",2023-12-16 04:39:37,Social Sector
+5193200,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,9,3,0.91766,2007,"6.9,6.9,6.6",2016,"5.6,5.4,5.1000000000000005",2023-12-18 20:32:00,Political State Sector
+2417741,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,153,3,1.0,2007,"5.4,5.4,5.5",2016,"3.1,3.1,3.4",2023-12-15 12:31:18,Social Sector
+5192892,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,153,3,0.91766,2007,"6.9,6.9,6.6",2016,"1.5,1.3,1.0",2023-12-18 20:31:40,Political State Sector
+2417656,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,2,3,1.0,2007,"5.4,5.4,5.5",2016,"6.2,6.2,6.5",2023-12-15 12:31:12,Social Sector
+2742377,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,2,3,0.91766,2007,"5.0,5.0,4.5",2016,"4.7,4.5,4.2",2023-12-16 04:39:21,Social Sector
+2742363,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,109,3,1.0,2007,"5.0,5.0,4.5",2009,"4.5,4.5,4.3",2023-12-16 04:39:21,Social Sector
+5192791,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,109,3,0.91766,2007,"6.9,6.9,6.6",2009,"7.0,6.8,6.5",2023-12-18 20:31:34,Political State Sector
+2417719,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,113,3,1.0,2007,"5.4,5.4,5.5",2009,"7.6,7.6,7.7",2023-12-15 12:31:16,Social Sector
+5192873,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,113,3,0.91766,2007,"6.9,6.9,6.6",2009,"7.7,7.5,7.2",2023-12-18 20:31:39,Political State Sector
+2417957,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,137,3,1.0,2007,"5.4,5.4,5.5",2010,"7.9,7.9,8.1",2023-12-15 12:31:34,Social Sector
+2742641,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,137,3,0.91766,2007,"5.0,5.0,4.5",2010,"8.0,7.8,7.5",2023-12-16 04:39:35,Social Sector
+2417761,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,73,3,1.0,2007,"5.4,5.4,5.5",2016,"1.1,1.1,1.4",2023-12-15 12:31:19,Social Sector
+2742460,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,73,3,0.91766,2007,"5.0,5.0,4.5",2016,"2.0,1.8,1.5",2023-12-16 04:39:26,Social Sector
+2742697,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,213,3,1.0,2007,"5.0,5.0,4.5",2016,"5.8,5.8,5.5",2023-12-16 04:39:39,Social Sector
+5193216,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,213,3,0.91766,2007,"6.9,6.9,6.6",2016,"5.2,5.0,4.7",2023-12-18 20:32:01,Political State Sector
+2742605,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,15,3,1.0,2007,"5.0,5.0,4.5",2009,"7.9,7.9,7.5",2023-12-16 04:39:33,Social Sector
+5193127,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,15,3,0.91766,2007,"6.9,6.9,6.6",2009,"8.2,8.0,7.7",2023-12-18 20:31:55,Political State Sector
+2742721,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,179,3,1.0,2007,"5.0,5.0,4.5",2009,"5.2,5.2,4.9",2023-12-16 04:39:42,Social Sector
+5193254,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,179,3,0.91766,2007,"6.9,6.9,6.6",2009,"6.5,6.3,6.0",2023-12-18 20:32:04,Political State Sector
+2742747,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,194,3,1.0,2007,"5.0,5.0,4.5",2016,"4.5,4.5,4.2",2023-12-16 04:39:44,Social Sector
+5193278,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,194,3,0.91766,2007,"6.9,6.9,6.6",2016,"5.8,5.6,5.3",2023-12-18 20:32:05,Political State Sector
+2417675,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,181,3,1.0,2007,"5.4,5.4,5.5",2016,"5.4,5.4,5.7",2023-12-15 12:31:13,Social Sector
+2742393,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,181,3,0.91766,2007,"5.0,5.0,4.5",2016,"7.0,6.8,6.5",2023-12-16 04:39:22,Social Sector
+2742760,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,37,3,1.0,2007,"5.0,5.0,4.5",2016,"4.1,4.1,3.8",2023-12-16 04:39:45,Social Sector
+5193284,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,37,3,0.91766,2007,"6.9,6.9,6.6",2016,"5.5,5.3,5.0",2023-12-18 20:32:06,Political State Sector
+2417946,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,220,3,1.0,2007,"5.4,5.4,5.5",2014,"5.7,5.7,6.0",2023-12-15 12:31:33,Social Sector
+2742626,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,220,3,0.91766,2007,"5.0,5.0,4.5",2014,"5.9,5.7,5.4",2023-12-16 04:39:34,Social Sector
+2417973,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,38,3,1.0,2007,"5.4,5.4,5.5",2016,"8.3,8.3,8.632000000000001",2023-12-15 12:31:35,Social Sector
+2742660,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,38,3,0.91766,2007,"5.0,5.0,4.5",2016,"7.1,6.9,6.6000000000000005",2023-12-16 04:39:36,Social Sector
+2742452,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,40,3,0.91766,2007,"5.0,5.0,4.5",2016,"3.6,3.4,3.1",2023-12-16 04:39:25,Social Sector
+5192909,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,40,3,1.0,2007,"6.9,6.9,6.6",2016,"1.0,1.0,0.7",2023-12-18 20:31:41,Political State Sector
 2417883,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,250,3,1.0,2007,"5.4,5.4,5.5",2016,"9.8,9.8,10.0",2023-12-15 12:31:29,Social Sector
 2742556,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,250,3,0.91766,2007,"5.0,5.0,4.5",2016,"7.5,7.3,7.0",2023-12-16 04:39:31,Social Sector
 2742695,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,22,3,1.0,2007,"5.0,5.0,4.5",2016,"4.1,4.1,3.8",2023-12-16 04:39:39,Social Sector
@@ -5201,8 +5238,6 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 5192908,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,40,3,0.91766,2007,"6.9,6.9,6.6",2009,"1.7,1.5,1.2",2023-12-18 20:31:41,Political State Sector
 2742709,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,198,3,1.0,2007,"5.0,5.0,4.5",2016,"4.5,4.5,4.2",2023-12-16 04:39:42,Social Sector
 5193234,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,198,3,0.91766,2007,"6.9,6.9,6.6",2016,"5.7,5.5,5.2",2023-12-18 20:32:02,Political State Sector
-2742452,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,40,3,0.91766,2007,"5.0,5.0,4.5",2016,"3.6,3.4,3.1",2023-12-16 04:39:25,Social Sector
-5192909,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,40,3,1.0,2007,"6.9,6.9,6.6",2016,"1.0,1.0,0.7",2023-12-18 20:31:41,Political State Sector
 6007165,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,169,3,0.91766,2010,"2.8,2.5,2.8",2013,"7.6,7.1,7.4",2023-12-19 13:50:28,Human Rights Development
 6492294,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,169,3,1.0,2010,"7.0,7.1,6.8",2013,"6.2,6.3,6.0",2023-12-19 23:41:59,Social Sector
 2742764,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,122,3,1.0,2007,"5.0,5.0,4.5",2009,"5.2,5.2,5.0",2023-12-16 04:39:45,Social Sector
@@ -5223,48 +5258,6 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 5192845,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,147,3,0.91766,2007,"6.9,6.9,6.6",2009,"7.4,7.2,6.9",2023-12-18 20:31:37,Political State Sector
 2417695,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,133,3,1.0,2007,"5.4,5.4,5.5",2009,"4.0,4.0,4.5",2023-12-15 12:31:15,Social Sector
 2742411,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,133,3,0.91766,2007,"5.0,5.0,4.5",2009,"6.5,6.3,6.0",2023-12-16 04:39:23,Social Sector
-2417946,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,220,3,1.0,2007,"5.4,5.4,5.5",2014,"5.7,5.7,6.0",2023-12-15 12:31:33,Social Sector
-2742626,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,220,3,0.91766,2007,"5.0,5.0,4.5",2014,"5.9,5.7,5.4",2023-12-16 04:39:34,Social Sector
-2417973,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,38,3,1.0,2007,"5.4,5.4,5.5",2016,"8.3,8.3,8.632000000000001",2023-12-15 12:31:35,Social Sector
-2742660,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,38,3,0.91766,2007,"5.0,5.0,4.5",2016,"7.1,6.9,6.6000000000000005",2023-12-16 04:39:36,Social Sector
-2742363,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,109,3,1.0,2007,"5.0,5.0,4.5",2009,"4.5,4.5,4.3",2023-12-16 04:39:21,Social Sector
-5192791,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,109,3,0.91766,2007,"6.9,6.9,6.6",2009,"7.0,6.8,6.5",2023-12-18 20:31:34,Political State Sector
-2417855,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,217,3,1.0,2007,"5.4,5.4,5.5",2009,"7.8,7.8,7.9",2023-12-15 12:31:26,Social Sector
-5193047,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,217,3,0.91766,2007,"6.9,6.9,6.6",2009,"8.8,8.6,8.3",2023-12-18 20:31:50,Political State Sector
-2742571,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,1,3,0.91766,2007,"5.0,5.0,4.5",2016,"8.6,8.4,8.1",2023-12-16 04:39:31,Social Sector
-5193087,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,1,3,1.0,2007,"6.9,6.9,6.6",2016,"9.1,9.1,9.073801435523972",2023-12-18 20:31:52,Political State Sector
-2742590,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,199,3,0.91766,2007,"5.0,5.0,4.5",2010,"6.7,6.5,6.2",2023-12-16 04:39:32,Social Sector
-5193108,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,199,3,1.0,2007,"6.9,6.9,6.6",2010,"7.7,7.7,7.6",2023-12-18 20:31:53,Political State Sector
-2742758,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,37,3,1.0,2007,"5.0,5.0,4.5",2009,"4.4,4.4,4.2",2023-12-16 04:39:45,Social Sector
-5193283,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,37,3,0.91766,2007,"6.9,6.9,6.6",2009,"7.4,7.2,6.9",2023-12-18 20:32:06,Political State Sector
-2417918,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,142,3,0.91766,2007,"5.4,5.4,5.5",2007,"7.5,7.7,8.0",2023-12-15 12:31:31,Social Sector
-2742597,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,142,3,1.0,2007,"5.0,5.0,4.5",2007,"7.3,7.3,7.1",2023-12-16 04:39:33,Social Sector
-2742680,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,9,3,1.0,2007,"5.0,5.0,4.5",2016,"3.9,3.9,3.6",2023-12-16 04:39:37,Social Sector
-5193200,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,9,3,0.91766,2007,"6.9,6.9,6.6",2016,"5.6,5.4,5.1000000000000005",2023-12-18 20:32:00,Political State Sector
-2417741,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,153,3,1.0,2007,"5.4,5.4,5.5",2016,"3.1,3.1,3.4",2023-12-15 12:31:18,Social Sector
-5192892,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,153,3,0.91766,2007,"6.9,6.9,6.6",2016,"1.5,1.3,1.0",2023-12-18 20:31:40,Political State Sector
-2417656,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,2,3,1.0,2007,"5.4,5.4,5.5",2016,"6.2,6.2,6.5",2023-12-15 12:31:12,Social Sector
-2742377,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,2,3,0.91766,2007,"5.0,5.0,4.5",2016,"4.7,4.5,4.2",2023-12-16 04:39:21,Social Sector
-2417969,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,182,3,1.0,2007,"5.4,5.4,5.5",2012,"8.0,8.0,8.1",2023-12-15 12:31:34,Social Sector
-5193181,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,182,3,0.91766,2007,"6.9,6.9,6.6",2012,"7.9,8.1,7.6",2023-12-18 20:31:59,Political State Sector
-2417719,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,113,3,1.0,2007,"5.4,5.4,5.5",2009,"7.6,7.6,7.7",2023-12-15 12:31:16,Social Sector
-5192873,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,113,3,0.91766,2007,"6.9,6.9,6.6",2009,"7.7,7.5,7.2",2023-12-18 20:31:39,Political State Sector
-2742760,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,37,3,1.0,2007,"5.0,5.0,4.5",2016,"4.1,4.1,3.8",2023-12-16 04:39:45,Social Sector
-5193284,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,37,3,0.91766,2007,"6.9,6.9,6.6",2016,"5.5,5.3,5.0",2023-12-18 20:32:06,Political State Sector
-2417957,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,137,3,1.0,2007,"5.4,5.4,5.5",2010,"7.9,7.9,8.1",2023-12-15 12:31:34,Social Sector
-2742641,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,137,3,0.91766,2007,"5.0,5.0,4.5",2010,"8.0,7.8,7.5",2023-12-16 04:39:35,Social Sector
-2417761,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,73,3,1.0,2007,"5.4,5.4,5.5",2016,"1.1,1.1,1.4",2023-12-15 12:31:19,Social Sector
-2742460,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,73,3,0.91766,2007,"5.0,5.0,4.5",2016,"2.0,1.8,1.5",2023-12-16 04:39:26,Social Sector
-2742697,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,213,3,1.0,2007,"5.0,5.0,4.5",2016,"5.8,5.8,5.5",2023-12-16 04:39:39,Social Sector
-5193216,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,213,3,0.91766,2007,"6.9,6.9,6.6",2016,"5.2,5.0,4.7",2023-12-18 20:32:01,Political State Sector
-2742605,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,15,3,1.0,2007,"5.0,5.0,4.5",2009,"7.9,7.9,7.5",2023-12-16 04:39:33,Social Sector
-5193127,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,15,3,0.91766,2007,"6.9,6.9,6.6",2009,"8.2,8.0,7.7",2023-12-18 20:31:55,Political State Sector
-2742721,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,179,3,1.0,2007,"5.0,5.0,4.5",2009,"5.2,5.2,4.9",2023-12-16 04:39:42,Social Sector
-5193254,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,179,3,0.91766,2007,"6.9,6.9,6.6",2009,"6.5,6.3,6.0",2023-12-18 20:32:04,Political State Sector
-2742747,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,194,3,1.0,2007,"5.0,5.0,4.5",2016,"4.5,4.5,4.2",2023-12-16 04:39:44,Social Sector
-5193278,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,194,3,0.91766,2007,"6.9,6.9,6.6",2016,"5.8,5.6,5.3",2023-12-18 20:32:05,Political State Sector
-2417675,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,181,3,1.0,2007,"5.4,5.4,5.5",2016,"5.4,5.4,5.7",2023-12-15 12:31:13,Social Sector
-2742393,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,181,3,0.91766,2007,"5.0,5.0,4.5",2016,"7.0,6.8,6.5",2023-12-16 04:39:22,Social Sector
 2417862,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,149,3,0.97073,2007,"5.4,5.4,5.5",2010,"8.2,8.3,8.6",2023-12-15 12:31:27,Social Sector
 5193054,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,149,3,0.94491,2007,"6.9,6.9,6.6",2010,"9.6,9.7,9.4",2023-12-18 20:31:50,Political State Sector
 3059268,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,166,3,0.97073,2010,"6.4,6.7,7.0",2011,"3.8,4.3,4.5",2023-12-16 10:39:41,Finance Economy Sector
@@ -5311,34 +5304,34 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 6492178,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,98,3,0.94491,2010,"7.0,7.1,6.8",2007,"3.7,3.7,3.5",2023-12-19 23:41:52,Social Sector
 6007159,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,199,3,0.90951,2010,"2.8,2.5,2.8",2017,"5.3,5.060508755273732,5.2",2023-12-19 13:50:27,Human Rights Development
 6492271,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,199,3,0.98432,2010,"7.0,7.1,6.8",2017,"9.0,9.1,8.5",2023-12-19 23:41:58,Social Sector
-2742587,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,39,3,0.94491,2007,"5.0,5.0,4.5",2020,"8.6,8.7,8.4",2023-12-16 04:39:32,Social Sector
-5193106,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,39,3,0.94491,2007,"6.9,6.9,6.6",2020,"8.899999999999999,9.0,8.7",2023-12-18 20:31:53,Political State Sector
-2742502,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,159,3,0.94491,2007,"5.0,5.0,4.5",2021,"8.8,8.9,8.6",2023-12-16 04:39:28,Social Sector
-5193009,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,159,3,0.94491,2007,"6.9,6.9,6.6",2021,"8.4,8.5,8.2",2023-12-18 20:31:47,Political State Sector
-3059136,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,140,3,0.94491,2010,"6.4,6.7,7.0",2008,"6.0,6.1,6.5",2023-12-16 10:39:35,Finance Economy Sector
-6492126,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,140,3,0.94491,2010,"7.0,7.1,6.8",2008,"7.0,7.0,6.8",2023-12-19 23:41:48,Social Sector
-2742517,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,48,3,0.94491,2007,"5.0,5.0,4.5",2021,"7.5,7.6,7.3",2023-12-16 04:39:29,Social Sector
-5193033,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,48,3,0.94491,2007,"6.9,6.9,6.6",2021,"5.5,5.6,5.3",2023-12-18 20:31:49,Political State Sector
-3059340,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,94,3,0.94491,2010,"6.4,6.7,7.0",2019,"8.4,8.5,8.9",2023-12-16 10:39:46,Finance Economy Sector
-6007147,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,94,3,0.94491,2010,"2.8,2.5,2.8",2019,"7.2,6.9,7.1",2023-12-19 13:50:26,Human Rights Development
-2742374,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,227,3,0.94491,2007,"5.0,5.0,4.5",2021,"7.1,7.2,6.9",2023-12-16 04:39:21,Social Sector
-5192801,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,227,3,0.94491,2007,"6.9,6.9,6.6",2021,"5.9,6.0,5.7",2023-12-18 20:31:35,Political State Sector
 2417829,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,232,3,0.94491,2007,"5.4,5.4,5.5",2012,"8.7,8.6,8.9",2023-12-15 12:31:24,Social Sector
 5193005,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,232,3,0.94491,2007,"6.9,6.9,6.6",2012,"8.0,8.1,7.8",2023-12-18 20:31:47,Political State Sector
-2742499,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,232,3,0.94491,2007,"5.0,5.0,4.5",2021,"7.8,7.9,7.6",2023-12-16 04:39:28,Social Sector
-5193006,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,232,3,0.94491,2007,"6.9,6.9,6.6",2021,"8.4,8.5,8.2",2023-12-18 20:31:47,Political State Sector
-2742701,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,93,3,0.94491,2007,"5.0,5.0,4.5",2009,"6.1,6.2,5.9",2023-12-16 04:39:41,Social Sector
-5193222,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,93,3,0.94491,2007,"6.9,6.9,6.6",2009,"6.7,6.8,6.5",2023-12-18 20:32:01,Political State Sector
-2417874,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,50,3,0.94491,2007,"5.4,5.4,5.5",2008,"8.6,8.7,8.9",2023-12-15 12:31:28,Social Sector
-2742543,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,50,3,0.94491,2007,"5.0,5.0,4.5",2008,"8.8,8.9,8.6",2023-12-16 04:39:30,Social Sector
-2742378,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,2,3,0.94491,2007,"5.0,5.0,4.5",2019,"4.3,4.4,4.1",2023-12-16 04:39:21,Social Sector
-5192804,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,2,3,0.94491,2007,"6.9,6.9,6.6",2019,"5.7,5.8,5.5",2023-12-18 20:31:35,Political State Sector
-6007099,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,10,3,0.94491,2010,"2.8,2.5,2.8",2011,"4.0,3.8,4.1",2023-12-19 13:50:23,Human Rights Development
-6492187,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,10,3,0.94491,2010,"7.0,7.1,6.8",2011,"4.4,4.4,4.1",2023-12-19 23:41:52,Social Sector
-6007102,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,208,3,0.94491,2010,"2.8,2.5,2.8",2012,"2.8,2.6,2.9",2023-12-19 13:50:24,Human Rights Development
-6492190,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,208,3,0.94491,2010,"7.0,7.1,6.8",2012,"3.0,3.0,2.9",2023-12-19 23:41:53,Social Sector
 2742420,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,233,3,0.94491,2007,"5.0,5.0,4.5",2015,"7.0,6.9,6.7",2023-12-16 04:39:24,Social Sector
 5192867,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,233,3,0.94491,2007,"6.9,6.9,6.6",2015,"8.5,8.4,8.2",2023-12-18 20:31:39,Political State Sector
+6007102,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,208,3,0.94491,2010,"2.8,2.5,2.8",2012,"2.8,2.6,2.9",2023-12-19 13:50:24,Human Rights Development
+6492190,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,208,3,0.94491,2010,"7.0,7.1,6.8",2012,"3.0,3.0,2.9",2023-12-19 23:41:53,Social Sector
+6007099,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,10,3,0.94491,2010,"2.8,2.5,2.8",2011,"4.0,3.8,4.1",2023-12-19 13:50:23,Human Rights Development
+6492187,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,10,3,0.94491,2010,"7.0,7.1,6.8",2011,"4.4,4.4,4.1",2023-12-19 23:41:52,Social Sector
+2742378,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,2,3,0.94491,2007,"5.0,5.0,4.5",2019,"4.3,4.4,4.1",2023-12-16 04:39:21,Social Sector
+5192804,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,2,3,0.94491,2007,"6.9,6.9,6.6",2019,"5.7,5.8,5.5",2023-12-18 20:31:35,Political State Sector
+2417874,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,50,3,0.94491,2007,"5.4,5.4,5.5",2008,"8.6,8.7,8.9",2023-12-15 12:31:28,Social Sector
+2742543,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,50,3,0.94491,2007,"5.0,5.0,4.5",2008,"8.8,8.9,8.6",2023-12-16 04:39:30,Social Sector
+2742701,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,93,3,0.94491,2007,"5.0,5.0,4.5",2009,"6.1,6.2,5.9",2023-12-16 04:39:41,Social Sector
+5193222,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,93,3,0.94491,2007,"6.9,6.9,6.6",2009,"6.7,6.8,6.5",2023-12-18 20:32:01,Political State Sector
+2742499,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,232,3,0.94491,2007,"5.0,5.0,4.5",2021,"7.8,7.9,7.6",2023-12-16 04:39:28,Social Sector
+5193006,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,232,3,0.94491,2007,"6.9,6.9,6.6",2021,"8.4,8.5,8.2",2023-12-18 20:31:47,Political State Sector
+2742374,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,227,3,0.94491,2007,"5.0,5.0,4.5",2021,"7.1,7.2,6.9",2023-12-16 04:39:21,Social Sector
+5192801,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,227,3,0.94491,2007,"6.9,6.9,6.6",2021,"5.9,6.0,5.7",2023-12-18 20:31:35,Political State Sector
+2742502,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,159,3,0.94491,2007,"5.0,5.0,4.5",2021,"8.8,8.9,8.6",2023-12-16 04:39:28,Social Sector
+5193009,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,159,3,0.94491,2007,"6.9,6.9,6.6",2021,"8.4,8.5,8.2",2023-12-18 20:31:47,Political State Sector
+2742587,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,39,3,0.94491,2007,"5.0,5.0,4.5",2020,"8.6,8.7,8.4",2023-12-16 04:39:32,Social Sector
+5193106,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,39,3,0.94491,2007,"6.9,6.9,6.6",2020,"8.899999999999999,9.0,8.7",2023-12-18 20:31:53,Political State Sector
+2742517,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,48,3,0.94491,2007,"5.0,5.0,4.5",2021,"7.5,7.6,7.3",2023-12-16 04:39:29,Social Sector
+5193033,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,48,3,0.94491,2007,"6.9,6.9,6.6",2021,"5.5,5.6,5.3",2023-12-18 20:31:49,Political State Sector
+3059136,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,140,3,0.94491,2010,"6.4,6.7,7.0",2008,"6.0,6.1,6.5",2023-12-16 10:39:35,Finance Economy Sector
+6492126,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,140,3,0.94491,2010,"7.0,7.1,6.8",2008,"7.0,7.0,6.8",2023-12-19 23:41:48,Social Sector
+3059340,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,94,3,0.94491,2010,"6.4,6.7,7.0",2019,"8.4,8.5,8.9",2023-12-16 10:39:46,Finance Economy Sector
+6007147,The Fund For Peace,Fragile State Index,P3: Human Rights,2023,141,94,3,0.94491,2010,"2.8,2.5,2.8",2019,"7.2,6.9,7.1",2023-12-19 13:50:26,Human Rights Development
 3059182,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,73,3,0.96077,2010,"6.4,6.7,7.0",2011,"2.8,2.9,3.2",2023-12-16 10:39:37,Finance Economy Sector
 6492160,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,73,3,0.92857,2010,"7.0,7.1,6.8",2011,"2.0,2.2,1.9",2023-12-19 23:41:51,Social Sector
 3059143,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,11,3,0.97073,2010,"6.4,6.7,7.0",2014,"5.8,6.0,6.5",2023-12-16 10:39:35,Finance Economy Sector
@@ -5379,58 +5372,58 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 6492288,The Fund For Peace,Fragile State Index,S1: Demographic Pressures,2023,141,242,3,0.94491,2010,"7.0,7.1,6.8",2013,"5.4,5.4,5.1",2023-12-19 23:41:59,Social Sector
 2417708,The Fund For Peace,Fragile State Index,C2: Factionalized Elites,2023,141,78,3,0.92857,2007,"5.4,5.4,5.5",2016,"7.1,7.4,7.9",2023-12-15 12:31:16,Social Sector
 2742416,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,78,3,0.91766,2007,"5.0,5.0,4.5",2016,"4.0,3.8,3.5",2023-12-16 04:39:24,Social Sector
+2742469,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,177,3,0.91766,2007,"5.0,5.0,4.5",2016,"2.7,2.5,2.2",2023-12-16 04:39:26,Social Sector
+5192939,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,177,3,0.91766,2007,"6.9,6.9,6.6",2016,"1.8,1.6,1.3",2023-12-18 20:31:43,Political State Sector
+2742533,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,118,3,0.91766,2007,"5.0,5.0,4.5",2016,"8.6,8.4,8.1",2023-12-16 04:39:29,Social Sector
+5193049,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,118,3,0.91766,2007,"6.9,6.9,6.6",2016,"7.9,7.7,7.4",2023-12-18 20:31:50,Political State Sector
+2742734,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,72,3,0.91766,2007,"5.0,5.0,4.5",2016,"7.1,6.9,6.6000000000000005",2023-12-16 04:39:43,Social Sector
+5193267,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,72,3,0.91766,2007,"6.9,6.9,6.6",2016,"7.1,6.9,6.6000000000000005",2023-12-18 20:32:05,Political State Sector
+2742685,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,226,3,0.91766,2007,"5.0,5.0,4.5",2016,"4.4,4.2,3.9",2023-12-16 04:39:37,Social Sector
+5193203,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,226,3,0.91766,2007,"6.9,6.9,6.6",2016,"4.7,4.5,4.2",2023-12-18 20:32:00,Political State Sector
+2742538,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,18,3,0.91766,2007,"5.0,5.0,4.5",2016,"8.9,8.7,8.399999999999999",2023-12-16 04:39:30,Social Sector
+5193052,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,18,3,0.91766,2007,"6.9,6.9,6.6",2016,"8.0,7.8,7.5",2023-12-18 20:31:50,Political State Sector
+2742525,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,35,3,0.91766,2007,"5.0,5.0,4.5",2016,"4.7,4.5,4.2",2023-12-16 04:39:29,Social Sector
+5193038,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,35,3,0.91766,2007,"6.9,6.9,6.6",2016,"7.3,7.1,6.8",2023-12-18 20:31:49,Political State Sector
+2742445,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,110,3,0.91766,2007,"5.0,5.0,4.5",2016,"3.9,3.7,3.4000000000000004",2023-12-16 04:39:25,Social Sector
+5192895,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,110,3,0.91766,2007,"6.9,6.9,6.6",2016,"1.4,1.2,0.8999999999999999",2023-12-18 20:31:40,Political State Sector
+2742457,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,104,3,0.91766,2007,"5.0,5.0,4.5",2016,"1.6,1.4,1.1",2023-12-16 04:39:26,Social Sector
+5192920,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,104,3,0.91766,2007,"6.9,6.9,6.6",2016,"1.2,1.0,0.7",2023-12-18 20:31:42,Political State Sector
+2742400,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,56,3,0.91766,2007,"5.0,5.0,4.5",2016,"6.5,6.3,6.0",2023-12-16 04:39:23,Social Sector
+5192837,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,56,3,0.91766,2007,"6.9,6.9,6.6",2016,"5.0,4.8,4.5",2023-12-18 20:31:37,Political State Sector
+2742472,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,126,3,0.91766,2007,"5.0,5.0,4.5",2009,"4.2,4.0,3.7",2023-12-16 04:39:26,Social Sector
+5192943,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,126,3,0.91766,2007,"6.9,6.9,6.6",2009,"4.1,3.9,3.6",2023-12-18 20:31:43,Political State Sector
+2742361,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,29,3,0.91766,2007,"5.0,5.0,4.5",2016,"5.1,4.9,4.6000000000000005",2023-12-16 04:39:21,Social Sector
+5192789,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,29,3,0.91766,2007,"6.9,6.9,6.6",2016,"3.5,3.3,3.0",2023-12-18 20:31:34,Political State Sector
+2742382,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,53,3,0.91766,2007,"5.0,5.0,4.5",2016,"6.0,5.8,5.5",2023-12-16 04:39:22,Social Sector
+5192814,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,53,3,0.91766,2007,"6.9,6.9,6.6",2016,"3.1,2.9,2.6",2023-12-18 20:31:35,Political State Sector
+2742752,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,129,3,0.91766,2007,"5.0,5.0,4.5",2016,"4.3,4.1,3.8",2023-12-16 04:39:44,Social Sector
+5193280,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,129,3,0.91766,2007,"6.9,6.9,6.6",2016,"7.3,7.1,6.8",2023-12-18 20:32:05,Political State Sector
+2742550,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,108,3,0.91766,2007,"5.0,5.0,4.5",2016,"8.3,8.1,7.8",2023-12-16 04:39:30,Social Sector
+5193067,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,108,3,0.91766,2007,"6.9,6.9,6.6",2016,"8.1,7.9,7.6",2023-12-18 20:31:51,Political State Sector
+2742598,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,142,3,0.91766,2007,"5.0,5.0,4.5",2009,"7.1,6.9,6.6",2023-12-16 04:39:33,Social Sector
+5193118,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,142,3,0.91766,2007,"6.9,6.9,6.6",2009,"8.1,7.9,7.6",2023-12-18 20:31:54,Political State Sector
+2742367,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,109,3,0.91766,2007,"5.0,5.0,4.5",2016,"3.6,3.4,3.1",2023-12-16 04:39:21,Social Sector
+5192794,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,109,3,0.91766,2007,"6.9,6.9,6.6",2016,"5.0,4.8,4.5",2023-12-18 20:31:34,Political State Sector
 2742604,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,80,3,0.91766,2007,"5.0,5.0,4.5",2016,"8.1,7.9,7.6",2023-12-16 04:39:33,Social Sector
 5193125,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,80,3,0.91766,2007,"6.9,6.9,6.6",2016,"8.5,8.3,8.0",2023-12-18 20:31:55,Political State Sector
 2742473,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,126,3,0.91766,2007,"5.0,5.0,4.5",2016,"4.6,4.4,4.1000000000000005",2023-12-16 04:39:26,Social Sector
 5192944,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,126,3,0.91766,2007,"6.9,6.9,6.6",2016,"2.9,2.7,2.4000000000000004",2023-12-18 20:31:43,Political State Sector
 2742421,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,233,3,0.91766,2007,"5.0,5.0,4.5",2016,"6.9,6.7,6.4",2023-12-16 04:39:24,Social Sector
 5192868,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,233,3,0.91766,2007,"6.9,6.9,6.6",2016,"8.4,8.2,7.899999999999999",2023-12-18 20:31:39,Political State Sector
+2742767,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,122,3,0.91766,2007,"5.0,5.0,4.5",2016,"4.1,3.9,3.6",2023-12-16 04:39:45,Social Sector
+5193289,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,122,3,0.91766,2007,"6.9,6.9,6.6",2016,"6.1,5.9,5.6000000000000005",2023-12-18 20:32:06,Political State Sector
 2742512,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,69,3,0.91766,2007,"5.0,5.0,4.5",2010,"8.6,8.4,8.1",2023-12-16 04:39:28,Social Sector
 5193023,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,69,3,0.91766,2007,"6.9,6.9,6.6",2010,"7.7,7.5,7.2",2023-12-18 20:31:48,Political State Sector
-2742367,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,109,3,0.91766,2007,"5.0,5.0,4.5",2016,"3.6,3.4,3.1",2023-12-16 04:39:21,Social Sector
-5192794,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,109,3,0.91766,2007,"6.9,6.9,6.6",2016,"5.0,4.8,4.5",2023-12-18 20:31:34,Political State Sector
 2742475,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,52,3,0.91766,2007,"5.0,5.0,4.5",2016,"4.4,4.2,3.9",2023-12-16 04:39:26,Social Sector
 5192947,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,52,3,0.91766,2007,"6.9,6.9,6.6",2016,"2.6,2.4,2.1",2023-12-18 20:31:43,Political State Sector
 2742407,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,163,3,0.91766,2007,"5.0,5.0,4.5",2016,"7.1,6.9,6.6000000000000005",2023-12-16 04:39:23,Social Sector
 5192852,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,163,3,0.91766,2007,"6.9,6.9,6.6",2016,"6.0,5.8,5.5",2023-12-18 20:31:38,Political State Sector
 2742451,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,44,3,0.91766,2007,"5.0,5.0,4.5",2016,"3.8,3.6,3.3000000000000003",2023-12-16 04:39:25,Social Sector
 5192907,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,44,3,0.91766,2007,"6.9,6.9,6.6",2016,"3.5,3.3,3.0",2023-12-18 20:31:41,Political State Sector
-2742550,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,108,3,0.91766,2007,"5.0,5.0,4.5",2016,"8.3,8.1,7.8",2023-12-16 04:39:30,Social Sector
-5193067,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,108,3,0.91766,2007,"6.9,6.9,6.6",2016,"8.1,7.9,7.6",2023-12-18 20:31:51,Political State Sector
 2742669,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,171,3,0.91766,2007,"5.0,5.0,4.5",2016,"6.5,6.3,6.0",2023-12-16 04:39:36,Social Sector
 5193189,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,171,3,0.91766,2007,"6.9,6.9,6.6",2016,"7.0,6.8,6.5",2023-12-18 20:31:59,Political State Sector
 2742636,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,62,3,0.91766,2007,"5.0,5.0,4.5",2016,"7.5,7.3,7.0",2023-12-16 04:39:35,Social Sector
 5193164,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,62,3,0.91766,2007,"6.9,6.9,6.6",2016,"6.7,6.5,6.2",2023-12-18 20:31:57,Political State Sector
-2742767,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,122,3,0.91766,2007,"5.0,5.0,4.5",2016,"4.1,3.9,3.6",2023-12-16 04:39:45,Social Sector
-5193289,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,122,3,0.91766,2007,"6.9,6.9,6.6",2016,"6.1,5.9,5.6000000000000005",2023-12-18 20:32:06,Political State Sector
-2742598,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,142,3,0.91766,2007,"5.0,5.0,4.5",2009,"7.1,6.9,6.6",2023-12-16 04:39:33,Social Sector
-5193118,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,142,3,0.91766,2007,"6.9,6.9,6.6",2009,"8.1,7.9,7.6",2023-12-18 20:31:54,Political State Sector
-2742469,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,177,3,0.91766,2007,"5.0,5.0,4.5",2016,"2.7,2.5,2.2",2023-12-16 04:39:26,Social Sector
-5192939,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,177,3,0.91766,2007,"6.9,6.9,6.6",2016,"1.8,1.6,1.3",2023-12-18 20:31:43,Political State Sector
-2742752,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,129,3,0.91766,2007,"5.0,5.0,4.5",2016,"4.3,4.1,3.8",2023-12-16 04:39:44,Social Sector
-5193280,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,129,3,0.91766,2007,"6.9,6.9,6.6",2016,"7.3,7.1,6.8",2023-12-18 20:32:05,Political State Sector
-2742382,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,53,3,0.91766,2007,"5.0,5.0,4.5",2016,"6.0,5.8,5.5",2023-12-16 04:39:22,Social Sector
-5192814,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,53,3,0.91766,2007,"6.9,6.9,6.6",2016,"3.1,2.9,2.6",2023-12-18 20:31:35,Political State Sector
-2742361,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,29,3,0.91766,2007,"5.0,5.0,4.5",2016,"5.1,4.9,4.6000000000000005",2023-12-16 04:39:21,Social Sector
-5192789,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,29,3,0.91766,2007,"6.9,6.9,6.6",2016,"3.5,3.3,3.0",2023-12-18 20:31:34,Political State Sector
-2742472,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,126,3,0.91766,2007,"5.0,5.0,4.5",2009,"4.2,4.0,3.7",2023-12-16 04:39:26,Social Sector
-5192943,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,126,3,0.91766,2007,"6.9,6.9,6.6",2009,"4.1,3.9,3.6",2023-12-18 20:31:43,Political State Sector
-2742400,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,56,3,0.91766,2007,"5.0,5.0,4.5",2016,"6.5,6.3,6.0",2023-12-16 04:39:23,Social Sector
-5192837,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,56,3,0.91766,2007,"6.9,6.9,6.6",2016,"5.0,4.8,4.5",2023-12-18 20:31:37,Political State Sector
-2742457,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,104,3,0.91766,2007,"5.0,5.0,4.5",2016,"1.6,1.4,1.1",2023-12-16 04:39:26,Social Sector
-5192920,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,104,3,0.91766,2007,"6.9,6.9,6.6",2016,"1.2,1.0,0.7",2023-12-18 20:31:42,Political State Sector
-2742445,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,110,3,0.91766,2007,"5.0,5.0,4.5",2016,"3.9,3.7,3.4000000000000004",2023-12-16 04:39:25,Social Sector
-5192895,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,110,3,0.91766,2007,"6.9,6.9,6.6",2016,"1.4,1.2,0.8999999999999999",2023-12-18 20:31:40,Political State Sector
-2742525,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,35,3,0.91766,2007,"5.0,5.0,4.5",2016,"4.7,4.5,4.2",2023-12-16 04:39:29,Social Sector
-5193038,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,35,3,0.91766,2007,"6.9,6.9,6.6",2016,"7.3,7.1,6.8",2023-12-18 20:31:49,Political State Sector
-2742538,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,18,3,0.91766,2007,"5.0,5.0,4.5",2016,"8.9,8.7,8.399999999999999",2023-12-16 04:39:30,Social Sector
-5193052,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,18,3,0.91766,2007,"6.9,6.9,6.6",2016,"8.0,7.8,7.5",2023-12-18 20:31:50,Political State Sector
-2742685,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,226,3,0.91766,2007,"5.0,5.0,4.5",2016,"4.4,4.2,3.9",2023-12-16 04:39:37,Social Sector
-5193203,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,226,3,0.91766,2007,"6.9,6.9,6.6",2016,"4.7,4.5,4.2",2023-12-18 20:32:00,Political State Sector
-2742734,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,72,3,0.91766,2007,"5.0,5.0,4.5",2016,"7.1,6.9,6.6000000000000005",2023-12-16 04:39:43,Social Sector
-5193267,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,72,3,0.91766,2007,"6.9,6.9,6.6",2016,"7.1,6.9,6.6000000000000005",2023-12-18 20:32:05,Political State Sector
-2742533,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,118,3,0.91766,2007,"5.0,5.0,4.5",2016,"8.6,8.4,8.1",2023-12-16 04:39:29,Social Sector
-5193049,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,118,3,0.91766,2007,"6.9,6.9,6.6",2016,"7.9,7.7,7.4",2023-12-18 20:31:50,Political State Sector
 2742402,The Fund For Peace,Fragile State Index,C3: Group Grievance,2023,141,150,3,0.91766,2007,"5.0,5.0,4.5",2016,"6.0,5.8,5.5",2023-12-16 04:39:23,Social Sector
 5192842,The Fund For Peace,Fragile State Index,P1: State Legitimacy,2023,141,150,3,0.91635,2007,"6.9,6.9,6.6",2016,"3.5,3.3,3.0035868776647856",2023-12-18 20:31:37,Political State Sector
 3059292,The Fund For Peace,Fragile State Index,E1: Economy,2023,141,211,3,0.91792,2010,"6.4,6.7,7.0",2017,"5.4,5.487433465294197,5.5",2023-12-16 10:39:43,Finance Economy Sector

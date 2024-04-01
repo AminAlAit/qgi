@@ -1248,10 +1248,10 @@ unique_id,org_fk,main_name_fk,index_name_fk,version_fk,country_a_id_fk,country_b
 32030015,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,116,91,3,0.98956,2009,"1.79,2.42,2.71",2000,"8.99,15.36,16.75",2024-01-18 11:45:20,Military Sector
 31420191,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,116,61,3,0.99996,2009,"15.5,21.7,28.5",2016,"46.1,50.7,55.9",2024-01-17 07:57:56,Military Sector
 32030251,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,116,61,3,0.91506,2009,"1.79,2.42,2.71",2016,"3.74,3.9,4.24",2024-01-18 11:45:37,Military Sector
-31419602,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,116,179,3,0.99799,2009,"15.5,21.7,28.5",2006,"1041.8,1282.6,1612.7",2024-01-17 07:57:34,Military Sector
-32030023,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,116,179,3,0.91526,2009,"1.79,2.42,2.71",2006,"6.15,6.98,8.74",2024-01-18 11:45:20,Military Sector
 31419975,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,116,140,3,0.94527,2009,"15.5,21.7,28.5",2012,"48.7,54.5,56.2",2024-01-17 07:57:48,Military Sector
 32030156,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,116,140,3,0.96798,2009,"1.79,2.42,2.71",2012,"1.69,1.83,1.84",2024-01-18 11:45:31,Military Sector
+31419602,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,116,179,3,0.99799,2009,"15.5,21.7,28.5",2006,"1041.8,1282.6,1612.7",2024-01-17 07:57:34,Military Sector
+32030023,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,116,179,3,0.91526,2009,"1.79,2.42,2.71",2006,"6.15,6.98,8.74",2024-01-18 11:45:20,Military Sector
 31420179,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,116,221,3,0.97933,2009,"15.5,21.7,28.5",2005,"30.3,37.1,53.2",2024-01-17 07:57:56,Military Sector
 32030244,SIPRI,Military Expenditure,Military Expenditure - Share of Government Spending (%),2022,116,221,3,0.93389,2009,"1.79,2.42,2.71",2005,"5.47,5.98,6.87",2024-01-18 11:45:37,Military Sector
 31419220,SIPRI,Military Expenditure,Military Expenditure - Per Capita,2022,116,133,3,0.99798,2009,"15.5,21.7,28.5",2013,"9.4,12.9,17.7",2024-01-17 07:57:19,Military Sector
