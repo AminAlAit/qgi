@@ -6,21 +6,11 @@
 ## TODO categorize indexes
 ## TODO consolidate all magic strings in the streamlit project into global variables, for better centralization maybe have another constant.py script here too.
 ## TODO checkout similar page-runtime settings
-
+## TODO save strings in constant, to avoid magic strings
 
 import sys
 import subprocess
-from utils.utils import run_requirements
-def install_package(package):
-    """dummy docstring"""
-    #subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "pip"])
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-run_requirements()
-install_package("streamlit-modal")
-install_package("streamlit-echarts")
-install_package("streamlit-extras")
-install_package("streamlit-lottie")
-
+subprocess.check_call([sys.executable, "-m", "pip", "install", "streamlit-timeline"])
 
 # References: 
 # https://discuss.streamlit.io/t/new-package-st-pages-change-page-names-and-icons-in-sidebar-without-changing-filenames/33969/56
@@ -30,9 +20,9 @@ import streamlit as st
 from st_pages import Page, add_page_title, show_pages
 show_pages(
     [
-        # Page("pages/0_Base.py",          "Base",         "📈"),
-        # Page("pages/1_Patterns.py",      "Patterns",     "📈"),
-        Page("pages/0_Base.py",           "Patterns",     "📈"),
+        Page("pages/0_Base.py",          "Base",         "🌐"),
+        Page("pages/1_Patterns.py",      "Patterns",     "📈"),
+        # Page("pages/0_Base.py",           "Patterns",     "📈"),
         Page("pages/2_Experimental.py",  "Under Construction 🚧🏗️", "🚧"),
         Page("pages/9_Contact.py",        "Contact",      "📬")
     ]

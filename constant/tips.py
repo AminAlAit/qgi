@@ -34,11 +34,11 @@ TIP_SELECT_PATTERN_LENGTH = "Select how long you want your pattern to be"
 TIP_ALIGN_TOGGLE = "When enabled, all index pairs are aligned to the same year, so you can better view the correlation."
 TIP_TRANSFORMATION_CAPTIONS = [
     "Displays data in its initial, unmodified form",
-    "Scales data to a range between 0 and 1.",
-    "Shifts data to have a mean of 0, variance of 1.",
-    "Relates all values to a specific base year.",
-    "Applies logarithm to reduce data scale, emphasize changes.",
-    "Shows percentage change or ratio between data points."
+    "Scales data to a range between 0 and 1. Use when you want all data on a similar scale, especially for comparing discrepancies between datasets.",
+    "Shifts data to have a mean of 0, variance of 1. Use when data needs to be centered around zero.",
+    "Use when you want to set a common starting point, ideal for economic data.",
+    "Use logarithmic scaling to handle wide-ranging values, ideal for economic data.",
+    "Calculates growth rates to highlight changes over time, useful for understanding the pace of increase or decrease of the data."
 ]
 TIP_TRANSFORMATION_RADIO = "Sometimes it is best to transform the data to better view the correlation."
 

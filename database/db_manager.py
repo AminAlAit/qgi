@@ -1,7 +1,5 @@
 """Database manager for MySQL operations"""
 import time
-from mysql.connector   import Error
-import mysql.connector as mysql_connector
 import pandas          as pd
 import streamlit as st
 

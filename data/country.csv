@@ -48,7 +48,7 @@
 46,47,Cocos (Keeling) Islands,,,,,,,,,,CC,CCK,166.0
 47,48,Colombia,Republic of Colombia,,,,,,,,,CO,COL,170.0
 48,49,Comoros,Union of the Comoros,,,,,,,,,KM,COM,174.0
-49,50,Republic of the Congo,The Democratic Republic of the Congo,"Congo, The Democratic Republic of the",République démocratique du Congo,Congo - Kinshasa,"Congo, Republic",Congo (Democratic Republic of the),"Congo, Dem. Rep.",Congo Democratic Republic,"Congo, DR",CD,COD,180.0
+49,50,The Democratic Republic of the Congo,"Congo, The Democratic Republic of the",République démocratique du Congo,Congo - Kinshasa,"Congo, Republic",Congo (Democratic Republic of the),"Congo, Dem. Rep.",Congo Democratic Republic,"Congo, DR",,CD,COD,180.0
 50,51,Cook Islands,,,,,,,,,,CK,COK,184.0
 51,52,Costa Rica,Republic of Costa Rica,,,,,,,,,CR,CRI,188.0
 52,53,Croatia,Republic of Croatia,,,,,,,,,HR,HRV,191.0
@@ -148,7 +148,7 @@
 146,147,Morocco,Kingdom of Morocco,,,,,,,,,MA,MAR,504.0
 147,148,Mozambique,Republic of Mozambique,,,,,,,,,MZ,MOZ,508.0
 148,149,Myanmar,Republic of Myanmar,Myanmar (Burma),,,,,,,,MM,MMR,104.0
-149,150,Namibia,Republic of Namibia,,,,,,,,,,NAM,516.0
+149,150,Namibia,Republic of Namibia,,,,,,,,,NA,NAM,516.0
 150,151,Nauru,Republic of Nauru,,,,,,,,,NR,NRU,520.0
 151,152,Nepal,Federal Democratic Republic of Nepal,,,,,,,,,NP,NPL,524.0
 152,153,Netherlands,Kingdom of the Netherlands,,,,,,,,,NL,NLD,528.0
