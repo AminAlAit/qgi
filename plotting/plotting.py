@@ -86,8 +86,6 @@ def get_annotations(similar_events):
 def plot_index_values(df_row):
     country_a = df_row['country_a_id_fk']
     country_b = df_row['country_b_id_fk']
-    events_a = pd.read_csv(EVENTS_CSVS_FOLDER_PATH + country_a + ".csv")
-    events_b = pd.read_csv(EVENTS_CSVS_FOLDER_PATH + country_b + ".csv")
 
     # st.write(df_row)
     with st.expander(df_row["index_name_fk"], expanded=True):
@@ -114,14 +112,14 @@ def plot_index_values(df_row):
                     captions=TIP_TRANSFORMATION_CAPTIONS,
                     help=TIP_TRANSFORMATION_RADIO
                 )
-        similar_events = get_correlated_events_details(df_row)
-        if len(similar_events) > 0:
-            with plot_events:
-                add_similar_events = st.toggle(
-                    "Add Similar Events", 
-                    key = "toggle_" + df_row["index_name_fk"] + str(df_row["start_year_b_fk"]), 
-                    help = "Highlights similar pattern events in the plot"
-                )
+        #similar_events = get_correlated_events_details(df_row)
+        # if len(similar_events) > 0:
+        #     with plot_events:
+        #         add_similar_events = st.toggle(
+        #             "Add Similar Events", 
+        #             key = "toggle_" + df_row["index_name_fk"] + str(df_row["start_year_b_fk"]), 
+        #             help = "Highlights similar pattern events in the plot"
+        #         )
         
         if method != "" or method == "Raw Representation":
             values_a, values_b = apply_method_on_plots(method, values_a, values_b)
