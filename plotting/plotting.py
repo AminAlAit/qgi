@@ -4,7 +4,7 @@ import pandas as pd
 from constant.sectors import SECTOR_MAPPING
 from constant.tips import TIP_TRANSFORMATION_CAPTIONS, TIP_TRANSFORMATION_RADIO
 from database.db_manager import get_alpha2_by_name, get_country_b_counts_for_country_a
-from utils.utils import combine_values, final_touches_to_df, get_index_metadata, replace_item_in_list, round_list_items, validate_five_params
+from utils.utils import check_file_exists, combine_values, final_touches_to_df, get_index_metadata, replace_item_in_list, round_list_items, validate_five_params
 from streamlit_echarts import st_echarts, JsCode
 import streamlit as st
 from streamlit_extras.dataframe_explorer import dataframe_explorer
@@ -453,7 +453,7 @@ def display_timeline(five_params, events_df, country_a, start_year_a, country_b,
         st.markdown("___")
 
 
-def display_timeline(five_params, events_df, country_a, start_year_a, country_b, start_year_b, patt_len):
+def display_timeline(five_params, country_a, start_year_a, country_b, start_year_b, patt_len):
     if validate_five_params(five_params):
         # Alt: https://github.com/giswqs/streamlit-timeline
         # https://github.com/innerdoc/nlp-history-timeline
@@ -465,7 +465,6 @@ def display_timeline(five_params, events_df, country_a, start_year_a, country_b,
         #     data = f.read()
         
         events = get_events(
-            events_df, 
             country_a, 
             (start_year_a, start_year_a + patt_len),
             country_b,
@@ -478,13 +477,19 @@ def display_timeline(five_params, events_df, country_a, start_year_a, country_b,
             st.markdown("___")
 
 
-def get_events(df, country_a, year_range_a, country_b, year_range_b):
-    if country_a not in list(set(df["Country"])) or country_b not in list(set(df["Country"])):
+def get_events(country_a, year_range_a, country_b, year_range_b):
+    EVENTS_CSVS_SOURCE_PATH = r"/workspaces/qgi/data/events/"
+
+    if not (check_file_exists(EVENTS_CSVS_SOURCE_PATH, country_a + ".csv") and check_file_exists(EVENTS_CSVS_SOURCE_PATH, country_b + ".csv")):
         return None
 
-    # Filter data for both countries within their respective year ranges
-    df_filtered = df[((df["Country"] == country_a) & (df["Year"].between(*year_range_a))) |
-                     ((df["Country"] == country_b) & (df["Year"].between(*year_range_b)))]
+    events_a    = pd.read_csv(EVENTS_CSVS_SOURCE_PATH + country_a + ".csv")
+    events_b    = pd.read_csv(EVENTS_CSVS_SOURCE_PATH + country_b + ".csv")
+
+    events_a = events_a[events_a["Year"].between(*year_range_a)]
+    events_b = events_b[events_b["Year"].between(*year_range_b)]
+
+    df_filtered = pd.concat([events_a, events_b], ignore_index = True)
     
     # Sort by year for proper chronological order in the timeline
     df_filtered.sort_values(by='Year', inplace=True)
