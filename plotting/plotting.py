@@ -373,23 +373,38 @@ def visualize_table(df, display_message, params_validation):
         )
 
 
-def visualize_plots(df, five_params, page_cols):
+def visualize_plots(df, five_params):
     if isinstance(df, pd.DataFrame) and len(df) > 0 and validate_five_params(five_params):
-        i = 1
-        for _, row in df.iterrows():
-            #graphs_rows.append(row)
-            if i == 1:
-                i = 2
-                with page_cols[0]:
-                    plot_index_values(row)
-            elif i == 2:
-                i = 3
-                with page_cols[1]:
-                    plot_index_values(row)
-            elif i == 3:
-                i = 1
-                with page_cols[2]:
-                    plot_index_values(row)
+        if len(df) >= 5:
+            col1, col2, col3 = st.columns(3)
+            i = 1
+            for _, row in df.iterrows():
+                #graphs_rows.append(row)
+                if i == 1:
+                    i = 2
+                    with col1:
+                        plot_index_values(row)
+                elif i == 2:
+                    i = 3
+                    with col2:
+                        plot_index_values(row)
+                elif i == 3:
+                    i = 1
+                    with col3:
+                        plot_index_values(row)
+        else:
+            col1, col2 = st.columns(2)
+            i = 1
+            for _, row in df.iterrows():
+                #graphs_rows.append(row)
+                if i == 1:
+                    i = 2
+                    with col1:
+                        plot_index_values(row)
+                elif i == 2:
+                    i = 1
+                    with col2:
+                        plot_index_values(row)
 
 
 def categorize_indexes(df):

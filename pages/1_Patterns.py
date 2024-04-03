@@ -145,8 +145,8 @@ def show_search_page():
     couple_countries_dashboard(five_params, couple_of_countries, display_df, pattern_power_score, countries_df, plotting_df)
     display_timeline(five_params, country_a, start_year_a, country_b, start_year_b, patt_len)
 
-    col1, col2, col3 = st.columns(3)
+    
     visualize_table(display_df, display_message, validate_five_params(five_params))
-    visualize_plots(plotting_df, five_params, [col1, col2, col3])
+    visualize_plots(plotting_df, five_params)
 
 show_search_page()
