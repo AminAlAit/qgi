@@ -1,10 +1,11 @@
 import math
 import numpy as np
 import pandas as pd
+from constant.constant import EVENTS_CSVS_FOLDER_PATH
 from constant.sectors import SECTOR_MAPPING
 from constant.tips import TIP_TRANSFORMATION_CAPTIONS, TIP_TRANSFORMATION_RADIO
 from database.db_manager import get_alpha2_by_name, get_country_b_counts_for_country_a
-from utils.utils import combine_values, final_touches_to_df, get_index_metadata, replace_item_in_list, round_list_items, validate_five_params, check_file_exists
+from utils.utils import check_file_exists, combine_values, final_touches_to_df, get_correlated_events_details, get_index_metadata, replace_item_in_list, round_list_items, validate_five_params
 from streamlit_echarts import st_echarts, JsCode
 import streamlit as st
 from streamlit_extras.dataframe_explorer import dataframe_explorer
@@ -47,7 +48,45 @@ def clean_list_edges(lst):
     return lst
 
 
+def get_annotations(similar_events):
+    annotations_a = []
+    annotations_b = []
+    for _, event_row in similar_events.iterrows():
+        # Annotations for Country A
+        annotations_a.append({
+            "type": "line",
+            "xAxis": str(event_row['Year A']),
+            "name": event_row['Event'],
+            "label": {
+                "show": True,
+                "formatter": event_row['Event']
+            },
+            "lineStyle": {
+                "color": "red",
+                "type": "solid"
+            }
+        })
+        # Annotations for Country B
+        annotations_b.append({
+            "type": "line",
+            "xAxis": str(event_row['Year B']),
+            "name": event_row['Event'],
+            "label": {
+                "show": True,
+                "formatter": event_row['Event']
+            },
+            "lineStyle": {
+                "color": "blue",
+                "type": "solid"
+            }
+        })
+    return annotations_a, annotations_b
+
+
 def plot_index_values(df_row):
+    country_a = df_row['country_a_id_fk']
+    country_b = df_row['country_b_id_fk']
+
     # st.write(df_row)
     with st.expander(df_row["index_name_fk"], expanded=True):
         st.markdown(f"##### {df_row['org_fk']}")
@@ -58,18 +97,29 @@ def plot_index_values(df_row):
         values_a = round_list_items(replace_item_in_list(list(merged_df["Value_A"]), "nan", ""))
         values_b = round_list_items(replace_item_in_list(list(merged_df["Value_B"]), "nan", ""))
 
-        with st.popover("Modify plot representation"):
-            align = False
-            if df_row["start_year_a_fk"] != df_row["start_year_b_fk"]:
-                align = st.toggle("Align Index Couples", key = "toggle_" + df_row["index_name_fk"], help = "Aligns both index segments to start from the same year. ")
+        plot_mods, plot_events = st.columns(2)
 
-            method = st.radio(
-                "Choose Representation method", 
-                ["Raw Representation", "Normalize", "Standardize", "Base Year Indexing", "Logarithmic Scaling", "Growth Rates"],
-                key = f"temp_{df_row['index_name_fk']}",
-                captions=TIP_TRANSFORMATION_CAPTIONS,
-                help=TIP_TRANSFORMATION_RADIO
-            )
+        with plot_mods:
+            with st.popover("Modify plot representation"):
+                align = False
+                if df_row["start_year_a_fk"] != df_row["start_year_b_fk"]:
+                    align = st.toggle("Align Index Couples", key = "toggle_" + df_row["index_name_fk"], help = "Aligns both index segments to start from the same year. ")
+
+                method = st.radio(
+                    "Choose Representation method", 
+                    ["Raw Representation", "Normalize", "Standardize", "Base Year Indexing", "Logarithmic Scaling", "Growth Rates"],
+                    key = f"temp_{df_row['index_name_fk']}",
+                    captions=TIP_TRANSFORMATION_CAPTIONS,
+                    help=TIP_TRANSFORMATION_RADIO
+                )
+        #similar_events = get_correlated_events_details(df_row)
+        # if len(similar_events) > 0:
+        #     with plot_events:
+        #         add_similar_events = st.toggle(
+        #             "Add Similar Events", 
+        #             key = "toggle_" + df_row["index_name_fk"] + str(df_row["start_year_b_fk"]), 
+        #             help = "Highlights similar pattern events in the plot"
+        #         )
         
         if method != "" or method == "Raw Representation":
             values_a, values_b = apply_method_on_plots(method, values_a, values_b)
@@ -117,7 +167,11 @@ def plot_index_values(df_row):
                     "data": values_a, 
                     "type": "line", # "bar"
                     "name": country_a, 
-                    "emphasis": {"focus": "series"}
+                    "emphasis": {"focus": "series"},
+                    # "markLine": {
+                    #     "symbol": ["none", "none"],  # Hides the markLine symbol
+                    #     "data": []  # We will populate this with our event data
+                    #     },
                 }, 
                 {
                     #"areaStyle": {}
@@ -130,6 +184,18 @@ def plot_index_values(df_row):
                 }
             ],
         }
+
+        # if add_similar_events:
+        #     annotations_a, annotations_b = get_annotations(similar_events)
+        # 
+        #     if not option.get('xAxis').get('axisPointer'):
+        #         option['xAxis']['axisPointer'] = {'show': True}
+        #     if not option.get('annotations'):
+        #         option['annotations'] = []
+
+        #     option['annotations'].extend(annotations_a)
+        #     option['annotations'].extend(annotations_b)
+
         events = {
             #"click": "function(params) { console.log(params.name); return params.name }",
             #"dblclick":"function(params) { return [params.type, params.name, params.value] }"
@@ -282,6 +348,7 @@ def visualize_table(df, display_message, params_validation):
         organizations_column                           = "Organizations"
         correlation_column                             = "Correlation"
         pattern_power_score_column                     = "Pattern Power Score"
+        events_similarity_score                        = "ES Score"
 
         st.dataframe(
             df, # dataframe_explorer(df, case = False), 
@@ -299,29 +366,45 @@ def visualize_table(df, display_message, params_validation):
                     sectors_column,
                     help  = "**Sectors** these patterns cover",
                     width = "medium"
-                )
+                ),
+                events_similarity_score:   st.column_config.NumberColumn(format = "%d", help = "Indicates how many events correlate in this pattern. "),
             },
             use_container_width = True
         )
 
 
-def visualize_plots(df, five_params, page_cols):
+def visualize_plots(df, five_params):
     if isinstance(df, pd.DataFrame) and len(df) > 0 and validate_five_params(five_params):
-        i = 1
-        for _, row in df.iterrows():
-            #graphs_rows.append(row)
-            if i == 1:
-                i = 2
-                with page_cols[0]:
-                    plot_index_values(row)
-            elif i == 2:
-                i = 3
-                with page_cols[1]:
-                    plot_index_values(row)
-            elif i == 3:
-                i = 1
-                with page_cols[2]:
-                    plot_index_values(row)
+        if len(df) >= 5:
+            col1, col2, col3 = st.columns(3)
+            i = 1
+            for _, row in df.iterrows():
+                #graphs_rows.append(row)
+                if i == 1:
+                    i = 2
+                    with col1:
+                        plot_index_values(row)
+                elif i == 2:
+                    i = 3
+                    with col2:
+                        plot_index_values(row)
+                elif i == 3:
+                    i = 1
+                    with col3:
+                        plot_index_values(row)
+        else:
+            col1, col2 = st.columns(2)
+            i = 1
+            for _, row in df.iterrows():
+                #graphs_rows.append(row)
+                if i == 1:
+                    i = 2
+                    with col1:
+                        plot_index_values(row)
+                elif i == 2:
+                    i = 1
+                    with col2:
+                        plot_index_values(row)
 
 
 def categorize_indexes(df):
@@ -485,6 +568,10 @@ def get_events(country_a, year_range_a, country_b, year_range_b):
 
     events_a    = pd.read_csv(EVENTS_CSVS_SOURCE_PATH + country_a + ".csv")
     events_b    = pd.read_csv(EVENTS_CSVS_SOURCE_PATH + country_b + ".csv")
+
+    events_a = events_a[events_a["Year"].between(*year_range_a)]
+    events_b = events_b[events_b["Year"].between(*year_range_b)]
+
     df_filtered = pd.concat([events_a, events_b], ignore_index = True)
     
     # Sort by year for proper chronological order in the timeline

@@ -4,7 +4,7 @@ import os
 import subprocess
 import streamlit as st
 import pandas as pd
-from constant.constant import ALL_COUNTRIES_EVENTS_CSV_PATH
+from constant.constant import EVENTS_CSVS_FOLDER_PATH
 from constant.index_metadata import INDEX_NAMES_THAT_NEED_CHANGING, MAIN_NAMES_THAT_NEED_CHANGING, INDEX_METADATA
 from constant.tips import (
     GET_TIP_PATTERN_LENGTH_RANGE_SLIDER,
@@ -634,7 +634,7 @@ def substitute_main_names(df_row: pd.Series) -> str:
 
 def final_touches_to_df(df):
     df = df.drop(["country_a_id_fk"], axis = 1)
-    df.rename(columns = {"orgs": "Organizations"}, inplace = True)
+    df.rename(columns = {"orgs": "Organizations", "event_correlation_score": "ES Score"}, inplace = True)
     df = switch_columns(df)
     if "Sectors" in list(df):
         df = convert_str_to_list(df, "Sectors")
@@ -722,13 +722,48 @@ def get_country_name_by_id(country_id: str) -> str:
         return None
 
 
-@st.cache_data(ttl=600)
-def get_events_df():
-    df = pd.read_csv(ALL_COUNTRIES_EVENTS_CSV_PATH)
-    for col in list(df):
-        if "Unnamed" in col:
-            df = df.drop([col], axis = 1)
-    return df 
+def check_file_exists(directory_path, file_name):
+    file_path = os.path.join(directory_path, file_name)
+    return os.path.isfile(file_path)
+
+
+def get_correlated_events_details(pattern):
+    # Directly use the country names from the pattern
+    country_a = pattern['country_a_id_fk']
+    country_b = pattern['country_b_id_fk']
+    start_year_a = pattern['start_year_a_fk']
+    start_year_b = pattern['start_year_b_fk']
+    pattern_length = pattern['pattern_length_fk']
+    
+    # st.write("/workspaces/qgi/data/events/Azerbaijan.csv")
+    # st.dataframe(pd.read_csv('/workspaces/qgi/data/events/Azerbaijan.csv'))
+
+    events_a = pd.read_csv(EVENTS_CSVS_FOLDER_PATH + country_a + ".csv")
+    events_b = pd.read_csv(EVENTS_CSVS_FOLDER_PATH + country_b + ".csv")
+
+    # Find the country names from the events DataFrame
+    country_a_name = events_a[events_a['Country'] == country_a]['Country'].unique().tolist()[0]
+    country_b_name = events_b[events_b['Country'] == country_b]['Country'].unique().tolist()[0]
+
+    correlated_events = []
+
+    # Loop through each year in the pattern length
+    for year_offset in range(pattern_length):
+        year_a = start_year_a + year_offset
+        year_b = start_year_b + year_offset
+
+        # Filter events for both countries for the specific year
+        events_a = events_a[(events_a['Country'] == country_a_name) & (events_a['Year'] == year_a)]
+        events_b = events_b[(events_b['Country'] == country_b_name) & (events_b['Year'] == year_b)]
+
+        # Find common events for the specific year based on 'Raw Event'
+        common_events = pd.merge(events_a, events_b, on='Raw Event', how='inner')
+
+        for event in common_events['Raw Event'].unique():
+            correlated_events.append([country_a_name, year_a, event, country_b_name, year_b])
+
+    correlated_events_df = pd.DataFrame(correlated_events, columns=['Country A', 'Year A', 'Event', 'Country B', 'Year B'])
+    return correlated_events_df
 
 
 def get_index_metadata(solo_pattern: pd.Series):
@@ -748,8 +783,3 @@ def get_index_metadata(solo_pattern: pd.Series):
                 return [description, tips, source, citation]
     else:
         return None
-
-
-def check_file_exists(directory_path, file_name):
-    file_path = os.path.join(directory_path, file_name)
-    return os.path.isfile(file_path)
