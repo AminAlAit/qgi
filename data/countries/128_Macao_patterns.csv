@@ -1,1 +1,1 @@
-country_b_id_fk,start_year_a_fk,start_year_b_fk,pattern_length_fk,indexes,avg_corr,orgs,Power,Sectors,event_correlation_score,country_a_id_fk
+country_b_id_fk,start_year_a_fk,start_year_b_fk,pattern_length_fk,indexes,avg_corr,orgs,Power,Sectors,event_correlation_score,country_a_id_fk,event_correlation_count,similar_event_year_a,similar_raw_event,similar_event_year_b

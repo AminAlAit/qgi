@@ -748,3 +748,8 @@ def get_index_metadata(solo_pattern: pd.Series):
                 return [description, tips, source, citation]
     else:
         return None
+
+
+def check_file_exists(directory_path, file_name):
+    file_path = os.path.join(directory_path, file_name)
+    return os.path.isfile(file_path)

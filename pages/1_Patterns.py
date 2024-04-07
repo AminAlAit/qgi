@@ -56,7 +56,6 @@ if st.session_state["show_patterns_popup"]:
 
 ## Page body logic
 def show_search_page():
-    events_df = get_events_df()
     with st.expander("Hey, welcome to **QG Intelligence**!"):
         st.markdown("""
             # Welcome to QG Intelligence
@@ -145,7 +144,7 @@ def show_search_page():
     #align, method                                    = plotting_transformations(five_params)
 
     couple_countries_dashboard(five_params, couple_of_countries, display_df, pattern_power_score, countries_df, plotting_df)
-    display_timeline(five_params, events_df, country_a, start_year_a, country_b, start_year_b, patt_len)
+    display_timeline(five_params, country_a, start_year_a, country_b, start_year_b, patt_len)
 
     col1, col2, col3 = st.columns(3)
     visualize_table(display_df, display_message, validate_five_params(five_params))
