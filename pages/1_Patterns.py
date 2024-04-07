@@ -98,8 +98,7 @@ def show_search_page():
 
         """)
     # Pattern Power Ranking Section
-    ppr_df = pd.read_csv(PPR_PATH)
-    ppr_df = compare_rankings(ppr_df, rows_count = 95000, show_event_cols = False)
+    ppr_df = compare_rankings(PPR_PATH, rows_count = 95000, show_event_cols = False)
 
     with st.expander("You can take some inspiration from the Pattern Power Ranking table here"):
         # unique_sectors = sorted(set(x for l in ppr_df["Sectors"] for x in l))

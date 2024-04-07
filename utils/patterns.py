@@ -160,7 +160,9 @@ def manual_merge_dfs(df1, df2, key_columns):
 
 
 @st.cache_data(ttl=600)
-def compare_rankings(ppr_df, make_countries_index = True, rows_count = 95000, show_event_cols = True):
+def compare_rankings(PPR_PATH, make_countries_index = True, rows_count = 95000, show_event_cols = True):
+    ppr_df = pd.read_csv(PPR_PATH)
+
     # Format Average Correlation as percentage
     ppr_df["avg_corr"] = (ppr_df["avg_corr"] * 100).round(2).astype(str) + "%"
 
@@ -190,9 +192,11 @@ def compare_rankings(ppr_df, make_countries_index = True, rows_count = 95000, sh
     }, inplace = True)
 
     cols_to_keep = ["Country A", "Country B", "Starting Year A", "Starting Year B", "Pattern Length", "Number of Indexes", "Average Correlation", "Organizations", "Pattern Power Ranking"]
+
     if show_event_cols:
         cols_to_keep = cols_to_keep + ["ES Count", "ES Score", "Simialr Event Years A", "Similar Events", "Simialr Event Years B"]
 
+    ppr_df = ppr_df[cols_to_keep]
     ppr_df = ppr_df[pd.notna(ppr_df["Pattern Power Ranking"])]
     ppr_df = ppr_df.sort_values(by = "Pattern Power Ranking", ascending = False)
 

@@ -16,9 +16,8 @@ center_running()
 
 def show_base_page():
     st.markdown("# QG Intelligence")
-    ppr_df = pd.read_csv(PPR_PATH)
     col1, col2 = st.columns([3, 1])
-    ppr_df = compare_rankings(ppr_df, make_countries_index = False)
+    ppr_df = compare_rankings(PPR_PATH, make_countries_index = False)
 
     with col1:
         with st.container(border = True):
