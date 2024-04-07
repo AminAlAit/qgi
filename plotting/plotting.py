@@ -325,7 +325,7 @@ def apply_method_on_plots(method, values_a, values_b):
     return values_a, values_b
 
 
-def visualize_table(df, display_message, params_validation):
+def visualize_table(df, display_message, params_validation, country_a, country_b):
     if df is not None and len(df) > 0 and not params_validation:
         st.markdown(display_message)
 
@@ -340,7 +340,7 @@ def visualize_table(df, display_message, params_validation):
 
         #flags_column                                   = "Flags"
         country_b_column                               = [col for col in list(df) if "has Patterns with" in col][0]
-        country_b                                      = country_b_column.split(" ")[0]
+        #country_b                                      = country_b_column.split(" ")[0]
         starting_year_column_a, starting_year_column_b = [col for col in list(df) if "Starting Year" in col]
         sectors_column                                 = "Sectors"
         pattern_length_column                          = "Pattern Length"
@@ -349,6 +349,10 @@ def visualize_table(df, display_message, params_validation):
         correlation_column                             = "Correlation"
         pattern_power_score_column                     = "Pattern Power Score"
         events_similarity_score                        = "ES Score"
+        events_similarity_count                        = "event_correlation_count"
+        similar_event_year_a                           = "similar_event_year_a"
+        similar_raw_event                              = "similar_raw_event"
+        similar_event_year_b                           = "similar_event_year_b"
 
         st.dataframe(
             df, # dataframe_explorer(df, case = False), 
@@ -367,7 +371,11 @@ def visualize_table(df, display_message, params_validation):
                     help  = "**Sectors** these patterns cover",
                     width = "medium"
                 ),
-                events_similarity_score:   st.column_config.NumberColumn(format = "%d", help = "Indicates how many events correlate in this pattern. "),
+                events_similarity_score:   st.column_config.NumberColumn(format = "%d", help = "Indicates similarity score between index segments of this single-index pattern. "),
+                events_similarity_count:   st.column_config.NumberColumn(label = "ES Count", help = "Indicates how many events correlate in this pattern. "),
+                similar_event_year_a:      st.column_config.NumberColumn(label = f"Similar Event Years - {country_a}", format = "%d", help = f"List of years of the similar events for {country_a}"),
+                similar_raw_event:         st.column_config.Column(label = "Similar Events", help = f"List of similar events between in this pattern between {country_a} and {country_b}"),
+                similar_event_year_b:      st.column_config.NumberColumn(label = f"Similar Event Years - {country_b}", format = "%d", help = f"List of years of the similar events for {country_b}")
             },
             use_container_width = True
         )

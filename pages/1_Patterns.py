@@ -49,10 +49,6 @@ if st.session_state["show_patterns_popup"]:
     st.session_state["show_patterns_popup"] = False
 
 
-## Page data load
-
-
-
 ## Page body logic
 def show_search_page():
     with st.expander("Hey, welcome to **QG Intelligence**!"):
@@ -144,9 +140,7 @@ def show_search_page():
 
     couple_countries_dashboard(five_params, couple_of_countries, display_df, pattern_power_score, countries_df, plotting_df)
     display_timeline(five_params, country_a, start_year_a, country_b, start_year_b, patt_len)
-
-    
-    visualize_table(display_df, display_message, validate_five_params(five_params))
+    visualize_table(display_df, display_message, validate_five_params(five_params), country_a, country_b)
     visualize_plots(plotting_df, five_params)
 
 show_search_page()
