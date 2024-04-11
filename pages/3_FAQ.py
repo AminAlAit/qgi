@@ -1,7 +1,8 @@
 import streamlit as st
 
-# Title for the FAQ page
+st.set_page_config(layout = "wide", page_title = "QGI - FAQ", page_icon = "❓")
 st.title("Frequently Asked Questions")
+
 
 faqs = [
     (
@@ -50,11 +51,11 @@ faqs = [
     ),
 ]
 
-# Iterating through the list of FAQs to create an expander for each
+
 for question, answer in faqs:
     with st.expander(question):
         st.markdown(answer)
 
-# Optionally, add a contact form or additional information at the bottom
+
 st.markdown("## Your questions is not answered?")
 st.markdown("Feel free to [contact us](https://qgintelligence.streamlit.app/Contact) with any additional questions or feedback!")
