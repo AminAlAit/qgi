@@ -5,6 +5,10 @@ import streamlit                        as st
 st.set_page_config(layout = "wide", page_title = "Say Hi!", page_icon = "👋")
 center_running()
 
+if 'message_sent' in st.query_params:
+    st.experimental_set_query_params()  # clear the query after showing toast
+    st.toast("Thank you for your message! We will get back to you shortly.", duration=5, icon='👋')
+
 
 st.header(":mailbox: Get it touch!")
 
@@ -14,7 +18,7 @@ contact_form_html = """
       <input type="hidden" name="_captcha" value="false">
       <input type="text" name="name" placeholder="Your name" required>
       <input type="email" name="email" placeholder="Your email" required>
-      <input type="hidden" name="_next" value="https://qgintelligence.streamlit.app/Contact">
+      <input type="hidden" name="_next" value="https://qgintelligence.streamlit.app/Contact?message_sent=true">
       <textarea name="message" placeholder="Your message here"></textarea>
       <button type="submit">Send</button>
  </form>
