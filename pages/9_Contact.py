@@ -15,17 +15,39 @@ if 'message_sent' in st.query_params:
 st.header(":mailbox: Get it touch!")
 
 
+# contact_form_html = """
+#  <form action="https://formsubmit.co/qgintelligence@gmail.com" method="POST">
+#       <input type="hidden" name="_captcha" value="false">
+#       <input type="text" name="name" placeholder="Your name" required>
+#       <input type="email" name="email" placeholder="Your email" required>
+#       <input type="hidden" name="_next" value="https://qgintelligence.streamlit.app/Contact?message_sent=true">
+#       <textarea name="message" placeholder="Your message here"></textarea>
+#       <button type="submit">Send</button>
+#  </form>
+#  """
+# st.markdown(contact_form_html, unsafe_allow_html = True)
+
+
 contact_form_html = """
- <form action="https://formsubmit.co/qgintelligence@gmail.com" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="text" name="name" placeholder="Your name" required>
-      <input type="email" name="email" placeholder="Your email" required>
-      <input type="hidden" name="_next" value="https://qgintelligence.streamlit.app/Contact?message_sent=true">
-      <textarea name="message" placeholder="Your message here"></textarea>
-      <button type="submit">Send</button>
- </form>
- """
-st.markdown(contact_form_html, unsafe_allow_html = True)
+<form action="https://formsubmit.co/qgintelligence@gmail.com" method="POST" onsubmit="disableSubmitButton()">
+     <input type="hidden" name="_captcha" value="false">
+     <input type="text" name="name" placeholder="Your name" required>
+     <input type="email" name="email" placeholder="Your email" required>
+     <input type="hidden" name="_next" value="https://qgintelligence.streamlit.app/Contact?message_sent=true">
+     <textarea name="message" placeholder="Your message here"></textarea>
+     <button type="submit" id="submitBtn">Send</button>
+</form>
+<script>
+function disableSubmitButton() {
+    document.getElementById('submitBtn').disabled = true;
+    document.getElementById('submitBtn').innerText = 'Sending...';
+    return true; // Ensure form still submits
+}
+</script>
+"""
+
+st.markdown(contact_form_html, unsafe_allow_html=True)
+
 
 
 def local_css(file_name):
