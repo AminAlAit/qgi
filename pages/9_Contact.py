@@ -6,7 +6,7 @@ st.set_page_config(layout = "wide", page_title = "Say Hi!", page_icon = "👋")
 center_running()
 
 if 'message_sent' in st.query_params:
-    st.experimental_set_query_params()  # clear the query after showing toast
+    st.query_params.clear()
     st.toast("Thank you for your message! We will get back to you shortly.", duration=5, icon='👋')
 
 
