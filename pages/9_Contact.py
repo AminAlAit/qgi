@@ -9,7 +9,7 @@ st.write(st.query_params)
 
 if 'message_sent' in st.query_params:
     st.query_params.clear()
-    st.toast("Thank you for your message! We will get back to you shortly.", duration=5, icon='👋')
+    st.toast("Thank you for your message! We will get back to you shortly.", icon='👋')
 
 
 st.header(":mailbox: Get it touch!")
