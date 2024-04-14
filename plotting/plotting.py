@@ -492,7 +492,7 @@ def couple_countries_dashboard(five_params, countries, display_df, pattern_power
             with st.container(border = True):
                 st.image(f"https://flagcdn.com/h240/{get_alpha2_by_name(country_a).lower()}.png")
             st.markdown(f"<h2 style='text-align: center;'>{country_a}</h2>", unsafe_allow_html = True)
-            st.markdown(f"<h3 style='text-align: center;'>{str(int(start_year_a))} - {str(int(start_year_a) + patt_len)}</h3>", unsafe_allow_html = True)
+            st.markdown(f"<h3 style='text-align: center;'>{str(int(start_year_a))} - {str(int(start_year_a) + patt_len - 1)}</h3>", unsafe_allow_html = True)
         with col3:
             ## Mid screen: Indexes
             #st.markdown(f"<h1 style='text-align: center;'>{len(display_df)}</h1>", unsafe_allow_html = True)
@@ -509,7 +509,7 @@ def couple_countries_dashboard(five_params, countries, display_df, pattern_power
             with st.container(border = True):
                 st.image(f"https://flagcdn.com/h240/{get_alpha2_by_name(country_b).lower()}.png")    
             st.markdown(f"<h2 style='text-align: center;'>{country_b}</h2>", unsafe_allow_html = True)
-            st.markdown(f"<h3 style='text-align: center;'>{str(int(start_year_b))} - {str(int(start_year_b) + patt_len)}</h3>", unsafe_allow_html = True)
+            st.markdown(f"<h3 style='text-align: center;'>{str(int(start_year_b))} - {str(int(start_year_b) + patt_len - 1)}</h3>", unsafe_allow_html = True)
         with col5:
             #with st.container(border=True, height = 672):
             ## Pattern Partners Country B
