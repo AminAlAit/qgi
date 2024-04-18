@@ -1,4 +1,5 @@
 import math
+import os
 import numpy as np
 import pandas as pd
 from constant.constant import EVENTS_CSVS_FOLDER_PATH
@@ -570,21 +571,19 @@ def display_timeline(five_params, country_a, start_year_a, country_b, start_year
 def get_events(country_a, year_range_a, country_b, year_range_b):
     EVENTS_CSVS_SOURCE_PATH = r"/workspaces/qgi/data/events/"
 
+    country_a_path = os.path.join(EVENTS_CSVS_SOURCE_PATH, country_a + ".csv")
+    st.write(country_a_path)
+    country_a_path = country_a_path.strip()
 
 
+    country_b_path = os.path.join(EVENTS_CSVS_SOURCE_PATH, country_b + ".csv")
+    st.write(country_b_path)
+    country_b_path = country_b_path.strip()
 
-    st.write(country_a)
-    st.write(country_b)
+    st.write(country_a_path)
+    st.write(country_b_path)
 
-    st.write(EVENTS_CSVS_SOURCE_PATH, country_a + ".csv")
-    st.write(EVENTS_CSVS_SOURCE_PATH, country_b + ".csv")
-
-    st.write("////////////////////////////////////////////////////////////")
-    st.write(check_file_exists(EVENTS_CSVS_SOURCE_PATH, country_a + ".csv"))
-    st.write(check_file_exists(EVENTS_CSVS_SOURCE_PATH, country_b + ".csv"))
-    st.write("////////////////////////////////////////////////////////////")
-
-    if not (check_file_exists(EVENTS_CSVS_SOURCE_PATH, country_a + ".csv") and check_file_exists(EVENTS_CSVS_SOURCE_PATH, country_b + ".csv")):
+    if not (check_file_exists(country_a_path) and check_file_exists(country_b_path)):
         return None
 
     events_a = pd.read_csv(EVENTS_CSVS_SOURCE_PATH + country_a + ".csv")
