@@ -5,6 +5,7 @@ import pandas as pd
 from constant.constant import EVENTS_CSVS_FOLDER_PATH
 from constant.sectors import SECTOR_MAPPING
 from constant.tips import TIP_TRANSFORMATION_CAPTIONS, TIP_TRANSFORMATION_RADIO
+from data.events.read_events import read_events_as_df
 from database.db_manager import get_alpha2_by_name, get_country_b_counts_for_country_a
 from utils.utils import check_file_exists, combine_values, final_touches_to_df, get_correlated_events_details, get_index_metadata, replace_item_in_list, round_list_items, validate_five_params
 from streamlit_echarts import st_echarts, JsCode
@@ -584,8 +585,8 @@ def get_events(country_a, year_range_a, country_b, year_range_b):
     st.write(country_b_path)
     st.write(os.path.isfile(country_a_path))
     st.write(os.path.isfile(country_b_path))
-    st.dataframe(pd.read_csv(country_a_path).head())
-    st.dataframe(pd.read_csv(country_b_path).head())
+    st.dataframe(read_events_as_df(country_a).head())
+    st.dataframe(read_events_as_df(country_b).head())
 
     if not (check_file_exists(country_a_path) and check_file_exists(country_b_path)):
         return None
