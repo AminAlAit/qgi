@@ -578,19 +578,14 @@ def get_events(country_a, year_range_a, country_b, year_range_b):
     country_b_path = os.path.join(EVENTS_CSVS_SOURCE_PATH, country_b + ".csv")
     country_b_path = country_b_path.strip()
 
-    res_a = read_events_as_df(country_a)
-    res_b = read_events_as_df(country_b)
+    events_a = read_events_as_df(country_a)
+    events_b = read_events_as_df(country_b)
 
-    #st.dataframe(pd.read_csv('/workspaces/qgi/data/events/United States.csv').head())
-
-    # st.write(res_a)
-    # st.write(res_b)
-
-    if not (isinstance(res_a, pd.DataFrame) and isinstance(res_b, pd.DataFrame)):
+    if not (isinstance(events_a, pd.DataFrame) and isinstance(events_b, pd.DataFrame)):
         return None
 
-    events_a = pd.read_csv(EVENTS_CSVS_SOURCE_PATH + country_a + ".csv")
-    events_b = pd.read_csv(EVENTS_CSVS_SOURCE_PATH + country_b + ".csv")
+    # events_a = pd.read_csv(EVENTS_CSVS_SOURCE_PATH + country_a + ".csv")
+    # events_b = pd.read_csv(EVENTS_CSVS_SOURCE_PATH + country_b + ".csv")
 
     events_a = events_a[events_a["Year"].between(*year_range_a)]
     events_b = events_b[events_b["Year"].between(*year_range_b)]
