@@ -581,6 +581,8 @@ def get_events(country_a, year_range_a, country_b, year_range_b):
     res_a = read_events_as_df(country_a)
     res_b = read_events_as_df(country_b)
 
+    #st.dataframe(pd.read_csv('/workspaces/qgi/data/events/United States.csv').head())
+
     # st.write(res_a)
     # st.write(res_b)
 
