@@ -584,9 +584,6 @@ def get_events(country_a, year_range_a, country_b, year_range_b):
     if not (isinstance(events_a, pd.DataFrame) and isinstance(events_b, pd.DataFrame)):
         return None
 
-    # events_a = pd.read_csv(EVENTS_CSVS_SOURCE_PATH + country_a + ".csv")
-    # events_b = pd.read_csv(EVENTS_CSVS_SOURCE_PATH + country_b + ".csv")
-
     events_a = events_a[events_a["Year"].between(*year_range_a)]
     events_b = events_b[events_b["Year"].between(*year_range_b)]
 
