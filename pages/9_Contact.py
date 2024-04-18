@@ -5,8 +5,6 @@ import streamlit                        as st
 st.set_page_config(layout = "wide", page_title = "Say Hi!", page_icon = "👋")
 center_running()
 
-st.write(st.query_params)
-
 if 'message_sent' in st.query_params:
     st.query_params.clear()
     st.toast("Thank you for your message! We will get back to you shortly.", icon='👋')
