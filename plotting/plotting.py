@@ -545,9 +545,7 @@ def display_timeline(five_params, events_df, country_a, start_year_a, country_b,
 
 
 def display_timeline(five_params, country_a, start_year_a, country_b, start_year_b, patt_len):
-    st.write("11111111111111111111111111")
     if validate_five_params(five_params):
-        st.write("222222222222222222222222222")
         # Alt: https://github.com/giswqs/streamlit-timeline
         # https://github.com/innerdoc/nlp-history-timeline
         # https://github.com/innerdoc/streamlit-timeline
@@ -557,34 +555,31 @@ def display_timeline(five_params, country_a, start_year_a, country_b, start_year
         # with open(r"C:\Users\Amin\Desktop\trojan\trojan 2.0\data\events\JSON\sample.json", "r") as f:
         #     data = f.read()
         
-        st.write("333333333333333333333333333333333333333333333333333333")
         events = get_events(
             country_a, 
             (start_year_a, start_year_a + patt_len),
             country_b,
             (start_year_b, start_year_b + patt_len)
         )
-        st.write("444444444444444444444444444444444444444444444444444444")
-
-        st.write(events)
-        st.write(str(type(events)))
-
         if events is not None:
             st.markdown("___")
-            st.write("55555555555555555555555555555555555555555555555555555")
             st_t.timeline(events, height = 750)
-            st.write("66666666666666666666666666666666666666666666666666666")
             st.markdown("___")
 
 
 def get_events(country_a, year_range_a, country_b, year_range_b):
     EVENTS_CSVS_SOURCE_PATH = r"/workspaces/qgi/data/events/"
 
+    st.write("////////////////////////////////////////////////////////////")
+    st.write(check_file_exists(EVENTS_CSVS_SOURCE_PATH, country_a + ".csv"))
+    st.write(check_file_exists(EVENTS_CSVS_SOURCE_PATH, country_b + ".csv"))
+    st.write("////////////////////////////////////////////////////////////")
+
     if not (check_file_exists(EVENTS_CSVS_SOURCE_PATH, country_a + ".csv") and check_file_exists(EVENTS_CSVS_SOURCE_PATH, country_b + ".csv")):
         return None
 
-    events_a    = pd.read_csv(EVENTS_CSVS_SOURCE_PATH + country_a + ".csv")
-    events_b    = pd.read_csv(EVENTS_CSVS_SOURCE_PATH + country_b + ".csv")
+    events_a = pd.read_csv(EVENTS_CSVS_SOURCE_PATH + country_a + ".csv")
+    events_b = pd.read_csv(EVENTS_CSVS_SOURCE_PATH + country_b + ".csv")
 
     events_a = events_a[events_a["Year"].between(*year_range_a)]
     events_b = events_b[events_b["Year"].between(*year_range_b)]
