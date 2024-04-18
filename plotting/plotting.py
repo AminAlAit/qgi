@@ -545,7 +545,9 @@ def display_timeline(five_params, events_df, country_a, start_year_a, country_b,
 
 
 def display_timeline(five_params, country_a, start_year_a, country_b, start_year_b, patt_len):
+    st.write("11111111111111111111111111")
     if validate_five_params(five_params):
+        st.write("222222222222222222222222222")
         # Alt: https://github.com/giswqs/streamlit-timeline
         # https://github.com/innerdoc/nlp-history-timeline
         # https://github.com/innerdoc/streamlit-timeline
@@ -555,16 +557,20 @@ def display_timeline(five_params, country_a, start_year_a, country_b, start_year
         # with open(r"C:\Users\Amin\Desktop\trojan\trojan 2.0\data\events\JSON\sample.json", "r") as f:
         #     data = f.read()
         
+        st.write("333333333333333333333333333333333333333333333333333333")
         events = get_events(
             country_a, 
             (start_year_a, start_year_a + patt_len),
             country_b,
             (start_year_b, start_year_b + patt_len)
         )
+        st.write("444444444444444444444444444444444444444444444444444444")
 
         if events is not None:
             st.markdown("___")
+            st.write("55555555555555555555555555555555555555555555555555555")
             st_t.timeline(events, height = 750)
+            st.write("66666666666666666666666666666666666666666666666666666")
             st.markdown("___")
 
 
