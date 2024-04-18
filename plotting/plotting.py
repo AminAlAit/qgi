@@ -570,6 +570,9 @@ def display_timeline(five_params, country_a, start_year_a, country_b, start_year
 def get_events(country_a, year_range_a, country_b, year_range_b):
     EVENTS_CSVS_SOURCE_PATH = r"/workspaces/qgi/data/events/"
 
+    st.write(EVENTS_CSVS_SOURCE_PATH, country_a + ".csv")
+    st.write(EVENTS_CSVS_SOURCE_PATH, country_b + ".csv")
+
     st.write("////////////////////////////////////////////////////////////")
     st.write(check_file_exists(EVENTS_CSVS_SOURCE_PATH, country_a + ".csv"))
     st.write(check_file_exists(EVENTS_CSVS_SOURCE_PATH, country_b + ".csv"))
