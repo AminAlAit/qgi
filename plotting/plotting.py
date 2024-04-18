@@ -566,6 +566,9 @@ def display_timeline(five_params, country_a, start_year_a, country_b, start_year
         )
         st.write("444444444444444444444444444444444444444444444444444444")
 
+        st.write(events)
+        st.write(str(type(events)))
+
         if events is not None:
             st.markdown("___")
             st.write("55555555555555555555555555555555555555555555555555555")
