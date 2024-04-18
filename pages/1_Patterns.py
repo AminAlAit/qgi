@@ -2,7 +2,6 @@
 
 from streamlit_extras.customize_running import center_running
 from streamlit_modal import Modal
-import pandas as pd
 import streamlit as st
 from constant.constant import PPR_PATH
 from utils.patterns import compare_rankings, extract_and_rank_patterns_for_country

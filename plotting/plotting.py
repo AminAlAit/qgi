@@ -582,6 +582,10 @@ def get_events(country_a, year_range_a, country_b, year_range_b):
 
     st.write(country_a_path)
     st.write(country_b_path)
+    st.write(os.path.isfile(country_a_path))
+    st.write(os.path.isfile(country_b_path))
+    st.dataframe(pd.read_csv(country_a_path).head())
+    st.dataframe(pd.read_csv(country_b_path).head())
 
     if not (check_file_exists(country_a_path) and check_file_exists(country_b_path)):
         return None
