@@ -15,7 +15,6 @@ from utils.utils import (
     get_pattern_power_score,
     get_start_year_a,
     get_start_year_b,
-    plotting_transformations,
     prepare_display_df_for_viz,
     process_display_dataframe,
     rename_display_df_columns,

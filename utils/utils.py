@@ -722,10 +722,6 @@ def get_country_name_by_id(country_id: str) -> str:
         return None
 
 
-def check_file_exists(path):
-    return os.path.isfile(path)
-
-
 def get_correlated_events_details(pattern):
     # Directly use the country names from the pattern
     country_a = pattern['country_a_id_fk']

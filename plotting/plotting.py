@@ -7,7 +7,7 @@ from constant.sectors import SECTOR_MAPPING
 from constant.tips import TIP_TRANSFORMATION_CAPTIONS, TIP_TRANSFORMATION_RADIO
 from data.events.read_events import read_events_as_df
 from database.db_manager import get_alpha2_by_name, get_country_b_counts_for_country_a
-from utils.utils import check_file_exists, combine_values, final_touches_to_df, get_correlated_events_details, get_index_metadata, replace_item_in_list, round_list_items, validate_five_params
+from utils.utils import combine_values, final_touches_to_df, get_correlated_events_details, get_index_metadata, replace_item_in_list, round_list_items, validate_five_params
 from streamlit_echarts import st_echarts, JsCode
 import streamlit as st
 from streamlit_extras.dataframe_explorer import dataframe_explorer
@@ -573,22 +573,18 @@ def get_events(country_a, year_range_a, country_b, year_range_b):
     EVENTS_CSVS_SOURCE_PATH = r"/workspaces/qgi/data/events/"
 
     country_a_path = os.path.join(EVENTS_CSVS_SOURCE_PATH, country_a + ".csv")
-    st.write(country_a_path)
     country_a_path = country_a_path.strip()
 
-
     country_b_path = os.path.join(EVENTS_CSVS_SOURCE_PATH, country_b + ".csv")
-    st.write(country_b_path)
     country_b_path = country_b_path.strip()
 
-    st.write(country_a_path)
-    st.write(country_b_path)
-    st.write(os.path.isfile(country_a_path))
-    st.write(os.path.isfile(country_b_path))
-    st.dataframe(read_events_as_df(country_a).head())
-    st.dataframe(read_events_as_df(country_b).head())
+    res_a = read_events_as_df(country_a)
+    res_b = read_events_as_df(country_b)
 
-    if not (check_file_exists(country_a_path) and check_file_exists(country_b_path)):
+    # st.write(res_a)
+    # st.write(res_b)
+
+    if not (isinstance(res_a, pd.DataFrame) and isinstance(res_b, pd.DataFrame)):
         return None
 
     events_a = pd.read_csv(EVENTS_CSVS_SOURCE_PATH + country_a + ".csv")
