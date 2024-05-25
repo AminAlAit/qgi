@@ -200,7 +200,7 @@ def compare_rankings(PPR_PATH, make_countries_index = True, rows_count = 95000, 
         "Similar Events", "Simialr Event Years B"]
 
     if show_event_cols:
-        cols_to_keep = cols_to_keep + ["ES Count", "ES Score", "Simialr Event Years A", "Similar Events", "Simialr Event Years B"]
+        cols_to_keep = cols_to_keep + ["ES Count", "Simialr Event Years A", "Similar Events", "Simialr Event Years B"]
 
     ppr_df = ppr_df[cols_to_keep]
     ppr_df = ppr_df[pd.notna(ppr_df["Pattern Power Ranking"])]
