@@ -160,7 +160,9 @@ def manual_merge_dfs(df1, df2, key_columns):
 
 
 @st.cache_data(ttl=600)
-def compare_rankings(ppr_df, make_countries_index = True):
+def compare_rankings(PPR_PATH, make_countries_index = True, rows_count = 95000, show_event_cols = True):
+    ppr_df = pd.read_csv(PPR_PATH)
+
     # Format Average Correlation as percentage
     ppr_df["avg_corr"] = (ppr_df["avg_corr"] * 100).round(2).astype(str) + "%"
 
@@ -181,12 +183,20 @@ def compare_rankings(ppr_df, make_countries_index = True):
         "Power": "Pattern Power Ranking",
         "indexes": "Number of Indexes",
         "avg_corr": "Average Correlation",
-        "orgs": "Organizations"
+        "orgs": "Organizations",
+        "event_correlation_count": "ES Count",
+        "event_correlation_score": "ES Score",
+        "similar_event_year_a": "Simialr Event Years A",
+        "similar_raw_event": "Similar Events",
+        "similar_event_year_b": "Simialr Event Years B",
     }, inplace = True)
 
-    # ppr_df = ppr_df[[" ", "Country A", "Country B", "Starting Year A", "Starting Year B", "Pattern Length", "Number of Indexes", "Average Correlation", "Organizations", "Pattern Power Ranking"]]
+    cols_to_keep = ["Country A", "Country B", "Starting Year A", "Starting Year B", "Pattern Length", "Number of Indexes", "Average Correlation", "Organizations", "Pattern Power Ranking"]
 
-    ppr_df = ppr_df[["Country A", "Country B", "Starting Year A", "Starting Year B", "Pattern Length", "Number of Indexes", "Average Correlation", "Organizations", "Pattern Power Ranking"]]
+    if show_event_cols:
+        cols_to_keep = cols_to_keep + ["ES Count", "ES Score", "Simialr Event Years A", "Similar Events", "Simialr Event Years B"]
+
+    ppr_df = ppr_df[cols_to_keep]
     ppr_df = ppr_df[pd.notna(ppr_df["Pattern Power Ranking"])]
     ppr_df = ppr_df.sort_values(by = "Pattern Power Ranking", ascending = False)
 
@@ -198,6 +208,9 @@ def compare_rankings(ppr_df, make_countries_index = True):
     #     ppr_df.set_index(["Country A", "Country B"], inplace = True)
     
     #ppr_df = ppr_df.style.applymap(color_countries, subset=["Country A", "Country B"])
+
+    ppr_df.index = [i + 1 for i in range(len(ppr_df))]
+    ppr_df = ppr_df.head(rows_count)
     return ppr_df
 
 

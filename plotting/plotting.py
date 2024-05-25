@@ -1,11 +1,13 @@
 import math
+import os
 import numpy as np
 import pandas as pd
 from constant.constant import EVENTS_CSVS_FOLDER_PATH
 from constant.sectors import SECTOR_MAPPING
 from constant.tips import TIP_TRANSFORMATION_CAPTIONS, TIP_TRANSFORMATION_RADIO
+from data.events.read_events import read_events_as_df
 from database.db_manager import get_alpha2_by_name, get_country_b_counts_for_country_a
-from utils.utils import check_file_exists, combine_values, final_touches_to_df, get_correlated_events_details, get_index_metadata, replace_item_in_list, round_list_items, validate_five_params
+from utils.utils import combine_values, final_touches_to_df, get_correlated_events_details, get_index_metadata, replace_item_in_list, round_list_items, validate_five_params
 from streamlit_echarts import st_echarts, JsCode
 import streamlit as st
 from streamlit_extras.dataframe_explorer import dataframe_explorer
@@ -325,7 +327,7 @@ def apply_method_on_plots(method, values_a, values_b):
     return values_a, values_b
 
 
-def visualize_table(df, display_message, params_validation):
+def visualize_table(df, display_message, params_validation, country_a, country_b):
     if df is not None and len(df) > 0 and not params_validation:
         st.markdown(display_message)
 
@@ -340,7 +342,7 @@ def visualize_table(df, display_message, params_validation):
 
         #flags_column                                   = "Flags"
         country_b_column                               = [col for col in list(df) if "has Patterns with" in col][0]
-        country_b                                      = country_b_column.split(" ")[0]
+        #country_b                                      = country_b_column.split(" ")[0]
         starting_year_column_a, starting_year_column_b = [col for col in list(df) if "Starting Year" in col]
         sectors_column                                 = "Sectors"
         pattern_length_column                          = "Pattern Length"
@@ -349,6 +351,10 @@ def visualize_table(df, display_message, params_validation):
         correlation_column                             = "Correlation"
         pattern_power_score_column                     = "Pattern Power Score"
         events_similarity_score                        = "ES Score"
+        events_similarity_count                        = "event_correlation_count"
+        similar_event_year_a                           = "similar_event_year_a"
+        similar_raw_event                              = "similar_raw_event"
+        similar_event_year_b                           = "similar_event_year_b"
 
         st.dataframe(
             df, # dataframe_explorer(df, case = False), 
@@ -367,7 +373,11 @@ def visualize_table(df, display_message, params_validation):
                     help  = "**Sectors** these patterns cover",
                     width = "medium"
                 ),
-                events_similarity_score:   st.column_config.NumberColumn(format = "%d", help = "Indicates how many events correlate in this pattern. "),
+                events_similarity_score:   st.column_config.NumberColumn(format = "%d", help = "Indicates similarity score between index segments of this single-index pattern. "),
+                events_similarity_count:   st.column_config.NumberColumn(label = "ES Count", help = "Indicates how many events correlate in this pattern. "),
+                similar_event_year_a:      st.column_config.NumberColumn(label = f"Similar Event Years - {country_a}", format = "%d", help = f"List of years of the similar events for {country_a}"),
+                similar_raw_event:         st.column_config.Column(label = "Similar Events", help = f"List of similar events between in this pattern between {country_a} and {country_b}"),
+                similar_event_year_b:      st.column_config.NumberColumn(label = f"Similar Event Years - {country_b}", format = "%d", help = f"List of years of the similar events for {country_b}")
             },
             use_container_width = True
         )
@@ -484,7 +494,7 @@ def couple_countries_dashboard(five_params, countries, display_df, pattern_power
             with st.container(border = True):
                 st.image(f"https://flagcdn.com/h240/{get_alpha2_by_name(country_a).lower()}.png")
             st.markdown(f"<h2 style='text-align: center;'>{country_a}</h2>", unsafe_allow_html = True)
-            st.markdown(f"<h3 style='text-align: center;'>{str(int(start_year_a))} - {str(int(start_year_a) + patt_len)}</h3>", unsafe_allow_html = True)
+            st.markdown(f"<h3 style='text-align: center;'>{str(int(start_year_a))} - {str(int(start_year_a) + patt_len - 1)}</h3>", unsafe_allow_html = True)
         with col3:
             ## Mid screen: Indexes
             #st.markdown(f"<h1 style='text-align: center;'>{len(display_df)}</h1>", unsafe_allow_html = True)
@@ -501,7 +511,7 @@ def couple_countries_dashboard(five_params, countries, display_df, pattern_power
             with st.container(border = True):
                 st.image(f"https://flagcdn.com/h240/{get_alpha2_by_name(country_b).lower()}.png")    
             st.markdown(f"<h2 style='text-align: center;'>{country_b}</h2>", unsafe_allow_html = True)
-            st.markdown(f"<h3 style='text-align: center;'>{str(int(start_year_b))} - {str(int(start_year_b) + patt_len)}</h3>", unsafe_allow_html = True)
+            st.markdown(f"<h3 style='text-align: center;'>{str(int(start_year_b))} - {str(int(start_year_b) + patt_len - 1)}</h3>", unsafe_allow_html = True)
         with col5:
             #with st.container(border=True, height = 672):
             ## Pattern Partners Country B
@@ -553,7 +563,6 @@ def display_timeline(five_params, country_a, start_year_a, country_b, start_year
             country_b,
             (start_year_b, start_year_b + patt_len)
         )
-
         if events is not None:
             st.markdown("___")
             st_t.timeline(events, height = 750)
@@ -563,11 +572,17 @@ def display_timeline(five_params, country_a, start_year_a, country_b, start_year
 def get_events(country_a, year_range_a, country_b, year_range_b):
     EVENTS_CSVS_SOURCE_PATH = r"/workspaces/qgi/data/events/"
 
-    if not (check_file_exists(EVENTS_CSVS_SOURCE_PATH, country_a + ".csv") and check_file_exists(EVENTS_CSVS_SOURCE_PATH, country_b + ".csv")):
-        return None
+    country_a_path = os.path.join(EVENTS_CSVS_SOURCE_PATH, country_a + ".csv")
+    country_a_path = country_a_path.strip()
 
-    events_a    = pd.read_csv(EVENTS_CSVS_SOURCE_PATH + country_a + ".csv")
-    events_b    = pd.read_csv(EVENTS_CSVS_SOURCE_PATH + country_b + ".csv")
+    country_b_path = os.path.join(EVENTS_CSVS_SOURCE_PATH, country_b + ".csv")
+    country_b_path = country_b_path.strip()
+
+    events_a = read_events_as_df(country_a)
+    events_b = read_events_as_df(country_b)
+
+    if not (isinstance(events_a, pd.DataFrame) and isinstance(events_b, pd.DataFrame)):
+        return None
 
     events_a = events_a[events_a["Year"].between(*year_range_a)]
     events_b = events_b[events_b["Year"].between(*year_range_b)]

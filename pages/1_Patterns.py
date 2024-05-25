@@ -2,7 +2,6 @@
 
 from streamlit_extras.customize_running import center_running
 from streamlit_modal import Modal
-import pandas as pd
 import streamlit as st
 from constant.constant import PPR_PATH
 from utils.patterns import compare_rankings, extract_and_rank_patterns_for_country
@@ -16,7 +15,6 @@ from utils.utils import (
     get_pattern_power_score,
     get_start_year_a,
     get_start_year_b,
-    plotting_transformations,
     prepare_display_df_for_viz,
     process_display_dataframe,
     rename_display_df_columns,
@@ -47,10 +45,6 @@ if st.session_state["show_patterns_popup"]:
             Inputting these 5 key elements, will present you with the pattern dashboard. Go crazy! 🤘
         """)
     st.session_state["show_patterns_popup"] = False
-
-
-## Page data load
-
 
 
 ## Page body logic
@@ -102,15 +96,14 @@ def show_search_page():
 
         """)
     # Pattern Power Ranking Section
-    ppr_df = pd.read_csv(PPR_PATH)
-    ppr_df = compare_rankings(ppr_df)
+    ppr_df = compare_rankings(PPR_PATH, rows_count = 95000, show_event_cols = False)
 
     with st.expander("You can take some inspiration from the Pattern Power Ranking table here"):
         # unique_sectors = sorted(set(x for l in ppr_df["Sectors"] for x in l))
         # selected_sectors = st.multiselect("Filter based on Sectors:", unique_sectors)
         # if selected_sectors:
         #     ppr_df = ppr_df[ppr_df["Sectors"].apply(lambda x: all(sector in x for sector in selected_sectors))]
-        ppr_df.index = [i + 1 for i in range(len(ppr_df))]
+        
         st.dataframe(ppr_df, use_container_width = True)
     st.markdown("___")
 
@@ -144,9 +137,7 @@ def show_search_page():
 
     couple_countries_dashboard(five_params, couple_of_countries, display_df, pattern_power_score, countries_df, plotting_df)
     display_timeline(five_params, country_a, start_year_a, country_b, start_year_b, patt_len)
-
-    
-    visualize_table(display_df, display_message, validate_five_params(five_params))
+    visualize_table(display_df, display_message, validate_five_params(five_params), country_a, country_b)
     visualize_plots(plotting_df, five_params)
 
 show_search_page()
