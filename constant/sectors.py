@@ -1,6 +1,7 @@
 from constant.index_metadata import (
     E1_Economic_Decline_and_Poverty,
-    E2_Uneven_Economic_Development
+    E2_Uneven_Economic_Development,
+    P3_Human_Rights_and_Rule_of_Law
 )
 
 
@@ -30,9 +31,12 @@ ECONOMY_SECTOR = [
     "Total Inflation (CPI) Index - Food",
     "Total Inflation (CPI) Index - Energy",
     "Total Inflation (CPI) Index - less Food, less Energy",
+    "Inflation, consumer prices (annual %)",
+    "Unemployment, total (% of total labor force) (modeled ILO estimate)",
     "GDP per Hour Worked",
     "General Government Deficit",
     "Total Labour Force",
+    ""
 ]
 
 
@@ -75,7 +79,7 @@ HEALTH_SECTOR = [
 
 
 HUMAN_RIGHTS_DEVELOPMENT_SECTOR = [
-    "P3: Human Rights"
+    P3_Human_Rights_and_Rule_of_Law
 ]
 
 

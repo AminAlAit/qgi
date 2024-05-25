@@ -1,1 +1,8 @@
 country_b_id_fk,start_year_a_fk,start_year_b_fk,pattern_length_fk,indexes,avg_corr,orgs,Power,Sectors,event_correlation_score,country_a_id_fk,event_correlation_count,similar_event_year_a,similar_raw_event,similar_event_year_b
+206,2010,1999,7,2,0.9583731818181818,1,1.875023909090909,"['Finance Economy Sector', 'Unknown']",0,41,0,,,
+183,2010,2005,7,2,0.9457963157894738,1,1.8674777894736843,"['Finance Economy Sector', 'Unknown']",0,41,0,,,
+179,2010,2004,7,2,0.9335886666666667,1,1.8601532,"['Finance Economy Sector', 'Unknown']",0,41,0,,,
+142,2010,2004,7,2,0.9252127272727272,1,1.8551276363636364,"['Finance Economy Sector', 'Unknown']",0,41,0,,,
+179,2010,2004,6,2,0.9502533333333333,1,1.7701520000000002,"['Finance Economy Sector', 'Unknown']",0,41,0,,,
+183,2010,2005,6,2,0.9451257894736842,1,1.7670754736842107,"['Finance Economy Sector', 'Unknown']",0,41,0,,,
+142,2010,2004,6,2,0.9209945454545455,1,1.7525967272727274,"['Finance Economy Sector', 'Unknown']",0,41,0,,,
