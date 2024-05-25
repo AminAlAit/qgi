@@ -185,13 +185,19 @@ def compare_rankings(PPR_PATH, make_countries_index = True, rows_count = 95000, 
         "avg_corr": "Average Correlation",
         "orgs": "Organizations",
         "event_correlation_count": "ES Count",
-        "event_correlation_score": "ES Score",
+        #"event_correlation_score": "ES Score",
+        "overall_event_correlation_score": "Overall ES Score",
+        "detailed_event_correlation_scores": "Detailed ES Scores",
         "similar_event_year_a": "Simialr Event Years A",
         "similar_raw_event": "Similar Events",
         "similar_event_year_b": "Simialr Event Years B",
     }, inplace = True)
 
-    cols_to_keep = ["Country A", "Country B", "Starting Year A", "Starting Year B", "Pattern Length", "Number of Indexes", "Average Correlation", "Organizations", "Pattern Power Ranking"]
+    cols_to_keep = [
+        "Country A", "Country B", "Starting Year A", "Starting Year B", "Pattern Length",
+        "Number of Indexes", "Average Correlation", "Organizations", "Pattern Power Ranking",
+        "ES Count", "Overall ES Score", "Detailed ES Scores", "Simialr Event Years A", 
+        "Similar Events", "Simialr Event Years B"]
 
     if show_event_cols:
         cols_to_keep = cols_to_keep + ["ES Count", "ES Score", "Simialr Event Years A", "Similar Events", "Simialr Event Years B"]
