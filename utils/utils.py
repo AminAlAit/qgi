@@ -149,6 +149,65 @@ def get_country_name(countries_df, country_id):
         return None
 
 
+def switch_country_ids_to_names_for_ppr(ppr_path, csv_path):
+    """
+    Create two new lists with country names for 'country_a_id_fk' and 'country_b_id_fk' columns
+    and add them to the beginning of the dataframe, replacing the original columns.
+
+    Parameters:
+    ppr_path (str): Path to the CSV file containing the data with 'country_a_id_fk' and 'country_b_id_fk' columns.
+    csv_path (str): Path to the CSV file containing country names and their numeric codes.
+
+    Returns:
+    pd.DataFrame: Modified DataFrame with country names added for 'country_a_id_fk' and 'country_b_id_fk' columns.
+    """
+    
+    # Read the CSV files into DataFrames
+    ppr_df = pd.read_csv(ppr_path)
+    countries_df = pd.read_csv(csv_path)
+
+    # Create a dictionary for numeric code to country name mapping
+    country_mapping = pd.Series(countries_df['name_1'].values, index=countries_df['id']).to_dict()
+
+    # Function to map IDs to country names, leaving non-integer values as they are
+    def map_country_id(value):
+        try:
+            return country_mapping[int(value)]
+        except (ValueError, KeyError):
+            return value
+
+    # Create new lists for country names
+    country_a_names = ppr_df["country_a_id_fk"].apply(map_country_id).tolist()
+    country_b_names = ppr_df["country_b_id_fk"].apply(map_country_id).tolist()
+
+    ppr_df = ppr_df.drop(['country_a_id_fk', 'country_b_id_fk'], axis = 1)
+
+    # Add new columns to the beginning of the DataFrame
+    ppr_df.insert(0, "country_a_id_fk", country_a_names)
+    ppr_df.insert(1, "country_b_id_fk", country_b_names)
+
+    # Save the modified DataFrame to a new CSV file
+    ppr_df.to_csv(ppr_path, index=False)
+
+
+def get_country_name_by_id(country_id: str) -> str:
+    """
+    Retrieves the ISO 3166-1 alpha-2 country code for a given country name.
+
+    Parameters:
+    - country_name (str): The name of the country.
+
+    Returns:
+    - str: The ISO 3166-1 alpha-2 country code.
+    """
+    countries_df = pd.read_csv(COUNTRY_DICTIONARY_PATH)
+    match = countries_df[countries_df["id"] == country_id]
+    if not match.empty:
+        return match["name_1"].iloc[0]
+    else:
+        return None
+
+
 def combine_values(df_row):
     # Convert string representations to lists
     values_a = str_to_list(df_row["index_values_a"])
@@ -552,6 +611,7 @@ def transformation_method_radio_buttons(five_params):
             ("Raw Representation", "Normalize", "Standardize", "Base Year Indexing", "Logarithmic Scaling", "Growth Rates/Ratios")
         )
 
+
 def align_toggle(five_params):
     if validate_five_params(five_params) and five_params[-1] != five_params[-2]:
         return st.sidebar.toggle("Algin Index Couples")
@@ -700,24 +760,6 @@ def get_alpha2_by_name(country_name: str) -> str:
     match = countries_df[match_index]
     if not match.empty:
         return match["alpha_2"].iloc[0]
-    else:
-        return None
-
-
-def get_country_name_by_id(country_id: str) -> str:
-    """
-    Retrieves the ISO 3166-1 alpha-2 country code for a given country name.
-
-    Parameters:
-    - country_name (str): The name of the country.
-
-    Returns:
-    - str: The ISO 3166-1 alpha-2 country code.
-    """
-    countries_df = pd.read_csv(COUNTRY_DICTIONARY_PATH)
-    match = countries_df[countries_df["id"] == country_id]
-    if not match.empty:
-        return match["name_1"].iloc[0]
     else:
         return None
 
