@@ -22,14 +22,7 @@ subprocess.check_call([sys.executable, "-m", "pip", "install", "streamlit-timeli
 
 # Data Prep
 script_path = os.path.abspath(__file__)
-# st.write("Script directory:", script_path)
-
 script_dir = os.path.dirname(script_path)
-# st.write("Script directory:", script_dir)
-
-# ppr_path = r"/workspaces/qgi/data/ppr/ppr.csv"
-# countries_path = r"/workspaces/qgi/data/country.csv"
-
 ppr_path = script_dir + "/data/ppr/ppr.csv"
 countries_path = script_dir + "/data/country.csv"
 
