@@ -149,6 +149,7 @@ def get_country_name(countries_df, country_id):
         return None
 
 
+@st.cache_data(ttl=300)
 def switch_country_ids_to_names_for_ppr(ppr_path, csv_path):
     """
     Create two new lists with country names for 'country_a_id_fk' and 'country_b_id_fk' columns
@@ -161,7 +162,6 @@ def switch_country_ids_to_names_for_ppr(ppr_path, csv_path):
     Returns:
     pd.DataFrame: Modified DataFrame with country names added for 'country_a_id_fk' and 'country_b_id_fk' columns.
     """
-    
     # Read the CSV files into DataFrames
     ppr_df = pd.read_csv(ppr_path)
     countries_df = pd.read_csv(csv_path)

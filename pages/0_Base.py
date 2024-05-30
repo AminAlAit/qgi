@@ -15,6 +15,11 @@ from utils.utils import switch_country_ids_to_names_for_ppr
 st.set_page_config(layout = "wide", page_title = "QG Intelligence", page_icon = "📈")
 center_running()
 
+import os
+# script_path = os.path.abspath(__file__)
+# st.write("Script directory:", script_path)
+# script_dir = os.path.dirname(script_path)
+# st.write("Script directory:", script_dir)
 
 def show_base_page():
     st.markdown("# QG Intelligence")

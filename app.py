@@ -11,6 +11,7 @@
 from utils.utils import switch_country_ids_to_names_for_ppr
 import sys
 import subprocess
+import os
 
 subprocess.check_call([sys.executable, "-m", "pip", "install", "streamlit-timeline"])
 
@@ -18,9 +19,20 @@ subprocess.check_call([sys.executable, "-m", "pip", "install", "streamlit-timeli
 # https://discuss.streamlit.io/t/new-package-st-pages-change-page-names-and-icons-in-sidebar-without-changing-filenames/33969/56
 # https://st-pages.streamlit.app
 
+
 # Data Prep
-ppr_path = r"/workspaces/qgi/data/ppr/ppr.csv"
-countries_path = r"/workspaces/qgi/data/country.csv"
+script_path = os.path.abspath(__file__)
+# st.write("Script directory:", script_path)
+
+script_dir = os.path.dirname(script_path)
+# st.write("Script directory:", script_dir)
+
+# ppr_path = r"/workspaces/qgi/data/ppr/ppr.csv"
+# countries_path = r"/workspaces/qgi/data/country.csv"
+
+ppr_path = script_dir + "/data/ppr/ppr.csv"
+countries_path = script_dir + "/data/country.csv"
+
 switch_country_ids_to_names_for_ppr(ppr_path, countries_path)
 
 import streamlit as st
