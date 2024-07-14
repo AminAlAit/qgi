@@ -1,6 +1,10 @@
+import ast
+import os
 import pandas as pd
 from datetime import datetime
 import streamlit as st
+
+from utils.utils import switch_country_ids_to_names_for_ppr
 
 
 # Assign weights to each metric
@@ -162,6 +166,49 @@ def manual_merge_dfs(df1, df2, key_columns):
 @st.cache_data(ttl=600)
 def compare_rankings(PPR_PATH, make_countries_index = True, rows_count = 95000, show_event_cols = True):
     ppr_df = pd.read_csv(PPR_PATH)
+
+    # temp_ppr_path = r"/workspaces/qgi/data/ppr/ppr_1.csv"
+    # countries_path = r"/workspaces/qgi/data/country.csv"
+# 
+    # switch_country_ids_to_names_for_ppr(temp_ppr_path, countries_path)
+# 
+    # temp_ppr = pd.read_csv(temp_ppr_path)
+# 
+    # temp_ppr["Sectors"] = temp_ppr["Sectors"].apply(ast.literal_eval)
+# 
+    # temp_ppr.rename(columns={
+    #     "country_a_id_fk": "Country A",
+    #     "country_b_id_fk": "Country B",
+    #     "start_year_a_fk": "Starting Year A",
+    #     "start_year_b_fk": "Starting Year B",
+    #     "pattern_length_fk": "Pattern Length",
+    #     "indexes": "Number of Indexes",
+    #     "avg_corr": "Average Correlation",
+    #     "orgs": "Organizations",
+    #     "Power": "Pattern Power Ranking",
+    #     "event_similarity_score_avg": "Event Similarity Score Average",
+    # }, inplace = True)
+# 
+    # temp_ppr = temp_ppr.drop(["id"], axis = 1)
+# 
+    # st.dataframe(
+    #     temp_ppr,
+    #     column_config = {
+    #         "Sectors": st.column_config.ListColumn(
+    #             "Sectors",
+    #             help = "??????????????????????????????",
+    #             width = "medium",
+    #         ),
+    #         "event_similarity_scores": st.column_config.LineChartColumn(
+    #             "Event Similarity",
+    #             width="medium",
+    #             help = "??????????????????????????????",
+    #             y_min=-1,
+    #             y_max=1,
+    #         ),
+    #     }
+    #     
+    # )
 
     # Format Average Correlation as percentage
     ppr_df["avg_corr"] = (ppr_df["avg_corr"] * 100).round(2).astype(str) + "%"

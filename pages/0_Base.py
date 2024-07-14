@@ -8,7 +8,6 @@ from constant.tips import (
 from utils.patterns import compare_rankings, get_base_dot_plot_data
 from streamlit_extras.customize_running import center_running
 from streamlit_echarts import st_echarts
-from utils.utils import switch_country_ids_to_names_for_ppr
 
 
 st.set_page_config(layout = "wide", page_title = "QG Intelligence", page_icon = "📈")
