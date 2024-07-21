@@ -1,5 +1,6 @@
 """Patterns script"""
 
+import os
 from streamlit_extras.customize_running import center_running
 from streamlit_modal import Modal
 import streamlit as st
@@ -96,6 +97,10 @@ def show_search_page():
 
         """)
     # Pattern Power Ranking Section
+
+    script_dir_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    #st.write(script_dir_dir + "/data/ppr/ppr_1.csv")
+
     ppr_df = compare_rankings(PPR_PATH, rows_count = 95000, show_event_cols = False)
 
     with st.expander("You can take some inspiration from the Pattern Power Ranking table here"):

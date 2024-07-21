@@ -139,8 +139,9 @@ def color_countries(val):
 def compare_rankings(PPR_PATH, make_countries_index = True, rows_count = 95000, show_event_cols = True):
     ppr_df = pd.read_csv(PPR_PATH)
 
-    temp_ppr_path = r"/workspaces/qgi/data/ppr/ppr_1.csv"
-    countries_path = r"/workspaces/qgi/data/country.csv"
+    temp_ppr_path  = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "/data/ppr/ppr_1.csv"
+    countries_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "/data/country.csv"
+
     switch_country_ids_to_names_for_ppr(temp_ppr_path, countries_path)
     temp_ppr = pd.read_csv(temp_ppr_path)
     temp_ppr["Sectors"] = temp_ppr["Sectors"].apply(ast.literal_eval)
