@@ -4,7 +4,7 @@ import subprocess
 import streamlit as st
 import pandas as pd
 
-from constant.constant import PPR_PATH, COUNTRIES_PATH, BAT_PATH
+from constant.constant import PPR_PATH, COUNTRIES_PATTERNS_PATH, COUNTRIES_CSV_PATH, BAT_PATH
 from constant.index_metadata import INDEX_NAMES_THAT_NEED_CHANGING, MAIN_NAMES_THAT_NEED_CHANGING, INDEX_METADATA
 from constant.tips import (
     GET_TIP_PATTERN_LENGTH_RANGE_SLIDER,
@@ -19,7 +19,6 @@ from constant.tips import (
     TIP_TRANSFORMATION_RADIO)
 
 
-COUNTRY_DICTIONARY_PATH                     = "data/country.csv"
 COUNTRY_ID_COLUMN                           = "id"
 CORRELATION_COLUMN                          = "correlation_column"
 COUNTRY_TABLE_NAME                          = "country"
@@ -79,12 +78,12 @@ def process_display_dataframe(df, DISPLAY_DF_NEW_COLUMN_NAMES, countries_df):
     return df
 
 
-def get_country_names_and_ids(directory):
+def get_country_names_and_ids():
     country_names = []
     country_ids = []
 
     # Iterate over all files in the specified directory
-    for filename in os.listdir(directory):
+    for filename in os.listdir(COUNTRIES_PATTERNS_PATH):
         if filename.endswith("_patterns.csv"):  # Check if the file is a CSV file
             if "solos" not in filename:
                 parts = filename.split('_')  # Split the filename into parts
@@ -100,7 +99,7 @@ def get_country_names_and_ids(directory):
 
 
 def get_countries_a_list():
-    country_names, country_ids = get_country_names_and_ids(COUNTRIES_PATH)
+    country_names, country_ids = get_country_names_and_ids()
     countries_df               = pd.DataFrame()
     countries_df["id"]         = country_ids
     countries_df["country"]    = country_names
@@ -148,7 +147,7 @@ def get_country_name(countries_df, country_id):
 
 
 @st.cache_data(ttl=300)
-def switch_country_ids_to_names_for_ppr(ppr_path = PPR_PATH, countries_path = COUNTRIES_PATH):
+def switch_country_ids_to_names_for_ppr(ppr_path = PPR_PATH, countries_path = COUNTRIES_CSV_PATH):
     """
     Create two new lists with country names for 'country_a_id_fk' and 'country_b_id_fk' columns
     and add them to the beginning of the dataframe, replacing the original columns.
@@ -194,7 +193,7 @@ def get_country_name_by_id(country_id: str) -> str:
     Returns:
     - str: The ISO 3166-1 alpha-2 country code.
     """
-    countries_df = pd.read_csv(COUNTRY_DICTIONARY_PATH)
+    countries_df = pd.read_csv(COUNTRIES_CSV_PATH)
     match = countries_df[countries_df["id"] == country_id]
     if not match.empty:
         return match["name_1"].iloc[0]
@@ -517,7 +516,7 @@ def get_start_year_a(
     #warnings          = warnings[warnings[DISPLAY_DF_PATTERN_LENGTH_RENAME] == country_b]
     display_df        = display_df[display_df[pattern_length_col_name] == patt_len]
 
-    df = pd.read_csv(COUNTRIES_PATH + country_a_id + "_" + country_a + "_patterns.csv")
+    df = pd.read_csv(COUNTRIES_PATTERNS_PATH + country_a_id + "_" + country_a + "_patterns.csv")
     df = df[df["country_b_id_fk"] == country_b_id]
     df = df[df["pattern_length_fk"] == patt_len]
     df = df[df["avg_corr"] >= min_corr]
@@ -568,7 +567,7 @@ def prepare_display_df_for_viz(display_df: pd.DataFrame, country_a, country_b, f
     start_year_a = five_params[3]
     start_year_b = five_params[4]
 
-    df = pd.read_csv(COUNTRIES_PATH + str(country_a_id) + "_" + country_a + "_solos_patterns.csv")
+    df = pd.read_csv(COUNTRIES_PATTERNS_PATH + str(country_a_id) + "_" + country_a + "_solos_patterns.csv")
     df = df[df["country_b_id_fk"] == int(country_b_id)]
     df = df[df["pattern_length_fk"] == int(patt_len)]
     df = df[df["start_year_a_fk"] == int(start_year_a)]
@@ -748,7 +747,7 @@ def get_alpha2_by_name(country_name: str) -> str:
     Returns:
     - str: The ISO 3166-1 alpha-2 country code if found, otherwise None.
     """
-    countries_df = pd.read_csv(COUNTRY_DICTIONARY_PATH)
+    countries_df = pd.read_csv(COUNTRIES_CSV_PATH)
     # Search across all columns for the country_name
     match_index = countries_df.apply(lambda row: country_name in row.values, axis=1)
     match = countries_df[match_index]

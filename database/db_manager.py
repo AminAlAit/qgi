@@ -3,7 +3,7 @@ import time
 import pandas          as pd
 import streamlit as st
 
-from utils.utils import COUNTRY_DICTIONARY_PATH, get_country_name
+from utils.utils import COUNTRIES_CSV_PATH, get_country_name
 
 
 def get_country_b_counts_for_country_a(country_id, country_name, countries_df):   
@@ -65,7 +65,7 @@ def get_alpha2_by_name(country_name: str) -> str:
     Returns:
     - str: The ISO 3166-1 alpha-2 country code.
     """
-    countries_df = pd.read_csv(COUNTRY_DICTIONARY_PATH)
+    countries_df = pd.read_csv(COUNTRIES_CSV_PATH)
     match = countries_df[countries_df["name_1"] == country_name]
     if not match.empty:
         return match["alpha_2"].iloc[0]

@@ -1,7 +1,0 @@
-[[pages]]
-path = "app.py"
-name = "Base"
-
-[[pages]]
-path = "pages/9_Contact.py"
-name = "Contact"
