@@ -10,7 +10,6 @@ from streamlit_extras.customize_running import center_running
 from streamlit_echarts import st_echarts
 
 
-st.set_page_config(layout = "wide", page_title = "QG Intelligence", page_icon = "📈")
 center_running()
 
 

@@ -23,33 +23,28 @@ from utils.utils import (
     validate_five_params)
 
 
-## App init commands
-st.set_page_config(layout = "wide", page_title = "QG Intelligence", page_icon = "📈")
-center_running()
+def show_patterns_portal_page():
+    center_running()
 
+    ## Splash window
+    if "show_patterns_popup" not in st.session_state:
+        st.session_state["show_patterns_popup"] = True
+    if st.session_state["show_patterns_popup"]:
+        with Modal(key = "Demo Key", title = "Welcome to the Patterns Portal! :wave:").container():
+            st.markdown("""
+                Before browsing the millions of patterns, here are some some tips on how to do so:
 
-## Splash window
-if "show_patterns_popup" not in st.session_state:
-    st.session_state["show_patterns_popup"] = True
-if st.session_state["show_patterns_popup"]:
-    with Modal(key = "Demo Key", title = "Welcome to the Patterns Portal! :wave:").container():
-        st.markdown("""
-            Before browsing the millions of patterns, here are some some tips on how to do so:
+                Every pattern is composed of 5 elements: 
+                - Country A: select any country in the beginning, so you can see who has patterns with it.
+                - Country B: then, you can select which country to pair with.
+                - Pattern Length (in years): then, you can refine your search by selecting the pattern's length.
+                - Starting Year A: select when tha pattern should start for Country A.
+                - Starting Year B: finally, select when the pattern should start for Country B.
+                
+                Inputting these 5 key elements, will present you with the pattern dashboard. Go crazy! 🤘
+            """)
+        st.session_state["show_patterns_popup"] = False
 
-            Every pattern is composed of 5 elements: 
-            - Country A: select any country in the beginning, so you can see who has patterns with it.
-            - Country B: then, you can select which country to pair with.
-            - Pattern Length (in years): then, you can refine your search by selecting the pattern's length.
-            - Starting Year A: select when tha pattern should start for Country A.
-            - Starting Year B: finally, select when the pattern should start for Country B.
-            
-            Inputting these 5 key elements, will present you with the pattern dashboard. Go crazy! 🤘
-        """)
-    st.session_state["show_patterns_popup"] = False
-
-
-## Page body logic
-def show_search_page():
     with st.expander("Hey, welcome to **QG Intelligence**!"):
         st.markdown("""
             # Welcome to QG Intelligence
@@ -154,5 +149,3 @@ def show_search_page():
     st.markdown("# Pattern Indexes")
     visualize_table(display_df, display_message, validate_five_params(five_params), country_a, country_b)
     visualize_plots(plotting_df, five_params)
-
-show_search_page()
