@@ -8,37 +8,69 @@
 ## TODO checkout similar page-runtime settings
 ## TODO save strings in constant, to avoid magic strings
 
-from utils.utils import switch_country_ids_to_names_for_ppr
+
 import sys
 import subprocess
 import os
+import streamlit as st
 
-subprocess.check_call([sys.executable, "-m", "pip", "install", "streamlit-timeline"])
 
-# References: 
-# https://discuss.streamlit.io/t/new-package-st-pages-change-page-names-and-icons-in-sidebar-without-changing-filenames/33969/56
-# https://st-pages.streamlit.app
+from utils.utils import switch_country_ids_to_names_for_ppr
+from pages.page_base import show_base_page
 
 
 # Data Prep
+# References: 
+# https://discuss.streamlit.io/t/new-package-st-pages-change-page-names-and-icons-in-sidebar-without-changing-filenames/33969/56
+# https://st-pages.streamlit.app
+subprocess.check_call([sys.executable, "-m", "pip", "install", "streamlit-timeline"])
 script_path = os.path.abspath(__file__)
 script_dir = os.path.dirname(script_path)
 ppr_path = script_dir + "/data/ppr/ppr.csv"
 countries_path = script_dir + "/data/country.csv"
-
 switch_country_ids_to_names_for_ppr(ppr_path, countries_path)
 
-import streamlit as st
-from st_pages import Page, add_page_title, show_pages
-show_pages(
-    [
-        Page("pages/0_Base.py",          "Base",               "🌐"),
-        Page("pages/1_Patterns.py",      "Patterns",           "📈"),
-        # Page("pages/0_Base.py",         "Patterns",           "📈"),
-        Page("pages/2_Experimental.py",  "Under Construction", "🚧"),
-        Page("pages/3_FAQ.py",           "FAQ",                "❓"),
-        Page("pages/9_Contact.py",       "Contact",            "📬")
-    ]
-)
 
-st.rerun()
+def patterns_page():
+    st.title("Patterns")
+    # Add content for the patterns page here
+
+def experimental_page():
+    st.title("Under Construction")
+    # Add content for the experimental page here
+
+def faq_page():
+    st.title("FAQ")
+    # Add content for the FAQ page here
+
+def contact_page():
+    st.title("Contact")
+    # Add content for the contact page here
+
+
+pages = [
+    st.Page(page=show_base_page,    title = "Base",               icon = "🌐"),
+    st.Page(page=patterns_page,     title = "Patterns",           icon = "📈"),
+    st.Page(page=experimental_page, title = "Under Construction", icon = "🚧"),
+    st.Page(page=faq_page,          title = "FAQ",                icon = "❓"),
+    st.Page(page=contact_page,      title = "Contact",            icon = "📬"),
+]
+
+# Run navigation
+pg = st.navigation(pages)
+pg.run()
+
+# st-pages==0.4.5
+# from st_pages import Page, add_page_title, show_pages
+# show_pages(
+#     [
+#         Page("pages/0_Base.py",          "Base",               "🌐"),
+#         Page("pages/1_Patterns.py",      "Patterns",           "📈"),
+#         # Page("pages/0_Base.py",         "Patterns",           "📈"),
+#         Page("pages/2_Experimental.py",  "Under Construction", "🚧"),
+#         Page("pages/3_FAQ.py",           "FAQ",                "❓"),
+#         Page("pages/9_Contact.py",       "Contact",            "📬")
+#     ]
+# )
+# 
+# st.rerun()
