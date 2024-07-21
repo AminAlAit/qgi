@@ -136,7 +136,17 @@ def show_search_page():
     #align, method                                    = plotting_transformations(five_params)
 
     couple_countries_dashboard(five_params, couple_of_countries, display_df, pattern_power_score, countries_df, plotting_df)
-    display_timeline(five_params, country_a, start_year_a, country_b, start_year_b, patt_len)
+    
+    st.markdown("___")
+    #with st.expander("Similar Patterns"):
+
+    
+    st.markdown("___")
+    with st.expander("Timeline of events for " + country_a + " and " + country_b):
+        display_timeline(five_params, country_a, start_year_a, country_b, start_year_b, patt_len)
+    st.markdown("___")
+
+    st.markdown("# Pattern Indexes")
     visualize_table(display_df, display_message, validate_five_params(five_params), country_a, country_b)
     visualize_plots(plotting_df, five_params)
 

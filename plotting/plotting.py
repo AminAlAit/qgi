@@ -523,28 +523,6 @@ def couple_countries_dashboard(five_params, countries, display_df, pattern_power
         #st.markdown("___")
 
 
-def display_timeline(five_params, events_df, country_a, start_year_a, country_b, start_year_b, patt_len):
-    if validate_five_params(five_params):
-        # Alt: https://github.com/giswqs/streamlit-timeline
-        # https://github.com/innerdoc/nlp-history-timeline
-        # https://github.com/innerdoc/streamlit-timeline
-        # https://pypi.org/project/streamlit-timeline/
-        # https://timeline.knightlab.com/docs/json-format.html#json-slide
-        st.markdown("___")
-        # with open(r"C:\Users\Amin\Desktop\trojan\trojan 2.0\data\events\JSON\sample.json", "r") as f:
-        #     data = f.read()
-        
-        events = get_events(
-            events_df, 
-            country_a, 
-            (start_year_a, start_year_a + patt_len),
-            country_b,
-            (start_year_b, start_year_b + patt_len)
-        )
-        
-        st_t.timeline(events, height = 750)
-        st.markdown("___")
-
 
 def display_timeline(five_params, country_a, start_year_a, country_b, start_year_b, patt_len):
     if validate_five_params(five_params):
