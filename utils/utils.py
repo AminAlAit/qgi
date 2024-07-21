@@ -4,7 +4,7 @@ import subprocess
 import streamlit as st
 import pandas as pd
 
-from constant.constant import PPR_PATH, COUNTRIES_PATTERNS_PATH, COUNTRIES_CSV_PATH, BAT_PATH
+from constant.constant import PPR_PATH, COUNTRIES_PATTERNS_PATH, COUNTRIES_CSV_PATH, BAT_PATH, COUNTRY_EVENTS_PATH
 from constant.index_metadata import INDEX_NAMES_THAT_NEED_CHANGING, MAIN_NAMES_THAT_NEED_CHANGING, INDEX_METADATA
 from constant.tips import (
     GET_TIP_PATTERN_LENGTH_RANGE_SLIDER,
@@ -283,28 +283,6 @@ def remove_duplicates(lst):
     return result
 
 
-# def filter_by_grouping_indexes(df, country_a, min_ind, max_ind):
-#     # Group the DataFrame by the specified columns
-# 
-#     df["country_a_id_fk"] = [country_a for _ in range(len(df))]
-# 
-#     grouped = df.groupby(["country_a_id_fk", "country_b_id_fk", "pattern_length_fk", "start_year_a_fk", "start_year_b_fk"])
-# 
-#     # Calculate the count of rows in each group
-#     group_counts = grouped.size().reset_index(name = "count")
-# 
-#     # Filter the groups based on the count
-#     filtered_groups = group_counts[(group_counts["count"] >= min_ind) & (group_counts["count"] <= max_ind)]
-# 
-#     # Get the rows corresponding to the filtered groups
-#     filtered_df = df.merge(filtered_groups, on = ["country_a_id_fk", "country_b_id_fk", "pattern_length_fk", "start_year_a_fk", "start_year_b_fk"])
-#     
-#     # Delete the rows from the original DataFrame
-#     df = df[~df.index.isin(filtered_df.index)]
-#    
-#     return filtered_df, df
-
-
 def percentage_str_to_float(percentage_str):
     return float(percentage_str.strip("%")) / 100
 
@@ -523,7 +501,6 @@ def get_start_year_a(
     df = df[df["avg_corr"] <= max_corr]
 
     df["avg_corr"] = pd.to_numeric(df["avg_corr"], errors = "coerce")
-    # df             = filter_by_grouping_indexes(df, country_a, min_ind, max_ind)[0]
 
     start_years_a = [""] + list(set(display_df[start_year_a_col_name]))
     if len(start_years_a) > 2:
@@ -776,10 +753,8 @@ def get_index_metadata(solo_pattern: pd.Series):
         return None
 
 
-def read_events_as_df(country_name):
-    dir_path = os.path.dirname(os.path.realpath(__file__))
-    file_path = os.path.join(dir_path, country_name + ".txt")
-    
+def read_events_as_df(file_name):
+    file_path = COUNTRY_EVENTS_PATH + file_name
     if os.path.exists(file_path):
         events = []
         with open(file_path, 'r') as file:
@@ -799,5 +774,6 @@ def read_events_as_df(country_name):
             print(f"No valid data found in {file_path}.")
             return None
     else:
-        print(f"No data available for {country_name}.")
+        file_name = file_name.replace(".txt", "")
+        print(f"No data available for {file_name}.")
         return None

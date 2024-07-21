@@ -1,6 +1,5 @@
 """Patterns script"""
 
-import os
 from streamlit_extras.customize_running import center_running
 from streamlit_modal import Modal
 import streamlit as st
@@ -131,8 +130,6 @@ def show_patterns_portal_page():
     display_df, plotting_df                          = prepare_display_df_for_viz(display_df, country_a, country_b, [country_a_id, country_b_id, patt_len, start_year_a, start_year_b], countries_a, countries_ids, countries_df)
     five_params                                      = [country_a_id, country_b_id, patt_len, start_year_a, start_year_b]
     plotting_df                                      = update_names_of_main_and_index_names(plotting_df, five_params)
-
-    #align, method                                    = plotting_transformations(five_params)
 
     couple_countries_dashboard(five_params, couple_of_countries, display_df, pattern_power_score, countries_df, plotting_df)
 
