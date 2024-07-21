@@ -142,7 +142,7 @@ def compare_rankings(PPR_PATH, make_countries_index = True, rows_count = 95000, 
     temp_ppr_path  = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "/data/ppr/ppr_1.csv"
     countries_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "/data/country.csv"
 
-    switch_country_ids_to_names_for_ppr(temp_ppr_path, countries_path)
+    switch_country_ids_to_names_for_ppr(ppr_path = temp_ppr_path, countries_path = countries_path)
     temp_ppr = pd.read_csv(temp_ppr_path)
     temp_ppr["Sectors"] = temp_ppr["Sectors"].apply(ast.literal_eval)
     temp_ppr.rename(columns={

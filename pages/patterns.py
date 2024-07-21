@@ -93,10 +93,9 @@ def show_patterns_portal_page():
         """)
     # Pattern Power Ranking Section
 
-    script_dir_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    #st.write(script_dir_dir + "/data/ppr/ppr_1.csv")
 
     ppr_df = compare_rankings(PPR_PATH, rows_count = 95000, show_event_cols = False)
+
 
     with st.expander("You can take some inspiration from the Pattern Power Ranking table here"):
         # unique_sectors = sorted(set(x for l in ppr_df["Sectors"] for x in l))
@@ -136,16 +135,9 @@ def show_patterns_portal_page():
     #align, method                                    = plotting_transformations(five_params)
 
     couple_countries_dashboard(five_params, couple_of_countries, display_df, pattern_power_score, countries_df, plotting_df)
-    
-    st.markdown("___")
-    #with st.expander("Similar Patterns"):
 
-    
-    st.markdown("___")
     with st.expander("Timeline of events for " + country_a + " and " + country_b):
         display_timeline(five_params, country_a, start_year_a, country_b, start_year_b, patt_len)
-    st.markdown("___")
 
-    st.markdown("# Pattern Indexes")
     visualize_table(display_df, display_message, validate_five_params(five_params), country_a, country_b)
     visualize_plots(plotting_df, five_params)

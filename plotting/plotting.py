@@ -1,19 +1,21 @@
 import math
 import os
-import numpy as np
 import pandas as pd
-from constant.constant import EVENTS_CSVS_FOLDER_PATH
 from constant.sectors import SECTOR_MAPPING
 from constant.tips import TIP_TRANSFORMATION_CAPTIONS, TIP_TRANSFORMATION_RADIO
-from data.events.read_events import read_events_as_df
 from database.db_manager import get_alpha2_by_name, get_country_b_counts_for_country_a
-from utils.utils import combine_values, final_touches_to_df, get_correlated_events_details, get_index_metadata, replace_item_in_list, round_list_items, validate_five_params
-from streamlit_echarts import st_echarts, JsCode
+from utils.utils import (
+    combine_values,
+    final_touches_to_df,
+    get_index_metadata,
+    replace_item_in_list,
+    round_list_items,
+    validate_five_params,
+    read_events_as_df
+)
+from streamlit_echarts import st_echarts #, JsCode
 import streamlit as st
-from streamlit_extras.dataframe_explorer import dataframe_explorer
-# import sys
-# import subprocess
-# subprocess.check_call([sys.executable, "-m", "pip", "install", "streamlit-timeline"])
+# from streamlit_extras.dataframe_explorer import dataframe_explorer
 import streamlit_timeline as st_t
 
 
@@ -385,6 +387,7 @@ def visualize_table(df, display_message, params_validation, country_a, country_b
 
 def visualize_plots(df, five_params):
     if isinstance(df, pd.DataFrame) and len(df) > 0 and validate_five_params(five_params):
+        st.markdown("# Pattern Indexes")
         if len(df) >= 5:
             col1, col2, col3 = st.columns(3)
             i = 1
@@ -519,9 +522,6 @@ def couple_countries_dashboard(five_params, countries, display_df, pattern_power
             df = get_country_b_counts_for_country_a(country_b_id, country_b, countries_df)
             df.set_index("Country", inplace = True)
             st.dataframe(df, use_container_width = True, height = 430)
-        
-        #st.markdown("___")
-
 
 
 def display_timeline(five_params, country_a, start_year_a, country_b, start_year_b, patt_len):
@@ -534,7 +534,6 @@ def display_timeline(five_params, country_a, start_year_a, country_b, start_year
         
         # with open(r"C:\Users\Amin\Desktop\trojan\trojan 2.0\data\events\JSON\sample.json", "r") as f:
         #     data = f.read()
-        
         events = get_events(
             country_a, 
             (start_year_a, start_year_a + patt_len),
@@ -542,9 +541,7 @@ def display_timeline(five_params, country_a, start_year_a, country_b, start_year
             (start_year_b, start_year_b + patt_len)
         )
         if events is not None:
-            st.markdown("___")
             st_t.timeline(events, height = 750)
-            st.markdown("___")
 
 
 def get_events(country_a, year_range_a, country_b, year_range_b):

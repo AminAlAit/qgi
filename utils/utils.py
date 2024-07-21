@@ -1,10 +1,10 @@
 import ast
-import math
 import os
 import subprocess
 import streamlit as st
 import pandas as pd
-from constant.constant import EVENTS_CSVS_FOLDER_PATH
+
+from constant.constant import PPR_PATH, COUNTRIES_PATH, BAT_PATH
 from constant.index_metadata import INDEX_NAMES_THAT_NEED_CHANGING, MAIN_NAMES_THAT_NEED_CHANGING, INDEX_METADATA
 from constant.tips import (
     GET_TIP_PATTERN_LENGTH_RANGE_SLIDER,
@@ -19,8 +19,6 @@ from constant.tips import (
     TIP_TRANSFORMATION_RADIO)
 
 
-BAT_PATH                                    = "/mount/src/qgi/.bat"
-COUNTRIES_PATH                              = "data/countries/"
 COUNTRY_DICTIONARY_PATH                     = "data/country.csv"
 COUNTRY_ID_COLUMN                           = "id"
 CORRELATION_COLUMN                          = "correlation_column"
@@ -150,21 +148,17 @@ def get_country_name(countries_df, country_id):
 
 
 @st.cache_data(ttl=300)
-def switch_country_ids_to_names_for_ppr(ppr_path, csv_path):
+def switch_country_ids_to_names_for_ppr(ppr_path = PPR_PATH, countries_path = COUNTRIES_PATH):
     """
     Create two new lists with country names for 'country_a_id_fk' and 'country_b_id_fk' columns
     and add them to the beginning of the dataframe, replacing the original columns.
-
-    Parameters:
-    ppr_path (str): Path to the CSV file containing the data with 'country_a_id_fk' and 'country_b_id_fk' columns.
-    csv_path (str): Path to the CSV file containing country names and their numeric codes.
 
     Returns:
     pd.DataFrame: Modified DataFrame with country names added for 'country_a_id_fk' and 'country_b_id_fk' columns.
     """
     # Read the CSV files into DataFrames
     ppr_df = pd.read_csv(ppr_path)
-    countries_df = pd.read_csv(csv_path)
+    countries_df = pd.read_csv(countries_path)
 
     # Create a dictionary for numeric code to country name mapping
     country_mapping = pd.Series(countries_df['name_1'].values, index=countries_df['id']).to_dict()
@@ -764,45 +758,6 @@ def get_alpha2_by_name(country_name: str) -> str:
         return None
 
 
-def get_correlated_events_details(pattern):
-    # Directly use the country names from the pattern
-    country_a = pattern['country_a_id_fk']
-    country_b = pattern['country_b_id_fk']
-    start_year_a = pattern['start_year_a_fk']
-    start_year_b = pattern['start_year_b_fk']
-    pattern_length = pattern['pattern_length_fk']
-    
-    # st.write("/workspaces/qgi/data/events/Azerbaijan.csv")
-    # st.dataframe(pd.read_csv('/workspaces/qgi/data/events/Azerbaijan.csv'))
-
-    events_a = pd.read_csv(EVENTS_CSVS_FOLDER_PATH + country_a + ".csv")
-    events_b = pd.read_csv(EVENTS_CSVS_FOLDER_PATH + country_b + ".csv")
-
-    # Find the country names from the events DataFrame
-    country_a_name = events_a[events_a['Country'] == country_a]['Country'].unique().tolist()[0]
-    country_b_name = events_b[events_b['Country'] == country_b]['Country'].unique().tolist()[0]
-
-    correlated_events = []
-
-    # Loop through each year in the pattern length
-    for year_offset in range(pattern_length):
-        year_a = start_year_a + year_offset
-        year_b = start_year_b + year_offset
-
-        # Filter events for both countries for the specific year
-        events_a = events_a[(events_a['Country'] == country_a_name) & (events_a['Year'] == year_a)]
-        events_b = events_b[(events_b['Country'] == country_b_name) & (events_b['Year'] == year_b)]
-
-        # Find common events for the specific year based on 'Raw Event'
-        common_events = pd.merge(events_a, events_b, on='Raw Event', how='inner')
-
-        for event in common_events['Raw Event'].unique():
-            correlated_events.append([country_a_name, year_a, event, country_b_name, year_b])
-
-    correlated_events_df = pd.DataFrame(correlated_events, columns=['Country A', 'Year A', 'Event', 'Country B', 'Year B'])
-    return correlated_events_df
-
-
 def get_index_metadata(solo_pattern: pd.Series):
     org        = solo_pattern["org_fk"]
     main       = solo_pattern["main_name_fk"]
@@ -819,4 +774,31 @@ def get_index_metadata(solo_pattern: pd.Series):
                 citation    = index_metadata["citation"]
                 return [description, tips, source, citation]
     else:
+        return None
+
+
+def read_events_as_df(country_name):
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    file_path = os.path.join(dir_path, country_name + ".txt")
+    
+    if os.path.exists(file_path):
+        events = []
+        with open(file_path, 'r') as file:
+            for line in file:
+                if line.strip():
+                    parts = line.split('|')
+                    if len(parts) == 4:
+                        country = parts[0].strip('. ').strip()
+                        year = parts[1].strip()
+                        event = parts[2].strip()
+                        description = parts[3].strip()
+                        events.append([country, year, event, description])
+        
+        if events:
+            return pd.DataFrame(events, columns=["Country", "Year", "Raw Event", "Desc"])
+        else:
+            print(f"No valid data found in {file_path}.")
+            return None
+    else:
+        print(f"No data available for {country_name}.")
         return None

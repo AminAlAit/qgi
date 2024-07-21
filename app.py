@@ -11,20 +11,17 @@
 
 import sys
 import subprocess
-import os
 import streamlit as st
 
 from utils.utils import switch_country_ids_to_names_for_ppr
 from pages import base, patterns, experimental, faq, contact
 
 
-st.set_page_config(layout = "wide", page_title = "QG Intelligence", page_icon = "🌐")
-
-
-script_path = os.path.abspath(__file__)
-script_dir  = os.path.dirname(script_path)
-ppr_path    = script_dir + "/data/ppr/ppr.csv"
-countries_path = script_dir + "/data/country.csv"
+if "set_page_config_bool" not in st.session_state:
+    st.session_state["set_page_config_bool"] = True
+if st.session_state["set_page_config_bool"]:
+    st.set_page_config(layout = "wide", page_title = "QG Intelligence", page_icon = "🌐")
+    st.session_state["set_page_config_bool"] = False
 
 
 # Data Prep
@@ -32,7 +29,7 @@ countries_path = script_dir + "/data/country.csv"
 # https://discuss.streamlit.io/t/new-package-st-pages-change-page-names-and-icons-in-sidebar-without-changing-filenames/33969/56
 # https://st-pages.streamlit.app
 subprocess.check_call([sys.executable, "-m", "pip", "install", "streamlit-timeline"])
-switch_country_ids_to_names_for_ppr(ppr_path, countries_path)
+switch_country_ids_to_names_for_ppr()
 
 
 pages = [
@@ -46,19 +43,3 @@ pages = [
 
 pg = st.navigation(pages)
 pg.run()
-
-
-# st-pages==0.4.5
-# from st_pages import Page, add_page_title, show_pages
-# show_pages(
-#     [
-#         Page("pages/0_Base.py",          "Base",               "🌐"),
-#         Page("pages/1_Patterns.py",      "Patterns",           "📈"),
-#         # Page("pages/0_Base.py",         "Patterns",           "📈"),
-#         Page("pages/2_Experimental.py",  "Under Construction", "🚧"),
-#         Page("pages/3_FAQ.py",           "FAQ",                "❓"),
-#         Page("pages/9_Contact.py",       "Contact",            "📬")
-#     ]
-# )
-# 
-# st.rerun()
