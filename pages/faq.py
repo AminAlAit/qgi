@@ -1,7 +1,7 @@
 import streamlit as st
 
 
-def show_faq_page():
+def faq():
     st.title("Frequently Asked Questions")
 
 

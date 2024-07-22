@@ -22,7 +22,7 @@ from utils.utils import (
     validate_five_params)
 
 
-def show_patterns_portal_page():
+def patterns_portal():
     center_running()
 
     ## Splash window

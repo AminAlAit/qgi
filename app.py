@@ -33,12 +33,12 @@ switch_country_ids_to_names_for_ppr()
 
 
 pages = [
-    st.Page(page = base.show_base_page,                      title = "Base",               icon = "🌐"),
-    st.Page(page = patterns.show_patterns_portal_page,       title = "Patterns",           icon = "📈"),
-    st.Page(page = events.show_event_frequency_page,       title = "Events",             icon = "📊"),
-    st.Page(page = experimental.show_experimental_feat_page, title = "Under Construction", icon = "🚧"),
-    st.Page(page = faq.show_faq_page,                        title = "FAQ",                icon = "❓"),
-    st.Page(page = contact.show_contact_us_page,             title = "Contact",            icon = "📬"),
+    st.Page(page = base.base,                 title = "Base",               icon = "🌐"),
+    st.Page(page = patterns.patterns_portal,  title = "Patterns",           icon = "📈"),
+    st.Page(page = events.event_frequency,    title = "Events",             icon = "📊"),
+    st.Page(page = experimental.experimental, title = "Under Construction", icon = "🚧"),
+    st.Page(page = faq.faq,                   title = "FAQ",                icon = "❓"),
+    st.Page(page = contact.contact,           title = "Contact",            icon = "📬"),
 ]
 
 

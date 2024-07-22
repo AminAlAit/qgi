@@ -13,7 +13,7 @@ from streamlit_echarts import st_echarts
 center_running()
 
 
-def show_base_page():
+def base():
     st.markdown("# QG Intelligence")
     col1, col2 = st.columns([3, 1])
     ppr_df = compare_rankings(PPR_PATH, make_countries_index = False)

@@ -6,7 +6,7 @@ from constant.constant import COUNTRY_EVENTS_PATH, MATCHING_EVENTS_CSV_PATH
 from utils.utils import read_events_as_df
 
 
-def show_event_frequency_page():
+def event_frequency():
     st.title("Event Frequency Analysis")
 
     all_events = []

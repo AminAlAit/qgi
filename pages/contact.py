@@ -2,7 +2,7 @@ from streamlit_extras.customize_running import center_running
 import streamlit                        as st
 
 
-def show_contact_us_page():
+def contact():
     center_running()
 
     if 'message_sent' in st.query_params:

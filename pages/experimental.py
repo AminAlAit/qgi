@@ -6,7 +6,7 @@ from streamlit_extras.customize_running import center_running
 from streamlit_echarts import st_echarts
 
 
-def show_experimental_feat_page():
+def experimental():
 
     center_running()
     INDEXES_ROOT_PATH   = r"/workspaces/qgi/data/indexes"
