@@ -1,0 +1,57 @@
+[project]
+name = "qgi"
+version = "6.0.0"
+description = "Quantitative Geopolitical Intelligence (QGI) — Distributed Econometric & Trajectory Platform"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "Amin Al Ait", email = "aminalait.de@gmail.com" }
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 120
+exclude = [
+    ".git",
+    ".venv",
+    "node_modules",
+    ".next",
+    "out",
+    "__pycache__",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "W"]
+ignore = ["E501", "E402", "E712", "E722", "E731", "E741", "F401", "F841", "W291", "W292", "W293"]
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+check_untyped_defs = false
+disallow_untyped_defs = false
+warn_return_any = false
+warn_unused_ignores = false
+explicit_package_bases = true
+exclude = [
+    "tests/",
+    "experiments/",
+    "scripts/",
+    "enrichment/",
+    "ec2/",
+    "batch/",
+    "lambdas/",
+]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["pipeline/tests", "ml/tests", "data-tools/tests"]
+pythonpath = [".", "pipeline", "ml", "ml/src", "data-tools/src"]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks integration tests",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::UserWarning",
+]
