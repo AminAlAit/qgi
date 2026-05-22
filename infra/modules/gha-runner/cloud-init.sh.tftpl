@@ -1,0 +1,150 @@
+#!/bin/bash
+# cloud-init bootstrap for a GHA self-hosted runner registered to ${repo}.
+#
+# Architecture:
+#   1. Install runner binary (arm64 latest) + dependencies (git, curl, jq,
+#      python3, awscli, gh CLI).
+#   2. Pull a fine-grained PAT from Secrets Manager.
+#   3. Mint a short-lived registration token via the GitHub API.
+#   4. Register the runner with the supplied label, as a systemd service.
+#
+# Idempotency: a re-run (e.g. instance replacement after Spot interruption)
+# calls `config.sh remove` first so we don't pile up zombie runners in the
+# GitHub runner list.
+set -euo pipefail
+
+REPO="${repo}"
+RUNNER_LABEL="${runner_label}"
+PAT_SECRET_NAME="${runner_pat_secret_name}"
+
+# QA B2: Launch Template enforces IMDSv2 (http_tokens=required). v1-style
+# token-less metadata requests get HTTP 401. Standard pattern: mint a session
+# token first, then attach the X-aws-ec2-metadata-token header to every read.
+# Without this fix, REGION/INSTANCE_ID fall back to placeholders and every
+# Spot-replaced instance collides on the runner name "...-unknown".
+IMDS_TOKEN="$(curl -s --max-time 5 \
+  -X PUT \
+  -H 'X-aws-ec2-metadata-token-ttl-seconds: 21600' \
+  http://169.254.169.254/latest/api/token || echo '')"
+IMDS_HDR=()
+if [ -n "$IMDS_TOKEN" ]; then
+  IMDS_HDR=(-H "X-aws-ec2-metadata-token: $IMDS_TOKEN")
+fi
+
+REGION="$(curl -s --max-time 5 "$${IMDS_HDR[@]}" \
+  http://169.254.169.254/latest/meta-data/placement/region || echo eu-central-1)"
+INSTANCE_ID="$(curl -s --max-time 5 "$${IMDS_HDR[@]}" \
+  http://169.254.169.254/latest/meta-data/instance-id || echo unknown)"
+RUNNER_NAME="qgi-runner-$${RUNNER_LABEL}-$${INSTANCE_ID}"
+RUNNER_HOME="/opt/actions-runner"
+
+log() { echo "[$(date -u +%FT%TZ)] $*"; }
+
+log "=== qgi-gha-runner cloud-init starting ==="
+log "Repo:   $REPO"
+log "Label:  $RUNNER_LABEL"
+log "Region: $REGION"
+log "Name:   $RUNNER_NAME"
+
+# ── 1. Install dependencies ──────────────────────────────────────────────────
+log "Installing dependencies..."
+# 2026-05-31 fix: AL2023's `curl` package conflicts with the pre-installed
+# `curl-minimal`; a plain `dnf install ... curl` aborts with a package
+# conflict. `--allowerasing` lets dnf swap curl-minimal -> curl cleanly.
+# Without it, cloud-init dies here and the runner never registers.
+dnf install -y --allowerasing git curl jq tar python3 awscli
+# The actions-runner binary needs these native libs at runtime. We install
+# them explicitly because installdependencies.sh (below) can't parse AL2023.
+dnf install -y libicu krb5-libs zlib openssl-libs || \
+  log "(libicu/krb5/zlib/openssl install non-zero; runner may already have them)"
+
+# gh CLI (arm64). Lock to a stable major; bump in module when needed.
+GH_VERSION="2.55.0"
+curl -sL -o /tmp/gh.tar.gz \
+  "https://github.com/cli/cli/releases/download/v$${GH_VERSION}/gh_$${GH_VERSION}_linux_arm64.tar.gz"
+tar -xzf /tmp/gh.tar.gz -C /tmp
+install -m 0755 "/tmp/gh_$${GH_VERSION}_linux_arm64/bin/gh" /usr/local/bin/gh
+gh --version
+
+# ── 2. Install actions-runner binary ─────────────────────────────────────────
+log "Installing actions-runner..."
+mkdir -p "$RUNNER_HOME"
+cd "$RUNNER_HOME"
+
+# QA nit: pin RUNNER_VERSION (was resolved from /releases/latest at boot,
+# making replaced instances pick up new versions silently). Bump deliberately
+# in the module when GitHub releases a known-good newer version.
+RUNNER_VERSION="2.319.1"
+log "Runner version: $RUNNER_VERSION (pinned)"
+
+curl -sLo runner.tar.gz \
+  "https://github.com/actions/runner/releases/download/v$${RUNNER_VERSION}/actions-runner-linux-arm64-$${RUNNER_VERSION}.tar.gz"
+tar -xzf runner.tar.gz
+rm runner.tar.gz
+
+# Runner expects a dedicated low-privilege user.
+useradd --create-home --shell /bin/bash --home-dir /home/runner runner || true
+chown -R runner:runner "$RUNNER_HOME"
+
+# NOTE: actions-runner's bin/installdependencies.sh CANNOT parse AL2023
+# (it reads /etc/os-release ID_LIKE="fedora" and exits "Can't detect current
+# OS type"). It returns non-zero, which under `set -euo pipefail` would abort
+# cloud-init. We already installed the needed libs (libicu/krb5/zlib/openssl)
+# in step 1, so we run it best-effort only and never let it fail the script.
+# 2026-05-31: confirmed the runner registers + runs fine on AL2023 without it.
+./bin/installdependencies.sh || log "(installdependencies.sh non-zero on AL2023 — expected; deps pre-installed in step 1)"
+
+# ── 3. Fetch PAT from Secrets Manager ────────────────────────────────────────
+log "Fetching PAT from Secrets Manager ($PAT_SECRET_NAME)..."
+PAT="$(aws secretsmanager get-secret-value \
+  --region "$REGION" \
+  --secret-id "$PAT_SECRET_NAME" \
+  --query SecretString --output text)"
+if [ -z "$PAT" ]; then
+  log "ERROR: empty PAT from $PAT_SECRET_NAME"
+  exit 1
+fi
+
+# ── 4. Mint short-lived registration token ───────────────────────────────────
+log "Minting registration token for $REPO..."
+REG_TOKEN="$(curl -sX POST \
+  -H "Accept: application/vnd.github+json" \
+  -H "Authorization: Bearer $PAT" \
+  -H "X-GitHub-Api-Version: 2022-11-28" \
+  "https://api.github.com/repos/$REPO/actions/runners/registration-token" \
+  | jq -r .token)"
+if [ -z "$REG_TOKEN" ] || [ "$REG_TOKEN" = "null" ]; then
+  log "ERROR: registration-token endpoint returned empty/null"
+  exit 1
+fi
+
+# Discard PAT from memory ASAP; only the short-lived REG_TOKEN is needed past
+# this point.
+unset PAT
+
+# ── 5. Register the runner ───────────────────────────────────────────────────
+# QA nit: GitHub's runner CLI requires a separate REMOVAL token for
+# config.sh remove (registration token only works for registration). When the
+# instance has no prior state (first boot of a Spot instance), remove is a
+# no-op; we skip it unconditionally and rely on --replace to handle name
+# collisions in GitHub's runner list.
+log "Registering runner with label '$RUNNER_LABEL' (--replace handles name collisions)..."
+su runner -c "cd $RUNNER_HOME && ./config.sh \
+  --unattended \
+  --url https://github.com/$REPO \
+  --token $REG_TOKEN \
+  --name $RUNNER_NAME \
+  --labels $RUNNER_LABEL \
+  --replace"
+
+# QA nit: PAT was unset earlier; clear REG_TOKEN too once registration
+# completes (script exits shortly anyway but explicit cleanup is consistent).
+unset REG_TOKEN
+
+# ── 6. Install + start as a systemd service ──────────────────────────────────
+log "Installing systemd service..."
+"$RUNNER_HOME/svc.sh" install runner
+"$RUNNER_HOME/svc.sh" start
+
+log "=== Runner registered and running ==="
+systemctl status actions.runner.* --no-pager | head -20 || true

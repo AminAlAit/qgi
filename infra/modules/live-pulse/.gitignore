@@ -1,0 +1,5 @@
+# Apply-time artifact: archive_file zips src/lambda_function.py here.
+build/
+__pycache__/
+*.pyc
+.pytest_cache/
