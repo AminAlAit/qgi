@@ -1,0 +1,15 @@
+[project]
+name = "qgi-pipeline"
+version = "6.0.0"
+description = "QGI Serverless Medallion Lakehouse & Ingestion Pipeline"
+requires-python = ">=3.11"
+
+[tool.ruff]
+extend = "../pyproject.toml"
+
+[tool.pytest.ini_options]
+pythonpath = ["..", "."]
+markers = [
+    "slow: marks tests as slow",
+    "integration: marks integration tests",
+]
