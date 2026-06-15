@@ -1,0 +1,62 @@
+[
+  {
+    "code": "IHDI",
+    "name": "Inequality-Adjusted Human Development Index",
+    "provider": "UNDP HDR",
+    "fetchable": true,
+    "is_derived": false,
+    "source": "hdr_composite_csv",
+    "endpoint_or_dataset": "https://hdr.undp.org/sites/default/files/2025_HDR/HDR25_Composite_indices_complete_time_series.csv",
+    "col_prefix": "ihdi_",
+    "frequency": "annual",
+    "transform": "none",
+    "derivation": null,
+    "confidence": "high",
+    "notes": "Columns ihdi_2010 through ihdi_2023 (14 years). Only available from 2010 onwards."
+  },
+  {
+    "code": "GII",
+    "name": "Gender Inequality Index",
+    "provider": "UNDP HDR",
+    "fetchable": true,
+    "is_derived": false,
+    "source": "hdr_composite_csv",
+    "endpoint_or_dataset": "https://hdr.undp.org/sites/default/files/2025_HDR/HDR25_Composite_indices_complete_time_series.csv",
+    "col_prefix": "gii_",
+    "frequency": "annual",
+    "transform": "none",
+    "derivation": null,
+    "confidence": "high",
+    "notes": "Columns gii_1990 through gii_2023. Exclude gii_rank_{year} columns via digit-only suffix filter."
+  },
+  {
+    "code": "INEQ_INC",
+    "name": "Inequality in Income (Atkinson measure)",
+    "provider": "UNDP HDR",
+    "fetchable": true,
+    "is_derived": false,
+    "source": "hdr_composite_csv",
+    "endpoint_or_dataset": "https://hdr.undp.org/sites/default/files/2025_HDR/HDR25_Composite_indices_complete_time_series.csv",
+    "col_prefix": "ineq_inc_",
+    "frequency": "annual",
+    "transform": "none",
+    "derivation": null,
+    "confidence": "high",
+    "notes": "Columns ineq_inc_2010 through ineq_inc_2023. Prefix contains underscore; handled by startswith+isdigit check."
+  },
+  {
+    "code": "MPI",
+    "name": "Multidimensional Poverty Index",
+    "provider": "UNDP HDR / OPHI",
+    "fetchable": true,
+    "is_derived": false,
+    "source": "ophi_xlsx",
+    "endpoint_or_dataset": "https://ophi.org.uk/sites/default/files/2025-10/Table_6_Trends_Over_Time_MPI_2025_30_Oct.xlsx",
+    "col_prefix": null,
+    "frequency": "multi-year sparse",
+    "transform": "none",
+    "derivation": null,
+    "confidence": "med",
+    "notes": "OPHI Table 6 (Trends Over Time) XLSX. 88 countries, 2 time points each (t0/t1, survey-year cadence 2001-2024). Sheet '6.1 Harmonised MPI' (sheet 0 = readme only). Header at Excel row 5 (0-indexed 4); data starts at row 8 (4 sub-header rows to skip). Wide format: ISO-3 in col[1], t0 MPI in col[8], t1 MPI in col[9], t0 survey year in col[5], t1 survey year in col[7]. Survey years like '2015-2016' resolved to end year. Requires openpyxl."
+  }
+]
