@@ -1,0 +1,175 @@
+[
+  {
+    "code": "UN-01",
+    "endpoint": "population",
+    "value_field": "refugees",
+    "country_field": "coo_iso",
+    "filter_params": {"yearFrom": 1990, "limit": 10000, "coo_all": "true", "coa_all": "true"},
+    "transform": "sum",
+    "is_derived": false,
+    "notes": "Refugees by country of origin (legacy UN-01 seed code)"
+  },
+  {
+    "code": "UN-02",
+    "endpoint": "population",
+    "value_field": "refugees",
+    "country_field": "coa_iso",
+    "filter_params": {"yearFrom": 1990, "limit": 10000, "coo_all": "true", "coa_all": "true"},
+    "transform": "sum",
+    "is_derived": false,
+    "notes": "Refugees by country of asylum (legacy UN-02 seed code)"
+  },
+  {
+    "code": "UN-03",
+    "endpoint": "asylum-applications",
+    "value_field": "applied",
+    "country_field": "coo_iso",
+    "filter_params": {"yearFrom": 1990, "limit": 10000, "coo_all": "true", "coa_all": "true"},
+    "transform": "sum",
+    "is_derived": false,
+    "notes": "New asylum applications by country of origin (legacy UN-03 seed code)"
+  },
+  {
+    "code": "UN-04",
+    "endpoint": "population",
+    "value_field": "idps",
+    "country_field": "coa_iso",
+    "filter_params": {"yearFrom": 1990, "limit": 10000, "coo_all": "true", "coa_all": "true"},
+    "transform": "sum",
+    "is_derived": false,
+    "notes": "IDPs by country (legacy UN-04 seed code)"
+  },
+  {
+    "code": "UN-05",
+    "endpoint": "solutions",
+    "value_field": "voluntary_returns",
+    "country_field": "coo_iso",
+    "filter_params": {"yearFrom": 1990, "limit": 10000, "coo_all": "true", "coa_all": "true"},
+    "transform": "sum",
+    "is_derived": false,
+    "notes": "Voluntary returns by country of origin (legacy UN-05 seed code)"
+  },
+  {
+    "code": "UN-06",
+    "endpoint": "population",
+    "value_field": "stateless",
+    "country_field": "coa_iso",
+    "filter_params": {"yearFrom": 1990, "limit": 10000, "coo_all": "true", "coa_all": "true"},
+    "transform": "sum",
+    "is_derived": false,
+    "notes": "Stateless persons by country (legacy UN-06 seed code)"
+  },
+  {
+    "code": "UNHCR_IDP",
+    "endpoint": "population",
+    "value_field": "idps",
+    "country_field": "coa_iso",
+    "filter_params": {"yearFrom": 1990, "limit": 10000, "coo_all": "true", "coa_all": "true"},
+    "transform": "sum",
+    "is_derived": false,
+    "notes": "UNHCR-mandate IDP stock (end-year) by country of location"
+  },
+  {
+    "code": "UNHCR_IDP_CHANGE_RATE",
+    "endpoint": "population",
+    "value_field": "idps",
+    "country_field": "coa_iso",
+    "filter_params": {"yearFrom": 1990, "limit": 10000, "coo_all": "true", "coa_all": "true"},
+    "transform": "annual_change_rate",
+    "is_derived": true,
+    "base_code": "UNHCR_IDP",
+    "notes": "Annual year-on-year % change of UNHCR IDP stock. Formula: (IDP_t - IDP_{t-1}) / IDP_{t-1} * 100. Zero denominator -> NaN."
+  },
+  {
+    "code": "UNHCR_REF_COO",
+    "endpoint": "population",
+    "value_field": "refugees",
+    "country_field": "coo_iso",
+    "filter_params": {"yearFrom": 1990, "limit": 10000, "coo_all": "true", "coa_all": "true"},
+    "transform": "sum",
+    "is_derived": false,
+    "notes": "Refugee stock by country of origin (sum across all asylum countries)"
+  },
+  {
+    "code": "UNHCR_REF_COA",
+    "endpoint": "population",
+    "value_field": "refugees",
+    "country_field": "coa_iso",
+    "filter_params": {"yearFrom": 1990, "limit": 10000, "coo_all": "true", "coa_all": "true"},
+    "transform": "sum",
+    "is_derived": false,
+    "notes": "Refugee stock hosted in each country of asylum"
+  },
+  {
+    "code": "UNHCR_FORCDISP_TOTAL",
+    "endpoint": "population",
+    "value_field": ["refugees", "asylum_seekers", "idps"],
+    "country_field": "coa_iso",
+    "filter_params": {"yearFrom": 1990, "limit": 10000, "coo_all": "true", "coa_all": "true"},
+    "transform": "sum_fields",
+    "is_derived": true,
+    "notes": "Total forcibly displaced: sum of refugees + asylum_seekers + idps by country of presence (coa_iso). All fields in same population endpoint record; cast strings to float; treat blank/'-' as 0."
+  },
+  {
+    "code": "UNHCR_STA",
+    "endpoint": "population",
+    "value_field": "stateless",
+    "country_field": "coa_iso",
+    "filter_params": {"yearFrom": 1990, "limit": 10000, "coo_all": "true", "coa_all": "true"},
+    "transform": "sum",
+    "is_derived": false,
+    "notes": "Stateless persons (end-year stock) by country"
+  },
+  {
+    "code": "UNHCR_ASYAPP_NEW_COO",
+    "endpoint": "asylum-applications",
+    "value_field": "applied",
+    "country_field": "coo_iso",
+    "filter_params": {"yearFrom": 1990, "limit": 10000, "coo_all": "true", "coa_all": "true"},
+    "transform": "sum",
+    "is_derived": false,
+    "notes": "New asylum applications filed from each origin country across all destination countries (annual flow)"
+  },
+  {
+    "code": "UNHCR_RECOG_RATE",
+    "endpoint": "asylum-decisions",
+    "value_field": ["dec_recognized", "dec_total"],
+    "country_field": "coo_iso",
+    "filter_params": {"yearFrom": 1990, "limit": 10000, "coo_all": "true", "coa_all": "true"},
+    "transform": "ratio_pct",
+    "is_derived": true,
+    "notes": "Asylum recognition rate: sum(dec_recognized) / sum(dec_total) * 100 by (coo_iso, year). Aggregate numerator and denominator separately before dividing. Exclude rows where dec_total = 0."
+  },
+  {
+    "code": "UNHCR_ASY_BACKLOG_YEARS",
+    "endpoint": ["population", "asylum-decisions"],
+    "value_field": ["asylum_seekers", "dec_total"],
+    "country_field": "coa_iso",
+    "filter_params": {"yearFrom": 1990, "limit": 10000, "coo_all": "true", "coa_all": "true"},
+    "transform": "cross_endpoint_ratio",
+    "is_derived": true,
+    "notes": "Implied years to clear asylum backlog: sum(asylum_seekers by coa_iso, year) / sum(dec_total by coa_iso, year). Two-endpoint join. Exclude rows where dec_total = 0. Medium confidence."
+  },
+  {
+    "code": "UNHCR_REF_RATIO_POP",
+    "endpoint": "population",
+    "value_field": "refugees",
+    "country_field": "coo_iso",
+    "filter_params": {"yearFrom": 1990, "limit": 10000, "coo_all": "true", "coa_all": "true"},
+    "transform": "per_wb_pop_pct",
+    "is_derived": true,
+    "wb_indicator": "SP.POP.TOTL",
+    "notes": "Refugees as % of origin country population: sum(refugees by coo_iso, year) / WB_SP.POP.TOTL * 100. Medium confidence (cross-provider join)."
+  },
+  {
+    "code": "UNHCR_IDP_RATIO_POP",
+    "endpoint": "population",
+    "value_field": "idps",
+    "country_field": "coa_iso",
+    "filter_params": {"yearFrom": 1990, "limit": 10000, "coo_all": "true", "coa_all": "true"},
+    "transform": "per_wb_pop_pct",
+    "is_derived": true,
+    "wb_indicator": "SP.POP.TOTL",
+    "notes": "IDPs as % of country population: sum(idps by coa_iso, year) / WB_SP.POP.TOTL * 100. Medium confidence (UNHCR-mandate IDPs only)."
+  }
+]

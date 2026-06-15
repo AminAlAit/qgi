@@ -1,0 +1,9 @@
+# Mirror qgi-data/requirements (the worker script's deps) plus boto3 for S3.
+# Pinned to the same major versions as the other Batch images for build-cache
+# friendliness. The Lambda base image already brings boto3 but we list it
+# explicitly so a version-pin lands.
+boto3>=1.34
+openpyxl>=3.1
+pandas>=2.0
+pyarrow>=16.0
+PyYAML>=6.0
