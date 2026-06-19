@@ -1,0 +1,24 @@
+# Recipe-fleet container requirements.
+# Pinned to ranges that match what the qgi-ml walk scripts expect.
+# Update versions after benchmarking on a canary run.
+
+# Core ML
+xgboost>=2.0,<3.0          # XGBClassifier(n_jobs=1) — single-threaded per §2a
+shap>=0.45,<1.0             # SHAP values for compute_driver.py + compute_sensitivity.py
+threadpoolctl>=3.0,<4.0    # pin BLAS/OpenMP to 1 thread per fold (#961 oversubscription fix)
+
+# Data / numeric
+pandas>=2.0,<3.0
+numpy>=1.26,<3.0
+scipy>=1.11,<2.0
+scikit-learn>=1.4,<2.0     # StandardScaler, cross_val_predict, LOCO utilities
+
+# Parquet IO
+pyarrow>=14.0,<20.0        # read_parquet for panel sync
+fastparquet>=2023.0        # fallback parquet engine (matches scdi-finder)
+
+# AWS
+boto3>=1.34,<2.0           # S3 sync + SFN task-token reporting
+
+# Observability (canary CPU metric)
+psutil>=5.9,<7.0           # cpu_utilization_pct_mean_walk (design §4 + §2a)
