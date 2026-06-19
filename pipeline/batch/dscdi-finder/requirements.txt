@@ -1,0 +1,16 @@
+# DSCDI Finder runtime dependencies. Versions pinned to upper-bound
+# major releases per the plan v5 strict-reviewer M-2: a Stage F
+# production Batch container is a reproducibility target, and unpinned
+# pandas/numpy/pyarrow could pick up breaking changes (e.g., pandas 3.x
+# .stack() / .corr() behavior shifts) during a future rebuild.
+#
+# Compared to batch/scdi-finder/requirements.txt this drops:
+#   - scipy (DSCDI uses panel.corr(), not FFT cross-correlation)
+#   - psutil (DSCDI doesn't use ProcessPoolExecutor — one job per indicator,
+#     not per (indicator × country_A))
+#   - fastparquet (pyarrow alone handles snappy-compressed Parquet)
+#   - brotli (Glue manifest + dscdis tables specify snappy, not brotli)
+pandas>=2.1,<3
+numpy>=1.26,<3
+boto3>=1.34,<2
+pyarrow>=14,<20
