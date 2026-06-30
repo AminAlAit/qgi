@@ -1,0 +1,189 @@
+{
+  "Comment": "QGI Flagship Pipeline - Monthly Aggregate Ingestion, Trajectory Engine Walk, and Lakehouse Rollup State Machine",
+  "StartAt": "ParallelMonthlyIngestion",
+  "States": {
+    "ParallelMonthlyIngestion": {
+      "Type": "Parallel",
+      "Branches": [
+        {
+          "StartAt": "IngestSIPRIMilex",
+          "States": {
+            "IngestSIPRIMilex": {
+              "Type": "Task",
+              "Resource": "arn:aws:states:::batch:submitJob.sync",
+              "Parameters": {
+                "JobName": "qgi-ingest-sipri-milex",
+                "JobQueue": "arn:aws:batch:${AWS_REGION}:${AWS_ACCOUNT_ID}:job-queue/qgi-pipeline-spot-queue",
+                "JobDefinition": "arn:aws:batch:${AWS_REGION}:${AWS_ACCOUNT_ID}:job-definition/qgi-sipri-extractor:latest",
+                "Parameters": {
+                  "source": "sipri",
+                  "execution_id.$": "$$.Execution.Id"
+                }
+              },
+              "End": true
+            }
+          }
+        },
+        {
+          "StartAt": "IngestWorldBankWDI",
+          "States": {
+            "IngestWorldBankWDI": {
+              "Type": "Task",
+              "Resource": "arn:aws:states:::batch:submitJob.sync",
+              "Parameters": {
+                "JobName": "qgi-ingest-worldbank-wdi",
+                "JobQueue": "arn:aws:batch:${AWS_REGION}:${AWS_ACCOUNT_ID}:job-queue/qgi-pipeline-spot-queue",
+                "JobDefinition": "arn:aws:batch:${AWS_REGION}:${AWS_ACCOUNT_ID}:job-definition/qgi-worldbank-extractor:latest",
+                "Parameters": {
+                  "source": "worldbank",
+                  "execution_id.$": "$$.Execution.Id"
+                }
+              },
+              "End": true
+            }
+          }
+        },
+        {
+          "StartAt": "IngestUCDPConflict",
+          "States": {
+            "IngestUCDPConflict": {
+              "Type": "Task",
+              "Resource": "arn:aws:states:::batch:submitJob.sync",
+              "Parameters": {
+                "JobName": "qgi-ingest-ucdp-conflict",
+                "JobQueue": "arn:aws:batch:${AWS_REGION}:${AWS_ACCOUNT_ID}:job-queue/qgi-pipeline-spot-queue",
+                "JobDefinition": "arn:aws:batch:${AWS_REGION}:${AWS_ACCOUNT_ID}:job-definition/indicator-fetcher-ucdp:latest",
+                "Parameters": {
+                  "source": "ucdp",
+                  "execution_id.$": "$$.Execution.Id"
+                }
+              },
+              "End": true
+            }
+          }
+        }
+      ],
+      "ResultPath": "$.monthly_ingestion_results",
+      "Next": "HarmonizeMonthlySilverLayer",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "Next": "ExecutionFailed"
+        }
+      ]
+    },
+    "HarmonizeMonthlySilverLayer": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:${AWS_REGION}:${AWS_ACCOUNT_ID}:function:qgi-pipeline-c-dispatcher",
+        "Payload": {
+          "execution_id.$": "$$.Execution.Id",
+          "mode": "monthly_cross_sectional"
+        }
+      },
+      "ResultPath": "$.silver_monthly_result",
+      "Next": "RunRecipeFleetBatchWalk",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "Next": "ExecutionFailed"
+        }
+      ]
+    },
+    "RunRecipeFleetBatchWalk": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::batch:submitJob.sync",
+      "Parameters": {
+        "JobName": "qgi-recipe-fleet-monthly-walk",
+        "JobQueue": "arn:aws:batch:${AWS_REGION}:${AWS_ACCOUNT_ID}:job-queue/qgi-pipeline-spot-queue",
+        "JobDefinition": "arn:aws:batch:${AWS_REGION}:${AWS_ACCOUNT_ID}:job-definition/qgi-recipe-fleet:latest",
+        "ContainerOverrides": {
+          "Environment": [
+            {
+              "Name": "EXECUTION_ID",
+              "Value.$": "$$.Execution.Id"
+            },
+            {
+              "Name": "PIPELINE_MODE",
+              "Value": "monthly_fleet_walk"
+            }
+          ]
+        }
+      },
+      "ResultPath": "$.fleet_walk_result",
+      "Next": "PostPassAttestation",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "Next": "ExecutionFailed"
+        }
+      ]
+    },
+    "PostPassAttestation": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:${AWS_REGION}:${AWS_ACCOUNT_ID}:function:qgi-recipe-fleet-post-pass",
+        "Payload": {
+          "execution_name.$": "$$.Execution.Name",
+          "ml_results_prefix": "ml-results/",
+          "s3_bucket": "qgi-data-lake-${AWS_ACCOUNT_ID}"
+        }
+      },
+      "ResultPath": "$.post_pass_result",
+      "Next": "VintageRollupAggregation",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "Next": "ExecutionFailed"
+        }
+      ]
+    },
+    "VintageRollupAggregation": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:${AWS_REGION}:${AWS_ACCOUNT_ID}:function:qgi-recipe-fleet-vintage-rollup",
+        "Payload": {
+          "s3_bucket": "qgi-data-lake-${AWS_ACCOUNT_ID}",
+          "current_vintage_id.$": "$$.Execution.Name"
+        }
+      },
+      "ResultPath": "$.vintage_rollup_result",
+      "Next": "SyncFrontendVintage",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "Next": "ExecutionFailed"
+        }
+      ]
+    },
+    "SyncFrontendVintage": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:${AWS_REGION}:${AWS_ACCOUNT_ID}:function:qgi-recipe-fleet-frontend-sync",
+        "Payload": {
+          "vintage_s3_prefix.$": "States.Format('frontend-data/te-fleet-run-{}/', $$.Execution.Name)"
+        }
+      },
+      "ResultPath": "$.frontend_sync_result",
+      "Next": "ExecutionSucceeded",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "Next": "ExecutionFailed"
+        }
+      ]
+    },
+    "ExecutionSucceeded": {
+      "Type": "Succeed"
+    },
+    "ExecutionFailed": {
+      "Type": "Fail",
+      "Cause": "Monthly aggregate pipeline execution failed.",
+      "Error": "MonthlyAggregatePipelineError"
+    }
+  }
+}
