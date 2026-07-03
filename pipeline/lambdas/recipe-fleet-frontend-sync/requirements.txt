@@ -1,0 +1,4 @@
+# All dependencies are part of the Lambda runtime:
+#   - boto3 (AWS Lambda runtime preloaded)
+#   - urllib (stdlib)
+# This file exists for parity with sibling Lambdas and CI deploy scripts.
