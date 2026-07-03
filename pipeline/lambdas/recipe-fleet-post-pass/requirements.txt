@@ -1,0 +1,5 @@
+# qgi-recipe-fleet-post-pass — Lambda Python 3.13 runtime.
+# boto3 is provided by the Lambda runtime; pinning a version here would only ship a
+# redundant copy in the zip and risk skew with what Lambda actually loads. Keep this
+# file present (standard convention "each Lambda dir has requirements.txt") but empty so the
+# CI/CD packaging step has nothing extra to vendor.

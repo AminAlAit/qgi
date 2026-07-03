@@ -1,0 +1,172 @@
+{
+  "Comment": "QGI Flagship Pipeline - Daily Telemetry Ingestion and Trajectory Harmonization State Machine",
+  "StartAt": "JanitorPhase0",
+  "States": {
+    "JanitorPhase0": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:${AWS_REGION}:${AWS_ACCOUNT_ID}:function:qgi-pipeline-ops-janitor",
+        "Payload": {
+          "execution_id.$": "$$.Execution.Id",
+          "action": "purge_queues"
+        }
+      },
+      "ResultPath": "$.janitor_result",
+      "Next": "ParallelTelemetryIngestion",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "Next": "ExecutionFailed"
+        }
+      ]
+    },
+    "ParallelTelemetryIngestion": {
+      "Type": "Parallel",
+      "Branches": [
+        {
+          "StartAt": "IngestACLEDTelemetry",
+          "States": {
+            "IngestACLEDTelemetry": {
+              "Type": "Task",
+              "Resource": "arn:aws:states:::batch:submitJob.sync",
+              "Parameters": {
+                "JobName": "qgi-ingest-acled-telemetry",
+                "JobQueue": "arn:aws:batch:${AWS_REGION}:${AWS_ACCOUNT_ID}:job-queue/qgi-pipeline-spot-queue",
+                "JobDefinition": "arn:aws:batch:${AWS_REGION}:${AWS_ACCOUNT_ID}:job-definition/qgi-acled-extractor:latest",
+                "Parameters": {
+                  "source": "acled",
+                  "execution_id.$": "$$.Execution.Id"
+                }
+              },
+              "End": true
+            }
+          }
+        },
+        {
+          "StartAt": "IngestGDELTTelemetry",
+          "States": {
+            "IngestGDELTTelemetry": {
+              "Type": "Task",
+              "Resource": "arn:aws:states:::batch:submitJob.sync",
+              "Parameters": {
+                "JobName": "qgi-ingest-gdelt-telemetry",
+                "JobQueue": "arn:aws:batch:${AWS_REGION}:${AWS_ACCOUNT_ID}:job-queue/qgi-pipeline-spot-queue",
+                "JobDefinition": "arn:aws:batch:${AWS_REGION}:${AWS_ACCOUNT_ID}:job-definition/qgi-gdelt-extractor:latest",
+                "Parameters": {
+                  "source": "gdelt",
+                  "execution_id.$": "$$.Execution.Id"
+                }
+              },
+              "End": true
+            }
+          }
+        }
+      ],
+      "ResultPath": "$.ingestion_results",
+      "Next": "HarmonizeSilverLayer",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "Next": "ExecutionFailed"
+        }
+      ]
+    },
+    "HarmonizeSilverLayer": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:${AWS_REGION}:${AWS_ACCOUNT_ID}:function:qgi-pipeline-c-worker",
+        "Payload": {
+          "execution_id.$": "$$.Execution.Id",
+          "target_layer": "silver",
+          "date.$": "$$.Execution.StartTime"
+        }
+      },
+      "ResultPath": "$.silver_result",
+      "Next": "ComputeDailyTrajectory",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "Next": "ExecutionFailed"
+        }
+      ]
+    },
+    "ComputeDailyTrajectory": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::batch:submitJob.sync",
+      "Parameters": {
+        "JobName": "qgi-compute-daily-trajectory",
+        "JobQueue": "arn:aws:batch:${AWS_REGION}:${AWS_ACCOUNT_ID}:job-queue/qgi-pipeline-spot-queue",
+        "JobDefinition": "arn:aws:batch:${AWS_REGION}:${AWS_ACCOUNT_ID}:job-definition/qgi-recipe-fleet:latest",
+        "ContainerOverrides": {
+          "Environment": [
+            {
+              "Name": "EXECUTION_ID",
+              "Value.$": "$$.Execution.Id"
+            },
+            {
+              "Name": "PIPELINE_MODE",
+              "Value": "daily_telemetry"
+            }
+          ]
+        }
+      },
+      "ResultPath": "$.trajectory_result",
+      "Next": "PublishGoldDatasets",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "Next": "ExecutionFailed"
+        }
+      ]
+    },
+    "PublishGoldDatasets": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:${AWS_REGION}:${AWS_ACCOUNT_ID}:function:qgi-pipeline-recipe-engine-finalize",
+        "Payload": {
+          "execution_id.$": "$$.Execution.Id",
+          "target_layer": "gold",
+          "publish_catalog": true
+        }
+      },
+      "ResultPath": "$.gold_result",
+      "Next": "TriggerFrontendBake",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "Next": "ExecutionFailed"
+        }
+      ]
+    },
+    "TriggerFrontendBake": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:${AWS_REGION}:${AWS_ACCOUNT_ID}:function:qgi-frontend-bake-trigger",
+        "Payload": {
+          "source": "step-functions",
+          "execution_id.$": "$$.Execution.Id"
+        }
+      },
+      "ResultPath": "$.bake_result",
+      "Next": "ExecutionSucceeded",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "Next": "ExecutionFailed"
+        }
+      ]
+    },
+    "ExecutionSucceeded": {
+      "Type": "Succeed"
+    },
+    "ExecutionFailed": {
+      "Type": "Fail",
+      "Cause": "Pipeline daily telemetry execution encountered an unhandled error.",
+      "Error": "DailyTelemetryPipelineError"
+    }
+  }
+}
