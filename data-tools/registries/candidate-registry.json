@@ -1,0 +1,3946 @@
+{
+  "schema_version": 1,
+  "generated": "2026-06-27",
+  "provider_blocks": {
+    "WB": [
+      1,
+      275
+    ],
+    "VDEM": [
+      276,
+      314
+    ],
+    "FAOSTAT": [
+      315,
+      399
+    ],
+    "UCDP": [
+      400,
+      449
+    ],
+    "UNHCR": [
+      450,
+      499
+    ],
+    "IDMC": [
+      500,
+      549
+    ],
+    "ILOSTAT": [
+      550,
+      699
+    ],
+    "UNDP": [
+      700,
+      749
+    ],
+    "OECD": [
+      750,
+      849
+    ],
+    "OWID": [
+      850,
+      899
+    ],
+    "VDEM_EXT": [
+      900,
+      1399
+    ],
+    "WB_EXT": [
+      1400,
+      2399
+    ],
+    "GDELT": [
+      9000,
+      9999
+    ]
+  },
+  "indicators": [
+    {
+      "indicator_id": "IL-01",
+      "provider": "ILOSTAT",
+      "numeric_id": 550,
+      "name": "Informality rate (% employment in informal economy)",
+      "status": "candidate",
+      "category": "Economic",
+      "description": "Informal economy share; no tax base / safety net; shocks hit informal workers first.",
+      "provider_meta": {
+        "api": "sdmx",
+        "base_url": "sdmx.ilo.org/rest/",
+        "coverage_countries": 130,
+        "start_year": 2000,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IL-02",
+      "provider": "ILOSTAT",
+      "numeric_id": 551,
+      "name": "Labor income share of GDP (%)",
+      "status": "candidate",
+      "category": "Economic",
+      "description": "Share of GDP to workers vs capital; declining share -> inequality, polarization.",
+      "provider_meta": {
+        "api": "sdmx",
+        "base_url": "sdmx.ilo.org/rest/",
+        "coverage_countries": 180,
+        "start_year": 1990,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IL-03",
+      "provider": "ILOSTAT",
+      "numeric_id": 552,
+      "name": "Mean real wage growth (annual %)",
+      "status": "candidate",
+      "category": "Economic",
+      "description": "Real wage trajectory; declining real wages precede strikes and unrest.",
+      "provider_meta": {
+        "api": "sdmx",
+        "base_url": "sdmx.ilo.org/rest/",
+        "coverage_countries": 100,
+        "start_year": 2000,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IL-04",
+      "provider": "ILOSTAT",
+      "numeric_id": 553,
+      "name": "Working poverty rate (% employed below $2.15/day)",
+      "status": "candidate",
+      "category": "Social",
+      "description": "Employed but poor; precedes political violence in developing economies.",
+      "provider_meta": {
+        "api": "sdmx",
+        "base_url": "sdmx.ilo.org/rest/",
+        "coverage_countries": 140,
+        "start_year": 2000,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IL-05",
+      "provider": "ILOSTAT",
+      "numeric_id": 554,
+      "name": "Unemployment by education (% tertiary-educated unemployed)",
+      "status": "candidate",
+      "category": "Social",
+      "description": "Educated unemployed: the Arab-Spring demographic.",
+      "provider_meta": {
+        "api": "sdmx",
+        "base_url": "sdmx.ilo.org/rest/",
+        "coverage_countries": 120,
+        "start_year": 2000,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IL-06",
+      "provider": "ILOSTAT",
+      "numeric_id": 555,
+      "name": "Gender wage gap (female/male ratio)",
+      "status": "candidate",
+      "category": "Social",
+      "description": "Gender inequality regime signal; tracks social liberalization/backlash.",
+      "provider_meta": {
+        "api": "sdmx",
+        "base_url": "sdmx.ilo.org/rest/",
+        "coverage_countries": 100,
+        "start_year": 2000,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IL-07",
+      "provider": "ILOSTAT",
+      "numeric_id": 556,
+      "name": "Excess hours worked (% working >48h/week)",
+      "status": "candidate",
+      "category": "Economic",
+      "description": "Hidden labor stress: underemployment / exploitation signal.",
+      "provider_meta": {
+        "api": "sdmx",
+        "base_url": "sdmx.ilo.org/rest/",
+        "coverage_countries": 110,
+        "start_year": 2000,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IL-08",
+      "provider": "ILOSTAT",
+      "numeric_id": 557,
+      "name": "Social protection coverage (% pop with >=1 benefit)",
+      "status": "candidate",
+      "category": "Social",
+      "description": "Share with any safety net; low coverage + shock -> rapid poverty spike.",
+      "provider_meta": {
+        "api": "sdmx",
+        "base_url": "sdmx.ilo.org/rest/",
+        "coverage_countries": 170,
+        "start_year": 2000,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IL-09",
+      "provider": "ILOSTAT",
+      "numeric_id": 558,
+      "name": "Social protection expenditure (% GDP)",
+      "status": "candidate",
+      "category": "Government",
+      "description": "Safety-net spending; decline signals austerity -> fiscal change/protests.",
+      "provider_meta": {
+        "api": "sdmx",
+        "base_url": "sdmx.ilo.org/rest/",
+        "coverage_countries": 150,
+        "start_year": 2000,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IL-10",
+      "provider": "ILOSTAT",
+      "numeric_id": 559,
+      "name": "Long-term unemployment (12+ months, % labor force)",
+      "status": "candidate",
+      "category": "Economic",
+      "description": "Structural unemployment; precedes long-run instability/populism.",
+      "provider_meta": {
+        "api": "sdmx",
+        "base_url": "sdmx.ilo.org/rest/",
+        "coverage_countries": 120,
+        "start_year": 2000,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IL-11",
+      "provider": "ILOSTAT",
+      "numeric_id": 560,
+      "name": "Youth NEET rate (% not in education/employment/training)",
+      "status": "candidate",
+      "category": "Social",
+      "description": "Most dangerous demographic for instability; Arab Spring signature.",
+      "provider_meta": {
+        "api": "sdmx",
+        "base_url": "sdmx.ilo.org/rest/",
+        "coverage_countries": 150,
+        "start_year": 2000,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IL-12",
+      "provider": "ILOSTAT",
+      "numeric_id": 561,
+      "name": "Manufacturing employment share (%)",
+      "status": "candidate",
+      "category": "Economic",
+      "description": "Deindustrialization signal; rapid decline -> populist backlash.",
+      "provider_meta": {
+        "api": "sdmx",
+        "base_url": "sdmx.ilo.org/rest/",
+        "coverage_countries": 160,
+        "start_year": 1990,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IL-13",
+      "provider": "ILOSTAT",
+      "numeric_id": 562,
+      "name": "Strikes and lockouts (days lost per 1000 workers)",
+      "status": "candidate",
+      "category": "Social",
+      "description": "Direct labor conflict; spikes precede political_violence. Patchy coverage.",
+      "provider_meta": {
+        "api": "sdmx",
+        "base_url": "sdmx.ilo.org/rest/",
+        "coverage_countries": 80,
+        "start_year": 1969,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UN-01",
+      "provider": "UNHCR",
+      "numeric_id": 450,
+      "name": "Refugees by country of origin (total)",
+      "status": "candidate",
+      "category": "Demographic",
+      "description": "People who fled this country; direct 'how bad inside' measure.",
+      "provider_meta": {
+        "api": "rest",
+        "endpoint": "api.unhcr.org/population/v1/",
+        "coverage_countries": 200,
+        "start_year": 1951,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UN-02",
+      "provider": "UNHCR",
+      "numeric_id": 451,
+      "name": "Refugees by country of asylum (total)",
+      "status": "candidate",
+      "category": "Demographic",
+      "description": "Refugees hosted; large influxes strain hosts and trigger secondary instability.",
+      "provider_meta": {
+        "api": "rest",
+        "endpoint": "api.unhcr.org/population/v1/",
+        "coverage_countries": 200,
+        "start_year": 1951,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UN-03",
+      "provider": "UNHCR",
+      "numeric_id": 452,
+      "name": "New asylum applications (by origin country)",
+      "status": "candidate",
+      "category": "Demographic",
+      "description": "Leading indicator; precedes recognized refugee counts by 6-24 months.",
+      "provider_meta": {
+        "api": "rest",
+        "endpoint": "api.unhcr.org/population/v1/",
+        "coverage_countries": 160,
+        "start_year": 2000,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UN-04",
+      "provider": "UNHCR",
+      "numeric_id": 453,
+      "name": "IDPs (internally displaced persons, total)",
+      "status": "candidate",
+      "category": "Demographic",
+      "description": "Displaced but inside; measures internal conflict severity.",
+      "provider_meta": {
+        "api": "rest",
+        "endpoint": "api.unhcr.org/population/v1/",
+        "coverage_countries": 80,
+        "start_year": 2000,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UN-05",
+      "provider": "UNHCR",
+      "numeric_id": 454,
+      "name": "Voluntary refugee returns (annual)",
+      "status": "candidate",
+      "category": "Demographic",
+      "description": "People going home; rising returns = post-conflict stabilization.",
+      "provider_meta": {
+        "api": "rest",
+        "endpoint": "api.unhcr.org/population/v1/",
+        "coverage_countries": 150,
+        "start_year": 1990,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UN-06",
+      "provider": "UNHCR",
+      "numeric_id": 455,
+      "name": "Stateless persons (total in country)",
+      "status": "candidate",
+      "category": "Governance",
+      "description": "No nationality; governance failure / ethnic discrimination signal.",
+      "provider_meta": {
+        "api": "rest",
+        "endpoint": "api.unhcr.org/population/v1/",
+        "coverage_countries": 80,
+        "start_year": 2004,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "ID-01",
+      "provider": "IDMC",
+      "numeric_id": 500,
+      "name": "New internal displacements by conflict (annual flow)",
+      "status": "candidate",
+      "category": "Demographic",
+      "description": "Newly displaced by conflict; flow = better early warning than stock.",
+      "provider_meta": {
+        "api": "rest",
+        "endpoint": "api.internal-displacement.org/",
+        "needs_api_key": true,
+        "coverage_countries": 150,
+        "start_year": 2008,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "ID-02",
+      "provider": "IDMC",
+      "numeric_id": 501,
+      "name": "New internal displacements by disaster (annual flow)",
+      "status": "candidate",
+      "category": "Demographic",
+      "description": "Disaster displacement; climate vulnerability signal.",
+      "provider_meta": {
+        "api": "rest",
+        "endpoint": "api.internal-displacement.org/",
+        "needs_api_key": true,
+        "coverage_countries": 180,
+        "start_year": 2008,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "ID-03",
+      "provider": "IDMC",
+      "numeric_id": 502,
+      "name": "IDP stock by conflict (end-of-year total)",
+      "status": "candidate",
+      "category": "Demographic",
+      "description": "Accumulated conflict displacement; chronic-conflict signal.",
+      "provider_meta": {
+        "api": "rest",
+        "endpoint": "api.internal-displacement.org/",
+        "needs_api_key": true,
+        "coverage_countries": 60,
+        "start_year": 2008,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UC-01",
+      "provider": "UCDP",
+      "numeric_id": 400,
+      "name": "Battle-related deaths (best estimate, annual)",
+      "status": "candidate",
+      "category": "Military",
+      "description": "Counted conflict fatalities; ground truth for civil_war.",
+      "provider_meta": {
+        "api": "rest",
+        "endpoint": "ucdpapi.pcr.uu.se/api/",
+        "country_codes": "gw",
+        "coverage_countries": 185,
+        "start_year": 1989,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UC-02",
+      "provider": "UCDP",
+      "numeric_id": 401,
+      "name": "Number of active conflicts (intrastate + interstate)",
+      "status": "candidate",
+      "category": "Military",
+      "description": "Simultaneous armed conflicts; multi-front wars differ qualitatively.",
+      "provider_meta": {
+        "api": "rest",
+        "endpoint": "ucdpapi.pcr.uu.se/api/",
+        "country_codes": "gw",
+        "coverage_countries": 185,
+        "start_year": 1946,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UC-03",
+      "provider": "UCDP",
+      "numeric_id": 402,
+      "name": "Conflict onset (binary: new conflict in country-year)",
+      "status": "candidate",
+      "category": "Military",
+      "description": "Fresh conflict start; doubles as an ML label for civil_war.",
+      "provider_meta": {
+        "api": "rest",
+        "endpoint": "ucdpapi.pcr.uu.se/api/",
+        "country_codes": "gw",
+        "coverage_countries": 185,
+        "start_year": 1946,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UC-04",
+      "provider": "UCDP",
+      "numeric_id": 403,
+      "name": "One-sided violence fatalities",
+      "status": "candidate",
+      "category": "Military",
+      "description": "Civilians targeted by state/rebels; precedes full civil_war by 1-2y.",
+      "provider_meta": {
+        "api": "rest",
+        "endpoint": "ucdpapi.pcr.uu.se/api/",
+        "country_codes": "gw",
+        "coverage_countries": 160,
+        "start_year": 1989,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UD-01",
+      "provider": "UNDP",
+      "numeric_id": 700,
+      "name": "Human Development Index (HDI, 0-1)",
+      "status": "candidate",
+      "category": "Social",
+      "description": "Health+education+income composite; stagnation signals frustration.",
+      "provider_meta": {
+        "api": "csv",
+        "source": "hdr.undp.org/data-center/",
+        "coverage_countries": 193,
+        "start_year": 1990,
+        "license": "CC BY 3.0 IGO"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UD-02",
+      "provider": "UNDP",
+      "numeric_id": 701,
+      "name": "Inequality-adjusted HDI (IHDI, 0-1)",
+      "status": "candidate",
+      "category": "Social",
+      "description": "HDI discounted for inequality; HDI-IHDI gap = concentrated development.",
+      "provider_meta": {
+        "api": "csv",
+        "source": "hdr.undp.org/data-center/",
+        "coverage_countries": 150,
+        "start_year": 2010,
+        "license": "CC BY 3.0 IGO"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UD-03",
+      "provider": "UNDP",
+      "numeric_id": 702,
+      "name": "Gender Inequality Index (GII, 0-1)",
+      "status": "candidate",
+      "category": "Social",
+      "description": "Reproductive health + empowerment + labor gaps; tracks authoritarianism.",
+      "provider_meta": {
+        "api": "csv",
+        "source": "hdr.undp.org/data-center/",
+        "coverage_countries": 170,
+        "start_year": 1995,
+        "license": "CC BY 3.0 IGO"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UD-04",
+      "provider": "UNDP",
+      "numeric_id": 703,
+      "name": "Multidimensional Poverty Index (MPI)",
+      "status": "candidate",
+      "category": "Social",
+      "description": "Non-monetary deprivation; high MPI + stress -> destabilization.",
+      "provider_meta": {
+        "api": "csv",
+        "source": "hdr.undp.org/data-center/",
+        "coverage_countries": 110,
+        "start_year": 2000,
+        "license": "CC BY 3.0 IGO"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UD-05",
+      "provider": "UNDP",
+      "numeric_id": 704,
+      "name": "Mean years of schooling",
+      "status": "candidate",
+      "category": "Education",
+      "description": "Human capital stock; low attainment + youth bulge = stagnation risk.",
+      "provider_meta": {
+        "api": "csv",
+        "source": "hdr.undp.org/data-center/",
+        "coverage_countries": 193,
+        "start_year": 1990,
+        "license": "CC BY 3.0 IGO"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UD-06",
+      "provider": "UNDP",
+      "numeric_id": 705,
+      "name": "Expected years of schooling",
+      "status": "candidate",
+      "category": "Education",
+      "description": "Forward-looking schooling; rapid change signals education policy shifts.",
+      "provider_meta": {
+        "api": "csv",
+        "source": "hdr.undp.org/data-center/",
+        "coverage_countries": 193,
+        "start_year": 1990,
+        "license": "CC BY 3.0 IGO"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UD-07",
+      "provider": "UNDP",
+      "numeric_id": 706,
+      "name": "Gender Development Index (GDI = female HDI / male HDI)",
+      "status": "candidate",
+      "category": "Social",
+      "description": "Gender gap in development; low GDI = institutional rigidity.",
+      "provider_meta": {
+        "api": "csv",
+        "source": "hdr.undp.org/data-center/",
+        "coverage_countries": 170,
+        "start_year": 1995,
+        "license": "CC BY 3.0 IGO"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "OE-01",
+      "provider": "OECD",
+      "numeric_id": 750,
+      "name": "Composite Leading Indicators (CLI)",
+      "status": "candidate",
+      "category": "Economic",
+      "description": "Predicts GDP turning points 6-9 months ahead; best OECD early warning.",
+      "provider_meta": {
+        "api": "sdmx",
+        "base_url": "sdmx.oecd.org/public/rest/",
+        "freq": "monthly",
+        "coverage_countries": 50,
+        "start_year": 1960,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "OE-02",
+      "provider": "OECD",
+      "numeric_id": 751,
+      "name": "Consumer Confidence Index (CCI)",
+      "status": "candidate",
+      "category": "Economic",
+      "description": "Citizen economic mood; sharp declines precede contractions.",
+      "provider_meta": {
+        "api": "sdmx",
+        "base_url": "sdmx.oecd.org/public/rest/",
+        "freq": "quarterly",
+        "coverage_countries": 38,
+        "start_year": 1960,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "OE-03",
+      "provider": "OECD",
+      "numeric_id": 752,
+      "name": "Business Confidence Index (BCI)",
+      "status": "candidate",
+      "category": "Economic",
+      "description": "Business investment intent; collapse precedes contraction/election loss.",
+      "provider_meta": {
+        "api": "sdmx",
+        "base_url": "sdmx.oecd.org/public/rest/",
+        "freq": "quarterly",
+        "coverage_countries": 38,
+        "start_year": 1960,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "OE-04",
+      "provider": "OECD",
+      "numeric_id": 753,
+      "name": "Total social spending (% GDP, SOCX)",
+      "status": "candidate",
+      "category": "Government",
+      "description": "Welfare-state generosity; tracks polarization patterns.",
+      "provider_meta": {
+        "api": "sdmx",
+        "base_url": "sdmx.oecd.org/public/rest/",
+        "freq": "annual",
+        "coverage_countries": 38,
+        "start_year": 1980,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "OE-05",
+      "provider": "OECD",
+      "numeric_id": 754,
+      "name": "Gini (disposable income, annual)",
+      "status": "candidate",
+      "category": "Social",
+      "description": "Annual Gini where WB Gini has 5-7y gaps; fills a rich-country hole.",
+      "provider_meta": {
+        "api": "sdmx",
+        "base_url": "sdmx.oecd.org/public/rest/",
+        "freq": "annual",
+        "coverage_countries": 38,
+        "start_year": 1985,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "OE-06",
+      "provider": "OECD",
+      "numeric_id": 755,
+      "name": "Tax revenue (% GDP)",
+      "status": "candidate",
+      "category": "Finance",
+      "description": "Tax-collection capacity = governance capacity; drops signal decay.",
+      "provider_meta": {
+        "api": "sdmx",
+        "base_url": "sdmx.oecd.org/public/rest/",
+        "freq": "annual",
+        "coverage_countries": 80,
+        "start_year": 1965,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "OE-07",
+      "provider": "OECD",
+      "numeric_id": 756,
+      "name": "Total Factor Productivity growth (annual %)",
+      "status": "candidate",
+      "category": "Economic",
+      "description": "Productivity growth; TFP stagnation precedes economic_crisis.",
+      "provider_meta": {
+        "api": "sdmx",
+        "base_url": "sdmx.oecd.org/public/rest/",
+        "freq": "quarterly",
+        "coverage_countries": 38,
+        "start_year": 1985,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "OW-01",
+      "provider": "OWID",
+      "numeric_id": 850,
+      "name": "Polity V score (-10 to +10)",
+      "status": "candidate",
+      "category": "Governance",
+      "description": "Autocracy-democracy scale; Polity-vs-VDem divergence is informative. Static after 2018.",
+      "provider_meta": {
+        "api": "csv",
+        "url": "github.com/owid/owid-datasets",
+        "coverage_countries": 167,
+        "start_year": 1800,
+        "end_year": 2018,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "OW-04",
+      "provider": "OWID",
+      "numeric_id": 851,
+      "name": "CO2 emissions growth rate (annual %, GCP)",
+      "status": "candidate",
+      "category": "Environment",
+      "description": "Rate of change of emissions; boom/contraction signal (WB has level).",
+      "provider_meta": {
+        "api": "csv",
+        "url": "github.com/owid/owid-datasets",
+        "coverage_countries": 200,
+        "start_year": 1850,
+        "license": "CC BY 4.0"
+      },
+      "lifecycle": {
+        "added": "2026-06-25",
+        "vetted": null,
+        "activated": null,
+        "reason": null
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2regendtype",
+      "provider": "VDEM_EXT",
+      "numeric_id": 900,
+      "name": "Regime End Type",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Encodes the mechanism by which the previous regime fell (coup, election, negotiation, collapse), providing a baseline structural memory of institutional fragility that shapes how the current order may unravel. Regimes that replaced predecessors through coups or collapse face systematically higher recurrence risk for violent power transitions, making this a strong prior for political-violence and regime-change Trends.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "MS.MIL.TOTL.P1",
+      "provider": "WB_EXT",
+      "numeric_id": 1400,
+      "name": "Armed forces personnel, total",
+      "status": "vetted",
+      "category": "Military",
+      "description": "Absolute military size captures the coercive capacity of the state; rapid expansions or contractions signal rearmament, coup-preparedness, or fiscal strain that precede political ruptures. It provides a raw-power baseline that complements spending-ratio indicators already in the pool.",
+      "provider_meta": {
+        "base_provider": "WB"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "NY.GDP.MINR.RT.ZS",
+      "provider": "WB_EXT",
+      "numeric_id": 1401,
+      "name": "Mineral rents (% of GDP)",
+      "status": "vetted",
+      "category": "Economic",
+      "description": "Mineral resource rents as a share of GDP captures extractive-sector dependency, which correlates with Dutch disease dynamics, elite capture, and boom-bust fiscal cycles that precede regime instability and conflict. Countries with high mineral rents but weak institutions are particularly prone to resource-curse trajectories that QGI Trends in political violence, coup, and economic crisis should detect.",
+      "provider_meta": {
+        "base_provider": "WB"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "NV.IND.MANF.KD.ZG",
+      "provider": "WB_EXT",
+      "numeric_id": 1402,
+      "name": "Manufacturing, value added (annual % growth)",
+      "status": "vetted",
+      "category": "Economic",
+      "description": "Manufacturing growth captures real-sector economic momentum; sharp contractions precede recession events and fuel social unrest via job losses and industrial hollowing. It complements GDP-level signals with a sector-specific pace measure that responds faster to external shocks and trade disruptions.",
+      "provider_meta": {
+        "base_provider": "WB"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IQ.CPA.PUBS.XQ",
+      "provider": "WB_EXT",
+      "numeric_id": 1403,
+      "name": "CPIA public sector management and institutions cluster average (1=low to 6=high)",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "This composite CPIA score captures state capacity across public financial management, procurement, revenue mobilisation, and transparency — the institutional backbone that either contains or amplifies political shocks. Weak public-sector management is a structural precondition for fiscal crises, corruption spirals, and governance breakdowns that precede multiple instability event types.",
+      "provider_meta": {
+        "base_provider": "WB"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2xca_academ",
+      "provider": "VDEM_EXT",
+      "numeric_id": 901,
+      "name": "Academic Freedom Index",
+      "status": "vetted",
+      "category": "Social",
+      "description": "Academic freedom captures the early erosion of intellectual and scientific autonomy that typically precedes broader authoritarian consolidation; its suppression signals a government tightening ideological control over society. In QGI context, declining academic freedom co-moves with press censorship and civil society crackdowns, providing an upstream governance-quality signal before political violence or repression events manifest.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "TC-002",
+      "provider": "FAOSTAT",
+      "numeric_id": 315,
+      "name": "Cereal imports (metric tonnes)",
+      "status": "vetted",
+      "category": "Trade",
+      "description": "Cereal import volumes capture structural food-import dependency and vulnerability to global commodity price shocks — countries heavily reliant on external grain are acutely exposed when export bans or freight disruptions hit, making this a structural supply-side risk signal distinct from price-anomaly indicators already in the pool.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2xcl_rol",
+      "provider": "VDEM_EXT",
+      "numeric_id": 902,
+      "name": "Equality Before Law and Individual Liberty Index",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Captures how consistently a state applies law equally and protects individual liberties — deterioration precedes regime crackdowns, political repression episodes, and mass protest cycles. As a composite rule-of-law signal it provides a slow-moving but high-signal baseline that cross-validates faster V-Dem indicators already in the pool.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "FR.INR.RINR",
+      "provider": "WB_EXT",
+      "numeric_id": 1404,
+      "name": "Real interest rate (%)",
+      "status": "vetted",
+      "category": "Finance",
+      "description": "Real interest rate captures the actual cost of capital after inflation, signalling investment incentive collapse or financial repression that often precedes capital flight, banking stress, and currency pressure. Sharp negative swings distinguish deliberate monetary loosening from inflation-driven erosion, both of which load onto economic instability Trends.",
+      "provider_meta": {
+        "base_provider": "WB"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IQ.CPA.IRAI.XQ",
+      "provider": "WB_EXT",
+      "numeric_id": 1405,
+      "name": "CPIA average (IDA resource allocation index)",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "The IDA CPIA composite captures policy and institutional quality across 16 dimensions — fiscal management, debt policy, governance, social inclusion — making it a strong lagging signal of state fragility and the structural conditions that precede fiscal crises, political repression, and coups. Countries with deteriorating CPIA scores systematically exhibit governance erosion trajectories that precede destabilisation events by 1-3 years.",
+      "provider_meta": {
+        "base_provider": "WB"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2xcl_prpty",
+      "provider": "VDEM_EXT",
+      "numeric_id": 903,
+      "name": "Property Rights Index",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Weak property rights signal deteriorating rule of law and elite predation, conditions that historically precede political crises, mass protest, and institutional collapse. As a V-Dem expert-survey index it captures the subjective reality that citizens and investors face, not just formal legal text.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IC.FRM.BRIB.ZS",
+      "provider": "WB_EXT",
+      "numeric_id": 1406,
+      "name": "Bribery incidence (% of firms experiencing at least one bribe payment request)",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Direct firm-level measure of corruption friction — when bribe demands on businesses spike, it signals eroding state legitimacy and weakens the economic conditions that precede political crisis. Complements V-Dem corruption indices with a behavioural, survey-grounded signal rather than expert assessment.",
+      "provider_meta": {
+        "base_provider": "WB"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UNHCR_RECOG_RATE",
+      "provider": "UNHCR",
+      "numeric_id": 456,
+      "name": "Refugee Recognition Rate (derived: recognized / total decisions, annual)",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "High refugee recognition rates signal that receiving countries accept the origin country as genuinely dangerous, providing an internationally-adjudicated, externally-validated measure of persecution or conflict severity. This is distinct from raw refugee counts — it captures legitimacy of threat, making it a clean instability signal with low reporting-bias.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "OWID_POP_YOUNG",
+      "provider": "OWID",
+      "numeric_id": 852,
+      "name": "Youth Bulge (Population 15-24, % Total)",
+      "status": "vetted",
+      "category": "Demographic",
+      "description": "A high share of 15-24 year-olds creates a large pool of economically marginalized, politically activated youth — a robust cross-national predictor of mass mobilization and insurgency onset. It captures the structural demographic pressure that precedes protest waves, labor unrest, and recruitment into armed groups.",
+      "provider_meta": {
+        "underlying_source": "UN World Population Prospects (UN WPP), UN DESA Population Division",
+        "source_license": "CC BY 3.0 IGO",
+        "commercial_ok": true,
+        "license_audited": "2026-06-26"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IDMC_DIS_HAZ_FLOOD",
+      "provider": "IDMC",
+      "numeric_id": 503,
+      "name": "Disaster Displacement — Flood-Related New Displacements (annual)",
+      "status": "quarantined",
+      "category": "Environment",
+      "description": "Annual new displacements specifically from flood events capture acute climate-driven population shocks that strain state capacity, overwhelm social protection systems, and can trigger secondary political instability — a more hazard-specific signal than aggregate disaster displacement. Disaggregating by hazard type lets models distinguish chronic flood-exposed countries from those hit by political violence or cyclones.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "license: non-commercial (IDMC CC BY-NC-SA; OWID SIPRI/GTD/WJP/RSF proprietary)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IDMC_DIS_HAZ_STORM",
+      "provider": "IDMC",
+      "numeric_id": 504,
+      "name": "Disaster Displacement — Storm-Related New Displacements (annual)",
+      "status": "quarantined",
+      "category": "Environment",
+      "description": "Storm-related displacement isolates extreme-weather shock intensity from other hazard types, offering a cleaner signal of cyclone/typhoon exposure that degrades food security, displaces populations, and strains governance before broader humanitarian crises crystallise. Disaggregating by hazard type prevents flood and storm dynamics from cancelling each other out.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "license: non-commercial (IDMC CC BY-NC-SA; OWID SIPRI/GTD/WJP/RSF proprietary)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "SDGB-012",
+      "provider": "FAOSTAT",
+      "numeric_id": 316,
+      "name": "SDG 6.4.2 Level of water stress — freshwater withdrawal as % of available freshwater (%)",
+      "status": "vetted",
+      "category": "Environment",
+      "description": "Water stress (freshwater withdrawal as % of available freshwater) is a structural scarcity signal that drives agricultural failure, resource competition between communities, and regime-destabilizing food insecurity; it is particularly predictive in arid and semi-arid regions where marginal scarcity translates rapidly into political pressure. As a slowly-evolving structural variable it captures multi-year run-up shapes that QGI Trends in drought, humanitarian crisis, and resource conflict should ",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "FD.AST.PRVT.GD.ZS",
+      "provider": "WB_EXT",
+      "numeric_id": 1407,
+      "name": "Domestic credit to private sector (% of GDP)",
+      "status": "vetted",
+      "category": "Finance",
+      "description": "Private credit depth captures financial leverage and the degree of banking system intermediation; rapid credit expansions are among the strongest known predictors of banking and currency crises, while prolonged contraction signals deflationary stress. The series directly captures the financial-system amplification channel central to economic-stress Trends.",
+      "provider_meta": {
+        "base_provider": "WB"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "EMP_NIFL_SEX_RT",
+      "provider": "ILOSTAT",
+      "numeric_id": 563,
+      "name": "Informal employment rate by sex (%)",
+      "status": "vetted",
+      "category": "Economic",
+      "description": "Informal employment rate reflects the share of the workforce outside social protection and stable labour contracts — a structural vulnerability that depresses resilience to economic shocks and fuels grievance-based mobilisation. High informality is both a poverty trap signal and a governance-quality indicator, directly relevant to social unrest and economic crisis event types.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2lgoppart",
+      "provider": "VDEM_EXT",
+      "numeric_id": 904,
+      "name": "Legislature Opposition Parties Operate Freely",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "The ability of opposition parties to operate freely in the legislature is a direct measure of competitive political space; its contraction signals authoritarian drift and foreclosing of peaceful power-alternation channels. QGI uses this to detect pre-crisis governance deterioration before opposition suppression escalates into street politics or coup attempts.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "OWID_WJPRULEOFLAW",
+      "provider": "OWID",
+      "numeric_id": 853,
+      "name": "World Justice Project Rule of Law Index (Overall)",
+      "status": "quarantined",
+      "category": "Governance",
+      "description": "The WJP Rule of Law overall index is a dense composite (8 sub-indices) measuring constraints on government power, corruption absence, open government, fundamental rights, order and security, and civil/criminal justice — a systematic summary of institutional quality that captures cross-cutting governance deterioration preceding multiple event types, with annual panel structure suited to greedy feature selection.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "license: non-commercial (IDMC CC BY-NC-SA; OWID SIPRI/GTD/WJP/RSF proprietary)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UCDP_CONFLICT_ISSUES_TERR",
+      "provider": "UCDP",
+      "numeric_id": 404,
+      "name": "Rebel Group Territorial Demands Active (binary, country-year)",
+      "status": "quarantined",
+      "category": "Other",
+      "description": "Flags active rebel groups making territorial or autonomy demands — a direct structural precursor to secessionist insurgencies and civil-war escalation distinct from battle-death intensity signals. It captures the presence of a mobilised challenger with an existential stake, which shapes both onset probability and conflict duration.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "not-fetchable from public API (panel-swapped for a fetchable equivalent)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "GC.XPN.INTP.RV.ZS",
+      "provider": "WB_EXT",
+      "numeric_id": 1408,
+      "name": "Interest payments (% of revenue)",
+      "status": "vetted",
+      "category": "Government",
+      "description": "Interest payments as a share of government revenue directly measures fiscal distress: when debt service crowds out discretionary spending, governments face stark trade-offs between servicing creditors and funding services, creating the fiscal-social stress that precedes currency crises, austerity-driven protests, and regime-threatening fiscal collapses. This ratio is a core early-warning metric in sovereign debt analysis.",
+      "provider_meta": {
+        "base_provider": "WB"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2x_liberal",
+      "provider": "VDEM_EXT",
+      "numeric_id": 905,
+      "name": "Liberal Component Index",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Aggregates constitutional constraints on executive power, rule of law, and individual liberties into a single latent score — captures the institutional erosion trajectory that precedes democratic backsliding, political repression, and mass mobilisation. Its continuous scale makes multi-year movement shapes learnable by XGBoost walks.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2exembez",
+      "provider": "VDEM_EXT",
+      "numeric_id": 906,
+      "name": "Executive Embezzlement and Theft",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Executive embezzlement directly measures the diversion of public resources for private gain at the top of the political hierarchy — the most destabilizing form of corruption because it erodes fiscal capacity, signals impunity, and triggers elite defection and popular grievance simultaneously. It complements composite corruption indices by isolating executive-specific theft rather than averaging across institutions.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2exl_legitideol",
+      "provider": "VDEM_EXT",
+      "numeric_id": 907,
+      "name": "Ideology-Based Legitimation",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Ideological legitimation measures how much a regime rests on a state ideology (Marxism, Islamism, nationalism) rather than democratic consent or personal loyalty — regimes with brittle ideological foundations face acute instability when that ideology loses credibility. This signal captures a distinct legitimacy pathway to regime crisis that is orthogonal to corruption or repression indices.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2stcritapparm",
+      "provider": "VDEM_EXT",
+      "numeric_id": 908,
+      "name": "Military Appointment Criteria (Merit vs. Loyalty)",
+      "status": "vetted",
+      "category": "Government",
+      "description": "Measures whether military officers are promoted on merit versus political loyalty — a key indicator of coup-proofing versus professionalism that determines how the armed forces respond to civilian authority in crises. Loyalty-based militaries simultaneously signal authoritarian consolidation and fragile civil-military relations prone to factional splits or coup plotting.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UCDP_OS_GOVT_PERP",
+      "provider": "UCDP",
+      "numeric_id": 405,
+      "name": "Government-Perpetrated One-Sided Violence Active (binary, country-year)",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "This binary flags years when the state itself is the perpetrator of one-sided civilian killings, distinguishing regime-directed repression from battlefield violence — a critical distinction for predicting political crises, mass protest, and international intervention triggers. Its presence in a country-year sharply elevates the base rate of subsequent political ruptures.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UNHCR_REF_RATIO_POP",
+      "provider": "UNHCR",
+      "numeric_id": 457,
+      "name": "Refugees as Share of Origin Country Population (derived)",
+      "status": "vetted",
+      "category": "Social",
+      "description": "Refugees as a share of origin country population is a population-normalized signal of the severity of push factors — persecution, conflict, or collapse — driving people to flee; it strips out country-size confounding and makes the underlying risk intensity comparable across all countries for ML feature engineering. Sustained increases in this ratio precede and accompany QGI Trends in political repression, civil war, and humanitarian crisis.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2smorgviol",
+      "provider": "VDEM_EXT",
+      "numeric_id": 909,
+      "name": "Social Media Used to Organize Offline Violence",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Directly measures the degree to which social media is used to coordinate real-world political violence, capturing a digital mobilization pathway absent from traditional indicators. Provides a near-contemporaneous signal of violence organization that can precede or accompany attacks, political violence events, and protest escalation.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "STR_NWRK_NOC_NB",
+      "provider": "ILOSTAT",
+      "numeric_id": 564,
+      "name": "Workers involved in strikes and lockouts — total (thousands)",
+      "status": "vetted",
+      "category": "Social",
+      "description": "The breadth of strike participation (workers involved, not just event count) captures the scale of coordinated labour grievance and is a leading indicator of social tension that can escalate into broader political mobilisation. Unlike fatality-based signals, it detects institutional friction early, before violence thresholds are crossed.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "EAR_XTLP_SEX_RT",
+      "provider": "ILOSTAT",
+      "numeric_id": 565,
+      "name": "Low pay rate by sex (%)",
+      "status": "vetted",
+      "category": "Economic",
+      "description": "A high share of workers earning below two-thirds of the median wage captures structural wage compression and labour-market precarity that fuels economic grievance and social unrest. In QGI models, low-pay prevalence is an orthogonal economic-stress signal distinct from unemployment rates, particularly useful for rich-country instability patterns where formal employment stays high but wage adequacy collapses.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IDMC_CONF_STOCK",
+      "provider": "IDMC",
+      "numeric_id": 505,
+      "name": "Conflict IDP Stock (end-year total)",
+      "status": "quarantined",
+      "category": "Social",
+      "description": "End-year IDP stock is a durable, slow-decay measure of unresolved internal conflict — it accumulates over protracted crises and persists long after acute fighting ebbs, making it an excellent lagging severity signal and chronicity marker for conflict trends. Unlike flow measures it captures entrenched displacement that cannot be explained by recent events alone.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "license: non-commercial (IDMC CC BY-NC-SA; OWID SIPRI/GTD/WJP/RSF proprietary)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "DT.DOD.DECT.EX.ZS",
+      "provider": "WB_EXT",
+      "numeric_id": 1409,
+      "name": "External debt stocks (% of exports of goods, services and primary income)",
+      "status": "vetted",
+      "category": "Government",
+      "description": "External debt stock relative to export earnings is the canonical debt-sustainability ratio used by IMF/World Bank early-warning frameworks; it directly measures whether a country's capacity to generate foreign exchange can cover its foreign obligations. Trajectory shifts in this series reliably precede currency crises and sovereign restructuring events.",
+      "provider_meta": {
+        "base_provider": "WB"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "GC.NFN.TOTL.GD.ZS",
+      "provider": "WB_EXT",
+      "numeric_id": 1410,
+      "name": "Net lending (+) / net borrowing (-) (% of GDP)",
+      "status": "vetted",
+      "category": "Government",
+      "description": "Net lending/borrowing (fiscal balance) as a share of GDP is the primary measure of the government's fiscal stance — a structural deficit trajectory signals accumulating debt burden and reduced capacity to absorb shocks, while sudden swings indicate policy-driven austerity or stimulus that reshapes the political economy. It is a near-universal leading macro variable in fragility frameworks.",
+      "provider_meta": {
+        "base_provider": "WB"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "BN.CAB.XOKA.CD",
+      "provider": "WB_EXT",
+      "numeric_id": 1411,
+      "name": "Current account balance (BoP, current US$)",
+      "status": "vetted",
+      "category": "Trade",
+      "description": "The current account balance in absolute USD captures the scale of a country's external financing gap or surplus, making it a direct precursor to balance-of-payments crises, IMF programme entry, currency devaluations, and associated political shocks that are disproportionately large in absolute-dollar terms for bigger economies.",
+      "provider_meta": {
+        "base_provider": "WB"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "FR.INR.RISK",
+      "provider": "WB_EXT",
+      "numeric_id": 1412,
+      "name": "Risk premium on lending (lending rate minus treasury bill rate, %)",
+      "status": "vetted",
+      "category": "Finance",
+      "description": "The risk premium on lending (lending rate minus T-bill rate) measures the spread between bank lending costs and the risk-free rate, capturing banking sector perceived credit risk and financial system stress in real time. When this spread widens sharply it signals deteriorating bank-borrower conditions that precede credit crunches, bank failures, and associated economic contractions.",
+      "provider_meta": {
+        "base_provider": "WB"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "NE.GDI.TOTL.KD.ZG",
+      "provider": "WB_EXT",
+      "numeric_id": 1413,
+      "name": "Gross capital formation (annual % growth)",
+      "status": "vetted",
+      "category": "Economic",
+      "description": "Gross capital formation growth captures the investment pulse of an economy — sharp declines signal a confidence crisis, credit crunch, or political uncertainty feeding back into the real economy before recession indicators fully register. For QGI, it provides a leading-edge economic stress signal that can discriminate between structural decline and cyclical contractions preceding crisis events.",
+      "provider_meta": {
+        "base_provider": "WB"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2x_diagacc",
+      "provider": "VDEM_EXT",
+      "numeric_id": 910,
+      "name": "Diagonal Accountability Index",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Diagonal accountability captures the watchdog power of civil society and independent media to hold executives to account — a dimension orthogonal to formal institutional checks, and one that erodes measurably before autocratisation accelerates. Declining diagonal accountability predicts democratic backsliding and repression events with a multi-year lead.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2x_accountability",
+      "provider": "VDEM_EXT",
+      "numeric_id": 911,
+      "name": "Accountability Index",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "V-Dem's Accountability Index aggregates vertical, horizontal, and diagonal accountability mechanisms, providing a comprehensive measure of whether state power faces institutional checks; declining accountability trajectories are a well-established precursor to executive power consolidation, democratic backsliding, and the removal of constraints that ultimately enable political repression and corruption. Its composite nature gives it broad coverage across many Trends compared to narrower sub-indi",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UCDP_SB_CONFLICT_COUNT",
+      "provider": "UCDP",
+      "numeric_id": 406,
+      "name": "Number of Active State-Based Conflicts (country-year count)",
+      "status": "vetted",
+      "category": "Other",
+      "description": "Counts distinct active state-based conflict dyads per country-year, capturing multi-front war complexity that single binary active/inactive flags miss. A country fighting three simultaneous armed groups faces qualitatively different instability than one with a contained single insurgency, making this a unique structural signal.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UCDP_SB_EXT_SUPPORT",
+      "provider": "UCDP",
+      "numeric_id": 407,
+      "name": "External Support to Conflict Parties (binary, from ESD dataset)",
+      "status": "quarantined",
+      "category": "Other",
+      "description": "External state support to conflict parties converts internal conflicts into proxy wars, dramatically prolonging duration, raising lethality, and triggering foreign intervention — the presence of this binary flag distinguishes internationalised conflicts from purely domestic ones and is a strong predictor of escalation cascades. It captures the geopolitical dimension that purely domestic indicators miss.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "not-fetchable from public API (panel-swapped for a fetchable equivalent)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UNHCR_REF_COA",
+      "provider": "UNHCR",
+      "numeric_id": 458,
+      "name": "Refugees by Country of Asylum (total stock, end-year)",
+      "status": "vetted",
+      "category": "Social",
+      "description": "The stock of refugees hosted in a country captures the humanitarian burden placed on receiving states, including resource strain, social tension, and spillover from neighbouring conflicts that can destabilise host-country politics. For QGI, this is a regional-contagion signal: large refugee stocks indicate proximity to active conflicts and stretch state capacity in ways that precede domestic instability events.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UNHCR_ASYAPP_NEW_COO",
+      "provider": "UNHCR",
+      "numeric_id": 459,
+      "name": "New Asylum Applications by Country of Origin (annual flow)",
+      "status": "vetted",
+      "category": "Social",
+      "description": "Annual asylum application flows by country of origin are a push-factor signal aggregating international judgements about persecution and conflict intensity — thousands of individuals simultaneously choosing to flee constitutes a distributed early-warning system sensitive to rapidly deteriorating governance and conflict conditions, capturing emerging crises before they appear in annual governance indices.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UNHCR_ASY_BACKLOG_YEARS",
+      "provider": "UNHCR",
+      "numeric_id": 460,
+      "name": "Asylum Backlog Duration (pending stock / annual decisions, derived)",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Derived asylum-backlog duration (pending stock divided by annual decisions) is a rule-of-law and state-capacity proxy for destination countries — long backlogs signal overwhelmed judicial systems and governance strain while also reflecting sustained origin-country push-factor intensity that exceeds host-state processing bandwidth. It is analytically distinct from raw refugee counts.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "STR_DAYS_NOC_NB",
+      "provider": "ILOSTAT",
+      "numeric_id": 566,
+      "name": "Working days lost through strikes and lockouts — total",
+      "status": "vetted",
+      "category": "Social",
+      "description": "Working days lost through strikes measures the intensity and breadth of industrial action beyond simple strike counts, capturing the cumulative economic disruption of labour conflict and signalling deteriorating government-labour relations that precede broader social mobilisation. It is a lagging confirmatory signal of economic stress translating into organised collective action.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "ILR_TUMT_NOC_RT",
+      "provider": "ILOSTAT",
+      "numeric_id": 567,
+      "name": "Trade union membership rate (union density) (%)",
+      "status": "vetted",
+      "category": "Social",
+      "description": "Trade union density captures the organised bargaining power of workers: high and rising density gives labour movements the structural capacity to mount sustained collective action, while sharp declines can signal repression of worker rights or deindustrialisation shocks that redirect grievances into broader political mobilisation. It is a direct leading indicator of labour-action events and an upstream variable for mass protest.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "MPI",
+      "provider": "UNDP",
+      "numeric_id": 707,
+      "name": "Multidimensional Poverty Index",
+      "status": "vetted",
+      "category": "Social",
+      "description": "The Multidimensional Poverty Index captures the acute deprivation that conventional income measures miss — poor health, low education, and inadequate living standards simultaneously — providing a structural fragility baseline that predicts the susceptibility of a population to mobilization under stress events.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2xcs_ccsi",
+      "provider": "VDEM_EXT",
+      "numeric_id": 912,
+      "name": "Core Civil Society Index",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Core Civil Society Index measures the organisational health and autonomy of civil society — its decline is a leading indicator of political closure and repression, while high levels predict mobilisation capacity for democratic transitions and mass protests; captures a dimension not fully reflected in electoral or institutional indices.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2x_regime_amb",
+      "provider": "VDEM_EXT",
+      "numeric_id": 913,
+      "name": "Regimes of the World — Ambiguous Cases",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "The Regimes of the World Ambiguous Cases indicator flags countries in hybrid or borderline regime categories — the exact zone where regime transitions are most likely to occur in either direction. Ambiguous regimes have the highest variance in near-term political trajectory, making this a leading signal for both democratization and autocratization events.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2jucomp",
+      "provider": "VDEM_EXT",
+      "numeric_id": 914,
+      "name": "Compliance with Judiciary",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Compliance with judiciary measures whether executive actors actually abide by court rulings — a low score indicates that formal judicial checks have been hollowed out, revealing a regime willing to override institutional constraints. This captures a leading indicator of rule-of-law breakdown that precedes repression escalation, constitutional crises, and authoritarian consolidation.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2jupurge",
+      "provider": "VDEM_EXT",
+      "numeric_id": 915,
+      "name": "Judicial Purges",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Captures politically-motivated removals of judges, a low-frequency but high-salience event that directly measures executive encroachment on judicial independence and serves as a leading indicator for broader democratic backsliding. Judicial purges tend to cluster before executive power consolidation events and constitute a concrete, measurable precursor distinguishable from gradual de-institutionalisation.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2catrauni",
+      "provider": "VDEM_EXT",
+      "numeric_id": 916,
+      "name": "Engagement in Independent Trade Unions",
+      "status": "vetted",
+      "category": "Social",
+      "description": "Independent trade union engagement measures the organisational infrastructure of civil society outside formal political channels; suppression of unions is an early governance stress indicator that also proxies for the social mobilisation capacity underpinning labour actions and mass protests. It captures a dimension of political competition not fully reflected in electoral indicators.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UCDP_OS_DEATHS_BEST",
+      "provider": "UCDP",
+      "numeric_id": 408,
+      "name": "One-Sided Violence Deaths — Best Estimate (country-year aggregate)",
+      "status": "vetted",
+      "category": "Other",
+      "description": "One-sided violence deaths aggregate civilian fatalities from deliberate targeting by organized actors (governments and non-state groups alike), capturing state atrocity and militia killing that battlefield metrics miss; this directly measures the severity of political violence against unarmed populations, a key signal for Trends in repression, humanitarian crisis, and civil conflict escalation. Its country-year aggregation makes it ready for QGI's feature pipeline without further transformation.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UCDP_SB_INTENSITY_WAR",
+      "provider": "UCDP",
+      "numeric_id": 409,
+      "name": "State-Based War Intensity Flag (≥1000 deaths, binary, country-year)",
+      "status": "vetted",
+      "category": "Other",
+      "description": "Binary flag for state-based conflict reaching war threshold (≥1,000 battle deaths), distinguishing low-level armed conflict from full-scale war. This threshold crossing historically correlates with regime change, mass displacement, and external intervention events — marking the qualitative escalation that reshapes political trajectories.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IDMC_CONF_NEW_DISP",
+      "provider": "IDMC",
+      "numeric_id": 506,
+      "name": "Conflict New Displacements (annual flow)",
+      "status": "quarantined",
+      "category": "Social",
+      "description": "Annual new conflict displacement flows measure the acute shock dimension of instability — each new displacement event reflects active violence or forced movement, making this a real-time intensity gauge rather than a stock of accumulated crisis. As a flow rather than stock variable it captures escalation velocity and is less subject to long-term baseline drift.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "license: non-commercial (IDMC CC BY-NC-SA; OWID SIPRI/GTD/WJP/RSF proprietary)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IDMC_CONF_YEARS_CONSECUTIVE",
+      "provider": "IDMC",
+      "numeric_id": 507,
+      "name": "Years in Consecutive Conflict Displacement (derived from IDMC stock series)",
+      "status": "quarantined",
+      "category": "Other",
+      "description": "The count of consecutive years with active conflict IDP stock above zero measures displacement chronicity and protracted-conflict duration, which captures different information from annual flow data: long streaks signal entrenched conflict ecosystems with high recurrence risk. QGI benefits from this temporal-persistence dimension because it differentiates states in acute crisis (high flow, low streak) from those in chronic low-grade conflict (low annual flow, long streak) that are prone to sudde",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "license: non-commercial (IDMC CC BY-NC-SA; OWID SIPRI/GTD/WJP/RSF proprietary)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "OWID_STATECAP_COERCE",
+      "provider": "OWID",
+      "numeric_id": 854,
+      "name": "Coercive State Capacity (Hanson & Sigman)",
+      "status": "quarantined",
+      "category": "Military",
+      "description": "The Hanson-Sigman coercive state capacity sub-dimension measures a government's control over territory and monopoly on the legitimate use of force — the foundational prerequisite for conflict suppression and public order. It captures state fragility specifically on the coercion axis, distinct from extractive or administrative capacity, providing unique predictive value for conflict-related Trends.",
+      "provider_meta": {
+        "underlying_source": "Hanson & Sigman (2021), 'Leviathan's Latent Dimensions', Journal of Politics — replication data on Harvard Dataverse DOI:10.7910/DVN/IFZXQX",
+        "source_license": "CC0 1.0 (Harvard Dataverse default for JoP replication data — unconfirmed, needs direct dataset-page check)",
+        "commercial_ok": true,
+        "license_audited": "2026-06-26"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "not-fetchable from public API (panel-swapped for a fetchable equivalent)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "ET-001",
+      "provider": "FAOSTAT",
+      "numeric_id": 317,
+      "name": "Mean surface temperature change on land (degrees C vs 1951-1980 baseline)",
+      "status": "vetted",
+      "category": "Environment",
+      "description": "Country-level land surface temperature anomaly is a direct measure of climate-change exposure that underpins agricultural yield shocks, food-price spikes, and water scarcity — pathways established in the conflict-climate literature as intermediate steps toward political instability. Including it gives the pool a slow-moving exogenous structural driver orthogonal to all governance and economic signals.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "FS-001",
+      "provider": "FAOSTAT",
+      "numeric_id": 318,
+      "name": "Prevalence of undernourishment (PoU)",
+      "status": "vetted",
+      "category": "Health",
+      "description": "Prevalence of undernourishment (PoU) is the SDG 2.1.1 anchor indicator measuring the share of the population with chronic dietary energy deficit, providing the most direct quantitative signal of food security failure that underlies political instability, mass protest, and humanitarian crises. Rising PoU reliably precedes food-driven unrest and increases vulnerability to drought-famine events.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "FS-004",
+      "provider": "FAOSTAT",
+      "numeric_id": 319,
+      "name": "Prevalence of severe food insecurity (FIES)",
+      "status": "vetted",
+      "category": "Social",
+      "description": "The FIES severe food insecurity rate (% unable to eat for a day or more due to lack of resources) captures the most acute end of household food deprivation — the direct material deprivation channel linking food system failures to political instability, since populations facing starvation-level food access become highly sensitised to price shocks and government failures that trigger protests and violence.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IDMC_CONF_STOCK_POP",
+      "provider": "IDMC",
+      "numeric_id": 508,
+      "name": "Conflict IDP Stock per 1,000 Population (normalized)",
+      "status": "quarantined",
+      "category": "Social",
+      "description": "Normalizing conflict IDP stock by population converts a size-confounded count into a per-capita displacement intensity that is cross-nationally comparable and more directly reflects the state capacity collapse, territorial control loss, and sustained violence that define protracted political crises.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "license: non-commercial (IDMC CC BY-NC-SA; OWID SIPRI/GTD/WJP/RSF proprietary)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2svstterr",
+      "provider": "VDEM_EXT",
+      "numeric_id": 917,
+      "name": "State Territorial Control",
+      "status": "vetted",
+      "category": "Government",
+      "description": "State territorial control is a foundational fragility signal — when governments lose effective control over parts of their territory to warlords or rebels, it directly precedes or accompanies civil conflict escalation, insurgency, and humanitarian crises; captures a state-failure dimension distinct from institutional quality indices.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2svinlaut",
+      "provider": "VDEM_EXT",
+      "numeric_id": 918,
+      "name": "International Autonomy (Degree of External Constraint)",
+      "status": "vetted",
+      "category": "Government",
+      "description": "International Autonomy measures the degree to which a government operates free from external constraints — low autonomy signals dependency relationships, conditionality, or foreign domination that fundamentally alter political risk dynamics. Countries with low autonomy are structurally exposed to foreign intervention, externally-induced regime change, and sanctions-driven instability.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "OWID_PRESSFREEDOM",
+      "provider": "OWID",
+      "numeric_id": 855,
+      "name": "Press Freedom Index (RSF)",
+      "status": "quarantined",
+      "category": "Governance",
+      "description": "The RSF Press Freedom Index measures the operating environment for journalists — repression of media is both a symptom of governance deterioration and an active mechanism that suppresses the information environment needed for accountability. For QGI, it captures a media-freedom pathway to instability distinct from direct political repression indicators.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "license: non-commercial (IDMC CC BY-NC-SA; OWID SIPRI/GTD/WJP/RSF proprietary)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "MS.MIL.XPND.ZS",
+      "provider": "WB_EXT",
+      "numeric_id": 1414,
+      "name": "Military expenditure (% of central government expenditure)",
+      "status": "vetted",
+      "category": "Military",
+      "description": "Military expenditure as a share of central government spending measures the degree to which the state prioritises coercive capacity over civilian services — a structural signal for both internal security preoccupation and resource trade-offs that erode public goods provision. High and rising military shares can precede coup risk (praetorian states) or reflect pre-conflict arms build-ups.",
+      "provider_meta": {
+        "base_provider": "WB"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "OWID_STATECAP_EXTRACT",
+      "provider": "OWID",
+      "numeric_id": 856,
+      "name": "Extractive State Capacity (Hanson & Sigman)",
+      "status": "quarantined",
+      "category": "Governance",
+      "description": "Extractive state capacity — the government's ability to raise sustained revenues — is a foundational determinant of fiscal resilience, public goods provision, and regime stability; states that cannot tax reliably are far more vulnerable to fiscal crises, foreign-debt spirals, and popular delegitimisation. It is theoretically distinct from administrative or coercive capacity and adds non-redundant signal.",
+      "provider_meta": {
+        "underlying_source": "Hanson & Sigman (2021), 'Leviathan's Latent Dimensions', Journal of Politics — replication data on Harvard Dataverse DOI:10.7910/DVN/IFZXQX",
+        "source_license": "CC0 1.0 (Harvard Dataverse default for JoP replication data — unconfirmed, needs direct dataset-page check)",
+        "commercial_ok": true,
+        "license_audited": "2026-06-26"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "not-fetchable from public API (panel-swapped for a fetchable equivalent)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "OWID_WJPRULEOFLAW_CORR",
+      "provider": "OWID",
+      "numeric_id": 857,
+      "name": "WJP Rule of Law — Absence of Corruption",
+      "status": "quarantined",
+      "category": "Governance",
+      "description": "The WJP Rule of Law Absence of Corruption sub-index provides a cross-institutionally validated annual measure of corruption across executive, judiciary, police, and military — the four channels through which systemic corruption erodes state legitimacy and precipitates political crises. Unlike perception-based composite indices, it is grounded in population surveys and expert assessments, giving it higher construct validity for QGI's rule-of-law and governance Trends.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "license: non-commercial (IDMC CC BY-NC-SA; OWID SIPRI/GTD/WJP/RSF proprietary)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "OWID_MILSPEND_SIPRI",
+      "provider": "OWID",
+      "numeric_id": 858,
+      "name": "Military Spending (% GDP, SIPRI)",
+      "status": "quarantined",
+      "category": "Military",
+      "description": "Military expenditure as share of GDP is a broad defence-burden and conflict-orientation signal; rapid increases precede militarization events and reflect threat perception, while high sustained levels constrain fiscal space for social spending. SIPRI data is the international gold standard for cross-national military expenditure comparisons.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "license: non-commercial (IDMC CC BY-NC-SA; OWID SIPRI/GTD/WJP/RSF proprietary)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2x_pubcorr",
+      "provider": "VDEM_EXT",
+      "numeric_id": 919,
+      "name": "Public Sector Corruption Index",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "V-Dem's Public Sector Corruption Index aggregates expert-coded corruption in service delivery, public sector procurement, and judiciary — moving beyond perceptions to coded observable behaviours across 180 countries since 1900. It captures the institutional degradation pathway through which corruption erodes state legitimacy, triggering protest, fiscal crises, and democratic backsliding.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2xnp_regcorr",
+      "provider": "VDEM_EXT",
+      "numeric_id": 920,
+      "name": "Regime Corruption Index",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "The Regime Corruption Index captures systemic corruption embedded in regime maintenance — through patronage, vote-buying, and state capture — rather than incidental misconduct, making it a structural measure of governance decay that destabilises regimes over the medium term. QGI uses this to distinguish corruptly entrenched regimes (high stability illusion, sudden collapse risk) from rule-of-law deterioration that manifests through institutional indicators.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2xnp_client",
+      "provider": "VDEM_EXT",
+      "numeric_id": 921,
+      "name": "Clientelism Index",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "The V-Dem Clientelism Index measures vote buying, patron-client linkages, and particularism in political exchange — the degree to which political competition operates through selective benefit distribution rather than programmatic policy. Clientelism is a structural enabler of corruption cycles, election fraud, and regime durability that is distinct from corruption indices alone, capturing the organizational logic through which resources are extracted and distributed.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2regdur",
+      "provider": "VDEM_EXT",
+      "numeric_id": 922,
+      "name": "Regime Duration (Years in Power)",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Regime duration captures the entrenchment of the current political order — very short durations flag fragile newly-established regimes prone to early collapse, while very long durations signal ossified systems at risk of sudden legitimacy collapse or succession crisis. This non-linear signal complements continuous governance-quality indexes by encoding regime-lifecycle position.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "OWID_AUTOCRATIZATION",
+      "provider": "OWID",
+      "numeric_id": 859,
+      "name": "Autocratization Episode (binary, ERT)",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "The V-Dem ERT Autocratization Episode binary flag directly identifies countries in active processes of democratic erosion, making it one of the most theory-aligned predictors of executive power consolidation, political repression, and eventual regime change. As a binary state variable it provides a crisp switching signal that complements continuous V-Dem indices.",
+      "provider_meta": {
+        "underlying_source": "V-Dem (Episodes of Regime Transformation — ERT dataset)",
+        "source_license": "CC BY 4.0",
+        "commercial_ok": true,
+        "license_audited": "2026-06-26"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UCDP_OS_DEATHS_GOVT",
+      "provider": "UCDP",
+      "numeric_id": 410,
+      "name": "Government-Perpetrated Civilian Deaths Best Estimate (one-sided, country-year)",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Government-perpetrated one-sided civilian killings measure the intensity of state atrocity — a qualitatively distinct signal from battlefield deaths that indicates a regime is targeting its own population, which systematically precedes mass refugee flows, foreign intervention triggers, and international sanctions. Magnitude of state killing is a strong discriminator between ordinary repression and catastrophic violence trajectories.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UNHCR_IDP_RATIO_POP",
+      "provider": "UNHCR",
+      "numeric_id": 461,
+      "name": "IDPs as Share of Country Population (derived)",
+      "status": "vetted",
+      "category": "Social",
+      "description": "UNHCR's IDP stock normalized by population provides a governance-sourced view of internal displacement intensity that complements IDMC's figure — when both series agree, confidence in the displacement signal increases; divergence flags data quality issues for quality-control in the ML pipeline.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UNHCR_FORCDISP_TOTAL",
+      "provider": "UNHCR",
+      "numeric_id": 462,
+      "name": "Total Forcibly Displaced (refugees + asylum-seekers + IDPs, derived)",
+      "status": "vetted",
+      "category": "Social",
+      "description": "Aggregate forced displacement (refugees + asylum-seekers + IDPs) provides a composite headline measure of the cumulative human cost of instability — its multi-year trajectory captures both conflict intensity and state failure duration in a single ML-ready feature, with strong predictive signal for humanitarian and conflict Trends.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "FS-003",
+      "provider": "FAOSTAT",
+      "numeric_id": 320,
+      "name": "Prevalence of moderate or severe food insecurity (FIES)",
+      "status": "vetted",
+      "category": "Social",
+      "description": "The FIES moderate-or-severe food insecurity prevalence captures the share of population experiencing meaningful dietary access gaps, bridging the gap between mild food stress and outright famine — the band where food-driven social unrest and political grievance are most likely to emerge. It is demand-side, survey-based, and captures income shocks faster than production-side agricultural indicators.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "FB.BNK.NPLS.ZS",
+      "provider": "WB_EXT",
+      "numeric_id": 1415,
+      "name": "Bank nonperforming loans to total gross loans (%)",
+      "status": "vetted",
+      "category": "Finance",
+      "description": "Non-performing loan ratios signal latent insolvency stress within the banking system before it erupts into open crisis — high NPLs constrain credit supply, amplify recessions, and can trigger depositor panic and government bailout demands. It provides the balance-sheet deterioration signal that precedes banking crises in the QGI event catalog.",
+      "provider_meta": {
+        "base_provider": "WB"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "NY.GDP.OIL.RT.ZS",
+      "provider": "WB_EXT",
+      "numeric_id": 1416,
+      "name": "Oil rents (% of GDP)",
+      "status": "vetted",
+      "category": "Economic",
+      "description": "Oil rents as a share of GDP directly quantifies petro-state dependency and the associated vulnerability to commodity price shocks that can trigger fiscal crises, subsidy cuts, and popular unrest when oil revenues collapse. It is a structurally important indicator because it shapes the distribution of political economy incentives — patronage systems, ruling coalition survival, and the rentier bargain.",
+      "provider_meta": {
+        "base_provider": "WB"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "NY.GDP.TOTL.RT.ZS",
+      "provider": "WB_EXT",
+      "numeric_id": 1417,
+      "name": "Total natural resources rents (% of GDP)",
+      "status": "vetted",
+      "category": "Economic",
+      "description": "Total natural resource rents as a share of GDP measures the degree to which a state's economy and fiscal system depend on extractable resource windfalls — a key driver of Dutch disease, elite rent-seeking, and regime vulnerability to commodity price shocks. Resource-dependent states show systematically different instability pathways (boom-bust, coup risk, secessionism over resource zones).",
+      "provider_meta": {
+        "base_provider": "WB"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "LAP_2GDP_NOC_RT",
+      "provider": "ILOSTAT",
+      "numeric_id": 568,
+      "name": "Labour income share as a percent of GDP — ILO modelled (%)",
+      "status": "vetted",
+      "category": "Economic",
+      "description": "Labour income share as a percent of GDP (ILO modelled) directly measures how national income is distributed between labour and capital; declining labour share signals rising structural inequality, wage repression, and eroding household purchasing power — conditions that build social grievance and fuel mass mobilisation events such as protests, labour actions, and poverty crises. It is the SDG 10.4.1 primary input and provides a distributional lens that GDP-level metrics lack.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "SDGB-009",
+      "provider": "FAOSTAT",
+      "numeric_id": 321,
+      "name": "SDG 2.c.1 Indicator of food price anomalies (IFPA)",
+      "status": "vetted",
+      "category": "Economic",
+      "description": "The SDG 2.c.1 Indicator of Food Price Anomalies (IFPA) directly measures domestic food price volatility anomalies, flagging periods when prices diverge sharply from international benchmarks — historically a trigger for mass protests and political instability in food-import-dependent countries. As a real-time early-warning index it is action-oriented rather than purely descriptive.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "CAHD-002",
+      "provider": "FAOSTAT",
+      "numeric_id": 322,
+      "name": "Prevalence of population unable to afford a healthy diet (% population)",
+      "status": "quarantined",
+      "category": "Social",
+      "description": "The prevalence of inability to afford a healthy diet combines food price levels with household income distributions, making it a demand-side food security indicator that is sensitive to both commodity price shocks and welfare inequality — it directly precedes food-related grievances and can escalate rapidly when prices spike. Unlike production-side metrics, it captures whether populations can actually access adequate food.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "not-fetchable from public API (panel-swapped for a fetchable equivalent)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IDMC_TOTAL_DISP_GDP_RATIO",
+      "provider": "IDMC",
+      "numeric_id": 509,
+      "name": "Total Displaced Persons to GDP Ratio (derived, IDMC stock / WB GDP)",
+      "status": "quarantined",
+      "category": "Economic",
+      "description": "Normalising total IDP stock against GDP captures the economic displacement burden independently of population scale, revealing whether a country's productive capacity is being overwhelmed by forced immobility — a signal of cumulative conflict-economy degradation distinct from headcount measures. This ratio is particularly useful for QGI's Trends involving economic crisis in conflict-affected states where GDP is itself eroded.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "license: non-commercial (IDMC CC BY-NC-SA; OWID SIPRI/GTD/WJP/RSF proprietary)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IDMC_DIS_NEW_DISP_POP",
+      "provider": "IDMC",
+      "numeric_id": 510,
+      "name": "Disaster New Displacements per 1,000 Population (normalized)",
+      "status": "quarantined",
+      "category": "Social",
+      "description": "Disaster new displacements normalized by population provides a cross-country-comparable intensity metric for how severely disaster events displace populations relative to country size — a size-adjusted shock measure critical for ML: it prevents large-population countries from dominating the feature space and enables meaningful comparison between small and large countries.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "license: non-commercial (IDMC CC BY-NC-SA; OWID SIPRI/GTD/WJP/RSF proprietary)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "OWID_SLUM_SHARE",
+      "provider": "OWID",
+      "numeric_id": 860,
+      "name": "Urban Slum Population Share (%)",
+      "status": "vetted",
+      "category": "Social",
+      "description": "Urban slum population share measures the concentration of economically marginalised, spatially segregated populations within cities — a well-documented structural precondition for urban unrest, political radicalisation, and grievance-based mass protest, especially where urbanisation outpaces formal employment and service delivery. It also serves as a slow-moving inequality proxy distinct from income-distribution measures.",
+      "provider_meta": {
+        "underlying_source": "UN-HABITAT Urban Indicators Database",
+        "source_license": "CC BY 4.0",
+        "commercial_ok": true,
+        "license_audited": "2026-06-26"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2x_execorr",
+      "provider": "VDEM_EXT",
+      "numeric_id": 923,
+      "name": "Executive Corruption Index",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "V-Dem's Executive Corruption Index aggregates expert assessments of executive bribery, embezzlement, and cronyism into a continuous country-year measure, capturing the degree to which executive authority is exercised for private gain rather than public ends. High executive corruption erodes regime legitimacy, distorts resource allocation, and raises the probability of protest, coup, and governance breakdown.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2exrescon",
+      "provider": "VDEM_EXT",
+      "numeric_id": 924,
+      "name": "Executive Respects Constitution",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "V-Dem's executive respects constitution indicator measures whether the head of government abides by constitutional limits and judicial rulings — its decline is the definitional marker of executive power consolidation and the erosion of horizontal accountability that precedes democratic backsliding, institutional purges, and eventually coup or regime change.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "INEQ_INC",
+      "provider": "UNDP",
+      "numeric_id": 708,
+      "name": "Inequality in Income",
+      "status": "vetted",
+      "category": "Economic",
+      "description": "The Atkinson-based income inequality measure used in the IHDI captures distributional skew that Gini misses at the extremes, and is a known predictor of grievance-driven unrest: societies where income concentration accelerates are more susceptible to populist mobilization, elite-mass conflict, and social instability.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2x_horacc",
+      "provider": "VDEM_EXT",
+      "numeric_id": 925,
+      "name": "Horizontal Accountability Index",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Horizontal accountability — the capacity of legislatures, judiciaries, and oversight bodies to constrain the executive — is a leading indicator of institutional degradation and authoritarian drift; its decline traces the gradual erosion of checks that precedes coups, power consolidation, and political repression.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2x_veracc",
+      "provider": "VDEM_EXT",
+      "numeric_id": 926,
+      "name": "Vertical Accountability Index",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Vertical Accountability captures the quality of electoral and party-based mechanisms through which citizens can sanction or replace governments — when this deteriorates, incumbents become insulated from voter punishment, correlating strongly with democratic backsliding, electoral violence, and protest-driven instability. Declining vertical accountability is a robust leading indicator of regime change trajectories.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2x_cspart",
+      "provider": "VDEM_EXT",
+      "numeric_id": 927,
+      "name": "Civil Society Participation Index",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Civil society participation measures the breadth and depth of autonomous citizen organization beyond the state — high participation creates accountability buffers that restrain executive overreach, while a collapse in civil society is a leading indicator of democratic backsliding and repression. It captures the societal resilience dimension that mediates between grievances and political outcomes.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2juhcind",
+      "provider": "VDEM_EXT",
+      "numeric_id": 928,
+      "name": "High Court Independence",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "High court independence from executive interference is a foundational institutional variable: when the apex court is captured, it removes the last formal check on executive arbitrariness, enabling a cascade of repression, property rights erosion, and political persecution. Deterioration in this indicator is a measurable early-warning signal that precedes both democratic backsliding and business-climate crises.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2lgotovst",
+      "provider": "VDEM_EXT",
+      "numeric_id": 929,
+      "name": "Executive Oversight by Legislature",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Legislative oversight of the executive is a direct measure of institutional checks on executive power; its erosion is a near-universal precursor to authoritarian consolidation, corruption escalation, and constitutional crises. This indicator adds a horizontal accountability dimension distinct from judicial independence and civil society watchdog indicators.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2mecenefi",
+      "provider": "VDEM_EXT",
+      "numeric_id": 930,
+      "name": "Internet Censorship Effort",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "V-Dem's Internet Censorship Effort measures the degree to which governments actively restrict online information access, a leading indicator of regime efforts to suppress dissent and control political narratives before and during periods of political repression, protests, and democratic backsliding. Spikes in censorship effort often precede or accompany executive crackdowns, making it a valuable early-warning signal across governance and social mobilisation Trends.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2smfordom",
+      "provider": "VDEM_EXT",
+      "numeric_id": 931,
+      "name": "Foreign Government Domestic Disinformation",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Measures whether foreign governments run disinformation campaigns targeting the domestic population, capturing information-warfare interference as a distinct channel of foreign meddling separate from military or economic pressure. Rising scores signal externally manufactured political instability particularly relevant to hybrid-warfare and election-interference scenarios.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2smpolsoc",
+      "provider": "VDEM_EXT",
+      "numeric_id": 932,
+      "name": "Online Political Polarization of Society",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "V-Dem's Online Political Polarisation of Society measures expert-coded assessments of how social media-driven polarisation fragments social cohesion and erodes the centrist space needed for democratic bargaining. Rising polarisation is a pre-radicalisation signal that predicts escalation from online to offline political conflict and is increasingly a leading indicator of democratic erosion and violent unrest.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2csantimv",
+      "provider": "VDEM_EXT",
+      "numeric_id": 933,
+      "name": "Anti-System Movements Active",
+      "status": "vetted",
+      "category": "Social",
+      "description": "Active anti-system movements measure organised societal challenges to regime legitimacy that stop short of armed conflict but signal deep structural rupture — they are a pre-cursor indicator for coups, democratic reversals, and mass violence. QGI values this because it captures the mobilisation phase before terminating events, distinguishing normal opposition from existential challenges to regime continuity.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2regantireg",
+      "provider": "VDEM_EXT",
+      "numeric_id": 934,
+      "name": "Strength of Anti-Regime Sentiment",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Anti-regime sentiment strength measures the breadth and intensity of opposition to the incumbent regime among both population and elite segments — a direct pre-mobilization signal that captures latent political tension before it erupts into protests, coups, or repression events. It is distinct from formal opposition party strength, capturing diffuse sentiment across society and elite networks.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "OWID_REGIMETYPE",
+      "provider": "OWID",
+      "numeric_id": 861,
+      "name": "Political Regime Type (Regimes of the World, V-Dem RoW)",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "The V-Dem Regimes of the World 4-category typology (closed autocracy → liberal democracy) encodes regime-type as a categorical structural variable that conditions almost every political risk mechanism — coup risk, protest dynamics, conflict recurrence, and repression intensity all differ fundamentally across these categories, making regime type one of the most powerful stratifying features in any political-risk model.",
+      "provider_meta": {
+        "underlying_source": "V-Dem Regimes of the World (RoW) classification",
+        "source_license": "CC BY 4.0",
+        "commercial_ok": true,
+        "license_audited": "2026-06-26"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "OWID_STATECAP",
+      "provider": "OWID",
+      "numeric_id": 862,
+      "name": "State Capacity Index (Hanson & Sigman)",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "The Hanson & Sigman composite State Capacity Index aggregates coercive, extractive, and administrative sub-dimensions into a single latent variable, capturing the government's ability to govern, tax, and control territory simultaneously. Low state capacity is the structural precondition underlying civil war, coup risk, and governance collapse across multiple Trends.",
+      "provider_meta": {
+        "underlying_source": "Hanson & Sigman (2021) State Capacity Index — 'Leviathan's Latent Dimensions', Journal of Politics 83(4)",
+        "source_license": "CC BY 4.0",
+        "commercial_ok": true,
+        "license_audited": "2026-06-26"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UCDP_DECO_ELECTORAL_VIOLENCE",
+      "provider": "UCDP",
+      "numeric_id": 411,
+      "name": "Deadly Electoral Violence Events (count, country-year, from DECO)",
+      "status": "quarantined",
+      "category": "Governance",
+      "description": "Georeferenced lethal electoral violence event counts capture the specific political-competition violence that clusters around electoral cycles — distinct from armed conflict, it signals contested political environments where candidates, parties, and voters face physical coercion, which is a leading indicator of disputed elections, regime delegitimisation, and post-election crisis escalation.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "not-fetchable from public API (panel-swapped for a fetchable equivalent)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UCDP_VIOL_PROTEST_DEATHS",
+      "provider": "UCDP",
+      "numeric_id": 412,
+      "name": "Violent Political Protest Deaths (country-year aggregate)",
+      "status": "quarantined",
+      "category": "Governance",
+      "description": "Deaths from violent political protests sit below the armed-conflict threshold but above routine demonstrations, marking the inflection zone where state-civilian tension escalates — this sub-conflict violence level is a leading indicator of full conflict onset and political regime instability.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "not-fetchable from public API (panel-swapped for a fetchable equivalent)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UCDP_GED_TOTAL_DEATHS",
+      "provider": "UCDP",
+      "numeric_id": 413,
+      "name": "GED Total Deaths Best Estimate (all types combined, country-year)",
+      "status": "vetted",
+      "category": "Other",
+      "description": "Aggregate best-estimate deaths across all organised violence types (state-based, non-state, one-sided) provides the most comprehensive single lethality signal — capturing the full violence environment of a country-year rather than any one conflict type, making it a broad-spectrum conflict intensity feature for QGI recipes.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UCDP_SB_ONSET",
+      "provider": "UCDP",
+      "numeric_id": 414,
+      "name": "State-Based Conflict Onset (binary: new conflict in year, country-year)",
+      "status": "vetted",
+      "category": "Other",
+      "description": "State-Based Conflict Onset is a binary leading indicator specifically coded for new conflict initiation — distinct from ongoing conflict presence — capturing the moment when organized violence crosses the threshold. As a leading rather than contemporaneous signal it is methodologically superior for ML feature engineering in Trends predicting conflict events, avoiding the circularity of using ongoing-conflict flags as predictors of conflict-type events.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UCDP_YEARS_SINCE_LAST_CONFLICT",
+      "provider": "UCDP",
+      "numeric_id": 415,
+      "name": "Years Since Last Active Conflict (country-year, derived)",
+      "status": "vetted",
+      "category": "Other",
+      "description": "Years since last active conflict is a canonical recurrence-risk proxy — post-conflict societies face elevated relapse risk that decays over time, and this derived counter captures the duration of the peace interval that existing conflict intensity measures miss entirely. It adds a temporal memory signal that is mechanistically orthogonal to current violence levels.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UCDP_PEACE_AGREE_SIGNED",
+      "provider": "UCDP",
+      "numeric_id": 416,
+      "name": "Peace Agreement Signed (binary, country-year, from UCDP PAD)",
+      "status": "quarantined",
+      "category": "Governance",
+      "description": "A binary flag for peace agreement signings captures a discrete institutional milestone in conflict resolution that reshapes the political landscape — creating both opportunities for sustained peace and risks of implementation failure and spoiler violence. As a leading-to-lagging marker it is useful on both sides: post-conflict Trends can be anchored to the agreement date, and the absence of agreements despite prolonged conflict is itself informative.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "not-fetchable from public API (panel-swapped for a fetchable equivalent)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IDMC_CONF_NEW_DISP_POP",
+      "provider": "IDMC",
+      "numeric_id": 511,
+      "name": "Conflict New Displacements per 1,000 Population (normalized)",
+      "status": "quarantined",
+      "category": "Social",
+      "description": "Population-normalised conflict displacement provides a cross-country comparable intensity metric that raw displacement counts cannot: a country displacing 100,000 people out of 500,000 is qualitatively different from one displacing 100,000 out of 50 million. This normalised form is the ML-preferred input, reducing spurious country-size correlations in the greedy feature selection.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "license: non-commercial (IDMC CC BY-NC-SA; OWID SIPRI/GTD/WJP/RSF proprietary)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IDMC_TOTAL_NEW_DISP",
+      "provider": "IDMC",
+      "numeric_id": 512,
+      "name": "Total New Displacements (conflict + disaster, annual flow)",
+      "status": "quarantined",
+      "category": "Social",
+      "description": "Total new displacements (conflict plus disaster combined) is a high-frequency, high-sensitivity aggregate shock signal that captures acute population mobility across both violence-driven and climate-driven crises in a single annual metric; its composite nature makes it valuable for Trends where the displacement trigger is mixed (e.g., conflict in drought-stricken regions) and it avoids the artificial separation that disaggregated series impose on compound crises. Rapid increases signal acute det",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "license: non-commercial (IDMC CC BY-NC-SA; OWID SIPRI/GTD/WJP/RSF proprietary)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UNHCR_REF_COO",
+      "provider": "UNHCR",
+      "numeric_id": 463,
+      "name": "Refugees by Country of Origin (total stock, end-year)",
+      "status": "vetted",
+      "category": "Social",
+      "description": "End-year stock of refugees originating from each country is a cumulative, internationally-validated measure of how dangerous conditions have become for that country's population — effectively a global consensus judgment on origin-country risk. Stocks respond to conflict onset, political repression, and humanitarian crises and persist as slow-moving structural signals.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UNHCR_STA",
+      "provider": "UNHCR",
+      "numeric_id": 464,
+      "name": "Stateless Persons (end-year stock)",
+      "status": "vetted",
+      "category": "Social",
+      "description": "Stateless persons — those with no recognised nationality — signal systematic ethnic, religious, or political discrimination embedded in legal and governance frameworks. Statelessness is both an outcome of past ethnic conflict and a structural driver of future instability, as stateless communities face compound marginalisation that correlates with communal conflict and human rights crisis events.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "OWID_TERRORISM_ATTACKS",
+      "provider": "OWID",
+      "numeric_id": 863,
+      "name": "Terrorist Attacks (count, GTD)",
+      "status": "quarantined",
+      "category": "Other",
+      "description": "The annual count of terrorist incidents directly measures sub-state political violence below the armed-conflict threshold, capturing both the operational capacity of non-state armed groups and government inability to contain them. For QGI Trends, terrorism frequency is an especially useful lagged feature — sustained attack cadence predicts escalation to civil war onset and government repression cycles.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "license: non-commercial (IDMC CC BY-NC-SA; OWID SIPRI/GTD/WJP/RSF proprietary)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "OWID_WJPRULEOFLAW_ORDER",
+      "provider": "OWID",
+      "numeric_id": 864,
+      "name": "WJP Rule of Law — Order and Security",
+      "status": "quarantined",
+      "category": "Governance",
+      "description": "The WJP Order and Security sub-index specifically measures crime control, absence of civil conflict, and violence against civilians — the security dimension of rule of law separated from the broader governance composite. Its specificity to physical security and civil order makes it more directly predictive of violence-related Trends than the overall WJP index, capturing institutional failure modes that precede conflict escalation.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "license: non-commercial (IDMC CC BY-NC-SA; OWID SIPRI/GTD/WJP/RSF proprietary)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "EIP_NEET_SEX_AGE_RT",
+      "provider": "ILOSTAT",
+      "numeric_id": 569,
+      "name": "Share of youth not in employment, education or training (NEET) by sex and age (%)",
+      "status": "vetted",
+      "category": "Social",
+      "description": "NEET rate captures the share of youth excluded from all productive activity — the most direct measure of youth marginalisation and a leading indicator of the grievance pool available for protest mobilisation, radicalization, and recruitment into armed groups. Combined with youth-bulge size indicators it creates a two-dimensional youth-risk surface that neither variable alone provides.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "GC.BAL.CASH.GD.ZS",
+      "provider": "WB_EXT",
+      "numeric_id": 1418,
+      "name": "Cash surplus/deficit (% of GDP)",
+      "status": "vetted",
+      "category": "Government",
+      "description": "The cash surplus/deficit as a share of GDP measures the government's actual realized fiscal position based on cash flows rather than accrual accounting, providing a more timely indicator of fiscal stress and public finance deterioration. Widening deficits signal reduced fiscal space, increasing government dependence on borrowing that can cascade into currency pressure and austerity-triggered unrest.",
+      "provider_meta": {
+        "base_provider": "WB"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2x_civlib",
+      "provider": "VDEM_EXT",
+      "numeric_id": 935,
+      "name": "Civil Liberties Index",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "The V-Dem Civil Liberties Index aggregates freedom of movement, religion, expression, association, and personal integrity — its sustained decline traces the broad-front erosion of rights that defines autocratisation trajectories and precedes repression events, protest mobilisation, and eventually regime-changing opposition, making it a high-signal composite for political-risk models.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2x_freexp",
+      "provider": "VDEM_EXT",
+      "numeric_id": 936,
+      "name": "Freedom of Expression Index",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Freedom of expression captures the information environment available to citizens and opposition actors: its contraction is a hallmark of autocratization and political repression episodes, while its expansion is a necessary precondition for democratic transitions — making it a versatile leading indicator across multiple political risk Trends.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2x_frassoc",
+      "provider": "VDEM_EXT",
+      "numeric_id": 937,
+      "name": "Freedom of Association Index",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Freedom of association — covering rights to form parties, civil society organisations, and trade unions — captures the civic space contraction that precedes and accompanies political repression and executive consolidation; its decline is a more targeted signal than broad civil liberties indices for mobilisation-blocking dynamics.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2jupoatck",
+      "provider": "VDEM_EXT",
+      "numeric_id": 938,
+      "name": "Government Attacks on Judiciary",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Government attacks on the judiciary measure a specifically destabilizing form of institutional erosion — the executive undermining the last formal check on its own behavior. Judicial attacks are a hallmark of autocratization trajectories and correlate with subsequent escalation to broader repression, constitutional manipulation, and loss of rule of law, making this a reliable leading indicator across several political risk Trends.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2mecrit",
+      "provider": "VDEM_EXT",
+      "numeric_id": 939,
+      "name": "Print and Broadcast Media Critical of Government",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Whether print and broadcast media critically cover the government measures the real independence of the fourth estate — beyond formal press freedom, this captures actual editorial behavior, revealing whether journalists exercise accountability or practice self-censorship. It provides a behavioral media-independence signal that complements structural press freedom indices.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2meharjrn",
+      "provider": "VDEM_EXT",
+      "numeric_id": 940,
+      "name": "Harassment of Journalists",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Physical harassment and imprisonment of journalists is a high-specificity indicator of the state's tolerance for information pluralism and its willingness to use coercion to suppress political narratives — capturing a direct repression mechanism rather than a diffuse press-freedom composite. It tends to intensify ahead of elections, coup attempts, and protest crackdowns where controlling the information environment becomes operationally important to incumbents.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2smgovdom",
+      "provider": "VDEM_EXT",
+      "numeric_id": 941,
+      "name": "Government Domestic Disinformation",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Government-run domestic disinformation campaigns are a measurable indicator of information-environment weaponisation — a modern governance failure that undermines electoral integrity, suppresses opposition, and precedes democratic backsliding. As a V-Dem-coded indicator it is available at country-year resolution from 1990 onward, filling a gap not covered by traditional institutional indicators.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2smarrest",
+      "provider": "VDEM_EXT",
+      "numeric_id": 942,
+      "name": "Arrests for Online Political Content",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "V-Dem's Arrests for Online Political Content measures government use of detention and arrest specifically targeting individuals for online speech, capturing an intensifying form of digital repression that directly chills civil society mobilisation and political dissent; it is a leading rather than lagging indicator because arrests for speech typically precede broader crackdowns, making it particularly valuable for run-up detection in repression, protest, and autocratization Trends.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2caassemb",
+      "provider": "VDEM_EXT",
+      "numeric_id": 943,
+      "name": "Freedom of Peaceful Assembly",
+      "status": "vetted",
+      "category": "Social",
+      "description": "Freedom of peaceful assembly is a direct civil-liberties indicator measuring whether citizens can freely gather for protests and political meetings; restrictions on assembly are an early-stage precursor to mass protest escalation and a marker of political repression that often precedes broader human rights deterioration.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2casoe",
+      "provider": "VDEM_EXT",
+      "numeric_id": 944,
+      "name": "State of Emergency Declared",
+      "status": "vetted",
+      "category": "Social",
+      "description": "Declaration of a state of emergency represents an executive's formal invocation of emergency powers that suspend normal constitutional constraints — it is both a symptom of acute political crisis and a tool of repression that can escalate instability. As an event-coded V-Dem variable it captures a discrete legal threshold-crossing that is rare enough to have strong signal value.",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UCDP_SB_DEATHS_BEST",
+      "provider": "UCDP",
+      "numeric_id": 417,
+      "name": "State-Based Conflict Battle Deaths — Best Estimate (country-year aggregate)",
+      "status": "vetted",
+      "category": "Other",
+      "description": "Best-estimate battle deaths from state-based conflicts is the gold-standard measure of conflict intensity, capturing the lethality of organised state-vs-armed-group or inter-state violence in a single comparable metric. QGI's conflict Trends benefit from this as a contemporaneous intensity anchor that also carries strong predictive power for sustained conflict duration, peace-process timing, and foreign intervention triggers.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UCDP_GED_CIV_DEATHS",
+      "provider": "UCDP",
+      "numeric_id": 418,
+      "name": "GED Civilian Deaths Best Estimate (all violence types, country-year)",
+      "status": "vetted",
+      "category": "Other",
+      "description": "GED civilian deaths aggregate best-estimate fatalities across all organized violence types (state-based, non-state, one-sided) for a country-year — uniquely capturing direct civilian harm from the full spectrum of violence rather than just combatant casualties. This is the most comprehensive lethality measure for civilian populations and captures deliberate targeting patterns diagnostic of atrocity and repression events.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UCDP_NS_DEATHS_BEST",
+      "provider": "UCDP",
+      "numeric_id": 419,
+      "name": "Non-State Conflict Deaths — Best Estimate (country-year aggregate)",
+      "status": "vetted",
+      "category": "Other",
+      "description": "Non-state conflict deaths — between communal, militia, or clan groups without government involvement — are analytically distinct from state-based war and one-sided violence, capturing sub-state societal breakdown and inter-group competition that can precede or outlast formal armed conflict. As a country-year aggregate it measures the ambient level of armed factional violence, a key signal for ethnic conflict and state-fragility trends.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "SDG_0131_SEX_SOC_RT",
+      "provider": "ILOSTAT",
+      "numeric_id": 570,
+      "name": "SDG 1.3.1 — Proportion of population covered by social protection floors/systems (%)",
+      "status": "vetted",
+      "category": "Social",
+      "description": "Social protection coverage determines how much of the population has a buffer when economic or climate shocks hit — countries with thin coverage are far more vulnerable to shock-triggered unrest, labour conflict, and humanitarian crises, making this a key structural resilience signal in the QGI pool.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "GII",
+      "provider": "UNDP",
+      "numeric_id": 709,
+      "name": "Gender Inequality Index",
+      "status": "vetted",
+      "category": "Social",
+      "description": "Gender Inequality Index aggregates reproductive health gaps, empowerment deficits, and labour market exclusion into a single structural inequality score — high GII values signal marginalised female participation that correlates with broader governance deficits, social fragility, and susceptibility to poverty and mobilisation crises.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IHDI",
+      "provider": "UNDP",
+      "numeric_id": 710,
+      "name": "Inequality-Adjusted Human Development Index",
+      "status": "vetted",
+      "category": "Social",
+      "description": "The Inequality-Adjusted HDI penalizes the headline HDI score for the distributional spread of health, education, and income achievements simultaneously — capturing how deeply unequal a country's development gains are in a single index. The IHDI discount (HDI minus IHDI) provides a direct measure of welfare inequality that combines multiple deprivation dimensions and correlates strongly with social mobilization and political grievance preconditions.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "8-persona panel selection, 250-run 2026-06-25"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "OWID_STATECAP_ADMIN",
+      "provider": "OWID",
+      "numeric_id": 865,
+      "name": "Administrative State Capacity (Hanson & Sigman)",
+      "status": "quarantined",
+      "category": "Governance",
+      "description": "Administrative state capacity measures government ability to deliver services through skilled, impartial bureaucracies — a foundational pillar of stability that determines whether fiscal resources translate into public goods or patronage, and whether formal policies are actually implemented. It captures the bureaucratic implementation gap that distinguishes fragile from resilient states independent of resource levels.",
+      "provider_meta": {
+        "underlying_source": "Hanson & Sigman (2021), 'Leviathan's Latent Dimensions', Journal of Politics — replication data on Harvard Dataverse DOI:10.7910/DVN/IFZXQX",
+        "source_license": "CC0 1.0 (Harvard Dataverse default for JoP replication data — unconfirmed, needs direct dataset-page check)",
+        "commercial_ok": true,
+        "license_audited": "2026-06-26"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "not-fetchable from public API (panel-swapped for a fetchable equivalent)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "OWID_TERRORISM_DEATHS",
+      "provider": "OWID",
+      "numeric_id": 866,
+      "name": "Terrorism Deaths (count, GTD)",
+      "status": "quarantined",
+      "category": "Other",
+      "description": "Annual deaths from terrorist attacks (GTD) provide a lethality-weighted measure of terrorism intensity that goes beyond incident counts to capture the severity of organised political violence below the armed-conflict threshold. Fatality trends are more signal-rich for political risk models than binary occurrence flags because they track whether groups are scaling capacity or winding down.",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "license: non-commercial (IDMC CC BY-NC-SA; OWID SIPRI/GTD/WJP/RSF proprietary)"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UNHCR_IDP",
+      "provider": "UNHCR",
+      "numeric_id": 465,
+      "name": "Internally Displaced Persons (UNHCR-reported, end-year stock)",
+      "status": "vetted",
+      "category": "Social",
+      "description": "UNHCR's own IDP stock estimates (separate from IDMC); measures internal displacement in countries UNHCR has operational mandate",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "250-run license-backfill (panel) 2026-06-26"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2jucorrdc",
+      "provider": "VDEM_EXT",
+      "numeric_id": 945,
+      "name": "Judicial Corruption in Decision-Making",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "V-Dem v2jucorrdc — country-year political indicator",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "250-run license-backfill (panel) 2026-06-26"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2meslfcen",
+      "provider": "VDEM_EXT",
+      "numeric_id": 946,
+      "name": "Media Self-Censorship",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Journalist self-censorship due to political pressure",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "250-run license-backfill (panel) 2026-06-26"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UNHCR_IDP_CHANGE_RATE",
+      "provider": "UNHCR",
+      "numeric_id": 466,
+      "name": "UNHCR IDP Stock Annual Change Rate (%, derived)",
+      "status": "vetted",
+      "category": "Social",
+      "description": "Percentage change in UNHCR-reported IDP stock year-on-year; acceleration of displacement crisis or recovery signal",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "250-run license-backfill (panel) 2026-06-26"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UCDP_GED_OS_EVENTS",
+      "provider": "UCDP",
+      "numeric_id": 420,
+      "name": "GED One-Sided Violence Events Count (country-year aggregate)",
+      "status": "vetted",
+      "category": "Other",
+      "description": "Count of georeferenced one-sided violence events; civilian targeting frequency, atrocity event density",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "250-run license-backfill (panel) 2026-06-26"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "MS.MIL.XPND.CN",
+      "provider": "WB_EXT",
+      "numeric_id": 1419,
+      "name": "Military expenditure (current LCU)",
+      "status": "vetted",
+      "category": "Military",
+      "description": "Nominal military spending; defence budget context",
+      "provider_meta": {
+        "base_provider": "WB"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "250-run license-backfill (panel) 2026-06-26"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2cltrnslw",
+      "provider": "VDEM_EXT",
+      "numeric_id": 947,
+      "name": "Transparent Laws with Predictable Enforcement",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Laws publicly known and consistently applied",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "250-run license-backfill (panel) 2026-06-26"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2mebias",
+      "provider": "VDEM_EXT",
+      "numeric_id": 948,
+      "name": "Media Bias (Pro-Government)",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Systematic pro-government bias in mainstream media",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "250-run license-backfill (panel) 2026-06-26"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2merange",
+      "provider": "VDEM_EXT",
+      "numeric_id": 949,
+      "name": "Print and Broadcast Media Perspectives Diversity",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Diversity of political perspectives in media",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "250-run license-backfill (panel) 2026-06-26"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UCDP_GED_NS_EVENTS",
+      "provider": "UCDP",
+      "numeric_id": 421,
+      "name": "GED Non-State Violence Events Count (country-year aggregate)",
+      "status": "vetted",
+      "category": "Other",
+      "description": "Count of georeferenced non-state conflict events in country-year; communal violence frequency signal",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "250-run license-backfill (panel) 2026-06-26"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2clrspct",
+      "provider": "VDEM_EXT",
+      "numeric_id": 950,
+      "name": "Rigorous and Impartial Public Administration",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Impartial professional public administration",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "250-run license-backfill (panel) 2026-06-26"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UCDP_GED_GEOREGION_SPREAD",
+      "provider": "UCDP",
+      "numeric_id": 422,
+      "name": "GED Geographic Spread (count of distinct ADM1 regions with events, country-year)",
+      "status": "vetted",
+      "category": "Other",
+      "description": "Number of distinct first-level administrative regions with GED events; spatial diffusion of conflict, territorial control signal",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "250-run license-backfill (panel) 2026-06-26"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2jucnind",
+      "provider": "VDEM_EXT",
+      "numeric_id": 951,
+      "name": "Lower Court Independence",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "V-Dem v2jucnind — country-year political indicator",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "250-run license-backfill (panel) 2026-06-26"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2juhccomp",
+      "provider": "VDEM_EXT",
+      "numeric_id": 952,
+      "name": "Compliance with High Court",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "V-Dem v2juhccomp — country-year political indicator",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "250-run license-backfill (panel) 2026-06-26"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UCDP_OS_ACTOR_COUNT",
+      "provider": "UCDP",
+      "numeric_id": 423,
+      "name": "Number of Active One-Sided Violence Actors (country-year)",
+      "status": "vetted",
+      "category": "Other",
+      "description": "Count of distinct actors committing one-sided violence in country-year; plurality of targeting actors, repression breadth",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "250-run license-backfill (panel) 2026-06-26"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2exthftps",
+      "provider": "VDEM_EXT",
+      "numeric_id": 953,
+      "name": "Public Sector Theft",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "V-Dem v2exthftps — country-year political indicator",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "250-run license-backfill (panel) 2026-06-26"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2juaccnt",
+      "provider": "VDEM_EXT",
+      "numeric_id": 954,
+      "name": "Judicial Accountability Mechanisms",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Mechanisms for holding judiciary accountable",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-26",
+        "vetted": "2026-06-26",
+        "activated": null,
+        "reason": "250-run license-backfill (panel) 2026-06-26"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UCDP_SB_INTRA_INTERNATIONALISED",
+      "provider": "UCDP",
+      "numeric_id": 424,
+      "name": "Internationalized intrastate conflict (active)",
+      "status": "vetted",
+      "category": "Other",
+      "description": "Internationalized intrastate conflict (active)",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-27",
+        "vetted": "2026-06-27",
+        "activated": null,
+        "reason": "250-run fetchable swap (panel + verify) 2026-06-27"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UCDP_CONFLICT_TERMINATED",
+      "provider": "UCDP",
+      "numeric_id": 425,
+      "name": "Conflict episode terminated (de-escalation)",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Conflict episode terminated (de-escalation)",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-27",
+        "vetted": "2026-06-27",
+        "activated": null,
+        "reason": "250-run fetchable swap (panel + verify) 2026-06-27"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UCDP_SB_INCOMPAT_TERR",
+      "provider": "UCDP",
+      "numeric_id": 426,
+      "name": "Territorial-incompatibility conflict (active)",
+      "status": "vetted",
+      "category": "Other",
+      "description": "Territorial-incompatibility conflict (active)",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-27",
+        "vetted": "2026-06-27",
+        "activated": null,
+        "reason": "250-run fetchable swap (panel + verify) 2026-06-27"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2elpeace",
+      "provider": "VDEM_EXT",
+      "numeric_id": 955,
+      "name": "Election other electoral violence",
+      "status": "vetted",
+      "category": "Governance",
+      "description": "Election other electoral violence",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-27",
+        "vetted": "2026-06-27",
+        "activated": null,
+        "reason": "250-run fetchable swap (panel + verify) 2026-06-27"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "UCDP_GED_UNREST_EVENTS",
+      "provider": "UCDP",
+      "numeric_id": 427,
+      "name": "Non-state + one-sided violence event tempo",
+      "status": "vetted",
+      "category": "Other",
+      "description": "Non-state + one-sided violence event tempo",
+      "provider_meta": {},
+      "lifecycle": {
+        "added": "2026-06-27",
+        "vetted": "2026-06-27",
+        "activated": null,
+        "reason": "250-run fetchable swap (panel + verify) 2026-06-27"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "v2strenarm",
+      "provider": "VDEM_EXT",
+      "numeric_id": 956,
+      "name": "Remuneration in the armed forces (coercive capacity)",
+      "status": "vetted",
+      "category": "Government",
+      "description": "Remuneration in the armed forces (coercive capacity)",
+      "provider_meta": {
+        "base_provider": "VDEM"
+      },
+      "lifecycle": {
+        "added": "2026-06-27",
+        "vetted": "2026-06-27",
+        "activated": null,
+        "reason": "250-run fetchable swap (panel + verify) 2026-06-27"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "IQ.CPA.PADM.XQ",
+      "provider": "WB_EXT",
+      "numeric_id": 1420,
+      "name": "CPIA quality of public administration",
+      "status": "vetted",
+      "category": "Government",
+      "description": "CPIA quality of public administration",
+      "provider_meta": {
+        "base_provider": "WB"
+      },
+      "lifecycle": {
+        "added": "2026-06-27",
+        "vetted": "2026-06-27",
+        "activated": null,
+        "reason": "250-run fetchable swap (panel + verify) 2026-06-27"
+      },
+      "vet": null
+    },
+    {
+      "indicator_id": "FS-007",
+      "provider": "FAOSTAT",
+      "numeric_id": 323,
+      "name": "Dietary energy from cereals/roots/tubers (%)",
+      "status": "vetted",
+      "category": "Social",
+      "description": "Dietary energy from cereals/roots/tubers (%)",
+      "provider_meta": {
+        "fao_domain_code": "FS",
+        "fao_item_code": "21012",
+        "fao_element_code": "6121",
+        "frequency": "3yr_avg",
+        "transform": "first-difference"
+      },
+      "lifecycle": {
+        "added": "2026-06-27",
+        "vetted": "2026-06-27",
+        "activated": null,
+        "reason": "250-run fetchable swap (panel + verify) 2026-06-27"
+      },
+      "vet": null
+    }
+  ]
+}

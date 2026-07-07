@@ -1,0 +1,29 @@
+{
+  "_meta": {
+    "scoring_version": "V1.9.1",
+    "released": "2026-04-22",
+    "ticket": "#377 (T1)",
+    "methodology": "docs/specs/methodology/recipes/v1.9.1-release-notes.md",
+    "description": "Category-stratified risk-tier thresholds + 3-layer composite promotion (Fix C). V1.9.1 is an intermediate tactical fix; V1.9.2 (Fix D, #378) will replace stratified thresholds with cross-country per-category z-score normalization and collapse to a single threshold.",
+    "format_note": "JSON chosen over YAML per #382 discussion 2026-04-22 — stdlib-only loading, zero Lambda cold-start surface, deterministic parse. Functional requirement of #382 (external config, independently versioned) is met.",
+    "severity_weights_consolidation_followup": "Severity weights are NOT consolidated here — still loaded from qgi-data/reference/category_severity_tiers.json (ml script) and embedded as SEVERITY_TIER_WEIGHTS in the Lambda. Consolidation into this file is tracked as a follow-up inside #382 scope.",
+    "schema_version": 1
+  },
+  "thresholds": {
+    "CRISIS_HIGH": 1.4,
+    "REGULAR_HIGH": 2.0,
+    "CRISIS_MODERATE": 1.0,
+    "REGULAR_MODERATE": 1.3
+  },
+  "composite_rule": {
+    "enabled": true,
+    "min_categories_above_salience": 2,
+    "min_salience_floor": 1.3,
+    "min_severity_for_at_least_one": 0.8
+  },
+  "default_severity": 0.3,
+  "_refinements_201": "Added 2026-05-15 per ticket #201 (rescoped). Refinement 1 (raise HIGH to 1.5) was already SUPERSEDED by V1.9.1's severity-stratified thresholds at 1.4/2.0. Refinements 2 + 3 below close the gap.",
+  "min_recipe_count": 5,
+  "category_salience_cap_percentile": 0.95,
+  "category_salience_cap_min_observations": 20
+}

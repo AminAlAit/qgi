@@ -1,0 +1,7 @@
+{
+  "active_policy": "conservative_downgrade",
+  "ratified": "2026-07-02",
+  "ratified_by": "founder",
+  "gate": "B1",
+  "note": "Single source of truth for the active consensus policy. schemas.mjs CONSENSUS_POLICY must equal this value (asserted by the _lib.mjs CLI and schemas.test.mjs); scripts/validate_verification.py enforces every v2 entry against THIS policy's recompute. Flipping the policy requires, in the SAME commit: update this file, update schemas.mjs, and re-derive all verification entries from their verifications[] arrays (loss-free) so CI stays green."
+}
