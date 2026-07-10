@@ -1,0 +1,2137 @@
+{
+  "recipe_id": "foreign_intervention",
+  "eval_year": 2021,
+  "capability": "sensitivity",
+  "capability_spec_section": "#5",
+  "computed_at_utc": "2026-05-24T18:08:18.134430+00:00",
+  "binding_provenance": "docs/specs/internal/ops/ml-track/te-new-capabilities-spec.md §5 (locked 2026-05-24, chat QGI-R&D | 002). Pure transform of recipe-similarity-scores artifact; no model re-fit.",
+  "m8_r5_note": "Describes how the similarity SCORE responds to changes in indicator ALIGNMENT. The model is discriminative, not causal — this is NOT a claim that changing the real-world indicator changes real-world risk.",
+  "headroom_interpretation": "Headroom is measured from a country's CURRENT cosine to +1.0 (maximum alignment with the crisis profile). For a LOW-zone country (trajectory DIVERGING from the crisis profile, often anti-aligned cosine<0), large headroom therefore reflects PROTECTIVE DISTANCE from the profile — NOT vulnerability. Read headroom together with each country's score zone (see country_zone).",
+  "method": "Score S = Σ wᵢ·cosᵢ, so ∂S/∂cosᵢ = wᵢ. marginal_points_per_unit = wᵢ * 50 (risk_score = 100*(S+1)/2). headroom = wᵢ*(1−cosᵢ); headroom_points = headroom*50. Ranked by headroom descending.",
+  "selected_indicators": [
+    "v2elintmon",
+    "RQ.EST",
+    "v2pepwrgen",
+    "v2stfisccap"
+  ],
+  "shap_importance_normalized": {
+    "v2elintmon": 0.04768813478507333,
+    "RQ.EST": 0.5112186305247967,
+    "v2pepwrgen": 0.272790152204432,
+    "v2stfisccap": 0.168303082485698
+  },
+  "chosen_window": 18,
+  "n_countries": 68,
+  "country_zone": {
+    "Afghanistan": "HIGH",
+    "Algeria": "HIGH",
+    "Argentina": "MODERATE",
+    "Armenia": "LOW",
+    "Australia": "LOW",
+    "Austria": "LOW",
+    "Azerbaijan": "HIGH",
+    "Belarus": "HIGH",
+    "Benin": "MODERATE",
+    "Bolivia": "HIGH",
+    "Bulgaria": "LOW",
+    "Burkina Faso": "HIGH",
+    "Cameroon": "HIGH",
+    "Canada": "LOW",
+    "Chile": "LOW",
+    "Comoros": "HIGH",
+    "Croatia": "LOW",
+    "Cyprus": "LOW",
+    "Djibouti": "HIGH",
+    "Dominican Republic": "MODERATE",
+    "Ecuador": "HIGH",
+    "Egypt": "HIGH",
+    "El Salvador": "MODERATE",
+    "Equatorial Guinea": "HIGH",
+    "Finland": "LOW",
+    "Gabon": "HIGH",
+    "Georgia": "LOW",
+    "Greece": "LOW",
+    "Guinea-Bissau": "HIGH",
+    "Iceland": "LOW",
+    "Iran": "HIGH",
+    "Israel": "LOW",
+    "Japan": "LOW",
+    "Jordan": "MODERATE",
+    "Kazakhstan": "HIGH",
+    "Kuwait": "MODERATE",
+    "Kyrgyzstan": "HIGH",
+    "Lithuania": "LOW",
+    "Maldives": "HIGH",
+    "Mauritania": "HIGH",
+    "Mexico": "LOW",
+    "Moldova": "HIGH",
+    "Mongolia": "MODERATE",
+    "Montenegro": "MODERATE",
+    "North Macedonia": "LOW",
+    "Philippines": "LOW",
+    "Poland": "LOW",
+    "Portugal": "LOW",
+    "Romania": "LOW",
+    "Russia": "HIGH",
+    "Rwanda": "MODERATE",
+    "Sao Tome and Principe": "HIGH",
+    "Serbia": "MODERATE",
+    "Seychelles": "MODERATE",
+    "Slovakia": "LOW",
+    "Slovenia": "LOW",
+    "South Korea": "LOW",
+    "Spain": "LOW",
+    "Sri Lanka": "HIGH",
+    "Syria": "HIGH",
+    "Tajikistan": "HIGH",
+    "The Gambia": "HIGH",
+    "Togo": "HIGH",
+    "Turkmenistan": "HIGH",
+    "Ukraine": "MODERATE",
+    "United States": "LOW",
+    "Uzbekistan": "HIGH",
+    "Venezuela": "HIGH"
+  },
+  "sensitivity": {
+    "Afghanistan": [
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.07224318165679511,
+        "headroom": 0.04424299220092155,
+        "headroom_points": 2.212149610046078
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.9336942620623462,
+        "headroom": 0.03389672854442344,
+        "headroom_points": 1.6948364272211718
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9912449657915955,
+        "headroom": 0.0023882871142656753,
+        "headroom_points": 0.11941435571328377
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.997574747363962,
+        "headroom": 0.00040817749445175815,
+        "headroom_points": 0.020408874722587907
+      }
+    ],
+    "Algeria": [
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.08735896994815273,
+        "headroom": 0.04352214845150065,
+        "headroom_points": 2.1761074225750328
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9568124917358206,
+        "headroom": 0.01178112695271566,
+        "headroom_points": 0.589056347635783
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.9803837688483599,
+        "headroom": 0.010028182825399322,
+        "headroom_points": 0.501409141269966
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.9981694044942857,
+        "headroom": 0.0003080948663961809,
+        "headroom_points": 0.015404743319809044
+      }
+    ],
+    "Argentina": [
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.8610478113739645,
+        "headroom": 0.5076755157244288,
+        "headroom_points": 25.38377578622144
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9551995653237664,
+        "headroom": 0.3290661137186867,
+        "headroom_points": 16.453305685934335
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.8809432954850798,
+        "headroom": 0.060864005436912894,
+        "headroom_points": 3.043200271845645
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.6393701964989715,
+        "headroom": 0.017197762676871557,
+        "headroom_points": 0.8598881338435779
+      }
+    ],
+    "Armenia": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.9521794642699454,
+        "headroom": 0.9979905122627126,
+        "headroom_points": 49.89952561313563
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9254919700422555,
+        "headroom": 0.3240662338595709,
+        "headroom_points": 16.203311692978545
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.6031582160767728,
+        "headroom": 0.07645162509006685,
+        "headroom_points": 3.8225812545033424
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9908289253543402,
+        "headroom": 0.0025017788484677454,
+        "headroom_points": 0.12508894242338728
+      }
+    ],
+    "Australia": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.9770444058813738,
+        "headroom": 1.010701933661386,
+        "headroom_points": 50.535096683069305
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.9880139048288186,
+        "headroom": 0.5423106156827806,
+        "headroom_points": 27.11553078413903
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9993108673466267,
+        "headroom": 0.33649018182159174,
+        "headroom_points": 16.824509091079587
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.3098560317359387,
+        "headroom": 0.03291167857968193,
+        "headroom_points": 1.6455839289840963
+      }
+    ],
+    "Austria": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.9532283426723104,
+        "headroom": 0.9985267184431567,
+        "headroom_points": 49.92633592215783
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.8465642167918203,
+        "headroom": 0.5037245337538984,
+        "headroom_points": 25.18622668769492
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9993108673466262,
+        "headroom": 0.3364901818215916,
+        "headroom_points": 16.82450909107958
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.6034745807348619,
+        "headroom": 0.01890955763962362,
+        "headroom_points": 0.9454778819811809
+      }
+    ],
+    "Azerbaijan": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.8808425291610031,
+        "headroom": 0.06091551905911037,
+        "headroom_points": 3.0457759529555184
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.25160445684645844,
+        "headroom": 0.059686682035692405,
+        "headroom_points": 2.9843341017846203
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9894324696972527,
+        "headroom": 0.002882718199711373,
+        "headroom_points": 0.14413590998556866
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.9901185047921587,
+        "headroom": 0.0016630861030473467,
+        "headroom_points": 0.08315430515236734
+      }
+    ],
+    "Belarus": [
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.5353163632144209,
+        "headroom": 0.25839847651971853,
+        "headroom_points": 12.919923825985927
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.16052691191756097,
+        "headroom": 0.055343363797229574,
+        "headroom_points": 2.767168189861479
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.9092083298730749,
+        "headroom": 0.04641439326534576,
+        "headroom_points": 2.3207196632672877
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9930278071631281,
+        "headroom": 0.0019019455451689342,
+        "headroom_points": 0.09509727725844672
+      }
+    ],
+    "Benin": [
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.8490660975772144,
+        "headroom": 0.5044070221941434,
+        "headroom_points": 25.220351109707167
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9682656336162699,
+        "headroom": 0.3312651732882837,
+        "headroom_points": 16.563258664414185
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.1500652662589444,
+        "headroom": 0.05484446742898779,
+        "headroom_points": 2.7422233714493895
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.9270676209546266,
+        "headroom": 0.03728439093649118,
+        "headroom_points": 1.8642195468245588
+      }
+    ],
+    "Bolivia": [
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.4634682267074136,
+        "headroom": 0.14636058409899844,
+        "headroom_points": 7.318029204949922
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.026663254338135375,
+        "headroom": 0.046416613918387646,
+        "headroom_points": 2.3208306959193825
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.965748072811764,
+        "headroom": 0.017510223310005055,
+        "headroom_points": 0.8755111655002528
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.986494496394456,
+        "headroom": 0.0022730178873347695,
+        "headroom_points": 0.11365089436673848
+      }
+    ],
+    "Bulgaria": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.9443973096713382,
+        "headroom": 0.9940121298462805,
+        "headroom_points": 49.70060649231402
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.9943359738685158,
+        "headroom": 0.5440352138583665,
+        "headroom_points": 27.201760692918324
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9885024256659152,
+        "headroom": 0.3346710877698611,
+        "headroom_points": 16.733554388493054
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.5727442530694851,
+        "headroom": 0.07500123992282709,
+        "headroom_points": 3.7500619961413544
+      }
+    ],
+    "Burkina Faso": [
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.7417749840301916,
+        "headroom": 0.07044124140939591,
+        "headroom_points": 3.5220620704697954
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.13134306559911482,
+        "headroom": 0.053951640600448644,
+        "headroom_points": 2.6975820300224322
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.7321027843008007,
+        "headroom": 0.045087927191511175,
+        "headroom_points": 2.254396359575559
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.9126652675767866,
+        "headroom": 0.04464714230664473,
+        "headroom_points": 2.2323571153322366
+      }
+    ],
+    "Cameroon": [
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.05911566836560597,
+        "headroom": 0.28891632437555237,
+        "headroom_points": 14.445816218777619
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.5944578083014561,
+        "headroom": 0.07603671887139246,
+        "headroom_points": 3.801835943569623
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.9596424618895814,
+        "headroom": 0.02063152536416051,
+        "headroom_points": 1.0315762682080254
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.9796576932114637,
+        "headroom": 0.0034236729373804033,
+        "headroom_points": 0.17118364686902016
+      }
+    ],
+    "Canada": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.9725939779142303,
+        "headroom": 1.008426791970774,
+        "headroom_points": 50.421339598538694
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.9585920469474151,
+        "headroom": 0.5342846225931753,
+        "headroom_points": 26.714231129658767
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9993108673466266,
+        "headroom": 0.3364901818215917,
+        "headroom_points": 16.824509091079584
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.3536028701753065,
+        "headroom": 0.03082547345176453,
+        "headroom_points": 1.5412736725882266
+      }
+    ],
+    "Chile": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.9514515022505609,
+        "headroom": 0.9976183645160888,
+        "headroom_points": 49.880918225804436
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.9285876987837572,
+        "headroom": 0.5260997318908164,
+        "headroom_points": 26.304986594540818
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9993108673466266,
+        "headroom": 0.3364901818215917,
+        "headroom_points": 16.824509091079584
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.31500531765802414,
+        "headroom": 0.03266611873858264,
+        "headroom_points": 1.633305936929132
+      }
+    ],
+    "Comoros": [
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.09043897274857879,
+        "headroom": 0.05200100070733114,
+        "headroom_points": 2.6000500353665568
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.9433402939035278,
+        "headroom": 0.028965497356575987,
+        "headroom_points": 1.4482748678287993
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9661734568680782,
+        "headroom": 0.00922754784950673,
+        "headroom_points": 0.4613773924753365
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.998480140964094,
+        "headroom": 0.00025579696068672307,
+        "headroom_points": 0.012789848034336153
+      }
+    ],
+    "Croatia": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.9351798281812498,
+        "headroom": 0.9892999815820298,
+        "headroom_points": 49.46499907910149
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.9863616968602614,
+        "headroom": 0.5418599096195645,
+        "headroom_points": 27.092995480978228
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9875063800883829,
+        "headroom": 0.33450345022886613,
+        "headroom_points": 16.725172511443308
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.43398873662285326,
+        "headroom": 0.06838424815234764,
+        "headroom_points": 3.419212407617382
+      }
+    ],
+    "Cyprus": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.938176199953738,
+        "headroom": 0.9908317826561044,
+        "headroom_points": 49.54158913280522
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.934172802188335,
+        "headroom": 0.5276232930986287,
+        "headroom_points": 26.381164654931432
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9993108673466266,
+        "headroom": 0.3364901818215917,
+        "headroom_points": 16.824509091079584
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.4203752315470638,
+        "headroom": 0.02764122408275054,
+        "headroom_points": 1.382061204137527
+      }
+    ],
+    "Djibouti": [
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.6163522060117452,
+        "headroom": 0.10465534011495058,
+        "headroom_points": 5.232767005747529
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.6010919035820075,
+        "headroom": 0.07635308650130841,
+        "headroom_points": 3.8176543250654205
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.9480568390280396,
+        "headroom": 0.026554311617214655,
+        "headroom_points": 1.3277155808607328
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.9975960611771482,
+        "headroom": 0.0004045903139930044,
+        "headroom_points": 0.02022951569965022
+      }
+    ],
+    "Dominican Republic": [
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9865764627127246,
+        "headroom": 0.3343469422680858,
+        "headroom_points": 16.71734711340429
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.40915799214956866,
+        "headroom": 0.30204944210981866,
+        "headroom_points": 15.102472105490932
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.6756816041862154,
+        "headroom": 0.07991013019730013,
+        "headroom_points": 3.9955065098650064
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9840922454898751,
+        "headroom": 0.004339478774047722,
+        "headroom_points": 0.21697393870238607
+      }
+    ],
+    "Ecuador": [
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.5062602277472796,
+        "headroom": 0.07183074076220752,
+        "headroom_points": 3.591537038110376
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.8377011833852263,
+        "headroom": 0.04427351888694332,
+        "headroom_points": 2.213675944347166
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.9553728538282795,
+        "headroom": 0.022814228550136866,
+        "headroom_points": 1.1407114275068433
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.9987021865091958,
+        "headroom": 0.00021842601099386356,
+        "headroom_points": 0.010921300549693178
+      }
+    ],
+    "Egypt": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.9089446688964663,
+        "headroom": 0.04654918166873042,
+        "headroom_points": 2.327459083436521
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.027647115649981135,
+        "headroom": 0.04636969540753852,
+        "headroom_points": 2.318484770376926
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.970693640101825,
+        "headroom": 0.004932350707298096,
+        "headroom_points": 0.2466175353649048
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9882919015954372,
+        "headroom": 0.003193853945805146,
+        "headroom_points": 0.1596926972902573
+      }
+    ],
+    "El Salvador": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.47579243025159895,
+        "headroom": 0.7544525851320839,
+        "headroom_points": 37.72262925660419
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.4467378281677859,
+        "headroom": 0.09311572894209356,
+        "headroom_points": 4.655786447104679
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.6694457021476408,
+        "headroom": 0.07961275166037808,
+        "headroom_points": 3.980637583018904
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.976482971760203,
+        "headroom": 0.006415213712930136,
+        "headroom_points": 0.32076068564650684
+      }
+    ],
+    "Equatorial Guinea": [
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.2069929111594816,
+        "headroom": 0.037817028938145265,
+        "headroom_points": 1.8908514469072633
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.9738491277083695,
+        "headroom": 0.01336881311995619,
+        "headroom_points": 0.6684406559978094
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9571551714713611,
+        "headroom": 0.011687647295500198,
+        "headroom_points": 0.5843823647750099
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.9993108673466263,
+        "headroom": 0.00011598314980433666,
+        "headroom_points": 0.005799157490216833
+      }
+    ],
+    "Finland": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.9730757735233811,
+        "headroom": 1.0086730948622766,
+        "headroom_points": 50.433654743113834
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.952065355357054,
+        "headroom": 0.5325042054008494,
+        "headroom_points": 26.62521027004247
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9993108673466266,
+        "headroom": 0.3364901818215917,
+        "headroom_points": 16.824509091079584
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.6719429115933514,
+        "headroom": 0.015644430649134976,
+        "headroom_points": 0.7822215324567487
+      }
+    ],
+    "Gabon": [
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.5455063747399628,
+        "headroom": 0.4215989191982343,
+        "headroom_points": 21.079945959911715
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.5020114728254955,
+        "headroom": 0.07162812556482875,
+        "headroom_points": 3.5814062782414378
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.9591909459290469,
+        "headroom": 0.020862348735165043,
+        "headroom_points": 1.043117436758252
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.9970486547175976,
+        "headroom": 0.0004967205085079423,
+        "headroom_points": 0.024836025425397118
+      }
+    ],
+    "Georgia": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.8164708693281605,
+        "headroom": 0.928613750206129,
+        "headroom_points": 46.43068751030645
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.5726322995039554,
+        "headroom": 0.42899860434328985,
+        "headroom_points": 21.449930217164493
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.1283032432894995,
+        "headroom": 0.1898969138242332,
+        "headroom_points": 9.49484569121166
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.7516331475375344,
+        "headroom": 0.08353211763377219,
+        "headroom_points": 4.17660588168861
+      }
+    ],
+    "Greece": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.8314992469258577,
+        "headroom": 0.9362965368206334,
+        "headroom_points": 46.81482684103167
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.9609021073451253,
+        "headroom": 0.5349147843206681,
+        "headroom_points": 26.745739216033403
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.1859457169314963,
+        "headroom": 0.19959831982028187,
+        "headroom_points": 9.979915991014094
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.4546855450087173,
+        "headroom": 0.026005029229873095,
+        "headroom_points": 1.3002514614936547
+      }
+    ],
+    "Guinea-Bissau": [
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.5585138785685654,
+        "headroom": 0.07432261990558517,
+        "headroom_points": 3.7161309952792583
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9513048988494613,
+        "headroom": 0.01328354405446565,
+        "headroom_points": 0.6641772027232825
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.9786952227277225,
+        "headroom": 0.010891399060769533,
+        "headroom_points": 0.5445699530384767
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.9993108673466264,
+        "headroom": 0.00011598314980431798,
+        "headroom_points": 0.005799157490215898
+      }
+    ],
+    "Iceland": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.9376682209911636,
+        "headroom": 0.9905720943465217,
+        "headroom_points": 49.52860471732608
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.9773578036373833,
+        "headroom": 0.5394037362168631,
+        "headroom_points": 26.970186810843156
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9382667894509474,
+        "headroom": 0.32621627534425185,
+        "headroom_points": 16.310813767212593
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.6261772800020865,
+        "headroom": 0.01782690825698323,
+        "headroom_points": 0.8913454128491615
+      }
+    ],
+    "Iran": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.9650464577954168,
+        "headroom": 0.01786890197781773,
+        "headroom_points": 0.8934450988908864
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.7095882525001866,
+        "headroom": 0.013849194557939783,
+        "headroom_points": 0.6924597278969892
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9845298569841203,
+        "headroom": 0.004220102667926147,
+        "headroom_points": 0.21100513339630736
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.9919213163478471,
+        "headroom": 0.0013596673610841525,
+        "headroom_points": 0.06798336805420763
+      }
+    ],
+    "Israel": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.9840533556253865,
+        "headroom": 1.0142850393509375,
+        "headroom_points": 50.71425196754687
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.9830845372496985,
+        "headroom": 0.5409659327506008,
+        "headroom_points": 27.04829663753004
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9993108673466266,
+        "headroom": 0.3364901818215917,
+        "headroom_points": 16.824509091079584
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.6772675813113892,
+        "headroom": 0.015390507081935192,
+        "headroom_points": 0.7695253540967596
+      }
+    ],
+    "Japan": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.9705710766811407,
+        "headroom": 1.0073926471727068,
+        "headroom_points": 50.36963235863534
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9382667894509472,
+        "headroom": 0.32621627534425185,
+        "headroom_points": 16.310813767212593
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.4410812197014723,
+        "headroom": 0.026653794128784977,
+        "headroom_points": 1.3326897064392489
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9444006993494379,
+        "headroom": 0.0151669416869268,
+        "headroom_points": 0.75834708434634
+      }
+    ],
+    "Jordan": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.835274228424024,
+        "headroom": 0.9382263776923824,
+        "headroom_points": 46.91131888461912
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.18002885344397576,
+        "headroom": 0.056273375013311866,
+        "headroom_points": 2.8136687506655935
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9838328105465882,
+        "headroom": 0.004410250071714087,
+        "headroom_points": 0.22051250358570434
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.9991460779805493,
+        "headroom": 0.00014371770807595997,
+        "headroom_points": 0.007185885403797999
+      }
+    ],
+    "Kazakhstan": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.5221000345438689,
+        "headroom": 0.24431136586833097,
+        "headroom_points": 12.215568293416549
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.6605730410911269,
+        "headroom": 0.07918963100401277,
+        "headroom_points": 3.9594815502006386
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9686449901791935,
+        "headroom": 0.008553337901389272,
+        "headroom_points": 0.4276668950694636
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.9722874666213667,
+        "headroom": 0.004664104791111784,
+        "headroom_points": 0.23320523955558922
+      }
+    ],
+    "Kuwait": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.4512336904102087,
+        "headroom": 0.7418976997829536,
+        "headroom_points": 37.09488498914768
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.5930018802383066,
+        "headroom": 0.019408981192467055,
+        "headroom_points": 0.9704490596233527
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9932535369245021,
+        "headroom": 0.0018403686892066431,
+        "headroom_points": 0.09201843446033216
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.9993108673466267,
+        "headroom": 0.0001159831498042806,
+        "headroom_points": 0.00579915749021403
+      }
+    ],
+    "Kyrgyzstan": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.8451361392873918,
+        "headroom": 0.0791692907912824,
+        "headroom_points": 3.9584645395641203
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.5956858131524015,
+        "headroom": 0.07609528013224107,
+        "headroom_points": 3.804764006612053
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9063574827724719,
+        "headroom": 0.025544756527303546,
+        "headroom_points": 1.2772378263651774
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.9146572601460773,
+        "headroom": 0.014363446185190221,
+        "headroom_points": 0.718172309259511
+      }
+    ],
+    "Lithuania": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.9708494315902246,
+        "headroom": 1.0075349473881285,
+        "headroom_points": 50.37674736940643
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.8628821122847166,
+        "headroom": 0.5081758949490616,
+        "headroom_points": 25.40879474745308
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9993108673466266,
+        "headroom": 0.3364901818215917,
+        "headroom_points": 16.824509091079584
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.06951080480686492,
+        "headroom": 0.05100297541372203,
+        "headroom_points": 2.5501487706861012
+      }
+    ],
+    "Maldives": [
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9249134764587827,
+        "headroom": 0.3239688716062742,
+        "headroom_points": 16.19844358031371
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.5884758865301658,
+        "headroom": 0.21037879371597967,
+        "headroom_points": 10.518939685798983
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.7147542912096521,
+        "headroom": 0.0778122203165801,
+        "headroom_points": 3.890611015829005
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.12031066640795791,
+        "headroom": 0.05342552606081802,
+        "headroom_points": 2.671276303040901
+      }
+    ],
+    "Mauritania": [
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.1416231763392166,
+        "headroom": 0.054441879907028104,
+        "headroom_points": 2.7220939953514054
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9436716250520162,
+        "headroom": 0.01536582597548882,
+        "headroom_points": 0.768291298774441
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.9763625498456275,
+        "headroom": 0.012083904897016435,
+        "headroom_points": 0.6041952448508218
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.9759322387464394,
+        "headroom": 0.004050678407504093,
+        "headroom_points": 0.20253392037520465
+      }
+    ],
+    "Mexico": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.8066907803886969,
+        "headroom": 0.9236139865320858,
+        "headroom_points": 46.18069932660429
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9747768524412196,
+        "headroom": 0.33236103148726165,
+        "headroom_points": 16.618051574363083
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.25964377965520985,
+        "headroom": 0.035306207224769806,
+        "headroom_points": 1.7653103612384904
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9592285868394643,
+        "headroom": 0.011122040001652308,
+        "headroom_points": 0.5561020000826155
+      }
+    ],
+    "Moldova": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.5170110704470943,
+        "headroom": 0.24691293912467396,
+        "headroom_points": 12.345646956233699
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.7050499039224759,
+        "headroom": 0.08045948160169963,
+        "headroom_points": 4.022974080084982
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.6009579931356721,
+        "headroom": 0.07634670056189444,
+        "headroom_points": 3.817335028094722
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.9382667894509477,
+        "headroom": 0.010389889627144119,
+        "headroom_points": 0.519494481357206
+      }
+    ],
+    "Mongolia": [
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.8406850679135076,
+        "headroom": 0.5021207598365509,
+        "headroom_points": 25.106037991827545
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.7095079173891855,
+        "headroom": 0.14850496465059668,
+        "headroom_points": 7.4252482325298335
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.7095882525001865,
+        "headroom": 0.08152707501220688,
+        "headroom_points": 4.076353750610344
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.8010054819340756,
+        "headroom": 0.033491390788250995,
+        "headroom_points": 1.6745695394125497
+      }
+    ],
+    "Montenegro": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.5769895916500203,
+        "headroom": 0.8061864593951816,
+        "headroom_points": 40.30932296975908
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.4722513235220627,
+        "headroom": 0.08882172902898423,
+        "headroom_points": 4.441086451449212
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.7692410717816103,
+        "headroom": 0.08437180669840903,
+        "headroom_points": 4.218590334920451
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9494272740904729,
+        "headroom": 0.01379574159825292,
+        "headroom_points": 0.689787079912646
+      }
+    ],
+    "North Macedonia": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.8613373564916076,
+        "headroom": 0.9515503343302849,
+        "headroom_points": 47.577516716514246
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9993108673466264,
+        "headroom": 0.3364901818215917,
+        "headroom_points": 16.824509091079584
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.7375575853958652,
+        "headroom": 0.0828608803291846,
+        "headroom_points": 4.14304401645923
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.8375849113458506,
+        "headroom": 0.04430523675426174,
+        "headroom_points": 2.2152618377130873
+      }
+    ],
+    "Philippines": [
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.9783541066644764,
+        "headroom": 0.5396755178712656,
+        "headroom_points": 26.983775893563276
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.0036398000396512913,
+        "headroom": 0.5130793641164513,
+        "headroom_points": 25.653968205822565
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9733311442563196,
+        "headroom": 0.3321177143433682,
+        "headroom_points": 16.60588571716841
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.1406393966550057,
+        "headroom": 0.054394965288848636,
+        "headroom_points": 2.719748264442432
+      }
+    ],
+    "Poland": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.9758690676214725,
+        "headroom": 1.010101078845756,
+        "headroom_points": 50.5050539422878
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.9823379246993426,
+        "headroom": 0.5407622641993515,
+        "headroom_points": 27.038113209967573
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9993108673466266,
+        "headroom": 0.3364901818215917,
+        "headroom_points": 16.824509091079584
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.6073594598900504,
+        "headroom": 0.0766519745712994,
+        "headroom_points": 3.8325987285649696
+      }
+    ],
+    "Portugal": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.9168688134271281,
+        "headroom": 0.9799390496959084,
+        "headroom_points": 48.99695248479542
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.9017247560784861,
+        "headroom": 0.5187717856615865,
+        "headroom_points": 25.938589283079327
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9993108673466263,
+        "headroom": 0.3364901818215917,
+        "headroom_points": 16.824509091079584
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.3286758363465421,
+        "headroom": 0.03201419720078273,
+        "headroom_points": 1.6007098600391365
+      }
+    ],
+    "Romania": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.9442462561414123,
+        "headroom": 0.9939349084675758,
+        "headroom_points": 49.69674542337879
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.815694595039636,
+        "headroom": 0.49530360493762676,
+        "headroom_points": 24.76518024688134
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9528680233109256,
+        "headroom": 0.3286737080109807,
+        "headroom_points": 16.433685400549038
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.2908002825746607,
+        "headroom": 0.06155585785603117,
+        "headroom_points": 3.0777928928015585
+      }
+    ],
+    "Russia": [
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.6937913783541034,
+        "headroom": 0.08077375154874562,
+        "headroom_points": 4.0386875774372815
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.9585456112083145,
+        "headroom": 0.021192255867327942,
+        "headroom_points": 1.059612793366397
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9899430596996464,
+        "headroom": 0.0027434342752443567,
+        "headroom_points": 0.13717171376221785
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.9993108673466264,
+        "headroom": 0.00011598314980431798,
+        "headroom_points": 0.005799157490215898
+      }
+    ],
+    "Rwanda": [
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.9087244537183964,
+        "headroom": 0.5206812342461626,
+        "headroom_points": 26.03406171230813
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.3645806685718485,
+        "headroom": 0.32483820042168154,
+        "headroom_points": 16.241910021084077
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.48587564577617626,
+        "headroom": 0.07085863806963216,
+        "headroom_points": 3.542931903481608
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.9979789248919884,
+        "headroom": 0.0003401531706134738,
+        "headroom_points": 0.01700765853067369
+      }
+    ],
+    "Sao Tome and Principe": [
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.9863112577298035,
+        "headroom": 0.5418461503214898,
+        "headroom_points": 27.092307516074488
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.024018428959880152,
+        "headroom": 0.046542740707508856,
+        "headroom_points": 2.3271370353754426
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.9756562057261955,
+        "headroom": 0.012445001170431728,
+        "headroom_points": 0.6222500585215864
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.9993108673466266,
+        "headroom": 0.00011598314980429929,
+        "headroom_points": 0.005799157490214964
+      }
+    ],
+    "Serbia": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.2333939601534813,
+        "headroom": 0.39190328984237494,
+        "headroom_points": 19.595164492118748
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.2034812779077958,
+        "headroom": 0.20254960878570902,
+        "headroom_points": 10.127480439285451
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.7831867344683798,
+        "headroom": 0.08503684934028287,
+        "headroom_points": 4.251842467014144
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.8659707716269466,
+        "headroom": 0.03656185360772782,
+        "headroom_points": 1.8280926803863908
+      }
+    ],
+    "Seychelles": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.1555698937682165,
+        "headroom": 0.5907488585678724,
+        "headroom_points": 29.53744292839362
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9993108673466267,
+        "headroom": 0.33649018182159174,
+        "headroom_points": 16.824509091079587
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.03531037469874873,
+        "headroom": 0.04600424887712796,
+        "headroom_points": 2.300212443856398
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.986311257729804,
+        "headroom": 0.0037341540873740107,
+        "headroom_points": 0.18670770436870054
+      }
+    ],
+    "Slovakia": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.9430858690865893,
+        "headroom": 0.9933416969865305,
+        "headroom_points": 49.66708484932653
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.7460779609968777,
+        "headroom": 0.47631287274114253,
+        "headroom_points": 23.81564363705713
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9993108673466264,
+        "headroom": 0.3364901818215917,
+        "headroom_points": 16.824509091079584
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.14879307274494777,
+        "headroom": 0.04059247067692704,
+        "headroom_points": 2.029623533846352
+      }
+    ],
+    "Slovenia": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.9419220410224354,
+        "headroom": 0.9927467263974074,
+        "headroom_points": 49.637336319870364
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.9571466245602761,
+        "headroom": 0.533890325600188,
+        "headroom_points": 26.6945162800094
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9915799692208539,
+        "headroom": 0.3351890478366413,
+        "headroom_points": 16.759452391832063
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.5036416488823873,
+        "headroom": 0.02367040394979347,
+        "headroom_points": 1.1835201974896734
+      }
+    ],
+    "South Korea": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.9852625459503457,
+        "headroom": 1.014903199972907,
+        "headroom_points": 50.74515999864535
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.9906263304574285,
+        "headroom": 0.5430232596676319,
+        "headroom_points": 27.151162983381592
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9993108673466264,
+        "headroom": 0.3364901818215917,
+        "headroom_points": 16.824509091079584
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.6313711178114975,
+        "headroom": 0.017579223819476228,
+        "headroom_points": 0.8789611909738114
+      }
+    ],
+    "Spain": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.9228432011406682,
+        "headroom": 0.9829932680010485,
+        "headroom_points": 49.149663400052425
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.9611203106670119,
+        "headroom": 0.5349743080380571,
+        "headroom_points": 26.748715401902857
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9993108673466264,
+        "headroom": 0.3364901818215917,
+        "headroom_points": 16.824509091079584
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.07000415275366521,
+        "headroom": 0.051026502257104984,
+        "headroom_points": 2.5513251128552494
+      }
+    ],
+    "Sri Lanka": [
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.8653888337649508,
+        "headroom": 0.3139506907570425,
+        "headroom_points": 15.697534537852126
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.7747235619227166,
+        "headroom": 0.11516551216337297,
+        "headroom_points": 5.758275608168648
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.5553617299445375,
+        "headroom": 0.07417229981713994,
+        "headroom_points": 3.7086149908569968
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9255985618669583,
+        "headroom": 0.020295979632541067,
+        "headroom_points": 1.0147989816270533
+      }
+    ],
+    "Syria": [
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.8396024597007545,
+        "headroom": 0.02699540045548698,
+        "headroom_points": 1.349770022774349
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.969821699235255,
+        "headroom": 0.015427709588518381,
+        "headroom_points": 0.7713854794259191
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9472496514119428,
+        "headroom": 0.014389775620172957,
+        "headroom_points": 0.7194887810086479
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.7113093748513324,
+        "headroom": 0.013767117443276742,
+        "headroom_points": 0.6883558721638371
+      }
+    ],
+    "Tajikistan": [
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.5457396716436702,
+        "headroom": 0.07371344180397835,
+        "headroom_points": 3.6856720901989175
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.9615675576416645,
+        "headroom": 0.01964738055015148,
+        "headroom_points": 0.9823690275075739
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9862563185795148,
+        "headroom": 0.0037491409465433842,
+        "headroom_points": 0.18745704732716922
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.9947313300945797,
+        "headroom": 0.0008867333856818671,
+        "headroom_points": 0.044336669284093355
+      }
+    ],
+    "The Gambia": [
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.1322585705085373,
+        "headroom": 0.05399529932196558,
+        "headroom_points": 2.699764966098279
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.9514940800345691,
+        "headroom": 0.024797129977072955,
+        "headroom_points": 1.2398564988536478
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9601120422242444,
+        "headroom": 0.010881042072772327,
+        "headroom_points": 0.5440521036386163
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.9926858348331034,
+        "headroom": 0.0012309965433982253,
+        "headroom_points": 0.06154982716991127
+      }
+    ],
+    "Togo": [
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.3406937357887708,
+        "headroom": 0.36572804824534727,
+        "headroom_points": 18.286402412267364
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.09018829345897998,
+        "headroom": 0.18348205027896905,
+        "headroom_points": 9.174102513948453
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.6464463158368731,
+        "headroom": 0.07851595382601623,
+        "headroom_points": 3.9257976913008115
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.9553659896544714,
+        "headroom": 0.02281773764367074,
+        "headroom_points": 1.140886882183537
+      }
+    ],
+    "Turkmenistan": [
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.08262338095087321,
+        "headroom": 0.043747979857889634,
+        "headroom_points": 2.1873989928944817
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.9728163687833462,
+        "headroom": 0.013896778723268863,
+        "headroom_points": 0.6948389361634432
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9932886665695748,
+        "headroom": 0.001830785667980378,
+        "headroom_points": 0.0915392833990189
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.9974958194255656,
+        "headroom": 0.000421461309778108,
+        "headroom_points": 0.0210730654889054
+      }
+    ],
+    "Ukraine": [
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.7426643573871698,
+        "headroom": 0.4753816752928847,
+        "headroom_points": 23.769083764644236
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.5640476738740745,
+        "headroom": 0.2632340446675924,
+        "headroom_points": 13.161702233379621
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.5705112093751349,
+        "headroom": 0.07489475023414996,
+        "headroom_points": 3.744737511707498
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.9008215164494049,
+        "headroom": 0.050701888538261304,
+        "headroom_points": 2.5350944269130653
+      }
+    ],
+    "United States": [
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": -0.9508911781514601,
+        "headroom": 0.9973319163974966,
+        "headroom_points": 49.86659581987483
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.9695377760287018,
+        "headroom": 0.537270509695248,
+        "headroom_points": 26.863525484762402
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": -0.9993108673466267,
+        "headroom": 0.33649018182159174,
+        "headroom_points": 16.824509091079587
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.3746763842282013,
+        "headroom": 0.029820516873214947,
+        "headroom_points": 1.4910258436607473
+      }
+    ],
+    "Uzbekistan": [
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": -0.44047600215442095,
+        "headroom": 0.06869361374540361,
+        "headroom_points": 3.4346806872701805
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.942035038492897,
+        "headroom": 0.029632768240083724,
+        "headroom_points": 1.4816384120041861
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": 0.9862669875284471,
+        "headroom": 0.0037462305623402773,
+        "headroom_points": 0.18731152811701388
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.9993108673466266,
+        "headroom": 0.00011598314980429929,
+        "headroom_points": 0.005799157490214964
+      }
+    ],
+    "Venezuela": [
+      {
+        "indicator": "v2pepwrgen",
+        "marginal_points_per_unit": 13.6395076102216,
+        "current_cosine": -0.9904272187371244,
+        "headroom": 0.5429689439511444,
+        "headroom_points": 27.148447197557218
+      },
+      {
+        "indicator": "v2elintmon",
+        "marginal_points_per_unit": 2.3844067392536665,
+        "current_cosine": 0.526238450868182,
+        "headroom": 0.02259280461098328,
+        "headroom_points": 1.129640230549164
+      },
+      {
+        "indicator": "RQ.EST",
+        "marginal_points_per_unit": 25.560931526239834,
+        "current_cosine": 0.9849253009741414,
+        "headroom": 0.0077064669915729005,
+        "headroom_points": 0.385323349578645
+      },
+      {
+        "indicator": "v2stfisccap",
+        "marginal_points_per_unit": 8.4151541242849,
+        "current_cosine": 0.9993108673466263,
+        "headroom": 0.00011598314980433666,
+        "headroom_points": 0.005799157490216833
+      }
+    ]
+  }
+}

@@ -1,0 +1,746 @@
+{
+  "schema_version": 1,
+  "generated": "2026-05-11T00:06:15.468098+00:00",
+  "method": "Parses cascade-side + ML-side working drafts at docs/specs/internal/ops/{cascade,ml}-track/catalog-direction-annotation-{cascade,ml}-side.md and emits {api_code -> direction} for the indicators with literature-defensible signs. Cascade wins on sign conflicts per Lane B R1+R2 (cross-opus-chat.md 2026-05-10).",
+  "source_drafts": {
+    "cascade": "docs/specs/internal/ops/cascade-track/catalog-direction-annotation-cascade-side.md",
+    "ml": "docs/specs/internal/ops/ml-track/catalog-direction-annotation-ml-side.md"
+  },
+  "row_counts": {
+    "cascade_rows_parsed": 81,
+    "ml_rows_parsed": 23,
+    "merged_rows": 104,
+    "conflicts_resolved": 0
+  },
+  "conflicts": [],
+  "directions": [
+    {
+      "api_code": "BM.KLT.DINV.WD.GD.ZS",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "**Non-monotonic**: high FDI outflows can reflect strong domestic firms investing abroad (sign of economic strength) OR capital flight from instability (sign of weakness). The China outflows since 2014 vs Argentine outflows during 2018 crisis show opposite mechanisms. Per R1 mixed-lit fallback, de...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "BM.TRF.PWKR.CD.DT",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "Raw USD level captures both diaspora size and host-country wage levels. The sign for the destination-country's stability is non-obvious (large outflows from Gulf states reflect migrant labor flows, not host stability per se). Recipient-country effects (BX.TRF.PWKR.DT.GD.ZS, ML-Opus side as % GDP)...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "BN.CAB.XOKA.GD.ZS",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "**Non-monotonic**: persistent current-account deficits signal external vulnerability (sudden-stop risk per Calvo 1998 / Reinhart-Rogoff 2009) \u2014 `+1` for risk-elevating reading; but very large surpluses can also reflect mercantilist imbalances (China pre-2008, Germany ongoing) that create differen...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "BX.KLT.DINV.WD.GD.ZS",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "**Non-monotonic by country context**: high FDI inflows can reflect investor confidence in stable institutions (Acemoglu-Robinson 2001 *AER* mechanism, stabilizing) OR extractive-resource inflows that fuel resource-curse dynamics (Karl 1997, destabilizing). The sign depends on FDI composition (gre...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "CC.EST",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher score \u2192 less perceived corruption \u2192 lower political_corruption / government_formation crisis probability. WGI methodology paper (Kaufmann et al. 2010). The mechanism is identical to VD-18 (system-wide corruption) but from a different measurement family (perception-aggregated vs expert-code...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "DT.DOD.DECT.GN.ZS",
+      "direction": -1,
+      "tag": "[lit-only]",
+      "justification": "High external debt-to-GNI \u2192 higher currency_crisis / economic_crisis probability. Mechanism: cross-border-debt component of overall debt vulnerability is the channel for sudden-stop crises (Calvo 1998 *J Applied Econ* \"Capital Flows and Capital-Market Crises\"). WB IDS methodology \u2014 same family as...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "DT.TDS.DECT.EX.ZS",
+      "direction": -1,
+      "tag": "[lit-only]",
+      "justification": "High debt service relative to exports \u2192 higher currency_crisis / fiscal_policy_change probability. Captures liquidity pressure: when scheduled debt payments consume a large share of foreign-currency earnings, rollover or restructuring is near. Reinhart, Reinhart, & Rogoff 2012 *JEP*; IMF DSA fram...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "EG.ELC.ACCS.RU.ZS",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher rural electricity access \u2192 lower humanitarian_crisis / state-fragility probability via state-service-delivery channel. SDG Goal 7 methodology + WB development-indicators metadata treat this as a service-delivery indicator. Mechanism: rural-urban access gaps are a leading indicator for rura...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "EG.ELC.ACCS.UR.ZS",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher urban electricity access \u2192 lower mass_protest / political_violence probability. Same SDG Goal 7 service-delivery mechanism as EG.ELC.ACCS.RU.ZS, but the urban-side is the channel for visible service-failures that trigger protest events (load-shedding in South Africa, India, Lebanon, etc.)....",
+      "source": "cascade"
+    },
+    {
+      "api_code": "EG.IMP.CONS.ZS",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "**Non-monotonic**: high energy-import dependence creates vulnerability to commodity-price shocks + supply-disruption (sanctions/embargo, destabilizing) BUT many high-income stable economies are net importers (Japan, Germany, Italy, South Korea \u2014 all stable). Conversely, oil-rich states with high ...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "EG.USE.COMM.FO.ZS",
+      "direction": 1,
+      "tag": "Medium confidence; sign may differ for petro-states under sanctions scenarios.",
+      "justification": "Higher fossil-fuel dependence = exposure to commodity-price shocks + climate-policy transition risk = elevated economic-recession and energy_policy event risk. IEA Energy Outlook framework; IPCC AR6 transition-risk literature.",
+      "source": "ml-opus"
+    },
+    {
+      "api_code": "FB.AST.NPER.ZS",
+      "direction": -1,
+      "tag": "[lit-only]",
+      "justification": "High NPL ratio \u2192 higher banking_crisis / economic_crisis probability. The Laeven & Valencia 2018 *IMF WP* \"Systemic Banking Crises Revisited\" database treats NPL above 10-15% as a key crisis-onset indicator; Reinhart & Rogoff 2009 *This Time Is Different* documents the historical pattern. Operati...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "FI.RES.TOTL.CD",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher FX reserves \u2192 lower currency_crisis / sudden-stop probability. Mechanism: reserves serve as buffer against capital-flow reversals (Obstfeld, Shambaugh, & Taylor 2010 *AEJ:Macro* \"Financial Stability, the Trilemma, and International Reserves\"); the Greenspan-Guidotti rule (reserves \u2265 short-...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "FI.RES.TOTL.MO",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher months-of-imports cover \u2192 lower currency_crisis probability. IMF Assessing Reserve Adequacy (ARA) metric treats <3 months as warning threshold for low-income countries. Mechanism: import cover measures the cushion against trade-finance shocks. Standard sign per IMF/WB indicator metadata.",
+      "source": "cascade"
+    },
+    {
+      "api_code": "FM.LBL.BMNY.GD.ZS",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "**Non-monotonic relationship**: broad-money depth captures financial development (higher = more developed financial system = stabilizing per King & Levine 1993 *QJE* \"Finance and Growth\") BUT rapid growth or excessive levels can indicate credit boom preceding banking crisis (Schularick & Taylor 2...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "FP.CPI.TOTL.ZG",
+      "direction": -1,
+      "tag": "[lit-only]",
+      "justification": "Higher inflation \u2192 higher economic_crisis / fiscal_policy_change / mass_protest probability. Hyperinflation episodes (Reinhart & Rogoff 2009 *This Time Is Different*; Hanke & Krus 2013 *Cato J* hyperinflation database) consistently precede regime instability and protest events. Sign is for high i...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "FR.INR.LEND",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "**Non-monotonic and country-context-dependent**: high lending rates can signal monetary tightening (inflation-fighting, stabilizing) OR distress pricing (banks pricing in default risk, destabilizing). Low rates can signal stable low-inflation environment OR financial-repression (suppressing rates...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "GC.DOD.TOTL.GD.ZS",
+      "direction": -1,
+      "tag": "[lit-only]",
+      "justification": "High debt-to-GDP \u2192 higher fiscal_policy_change / economic_crisis / banking_crisis probability. Reinhart & Rogoff 2010 *AER* \"Growth in a Time of Debt\" + Reinhart, Reinhart, & Rogoff 2012 *JEP* document debt-overhang threshold effects on growth and crisis-onset; debt levels above ~80-90% of GDP en...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "GC.REV.XGRT.GD.ZS",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher revenue-to-GDP \u2192 stronger state capacity \u2192 lower civil_war / state-fragility probability. Mechanism: state-capacity literature (Besley & Persson 2009 *AER*; Tilly 1990 *Coercion, Capital, and European States*) establishes tax-extraction capacity as foundational substrate for state legitima...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "GC.TAX.TOTL.GD.ZS",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher tax-to-GDP \u2192 stronger state capacity \u2192 lower fiscal_policy_change / state-fragility probability. Same Besley & Persson 2009 mechanism but isolates tax revenue specifically (vs broader revenue including grants/royalties). The gap between GC.REV and GC.TAX captures aid/resource-rent dependen...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "GC.XPN.TOTL.GD.ZS",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "**Non-monotonic relationship**: low expenditure can signal state weakness (insufficient service provision \u2192 fragility); high expenditure can signal fiscal stress + crowding out + populist fiscal expansion preceding currency crisis. Literature is split by context: Reinhart & Rogoff 2010 finds high...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "GE.EST",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher score \u2192 better state capacity \u2192 lower civil_war / humanitarian_crisis / fiscal_policy_change probability. Mechanism: state-capacity literature (Tilly 1990; Besley & Persson 2009) establishes state-capacity as foundational substrate for stability. Pairs with VD-11 (V-Dem fiscal capacity) \u2014 ...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "NE.CON.GOVT.ZS",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "**Non-monotonic by context**: high government consumption can reflect state-capacity / welfare-state generosity (stabilizing) OR fiscal-stress / unsustainable spending (destabilizing). The Reinhart & Rogoff fiscal-overhang vs Besley-Persson state-capacity literatures point in opposite directions ...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "NE.CON.PRVT.ZS",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "**Non-monotonic**: high consumption-to-GDP can reflect high household demand (consumer-led growth, stabilizing) OR low investment (under-investment, slowing future growth). The cross-country cross-section blends emerging markets (high consumption share, often higher fragility) with developed econ...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "NE.EXP.GNFS.CD",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "Raw USD level \u2014 same critique as NY.GDP.MKTP.CD. Captures country size + commodity-price-cycle effects, not stability. Defer to Majles; likely correct treatment is to drop the raw level in favor of `% GDP` (NE.EXP.GNFS.ZS, also direction: 0 above).",
+      "source": "cascade"
+    },
+    {
+      "api_code": "NE.EXP.GNFS.ZS",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "**Non-monotonic and category-dependent**: high export share can reflect openness/competitiveness (stabilizing per Frankel & Romer 1999 *AER* \"Does Trade Cause Growth?\") OR commodity-export dependence (destabilizing per Karl 1997 *Paradox of Plenty*, Sachs & Warner 1995/1997 NBER on resource curse...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "NE.GDI.TOTL.ZS",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher investment-to-GDP \u2192 higher long-run growth \u2192 lower civil_war / state-fragility probability via the income-channel. Levine & Renelt 1992 *AER* \"A Sensitivity Analysis of Cross-Country Growth Regressions\" identifies investment-share as one of the most robust correlates of long-run growth; Ac...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "NE.IMP.GNFS.CD",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "Same as NE.EXP.GNFS.CD \u2014 raw level captures size, not stability. Defer to Majles.",
+      "source": "cascade"
+    },
+    {
+      "api_code": "NE.IMP.GNFS.ZS",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "**Non-monotonic**: high import share captures openness (stabilizing) but also import-dependence (food, energy, capital goods \u2014 destabilizing per Krugman-Obstfeld textbook on small-open-economy vulnerabilities). Sign is not stable across regimes or commodity-exposure contexts. Per R1 mixed-lit fal...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "NV.AGR.TOTL.ZS",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "**Non-monotonic and development-stage-dependent**: high agriculture share captures development-stage (low-income economies, often higher fragility \u2014 Fearon-Laitin 2003 income mechanism transmits here) BUT for developed agricultural-export economies (NZ, Denmark, Argentina) the share is moderate a...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "NV.IND.MANF.ZS",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "**More signable than NV.IND.TOTL.ZS** because manufacturing specifically (excluding mining/extraction) is the channel for the East Asian growth-stability mechanism. Rodrik 2013 *QJE* \"Unconditional Convergence in Manufacturing\" + Hausmann, Hwang, & Rodrik 2007 *J Econ Growth* \"What You Export Mat...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "NV.IND.TOTL.ZS",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "**Non-monotonic**: industrial share captures middle-income manufacturing-led growth (stabilizing in East Asia) AND commodity-extraction / resource-curse exposure (destabilizing per Sachs-Warner). Without manufacturing/extraction disaggregation, single sign is not defensible. Per R1 mixed-lit fall...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "NV.SRV.TOTL.ZS",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "**Non-monotonic**: services share captures both development-stage progression (developed economies have high services share, generally stabilizing) AND deindustrialization-without-development trap (some middle-income economies skip industry and stagnate, Rodrik 2016 *J Econ Growth* \"Premature Dei...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "NY.GDP.DEFL.KD.ZG",
+      "direction": -1,
+      "tag": "[lit-only]",
+      "justification": "Same mechanism as FP.CPI.TOTL.ZG (consumer-price inflation) \u2014 higher inflation \u2192 higher economic_crisis / mass_protest probability. The GDP deflator differs from CPI in coverage (all domestically-produced goods incl. exports vs household consumption basket) but the macro-stability mechanism is id...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "NY.GDP.MKTP.CD",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "Raw GDP level captures country size, not stability. Large countries (US, China, India) are not \"lower-risk\" by virtue of size; small countries (Singapore, Switzerland) are not \"higher-risk\". The signed-scoring formula treats this as a level term, which is meaningless. Per R1 absent-lit-direction,...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "NY.GDP.MKTP.KD",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "Same logic as NY.GDP.MKTP.CD \u2014 raw GDP level is a size indicator, not a stability signal. Defer to Majles for inclusion-or-exclusion decision; if included, sign is meaningless.",
+      "source": "cascade"
+    },
+    {
+      "api_code": "NY.GDP.MKTP.KD.ZG",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher growth \u2192 lower civil_war / economic_crisis / mass_protest probability. The growth-conflict literature is among the most-replicated findings in political economy: Miguel, Satyanath, & Sergenti 2004 *JPE* \"Economic Shocks and Civil Conflict\" + Burke et al. 2015 *Annu Rev Econ* \"Climate and C...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "NY.GDP.PCAP.CD",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher GDP per capita \u2192 lower civil_war / political_violence / state-fragility probability. Among the most-replicated findings in conflict economics: Fearon & Laitin 2003 *APSR* finds low GDP per capita as the single strongest predictor of civil_war onset (interpreted as a state-capacity proxy). ...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "NY.GNP.PCAP.CD",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Same mechanism as NY.GDP.PCAP.CD \u2014 measures income level with slight conceptual difference (GNI adds net factor income from abroad). Same Fearon-Laitin / Collier-Hoeffler protective-effect direction. WB Atlas-method smoothing is the canonical income-classification indicator.",
+      "source": "cascade"
+    },
+    {
+      "api_code": "PV.EST",
+      "direction": 1,
+      "tag": "[lit + leakage-flag for Majles]",
+      "justification": "**Tautological-adjacent** \u2014 this indicator is itself constructed from the very event types we're trying to predict (terrorism, political violence). Higher score \u2192 lower political_violence / terrorism / civil_war probability **by construction**. Including it as a feature for predicting those same ...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "RL.EST",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher score \u2192 better rule-of-law \u2192 lower human_rights_violation / political_corruption / democratic_backsliding probability. WGI methodology paper. La Porta et al. 2008 *J Econ Lit* establishes legal-origins \u2192 economic/political outcomes mechanism. Pairs with VD-37 (V-Dem rule-of-law).",
+      "source": "cascade"
+    },
+    {
+      "api_code": "RQ.EST",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher score \u2192 better regulatory environment \u2192 lower economic_crisis / fiscal_policy_change probability. WGI methodology paper. Mechanism: regulatory quality captures \"ability to formulate and implement sound policies\"; reversal precedes economic-crisis events (Acemoglu, Johnson, & Robinson 2001 ...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "SE.ADT.LITR.ZS",
+      "direction": -1,
+      "tag": "High confidence; SHAP across multiple recipes consistently negative on civil_war/political_violence.",
+      "justification": "Higher literacy \u2192 more educated electorate \u2192 lower civil_war + higher democratic_transition probability. The Hibbs/Olsson/Pinker stylized fact.",
+      "source": "ml-opus"
+    },
+    {
+      "api_code": "SE.PRM.NENR",
+      "direction": -1,
+      "tag": "High confidence (UNESCO + WB development indicators literature).",
+      "justification": "Higher enrollment \u2192 higher human capital \u2192 lower instability. Same mechanism as adult literacy but forward-looking.",
+      "source": "ml-opus"
+    },
+    {
+      "api_code": "SE.XPD.TOTL.GD.ZS",
+      "direction": -1,
+      "tag": "Medium confidence (mixed: high expenditure in fragile states sometimes reflects donor pressure, not capacity).",
+      "justification": "Government investment in education = state capacity + long-term stability signal. Higher = more stabilizing.",
+      "source": "ml-opus"
+    },
+    {
+      "api_code": "SG.GEN.PARL.ZS",
+      "direction": -1,
+      "tag": "High confidence (UN gender + governance literature).",
+      "justification": "Higher women's political representation = institutional quality proxy = lower democratic_backsliding probability. Low = authoritarian governance correlate.",
+      "source": "ml-opus"
+    },
+    {
+      "api_code": "SH.DYN.AIDS.ZS",
+      "direction": 1,
+      "tag": "High confidence on epidemic_and_pandemic recipe; medium on others.",
+      "justification": "High HIV prevalence + weak state response \u2192 epidemic + social/economic burden.",
+      "source": "ml-opus"
+    },
+    {
+      "api_code": "SH.DYN.MORT",
+      "direction": 1,
+      "tag": "High confidence.",
+      "justification": "Same mechanism as MMRT. Higher = state failure indicator.",
+      "source": "ml-opus"
+    },
+    {
+      "api_code": "SH.STA.MMRT",
+      "direction": 1,
+      "tag": "High confidence (SDG 3 indicator; correlates strongly with state-fragility composites).",
+      "justification": "High maternal mortality = state delivers poor services = high failed-state proxy. Higher = higher instability across recipes.",
+      "source": "ml-opus"
+    },
+    {
+      "api_code": "SL.EMP.VULN.ZS",
+      "direction": 1,
+      "tag": "High confidence (Barro/Lee replication studies).",
+      "justification": "High vulnerable-employment fraction \u2192 less formal safety net \u2192 economic shocks hit harder \u2192 social unrest more likely.",
+      "source": "ml-opus"
+    },
+    {
+      "api_code": "SL.UEM.1524.ZS",
+      "direction": 1,
+      "tag": "High confidence (Goldstone state failure framework; surfaces in protest + civil_war heads).",
+      "justification": "Single strongest demographic predictor of civil unrest + insurgency recruitment per political-science literature (Goldstone, Urdal). High youth unemployment \u2192 higher mass_protest + civil_war probability.",
+      "source": "ml-opus"
+    },
+    {
+      "api_code": "SM.POP.NETM",
+      "direction": 0,
+      "tag": "High confidence on ambiguity; recommend splitting into two derived indicators (net_outflow, net_inflow) in a future curation.",
+      "justification": "Sign depends on direction of net movement AND event category. Negative net migration (people leaving) \u2192 state failing (+1 for civil_war, economic_crisis); positive (people arriving) \u2192 could be stability OR strain. Defer to Majles.",
+      "source": "ml-opus"
+    },
+    {
+      "api_code": "SM.POP.REFG",
+      "direction": 0,
+      "tag": "Medium confidence on ambiguity; SHAP shows mixed sign across recipes.",
+      "justification": "Sign depends on event category. Host-country effects: high inflow strains resources (\u2192 economic_crisis, social tension, +1) BUT also indicates host is stable enough to receive refugees (\u2192 democratic_transition / stability, -1). Defer to Majles.",
+      "source": "ml-opus"
+    },
+    {
+      "api_code": "SM.POP.REFG.OR",
+      "direction": 1,
+      "tag": "High confidence (UCDP/UNHCR literature; surfaces in civil_war/humanitarian_crisis heads).",
+      "justification": "Population fleeing = state failing. Higher origin-refugees count is a direct lagging-but-correlated indicator of civil_war + humanitarian_crisis events.",
+      "source": "ml-opus"
+    },
+    {
+      "api_code": "SP.DYN.LE00.IN",
+      "direction": -1,
+      "tag": "High confidence (development economics canon).",
+      "justification": "Inverse of above; higher LE = better state capacity.",
+      "source": "ml-opus"
+    },
+    {
+      "api_code": "SP.DYN.TFRT.IN",
+      "direction": 0,
+      "tag": "n/a",
+      "justification": "Same demographic-transition framework: high TFR in low-income context \u2192 youth-bulge instability (+1 for civil_war / mass_protest); high TFR in middle-income context \u2192 labor-force-bulge stability dividend (\u22121 for economic indicators). Cole-Tilly demographic-pressure literature; Cincotta youth-bulg...",
+      "source": "ml-opus"
+    },
+    {
+      "api_code": "SP.POP.DPND",
+      "direction": 0,
+      "tag": "n/a",
+      "justification": "Total dependency ratio combines youth-dependency (development-stage instability driver) and old-age-dependency (high-income fiscal-pressure driver). Sign reverses by income context. **Defer to Majles**; split into youth + old-age sub-indicators below for individual sign drafts.",
+      "source": "ml-opus"
+    },
+    {
+      "api_code": "SP.POP.DPND.OL",
+      "direction": 1,
+      "tag": "Medium confidence; cross-recipe direction: positive for economic_recession + government_formation; possibly negative for civil_war (older populations stabilize).",
+      "justification": "Higher old-age dependency ratio \u2192 fiscal pressure on pension systems + reduced active labor force \u2192 economic slowdown / political contention. OECD Pensions at a Glance; IMF fiscal-sustainability working papers.",
+      "source": "ml-opus"
+    },
+    {
+      "api_code": "SP.POP.DPND.YG",
+      "direction": 1,
+      "tag": "Medium confidence.",
+      "justification": "Higher youth-dependency ratio in low-income contexts \u2192 reduced labor productivity + youth-bulge demographic pressure \u2192 social unrest. Cincotta-Engelman population-action papers; Urdal 2006 *International Studies Quarterly* youth-bulge thesis.",
+      "source": "ml-opus"
+    },
+    {
+      "api_code": "SP.POP.GROW",
+      "direction": 0,
+      "tag": "n/a",
+      "justification": "Sign is genuinely ambiguous \u2014 depends on demographic transition stage. Goldstone state-failure framework treats high population growth (>2%/yr) in low-income contexts as instability driver; Lee-Mason demographic-dividend literature treats moderate growth in middle-income contexts as growth driver...",
+      "source": "ml-opus"
+    },
+    {
+      "api_code": "SP.URB.GROW",
+      "direction": 1,
+      "tag": "Medium confidence; sign reverses for moderate growth in well-governed cities. Consider as `0` if Majles disagrees.",
+      "justification": "Rapid urbanization without infrastructure \u2192 urban poverty \u2192 social tension. Goldstone state failure indicator.",
+      "source": "ml-opus"
+    },
+    {
+      "api_code": "SP.URB.TOTL.IN.ZS",
+      "direction": 0,
+      "tag": "Low confidence on universal direction.",
+      "justification": "Urbanization level (vs growth) is a development stage indicator; sign depends on event category and regime. Defer.",
+      "source": "ml-opus"
+    },
+    {
+      "api_code": "TX.VAL.TECH.MF.ZS",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher high-tech export share \u2192 higher productive sophistication \u2192 lower economic_crisis / state-fragility probability. Hausmann, Hwang, & Rodrik 2007 *J Econ Growth* \"What You Export Matters\" + Hausmann & Hidalgo 2011 *J Econ Growth* \"The Network Structure of Economic Output\" establish export-so...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "VC.IDP.NWDS",
+      "direction": 1,
+      "tag": "High confidence (IDMC data is the operational measure of in-progress conflict; surfaces in civil_war + territorial_disputes heads).",
+      "justification": "IDPs are the most direct measure of active internal conflict not yet crossing borders. Higher = more active conflict.",
+      "source": "ml-opus"
+    },
+    {
+      "api_code": "VC.PKP.TOTL",
+      "direction": 1,
+      "tag": "Medium confidence.",
+      "justification": "Higher peacekeeping deployment = active intervention in conflict or post-conflict states = correlate of civil_war / territorial_disputes / peacekeeping_and_peace_process events. UN DPO operational data; Doyle-Sambanis 2000 *APSR* peacekeeping efficacy literature (correlate, not cause).",
+      "source": "ml-opus"
+    },
+    {
+      "api_code": "v2cacamps",
+      "direction": -1,
+      "tag": "[lit-only]",
+      "justification": "Higher polarization \u2192 higher constitutional_change / elections / political_violence probability. V-Dem Codebook \u00a76.4; McCoy et al. 2018 *Am Behav Sci* \"Polarization and the Global Crisis of Democracy\" establishes polarization as a meta-cause of democratic-backsliding via institutional-norm erosio...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2clkill",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher score \u2192 less frequent extrajudicial killing \u2192 lower political_violence / human_rights_violation probability. V-Dem Codebook \u00a73.2; mechanism identical to VD-12 but isolates the targeted-assassination channel (vs torture). Cingranelli-Richards Physical Integrity Index documents the same mech...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2cltort",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher score \u2192 less torture \u2192 lower political_repression / human_rights_violation probability. V-Dem Codebook \u00a73.2; Hathaway 2002 *Yale Law J* \"Do Human Rights Treaties Make a Difference?\" establishes torture-prevalence as a leading indicator for mass-crackdown events.",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2cseeorgs",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "**Sector-boundary indicator** \u2014 ML-Opus has flagged this as a cross-over claim per Lane B Refinement 1 (D5 SHAP rank-4 on political_corruption). Cascade's literature review finds the direction is **split by context**: Putnam 1993 *Making Democracy Work* + Boix & Stokes 2003 *J Politics* establish...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2csprtcpt",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "Literature is split by context: McAdam, Tarrow, & Tilly 2001 *Dynamics of Contention* establishes participation-channels as a stabilizing mechanism in consolidated democracies (when legitimate channels are open, contentious politics expresses through institutional forms). But the Eastern Europe 1...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2csreprss",
+      "direction": -1,
+      "tag": "[lit-only]",
+      "justification": "Higher repression of NGOs/activists \u2192 higher political_violence / mass_protest / political_repression probability. V-Dem Codebook \u00a76.4; Earl 2011 *Annu Rev Sociol* \"Political Repression: Iron Fists, Velvet Gloves, and Diffuse Control\" establishes repression-mobilization mechanism (repression ofte...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2elintmon",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher score (monitoring allowed) \u2192 lower election_violence probability. V-Dem Codebook \u00a76.1.1. Mechanism: Hyde 2011 *The Pseudo-Democrat's Dilemma* establishes monitoring-as-credible-commitment; regimes that bar monitors signal intent to commit fraud, and post-election violence follows reliably.",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2ex_hosw",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "Categorical: presidential vs parliamentary vs council. Recipes need this to distinguish UK government collapse (parliamentary norm) from Turkey executive consolidation (presidential drift). Sign is contextual and non-monotonic. Defer per `direction: 0`.",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2exaphogp",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "Categorical: legislature \u2192 presidential \u2192 military progression captures executive-consolidation and coup-institutionalization. Encoding direction requires per-category treatment, not a single sign. Defer per `direction: 0`.",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2excrptps",
+      "direction": -1,
+      "tag": "[lit-only]",
+      "justification": "Higher executive-branch corruption \u2192 higher government_formation / political_crisis probability. V-Dem Codebook \u00a76.2.1; Treisman 2007 *Annu Rev Pol Sci* \"What Have We Learned About the Causes of Corruption?\" establishes corruption-instability link. Distinct from VD-18 (system-wide) in that execut...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2exl_legitlead",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher perceived leadership legitimacy \u2192 lower executive_transition / mass_protest / democratic_transition probability. V-Dem Codebook \u00a76.2.2 captures whether leaders are seen as legitimate by elites and population. Mechanism: Weber 1922 *Wirtschaft und Gesellschaft* foundational legitimacy frame...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2exremhog",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "Categorical encoding of how leaders leave office (regular term, election loss, coup, assassination, etc.). Single sign is meaningless; defer per `direction: 0`.",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2jureform",
+      "direction": -1,
+      "tag": "[lit-only]",
+      "justification": "This is an **action-side** indicator: high score means the executive is **actively attacking** judicial independence. Higher \u2192 higher judicial_reform / constitutional_change probability. V-Dem Codebook \u00a76.1.4: scale captures executive-initiated judicial-reform attempts, not actual reform outcomes...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2lgbicam",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "Categorical institutional-structure moderator (unicameral=0, weak bicameral=1, strong bicameral=2). Sign depends on event category AND interactions with other institutional features. Bicameralism is a Tsebelis veto-player count \u2014 more veto players = more status-quo bias = stability for some event...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2lgqstexp",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher score \u2192 more active legislative oversight \u2192 lower executive_power_consolidation probability. V-Dem Codebook \u00a76.1.4. Saiegh 2011 *Ruling by Statute* establishes question-time as a measurable proxy for legislative-executive accountability friction; Bermeo 2016 *J Democracy* \"On Democratic Ba...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2mecenefm",
+      "direction": -1,
+      "tag": "[lit-only]",
+      "justification": "Higher censorship \u2192 higher political_repression / democratic_transition (backsliding) probability. V-Dem Codebook \u00a76.4 measures government-directed media censorship intensity. Mechanism: same as VD-08 but inverse direction; specifically captures pre-internet authoritarian moves where alternative-...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2pepwrgen",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher score \u2192 more balanced power distribution by gender \u2192 lower gender_policy_reform crisis probability. V-Dem Codebook \u00a76.5. Pairs with VD-26 for \"formal rights but no power\" detection (high VD-26 trajectory + low VD-27 = backlash regime). Same Caprioli 2005 mechanism.",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2pepwrort",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher score \u2192 more LGBTQ+ political inclusion \u2192 lower social_policy_reform crisis probability. V-Dem Codebook \u00a76.5. Mechanism: cross-country LGBT-rights divergences track regime-type divergences (Hungary/Russia declining vs Taiwan/Ireland rising follow distinct recipes; Encarnaci\u00f3n 2014 *J Democ...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2pepwrses",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher score \u2192 more balanced ethnic-power distribution \u2192 lower civil_war / ethnic_conflict probability. V-Dem Codebook \u00a76.5. **Strongest single structural predictor of civil_war onset in the political-science literature** (Cederman, Wimmer, & Min 2010 *World Politics*; Wimmer, Cederman, & Min 200...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2pepwrsoc",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher score \u2192 less elite-capture \u2192 lower mass_protest / populist executive_transition probability. V-Dem Codebook \u00a76.5. Mechanism: Acemoglu & Robinson 2006 *Economic Origins of Dictatorship and Democracy* establishes elite-capture as foundational driver of regime instability; when wealth-power o...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2psprlnks",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "Categorical: clientelistic / programmatic / identity / leadership / movement. Each linkage type has different stress-response trajectories (clientelistic = Venezuela/Iraq fragile; programmatic = austerity-resilient; identity = ethnic-mobilization-prone). No single sign applies. Defer per `directi...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2stfisccap",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher fiscal capacity \u2192 lower civil_war / humanitarian_crisis / government_formation probability. Mechanism: state-capacity literature (Tilly 1990 *Coercion, Capital, and European States*; Besley & Persson 2009 *AER* \"The Origins of State Capacity\") establishes tax-extraction + service-delivery ...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2svdomaut",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher domestic autonomy \u2192 lower foreign_intervention / sanctions_and_arms_embargo probability. V-Dem Codebook \u00a73.4 measures the degree to which domestic policy is set by domestic actors (vs foreign-imposed). Mechanism: sovereignty-erosion is itself the operational definition of foreign_intervent...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2x_clphy",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher physical-integrity protections \u2192 lower political_violence / civil_war probability. Composite of freedom from torture + freedom from political killing (V-Dem Codebook \u00a73.2). Established as a leading indicator for civil_war onset by the physical-integrity-rights literature (Poe & Tate 1994 *...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2x_clpol",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher score \u2192 more assembly + association + expression freedom \u2192 lower mass_protest probability (because regimes that restrict political liberties create the very grievances they're trying to suppress; J Curve / Davies 1962 *ASR* mechanism). The gap between VD-15 and VD-12 is itself informative:...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2x_clpriv",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher score \u2192 stronger property rights + freedom of movement + religion + equality before law \u2192 lower migration_and_refugees / economic_crisis probability. Property-rights mechanism: North & Weingast 1989 *JEH* establish credible-commitment to property rights as a pre-condition for capital deepe...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2x_corr",
+      "direction": -1,
+      "tag": "[lit-only]",
+      "justification": "Higher system-wide corruption \u2192 higher political_corruption / government_formation event probability. Composite of public-sector + judicial + legislative + executive corruption (V-Dem Codebook \u00a76.2.1). Mauro 1995 *QJE* \"Corruption and Growth\" + Rothstein & Teorell 2008 *Governance* establish the ...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2x_freexp_altinf",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher media/expression freedom \u2192 lower political_repression / democratic_transition (backsliding) probability. V-Dem Codebook \u00a76.4 composite. Mechanism: Stier 2015 *Democratization* \"Democracy, Autocracy and the News\" establishes media-capture as a recognizable move in authoritarian consolidatio...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2x_gender",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher women's political empowerment \u2192 lower democratic_backsliding probability. V-Dem Codebook \u00a76.5; Caprioli 2005 *Int Studies Q* \"Primed for Violence: The Role of Gender Inequality in Predicting Internal Conflict\" establishes gender-inequality \u2192 instability link via norms-of-violence transmiss...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2x_jucon",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher judicial constraint \u2192 fewer constitutional crises + lower democratic-backsliding probability. North & Weingast 1989 *JEH* \"Constitutions and Commitment\" establishes courts-as-veto-player mechanism: when courts can block the executive, expropriation and unilateral constitutional changes bec...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2x_libdem",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Liberal democracy = electoral democracy + rule of law + horizontal accountability + civil liberties. Higher score \u2192 lower probability of political_repression / democratic_transition (backsliding) events. The gap between VD-02 and VD-01 captures the \"democratic facade\" phenomenon \u2014 elections witho...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2x_neopat",
+      "direction": -1,
+      "tag": "[lit-only]",
+      "justification": "Higher neopatrimonialism \u2192 higher government_formation / executive_transition / state_fragility event probability. V-Dem Codebook \u00a76.3 documents the composite of clientelism + presidentialism + regime corruption. Mechanism: Bratton & van de Walle 1994 *World Politics* \"Neopatrimonial Regimes and ...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2x_partip",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "**Non-monotonic relationship** documented in the literature. High participation + strong institutions = stabilizing; high participation + weak institutions = revolution risk (Huntington 1968 *Political Order in Changing Societies* \u2014 \"praetorian society\" trap, where participation outpaces institut...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2x_polyarchy",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher electoral democracy \u2192 lower probability of crisis events in the named categories. The V-Dem Codebook v16 establishes the index as a composite of free/fair elections + suffrage + freedom of association + alternative information sources + elected officials, with mechanism: democratic account...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2x_regime",
+      "direction": 0,
+      "tag": "[no lit, direction: 0]",
+      "justification": "Categorical: 0=closed autocracy, 1=electoral autocracy, 2=electoral democracy, 3=liberal democracy. Treating this as monotonic-numeric is methodologically wrong: the relationship between regime type and event probability is non-linear (e.g., electoral autocracies have higher election-violence pro...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2x_rule",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher rule-of-law \u2192 lower human_rights_violation / political_corruption / democratic-backsliding probability across multiple event families. V-Dem's measure captures actual functioning (vs WGI's perception); 200+ years of expert-coded depth. Mechanism: La Porta et al. 2008 *J Econ Lit* \"The Econ...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2xeg_eqprotec",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher equal-protection score \u2192 lower human_rights_violation / ethnic_conflict / civil_war probability. V-Dem Codebook \u00a76.5 measures group-differentiated rights (ethnic/religious/gender). Mechanism: Cederman, Wimmer, & Min 2010 *World Politics* \"Why Do Ethnic Groups Rebel? New Data and Analysis\" ...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2xel_frefair",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher electoral integrity \u2192 lower elections_and_voting / election_violence probability. V-Dem Codebook \u00a76.1.1; the index isolates electoral process specifically (vs VD-01 broader composite). Mechanism: Norris 2014 *Why Electoral Integrity Matters* establishes electoral-integrity \u2192 post-election-...",
+      "source": "cascade"
+    },
+    {
+      "api_code": "v2xlg_legcon",
+      "direction": 1,
+      "tag": "[lit-only]",
+      "justification": "Higher legislative constraint \u2192 fewer government_formation crises + lower authoritarian-consolidation probability. Tsebelis 2002 *Veto Players* establishes the institutional-veto-player framework: parliaments with effective veto power constrain executive overreach. Pairs with VD-03 \u2014 combined col...",
+      "source": "cascade"
+    }
+  ]
+}

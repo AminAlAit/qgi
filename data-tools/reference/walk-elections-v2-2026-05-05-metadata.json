@@ -1,0 +1,299 @@
+{
+  "schema_version": 1,
+  "walk_run_id": "2026-05-05T211826Z_walk_elections_and_voting",
+  "generated_at_utc": "2026-05-05T21:18:41.138077+00:00",
+  "pre_reg_commit_sha": "d321fde",
+  "recipe_id": "elections_and_voting",
+  "rubric_entry": {
+    "rank": 1,
+    "category_id": "elections_and_voting",
+    "layer1_id": "A",
+    "layer2_id": "A1",
+    "layer2_label": "Electoral Politics",
+    "n_positive_verified": 42,
+    "n_positive_total": 413,
+    "A": 1.0,
+    "B": 1.0,
+    "C": 1.0,
+    "D": 1.0,
+    "S": 1.0,
+    "F2": 3,
+    "F3": 2,
+    "F4": 2,
+    "survival_eligible": true,
+    "F5": 3,
+    "head_class": "discrete-time hazard (DeepHit-lite)",
+    "label_source_examples": [
+      "NELDA",
+      "IFES",
+      "V-Dem v2xel_frefair"
+    ],
+    "relevant_sectors": [
+      "GOV_INST",
+      "REPRESSION",
+      "SOC_MOBIL"
+    ],
+    "n_relevant_indicators": 40,
+    "excluded_by_hard_gate": false
+  },
+  "params": {
+    "seed": 0,
+    "n_bootstrap": 1000,
+    "label_window_lower": 2014,
+    "train_year_max": 2021,
+    "test_year_range": [
+      2022,
+      2025
+    ],
+    "cal_fold_size": 0.2
+  },
+  "sample_sizes": {
+    "n_train_fold": 1228,
+    "n_cal_fold": 308,
+    "n_test": 576,
+    "n_pos_train_fold": 21,
+    "n_pos_cal_fold": 6,
+    "n_pos_test": 11
+  },
+  "encoder": {
+    "type": "OneHotEncoder",
+    "n_features_out": 4728
+  },
+  "backbone_dir": "results\\hp_sweep_5_30_2\\backbone",
+  "head_train_history": [
+    {
+      "epoch": 0,
+      "train_loss": 0.4818369169308982,
+      "val_loss": 0.2542276680469513
+    },
+    {
+      "epoch": 1,
+      "train_loss": 0.18723274426117034,
+      "val_loss": 0.13218289613723755
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.1197490408475877,
+      "val_loss": 0.11278688907623291
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.11267446124220376,
+      "val_loss": 0.11269150674343109
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.1123723671735574,
+      "val_loss": 0.10422442108392715
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.10281028497935334,
+      "val_loss": 0.09176625311374664
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.09224489769149861,
+      "val_loss": 0.08267056941986084
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.08654490260408437,
+      "val_loss": 0.07868878543376923
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.08257743817294799,
+      "val_loss": 0.07529649138450623
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.07918104141117348,
+      "val_loss": 0.07311025261878967
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.07556268645495903,
+      "val_loss": 0.07313859462738037
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.07265763109741574,
+      "val_loss": 0.07304945588111877
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.06964815662844702,
+      "val_loss": 0.07173659652471542
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.066302228583813,
+      "val_loss": 0.06998932361602783
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.06290170623034966,
+      "val_loss": 0.0693204328417778
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.0595263663251651,
+      "val_loss": 0.06902093440294266
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.05609363633064483,
+      "val_loss": 0.06757081300020218
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.052548839108423416,
+      "val_loss": 0.06700839102268219
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.04888257180417598,
+      "val_loss": 0.06677545607089996
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.04527131522574076,
+      "val_loss": 0.06683673709630966
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.04173566896528236,
+      "val_loss": 0.06732001155614853
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.03783143353845164,
+      "val_loss": 0.06740865111351013
+    },
+    {
+      "epoch": 22,
+      "train_loss": 0.03466859989971862,
+      "val_loss": 0.06743354350328445
+    },
+    {
+      "epoch": 23,
+      "train_loss": 0.03135247914157121,
+      "val_loss": 0.06899826228618622
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.02837157717494295,
+      "val_loss": 0.06886818259954453
+    },
+    {
+      "epoch": 25,
+      "train_loss": 0.025604090614023838,
+      "val_loss": 0.07027234137058258
+    },
+    {
+      "epoch": 26,
+      "train_loss": 0.022911863480204277,
+      "val_loss": 0.07229405641555786
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.020538815708829844,
+      "val_loss": 0.07255342602729797
+    },
+    {
+      "epoch": 28,
+      "train_loss": 0.018373758008549568,
+      "val_loss": 0.07574336230754852
+    }
+  ],
+  "calibrator": {
+    "method": "sklearn.isotonic.IsotonicRegression",
+    "out_of_bounds": "clip",
+    "x_thresholds": [
+      0.0006616115570068359,
+      0.016395270824432373,
+      0.016588985919952393,
+      0.031059980392456055,
+      0.03198438882827759,
+      0.046885132789611816,
+      0.04866915941238403,
+      0.056104958057403564,
+      0.05616277456283569,
+      0.09746944904327393,
+      0.10242611169815063,
+      0.12088137865066528,
+      0.12459760904312134
+    ],
+    "y_thresholds": [
+      0.0,
+      0.0,
+      0.022727272727272728,
+      0.022727272727272728,
+      0.058823529411764705,
+      0.058823529411764705,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.25,
+      0.25,
+      0.3333333333333333,
+      0.3333333333333333,
+      1.0
+    ],
+    "x_min": 0.0006616115570068359,
+    "x_max": 0.12459760904312134
+  },
+  "f_rules": {
+    "F1": {
+      "rule": "F1_calibration",
+      "metric": "ECE",
+      "value": 0.01468798525673495,
+      "threshold": 0.08,
+      "passed": true,
+      "n_bins": 10
+    },
+    "F2": {
+      "rule": "F2_auc",
+      "metric": "AUC",
+      "value": 0.6668543845534995,
+      "ci_lower": 0.5223511665325824,
+      "ci_upper": 0.8177031375703941,
+      "baseline": 0.5,
+      "point_threshold": 0.57,
+      "ci_excludes_baseline": true,
+      "point_meets_threshold": true,
+      "passed": true,
+      "n_bootstrap": 1000
+    },
+    "F3": {
+      "rule": "F3_hazard_band",
+      "metric": "ci_width_on_mean_predicted_probability",
+      "value": 0.002825810171067701,
+      "ci_lower": 0.00316352920127751,
+      "ci_upper": 0.005989339372345211,
+      "point_estimate_mean_prob": 0.004409236965487274,
+      "threshold": 0.3,
+      "passed": true,
+      "n_bootstrap": 500
+    }
+  },
+  "baseline_comparison": {
+    "rule": "baseline_comparison",
+    "deephit_auc": 0.6668543845534995,
+    "baseline_auc": 0.7398230088495575,
+    "delta_auc": -0.072968624296058,
+    "deephit_brier": 0.018189051098499855,
+    "baseline_brier": 0.018805444123393675,
+    "delta_brier": -0.0006163930248938194,
+    "threshold": 0.03,
+    "auc_regression": true,
+    "brier_regression": false,
+    "passed": false,
+    "noise_band_disclosure": "0.03 threshold sits inside bootstrap-CI noise band at low n_pos_test (\u2248 0.12-0.15 expected width); locked as commitment mechanism, not power-justified gate."
+  },
+  "verdict": {
+    "verdict": "F5_FALLBACK",
+    "reason": "verdict gate regression vs Stage 1 LR baseline: AUC delta=-0.0730",
+    "next_step": "recipe re-enters queue for separate F5=2 walk"
+  }
+}

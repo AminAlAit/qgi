@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "purpose": "T12 Path B sensitivity-sweep config space (3×3×4 = 36 configurations). Kwame K-§2.5 pre-registration artifact per the 6-seat Majles convening 2026-05-15 (#691). Lands at qgi-data BEFORE any T12 chain runs against real data; no analyst-tunable sweep range after this commit.",
+  "convening": "6-seat Majles 2026-05-15: Priya #22 + Ji-Hoon #21 + Kwame #11 + Roshani #18 + Miriam #14 + Tariq #20",
+  "spec_amendment_pr": "AminAlAit/qgi-aws-tf#691",
+  "spec_under_amendment": {
+    "path": "docs/specs/internal/ops/cascade-track/phase-5-v0.2-path-b-architecture.md",
+    "amendment_section_refs": ["§1", "§2.1", "§2.4", "§2.5", "§3.1", "§5.2"],
+    "pre_t10_commit_sha": "ca77505",
+    "post_amendment_commit_sha_target": "PENDING — fills at docs-specs#TBD merge"
+  },
+  "empirical_anchor": {
+    "path": "qgi-data/reference/v0.2-anomaly-score-empirical-range.json",
+    "commit_sha": "1a4bff5",
+    "k_factor_signed_pooled": 5.72,
+    "k_factor_unsigned_pooled": 4.87,
+    "k_factor_cross_arm_pooled": 5.85,
+    "mu_empirical_pooled": 0.1676,
+    "sigma_empirical_pooled": 0.5257
+  },
+  "sweep_config_space": {
+    "description": "3 × 3 × 4 = 36 configurations. Cartesian product of the three axes below. T12 implementer runs each config and reports per-config posterior summary + diagnostics; deviation from baseline (center value of each axis) is the sensitivity check.",
+    "axes": {
+      "tau_arm_prior_scale": {
+        "values": [0.14, 0.29, 0.57],
+        "units": "anomaly_score units",
+        "baseline_value": 0.29,
+        "note": "Per Priya Move 1: original AUC-calibrated {0.025, 0.05, 0.10} multiplied by k=5.72 (signed pooled). Baseline 0.29 corresponds to §2.1 ratified prior Normal(0, 0.30). Rounded sweep values 0.14 / 0.29 / 0.57."
+      },
+      "half_cauchy_scale": {
+        "values": [0.025, 0.05, 0.10],
+        "units": "scale parameter (Gelman default; structurally scale-invariant)",
+        "baseline_value": 0.05,
+        "note": "UNCHANGED from T10 commit ca77505 §2.5. Ji-Hoon Move 1 round-2 ratified that HalfCauchy is operationally scale-invariant under the response-variable shift; the heavy tail accommodates empirical between-sector heterogeneity at the new scale without prior surgery."
+      },
+      "mu_center": {
+        "values": [0.168, 0.318, 0.468, 0.668],
+        "units": "anomaly_score units (additive offsets from mu_empirical = 0.168)",
+        "baseline_value": 0.168,
+        "scale_held_at": 0.263,
+        "note": "Per Roshani Move 2 + Ji-Hoon co-sign: was T10 {0.30, 0.40, 0.50, 0.53} AUC-mixture-derived. Replaced with additive offsets {0, +0.15, +0.30, +0.50} on mu_empirical. Endpoint 0.668 corresponds to 1.90 σ above mu_empirical — stresses prior at upper edge without leaving supported territory (Ji-Hoon Move 2 verification)."
+      }
+    },
+    "total_configurations": 36
+  },
+  "convergence_diagnostics_per_config": {
+    "r_hat_max_threshold": 1.01,
+    "n_eff_min_threshold": 400,
+    "divergence_pct_max_threshold": 0.001,
+    "e_bfmi_min_threshold": 0.3,
+    "treedepth_saturation_rate_max_threshold": 0.01,
+    "note": "All 5 diagnostics must PASS per config for the sweep to be reportable. Treedepth saturation rate is Ji-Hoon's non-blocking implementer rec from 2026-05-14 (now mandatory under 6-seat ratification 2026-05-15)."
+  },
+  "stability_criterion": {
+    "metric": "tau_arm[A] - tau_arm[D] posterior 94% HDI",
+    "criterion": "Qualitatively stable across all 36 configurations; specifically: §5.2.2 4-tier verdict (HARD/SOFT/PARTIAL/PASS) is unchanged across the 36 configurations.",
+    "amber_condition": "If the §5.2.2 verdict flips across configurations, T12 implementer reports the verdict-flip pattern as a QA-reviewable artefact alongside the headline posterior; the convening reads the full sweep table before consuming the headline verdict."
+  },
+  "pre_registration_gates": {
+    "ordering": "This JSON is the K-§2.5 SECOND commit on the trio's real-data feature branch per Kwame round-2 gate 2 (#691 Move 4). FIRST commit is the T10 amendment at docs-specs (#691). Subsequent commits: K-§2.5 (this file), F-5 amended (Path A v6.6 emit-per-cell, #692), F-1 (compute_diagnostics extension), F-2 (pip-freeze lockfile), F-3 (az.hdi rename), J-§3.1 (treedepth-saturation), smoke-test passes, then MCMC fires.",
+    "amendment_authority": "Amendment to this JSON requires a new Majles convening with Priya + Kwame + Ji-Hoon + Roshani + Miriam + Tariq present. No analyst-tunable knobs in the sweep configuration after this commit.",
+    "binding_clause": "This artifact is pre-registered per Kwame K-§2.5; T12 implementer cannot tune the sweep configuration during MCMC execution. Deviation from the 36-config grid escalates to T14 / #678 HARD-FALSIFY route per Kwame round-2 escalation rule."
+  },
+  "operational_stance": {
+    "a2f5db4_untouched": true,
+    "bcf656c_untouched": true,
+    "spec_amendment_scope": "Confined to T10 spec at docs-specs ca77505 + new §5.2 protocol; pre-reg spec a2f5db4 and charter bcf656c not touched (Protocol-5 honored absolutely)."
+  },
+  "generated_at": "2026-05-15"
+}

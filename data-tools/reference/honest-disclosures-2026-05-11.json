@@ -1,0 +1,213 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-05-11",
+  "purpose": "Structured extraction of Stage 5 buyer-disclosure paper Section 5 (honest disclosures + limitations + known issues + falsified-under-hybrid). Emitted as a separate ML-Opus track artifact (per Majles 2026-05-11 Q8: B) instead of having the frontend bake script parse the Stage 5 paper markdown, which would be fragile if paper format changes. Frontend bake script (qgi-aws-tf #643) consumes this artifact.",
+  "source_paper": "docs/specs/methodology/stage-5-buyer-disclosure-methodology-paper.md",
+  "ml_opus_track_commit": "TBD (Stage 5 paper + amendments as of 2026-05-11)",
+  "what_was_tested": [
+    {
+      "id": "test-1",
+      "label": "Out-of-time validation",
+      "description": "train ≤ 2021, test 2022-2025 (no future leakage)"
+    },
+    {
+      "id": "test-2",
+      "label": "Out-of-country generalization (LOCO)",
+      "description": "30-country held-out panel covering 4 regime types (OECD democracies, post-Soviet, MENA, Sub-Saharan)"
+    },
+    {
+      "id": "test-3",
+      "label": "Pre-registered methodology",
+      "description": "every architecture choice + threshold committed to git before next training run; degree-of-freedom inflation guarded by 4 layered pre-regs"
+    }
+  ],
+  "what_was_not_tested": [
+    {
+      "id": "gap-1",
+      "label": "Years beyond 2025",
+      "description": "the test window ends in 2025; predictions for 2026+ are extrapolations. Re-walks under additional years will refine LOCKs as test data accumulates."
+    },
+    {
+      "id": "gap-2",
+      "label": "Strong scientific validation across regimes we haven't sampled",
+      "description": "Caribbean states, Pacific islands, some Central Asian states are sparsely represented in the test panel."
+    },
+    {
+      "id": "gap-3",
+      "label": "Anchor regression suite vintage v3",
+      "description": "post-KI-2 amendment 2026-05-11, the v2 anchor battery has coverage for 5 of 13 LOCKed recipes (was 6 of 14; territorial_disputes' AHI = 1.0000 was an artifact and is no longer in the LOCKed set). 8 LOCKed recipes have no anchor cases (regression suite designed pre-Stage-5 recipe consolidation). Per-recipe AHI partitioning landed 2026-05-11 (Section 3.3); coverage-gap remediation = v3 anchor battery design, deferred to future Majles cycle (ticket #649)."
+    },
+    {
+      "id": "gap-4",
+      "label": "Comparison against alternative model classes",
+      "description": "D2 + D5 are the only candidates; F2 vs LightGBM-only or transformer comparison is deferred."
+    }
+  ],
+  "falsified_under_hybrid": [
+    {
+      "id": "ki-2-territorial_disputes",
+      "recipe_id": "territorial_disputes",
+      "date": "2026-05-11",
+      "amendment_id": "KI-2",
+      "majles_vote": "Option C carried 3-1 (Kwame, Ji-Hoon, Nasrin for C; Priya for B dissent logged)",
+      "dispositive_evidence": [
+        "D5 predictions degenerate: max 1.91e-6 across 768 test cells; both positives (China 2024, Ukraine 2022) at exactly 0.0",
+        "Per-recipe anchor AHI = 1.0000 is a measurement-method artifact, not a methodology strength — every country trivially falls in [0, 0.3] percentile expected band when predictions ≈ 0",
+        "In-sample F2 AUC 0.4974 [0.495, 0.499] is bootstrap noise on near-constant output, not meaningful discrimination",
+        "LOCO-AUC 0.6780 rests on n_pos_LOCO = 2 — statistically fragile"
+      ],
+      "methodology_integrity_statement": "The FALSIFICATION is not a downgrade because the recipe is hard — it is a falsification because the measurement methodology used cannot distinguish model skill from arithmetic artifacts on this recipe under D5.",
+      "buyer_disclosure_implication": "territorial_disputes is NOT part of the production candidate set; not in dispatch.assignments; appears only in dispatch.falsified list."
+    }
+  ],
+  "recipes_with_known_issues": [
+    {
+      "recipe_id": "political_corruption",
+      "status": "NOT LOCKED (FALSIFIED)",
+      "issue": "Democratic-regime corruption learned from 42% South Africa training concentration → systematic LOCO inversion on authoritarian states. Diagnosed in political-corruption-loco-diagnostic.md.",
+      "mitigation": "Defer from Stage 5 disclosure entirely until training corpus rebalanced."
+    },
+    {
+      "recipe_id": "energy_policy",
+      "status": "STRONG / ADVISORY-ONLY",
+      "issue": "n_pos_train = 3 (China, Mexico, South Africa one each). STRONG tier rests on noise.",
+      "mitigation": "Curation issue #633 commissioned; re-walk after corpus expansion."
+    },
+    {
+      "recipe_id": "humanitarian_crisis",
+      "status": "MODERATE",
+      "issue": "Venezuela = 71% of training positives. Catastrophic D5 regression (-0.231 LOCO) confirmed the regime-fingerprint risk. Currently D2-pinned.",
+      "mitigation": "Disclose top-1 country concentration; advise composite-signal use; investigate authoritarian-regime humanitarian-crisis events for corpus rebalancing (#638)."
+    },
+    {
+      "recipe_id": "terrorist_attack",
+      "status": "STRONG / ADVISORY-ONLY",
+      "issue": "n_pos_LOCO = 1; LOCO statistic noise-dominated. Tier label mathematically met but discrimination evidence is fragile.",
+      "mitigation": "F-H-3 ADVISORY-ONLY restriction explicit; cannot anchor standalone pricing; composite-signal use only."
+    },
+    {
+      "recipe_id": "epidemic_and_pandemic",
+      "status": "STRONG / ADVISORY-ONLY / f_rule_anomaly",
+      "issue": "n_pos_LOCO = 1; LOCO 0.8824 genuine but in-sample F2 AUC 0.5627 fails. Cross-Opus flag: 95% base rate makes recipe mechanically unscorable per cascade-Opus v0.1a findings.",
+      "mitigation": "F-H-3 ADVISORY-ONLY restriction + f_rule_anomaly flag. Combined-disclosure question (3 strikes: f_rule_anomaly + 95% base rate + n_pos_LOCO=1) flagged for next ML Majles agenda (Kwame's lane)."
+    },
+    {
+      "recipe_id": "human_rights_violation",
+      "status": "STRONG / ADVISORY-ONLY",
+      "issue": "n_pos_LOCO = 1; LOCO 0.9244 is the largest D5 lift but rests on single observation.",
+      "mitigation": "F-H-3 ADVISORY-ONLY restriction explicit."
+    },
+    {
+      "recipe_id": "foreign_intervention",
+      "status": "MODERATE",
+      "issue": "Iran 28.6% training concentration (caution-level). Catastrophic D5 regression (-0.225 LOCO); D2-pinned.",
+      "mitigation": "Disclose top-1 country; composite-signal use recommended."
+    }
+  ],
+  "advisory_only_recipes": [
+    "terrorist_attack",
+    "energy_policy",
+    "epidemic_and_pandemic",
+    "human_rights_violation"
+  ],
+  "advisory_only_disclosure_language": {
+    "binding_text": "Tier: {STRONG/MODERATE} under {D2/D5} (LOCO {value}). Actuarial use restriction: LOCO statistic is computed on n_pos_loco = 1 (sole positive in the LOCO partition). This recipe is classified ADVISORY-ONLY for standalone pricing until a repeat LOCO walk confirms the tier on n_pos_loco ≥ 2. May be used as a supporting signal in multi-recipe composite scores, but SHALL NOT be the sole basis for a political-risk pricing recommendation.",
+    "rationale": "Lloyd's RDS guidance, ICA framework, and Solvency II internal model validation each require that discrimination metrics for pricing-grade use rest on multiple observations. A discrimination metric computed on a single event is a point estimate with an unbounded confidence interval — not a validated statistic. Presenting these as STRONG without an ADVISORY-ONLY flag is a material misrepresentation risk."
+  },
+  "f_rule_anomaly_recipes": [
+    {
+      "recipe_id": "epidemic_and_pandemic",
+      "anomaly": "In-sample F2 AUC 0.5627 [0.111, 1.000] under D5 fails the ≥ 0.57 threshold; CI does not exclude 0.5. LOCO 0.8824 is genuine.",
+      "disclosure": "Disclosed via inherited ADVISORY-ONLY restriction (F-H-3 n_pos_loco = 1). Combined-disclosure stack flagged for next ML Majles."
+    }
+  ],
+  "per_recipe_ahi_coverage": {
+    "total_locked_recipes": 13,
+    "with_anchor_coverage": 5,
+    "without_anchor_coverage": 8,
+    "uncovered_recipes": [
+      "bilateral_treaty",
+      "elections_and_voting",
+      "energy_policy",
+      "epidemic_and_pandemic",
+      "government_formation",
+      "human_rights_violation",
+      "multilateral_agreement",
+      "peacekeeping_and_peace_process"
+    ],
+    "covered_recipes": [
+      {"recipe_id": "civil_war_and_insurgency", "anchor_ahi": 0.1052, "n_evaluable": 26},
+      {"recipe_id": "foreign_intervention", "anchor_ahi": 0.6138, "n_evaluable": 6},
+      {"recipe_id": "terrorist_attack", "anchor_ahi": 0.4322, "n_evaluable": 7},
+      {"recipe_id": "humanitarian_crisis", "anchor_ahi": 0.2521, "n_evaluable": 10},
+      {"recipe_id": "mass_protest", "anchor_ahi": 0.2385, "n_evaluable": 3}
+    ],
+    "disclosure_for_uncovered": "Per-recipe AHI: Not measured. No anchor cases in the v2 regression suite for this recipe (recipe-set vintage mismatch; suite designed pre-Stage-5 recipe consolidation). Remediation = anchor battery v3, deferred to future Majles cycle (ticket #649).",
+    "remediation_ticket": "qgi-aws-tf #649"
+  },
+  "diagnostic_deep_dives": [
+    {
+      "title": "political_corruption South Africa regime-fingerprint pattern",
+      "path": "docs/specs/internal/ops/ml-track/results/political-corruption-loco-diagnostic.md"
+    },
+    {
+      "title": "terrorist_attack n_pos=1 noise pattern",
+      "path": "docs/specs/internal/ops/ml-track/results/terrorist-attack-d5-regression-diagnostic.md"
+    },
+    {
+      "title": "Cross-recipe training-positive concentration audit",
+      "path": "docs/specs/internal/ops/ml-track/results/skewed-training-positive-audit.md"
+    },
+    {
+      "title": "Per-recipe AHI partitioning analysis",
+      "path": "docs/specs/internal/ops/ml-track/results/d5-per-recipe-anchor-ahi-analysis-2026-05-11.md"
+    }
+  ],
+  "cross_opus_corroboration": {
+    "civil_war_and_insurgency": {
+      "cascade_v0_1a_auc": 0.69,
+      "cascade_n": 89,
+      "ml_hybrid_loco_auc": 0.7686,
+      "ml_n_pos_loco": 7,
+      "interpretation": "Independent corroboration across two methodologies. Worth a joint cross-Opus Majles post-cascade-v0.2."
+    },
+    "foreign_intervention": {
+      "cascade_v0_1a_auc": 0.73,
+      "ml_hybrid_loco_auc": 0.6330,
+      "ml_n_pos_loco": 6,
+      "interpretation": "Same family of corroborating signal."
+    },
+    "epidemic_and_pandemic_concern": {
+      "cascade_observation": "Mechanically unscorable at 95% base rate (cascade v0.1a per-recipe diagnostic).",
+      "ml_observations": "f_rule_anomaly + ADVISORY-ONLY + n_pos_LOCO=1",
+      "interpretation": "Three independent concerns; flagged for next ML Majles agenda (Kwame's lane: should the LOCKed STRONG status survive?)"
+    }
+  },
+  "majles_amendments_2026_05_11": [
+    {
+      "amendment_id": "KI-1",
+      "name": "F-H-3 wording amendment",
+      "vote": "4-0 approve",
+      "change": "n_pos_total < 3 → n_pos_loco == 1 (sole positive in LOCO partition)",
+      "behavior_change": "None (textual cleanup only)"
+    },
+    {
+      "amendment_id": "KI-2",
+      "name": "FALSIFY territorial_disputes under hybrid",
+      "vote": "Option C carried 3-1 (Priya dissent for Option B logged)",
+      "change": "Hybrid LOCKed count 14 → 13; territorial_disputes moved to falsified list"
+    },
+    {
+      "amendment_id": "KI-4",
+      "name": "Sign-convention mismatch resolved (cascade-canonical)",
+      "vote": "4-0 ratification of cascade-Opus recommendation",
+      "change": "ML-side catalog flipped 28 signed entries to match cascade-polarity ('+1' = protective factor)"
+    }
+  ],
+  "consumed_by_frontend": {
+    "bake_script_ticket": "qgi-aws-tf #643",
+    "consumer_path": "qgi-ml/scripts/bake_ml_recipes_for_frontend.py",
+    "emits": "qgi-frontend/data/ml-recipe-stack.json",
+    "schema_version": "1.0"
+  }
+}

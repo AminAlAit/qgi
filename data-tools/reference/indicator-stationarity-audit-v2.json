@@ -1,0 +1,1002 @@
+{
+  "schema_version": 1,
+  "generator": "qgi-ml/scripts/run_i5_substrate_audit.py",
+  "test_method": "per_country_adf_fallback",
+  "test_method_note": "Per-country ADF (statsmodels.tsa.stattools.adfuller) with majority-vote aggregation. Pesaran CIPS not used in this run; see Stage B QA consult for the methodology choice (panel test vs per-country aggregation).",
+  "decision_rule": {
+    "I(0)_threshold_frac_rejected_at_level": 0.7,
+    "I(1)_threshold_frac_rejected_at_diff": 0.7,
+    "I(2)_threshold_frac_rejected_at_diff": 0.3,
+    "p_reject": 0.05
+  },
+  "indicators_audited": 109,
+  "summary_by_classification": {
+    "I(1)": 84,
+    "ambiguous": 23,
+    "I(0)": 1,
+    "I(2)_or_higher": 1
+  },
+  "results": {
+    "AG.PRD.FOOD.XD": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 195,
+      "n_countries_tested_at_diff": 193,
+      "n_countries_total": 195,
+      "frac_rejected_at_level": 0.0615,
+      "frac_rejected_at_diff": 0.8083,
+      "test": "per_country_adf"
+    },
+    "BM.KLT.DINV.WD.GD.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 176,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 196,
+      "frac_rejected_at_level": 0.5625,
+      "frac_rejected_at_diff": 0.8571,
+      "test": "per_country_adf"
+    },
+    "BM.TRF.PWKR.CD.DT": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 201,
+      "n_countries_tested_at_diff": 201,
+      "n_countries_total": 201,
+      "frac_rejected_at_level": 0.1244,
+      "frac_rejected_at_diff": 0.7711,
+      "test": "per_country_adf"
+    },
+    "BN.CAB.XOKA.GD.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 187,
+      "n_countries_tested_at_diff": 185,
+      "n_countries_total": 199,
+      "frac_rejected_at_level": 0.4332,
+      "frac_rejected_at_diff": 0.9135,
+      "test": "per_country_adf"
+    },
+    "BX.KLT.DINV.WD.GD.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 195,
+      "n_countries_tested_at_diff": 195,
+      "n_countries_total": 201,
+      "frac_rejected_at_level": 0.4513,
+      "frac_rejected_at_diff": 0.9128,
+      "test": "per_country_adf"
+    },
+    "CC.EST": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 202,
+      "n_countries_tested_at_diff": 202,
+      "n_countries_total": 204,
+      "frac_rejected_at_level": 0.2129,
+      "frac_rejected_at_diff": 0.7723,
+      "test": "per_country_adf"
+    },
+    "DT.DOD.DECT.GN.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 118,
+      "n_countries_tested_at_diff": 117,
+      "n_countries_total": 120,
+      "frac_rejected_at_level": 0.1102,
+      "frac_rejected_at_diff": 0.8803,
+      "test": "per_country_adf"
+    },
+    "DT.TDS.DECT.EX.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 114,
+      "n_countries_tested_at_diff": 113,
+      "n_countries_total": 120,
+      "frac_rejected_at_level": 0.2544,
+      "frac_rejected_at_diff": 0.8496,
+      "test": "per_country_adf"
+    },
+    "EG.ELC.ACCS.RU.ZS": {
+      "classification": "ambiguous",
+      "n_countries_tested_at_level": 206,
+      "n_countries_tested_at_diff": 205,
+      "n_countries_total": 212,
+      "frac_rejected_at_level": 0.1796,
+      "frac_rejected_at_diff": 0.5854,
+      "test": "per_country_adf"
+    },
+    "EG.ELC.ACCS.UR.ZS": {
+      "classification": "ambiguous",
+      "n_countries_tested_at_level": 211,
+      "n_countries_tested_at_diff": 211,
+      "n_countries_total": 212,
+      "frac_rejected_at_level": 0.1896,
+      "frac_rejected_at_diff": 0.6351,
+      "test": "per_country_adf"
+    },
+    "EG.IMP.CONS.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 139,
+      "n_countries_tested_at_diff": 137,
+      "n_countries_total": 145,
+      "frac_rejected_at_level": 0.1727,
+      "frac_rejected_at_diff": 0.8394,
+      "test": "per_country_adf"
+    },
+    "EN.GHG.CO2.PC.CE.AR5": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 203,
+      "n_countries_tested_at_diff": 203,
+      "n_countries_total": 203,
+      "frac_rejected_at_level": 0.0887,
+      "frac_rejected_at_diff": 0.8867,
+      "test": "per_country_adf"
+    },
+    "FA-01": {
+      "classification": "ambiguous",
+      "n_countries_tested_at_level": 163,
+      "n_countries_tested_at_diff": 163,
+      "n_countries_total": 166,
+      "frac_rejected_at_level": 0.3129,
+      "frac_rejected_at_diff": 0.5706,
+      "test": "per_country_adf"
+    },
+    "FA-02": {
+      "classification": "ambiguous",
+      "n_countries_tested_at_level": 133,
+      "n_countries_tested_at_diff": 133,
+      "n_countries_total": 135,
+      "frac_rejected_at_level": 0.3459,
+      "frac_rejected_at_diff": 0.5639,
+      "test": "per_country_adf"
+    },
+    "FA-03": {
+      "classification": "ambiguous",
+      "n_countries_tested_at_level": 157,
+      "n_countries_tested_at_diff": 157,
+      "n_countries_total": 176,
+      "frac_rejected_at_level": 0.4013,
+      "frac_rejected_at_diff": 0.4713,
+      "test": "per_country_adf"
+    },
+    "FA-04": {
+      "classification": "ambiguous",
+      "n_countries_tested_at_level": 103,
+      "n_countries_tested_at_diff": 103,
+      "n_countries_total": 103,
+      "frac_rejected_at_level": 0.1068,
+      "frac_rejected_at_diff": 0.5049,
+      "test": "per_country_adf"
+    },
+    "FA-05": {
+      "classification": "ambiguous",
+      "n_countries_tested_at_level": 151,
+      "n_countries_tested_at_diff": 151,
+      "n_countries_total": 152,
+      "frac_rejected_at_level": 0.0927,
+      "frac_rejected_at_diff": 0.5695,
+      "test": "per_country_adf"
+    },
+    "FB.AST.NPER.ZS": {
+      "classification": "ambiguous",
+      "n_countries_tested_at_level": 116,
+      "n_countries_tested_at_diff": 109,
+      "n_countries_total": 149,
+      "frac_rejected_at_level": 0.2328,
+      "frac_rejected_at_diff": 0.4954,
+      "test": "per_country_adf"
+    },
+    "FI.RES.TOTL.CD": {
+      "classification": "ambiguous",
+      "n_countries_tested_at_level": 178,
+      "n_countries_tested_at_diff": 176,
+      "n_countries_total": 181,
+      "frac_rejected_at_level": 0.0281,
+      "frac_rejected_at_diff": 0.5909,
+      "test": "per_country_adf"
+    },
+    "FI.RES.TOTL.MO": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 168,
+      "n_countries_tested_at_diff": 168,
+      "n_countries_total": 178,
+      "frac_rejected_at_level": 0.2024,
+      "frac_rejected_at_diff": 0.881,
+      "test": "per_country_adf"
+    },
+    "FM.LBL.BMNY.GD.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 164,
+      "n_countries_tested_at_diff": 163,
+      "n_countries_total": 165,
+      "frac_rejected_at_level": 0.0732,
+      "frac_rejected_at_diff": 0.9264,
+      "test": "per_country_adf"
+    },
+    "FP.CPI.TOTL.ZG": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 185,
+      "n_countries_tested_at_diff": 185,
+      "n_countries_total": 192,
+      "frac_rejected_at_level": 0.5351,
+      "frac_rejected_at_diff": 0.8757,
+      "test": "per_country_adf"
+    },
+    "FR.INR.LEND": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 132,
+      "n_countries_tested_at_diff": 127,
+      "n_countries_total": 147,
+      "frac_rejected_at_level": 0.1742,
+      "frac_rejected_at_diff": 0.7717,
+      "test": "per_country_adf"
+    },
+    "GC.DOD.TOTL.GD.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 54,
+      "n_countries_tested_at_diff": 51,
+      "n_countries_total": 109,
+      "frac_rejected_at_level": 0.2222,
+      "frac_rejected_at_diff": 0.7059,
+      "test": "per_country_adf"
+    },
+    "GC.REV.XGRT.GD.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 136,
+      "n_countries_tested_at_diff": 134,
+      "n_countries_total": 162,
+      "frac_rejected_at_level": 0.2647,
+      "frac_rejected_at_diff": 0.806,
+      "test": "per_country_adf"
+    },
+    "GC.TAX.TOTL.GD.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 136,
+      "n_countries_tested_at_diff": 134,
+      "n_countries_total": 161,
+      "frac_rejected_at_level": 0.3015,
+      "frac_rejected_at_diff": 0.8358,
+      "test": "per_country_adf"
+    },
+    "GC.XPN.TOTL.GD.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 135,
+      "n_countries_tested_at_diff": 133,
+      "n_countries_total": 161,
+      "frac_rejected_at_level": 0.1926,
+      "frac_rejected_at_diff": 0.7669,
+      "test": "per_country_adf"
+    },
+    "GE.EST": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 202,
+      "n_countries_tested_at_diff": 202,
+      "n_countries_total": 204,
+      "frac_rejected_at_level": 0.1683,
+      "frac_rejected_at_diff": 0.802,
+      "test": "per_country_adf"
+    },
+    "IT.CEL.SETS.P2": {
+      "classification": "ambiguous",
+      "n_countries_tested_at_level": 212,
+      "n_countries_tested_at_diff": 212,
+      "n_countries_total": 213,
+      "frac_rejected_at_level": 0.0472,
+      "frac_rejected_at_diff": 0.467,
+      "test": "per_country_adf"
+    },
+    "IT.NET.USER.ZS": {
+      "classification": "ambiguous",
+      "n_countries_tested_at_level": 203,
+      "n_countries_tested_at_diff": 203,
+      "n_countries_total": 212,
+      "frac_rejected_at_level": 0.0788,
+      "frac_rejected_at_diff": 0.4236,
+      "test": "per_country_adf"
+    },
+    "MS.MIL.MPRT.KD": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 151,
+      "n_countries_tested_at_diff": 148,
+      "n_countries_total": 186,
+      "frac_rejected_at_level": 0.5695,
+      "frac_rejected_at_diff": 0.8851,
+      "test": "per_country_adf"
+    },
+    "MS.MIL.TOTL.TF.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 166,
+      "n_countries_tested_at_diff": 165,
+      "n_countries_total": 172,
+      "frac_rejected_at_level": 0.2892,
+      "frac_rejected_at_diff": 0.7758,
+      "test": "per_country_adf"
+    },
+    "MS.MIL.XPND.GD.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 158,
+      "n_countries_tested_at_diff": 158,
+      "n_countries_total": 163,
+      "frac_rejected_at_level": 0.2532,
+      "frac_rejected_at_diff": 0.8101,
+      "test": "per_country_adf"
+    },
+    "MS.MIL.XPRT.KD": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 51,
+      "n_countries_tested_at_diff": 51,
+      "n_countries_total": 124,
+      "frac_rejected_at_level": 0.451,
+      "frac_rejected_at_diff": 0.8431,
+      "test": "per_country_adf"
+    },
+    "NE.CON.GOVT.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 185,
+      "frac_rejected_at_level": 0.2457,
+      "frac_rejected_at_diff": 0.9086,
+      "test": "per_country_adf"
+    },
+    "NE.CON.PRVT.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 178,
+      "n_countries_tested_at_diff": 178,
+      "n_countries_total": 187,
+      "frac_rejected_at_level": 0.1685,
+      "frac_rejected_at_diff": 0.8989,
+      "test": "per_country_adf"
+    },
+    "NE.EXP.GNFS.CD": {
+      "classification": "ambiguous",
+      "n_countries_tested_at_level": 180,
+      "n_countries_tested_at_diff": 180,
+      "n_countries_total": 191,
+      "frac_rejected_at_level": 0.0333,
+      "frac_rejected_at_diff": 0.5111,
+      "test": "per_country_adf"
+    },
+    "NE.EXP.GNFS.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 179,
+      "n_countries_tested_at_diff": 179,
+      "n_countries_total": 191,
+      "frac_rejected_at_level": 0.1453,
+      "frac_rejected_at_diff": 0.9162,
+      "test": "per_country_adf"
+    },
+    "NE.GDI.TOTL.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 172,
+      "n_countries_tested_at_diff": 172,
+      "n_countries_total": 184,
+      "frac_rejected_at_level": 0.3372,
+      "frac_rejected_at_diff": 0.9128,
+      "test": "per_country_adf"
+    },
+    "NE.IMP.GNFS.CD": {
+      "classification": "ambiguous",
+      "n_countries_tested_at_level": 180,
+      "n_countries_tested_at_diff": 180,
+      "n_countries_total": 191,
+      "frac_rejected_at_level": 0.0278,
+      "frac_rejected_at_diff": 0.6889,
+      "test": "per_country_adf"
+    },
+    "NE.IMP.GNFS.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 179,
+      "n_countries_tested_at_diff": 179,
+      "n_countries_total": 191,
+      "frac_rejected_at_level": 0.1732,
+      "frac_rejected_at_diff": 0.905,
+      "test": "per_country_adf"
+    },
+    "NV.AGR.TOTL.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 199,
+      "n_countries_tested_at_diff": 197,
+      "n_countries_total": 204,
+      "frac_rejected_at_level": 0.2764,
+      "frac_rejected_at_diff": 0.7868,
+      "test": "per_country_adf"
+    },
+    "NV.IND.MANF.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 195,
+      "n_countries_tested_at_diff": 191,
+      "n_countries_total": 201,
+      "frac_rejected_at_level": 0.2,
+      "frac_rejected_at_diff": 0.8377,
+      "test": "per_country_adf"
+    },
+    "NV.IND.TOTL.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 202,
+      "n_countries_tested_at_diff": 200,
+      "n_countries_total": 206,
+      "frac_rejected_at_level": 0.198,
+      "frac_rejected_at_diff": 0.87,
+      "test": "per_country_adf"
+    },
+    "NV.SRV.TOTL.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 199,
+      "n_countries_tested_at_diff": 197,
+      "n_countries_total": 203,
+      "frac_rejected_at_level": 0.1809,
+      "frac_rejected_at_diff": 0.8782,
+      "test": "per_country_adf"
+    },
+    "NY.GDP.DEFL.KD.ZG": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 209,
+      "n_countries_tested_at_diff": 209,
+      "n_countries_total": 211,
+      "frac_rejected_at_level": 0.6507,
+      "frac_rejected_at_diff": 0.9426,
+      "test": "per_country_adf"
+    },
+    "NY.GDP.MKTP.CD": {
+      "classification": "ambiguous",
+      "n_countries_tested_at_level": 210,
+      "n_countries_tested_at_diff": 210,
+      "n_countries_total": 212,
+      "frac_rejected_at_level": 0.019,
+      "frac_rejected_at_diff": 0.5857,
+      "test": "per_country_adf"
+    },
+    "NY.GDP.MKTP.KD": {
+      "classification": "ambiguous",
+      "n_countries_tested_at_level": 207,
+      "n_countries_tested_at_diff": 207,
+      "n_countries_total": 211,
+      "frac_rejected_at_level": 0.0386,
+      "frac_rejected_at_diff": 0.628,
+      "test": "per_country_adf"
+    },
+    "NY.GDP.MKTP.KD.ZG": {
+      "classification": "I(0)",
+      "n_countries_tested_at_level": 209,
+      "n_countries_tested_at_diff": 209,
+      "n_countries_total": 212,
+      "frac_rejected_at_level": 0.8182,
+      "frac_rejected_at_diff": 0.9713,
+      "test": "per_country_adf"
+    },
+    "NY.GDP.PCAP.CD": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 210,
+      "n_countries_tested_at_diff": 210,
+      "n_countries_total": 212,
+      "frac_rejected_at_level": 0.0143,
+      "frac_rejected_at_diff": 0.7571,
+      "test": "per_country_adf"
+    },
+    "NY.GNP.PCAP.CD": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 201,
+      "n_countries_tested_at_diff": 201,
+      "n_countries_total": 206,
+      "frac_rejected_at_level": 0.01,
+      "frac_rejected_at_diff": 0.7463,
+      "test": "per_country_adf"
+    },
+    "PV.EST": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 204,
+      "n_countries_tested_at_diff": 204,
+      "n_countries_total": 204,
+      "frac_rejected_at_level": 0.2647,
+      "frac_rejected_at_diff": 0.7549,
+      "test": "per_country_adf"
+    },
+    "RL.EST": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 204,
+      "n_countries_tested_at_diff": 204,
+      "n_countries_total": 204,
+      "frac_rejected_at_level": 0.1863,
+      "frac_rejected_at_diff": 0.799,
+      "test": "per_country_adf"
+    },
+    "RQ.EST": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 202,
+      "n_countries_tested_at_diff": 202,
+      "n_countries_total": 204,
+      "frac_rejected_at_level": 0.1683,
+      "frac_rejected_at_diff": 0.7574,
+      "test": "per_country_adf"
+    },
+    "SE.PRM.ENRR": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 195,
+      "n_countries_tested_at_diff": 195,
+      "n_countries_total": 209,
+      "frac_rejected_at_level": 0.2103,
+      "frac_rejected_at_diff": 0.7744,
+      "test": "per_country_adf"
+    },
+    "SH.DYN.MORT": {
+      "classification": "ambiguous",
+      "n_countries_tested_at_level": 195,
+      "n_countries_tested_at_diff": 195,
+      "n_countries_total": 195,
+      "frac_rejected_at_level": 0.4051,
+      "frac_rejected_at_diff": 0.4051,
+      "test": "per_country_adf"
+    },
+    "SI.POV.GINI": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 73,
+      "n_countries_tested_at_diff": 72,
+      "n_countries_total": 170,
+      "frac_rejected_at_level": 0.1507,
+      "frac_rejected_at_diff": 0.7639,
+      "test": "per_country_adf"
+    },
+    "SL.EMP.TOTL.SP.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 186,
+      "n_countries_tested_at_diff": 186,
+      "n_countries_total": 186,
+      "frac_rejected_at_level": 0.129,
+      "frac_rejected_at_diff": 0.8011,
+      "test": "per_country_adf"
+    },
+    "SL.TLF.CACT.FE.ZS": {
+      "classification": "ambiguous",
+      "n_countries_tested_at_level": 186,
+      "n_countries_tested_at_diff": 186,
+      "n_countries_total": 186,
+      "frac_rejected_at_level": 0.1559,
+      "frac_rejected_at_diff": 0.6774,
+      "test": "per_country_adf"
+    },
+    "SL.UEM.1524.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 186,
+      "n_countries_tested_at_diff": 186,
+      "n_countries_total": 186,
+      "frac_rejected_at_level": 0.1667,
+      "frac_rejected_at_diff": 0.8065,
+      "test": "per_country_adf"
+    },
+    "SL.UEM.TOTL.ZS": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 186,
+      "n_countries_tested_at_diff": 186,
+      "n_countries_total": 186,
+      "frac_rejected_at_level": 0.1935,
+      "frac_rejected_at_diff": 0.8387,
+      "test": "per_country_adf"
+    },
+    "SM.POP.NETM": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 215,
+      "n_countries_tested_at_diff": 215,
+      "n_countries_total": 215,
+      "frac_rejected_at_level": 0.3535,
+      "frac_rejected_at_diff": 0.9395,
+      "test": "per_country_adf"
+    },
+    "SM.POP.RHCR.EO": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 187,
+      "n_countries_tested_at_diff": 187,
+      "n_countries_total": 201,
+      "frac_rejected_at_level": 0.2353,
+      "frac_rejected_at_diff": 0.7166,
+      "test": "per_country_adf"
+    },
+    "SP.DYN.LE00.IN": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 215,
+      "n_countries_tested_at_diff": 215,
+      "n_countries_total": 215,
+      "frac_rejected_at_level": 0.2,
+      "frac_rejected_at_diff": 0.7256,
+      "test": "per_country_adf"
+    },
+    "SP.DYN.TFRT.IN": {
+      "classification": "ambiguous",
+      "n_countries_tested_at_level": 215,
+      "n_countries_tested_at_diff": 215,
+      "n_countries_total": 215,
+      "frac_rejected_at_level": 0.2558,
+      "frac_rejected_at_diff": 0.4186,
+      "test": "per_country_adf"
+    },
+    "SP.POP.TOTL": {
+      "classification": "I(2)_or_higher",
+      "n_countries_tested_at_level": 215,
+      "n_countries_tested_at_diff": 215,
+      "n_countries_total": 215,
+      "frac_rejected_at_level": 0.0977,
+      "frac_rejected_at_diff": 0.186,
+      "test": "per_country_adf"
+    },
+    "TX.VAL.TECH.MF.ZS": {
+      "classification": "ambiguous",
+      "n_countries_tested_at_level": 141,
+      "n_countries_tested_at_diff": 134,
+      "n_countries_total": 186,
+      "frac_rejected_at_level": 0.2482,
+      "frac_rejected_at_diff": 0.5672,
+      "test": "per_country_adf"
+    },
+    "VA.EST": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 203,
+      "n_countries_tested_at_diff": 202,
+      "n_countries_total": 204,
+      "frac_rejected_at_level": 0.2118,
+      "frac_rejected_at_diff": 0.7376,
+      "test": "per_country_adf"
+    },
+    "VC.BTL.DETH": {
+      "classification": "ambiguous",
+      "n_countries_tested_at_level": 38,
+      "n_countries_tested_at_diff": 38,
+      "n_countries_total": 109,
+      "frac_rejected_at_level": 0.3947,
+      "frac_rejected_at_diff": 0.6053,
+      "test": "per_country_adf"
+    },
+    "VC.IDP.NWDS": {
+      "classification": "ambiguous",
+      "n_countries_tested_at_level": 76,
+      "n_countries_tested_at_diff": 66,
+      "n_countries_total": 197,
+      "frac_rejected_at_level": 0.3816,
+      "frac_rejected_at_diff": 0.6364,
+      "test": "per_country_adf"
+    },
+    "v2cacamps": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.0514,
+      "frac_rejected_at_diff": 0.9486,
+      "test": "per_country_adf"
+    },
+    "v2clkill": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.1543,
+      "frac_rejected_at_diff": 0.9371,
+      "test": "per_country_adf"
+    },
+    "v2cltort": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.1029,
+      "frac_rejected_at_diff": 0.9657,
+      "test": "per_country_adf"
+    },
+    "v2cseeorgs": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.08,
+      "frac_rejected_at_diff": 0.96,
+      "test": "per_country_adf"
+    },
+    "v2csprtcpt": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.0686,
+      "frac_rejected_at_diff": 0.96,
+      "test": "per_country_adf"
+    },
+    "v2csreprss": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.12,
+      "frac_rejected_at_diff": 0.96,
+      "test": "per_country_adf"
+    },
+    "v2elintmon": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 132,
+      "n_countries_tested_at_diff": 124,
+      "n_countries_total": 171,
+      "frac_rejected_at_level": 0.197,
+      "frac_rejected_at_diff": 0.7823,
+      "test": "per_country_adf"
+    },
+    "v2ex_hosw": {
+      "classification": "ambiguous",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.1829,
+      "frac_rejected_at_diff": 0.6686,
+      "test": "per_country_adf"
+    },
+    "v2exaphogp": {
+      "classification": "ambiguous",
+      "n_countries_tested_at_level": 119,
+      "n_countries_tested_at_diff": 118,
+      "n_countries_total": 139,
+      "frac_rejected_at_level": 0.1008,
+      "frac_rejected_at_diff": 0.5254,
+      "test": "per_country_adf"
+    },
+    "v2excrptps": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.1086,
+      "frac_rejected_at_diff": 0.9257,
+      "test": "per_country_adf"
+    },
+    "v2exl_legitlead": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.08,
+      "frac_rejected_at_diff": 0.96,
+      "test": "per_country_adf"
+    },
+    "v2exremhog": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 136,
+      "n_countries_tested_at_diff": 134,
+      "n_countries_total": 154,
+      "frac_rejected_at_level": 0.1912,
+      "frac_rejected_at_diff": 0.806,
+      "test": "per_country_adf"
+    },
+    "v2jureform": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.3257,
+      "frac_rejected_at_diff": 0.9771,
+      "test": "per_country_adf"
+    },
+    "v2lgbicam": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.2286,
+      "frac_rejected_at_diff": 0.8971,
+      "test": "per_country_adf"
+    },
+    "v2lgqstexp": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.1429,
+      "frac_rejected_at_diff": 0.88,
+      "test": "per_country_adf"
+    },
+    "v2mecenefm": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.1086,
+      "frac_rejected_at_diff": 0.9429,
+      "test": "per_country_adf"
+    },
+    "v2pepwrgen": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.04,
+      "frac_rejected_at_diff": 0.9086,
+      "test": "per_country_adf"
+    },
+    "v2pepwrort": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.0686,
+      "frac_rejected_at_diff": 0.8514,
+      "test": "per_country_adf"
+    },
+    "v2pepwrses": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.0686,
+      "frac_rejected_at_diff": 0.9314,
+      "test": "per_country_adf"
+    },
+    "v2pepwrsoc": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.08,
+      "frac_rejected_at_diff": 0.9371,
+      "test": "per_country_adf"
+    },
+    "v2psprlnks": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.0343,
+      "frac_rejected_at_diff": 0.9314,
+      "test": "per_country_adf"
+    },
+    "v2stfisccap": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.1429,
+      "frac_rejected_at_diff": 0.9029,
+      "test": "per_country_adf"
+    },
+    "v2svdomaut": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.1657,
+      "frac_rejected_at_diff": 0.9314,
+      "test": "per_country_adf"
+    },
+    "v2x_clphy": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.1143,
+      "frac_rejected_at_diff": 0.9486,
+      "test": "per_country_adf"
+    },
+    "v2x_clpol": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.0629,
+      "frac_rejected_at_diff": 0.96,
+      "test": "per_country_adf"
+    },
+    "v2x_clpriv": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.0629,
+      "frac_rejected_at_diff": 0.9371,
+      "test": "per_country_adf"
+    },
+    "v2x_corr": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.1257,
+      "frac_rejected_at_diff": 0.9429,
+      "test": "per_country_adf"
+    },
+    "v2x_freexp_altinf": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.0743,
+      "frac_rejected_at_diff": 0.9486,
+      "test": "per_country_adf"
+    },
+    "v2x_gender": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.0686,
+      "frac_rejected_at_diff": 0.9429,
+      "test": "per_country_adf"
+    },
+    "v2x_jucon": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.12,
+      "frac_rejected_at_diff": 0.9143,
+      "test": "per_country_adf"
+    },
+    "v2x_libdem": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.0914,
+      "frac_rejected_at_diff": 0.9086,
+      "test": "per_country_adf"
+    },
+    "v2x_neopat": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.08,
+      "frac_rejected_at_diff": 0.9371,
+      "test": "per_country_adf"
+    },
+    "v2x_partip": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.04,
+      "frac_rejected_at_diff": 0.9314,
+      "test": "per_country_adf"
+    },
+    "v2x_polyarchy": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.0914,
+      "frac_rejected_at_diff": 0.9657,
+      "test": "per_country_adf"
+    },
+    "v2x_regime": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.1257,
+      "frac_rejected_at_diff": 0.8743,
+      "test": "per_country_adf"
+    },
+    "v2x_rule": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.1086,
+      "frac_rejected_at_diff": 0.9543,
+      "test": "per_country_adf"
+    },
+    "v2xeg_eqprotec": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.0686,
+      "frac_rejected_at_diff": 0.9257,
+      "test": "per_country_adf"
+    },
+    "v2xel_frefair": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.1314,
+      "frac_rejected_at_diff": 0.96,
+      "test": "per_country_adf"
+    },
+    "v2xlg_legcon": {
+      "classification": "I(1)",
+      "n_countries_tested_at_level": 175,
+      "n_countries_tested_at_diff": 175,
+      "n_countries_total": 175,
+      "frac_rejected_at_level": 0.1314,
+      "frac_rejected_at_diff": 0.9371,
+      "test": "per_country_adf"
+    }
+  }
+}

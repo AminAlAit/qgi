@@ -1,0 +1,2901 @@
+{
+  "components": {
+    "anchor_battery": {
+      "active": [
+        {
+          "case_id": 2,
+          "country": "Iceland",
+          "country_prob": 0.007043890604339612,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 747,
+          "observed_percentile": 0.4190093708165997,
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 3,
+          "country": "Norway",
+          "reason": "sentinel case requires Layer-1 recipe lookup; orchestrator wires this in Stage 1",
+          "recipe_sentinel": "any_conflict_category",
+          "resolves_to_layer1": "B",
+          "status": "DEFERRED_TO_STAGE_1"
+        },
+        {
+          "case_id": 5,
+          "country": "Sri Lanka",
+          "country_prob": 1.9044480235506632e-18,
+          "country_prob_aggregation": "single_row",
+          "expected_rank_band": [
+            0.5,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.6354166666666666,
+          "recipe": "economic_recession",
+          "status": "PASS"
+        },
+        {
+          "case_id": 6,
+          "country": "Venezuela",
+          "expected_rank_volatility_max": 0.1,
+          "reason": "rank-stability test requires multi-version comparison; Stage 1 implements when prior validation reports are available",
+          "recipe": "economic_recession",
+          "status": "NOT_YET_IMPLEMENTED"
+        },
+        {
+          "case_id": 7,
+          "country": "Switzerland",
+          "reason": "sentinel case requires Layer-1 recipe lookup; orchestrator wires this in Stage 1",
+          "recipe_sentinel": "any_conflict_category",
+          "resolves_to_layer1": "B",
+          "status": "DEFERRED_TO_STAGE_1"
+        },
+        {
+          "case_id": 8,
+          "country": "Yemen",
+          "reason": "sentinel case requires Layer-1 recipe lookup; orchestrator wires this in Stage 1",
+          "recipe_sentinel": "any_3_plus_conflict_categories",
+          "resolves_to_layer1": "B",
+          "status": "DEFERRED_TO_STAGE_1"
+        }
+      ],
+      "deferred": [
+        {
+          "case_id": 1,
+          "country": "Malta",
+          "reason": "Recipe `military_coup` is HARD-GATED in 2026-05-04 mandate (n_positive_verified=3 < 8). Validation script CANNOT score this case in Stage 1/2. Re-activates on recipe re-entry (when verification rate raises n+v above gate, OR on new mandate cycle).",
+          "recipe": "military_coup",
+          "status": "DEFERRED_BY_HARD_GATE"
+        },
+        {
+          "case_id": 4,
+          "country": "Tunisia",
+          "reason": "Recipe `democratic_transition` is HARD-GATED in 2026-05-04 mandate (n_positive_verified=5 < 8). Validation script CANNOT score this case in Stage 1/2. Re-activates on recipe re-entry.",
+          "recipe": "democratic_transition",
+          "status": "DEFERRED_BY_HARD_GATE"
+        }
+      ],
+      "n_active": 6,
+      "n_active_deferred_to_stage_1": 3,
+      "n_active_fail": 1,
+      "n_active_not_yet_implemented": 1,
+      "n_active_pass": 1,
+      "n_active_skipped": 0,
+      "n_deferred_by_hard_gate": 2
+    },
+    "brier": {
+      "per_recipe": {
+        "bilateral_treaty": {
+          "base_rate": 0.01740294511378849,
+          "brier_score": 0.016945751765371952,
+          "n_bins": 10,
+          "reliability": 1.8863589143261427e-14,
+          "resolution": 1.8863589143261427e-14,
+          "uncertainty": 0.017100082615154954
+        },
+        "civil_war_and_insurgency": {
+          "base_rate": 0.01606425702811245,
+          "brier_score": 0.01551986992510344,
+          "n_bins": 10,
+          "reliability": 1.223826831601869e-05,
+          "resolution": 0.00015997911574805522,
+          "uncertainty": 0.015806196674247187
+        },
+        "constitutional_change": {
+          "base_rate": 0.00535475234270415,
+          "brier_score": 0.005320257185830199,
+          "n_bins": 10,
+          "reliability": 2.189635366844013e-15,
+          "resolution": 2.189635366844013e-15,
+          "uncertainty": 0.005326078970052455
+        },
+        "economic_recession": {
+          "base_rate": 0.002677376171352075,
+          "brier_score": 0.0025518756173755625,
+          "n_bins": 10,
+          "reliability": 5.519840614750998e-14,
+          "resolution": 5.519840614750998e-14,
+          "uncertainty": 0.002670207828189151
+        },
+        "elections_and_voting": {
+          "base_rate": 0.018741633199464525,
+          "brier_score": 0.018266181923120205,
+          "n_bins": 10,
+          "reliability": 1.988919486993659e-14,
+          "resolution": 1.988919486993659e-14,
+          "uncertainty": 0.018390384384481255
+        },
+        "energy_policy": {
+          "base_rate": 0.013386880856760375,
+          "brier_score": 0.013207405730604103,
+          "n_bins": 10,
+          "reliability": 1.3252809794460346e-16,
+          "resolution": 1.3252809794460346e-16,
+          "uncertainty": 0.013207672277687278
+        },
+        "epidemic_and_pandemic": {
+          "base_rate": 0.002677376171352075,
+          "brier_score": 0.002657790741114151,
+          "n_bins": 10,
+          "reliability": 5.296771782989979e-16,
+          "resolution": 5.296771782989979e-16,
+          "uncertainty": 0.002670207828189151
+        },
+        "executive_power_consolidation": {
+          "base_rate": 0.004016064257028112,
+          "brier_score": 0.003940913706656455,
+          "n_bins": 10,
+          "reliability": 9.77784181118751e-15,
+          "resolution": 9.77784181118751e-15,
+          "uncertainty": 0.003999935484911533
+        },
+        "foreign_intervention": {
+          "base_rate": 0.008032128514056224,
+          "brier_score": 0.007821804595368602,
+          "n_bins": 10,
+          "reliability": 2.7146758575501845e-13,
+          "resolution": 2.7146758575501845e-13,
+          "uncertainty": 0.007967613425589909
+        },
+        "government_formation": {
+          "base_rate": 0.01740294511378849,
+          "brier_score": 0.017074960443424502,
+          "n_bins": 10,
+          "reliability": 1.9899947676587832e-14,
+          "resolution": 1.9899947676587832e-14,
+          "uncertainty": 0.017100082615154954
+        },
+        "human_rights_violation": {
+          "base_rate": 0.009370816599732263,
+          "brier_score": 0.009211759814531791,
+          "n_bins": 10,
+          "reliability": 1.415911670582975e-17,
+          "resolution": 1.415911670582975e-17,
+          "uncertainty": 0.009283004395986444
+        },
+        "humanitarian_crisis": {
+          "base_rate": 0.004016064257028112,
+          "brier_score": 0.003983951094909988,
+          "n_bins": 10,
+          "reliability": 6.018791205700463e-19,
+          "resolution": 6.018791205700463e-19,
+          "uncertainty": 0.003999935484911533
+        },
+        "mass_protest": {
+          "base_rate": 0.00535475234270415,
+          "brier_score": 0.005274320299838188,
+          "n_bins": 10,
+          "reliability": 4.453363721300189e-15,
+          "resolution": 4.453363721300189e-15,
+          "uncertainty": 0.005326078970052455
+        },
+        "migration_and_refugees": {
+          "base_rate": 0.013386880856760375,
+          "brier_score": 0.01317780341776863,
+          "n_bins": 10,
+          "reliability": 4.016271006571943e-18,
+          "resolution": 4.016271006571943e-18,
+          "uncertainty": 0.013207672277687278
+        },
+        "multilateral_agreement": {
+          "base_rate": 0.009370816599732263,
+          "brier_score": 0.009110781341977516,
+          "n_bins": 10,
+          "reliability": 3.228028760573101e-19,
+          "resolution": 3.228028760573101e-19,
+          "uncertainty": 0.009283004395986444
+        },
+        "natural_disaster": {
+          "base_rate": 0.004016064257028112,
+          "brier_score": 0.003711895979982862,
+          "n_bins": 10,
+          "reliability": 0.00041500114173587355,
+          "resolution": 2.8374028623713222e-05,
+          "uncertainty": 0.003999935484911533
+        },
+        "peacekeeping_and_peace_process": {
+          "base_rate": 0.004016064257028112,
+          "brier_score": 0.003947838513587625,
+          "n_bins": 10,
+          "reliability": 2.637164316347934e-18,
+          "resolution": 2.637164316347934e-18,
+          "uncertainty": 0.003999935484911533
+        },
+        "political_corruption": {
+          "base_rate": 0.009370816599732263,
+          "brier_score": 0.009223891969008552,
+          "n_bins": 10,
+          "reliability": 6.700341613805053e-20,
+          "resolution": 6.700341613805053e-20,
+          "uncertainty": 0.009283004395986444
+        },
+        "political_repression": {
+          "base_rate": 0.008032128514056224,
+          "brier_score": 0.007807102899912667,
+          "n_bins": 10,
+          "reliability": 2.144112375527935e-18,
+          "resolution": 2.144112375527935e-18,
+          "uncertainty": 0.007967613425589909
+        },
+        "sanctions_and_arms_embargo": {
+          "base_rate": 0.00535475234270415,
+          "brier_score": 0.0053249009908377075,
+          "n_bins": 10,
+          "reliability": 2.381576181853111e-16,
+          "resolution": 2.381576181853111e-16,
+          "uncertainty": 0.005326078970052455
+        },
+        "territorial_disputes": {
+          "base_rate": 0.002677376171352075,
+          "brier_score": 0.001603957235143653,
+          "n_bins": 10,
+          "reliability": 0.000946108642104849,
+          "resolution": 0.0011384119512848302,
+          "uncertainty": 0.002670207828189151
+        },
+        "terrorist_attack": {
+          "base_rate": 0.002677376171352075,
+          "brier_score": 0.0022411095212527214,
+          "n_bins": 10,
+          "reliability": 0.00044191237635483524,
+          "resolution": 0.0005204368638011264,
+          "uncertainty": 0.002670207828189151
+        },
+        "trade_agreement": {
+          "base_rate": 0.008032128514056224,
+          "brier_score": 0.007880400479467005,
+          "n_bins": 10,
+          "reliability": 5.992217114945806e-14,
+          "resolution": 5.992217114945806e-14,
+          "uncertainty": 0.007967613425589909
+        }
+      }
+    },
+    "calibration": {
+      "diagnostic_only": "per_recipe_bootstrap_diagnostic \u2014 sampling-variability of in-sample ECE; 75th percentile is Ji-Hoon's preferred conservative number for transparency, NOT applied to the F1 0.08 gate",
+      "gate_uses": "in_sample_ece (option a per founder tie-break 2026-05-04)",
+      "per_recipe": {
+        "bilateral_treaty": {
+          "ece": 1.373447820023077e-07,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 747,
+              "observed_rate": 0.01740294511378849,
+              "predicted_mean": 0.01740308245857049
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "civil_war_and_insurgency": {
+          "ece": 0.0008427492476398352,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 736,
+              "observed_rate": 0.014945652173913044,
+              "predicted_mean": 0.014517986178526782
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 11,
+              "observed_rate": 0.09090909090909091,
+              "predicted_mean": 0.1195246832166062
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "constitutional_change": {
+          "ece": 4.679353979818168e-08,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 747,
+              "observed_rate": 0.00535475234270415,
+              "predicted_mean": 0.005354799136243948
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "economic_recession": {
+          "ece": 2.349434105215764e-07,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 747,
+              "observed_rate": 0.002677376171352075,
+              "predicted_mean": 0.0026771412279415533
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "elections_and_voting": {
+          "ece": 1.410290568285011e-07,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 747,
+              "observed_rate": 0.018741633199464525,
+              "predicted_mean": 0.018741492170407697
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "energy_policy": {
+          "ece": 1.151208486524502e-08,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 747,
+              "observed_rate": 0.013386880856760375,
+              "predicted_mean": 0.01338689236884524
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "epidemic_and_pandemic": {
+          "ece": 2.3014716559171394e-08,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 747,
+              "observed_rate": 0.002677376171352075,
+              "predicted_mean": 0.0026773531566355157
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "executive_power_consolidation": {
+          "ece": 9.888297027894899e-08,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 747,
+              "observed_rate": 0.004016064257028112,
+              "predicted_mean": 0.004016163139998391
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "foreign_intervention": {
+          "ece": 5.210255135355835e-07,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 747,
+              "observed_rate": 0.008032128514056224,
+              "predicted_mean": 0.008031607488542689
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "government_formation": {
+          "ece": 1.410671743411196e-07,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 747,
+              "observed_rate": 0.01740294511378849,
+              "predicted_mean": 0.01740308618096283
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "human_rights_violation": {
+          "ece": 3.76286017622629e-09,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 747,
+              "observed_rate": 0.009370816599732263,
+              "predicted_mean": 0.009370812836872086
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "humanitarian_crisis": {
+          "ece": 7.758086881248794e-10,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 747,
+              "observed_rate": 0.004016064257028112,
+              "predicted_mean": 0.004016063481219424
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "mass_protest": {
+          "ece": 6.673352771508628e-08,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 747,
+              "observed_rate": 0.00535475234270415,
+              "predicted_mean": 0.005354819076231865
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "migration_and_refugees": {
+          "ece": 2.0040636233842335e-09,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 747,
+              "observed_rate": 0.013386880856760375,
+              "predicted_mean": 0.013386878852696751
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "multilateral_agreement": {
+          "ece": 5.681574394983402e-10,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 747,
+              "observed_rate": 0.009370816599732263,
+              "predicted_mean": 0.009370816031574823
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "natural_disaster": {
+          "ece": 0.0021053558371392778,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 745,
+              "observed_rate": 0.0026845637583892616,
+              "predicted_mean": 0.0037400635893778244
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 2,
+              "observed_rate": 0.5,
+              "predicted_mean": 0.1068232818717193
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "peacekeeping_and_peace_process": {
+          "ece": 1.6239348251539942e-09,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 747,
+              "observed_rate": 0.004016064257028112,
+              "predicted_mean": 0.004016065880962937
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "political_corruption": {
+          "ece": 2.5885018087312694e-10,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 747,
+              "observed_rate": 0.009370816599732263,
+              "predicted_mean": 0.009370816340882082
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "political_repression": {
+          "ece": 1.4642787902335863e-09,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 747,
+              "observed_rate": 0.008032128514056224,
+              "predicted_mean": 0.008032129978335014
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "sanctions_and_arms_embargo": {
+          "ece": 1.5432356209772735e-08,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 747,
+              "observed_rate": 0.00535475234270415,
+              "predicted_mean": 0.00535473691034794
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "territorial_disputes": {
+          "ece": 0.001923732040278999,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 742,
+              "observed_rate": 0.0,
+              "predicted_mean": 6.773249329849482e-05
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 1,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.19814468953281567
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 1,
+              "observed_rate": 1.0,
+              "predicted_mean": 0.2814846192370978
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 1,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.384074183614959
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 2,
+              "observed_rate": 0.5,
+              "predicted_mean": 0.5430180350751261
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "terrorist_attack": {
+          "ece": 0.0024050034514925015,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 740,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.0006525259908783806
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 4,
+              "observed_rate": 0.25,
+              "predicted_mean": 0.14384493965472694
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 2,
+              "observed_rate": 0.5,
+              "predicted_mean": 0.2631611767613439
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 1,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.41537045715649273
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "trade_agreement": {
+          "ece": 2.447900552503268e-07,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 747,
+              "observed_rate": 0.008032128514056224,
+              "predicted_mean": 0.008032373304111474
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        }
+      },
+      "per_recipe_bootstrap_diagnostic": {
+        "bilateral_treaty": {
+          "ece_bootstrap_max": 0.01836643368435885,
+          "ece_bootstrap_mean": 0.003861855553110032,
+          "ece_bootstrap_median": 0.003356639155428694,
+          "ece_bootstrap_min": 1.1577305252218062e-06,
+          "ece_bootstrap_p25": 0.0014551559449732642,
+          "ece_bootstrap_p75": 0.005500403421176764,
+          "ece_bootstrap_p95": 0.009305614961436327,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "civil_war_and_insurgency": {
+          "ece_bootstrap_max": 0.018394451745909885,
+          "ece_bootstrap_mean": 0.004600112688519165,
+          "ece_bootstrap_median": 0.003988389978537371,
+          "ece_bootstrap_min": 2.9004378793002856e-05,
+          "ece_bootstrap_p25": 0.0025311906088101434,
+          "ece_bootstrap_p75": 0.005993046443263858,
+          "ece_bootstrap_p95": 0.010358048570080429,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "constitutional_change": {
+          "ece_bootstrap_max": 0.012222635382311178,
+          "ece_bootstrap_mean": 0.0021207967468419237,
+          "ece_bootstrap_median": 0.0014248033486073983,
+          "ece_bootstrap_min": 3.725468606169055e-07,
+          "ece_bootstrap_p25": 0.0012501805330401292,
+          "ece_bootstrap_p75": 0.002746940017438493,
+          "ece_bootstrap_p95": 0.00532684969521434,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "economic_recession": {
+          "ece_bootstrap_max": 0.006390015627166881,
+          "ece_bootstrap_mean": 0.0015049834473144323,
+          "ece_bootstrap_median": 0.0013337346232460301,
+          "ece_bootstrap_min": 6.041495004702191e-06,
+          "ece_bootstrap_p25": 0.0006311873686877622,
+          "ece_bootstrap_p75": 0.002238583902689575,
+          "ece_bootstrap_p95": 0.003531474717470832,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "elections_and_voting": {
+          "ece_bootstrap_max": 0.017185633355906105,
+          "ece_bootstrap_mean": 0.0038210150529937067,
+          "ece_bootstrap_median": 0.0032881441145812193,
+          "ece_bootstrap_min": 8.255450242695972e-06,
+          "ece_bootstrap_p25": 0.0014955859917743682,
+          "ece_bootstrap_p75": 0.00543250501358868,
+          "ece_bootstrap_p95": 0.009340546146633657,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "energy_policy": {
+          "ece_bootstrap_max": 0.017433022647123382,
+          "ece_bootstrap_mean": 0.0034405570735986835,
+          "ece_bootstrap_median": 0.0026820916249036776,
+          "ece_bootstrap_min": 1.3718486279075404e-07,
+          "ece_bootstrap_p25": 0.0013423733249950404,
+          "ece_bootstrap_p75": 0.005345338957057888,
+          "ece_bootstrap_p95": 0.008039628660898765,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "epidemic_and_pandemic": {
+          "ece_bootstrap_max": 0.008062207634234729,
+          "ece_bootstrap_mean": 0.0015175007836537168,
+          "ece_bootstrap_median": 0.0013524047791361811,
+          "ece_bootstrap_min": 1.3678704014461786e-06,
+          "ece_bootstrap_p25": 0.0011582608110174274,
+          "ece_bootstrap_p75": 0.0025744839778610784,
+          "ece_bootstrap_p95": 0.0028506548188839994,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "executive_power_consolidation": {
+          "ece_bootstrap_max": 0.010608926302931039,
+          "ece_bootstrap_mean": 0.0018346592896597196,
+          "ece_bootstrap_median": 0.0014374773711754926,
+          "ece_bootstrap_min": 1.6339504493416424e-06,
+          "ece_bootstrap_p25": 0.0005460114324711954,
+          "ece_bootstrap_p75": 0.002689068280227704,
+          "ece_bootstrap_p95": 0.004214231326916098,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "foreign_intervention": {
+          "ece_bootstrap_max": 0.012300106968340298,
+          "ece_bootstrap_mean": 0.00257273011592129,
+          "ece_bootstrap_median": 0.002236277895667519,
+          "ece_bootstrap_min": 1.580109723472653e-06,
+          "ece_bootstrap_p25": 0.0011570052907321406,
+          "ece_bootstrap_p75": 0.003747736733632329,
+          "ece_bootstrap_p95": 0.00632875234889031,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "government_formation": {
+          "ece_bootstrap_max": 0.015804778388124163,
+          "ece_bootstrap_mean": 0.003702570985396791,
+          "ece_bootstrap_median": 0.0028829721379147934,
+          "ece_bootstrap_min": 4.3456917045783805e-07,
+          "ece_bootstrap_p25": 0.001401044372809689,
+          "ece_bootstrap_p75": 0.005310573051234055,
+          "ece_bootstrap_p95": 0.009336296705506288,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "human_rights_violation": {
+          "ece_bootstrap_max": 0.014515472627128316,
+          "ece_bootstrap_mean": 0.0027750750697128996,
+          "ece_bootstrap_median": 0.002554255616365549,
+          "ece_bootstrap_min": 1.013465022991697e-06,
+          "ece_bootstrap_p25": 0.0012470252966605465,
+          "ece_bootstrap_p75": 0.004057690276900266,
+          "ece_bootstrap_p95": 0.00669624811055773,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "humanitarian_crisis": {
+          "ece_bootstrap_max": 0.012204392349871024,
+          "ece_bootstrap_mean": 0.00180400450278818,
+          "ece_bootstrap_median": 0.0013944799083279824,
+          "ece_bootstrap_min": 2.8290039996888006e-07,
+          "ece_bootstrap_p25": 0.001123765094655941,
+          "ece_bootstrap_p75": 0.002677628232839571,
+          "ece_bootstrap_p95": 0.004115222201299672,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "mass_protest": {
+          "ece_bootstrap_max": 0.008029873206127889,
+          "ece_bootstrap_mean": 0.002034675772645162,
+          "ece_bootstrap_median": 0.001513416630529064,
+          "ece_bootstrap_min": 1.0300632948051155e-06,
+          "ece_bootstrap_p25": 0.0010482828867818263,
+          "ece_bootstrap_p75": 0.002832115736052948,
+          "ece_bootstrap_p95": 0.005222268631259922,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "migration_and_refugees": {
+          "ece_bootstrap_max": 0.01507470783706135,
+          "ece_bootstrap_mean": 0.0034060377710801405,
+          "ece_bootstrap_median": 0.0028035059608230405,
+          "ece_bootstrap_min": 9.911468062829415e-07,
+          "ece_bootstrap_p25": 0.0013834318357450878,
+          "ece_bootstrap_p75": 0.005065548688710026,
+          "ece_bootstrap_p95": 0.008081303564434749,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "multilateral_agreement": {
+          "ece_bootstrap_max": 0.013145824448517196,
+          "ece_bootstrap_mean": 0.0029430826910141175,
+          "ece_bootstrap_median": 0.0025227566973898205,
+          "ece_bootstrap_min": 1.8211858978621487e-06,
+          "ece_bootstrap_p25": 0.0012149228511425612,
+          "ece_bootstrap_p75": 0.004296779279613741,
+          "ece_bootstrap_p95": 0.006920493506966724,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "natural_disaster": {
+          "ece_bootstrap_max": 0.00918138191406492,
+          "ece_bootstrap_mean": 0.0029047664564026813,
+          "ece_bootstrap_median": 0.002702403206880125,
+          "ece_bootstrap_min": 1.8356544309555516e-05,
+          "ece_bootstrap_p25": 0.0017031159040931292,
+          "ece_bootstrap_p75": 0.003853576561334784,
+          "ece_bootstrap_p95": 0.005972226037677891,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "peacekeeping_and_peace_process": {
+          "ece_bootstrap_max": 0.010432820146714384,
+          "ece_bootstrap_mean": 0.0018596578602708158,
+          "ece_bootstrap_median": 0.0014932731031998792,
+          "ece_bootstrap_min": 2.437175369938288e-08,
+          "ece_bootstrap_p25": 0.000985257889850199,
+          "ece_bootstrap_p75": 0.0026693578591182898,
+          "ece_bootstrap_p95": 0.004277945687761729,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "political_corruption": {
+          "ece_bootstrap_max": 0.013292097086413213,
+          "ece_bootstrap_mean": 0.0028492152044748103,
+          "ece_bootstrap_median": 0.002508006218269009,
+          "ece_bootstrap_min": 8.952146037053549e-07,
+          "ece_bootstrap_p25": 0.0012505067017041923,
+          "ece_bootstrap_p75": 0.004039606145652775,
+          "ece_bootstrap_p95": 0.006881108732138218,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "political_repression": {
+          "ece_bootstrap_max": 0.011703245082723383,
+          "ece_bootstrap_mean": 0.0025212404946590916,
+          "ece_bootstrap_median": 0.0021762939897045685,
+          "ece_bootstrap_min": 1.8722360727724263e-07,
+          "ece_bootstrap_p25": 0.0011210253334660652,
+          "ece_bootstrap_p75": 0.00371634187700002,
+          "ece_bootstrap_p95": 0.006285322399883097,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "sanctions_and_arms_embargo": {
+          "ece_bootstrap_max": 0.016058528160952795,
+          "ece_bootstrap_mean": 0.002162169618172011,
+          "ece_bootstrap_median": 0.0013771361556306127,
+          "ece_bootstrap_min": 1.03862648800912e-07,
+          "ece_bootstrap_p25": 0.0013060234546621212,
+          "ece_bootstrap_p75": 0.002708266800563466,
+          "ece_bootstrap_p95": 0.00535998752580768,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "territorial_disputes": {
+          "ece_bootstrap_max": 0.006623816117057566,
+          "ece_bootstrap_mean": 0.0024616004915360935,
+          "ece_bootstrap_median": 0.0023371820557690198,
+          "ece_bootstrap_min": 1.3295867011762524e-05,
+          "ece_bootstrap_p25": 0.001607107991051058,
+          "ece_bootstrap_p75": 0.0031740370439271217,
+          "ece_bootstrap_p95": 0.004639806642794331,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "terrorist_attack": {
+          "ece_bootstrap_max": 0.0087857562984415,
+          "ece_bootstrap_mean": 0.0031401003261414756,
+          "ece_bootstrap_median": 0.002898976723883947,
+          "ece_bootstrap_min": 0.0004099994784920619,
+          "ece_bootstrap_p25": 0.0020997652534478677,
+          "ece_bootstrap_p75": 0.003966735117353944,
+          "ece_bootstrap_p95": 0.00575731214681196,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "trade_agreement": {
+          "ece_bootstrap_max": 0.010969070578535042,
+          "ece_bootstrap_mean": 0.002602317147242947,
+          "ece_bootstrap_median": 0.0023094461302688263,
+          "ece_bootstrap_min": 2.4434791795063804e-06,
+          "ece_bootstrap_p25": 0.0012261003621274933,
+          "ece_bootstrap_p75": 0.003867491932040971,
+          "ece_bootstrap_p95": 0.0063963778330821735,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        }
+      }
+    },
+    "oos_by_time": {
+      "per_recipe": {
+        "bilateral_treaty": {
+          "auc_ci_high": 0.8052991169367475,
+          "auc_ci_low": 0.4342816642467264,
+          "auc_point": 0.6267029972752044,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.3052991169367475,
+          "delta_ci_low": -0.06571833575327364,
+          "delta_point": 0.1267029972752044,
+          "method": "percentile",
+          "n": 747,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "civil_war_and_insurgency": {
+          "auc_ci_high": 0.8908603078398775,
+          "auc_ci_low": 0.7023578663184641,
+          "auc_point": 0.7996598639455782,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.3908603078398775,
+          "delta_ci_low": 0.2023578663184641,
+          "delta_point": 0.2996598639455782,
+          "method": "percentile",
+          "n": 747,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "constitutional_change": {
+          "auc_ci_high": 0.9167785234899329,
+          "auc_ci_low": 0.2829653586211654,
+          "auc_point": 0.6292059219380888,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.41677852348993294,
+          "delta_ci_low": -0.2170346413788346,
+          "delta_point": 0.12920592193808877,
+          "method": "percentile",
+          "n": 747,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 986
+        },
+        "economic_recession": {
+          "auc_ci_high": 0.9906040268456375,
+          "auc_ci_low": 0.970694173320969,
+          "auc_point": 0.9812080536912752,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.49060402684563753,
+          "delta_ci_low": 0.4706941733209689,
+          "delta_point": 0.4812080536912752,
+          "method": "percentile",
+          "n": 747,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 835
+        },
+        "elections_and_voting": {
+          "auc_ci_high": 0.7953415743701069,
+          "auc_ci_low": 0.5189299506063478,
+          "auc_point": 0.6649288637692458,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.29534157437010694,
+          "delta_ci_low": 0.0189299506063478,
+          "delta_point": 0.16492886376924576,
+          "method": "percentile",
+          "n": 747,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "energy_policy": {
+          "auc_ci_high": 0.7505155527780041,
+          "auc_ci_low": 0.2536497452971976,
+          "auc_point": 0.5149253731343284,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.2505155527780041,
+          "delta_ci_low": -0.2463502547028024,
+          "delta_point": 0.014925373134328401,
+          "method": "percentile",
+          "n": 747,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "epidemic_and_pandemic": {
+          "auc_ci_high": 0.9947045533166132,
+          "auc_ci_low": 0.46439840221674433,
+          "auc_point": 0.7395973154362416,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.4947045533166133,
+          "delta_ci_low": -0.03560159778325568,
+          "delta_point": 0.23959731543624163,
+          "method": "percentile",
+          "n": 747,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 839
+        },
+        "executive_power_consolidation": {
+          "auc_ci_high": 0.9986595174262735,
+          "auc_ci_low": 0.49170137826798854,
+          "auc_point": 0.818100358422939,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.49865951742627346,
+          "delta_ci_low": -0.008298621732011437,
+          "delta_point": 0.31810035842293904,
+          "method": "percentile",
+          "n": 747,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 946
+        },
+        "foreign_intervention": {
+          "auc_ci_high": 0.954677647329524,
+          "auc_ci_low": 0.45750485515821043,
+          "auc_point": 0.7669815564552407,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.45467764732952404,
+          "delta_ci_low": -0.04249514484178955,
+          "delta_point": 0.2669815564552407,
+          "method": "percentile",
+          "n": 747,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 997
+        },
+        "government_formation": {
+          "auc_ci_high": 0.7335052836978044,
+          "auc_ci_low": 0.3471928660873309,
+          "auc_point": 0.547264724376441,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.23350528369780446,
+          "delta_ci_low": -0.1528071339126691,
+          "delta_point": 0.047264724376441025,
+          "method": "percentile",
+          "n": 747,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "human_rights_violation": {
+          "auc_ci_high": 0.8236575824064748,
+          "auc_ci_low": 0.28911579369126544,
+          "auc_point": 0.5640926640926641,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.3236575824064748,
+          "delta_ci_low": -0.21088420630873456,
+          "delta_point": 0.06409266409266412,
+          "method": "percentile",
+          "n": 747,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "humanitarian_crisis": {
+          "auc_ci_high": 0.9919571045576407,
+          "auc_ci_low": 0.20241286863270777,
+          "auc_point": 0.6075268817204301,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.49195710455764075,
+          "delta_ci_low": -0.2975871313672922,
+          "delta_point": 0.10752688172043012,
+          "method": "percentile",
+          "n": 747,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 939
+        },
+        "mass_protest": {
+          "auc_ci_high": 0.9879194630872483,
+          "auc_ci_low": 0.6156836461126005,
+          "auc_point": 0.8361372812920592,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.4879194630872483,
+          "delta_ci_low": 0.11568364611260053,
+          "delta_point": 0.3361372812920592,
+          "method": "percentile",
+          "n": 747,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 973
+        },
+        "migration_and_refugees": {
+          "auc_ci_high": 0.7565842251353205,
+          "auc_ci_low": 0.4329676817736519,
+          "auc_point": 0.5951153324287652,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.2565842251353205,
+          "delta_ci_low": -0.06703231822634807,
+          "delta_point": 0.09511533242876524,
+          "method": "percentile",
+          "n": 747,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "multilateral_agreement": {
+          "auc_ci_high": 0.9021775933058068,
+          "auc_ci_low": 0.5482811406804696,
+          "auc_point": 0.7274131274131274,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.4021775933058069,
+          "delta_ci_low": 0.04828114068046959,
+          "delta_point": 0.22741312741312736,
+          "method": "percentile",
+          "n": 747,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 999
+        },
+        "natural_disaster": {
+          "auc_ci_high": 1.0,
+          "auc_ci_low": 0.6439282436979326,
+          "auc_point": 0.882168458781362,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.5,
+          "delta_ci_low": 0.14392824369793258,
+          "delta_point": 0.38216845878136196,
+          "method": "percentile",
+          "n": 747,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 944
+        },
+        "peacekeeping_and_peace_process": {
+          "auc_ci_high": 0.9932975871313673,
+          "auc_ci_low": 0.7989276139410187,
+          "auc_point": 0.8866487455197133,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.4932975871313673,
+          "delta_ci_low": 0.29892761394101874,
+          "delta_point": 0.3866487455197133,
+          "method": "percentile",
+          "n": 747,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 957
+        },
+        "political_corruption": {
+          "auc_ci_high": 0.9117383580626138,
+          "auc_ci_low": 0.5359576396673174,
+          "auc_point": 0.7326254826254827,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.41173835806261383,
+          "delta_ci_low": 0.035957639667317326,
+          "delta_point": 0.23262548262548266,
+          "method": "percentile",
+          "n": 747,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 997
+        },
+        "political_repression": {
+          "auc_ci_high": 0.928809363583926,
+          "auc_ci_low": 0.5921621621621622,
+          "auc_point": 0.7593342330184435,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.42880936358392596,
+          "delta_ci_low": 0.09216216216216226,
+          "delta_point": 0.2593342330184435,
+          "method": "percentile",
+          "n": 747,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "sanctions_and_arms_embargo": {
+          "auc_ci_high": 0.950268456375839,
+          "auc_ci_low": 0.1432483311441784,
+          "auc_point": 0.5420592193808883,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.450268456375839,
+          "delta_ci_low": -0.3567516688558216,
+          "delta_point": 0.0420592193808883,
+          "method": "percentile",
+          "n": 747,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 982
+        },
+        "territorial_disputes": {
+          "auc_ci_high": 1.0,
+          "auc_ci_low": 0.9946380697050938,
+          "auc_point": 0.9986577181208054,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.5,
+          "delta_ci_low": 0.49463806970509383,
+          "delta_point": 0.4986577181208054,
+          "method": "percentile",
+          "n": 747,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 866
+        },
+        "terrorist_attack": {
+          "auc_ci_high": 1.0,
+          "auc_ci_low": 0.9892617449664429,
+          "auc_point": 0.9953020134228188,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.5,
+          "delta_ci_low": 0.4892617449664429,
+          "delta_point": 0.49530201342281877,
+          "method": "percentile",
+          "n": 747,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 861
+        },
+        "trade_agreement": {
+          "auc_ci_high": 0.9423242378037764,
+          "auc_ci_low": 0.5852592389707351,
+          "auc_point": 0.7874493927125507,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.44232423780377644,
+          "delta_ci_low": 0.08525923897073502,
+          "delta_point": 0.28744939271255066,
+          "method": "percentile",
+          "n": 747,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 995
+        }
+      }
+    }
+  },
+  "components_deferred": {
+    "rationale": "Stage 1 v0 baseline minimum is components 1+3+4+6 per Stage 0 spec",
+    "stage_2_or_3": [
+      2,
+      5,
+      7,
+      8,
+      9
+    ]
+  },
+  "components_implemented_v1": [
+    1,
+    3,
+    4,
+    6
+  ],
+  "generated_at_utc": "2026-05-04T16:43:25.060961+00:00",
+  "model_metadata_uri": "results\\stage_1_v0_2026_05_04",
+  "n_predictions": 17181,
+  "n_recipes": 23,
+  "params": {
+    "n_bins": 10,
+    "n_bootstrap": 1000,
+    "seed": 0
+  },
+  "schema_version": 1,
+  "validation_run_id": "2026-05-04T164325Z_validation",
+  "validation_script_fingerprint": {
+    "file_sha256": "05732ab8e3b206b347870ad24fb5a75201e7e99a28b05b6a373c7b9edaaa7f8a",
+    "fingerprinted_at_utc": "2026-05-04T16:42:56.738660+00:00",
+    "git_commit_sha": "19c71f419097c4df455ed49146b490d33ffeb356",
+    "git_dirty": true,
+    "script_path": "C:\\Users\\Amin\\Desktop\\trojan\\qgi-6.0-ml\\qgi-ml\\scripts\\validate_ml_model.py"
+  }
+}

@@ -1,0 +1,444 @@
+{
+  "schema_version": 1,
+  "policy": "fleet-floor-annex.md (5-Opus-Majles + founder absolute floor 0.70, 2026-05-25); path-c greenfield via compute_naive_baselines (FLEET-1b/#960).",
+  "delta_lift": 0.03,
+  "abs_floor": 0.7,
+  "cohort_gap": 0.06,
+  "floor_cap": 0.9,
+  "frozen_at_utc": "2026-05-27T22:12:40.752266+00:00",
+  "panel_fingerprint": "64eb099e472748dc",
+  "git_commit_sha": "64dc10d0b74b9c3619349648a65d6d164f16a6e4",
+  "note": "cohort_loco_floor = lock_floor - cohort_gap. Wave-1 path-(a/b) preserved from prior D2 walks; path-(c) rows are naive-baseline floors. A recipe absent here is SKIPPED in fleet mode (and the fleet refuses to run without this provenance).",
+  "floors": {
+    "bilateral_treaty": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "a/b",
+      "basis_loco": 0.6023,
+      "source": "bilateral_treaty-d2-walk.md",
+      "wave": 1
+    },
+    "government_formation": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "a/b",
+      "basis_loco": 0.5755,
+      "source": "government_formation-d2-walk.md",
+      "wave": 1
+    },
+    "constitutional_change": {
+      "lock_floor": 0.7191,
+      "cohort_loco_floor": 0.6591,
+      "path": "a/b",
+      "basis_loco": 0.6891,
+      "source": "constitutional_change-d2-walk.md",
+      "wave": 1
+    },
+    "political_repression": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "a/b",
+      "basis_loco": 0.5905,
+      "source": "political_repression-d2-walk.md",
+      "wave": 1
+    },
+    "mass_protest": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "a/b",
+      "basis_loco": 0.4449,
+      "source": "mass_protest-d2-walk.md",
+      "wave": 1
+    },
+    "religious_and_social_movement": {
+      "lock_floor": 0.7063,
+      "cohort_loco_floor": 0.6463,
+      "path": "c",
+      "basis_loco": 0.5805,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "relative",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "technology_breakthrough": {
+      "lock_floor": 0.8697,
+      "cohort_loco_floor": 0.8097,
+      "path": "c",
+      "basis_loco": 0.7598,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "relative",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "economic_growth_milestone": {
+      "lock_floor": 0.7489,
+      "cohort_loco_floor": 0.6889,
+      "path": "c",
+      "basis_loco": 0.639,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "relative",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "economic_nationalization": {
+      "lock_floor": 0.7175,
+      "cohort_loco_floor": 0.6575,
+      "path": "c",
+      "basis_loco": 0.6105,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "relative",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "monetary_policy_change": {
+      "lock_floor": 0.754,
+      "cohort_loco_floor": 0.694,
+      "path": "c",
+      "basis_loco": 0.6377,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "relative",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "currency_crisis": {
+      "lock_floor": 0.8237,
+      "cohort_loco_floor": 0.7637,
+      "path": "c",
+      "basis_loco": 0.715,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "relative",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "labor_action": {
+      "lock_floor": 0.7409,
+      "cohort_loco_floor": 0.6809,
+      "path": "c",
+      "basis_loco": 0.6223,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "relative",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "banking_and_financial_crisis": {
+      "lock_floor": 0.7255,
+      "cohort_loco_floor": 0.6655,
+      "path": "c",
+      "basis_loco": 0.615,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "relative",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "agricultural_policy": {
+      "lock_floor": 0.7034,
+      "cohort_loco_floor": 0.6434,
+      "path": "c",
+      "basis_loco": 0.5992,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "relative",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "ethnic_and_communal_conflict": {
+      "lock_floor": 0.7361,
+      "cohort_loco_floor": 0.6761,
+      "path": "c",
+      "basis_loco": 0.6068,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "relative",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "economic_liberalization": {
+      "lock_floor": 0.7419,
+      "cohort_loco_floor": 0.6819,
+      "path": "c",
+      "basis_loco": 0.6314,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "relative",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "sanctions_and_arms_embargo": {
+      "lock_floor": 0.791,
+      "cohort_loco_floor": 0.731,
+      "path": "c",
+      "basis_loco": 0.7009,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "relative",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "infrastructure_project": {
+      "lock_floor": 0.7981,
+      "cohort_loco_floor": 0.7381,
+      "path": "c",
+      "basis_loco": 0.6987,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "relative",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "interstate_war": {
+      "lock_floor": 0.7491,
+      "cohort_loco_floor": 0.6891,
+      "path": "c",
+      "basis_loco": 0.6438,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "relative",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "diplomatic_rupture": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "c",
+      "basis_loco": 0.5873,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "absolute_0.70",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "executive_power_consolidation": {
+      "lock_floor": 0.7594,
+      "cohort_loco_floor": 0.6994,
+      "path": "c",
+      "basis_loco": 0.665,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "relative",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "trade_agreement": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "c",
+      "basis_loco": 0.5815,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "absolute_0.70",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "natural_disaster": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "c",
+      "basis_loco": 0.5846,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "absolute_0.70",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "transitional_justice": {
+      "lock_floor": 0.7286,
+      "cohort_loco_floor": 0.6686,
+      "path": "c",
+      "basis_loco": 0.6404,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "relative",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "energy_policy": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "c",
+      "basis_loco": 0.6032,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "absolute_0.70",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "regional_integration": {
+      "lock_floor": 0.732,
+      "cohort_loco_floor": 0.672,
+      "path": "c",
+      "basis_loco": 0.6522,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "relative",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "human_rights_reform": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "c",
+      "basis_loco": 0.5603,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "absolute_0.70",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "epidemic_and_pandemic": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "c",
+      "basis_loco": 0.6513,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "absolute_0.70",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "military_policy_and_reform": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "c",
+      "basis_loco": 0.576,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "absolute_0.70",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "territorial_disputes": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "c",
+      "basis_loco": 0.6023,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "absolute_0.70",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "elections_and_voting": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "c",
+      "basis_loco": 0.5509,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "absolute_0.70",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "civil_war_and_insurgency": {
+      "lock_floor": 0.7199,
+      "cohort_loco_floor": 0.6599,
+      "path": "c",
+      "basis_loco": 0.6899,
+      "naive_winner": "NB1_persistence",
+      "floor_basis": "relative",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "democratic_transition": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "c",
+      "basis_loco": 0.6243,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "absolute_0.70",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "multilateral_agreement": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "c",
+      "basis_loco": 0.6091,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "absolute_0.70",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "terrorist_attack": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "c",
+      "basis_loco": 0.6196,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "absolute_0.70",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "peacekeeping_and_peace_process": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "c",
+      "basis_loco": 0.5786,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "absolute_0.70",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "political_violence": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "c",
+      "basis_loco": 0.5755,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "absolute_0.70",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "human_rights_violation": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "c",
+      "basis_loco": 0.6647,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "absolute_0.70",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "fiscal_policy_change": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "c",
+      "basis_loco": 0.6043,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "absolute_0.70",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "economic_recession": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "c",
+      "basis_loco": 0.5913,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "absolute_0.70",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "military_coup": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "c",
+      "basis_loco": 0.6054,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "absolute_0.70",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "migration_and_refugees": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "c",
+      "basis_loco": 0.5772,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "absolute_0.70",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "foreign_intervention": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "c",
+      "basis_loco": 0.602,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "absolute_0.70",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    },
+    "political_corruption": {
+      "lock_floor": 0.7,
+      "cohort_loco_floor": 0.64,
+      "path": "c",
+      "basis_loco": 0.5853,
+      "naive_winner": "NB2_single_indicator",
+      "floor_basis": "absolute_0.70",
+      "source": "naive-baselines.json",
+      "wave": "c"
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "recipe_id": "foreign_intervention",
+  "computed_at_utc": "2026-05-22T19:29:25.893401+00:00",
+  "walk_summary_reference": "C:\\tmp\\qgi-rnd-002\\f-ml-1-foreign-intervention-run\\f-ml-1-poc-summary.json",
+  "seed_used": 12345,
+  "chosen_window_from_walk": 18,
+  "binding_rider_provenance": "Miriam M14-R5 BINDING (risk-metric design v1, 3-Reviewer ratified 2026-05-22)",
+  "selected_indicators": [
+    "v2elintmon",
+    "RQ.EST",
+    "v2pepwrgen",
+    "v2stfisccap"
+  ],
+  "shap_importance_raw": {
+    "v2elintmon": 0.2641852796077728,
+    "RQ.EST": 2.83207631111145,
+    "v2pepwrgen": 1.511217474937439,
+    "v2stfisccap": 0.9323744177818298
+  },
+  "shap_importance_normalized": {
+    "v2elintmon": 0.04768813478507333,
+    "RQ.EST": 0.5112186305247967,
+    "v2pepwrgen": 0.272790152204432,
+    "v2stfisccap": 0.168303082485698
+  },
+  "shap_direction_signs": {
+    "v2elintmon": -1,
+    "RQ.EST": -1,
+    "v2pepwrgen": -1,
+    "v2stfisccap": -1
+  },
+  "per_feature_breakdown": {
+    "v2elintmon": {
+      "last_z": 0.08190705627202988,
+      "mean_z": 0.007605009712278843,
+      "std_z": 0.00748965609818697,
+      "slope": 0.1086878553032875,
+      "accel": 0.05849571153521538,
+      "tertile1_mean": 0.0,
+      "tertile2_mean": 0.0,
+      "tertile3_mean": 0.0
+    },
+    "RQ.EST": {
+      "last_z": 1.383367657661438,
+      "mean_z": 0.3034743666648865,
+      "std_z": 0.2630738615989685,
+      "slope": 0.05193878337740898,
+      "accel": 0.6240232586860657,
+      "tertile1_mean": 0.1551259607076645,
+      "tertile2_mean": 0.007587944157421589,
+      "tertile3_mean": 0.043484486639499664
+    },
+    "v2pepwrgen": {
+      "last_z": 0.013036934658885002,
+      "mean_z": 0.044467926025390625,
+      "std_z": 1.0865517854690552,
+      "slope": 0.15026314556598663,
+      "accel": 0.013277815654873848,
+      "tertile1_mean": 0.036705102771520615,
+      "tertile2_mean": 0.004691223613917828,
+      "tertile3_mean": 0.1622234582901001
+    },
+    "v2stfisccap": {
+      "last_z": 0.0032276210840791464,
+      "mean_z": 0.0,
+      "std_z": 0.0,
+      "slope": 0.68817138671875,
+      "accel": 0.11885231733322144,
+      "tertile1_mean": 0.09825100004673004,
+      "tertile2_mean": 0.0,
+      "tertile3_mean": 0.02387211099267006
+    }
+  },
+  "n_samples_for_shap": 58,
+  "n_positives_in_sample": 15,
+  "n_negatives_in_sample": 43,
+  "shap_method": "TreeExplainer (exact, polynomial-time for XGBoost trees)",
+  "model_refit": "full-data refit; mirrors F-ML-1 driver descriptive-emit refit pattern",
+  "raw_vs_shap_comparison": {
+    "comparison_ranked_by_abs_delta": [
+      {
+        "indicator_id": "v2stfisccap",
+        "raw_xgboost_importance_normalized": 0.21706080598429445,
+        "shap_importance_normalized": 0.168303082485698,
+        "delta_shap_minus_raw": -0.048757723498596445
+      },
+      {
+        "indicator_id": "v2pepwrgen",
+        "raw_xgboost_importance_normalized": 0.23252481395397195,
+        "shap_importance_normalized": 0.272790152204432,
+        "delta_shap_minus_raw": 0.040265338250460025
+      },
+      {
+        "indicator_id": "RQ.EST",
+        "raw_xgboost_importance_normalized": 0.49213770398600176,
+        "shap_importance_normalized": 0.5112186305247967,
+        "delta_shap_minus_raw": 0.019080926538794896
+      },
+      {
+        "indicator_id": "v2elintmon",
+        "raw_xgboost_importance_normalized": 0.05827667607573178,
+        "shap_importance_normalized": 0.04768813478507333,
+        "delta_shap_minus_raw": -0.010588541290658449
+      }
+    ],
+    "interpretation_note": "Per Miriam M14-R5 BINDING: deltas reveal how much the SHAP-derived importances differ from raw XGBoost feature_importances_. Large deltas indicate the calibration artifact affected the raw weights. SHAP is the binding weighting for the similarity metric."
+  }
+}

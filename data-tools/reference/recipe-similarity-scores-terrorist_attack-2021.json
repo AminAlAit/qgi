@@ -1,0 +1,837 @@
+{
+  "schema_version": 1,
+  "recipe_id": "terrorist_attack",
+  "evaluation_year": 2021,
+  "computed_at_utc": "2026-05-23T12:11:10.935384+00:00",
+  "scoring_metric": "cosine_arithmetic_mean_shap_weighted_v1",
+  "binding_provenance": {
+    "design_v1": "docs/specs/internal/ops/ml-track/risk-metric-design-v1.md (3-Reviewer ratified 2026-05-22)",
+    "miriam_m14_r3": "Per-year full-window granularity (cosine on (W,) vectors); per-tertile diagnostic-only",
+    "miriam_m14_r5": "SHAP-derived importances (NOT raw XGBoost feature_importances_)",
+    "miriam_m14_r4": "Top-10 trajectory overlay charts archived at audit-charts/terrorist_attack/",
+    "ml_stats_synthesis": "Arithmetic mean aggregation (not geometric); preserves oppositional cosine signal",
+    "kwame_prebake": "Panel-wide z-score distribution pre-baked at panel-wide-z-distribution.json"
+  },
+  "selected_indicators": [
+    "VC.BTL.DETH",
+    "VC.IDP.NWDS",
+    "DT.TDS.DECT.EX.ZS",
+    "MS.MIL.XPND.GD.ZS",
+    "v2xel_frefair",
+    "SL.UEM.1524.ZS"
+  ],
+  "chosen_window": 3,
+  "shap_importance_normalized": {
+    "VC.BTL.DETH": 0.2976448837151581,
+    "VC.IDP.NWDS": 0.1803964863439781,
+    "DT.TDS.DECT.EX.ZS": 0.2422805179362792,
+    "MS.MIL.XPND.GD.ZS": 0.044991819239180234,
+    "v2xel_frefair": 0.1716795158483708,
+    "SL.UEM.1524.ZS": 0.06300677691703355
+  },
+  "n_countries_scored": 20,
+  "scores": {
+    "Afghanistan": {
+      "cosine_similarity_S": 0.6769199186755953,
+      "risk_score": 83.84599593377978,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "VC.BTL.DETH": {
+          "cosine": 0.9815848413819739,
+          "weight": 0.2976448837151581,
+          "weighted_contribution": 0.29216370596969954
+        },
+        "VC.IDP.NWDS": {
+          "cosine": 0.4381572534352644,
+          "weight": 0.1803964863439781,
+          "weighted_contribution": 0.07904202898584962
+        },
+        "DT.TDS.DECT.EX.ZS": {
+          "cosine": 0.6775492086568503,
+          "weight": 0.2422805179362792,
+          "weighted_contribution": 0.1641569732006978
+        },
+        "MS.MIL.XPND.GD.ZS": {
+          "cosine": -0.9819412476243428,
+          "weight": 0.044991819239180234,
+          "weighted_contribution": -0.04417932311660955
+        },
+        "v2xel_frefair": {
+          "cosine": 0.9954283618008185,
+          "weight": 0.1716795158483708,
+          "weighted_contribution": 0.1708946592157014
+        },
+        "SL.UEM.1524.ZS": {
+          "cosine": 0.2355599690458706,
+          "weight": 0.06300677691703355,
+          "weighted_contribution": 0.014841874420256496
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)",
+      "audit_chart_path": "C:\\Users\\Amin\\Desktop\\trojan\\qgi-6.0\\qgi-data\\reference\\audit-charts\\terrorist_attack\\Afghanistan-vs-terrorist_attack.png"
+    },
+    "Chad": {
+      "cosine_similarity_S": -0.10981091621925942,
+      "risk_score": 44.50945418903703,
+      "zone": "MODERATE",
+      "zone_label": "partial alignment with crisis profile",
+      "per_indicator": {
+        "VC.BTL.DETH": {
+          "cosine": -0.9986853118030489,
+          "weight": 0.2976448837151581,
+          "weighted_contribution": -0.2972535734996549
+        },
+        "VC.IDP.NWDS": {
+          "cosine": -0.9047230798565454,
+          "weight": 0.1803964863439781,
+          "weighted_contribution": -0.1632088647204231
+        },
+        "DT.TDS.DECT.EX.ZS": {
+          "cosine": 0.7347566037753801,
+          "weight": 0.2422805179362792,
+          "weighted_contribution": 0.17801721051980057
+        },
+        "MS.MIL.XPND.GD.ZS": {
+          "cosine": -0.2568532582129173,
+          "weight": 0.044991819239180234,
+          "weighted_contribution": -0.011556295364510062
+        },
+        "v2xel_frefair": {
+          "cosine": 0.9973875515928136,
+          "weight": 0.1716795158483708,
+          "weighted_contribution": 0.1712310119706462
+        },
+        "SL.UEM.1524.ZS": {
+          "cosine": 0.20568572951996747,
+          "weight": 0.06300677691703355,
+          "weighted_contribution": 0.012959594874881892
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)",
+      "audit_chart_path": "C:\\Users\\Amin\\Desktop\\trojan\\qgi-6.0\\qgi-data\\reference\\audit-charts\\terrorist_attack\\Chad-vs-terrorist_attack.png"
+    },
+    "Colombia": {
+      "cosine_similarity_S": -0.6488572778118711,
+      "risk_score": 17.557136109406446,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "VC.BTL.DETH": {
+          "cosine": -0.9985289009257549,
+          "weight": 0.2976448837151581,
+          "weighted_contribution": -0.29720701860227094
+        },
+        "VC.IDP.NWDS": {
+          "cosine": -0.821460067637885,
+          "weight": 0.1803964863439781,
+          "weighted_contribution": -0.14818850987376106
+        },
+        "DT.TDS.DECT.EX.ZS": {
+          "cosine": -0.4469004957617324,
+          "weight": 0.2422805179362792,
+          "weighted_contribution": -0.10827528357913248
+        },
+        "MS.MIL.XPND.GD.ZS": {
+          "cosine": 0.9865386800359296,
+          "weight": 0.044991819239180234,
+          "weighted_contribution": 0.04438616996463601
+        },
+        "v2xel_frefair": {
+          "cosine": -0.994644989058499,
+          "weight": 0.1716795158483708,
+          "weighted_contribution": -0.17076017016257117
+        },
+        "SL.UEM.1524.ZS": {
+          "cosine": 0.49498698342078107,
+          "weight": 0.06300677691703355,
+          "weighted_contribution": 0.031187534441228536
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "India": {
+      "cosine_similarity_S": 0.03383693178725422,
+      "risk_score": 51.69184658936271,
+      "zone": "MODERATE",
+      "zone_label": "partial alignment with crisis profile",
+      "per_indicator": {
+        "VC.BTL.DETH": {
+          "cosine": -0.9905527518193082,
+          "weight": 0.2976448837151581,
+          "weighted_contribution": -0.2948329586289879
+        },
+        "VC.IDP.NWDS": {
+          "cosine": 0.7270408181436631,
+          "weight": 0.1803964863439781,
+          "weighted_contribution": 0.13115560902176798
+        },
+        "DT.TDS.DECT.EX.ZS": {
+          "cosine": 0.8150697420175905,
+          "weight": 0.2422805179362792,
+          "weighted_contribution": 0.19747551925021128
+        },
+        "MS.MIL.XPND.GD.ZS": {
+          "cosine": 0.9737600904230715,
+          "weight": 0.044991819239180234,
+          "weighted_contribution": 0.04381123797064263
+        },
+        "v2xel_frefair": {
+          "cosine": -0.20793425388685538,
+          "weight": 0.1716795158483708,
+          "weighted_contribution": -0.03569805203558755
+        },
+        "SL.UEM.1524.ZS": {
+          "cosine": -0.12815167170706923,
+          "weight": 0.06300677691703355,
+          "weighted_contribution": -0.008074423790792231
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)",
+      "audit_chart_path": "C:\\Users\\Amin\\Desktop\\trojan\\qgi-6.0\\qgi-data\\reference\\audit-charts\\terrorist_attack\\India-vs-terrorist_attack.png"
+    },
+    "Indonesia": {
+      "cosine_similarity_S": -0.5421386750584781,
+      "risk_score": 22.893066247076092,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "VC.BTL.DETH": {
+          "cosine": -0.9990011295590091,
+          "weight": 0.2976448837151581,
+          "weighted_contribution": -0.29734757503890286
+        },
+        "VC.IDP.NWDS": {
+          "cosine": 0.859113601591506,
+          "weight": 0.1803964863439781,
+          "weighted_contribution": 0.15498107509742795
+        },
+        "DT.TDS.DECT.EX.ZS": {
+          "cosine": -0.8169682694310584,
+          "weight": 0.2422805179362792,
+          "weighted_contribution": -0.1979354954552625
+        },
+        "MS.MIL.XPND.GD.ZS": {
+          "cosine": -0.9974870923705238,
+          "weight": 0.044991819239180234,
+          "weighted_contribution": -0.044878758953350084
+        },
+        "v2xel_frefair": {
+          "cosine": -0.997726588937023,
+          "weight": 0.1716795158483708,
+          "weighted_contribution": -0.17128921773775457
+        },
+        "SL.UEM.1524.ZS": {
+          "cosine": 0.22745643771359944,
+          "weight": 0.06300677691703355,
+          "weighted_contribution": 0.014331297029363897
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Iran": {
+      "cosine_similarity_S": 0.052856077996259,
+      "risk_score": 52.642803899812954,
+      "zone": "MODERATE",
+      "zone_label": "partial alignment with crisis profile",
+      "per_indicator": {
+        "VC.BTL.DETH": {
+          "cosine": -0.9972440186277721,
+          "weight": 0.2976448837151581,
+          "weighted_contribution": -0.2968245799601002
+        },
+        "VC.IDP.NWDS": {
+          "cosine": -0.008375355512422232,
+          "weight": 0.1803964863439781,
+          "weighted_contribution": -0.001510884706322639
+        },
+        "DT.TDS.DECT.EX.ZS": {
+          "cosine": 0.6762153404956162,
+          "weight": 0.2422805179362792,
+          "weighted_contribution": 0.16383380293173527
+        },
+        "MS.MIL.XPND.GD.ZS": {
+          "cosine": 0.9697029992498645,
+          "weight": 0.044991819239180234,
+          "weighted_contribution": 0.04362870205794083
+        },
+        "v2xel_frefair": {
+          "cosine": 0.9711936952304572,
+          "weight": 0.1716795158483708,
+          "weighted_contribution": 0.16673406339215507
+        },
+        "SL.UEM.1524.ZS": {
+          "cosine": -0.36511986241483263,
+          "weight": 0.06300677691703355,
+          "weighted_contribution": -0.023005025719149343
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)",
+      "audit_chart_path": "C:\\Users\\Amin\\Desktop\\trojan\\qgi-6.0\\qgi-data\\reference\\audit-charts\\terrorist_attack\\Iran-vs-terrorist_attack.png"
+    },
+    "Iraq": {
+      "cosine_similarity_S": -0.030383490491729174,
+      "risk_score": 48.48082547541354,
+      "zone": "MODERATE",
+      "zone_label": "partial alignment with crisis profile",
+      "per_indicator": {
+        "VC.BTL.DETH": {
+          "cosine": -0.9553573992298376,
+          "weight": 0.2976448837151581,
+          "weighted_contribution": -0.2843572420001809
+        },
+        "VC.IDP.NWDS": {
+          "cosine": -0.745910180209751,
+          "weight": 0.1803964863439781,
+          "weighted_contribution": -0.13455957563804258
+        },
+        "DT.TDS.DECT.EX.ZS": {
+          "cosine": 0.7095473155661108,
+          "weight": 0.2422805179362792,
+          "weighted_contribution": 0.17190949111565387
+        },
+        "MS.MIL.XPND.GD.ZS": {
+          "cosine": 0.9802380098685786,
+          "weight": 0.044991819239180234,
+          "weighted_contribution": 0.044102691351380854
+        },
+        "v2xel_frefair": {
+          "cosine": 0.9997086302558459,
+          "weight": 0.1716795158483708,
+          "weighted_contribution": 0.17162949363176155
+        },
+        "SL.UEM.1524.ZS": {
+          "cosine": 0.014151668936694806,
+          "weight": 0.06300677691703355,
+          "weighted_contribution": 0.000891651047698043
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)",
+      "audit_chart_path": "C:\\Users\\Amin\\Desktop\\trojan\\qgi-6.0\\qgi-data\\reference\\audit-charts\\terrorist_attack\\Iraq-vs-terrorist_attack.png"
+    },
+    "Kenya": {
+      "cosine_similarity_S": -0.3514208633463356,
+      "risk_score": 32.42895683268322,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "VC.BTL.DETH": {
+          "cosine": -0.9987715526148567,
+          "weight": 0.2976448837151581,
+          "weighted_contribution": -0.297279242636057
+        },
+        "VC.IDP.NWDS": {
+          "cosine": 0.2191884242772017,
+          "weight": 0.1803964863439781,
+          "weighted_contribution": 0.03954082158688029
+        },
+        "DT.TDS.DECT.EX.ZS": {
+          "cosine": -0.986636919174996,
+          "weight": 0.2422805179362792,
+          "weighted_contribution": -0.23904290379277285
+        },
+        "MS.MIL.XPND.GD.ZS": {
+          "cosine": -0.9967452541595042,
+          "weight": 0.044991819239180234,
+          "weighted_contribution": -0.044845382302655175
+        },
+        "v2xel_frefair": {
+          "cosine": 0.9978674252128648,
+          "weight": 0.1716795158483708,
+          "weighted_contribution": 0.17131339644140497
+        },
+        "SL.UEM.1524.ZS": {
+          "cosine": 0.2998478621076186,
+          "weight": 0.06300677691703355,
+          "weighted_contribution": 0.018892447356864163
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Mali": {
+      "cosine_similarity_S": -0.057325480318653296,
+      "risk_score": 47.13372598406734,
+      "zone": "MODERATE",
+      "zone_label": "partial alignment with crisis profile",
+      "per_indicator": {
+        "VC.BTL.DETH": {
+          "cosine": -0.9997377315971303,
+          "weight": 0.2976448837151581,
+          "weighted_contribution": -0.2975668208668838
+        },
+        "VC.IDP.NWDS": {
+          "cosine": -0.8171063978163702,
+          "weight": 0.1803964863439781,
+          "weighted_contribution": -0.14740312313525794
+        },
+        "DT.TDS.DECT.EX.ZS": {
+          "cosine": 0.6655529193157395,
+          "weight": 0.2422805179362792,
+          "weighted_contribution": 0.16125050600582
+        },
+        "MS.MIL.XPND.GD.ZS": {
+          "cosine": 0.9674386091753767,
+          "weight": 0.044991819239180234,
+          "weighted_contribution": 0.04352682302902248
+        },
+        "v2xel_frefair": {
+          "cosine": 0.9622660363144784,
+          "weight": 0.1716795158483708,
+          "weighted_contribution": 0.16520136723180043
+        },
+        "SL.UEM.1524.ZS": {
+          "cosine": 0.2803788462328041,
+          "weight": 0.06300677691703355,
+          "weighted_contribution": 0.01766576741684554
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)",
+      "audit_chart_path": "C:\\Users\\Amin\\Desktop\\trojan\\qgi-6.0\\qgi-data\\reference\\audit-charts\\terrorist_attack\\Mali-vs-terrorist_attack.png"
+    },
+    "Mozambique": {
+      "cosine_similarity_S": -0.3562561397980526,
+      "risk_score": 32.18719301009737,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "VC.BTL.DETH": {
+          "cosine": -0.9646444538696615,
+          "weight": 0.2976448837151581,
+          "weighted_contribution": -0.2871214862985076
+        },
+        "VC.IDP.NWDS": {
+          "cosine": -0.12497048832555148,
+          "weight": 0.1803964863439781,
+          "weighted_contribution": -0.022544236990620622
+        },
+        "DT.TDS.DECT.EX.ZS": {
+          "cosine": -0.8287423788295384,
+          "weight": 0.2422805179362792,
+          "weighted_contribution": -0.20078813277856467
+        },
+        "MS.MIL.XPND.GD.ZS": {
+          "cosine": -0.7045556096566634,
+          "weight": 0.044991819239180234,
+          "weighted_contribution": -0.03169923863362303
+        },
+        "v2xel_frefair": {
+          "cosine": 0.9899496336253661,
+          "weight": 0.1716795158483708,
+          "weighted_contribution": 0.1699540738150749
+        },
+        "SL.UEM.1524.ZS": {
+          "cosine": 0.2530343856373066,
+          "weight": 0.06300677691703355,
+          "weighted_contribution": 0.015942881088188417
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Myanmar": {
+      "cosine_similarity_S": 0.11920053687333801,
+      "risk_score": 55.960026843666896,
+      "zone": "MODERATE",
+      "zone_label": "partial alignment with crisis profile",
+      "per_indicator": {
+        "VC.BTL.DETH": {
+          "cosine": -0.9960261908067704,
+          "weight": 0.2976448837151581,
+          "weighted_contribution": -0.29646209973993304
+        },
+        "VC.IDP.NWDS": {
+          "cosine": 0.4062218114127041,
+          "weight": 0.1803964863439781,
+          "weighted_contribution": 0.07328098745513792
+        },
+        "DT.TDS.DECT.EX.ZS": {
+          "cosine": 0.6924803482711173,
+          "weight": 0.2422805179362792,
+          "weighted_contribution": 0.16777449743982129
+        },
+        "MS.MIL.XPND.GD.ZS": {
+          "cosine": 0.8563427293369587,
+          "weight": 0.044991819239180234,
+          "weighted_contribution": 0.03852841728511469
+        },
+        "v2xel_frefair": {
+          "cosine": 0.6857665008620938,
+          "weight": 0.1716795158483708,
+          "weighted_contribution": 0.11773206085303561
+        },
+        "SL.UEM.1524.ZS": {
+          "cosine": 0.29118571807474275,
+          "weight": 0.06300677691703355,
+          "weighted_contribution": 0.01834667358016154
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)",
+      "audit_chart_path": "C:\\Users\\Amin\\Desktop\\trojan\\qgi-6.0\\qgi-data\\reference\\audit-charts\\terrorist_attack\\Myanmar-vs-terrorist_attack.png"
+    },
+    "Niger": {
+      "cosine_similarity_S": -0.1517517727102122,
+      "risk_score": 42.41241136448939,
+      "zone": "MODERATE",
+      "zone_label": "partial alignment with crisis profile",
+      "per_indicator": {
+        "VC.BTL.DETH": {
+          "cosine": -0.9931591926918094,
+          "weight": 0.2976448837151581,
+          "weighted_contribution": -0.29560875241939394
+        },
+        "VC.IDP.NWDS": {
+          "cosine": -0.9315022375431394,
+          "weight": 0.1803964863439781,
+          "weighted_contribution": -0.168039730674336
+        },
+        "DT.TDS.DECT.EX.ZS": {
+          "cosine": 0.7003331599197827,
+          "weight": 0.2422805179362792,
+          "weighted_contribution": 0.169677080713316
+        },
+        "MS.MIL.XPND.GD.ZS": {
+          "cosine": -0.7053900604605406,
+          "weight": 0.044991819239180234,
+          "weighted_contribution": -0.03173678209335506
+        },
+        "v2xel_frefair": {
+          "cosine": 0.9414145588569462,
+          "weight": 0.1716795158483708,
+          "weighted_contribution": 0.1616215956771681
+        },
+        "SL.UEM.1524.ZS": {
+          "cosine": 0.19576967256444516,
+          "weight": 0.06300677691703355,
+          "weighted_contribution": 0.012334816086388698
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Nigeria": {
+      "cosine_similarity_S": 0.26875664415121203,
+      "risk_score": 63.437832207560604,
+      "zone": "MODERATE",
+      "zone_label": "partial alignment with crisis profile",
+      "per_indicator": {
+        "VC.BTL.DETH": {
+          "cosine": -0.6235237326273853,
+          "weight": 0.2976448837151581,
+          "weighted_contribution": -0.18558864889151944
+        },
+        "VC.IDP.NWDS": {
+          "cosine": 0.8053815285902884,
+          "weight": 0.1803964863439781,
+          "weighted_contribution": 0.14528799792403016
+        },
+        "DT.TDS.DECT.EX.ZS": {
+          "cosine": 0.7132191921447805,
+          "weight": 0.2422805179362792,
+          "weighted_contribution": 0.17279911527493205
+        },
+        "MS.MIL.XPND.GD.ZS": {
+          "cosine": -0.9980241064535581,
+          "weight": 0.044991819239180234,
+          "weighted_contribution": -0.04490292019390286
+        },
+        "v2xel_frefair": {
+          "cosine": 0.9734681643002091,
+          "weight": 0.1716795158483708,
+          "weighted_contribution": 0.16712454314086217
+        },
+        "SL.UEM.1524.ZS": {
+          "cosine": 0.22277852611462906,
+          "weight": 0.06300677691703355,
+          "weighted_contribution": 0.014036556896809965
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)",
+      "audit_chart_path": "C:\\Users\\Amin\\Desktop\\trojan\\qgi-6.0\\qgi-data\\reference\\audit-charts\\terrorist_attack\\Nigeria-vs-terrorist_attack.png"
+    },
+    "Pakistan": {
+      "cosine_similarity_S": -0.28467198512109493,
+      "risk_score": 35.766400743945255,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "VC.BTL.DETH": {
+          "cosine": -0.9983616580354582,
+          "weight": 0.2976448837151581,
+          "weighted_contribution": -0.2971572396116364
+        },
+        "VC.IDP.NWDS": {
+          "cosine": -0.2850680161564484,
+          "weight": 0.1803964863439781,
+          "weighted_contribution": -0.05142526848367167
+        },
+        "DT.TDS.DECT.EX.ZS": {
+          "cosine": -0.6959482159755022,
+          "weight": 0.2422805179362792,
+          "weighted_contribution": -0.16861469422337416
+        },
+        "MS.MIL.XPND.GD.ZS": {
+          "cosine": 0.9998569947652597,
+          "weight": 0.044991819239180234,
+          "weighted_contribution": 0.044985385173508544
+        },
+        "v2xel_frefair": {
+          "cosine": 0.9924745728854855,
+          "weight": 0.1716795158483708,
+          "weighted_contribution": 0.17038755416479873
+        },
+        "SL.UEM.1524.ZS": {
+          "cosine": 0.2722290950045889,
+          "weight": 0.06300677691703355,
+          "weighted_contribution": 0.017152277859280064
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Philippines": {
+      "cosine_similarity_S": 0.15126545054807025,
+      "risk_score": 57.563272527403505,
+      "zone": "MODERATE",
+      "zone_label": "partial alignment with crisis profile",
+      "per_indicator": {
+        "VC.BTL.DETH": {
+          "cosine": -0.9970007568483308,
+          "weight": 0.2976448837151581,
+          "weighted_contribution": -0.29675217433604606
+        },
+        "VC.IDP.NWDS": {
+          "cosine": 0.7905843078827368,
+          "weight": 0.1803964863439781,
+          "weighted_contribution": 0.1426186313007315
+        },
+        "DT.TDS.DECT.EX.ZS": {
+          "cosine": 0.6914896240688072,
+          "weight": 0.2422805179362792,
+          "weighted_contribution": 0.1675344642669536
+        },
+        "MS.MIL.XPND.GD.ZS": {
+          "cosine": -0.9940400129921751,
+          "weight": 0.044991819239180234,
+          "weighted_contribution": -0.044723668581056315
+        },
+        "v2xel_frefair": {
+          "cosine": 0.9873400517573284,
+          "weight": 0.1716795158483708,
+          "weighted_contribution": 0.16950606206340352
+        },
+        "SL.UEM.1524.ZS": {
+          "cosine": 0.20763061489894014,
+          "weight": 0.06300677691703355,
+          "weighted_contribution": 0.013082135834084022
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)",
+      "audit_chart_path": "C:\\Users\\Amin\\Desktop\\trojan\\qgi-6.0\\qgi-data\\reference\\audit-charts\\terrorist_attack\\Philippines-vs-terrorist_attack.png"
+    },
+    "Russia": {
+      "cosine_similarity_S": -0.14338659662264003,
+      "risk_score": 42.830670168868004,
+      "zone": "MODERATE",
+      "zone_label": "partial alignment with crisis profile",
+      "per_indicator": {
+        "VC.BTL.DETH": {
+          "cosine": -0.9988886505976877,
+          "weight": 0.2976448837151581,
+          "weighted_contribution": -0.29731409625154
+        },
+        "VC.IDP.NWDS": {
+          "cosine": -0.8271087468955365,
+          "weight": 0.1803964863439781,
+          "weighted_contribution": -0.14920751176432548
+        },
+        "DT.TDS.DECT.EX.ZS": {
+          "cosine": 0.2582494973425606,
+          "weight": 0.2422805179362792,
+          "weighted_contribution": 0.06256882197293934
+        },
+        "MS.MIL.XPND.GD.ZS": {
+          "cosine": 0.9953040565145671,
+          "weight": 0.044991819239180234,
+          "weighted_contribution": 0.04478054019872623
+        },
+        "v2xel_frefair": {
+          "cosine": 0.9947768429249377,
+          "weight": 0.1716795158483708,
+          "weighted_contribution": 0.17078280677052413
+        },
+        "SL.UEM.1524.ZS": {
+          "cosine": 0.39682782828201385,
+          "weight": 0.06300677691703355,
+          "weighted_contribution": 0.02500284245103574
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Somalia": {
+      "cosine_similarity_S": 0.5580826176880412,
+      "risk_score": 77.90413088440206,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "VC.BTL.DETH": {
+          "cosine": 0.9078602989837453,
+          "weight": 0.2976448837151581,
+          "weighted_contribution": 0.27021997312062557
+        },
+        "VC.IDP.NWDS": {
+          "cosine": 0.5286612299700967,
+          "weight": 0.1803964863439781,
+          "weighted_contribution": 0.09536862835289121
+        },
+        "DT.TDS.DECT.EX.ZS": {
+          "cosine": 0.3061992782930303,
+          "weight": 0.2422805179362792,
+          "weighted_contribution": 0.07418611973655027
+        },
+        "MS.MIL.XPND.GD.ZS": {
+          "cosine": -0.9889058248647417,
+          "weight": 0.044991819239180234,
+          "weighted_contribution": -0.04449267211688688
+        },
+        "v2xel_frefair": {
+          "cosine": 0.9973103224092063,
+          "weight": 0.1716795158483708,
+          "weighted_contribution": 0.17121775330179512
+        },
+        "SL.UEM.1524.ZS": {
+          "cosine": -0.13359173598131738,
+          "weight": 0.06300677691703355,
+          "weighted_contribution": -0.008417184706934108
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)",
+      "audit_chart_path": "C:\\Users\\Amin\\Desktop\\trojan\\qgi-6.0\\qgi-data\\reference\\audit-charts\\terrorist_attack\\Somalia-vs-terrorist_attack.png"
+    },
+    "Thailand": {
+      "cosine_similarity_S": -0.16427841754016395,
+      "risk_score": 41.7860791229918,
+      "zone": "MODERATE",
+      "zone_label": "partial alignment with crisis profile",
+      "per_indicator": {
+        "VC.BTL.DETH": {
+          "cosine": -0.9991313188810506,
+          "weight": 0.2976448837151581,
+          "weighted_contribution": -0.29738632522452285
+        },
+        "VC.IDP.NWDS": {
+          "cosine": -0.8360652734394213,
+          "weight": 0.1803964863439781,
+          "weighted_contribution": -0.15082323768268888
+        },
+        "DT.TDS.DECT.EX.ZS": {
+          "cosine": 0.600480787219514,
+          "weight": 0.2422805179362792,
+          "weighted_contribution": 0.14548479613832851
+        },
+        "MS.MIL.XPND.GD.ZS": {
+          "cosine": -0.9924583105959213,
+          "weight": 0.044991819239180234,
+          "weighted_contribution": -0.04465250491275388
+        },
+        "v2xel_frefair": {
+          "cosine": 0.9825384573268445,
+          "weight": 0.1716795158483708,
+          "weighted_contribution": 0.1686817266562778
+        },
+        "SL.UEM.1524.ZS": {
+          "cosine": 0.22881867936491382,
+          "weight": 0.06300677691703355,
+          "weighted_contribution": 0.014417127485195353
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "The Democratic Republic of the Congo": {
+      "cosine_similarity_S": -0.11109452701019445,
+      "risk_score": 44.44527364949028,
+      "zone": "MODERATE",
+      "zone_label": "partial alignment with crisis profile",
+      "per_indicator": {
+        "VC.BTL.DETH": {
+          "cosine": -0.9721015252800971,
+          "weight": 0.2976448837151581,
+          "weighted_contribution": -0.28934104545132233
+        },
+        "VC.IDP.NWDS": {
+          "cosine": -0.7041184334524878,
+          "weight": 0.1803964863439781,
+          "weighted_contribution": -0.12702049136485496
+        },
+        "DT.TDS.DECT.EX.ZS": {
+          "cosine": 0.6710277884053499,
+          "weight": 0.2422805179362792,
+          "weighted_contribution": 0.16257696012448414
+        },
+        "MS.MIL.XPND.GD.ZS": {
+          "cosine": -0.9995506357825407,
+          "weight": 0.044991819239180234,
+          "weighted_contribution": -0.04497160152553575
+        },
+        "v2xel_frefair": {
+          "cosine": 0.9994030432488304,
+          "weight": 0.1716795158483708,
+          "weighted_contribution": 0.17157703060234758
+        },
+        "SL.UEM.1524.ZS": {
+          "cosine": 0.25528397724369994,
+          "weight": 0.06300677691703355,
+          "weighted_contribution": 0.01608462060468687
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Turkiye": {
+      "cosine_similarity_S": -0.3839264750298295,
+      "risk_score": 30.803676248508527,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "VC.BTL.DETH": {
+          "cosine": -0.9944522139815992,
+          "weight": 0.2976448837151581,
+          "weighted_contribution": -0.29599361359083465
+        },
+        "VC.IDP.NWDS": {
+          "cosine": -0.8706374550125581,
+          "weight": 0.1803964863439781,
+          "weighted_contribution": -0.15705993776372876
+        },
+        "DT.TDS.DECT.EX.ZS": {
+          "cosine": -0.580368972267683,
+          "weight": 0.2422805179362792,
+          "weighted_contribution": -0.1406120951951603
+        },
+        "MS.MIL.XPND.GD.ZS": {
+          "cosine": 0.9402130374625325,
+          "weight": 0.044991819239180234,
+          "weighted_contribution": 0.04230189502783485
+        },
+        "v2xel_frefair": {
+          "cosine": 0.9930113814102842,
+          "weight": 0.1716795158483708,
+          "weighted_contribution": 0.17047971319243946
+        },
+        "SL.UEM.1524.ZS": {
+          "cosine": -0.048287451751203865,
+          "weight": 0.06300677691703355,
+          "weighted_contribution": -0.0030424367003801227
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    }
+  },
+  "top_k_for_audit_charts": [
+    "Afghanistan",
+    "Somalia",
+    "Nigeria",
+    "Philippines",
+    "Myanmar",
+    "Iran",
+    "India",
+    "Iraq",
+    "Mali",
+    "Chad"
+  ]
+}

@@ -1,0 +1,1157 @@
+{
+  "schema_version": 1,
+  "generator": "manually authored from v2 audit + T7 \u00a74 + \u00a76 dispositions",
+  "generated": "2026-05-12",
+  "purpose": "Per T7 \u00a74 + spec \u00a78.2 + charter A6: this JSON encodes the v0.2 per-indicator transform + demean dispatch that the recipe-engine MUST honor before computing canonical_length on the indicator series. canonical_length values themselves are LEFT NULL pending the recipe-aggregator pipeline re-run on the transformed substrate; this file documents the WHICH TRANSFORM dispatch table that re-run must use, NOT the resulting canonical_length values.",
+  "binding_clause": "T8 v6 (qgi-ml `8477d85`) calls load_canonical_length_config() with required=True under --rule-v2-evaluation mode. The script validates the file is present + parses; it does NOT yet consume the per-indicator values (that consumption lives downstream in the recipe-aggregator pipeline pass that produces canonical_length-on-transformed-series). The T11 falsification report MUST cite the recipe-aggregator's transformed-series re-run before claiming canonical_length parity between v0.1a (raw panel) and v0.2 (transformed panel) is established.",
+  "dispatch_summary": {
+    "total_indicators": 109,
+    "by_transform": {
+      "first_diff": 105,
+      "pass_through": 3,
+      "log_diff": 1
+    },
+    "by_demean_applied": {
+      "True": 15,
+      "False": 94
+    },
+    "n_surgical_overrides": 2,
+    "surgical_overrides_indicators": [
+      "FP.CPI.TOTL.ZG",
+      "NY.GDP.PCAP.CD"
+    ]
+  },
+  "dispatch_table_source": "qgi-pipeline/batch/dscdi-finder/src/dscdi_finder.py \u2014 CLASS_A_SEVERE_CSD + OUTLIER_NO_TRANSFORM + OUTLIER_LOG_DIFFERENCE + determine_transform_and_demean()",
+  "indicators": {
+    "AG.PRD.FOOD.XD": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 193
+    },
+    "BM.KLT.DINV.WD.GD.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "BM.TRF.PWKR.CD.DT": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 199
+    },
+    "BN.CAB.XOKA.GD.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 185
+    },
+    "BX.KLT.DINV.WD.GD.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 195
+    },
+    "CC.EST": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": true,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 202
+    },
+    "DT.DOD.DECT.GN.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 117
+    },
+    "DT.TDS.DECT.EX.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 113
+    },
+    "EG.ELC.ACCS.RU.ZS": {
+      "v2_baseline_classification": "ambiguous",
+      "effective_classification": "ambiguous",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 149
+    },
+    "EG.ELC.ACCS.UR.ZS": {
+      "v2_baseline_classification": "ambiguous",
+      "effective_classification": "ambiguous",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 166
+    },
+    "EG.IMP.CONS.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 137
+    },
+    "EN.GHG.CO2.PC.CE.AR5": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 201
+    },
+    "FA-01": {
+      "v2_baseline_classification": "ambiguous",
+      "effective_classification": "ambiguous",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 163
+    },
+    "FA-02": {
+      "v2_baseline_classification": "ambiguous",
+      "effective_classification": "ambiguous",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 133
+    },
+    "FA-03": {
+      "v2_baseline_classification": "ambiguous",
+      "effective_classification": "ambiguous",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 157
+    },
+    "FA-04": {
+      "v2_baseline_classification": "ambiguous",
+      "effective_classification": "ambiguous",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 103
+    },
+    "FA-05": {
+      "v2_baseline_classification": "ambiguous",
+      "effective_classification": "ambiguous",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 151
+    },
+    "FB.AST.NPER.ZS": {
+      "v2_baseline_classification": "ambiguous",
+      "effective_classification": "ambiguous",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 109
+    },
+    "FI.RES.TOTL.CD": {
+      "v2_baseline_classification": "ambiguous",
+      "effective_classification": "ambiguous",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 176
+    },
+    "FI.RES.TOTL.MO": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 168
+    },
+    "FM.LBL.BMNY.GD.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 163
+    },
+    "FP.CPI.TOTL.ZG": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(0)",
+      "transform": "pass_through",
+      "demean_applied": true,
+      "canonical_length_value": 2,
+      "surgical_override": {
+        "v2_baseline_classification": "I(1)",
+        "override_source": "T6 audit per T7 \u00a76 Category 1",
+        "rationale": "T6 demeaned-substrate audit FLIP_DETECTED; Class A + demean produces stationary residual"
+      },
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 185
+    },
+    "FR.INR.LEND": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 127
+    },
+    "GC.DOD.TOTL.GD.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 51
+    },
+    "GC.REV.XGRT.GD.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 134
+    },
+    "GC.TAX.TOTL.GD.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 134
+    },
+    "GC.XPN.TOTL.GD.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 133
+    },
+    "GE.EST": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 202
+    },
+    "IT.CEL.SETS.P2": {
+      "v2_baseline_classification": "ambiguous",
+      "effective_classification": "ambiguous",
+      "transform": "first_diff",
+      "demean_applied": true,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 212
+    },
+    "IT.NET.USER.ZS": {
+      "v2_baseline_classification": "ambiguous",
+      "effective_classification": "ambiguous",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 2,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 203
+    },
+    "MS.MIL.MPRT.KD": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 148
+    },
+    "MS.MIL.TOTL.TF.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 165
+    },
+    "MS.MIL.XPND.GD.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": true,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 158
+    },
+    "MS.MIL.XPRT.KD": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 51
+    },
+    "NE.CON.GOVT.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "NE.CON.PRVT.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 178
+    },
+    "NE.EXP.GNFS.CD": {
+      "v2_baseline_classification": "ambiguous",
+      "effective_classification": "ambiguous",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 180
+    },
+    "NE.EXP.GNFS.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": true,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 179
+    },
+    "NE.GDI.TOTL.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 172
+    },
+    "NE.IMP.GNFS.CD": {
+      "v2_baseline_classification": "ambiguous",
+      "effective_classification": "ambiguous",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 180
+    },
+    "NE.IMP.GNFS.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": true,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 179
+    },
+    "NV.AGR.TOTL.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 197
+    },
+    "NV.IND.MANF.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 191
+    },
+    "NV.IND.TOTL.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 200
+    },
+    "NV.SRV.TOTL.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 197
+    },
+    "NY.GDP.DEFL.KD.ZG": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 209
+    },
+    "NY.GDP.MKTP.CD": {
+      "v2_baseline_classification": "ambiguous",
+      "effective_classification": "ambiguous",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 210
+    },
+    "NY.GDP.MKTP.KD": {
+      "v2_baseline_classification": "ambiguous",
+      "effective_classification": "ambiguous",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 207
+    },
+    "NY.GDP.MKTP.KD.ZG": {
+      "v2_baseline_classification": "I(0)",
+      "effective_classification": "I(0)",
+      "transform": "pass_through",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 209
+    },
+    "NY.GDP.PCAP.CD": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(0)",
+      "transform": "pass_through",
+      "demean_applied": true,
+      "canonical_length_value": 12,
+      "surgical_override": {
+        "v2_baseline_classification": "I(1)",
+        "override_source": "T6 audit per T7 \u00a76 Category 1",
+        "rationale": "T6 demeaned-substrate audit FLIP_DETECTED; Class A + demean produces stationary residual"
+      },
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 210
+    },
+    "NY.GNP.PCAP.CD": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 2,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 201
+    },
+    "PV.EST": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 204
+    },
+    "RL.EST": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 204
+    },
+    "RQ.EST": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 202
+    },
+    "SE.PRM.ENRR": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": true,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 195
+    },
+    "SH.DYN.MORT": {
+      "v2_baseline_classification": "ambiguous",
+      "effective_classification": "ambiguous",
+      "transform": "first_diff",
+      "demean_applied": true,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 195
+    },
+    "SI.POV.GINI": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 72
+    },
+    "SL.EMP.TOTL.SP.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 186
+    },
+    "SL.TLF.CACT.FE.ZS": {
+      "v2_baseline_classification": "ambiguous",
+      "effective_classification": "ambiguous",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 186
+    },
+    "SL.UEM.1524.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 186
+    },
+    "SL.UEM.TOTL.ZS": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": true,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 186
+    },
+    "SM.POP.NETM": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 215
+    },
+    "SM.POP.RHCR.EO": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 187
+    },
+    "SP.DYN.LE00.IN": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": true,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 215
+    },
+    "SP.DYN.TFRT.IN": {
+      "v2_baseline_classification": "ambiguous",
+      "effective_classification": "ambiguous",
+      "transform": "first_diff",
+      "demean_applied": true,
+      "canonical_length_value": 4,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 215
+    },
+    "SP.POP.TOTL": {
+      "v2_baseline_classification": "I(2)_or_higher",
+      "effective_classification": "I(2)_or_higher",
+      "transform": "log_diff",
+      "demean_applied": true,
+      "canonical_length_value": 6,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 215
+    },
+    "TX.VAL.TECH.MF.ZS": {
+      "v2_baseline_classification": "ambiguous",
+      "effective_classification": "ambiguous",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 134
+    },
+    "VA.EST": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 202
+    },
+    "VC.BTL.DETH": {
+      "v2_baseline_classification": "ambiguous",
+      "effective_classification": "ambiguous",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 38
+    },
+    "VC.IDP.NWDS": {
+      "v2_baseline_classification": "ambiguous",
+      "effective_classification": "ambiguous",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 2,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 66
+    },
+    "v2cacamps": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "v2clkill": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 171
+    },
+    "v2cltort": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "v2cseeorgs": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 174
+    },
+    "v2csprtcpt": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "v2csreprss": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "v2elintmon": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 113
+    },
+    "v2ex_hosw": {
+      "v2_baseline_classification": "ambiguous",
+      "effective_classification": "ambiguous",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 121
+    },
+    "v2exaphogp": {
+      "v2_baseline_classification": "ambiguous",
+      "effective_classification": "ambiguous",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 64
+    },
+    "v2excrptps": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "v2exl_legitlead": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "v2exremhog": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 125
+    },
+    "v2jureform": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "v2lgbicam": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 158
+    },
+    "v2lgqstexp": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 167
+    },
+    "v2mecenefm": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "v2pepwrgen": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "v2pepwrort": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 169
+    },
+    "v2pepwrses": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "v2pepwrsoc": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "v2psprlnks": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 173
+    },
+    "v2stfisccap": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 168
+    },
+    "v2svdomaut": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 172
+    },
+    "v2x_clphy": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "v2x_clpol": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "v2x_clpriv": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "v2x_corr": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "v2x_freexp_altinf": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "v2x_gender": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "v2x_jucon": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "v2x_libdem": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": true,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "v2x_neopat": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "v2x_partip": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "v2x_polyarchy": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": true,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "v2x_regime": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 159
+    },
+    "v2x_rule": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "v2xeg_eqprotec": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    },
+    "v2xel_frefair": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 173
+    },
+    "v2xlg_legcon": {
+      "v2_baseline_classification": "I(1)",
+      "effective_classification": "I(1)",
+      "transform": "first_diff",
+      "demean_applied": false,
+      "canonical_length_value": 1,
+      "surgical_override": null,
+      "canonical_length_computation_status": "ok",
+      "canonical_length_n_countries_contributing": 175
+    }
+  },
+  "provenance": {
+    "charter_path": "docs/specs/internal/ops/cascade-track/phase-5-v0.2-charter.md",
+    "charter_commit_sha": "bcf656c",
+    "charter_section": "\u00a7157-160 (amendment A6)",
+    "spec_path": "docs/specs/internal/ops/cascade-track/phase-5-v0.2-spec.md",
+    "spec_commit_sha": "a2f5db4",
+    "spec_section": "\u00a78.2",
+    "phase_doc_path": "docs/specs/internal/ops/cascade-track/phase-5-v0.2.md",
+    "phase_doc_commit_sha": "660e342",
+    "phase_doc_section": "\u00a74 + \u00a76 (surgical dispositions)",
+    "v2_baseline_path": "qgi-data/reference/indicator-stationarity-audit-v2.json",
+    "v2_baseline_generator": "qgi-ml/scripts/run_i5_substrate_audit.py",
+    "t6_audit_path": "qgi-data/reference/audit-v2-demeaned-spotcheck.json",
+    "t6_audit_commit_sha": "dc657cd",
+    "consumer_script": "qgi-ml/scripts/validate_weight_matrix.py",
+    "consumer_script_version": "v6",
+    "consumer_script_commit_sha": "8477d85",
+    "downstream_recipe_aggregator": "qgi-pipeline/lambdas/pipeline-recipe-engine-finalize/lambda_function.py (M1 corr-weighted median canonical_length)"
+  },
+  "follow_up_required": [
+    "T11 falsification report MUST cite this commit SHA as the canonical_length values' provenance."
+  ],
+  "canonical_length_computed_at": "2026-05-12",
+  "canonical_length_computation": {
+    "method": "panel-pooled ACF, weighted by per-lag valid-pair counts, threshold = 1/e ~= 0.368, integer years",
+    "max_lag": 30,
+    "min_obs_per_country": 15,
+    "acf_decay_threshold": 0.36787944117144233,
+    "n_success": 109,
+    "n_did_not_decay": 0,
+    "n_insufficient_data": 0
+  }
+}

@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "generator": "qgi-ml/scripts/generate_indicator_allow_list.py",
+  "purpose": "Allow-list of indicator numeric_ids permitted in qgi_data.recipes_aggregated.indicator_fingerprint. Read by pipeline-recipe-engine-finalize Lambda's write_recipes_aggregated_table() per #591 Option D. The catalog IS the contract: every new indicator must be curated into docs/specs/methodology/indicator-catalog-detailed.md with a parseable API code before its numeric_id appears here.",
+  "sources": {
+    "catalog_markdown": "docs/specs/methodology/indicator-catalog-detailed.md",
+    "catalog_sha256": "dfc54fb8614dba5328e96053bc05067e006f040e4570db66cc22bbca5735c22f",
+    "indicator_map_s3_key": "s3://qgi-data-lake-771606957899/pipeline-A-indicator-extractor/input/indicator_map.csv"
+  },
+  "counts": {
+    "catalog_entries_total": 142,
+    "catalog_entries_with_api_code": 61,
+    "catalog_entries_resolved_to_numeric_id": 61,
+    "catalog_entries_pending_ingestion": 0,
+    "numeric_ids_in_allow_list": 61
+  },
+  "resolved": [
+    {
+      "catalog_code": "VD-01",
+      "api_code": "v2x_polyarchy",
+      "numeric_id": 276
+    },
+    {
+      "catalog_code": "VD-02",
+      "api_code": "v2x_libdem",
+      "numeric_id": 277
+    },
+    {
+      "catalog_code": "VD-03",
+      "api_code": "v2x_jucon",
+      "numeric_id": 278
+    },
+    {
+      "catalog_code": "VD-04",
+      "api_code": "v2xlg_legcon",
+      "numeric_id": 279
+    },
+    {
+      "catalog_code": "VD-05",
+      "api_code": "v2csreprss",
+      "numeric_id": 280
+    },
+    {
+      "catalog_code": "VD-06",
+      "api_code": "v2cacamps",
+      "numeric_id": 281
+    },
+    {
+      "catalog_code": "VD-07",
+      "api_code": "v2excrptps",
+      "numeric_id": 282
+    },
+    {
+      "catalog_code": "VD-08",
+      "api_code": "v2x_freexp_altinf",
+      "numeric_id": 283
+    },
+    {
+      "catalog_code": "VD-09",
+      "api_code": "v2x_partip",
+      "numeric_id": 284
+    },
+    {
+      "catalog_code": "VD-10",
+      "api_code": "v2x_regime",
+      "numeric_id": 285
+    },
+    {
+      "catalog_code": "VD-11",
+      "api_code": "v2stfisccap",
+      "numeric_id": 286
+    },
+    {
+      "catalog_code": "VD-12",
+      "api_code": "v2x_clphy",
+      "numeric_id": 287
+    },
+    {
+      "catalog_code": "VD-13",
+      "api_code": "v2clkill",
+      "numeric_id": 288
+    },
+    {
+      "catalog_code": "VD-14",
+      "api_code": "v2cltort",
+      "numeric_id": 289
+    },
+    {
+      "catalog_code": "VD-15",
+      "api_code": "v2x_clpol",
+      "numeric_id": 290
+    },
+    {
+      "catalog_code": "VD-16",
+      "api_code": "v2x_clpriv",
+      "numeric_id": 291
+    },
+    {
+      "catalog_code": "VD-17",
+      "api_code": "v2mecenefm",
+      "numeric_id": 292
+    },
+    {
+      "catalog_code": "VD-18",
+      "api_code": "v2x_corr",
+      "numeric_id": 293
+    },
+    {
+      "catalog_code": "VD-19",
+      "api_code": "v2jureform",
+      "numeric_id": 294
+    },
+    {
+      "catalog_code": "VD-20",
+      "api_code": "v2lgbicam",
+      "numeric_id": 295
+    },
+    {
+      "catalog_code": "VD-21",
+      "api_code": "v2exl_legitlead",
+      "numeric_id": 296
+    },
+    {
+      "catalog_code": "VD-22",
+      "api_code": "v2exremhog",
+      "numeric_id": 297
+    },
+    {
+      "catalog_code": "VD-23",
+      "api_code": "v2xeg_eqprotec",
+      "numeric_id": 298
+    },
+    {
+      "catalog_code": "VD-24",
+      "api_code": "v2cseeorgs",
+      "numeric_id": 299
+    },
+    {
+      "catalog_code": "VD-25",
+      "api_code": "v2csprtcpt",
+      "numeric_id": 300
+    },
+    {
+      "catalog_code": "VD-26",
+      "api_code": "v2x_gender",
+      "numeric_id": 301
+    },
+    {
+      "catalog_code": "VD-27",
+      "api_code": "v2pepwrgen",
+      "numeric_id": 302
+    },
+    {
+      "catalog_code": "VD-28",
+      "api_code": "v2pepwrsoc",
+      "numeric_id": 303
+    },
+    {
+      "catalog_code": "VD-29",
+      "api_code": "v2pepwrort",
+      "numeric_id": 304
+    },
+    {
+      "catalog_code": "VD-30",
+      "api_code": "v2pepwrses",
+      "numeric_id": 305
+    },
+    {
+      "catalog_code": "VD-31",
+      "api_code": "v2x_neopat",
+      "numeric_id": 306
+    },
+    {
+      "catalog_code": "VD-32",
+      "api_code": "v2xel_frefair",
+      "numeric_id": 307
+    },
+    {
+      "catalog_code": "VD-33",
+      "api_code": "v2elintmon",
+      "numeric_id": 308
+    },
+    {
+      "catalog_code": "VD-34",
+      "api_code": "v2ex_hosw",
+      "numeric_id": 309
+    },
+    {
+      "catalog_code": "VD-35",
+      "api_code": "v2exaphogp",
+      "numeric_id": 310
+    },
+    {
+      "catalog_code": "VD-36",
+      "api_code": "v2svdomaut",
+      "numeric_id": 311
+    },
+    {
+      "catalog_code": "VD-37",
+      "api_code": "v2x_rule",
+      "numeric_id": 312
+    },
+    {
+      "catalog_code": "VD-38",
+      "api_code": "v2lgqstexp",
+      "numeric_id": 313
+    },
+    {
+      "catalog_code": "VD-39",
+      "api_code": "v2psprlnks",
+      "numeric_id": 314
+    },
+    {
+      "catalog_code": "WB-01",
+      "api_code": "VC.BTL.DETH",
+      "numeric_id": 261
+    },
+    {
+      "catalog_code": "WB-02",
+      "api_code": "VC.IHR.PSRC.P5",
+      "numeric_id": 178
+    },
+    {
+      "catalog_code": "WB-03",
+      "api_code": "SM.POP.REFG.OR",
+      "numeric_id": 262
+    },
+    {
+      "catalog_code": "WB-04",
+      "api_code": "SM.POP.REFG",
+      "numeric_id": 179
+    },
+    {
+      "catalog_code": "WB-05",
+      "api_code": "VC.IDP.NWDS",
+      "numeric_id": 263
+    },
+    {
+      "catalog_code": "WB-06",
+      "api_code": "IC.REG.COST.PC.ZS",
+      "numeric_id": 264
+    },
+    {
+      "catalog_code": "WB-07",
+      "api_code": "IC.LGL.DURS",
+      "numeric_id": 265
+    },
+    {
+      "catalog_code": "WB-08",
+      "api_code": "BM.TRF.PWKR.CD.DT",
+      "numeric_id": 266
+    },
+    {
+      "catalog_code": "WB-09",
+      "api_code": "FX.OWN.TOTL.ZS",
+      "numeric_id": 244
+    },
+    {
+      "catalog_code": "WB-10",
+      "api_code": "GC.DOD.TOTL.GD.ZS",
+      "numeric_id": 267
+    },
+    {
+      "catalog_code": "WB-11",
+      "api_code": "DT.INT.DECT.GN.ZS",
+      "numeric_id": 200
+    },
+    {
+      "catalog_code": "WB-12",
+      "api_code": "DT.DOD.DSTC.ZS",
+      "numeric_id": 157
+    },
+    {
+      "catalog_code": "WB-13",
+      "api_code": "FB.AST.NPER.ZS",
+      "numeric_id": 268
+    },
+    {
+      "catalog_code": "WB-14",
+      "api_code": "GFDD.DI.01",
+      "numeric_id": 269
+    },
+    {
+      "catalog_code": "WB-15",
+      "api_code": "DC.ODA.TOTL.GD.ZS",
+      "numeric_id": 270
+    },
+    {
+      "catalog_code": "WB-P1",
+      "api_code": "BX.TRF.PWKR.DT.GD.ZS",
+      "numeric_id": 60
+    },
+    {
+      "catalog_code": "WB-P2",
+      "api_code": "SM.POP.NETM",
+      "numeric_id": 69
+    },
+    {
+      "catalog_code": "WB-P3",
+      "api_code": "SI.POV.GINI",
+      "numeric_id": 89
+    },
+    {
+      "catalog_code": "WB-P4",
+      "api_code": "SL.UEM.1524.ZS",
+      "numeric_id": 85
+    },
+    {
+      "catalog_code": "WB-P5",
+      "api_code": "SL.EMP.VULN.ZS",
+      "numeric_id": 127
+    },
+    {
+      "catalog_code": "WB-P6",
+      "api_code": "SG.GEN.PARL.ZS",
+      "numeric_id": 130
+    },
+    {
+      "catalog_code": "WB-P7",
+      "api_code": "NE.RSB.GNFS.ZS",
+      "numeric_id": 117
+    }
+  ],
+  "unresolved_pending_ingestion": [],
+  "allow_list_numeric_ids": [
+    60,
+    69,
+    85,
+    89,
+    117,
+    127,
+    130,
+    157,
+    178,
+    179,
+    200,
+    244,
+    261,
+    262,
+    263,
+    264,
+    265,
+    266,
+    267,
+    268,
+    269,
+    270,
+    276,
+    277,
+    278,
+    279,
+    280,
+    281,
+    282,
+    283,
+    284,
+    285,
+    286,
+    287,
+    288,
+    289,
+    290,
+    291,
+    292,
+    293,
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300,
+    301,
+    302,
+    303,
+    304,
+    305,
+    306,
+    307,
+    308,
+    309,
+    310,
+    311,
+    312,
+    313,
+    314
+  ]
+}

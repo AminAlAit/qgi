@@ -1,0 +1,2025 @@
+{
+  "schema_version": 1,
+  "recipe_id": "foreign_intervention",
+  "evaluation_year": 2021,
+  "computed_at_utc": "2026-05-22T19:31:40.014151+00:00",
+  "scoring_metric": "cosine_arithmetic_mean_shap_weighted_v1",
+  "binding_provenance": {
+    "design_v1": "docs/specs/internal/ops/ml-track/risk-metric-design-v1.md (3-Reviewer ratified 2026-05-22)",
+    "miriam_m14_r3": "Per-year full-window granularity (cosine on (W,) vectors); per-tertile diagnostic-only",
+    "miriam_m14_r5": "SHAP-derived importances (NOT raw XGBoost feature_importances_)",
+    "miriam_m14_r4": "Top-10 trajectory overlay charts archived at audit-charts/foreign_intervention/",
+    "ml_stats_synthesis": "Arithmetic mean aggregation (not geometric); preserves oppositional cosine signal",
+    "kwame_prebake": "Panel-wide z-score distribution pre-baked at panel-wide-z-distribution.json"
+  },
+  "selected_indicators": [
+    "v2elintmon",
+    "RQ.EST",
+    "v2pepwrgen",
+    "v2stfisccap"
+  ],
+  "chosen_window": 18,
+  "shap_importance_normalized": {
+    "v2elintmon": 0.04768813478507333,
+    "RQ.EST": 0.5112186305247967,
+    "v2pepwrgen": 0.272790152204432,
+    "v2stfisccap": 0.168303082485698
+  },
+  "n_countries_scored": 68,
+  "scores": {
+    "Afghanistan": {
+      "cosine_similarity_S": 0.9190638146459376,
+      "risk_score": 95.95319073229687,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.07224318165679511,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.0034451425841517825
+        },
+        "RQ.EST": {
+          "cosine": 0.9336942620623462,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.4773219019803732
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9912449657915955,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.2704018650901663
+        },
+        "v2stfisccap": {
+          "cosine": 0.997574747363962,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.16789490499124624
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)",
+      "audit_chart_path": "C:\\tmp\\qgi-rnd-002\\risk-metric-artifacts\\audit-charts\\foreign_intervention\\Afghanistan-vs-foreign_intervention.png"
+    },
+    "Algeria": {
+      "cosine_similarity_S": 0.9343604469039881,
+      "risk_score": 96.7180223451994,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.08735896994815273,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.004165986333572678
+        },
+        "RQ.EST": {
+          "cosine": 0.9803837688483599,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.5011904476993974
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9568124917358206,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.2610090252517163
+        },
+        "v2stfisccap": {
+          "cosine": 0.9981694044942857,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.16799498761930182
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)",
+      "audit_chart_path": "C:\\tmp\\qgi-rnd-002\\risk-metric-artifacts\\audit-charts\\foreign_intervention\\Algeria-vs-foreign_intervention.png"
+    },
+    "Argentina": {
+      "cosine_similarity_S": 0.08519660244309998,
+      "risk_score": 54.259830122154995,
+      "zone": "MODERATE",
+      "zone_label": "partial alignment with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.6393701964989715,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.030490372108201776
+        },
+        "RQ.EST": {
+          "cosine": 0.8809432954850798,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.45035462508788376
+        },
+        "v2pepwrgen": {
+          "cosine": -0.8610478113739645,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.2348853635199968
+        },
+        "v2stfisccap": {
+          "cosine": -0.9551995653237664,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.16076303123298874
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Armenia": {
+      "cosine_similarity_S": -0.4010101500608182,
+      "risk_score": 29.949492496959092,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.6031582160767728,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.028763490304993526
+        },
+        "RQ.EST": {
+          "cosine": -0.9521794642699454,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.486771881737916
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9908289253543402,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.27028837335596423
+        },
+        "v2stfisccap": {
+          "cosine": -0.9254919700422555,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.15576315137387287
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Australia": {
+      "cosine_similarity_S": -0.9224144097454403,
+      "risk_score": 3.8792795127279844,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.3098560317359387,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.014776456205391404
+        },
+        "RQ.EST": {
+          "cosine": -0.9770444058813738,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.49948330313658945
+        },
+        "v2pepwrgen": {
+          "cosine": -0.9880139048288186,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.26952046347834857
+        },
+        "v2stfisccap": {
+          "cosine": -0.9993108673466267,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.1681870993358937
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Austria": {
+      "cosine_similarity_S": -0.8576509916582704,
+      "risk_score": 7.117450417086479,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.6034745807348619,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.028778577145449714
+        },
+        "RQ.EST": {
+          "cosine": -0.9532283426723104,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.4873080879183601
+        },
+        "v2pepwrgen": {
+          "cosine": -0.8465642167918203,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.2309343815494664
+        },
+        "v2stfisccap": {
+          "cosine": -0.9993108673466262,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.16818709933589365
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Azerbaijan": {
+      "cosine_similarity_S": 0.8748519946024385,
+      "risk_score": 93.74259973012192,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.25160445684645844,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.011998547250619078
+        },
+        "RQ.EST": {
+          "cosine": 0.8808425291610031,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.4503031114656863
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9894324696972527,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.2699074340047206
+        },
+        "v2stfisccap": {
+          "cosine": 0.9901185047921587,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.16663999638265065
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Belarus": {
+      "cosine_similarity_S": 0.6379418208725371,
+      "risk_score": 81.89709104362686,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.16052691191756097,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.007655229012156242
+        },
+        "RQ.EST": {
+          "cosine": 0.9092083298730749,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.4648042372594509
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9930278071631281,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.27088820665926305
+        },
+        "v2stfisccap": {
+          "cosine": -0.5353163632144209,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.09009539403402055
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Benin": {
+      "cosine_similarity_S": 0.0721989461520939,
+      "risk_score": 53.6099473076047,
+      "zone": "MODERATE",
+      "zone_label": "partial alignment with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.1500652662589444,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.007156332643914458
+        },
+        "RQ.EST": {
+          "cosine": 0.9270676209546266,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.4739342395883055
+        },
+        "v2pepwrgen": {
+          "cosine": -0.8490660975772144,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.2316168699897114
+        },
+        "v2stfisccap": {
+          "cosine": -0.9682656336162699,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.16296209080258572
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Bolivia": {
+      "cosine_similarity_S": 0.787439560785274,
+      "risk_score": 89.3719780392637,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.026663254338135375,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.001271520866685691
+        },
+        "RQ.EST": {
+          "cosine": 0.965748072811764,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.4937084072147916
+        },
+        "v2pepwrgen": {
+          "cosine": 0.4634682267074136,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.12642956810543354
+        },
+        "v2stfisccap": {
+          "cosine": 0.986494496394456,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.16603006459836323
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Bulgaria": {
+      "cosine_similarity_S": -0.9477196713973352,
+      "risk_score": 2.6140164301332423,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.5727442530694851,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.027313105137753754
+        },
+        "RQ.EST": {
+          "cosine": -0.9443973096713382,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.4827934993214838
+        },
+        "v2pepwrgen": {
+          "cosine": -0.9943359738685158,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.2712450616539345
+        },
+        "v2stfisccap": {
+          "cosine": -0.9885024256659152,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.16636800528416307
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Burkina Faso": {
+      "cosine_similarity_S": 0.7858720484919994,
+      "risk_score": 89.29360242459997,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.13134306559911482,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.006263505815375316
+        },
+        "RQ.EST": {
+          "cosine": 0.9126652675767866,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.4665714882181519
+        },
+        "v2pepwrgen": {
+          "cosine": 0.7417749840301916,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.20234891079503606
+        },
+        "v2stfisccap": {
+          "cosine": 0.7321027843008007,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.12321515529418682
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Cameroon": {
+      "cosine_similarity_S": 0.6109917584515142,
+      "risk_score": 80.54958792257571,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.5944578083014561,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.028348584086319125
+        },
+        "RQ.EST": {
+          "cosine": 0.9596424618895814,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.49058710516063614
+        },
+        "v2pepwrgen": {
+          "cosine": -0.05911566836560597,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.01612617217112038
+        },
+        "v2stfisccap": {
+          "cosine": 0.9796576932114637,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.1648794095483176
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Canada": {
+      "cosine_similarity_S": -0.9100270698373054,
+      "risk_score": 4.49864650813473,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.3536028701753065,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.016862661333308805
+        },
+        "RQ.EST": {
+          "cosine": -0.9725939779142303,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.4972081614459771
+        },
+        "v2pepwrgen": {
+          "cosine": -0.9585920469474151,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.26149447038874335
+        },
+        "v2stfisccap": {
+          "cosine": -0.9993108673466266,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.1681870993358937
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Chile": {
+      "cosine_similarity_S": -0.8928743969670796,
+      "risk_score": 5.35628015164602,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.31500531765802414,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.015022016046490696
+        },
+        "RQ.EST": {
+          "cosine": -0.9514515022505609,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.4863997339912922
+        },
+        "v2pepwrgen": {
+          "cosine": -0.9285876987837572,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.2533095796863844
+        },
+        "v2stfisccap": {
+          "cosine": -0.9993108673466266,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.1681870993358937
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Comoros": {
+      "cosine_similarity_S": 0.9095501571258994,
+      "risk_score": 95.47750785629496,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.09043897274857879,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.0043128659222578
+        },
+        "RQ.EST": {
+          "cosine": 0.9433402939035278,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.48225313316822066
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9661734568680782,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.26356260435492523
+        },
+        "v2stfisccap": {
+          "cosine": 0.998480140964094,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.16804728552501128
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)",
+      "audit_chart_path": "C:\\tmp\\qgi-rnd-002\\risk-metric-artifacts\\audit-charts\\foreign_intervention\\Comoros-vs-foreign_intervention.png"
+    },
+    "Croatia": {
+      "cosine_similarity_S": -0.9340475895828081,
+      "risk_score": 3.2976205208595957,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.43398873662285326,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.020696113367274317
+        },
+        "RQ.EST": {
+          "cosine": -0.9351798281812498,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.47808135105723315
+        },
+        "v2pepwrgen": {
+          "cosine": -0.9863616968602614,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.2690697574151325
+        },
+        "v2stfisccap": {
+          "cosine": -0.9875063800883829,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.16620036774316815
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Cyprus": {
+      "cosine_similarity_S": -0.8825864816590753,
+      "risk_score": 5.870675917046237,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.4203752315470638,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.02004691070232279
+        },
+        "RQ.EST": {
+          "cosine": -0.938176199953738,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.47961315213130773
+        },
+        "v2pepwrgen": {
+          "cosine": -0.934172802188335,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.2548331408941966
+        },
+        "v2stfisccap": {
+          "cosine": -0.9993108673466266,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.1681870993358937
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Djibouti": {
+      "cosine_similarity_S": 0.7920326714525333,
+      "risk_score": 89.60163357262667,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.6010919035820075,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.028664951716235076
+        },
+        "RQ.EST": {
+          "cosine": 0.9480568390280396,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.484664318907582
+        },
+        "v2pepwrgen": {
+          "cosine": 0.6163522060117452,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.1681348120894814
+        },
+        "v2stfisccap": {
+          "cosine": 0.9975960611771482,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.167898492171705
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Dominican Republic": {
+      "cosine_similarity_S": 0.2793540066507476,
+      "risk_score": 63.96770033253738,
+      "zone": "MODERATE",
+      "zone_label": "partial alignment with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.6756816041862154,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.03222199541222681
+        },
+        "RQ.EST": {
+          "cosine": 0.40915799214956866,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.209169188414978
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9840922454898751,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.26845067343038426
+        },
+        "v2stfisccap": {
+          "cosine": -0.9865764627127246,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.16604385978238784
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Ecuador": {
+      "cosine_similarity_S": 0.8608630857897184,
+      "risk_score": 93.04315428948591,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.5062602277472796,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.024142605977134194
+        },
+        "RQ.EST": {
+          "cosine": 0.9553728538282795,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.4884044019746598
+        },
+        "v2pepwrgen": {
+          "cosine": 0.8377011833852263,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.22851663331748864
+        },
+        "v2stfisccap": {
+          "cosine": 0.9987021865091958,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.16808465647470414
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Egypt": {
+      "cosine_similarity_S": 0.8989549182706278,
+      "risk_score": 94.94774591353139,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.027647115649981135,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.0013184393775348107
+        },
+        "RQ.EST": {
+          "cosine": 0.9089446688964663,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.46466944885606626
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9882919015954372,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.26959629825862685
+        },
+        "v2stfisccap": {
+          "cosine": 0.970693640101825,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.16337073177839992
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "El Salvador": {
+      "cosine_similarity_S": 0.0664037205525143,
+      "risk_score": 53.32018602762572,
+      "zone": "MODERATE",
+      "zone_label": "partial alignment with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.6694457021476408,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.03192461687530475
+        },
+        "RQ.EST": {
+          "cosine": -0.47579243025159895,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.24323395460728725
+        },
+        "v2pepwrgen": {
+          "cosine": 0.976482971760203,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.26637493849150184
+        },
+        "v2stfisccap": {
+          "cosine": 0.4467378281677859,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.07518735354360445
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Equatorial Guinea": {
+      "cosine_similarity_S": 0.937010527496594,
+      "risk_score": 96.8505263748297,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.2069929111594816,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.00987110584692807
+        },
+        "RQ.EST": {
+          "cosine": 0.9738491277083695,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.49784981740484047
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9571551714713611,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.2611025049089318
+        },
+        "v2stfisccap": {
+          "cosine": 0.9993108673466263,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.16818709933589365
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)",
+      "audit_chart_path": "C:\\tmp\\qgi-rnd-002\\risk-metric-artifacts\\audit-charts\\foreign_intervention\\Equatorial_Guinea-vs-foreign_intervention.png"
+    },
+    "Finland": {
+      "cosine_similarity_S": -0.8933119127338528,
+      "risk_score": 5.33440436330736,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.6719429115933514,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.03204370413593836
+        },
+        "RQ.EST": {
+          "cosine": -0.9730757735233811,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.4974544643374801
+        },
+        "v2pepwrgen": {
+          "cosine": -0.952065355357054,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.2597140531964174
+        },
+        "v2stfisccap": {
+          "cosine": -0.9993108673466266,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.1681870993358937
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Gabon": {
+      "cosine_similarity_S": 0.4854138859932639,
+      "risk_score": 74.2706942996632,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.5020114728254955,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.023939990779755407
+        },
+        "RQ.EST": {
+          "cosine": 0.9591909459290469,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.4903562817896316
+        },
+        "v2pepwrgen": {
+          "cosine": -0.5455063747399628,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.14880876699380235
+        },
+        "v2stfisccap": {
+          "cosine": 0.9970486547175976,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.16780636197719007
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Georgia": {
+      "cosine_similarity_S": -0.6310413860074243,
+      "risk_score": 18.447930699628785,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.7516331475375344,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.03584398284869885
+        },
+        "RQ.EST": {
+          "cosine": -0.8164708693281605,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.4173951196813324
+        },
+        "v2pepwrgen": {
+          "cosine": -0.5726322995039554,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.1562084521388579
+        },
+        "v2stfisccap": {
+          "cosine": -0.1283032432894995,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.02159383133853521
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Greece": {
+      "cosine_similarity_S": -0.6968146701914566,
+      "risk_score": 15.15926649042717,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.4546855450087173,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.021683105555200238
+        },
+        "RQ.EST": {
+          "cosine": -0.8314992469258577,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.42507790629583675
+        },
+        "v2pepwrgen": {
+          "cosine": -0.9609021073451253,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.26212463211623616
+        },
+        "v2stfisccap": {
+          "cosine": -0.1859457169314963,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.03129523733458388
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Guinea-Bissau": {
+      "cosine_similarity_S": 0.9013864538293753,
+      "risk_score": 95.06932269146877,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.5585138785685654,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.026634485120511826
+        },
+        "RQ.EST": {
+          "cosine": 0.9786952227277225,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.5003272314640271
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9513048988494613,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.25950660814996634
+        },
+        "v2stfisccap": {
+          "cosine": 0.9993108673466264,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.16818709933589368
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Iceland": {
+      "cosine_similarity_S": -0.8740190141646199,
+      "risk_score": 6.299049291769005,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.6261772800020865,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.029861226528090104
+        },
+        "RQ.EST": {
+          "cosine": -0.9376682209911636,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.47935346382172506
+        },
+        "v2pepwrgen": {
+          "cosine": -0.9773578036373833,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.2666135840124311
+        },
+        "v2stfisccap": {
+          "cosine": -0.9382667894509474,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.15791319285855385
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Iran": {
+      "cosine_similarity_S": 0.9627021334352321,
+      "risk_score": 98.1351066717616,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.7095882525001866,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.03383894022713355
+        },
+        "RQ.EST": {
+          "cosine": 0.9650464577954168,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.49334972854697895
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9845298569841203,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.2685700495365058
+        },
+        "v2stfisccap": {
+          "cosine": 0.9919213163478471,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.16694341512461386
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)",
+      "audit_chart_path": "C:\\tmp\\qgi-rnd-002\\risk-metric-artifacts\\audit-charts\\foreign_intervention\\Iran-vs-foreign_intervention.png"
+    },
+    "Israel": {
+      "cosine_similarity_S": -0.9071316610050653,
+      "risk_score": 4.643416949746737,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.6772675813113892,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.03229762770313814
+        },
+        "RQ.EST": {
+          "cosine": -0.9840533556253865,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.5030664088261408
+        },
+        "v2pepwrgen": {
+          "cosine": -0.9830845372496985,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.2681757805461688
+        },
+        "v2stfisccap": {
+          "cosine": -0.9993108673466266,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.1681870993358937
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Japan": {
+      "cosine_similarity_S": -0.37542965833267045,
+      "risk_score": 31.22851708336648,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.4410812197014723,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.021034340656288356
+        },
+        "RQ.EST": {
+          "cosine": -0.9705710766811407,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.49617401664791017
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9444006993494379,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.2576232105175052
+        },
+        "v2stfisccap": {
+          "cosine": -0.9382667894509472,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.15791319285855382
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Jordan": {
+      "cosine_similarity_S": 0.0009462795145157056,
+      "risk_score": 50.047313975725785,
+      "zone": "MODERATE",
+      "zone_label": "partial alignment with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.18002885344397576,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.00858524022823853
+        },
+        "RQ.EST": {
+          "cosine": -0.835274228424024,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.4270077471675857
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9838328105465882,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.2683799021327179
+        },
+        "v2stfisccap": {
+          "cosine": 0.9991460779805493,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.16815936477762206
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Kazakhstan": {
+      "cosine_similarity_S": 0.6632815604351552,
+      "risk_score": 83.16407802175776,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.6605730410911269,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.03150149621893945
+        },
+        "RQ.EST": {
+          "cosine": 0.5221000345438689,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.2669072646564657
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9686449901791935,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.2642368143030427
+        },
+        "v2stfisccap": {
+          "cosine": 0.9722874666213667,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.1636389776945862
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Kuwait": {
+      "cosine_similarity_S": 0.23673696718556836,
+      "risk_score": 61.83684835927842,
+      "zone": "MODERATE",
+      "zone_label": "partial alignment with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.5930018802383066,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.028279153592606278
+        },
+        "RQ.EST": {
+          "cosine": -0.4512336904102087,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.23067906925815698
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9932535369245021,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.27094978351522536
+        },
+        "v2stfisccap": {
+          "cosine": 0.9993108673466267,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.1681870993358937
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Kyrgyzstan": {
+      "cosine_similarity_S": 0.8048272263639827,
+      "risk_score": 90.24136131819913,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.5956858131524015,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.028407145347167734
+        },
+        "RQ.EST": {
+          "cosine": 0.8451361392873918,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.4320493397335143
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9063574827724719,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.24724539567712844
+        },
+        "v2stfisccap": {
+          "cosine": 0.9146572601460773,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.15393963630050778
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Lithuania": {
+      "cosine_similarity_S": -0.9032039995725039,
+      "risk_score": 4.839800021374807,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.06951080480686492,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.0033148406286486977
+        },
+        "RQ.EST": {
+          "cosine": -0.9708494315902246,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.4963163168633319
+        },
+        "v2pepwrgen": {
+          "cosine": -0.8628821122847166,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.2353857427446296
+        },
+        "v2stfisccap": {
+          "cosine": -0.9993108673466266,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.1681870993358937
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Maldives": {
+      "cosine_similarity_S": 0.334414588300348,
+      "risk_score": 66.7207294150174,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.12031066640795791,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.0057373912757446915
+        },
+        "RQ.EST": {
+          "cosine": 0.5884758865301658,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.300839836808817
+        },
+        "v2pepwrgen": {
+          "cosine": 0.7147542912096521,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.1949779318878519
+        },
+        "v2stfisccap": {
+          "cosine": -0.9249134764587827,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.15566578912057621
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Mauritania": {
+      "cosine_similarity_S": 0.9140577108129625,
+      "risk_score": 95.70288554064813,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.1416231763392166,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.0067537451219547694
+        },
+        "RQ.EST": {
+          "cosine": 0.9763625498456275,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.4991347256277802
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9436716250520162,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.2574243262289432
+        },
+        "v2stfisccap": {
+          "cosine": 0.9759322387464394,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.16425240407819391
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)",
+      "audit_chart_path": "C:\\tmp\\qgi-rnd-002\\risk-metric-artifacts\\audit-charts\\foreign_intervention\\Mauritania-vs-foreign_intervention.png"
+    },
+    "Mexico": {
+      "cosine_similarity_S": -0.30240326524576955,
+      "risk_score": 34.87983673771152,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.25964377965520985,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.012381927560303528
+        },
+        "RQ.EST": {
+          "cosine": -0.8066907803886969,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.4123953560072891
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9592285868394643,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.2616681122027797
+        },
+        "v2stfisccap": {
+          "cosine": -0.9747768524412196,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.16405794900156365
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Moldova": {
+      "cosine_similarity_S": 0.5858909890845878,
+      "risk_score": 79.2945494542294,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.6009579931356721,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.028658565776821108
+        },
+        "RQ.EST": {
+          "cosine": 0.5170110704470943,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.2643056914001227
+        },
+        "v2pepwrgen": {
+          "cosine": 0.7050499039224759,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.19233067060273235
+        },
+        "v2stfisccap": {
+          "cosine": 0.9382667894509477,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.15791319285855387
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Mongolia": {
+      "cosine_similarity_S": 0.23435580971239442,
+      "risk_score": 61.717790485619716,
+      "zone": "MODERATE",
+      "zone_label": "partial alignment with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.7095882525001865,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.033838940227133546
+        },
+        "RQ.EST": {
+          "cosine": 0.7095079173891855,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.36271366587419995
+        },
+        "v2pepwrgen": {
+          "cosine": -0.8406850679135076,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.229330607632119
+        },
+        "v2stfisccap": {
+          "cosine": 0.8010054819340756,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.134811691697447
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Montenegro": {
+      "cosine_similarity_S": 0.006824263279172113,
+      "risk_score": 50.34121316395861,
+      "zone": "MODERATE",
+      "zone_label": "partial alignment with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.7692410717816103,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.0366836719133357
+        },
+        "RQ.EST": {
+          "cosine": -0.5769895916500203,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.29496782887038503
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9494272740904729,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.25899441060617906
+        },
+        "v2stfisccap": {
+          "cosine": 0.4722513235220627,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.07948135345671378
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "North Macedonia": {
+      "cosine_similarity_S": -0.41520663323532286,
+      "risk_score": 29.23966833823386,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.7375575853958652,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.035172745544111254
+        },
+        "RQ.EST": {
+          "cosine": -0.8613373564916076,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.4403317038054882
+        },
+        "v2pepwrgen": {
+          "cosine": 0.8375849113458506,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.22848491545017025
+        },
+        "v2stfisccap": {
+          "cosine": -0.9993108673466264,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.16818709933589368
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Philippines": {
+      "cosine_similarity_S": -0.43926756161993374,
+      "risk_score": 28.036621919003313,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.1406393966550057,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.006706830503775303
+        },
+        "RQ.EST": {
+          "cosine": -0.0036398000396512913,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.0018607335916546338
+        },
+        "v2pepwrgen": {
+          "cosine": -0.9783541066644764,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.26688536566683363
+        },
+        "v2stfisccap": {
+          "cosine": -0.9733311442563196,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.16381463185767017
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Poland": {
+      "cosine_similarity_S": -0.9640054994379986,
+      "risk_score": 1.7997250281000687,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.6073594598900504,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.02896383978622606
+        },
+        "RQ.EST": {
+          "cosine": -0.9758690676214725,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.49888244832095935
+        },
+        "v2pepwrgen": {
+          "cosine": -0.9823379246993426,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.2679721119949195
+        },
+        "v2stfisccap": {
+          "cosine": -0.9993108673466266,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.1681870993358937
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Portugal": {
+      "cosine_similarity_S": -0.8672152143798694,
+      "risk_score": 6.639239281006532,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.3286758363465421,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.015673937584290604
+        },
+        "RQ.EST": {
+          "cosine": -0.9168688134271281,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.46872041917111174
+        },
+        "v2pepwrgen": {
+          "cosine": -0.9017247560784861,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.24598163345715454
+        },
+        "v2stfisccap": {
+          "cosine": -0.9993108673466263,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.16818709933589365
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Romania": {
+      "cosine_similarity_S": -0.8794680792722145,
+      "risk_score": 6.026596036389275,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.2908002825746607,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.01386772307095783
+        },
+        "RQ.EST": {
+          "cosine": -0.9442462561414123,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.48271627794277916
+        },
+        "v2pepwrgen": {
+          "cosine": -0.815694595039636,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.2225134527331948
+        },
+        "v2stfisccap": {
+          "cosine": -0.9528680233109256,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.16037062552528272
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Russia": {
+      "cosine_similarity_S": 0.8951745751588778,
+      "risk_score": 94.75872875794389,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.6937913783541034,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.03308561676367229
+        },
+        "RQ.EST": {
+          "cosine": 0.9585456112083145,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.49002637465746873
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9899430596996464,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.2700467179291876
+        },
+        "v2stfisccap": {
+          "cosine": 0.9993108673466264,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.16818709933589368
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Rwanda": {
+      "cosine_similarity_S": 0.08328177409191019,
+      "risk_score": 54.164088704595514,
+      "zone": "MODERATE",
+      "zone_label": "partial alignment with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.48587564577617626,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.02317050328455884
+        },
+        "RQ.EST": {
+          "cosine": 0.3645806685718485,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.18638043010311517
+        },
+        "v2pepwrgen": {
+          "cosine": -0.9087244537183964,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.24789108204173066
+        },
+        "v2stfisccap": {
+          "cosine": 0.9979789248919884,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.16796292931508452
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Sao Tome and Principe": {
+      "cosine_similarity_S": 0.3990501246507653,
+      "risk_score": 69.95250623253825,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.024018428959880152,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.0011453940775644734
+        },
+        "RQ.EST": {
+          "cosine": 0.9756562057261955,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.4987736293543649
+        },
+        "v2pepwrgen": {
+          "cosine": -0.9863112577298035,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.2690559981170578
+        },
+        "v2stfisccap": {
+          "cosine": 0.9993108673466266,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.1681870993358937
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Serbia": {
+      "cosine_similarity_S": 0.2839483984239053,
+      "risk_score": 64.19741992119526,
+      "zone": "MODERATE",
+      "zone_label": "partial alignment with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.7831867344683798,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.037348714555209536
+        },
+        "RQ.EST": {
+          "cosine": 0.2333939601534813,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.11931534068242167
+        },
+        "v2pepwrgen": {
+          "cosine": 0.8659707716269466,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.23622829859670416
+        },
+        "v2stfisccap": {
+          "cosine": -0.2034812779077958,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.034246526300010995
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Seychelles": {
+      "cosine_similarity_S": 0.02302255664603391,
+      "risk_score": 51.15112783230169,
+      "zone": "MODERATE",
+      "zone_label": "partial alignment with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.03531037469874873,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.0016838859079453727
+        },
+        "RQ.EST": {
+          "cosine": -0.1555698937682165,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.07953022804307575
+        },
+        "v2pepwrgen": {
+          "cosine": 0.986311257729804,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.269055998117058
+        },
+        "v2stfisccap": {
+          "cosine": -0.9993108673466267,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.1681870993358937
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Slovakia": {
+      "cosine_similarity_S": -0.8467372222261919,
+      "risk_score": 7.6631388886904075,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.14879307274494777,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.00709566410814629
+        },
+        "RQ.EST": {
+          "cosine": -0.9430858690865893,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.48212306646173386
+        },
+        "v2pepwrgen": {
+          "cosine": -0.7460779609968777,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.20352272053671056
+        },
+        "v2stfisccap": {
+          "cosine": -0.9993108673466264,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.16818709933589368
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Slovenia": {
+      "cosine_similarity_S": -0.8854965037840302,
+      "risk_score": 5.725174810798489,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.5036416488823873,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.024017730835279864
+        },
+        "RQ.EST": {
+          "cosine": -0.9419220410224354,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.48152809587261075
+        },
+        "v2pepwrgen": {
+          "cosine": -0.9571466245602761,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.26110017339575603
+        },
+        "v2stfisccap": {
+          "cosine": -0.9915799692208539,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.16688596535094327
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "South Korea": {
+      "cosine_similarity_S": -0.9119958652816067,
+      "risk_score": 4.4002067359196655,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.6313711178114975,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.030108910965597105
+        },
+        "RQ.EST": {
+          "cosine": -0.9852625459503457,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.5036845694481102
+        },
+        "v2pepwrgen": {
+          "cosine": -0.9906263304574285,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.27023310746319984
+        },
+        "v2stfisccap": {
+          "cosine": -0.9993108673466264,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.16818709933589368
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Spain": {
+      "cosine_similarity_S": -0.9054842601178024,
+      "risk_score": 4.725786994109882,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.07000415275366521,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.003338367472031649
+        },
+        "RQ.EST": {
+          "cosine": -0.9228432011406682,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.47177463747625187
+        },
+        "v2pepwrgen": {
+          "cosine": -0.9611203106670119,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.26218415583362514
+        },
+        "v2stfisccap": {
+          "cosine": -0.9993108673466264,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.16818709933589368
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Sri Lanka": {
+      "cosine_similarity_S": 0.4764155176299035,
+      "risk_score": 73.82077588149517,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.5553617299445375,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.0264841650320666
+        },
+        "RQ.EST": {
+          "cosine": 0.7747235619227166,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.3960531183614237
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9255985618669583,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.2524941725718909
+        },
+        "v2stfisccap": {
+          "cosine": -0.8653888337649508,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.14564760827134451
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Syria": {
+      "cosine_similarity_S": 0.929419996892545,
+      "risk_score": 96.47099984462724,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.7113093748513324,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.03392101734179659
+        },
+        "RQ.EST": {
+          "cosine": 0.969821699235255,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.4957909209362783
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9472496514119428,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.258400376584259
+        },
+        "v2stfisccap": {
+          "cosine": 0.8396024597007545,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.14130768203021102
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)",
+      "audit_chart_path": "C:\\tmp\\qgi-rnd-002\\risk-metric-artifacts\\audit-charts\\foreign_intervention\\Syria-vs-foreign_intervention.png"
+    },
+    "Tajikistan": {
+      "cosine_similarity_S": 0.9020033033136449,
+      "risk_score": 95.10016516568226,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.5457396716436702,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.026025307018905007
+        },
+        "RQ.EST": {
+          "cosine": 0.9615675576416645,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.4915712499746452
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9862563185795148,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.2690410112578886
+        },
+        "v2stfisccap": {
+          "cosine": 0.9947313300945797,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.16741634910001613
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)",
+      "audit_chart_path": "C:\\tmp\\qgi-rnd-002\\risk-metric-artifacts\\audit-charts\\foreign_intervention\\Tajikistan-vs-foreign_intervention.png"
+    },
+    "The Gambia": {
+      "cosine_similarity_S": 0.9090955320847909,
+      "risk_score": 95.45477660423954,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.1322585705085373,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.006307164536892251
+        },
+        "RQ.EST": {
+          "cosine": 0.9514940800345691,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.4864215005477237
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9601120422242444,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.26190911013165963
+        },
+        "v2stfisccap": {
+          "cosine": 0.9926858348331034,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.16707208594229978
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)",
+      "audit_chart_path": "C:\\tmp\\qgi-rnd-002\\risk-metric-artifacts\\audit-charts\\foreign_intervention\\The_Gambia-vs-foreign_intervention.png"
+    },
+    "Togo": {
+      "cosine_similarity_S": 0.34945621000599664,
+      "risk_score": 67.47281050029983,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.6464463158368731,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.030827819040942887
+        },
+        "RQ.EST": {
+          "cosine": 0.9553659896544714,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.4884008928811259
+        },
+        "v2pepwrgen": {
+          "cosine": -0.3406937357887708,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.09293789604091533
+        },
+        "v2stfisccap": {
+          "cosine": -0.09018829345897998,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.015178967793271046
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Turkmenistan": {
+      "cosine_similarity_S": 0.9401029944410829,
+      "risk_score": 97.00514972205414,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.08262338095087321,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.003940154927183702
+        },
+        "RQ.EST": {
+          "cosine": 0.9728163687833462,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.49732185180152777
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9932886665695748,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.2709593665364516
+        },
+        "v2stfisccap": {
+          "cosine": 0.9974958194255656,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.1678816211759199
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)",
+      "audit_chart_path": "C:\\tmp\\qgi-rnd-002\\risk-metric-artifacts\\audit-charts\\foreign_intervention\\Turkmenistan-vs-foreign_intervention.png"
+    },
+    "Ukraine": {
+      "cosine_similarity_S": 0.13578764126711154,
+      "risk_score": 56.789382063355575,
+      "zone": "MODERATE",
+      "zone_label": "partial alignment with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.5705112093751349,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.027206615449076627
+        },
+        "RQ.EST": {
+          "cosine": 0.9008215164494049,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.46051674198653536
+        },
+        "v2pepwrgen": {
+          "cosine": -0.7426643573871698,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.20259152308845274
+        },
+        "v2stfisccap": {
+          "cosine": -0.5640476738740745,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.09493096218189445
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "United States": {
+      "cosine_similarity_S": -0.9009131247875513,
+      "risk_score": 4.954343760622438,
+      "zone": "LOW",
+      "zone_label": "trajectory diverges from crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.3746763842282013,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.01786761791185839
+        },
+        "RQ.EST": {
+          "cosine": -0.9508911781514601,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": -0.48611328587269986
+        },
+        "v2pepwrgen": {
+          "cosine": -0.9695377760287018,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.26448035749081605
+        },
+        "v2stfisccap": {
+          "cosine": -0.9993108673466267,
+          "weight": 0.168303082485698,
+          "weighted_contribution": -0.1681870993358937
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Uzbekistan": {
+      "cosine_similarity_S": 0.897811404302368,
+      "risk_score": 94.8905702151184,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": -0.44047600215442095,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": -0.021005478960330278
+        },
+        "RQ.EST": {
+          "cosine": 0.942035038492897,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.48158586228471295
+        },
+        "v2pepwrgen": {
+          "cosine": 0.9862669875284471,
+          "weight": 0.272790152204432,
+          "weighted_contribution": 0.2690439216420917
+        },
+        "v2stfisccap": {
+          "cosine": 0.9993108673466266,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.1681870993358937
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    },
+    "Venezuela": {
+      "cosine_similarity_S": 0.4266158012964951,
+      "risk_score": 71.33079006482475,
+      "zone": "HIGH",
+      "zone_label": "trajectory aligns with crisis profile",
+      "per_indicator": {
+        "v2elintmon": {
+          "cosine": 0.526238450868182,
+          "weight": 0.04768813478507333,
+          "weighted_contribution": 0.025095330174090054
+        },
+        "RQ.EST": {
+          "cosine": 0.9849253009741414,
+          "weight": 0.5112186305247967,
+          "weighted_contribution": 0.5035121635332238
+        },
+        "v2pepwrgen": {
+          "cosine": -0.9904272187371244,
+          "weight": 0.272790152204432,
+          "weighted_contribution": -0.2701787917467124
+        },
+        "v2stfisccap": {
+          "cosine": 0.9993108673466263,
+          "weight": 0.168303082485698,
+          "weighted_contribution": 0.16818709933589365
+        }
+      },
+      "aggregation_method": "weighted_arithmetic_mean (SHAP weights; per ML/stats synthesis 2026-05-22)"
+    }
+  },
+  "top_k_for_audit_charts": [
+    "Iran",
+    "Turkmenistan",
+    "Equatorial Guinea",
+    "Algeria",
+    "Syria",
+    "Afghanistan",
+    "Mauritania",
+    "Comoros",
+    "The Gambia",
+    "Tajikistan"
+  ]
+}

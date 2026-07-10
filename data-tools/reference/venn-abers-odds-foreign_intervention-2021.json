@@ -1,0 +1,791 @@
+{
+  "recipe_id": "foreign_intervention",
+  "eval_year": 2021,
+  "method": "venn-abers-inductive-per-cohort",
+  "method_reference": "Vovk, V., Petej, I., & Fedorova, V. (2015). Large-scale probabilistic predictors with and without guarantees of validity. NeurIPS 28. Per odds-calibration-consult-2026-05-24.md (Ji-Hoon #21 + Kwame #11, 2/2 ratified).",
+  "computed_at_utc": "2026-05-24T11:35:04.906133+00:00",
+  "seed_used": 12345,
+  "oof_reproduction": {
+    "n_samples": 58,
+    "n_positives": 15,
+    "n_negatives": 43,
+    "global_auc_reproduced": 0.914729,
+    "selected_indicators": [
+      "v2elintmon",
+      "RQ.EST",
+      "v2pepwrgen",
+      "v2stfisccap"
+    ],
+    "chosen_window": 18,
+    "architecture": "XGBoost",
+    "note": "OOF predictions reproduced by re-running the walk's LOCO procedure from the same seed + selected indicators + chosen window. Deterministic under XGBoost + fixed seed on same data."
+  },
+  "per_cohort_coverage": {
+    "fragile-state": 0.8,
+    "mid-tier": 1.0,
+    "stable-democracy": null
+  },
+  "per_cohort_mean_width": {
+    "fragile-state": 0.2277777777777779,
+    "mid-tier": 0.6587301587301587,
+    "stable-democracy": 0.436
+  },
+  "gate_pass": false,
+  "gate_definitions": {
+    "gate_1_coverage_threshold": 0.8,
+    "gate_2_width_threshold": 0.6,
+    "min_n_for_gate": 5,
+    "suppression_rule": "A cohort publishes odds ONLY if BOTH gates were validatable AND passed (midpoint-accuracy-proxy coverage >= 0.80 and mean_width <= 0.60). Otherwise it is suppressed with one of three flags: UNSHARP_LOW_POWER (mean_width > 0.60), UNVALIDATED_COVERAGE (coverage could not be validated — too few validation positives), or INSUFFICIENT_DATA (n_oof < MIN_N_FOR_GATE). Unvalidatable coverage is NOT a free pass."
+  },
+  "per_cohort_detail": {
+    "fragile-state": {
+      "n_oof": 30,
+      "n_cal_fit": 20,
+      "n_cal_val": 10,
+      "gate_1_coverage": {
+        "coverage": 0.8,
+        "n_covered": 8,
+        "n_total": 10,
+        "definition": "midpoint_classification_accuracy_proxy",
+        "gate_pass": true,
+        "gate_threshold": 0.8,
+        "low_n_skip": false,
+        "winkler_score_diagnostic": -1.9777380952380947
+      },
+      "gate_2_width": {
+        "mean_width": 0.2277777777777779,
+        "max_width": 0.7142857142857143,
+        "n_test": 21,
+        "gate_pass": true,
+        "gate_threshold": 0.6,
+        "flag": null
+      },
+      "gate_pass": true,
+      "suppressed": false,
+      "flag": null
+    },
+    "mid-tier": {
+      "n_oof": 20,
+      "n_cal_fit": 14,
+      "n_cal_val": 6,
+      "gate_1_coverage": {
+        "coverage": 1.0,
+        "n_covered": 6,
+        "n_total": 6,
+        "definition": "midpoint_classification_accuracy_proxy",
+        "gate_pass": true,
+        "gate_threshold": 0.8,
+        "low_n_skip": false,
+        "winkler_score_diagnostic": -0.15126262626262627
+      },
+      "gate_2_width": {
+        "mean_width": 0.6587301587301587,
+        "max_width": 1.0,
+        "n_test": 21,
+        "gate_pass": false,
+        "gate_threshold": 0.6,
+        "flag": "UNSHARP_LOW_POWER"
+      },
+      "gate_pass": false,
+      "suppressed": true,
+      "flag": "UNSHARP_LOW_POWER"
+    },
+    "stable-democracy": {
+      "n_oof": 8,
+      "n_cal_fit": 5,
+      "n_cal_val": 3,
+      "gate_1_coverage": {
+        "coverage": null,
+        "n_total": 3,
+        "gate_pass": null,
+        "low_n_skip": true,
+        "gate_threshold": 0.8
+      },
+      "gate_2_width": {
+        "mean_width": 0.436,
+        "max_width": 0.5,
+        "n_test": 25,
+        "gate_pass": true,
+        "gate_threshold": 0.6,
+        "flag": null
+      },
+      "gate_pass": false,
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE"
+    }
+  },
+  "label": "estimated probability range, not a precise probability",
+  "m8_r5_note": "M8-R5 BINDING: odds intervals MUST be published alongside the discrimination/similarity score, never instead of it. Per odds-calibration-consult-2026-05-24.md Gate 4.",
+  "odds": {
+    "Afghanistan": {
+      "p_lo": 0.285714,
+      "p_hi": 0.428571,
+      "width": 0.142857,
+      "midpoint": 0.357143,
+      "cohort": "fragile-state",
+      "suppressed": false,
+      "flag": null,
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Algeria": {
+      "p_lo": 0.857143,
+      "p_hi": 1.0,
+      "width": 0.142857,
+      "midpoint": 0.928571,
+      "cohort": "fragile-state",
+      "suppressed": false,
+      "flag": null,
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Azerbaijan": {
+      "p_lo": 0.833333,
+      "p_hi": 1.0,
+      "width": 0.166667,
+      "midpoint": 0.916667,
+      "cohort": "fragile-state",
+      "suppressed": false,
+      "flag": null,
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Belarus": {
+      "p_lo": 0.75,
+      "p_hi": 1.0,
+      "width": 0.25,
+      "midpoint": 0.875,
+      "cohort": "fragile-state",
+      "suppressed": false,
+      "flag": null,
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Cameroon": {
+      "p_lo": 0.75,
+      "p_hi": 1.0,
+      "width": 0.25,
+      "midpoint": 0.875,
+      "cohort": "fragile-state",
+      "suppressed": false,
+      "flag": null,
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Comoros": {
+      "p_lo": 0.857143,
+      "p_hi": 1.0,
+      "width": 0.142857,
+      "midpoint": 0.928571,
+      "cohort": "fragile-state",
+      "suppressed": false,
+      "flag": null,
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Djibouti": {
+      "p_lo": 0.0,
+      "p_hi": 0.2,
+      "width": 0.2,
+      "midpoint": 0.1,
+      "cohort": "fragile-state",
+      "suppressed": false,
+      "flag": null,
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Egypt": {
+      "p_lo": 0.833333,
+      "p_hi": 1.0,
+      "width": 0.166667,
+      "midpoint": 0.916667,
+      "cohort": "fragile-state",
+      "suppressed": false,
+      "flag": null,
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Equatorial Guinea": {
+      "p_lo": 0.857143,
+      "p_hi": 1.0,
+      "width": 0.142857,
+      "midpoint": 0.928571,
+      "cohort": "fragile-state",
+      "suppressed": false,
+      "flag": null,
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Iran": {
+      "p_lo": 0.285714,
+      "p_hi": 0.428571,
+      "width": 0.142857,
+      "midpoint": 0.357143,
+      "cohort": "fragile-state",
+      "suppressed": false,
+      "flag": null,
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Jordan": {
+      "p_lo": 0.285714,
+      "p_hi": 0.5,
+      "width": 0.214286,
+      "midpoint": 0.392857,
+      "cohort": "fragile-state",
+      "suppressed": false,
+      "flag": null,
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Kazakhstan": {
+      "p_lo": 0.75,
+      "p_hi": 1.0,
+      "width": 0.25,
+      "midpoint": 0.875,
+      "cohort": "fragile-state",
+      "suppressed": false,
+      "flag": null,
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Kuwait": {
+      "p_lo": 0.0,
+      "p_hi": 0.166667,
+      "width": 0.166667,
+      "midpoint": 0.083333,
+      "cohort": "fragile-state",
+      "suppressed": false,
+      "flag": null,
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Russia": {
+      "p_lo": 0.0,
+      "p_hi": 0.428571,
+      "width": 0.428571,
+      "midpoint": 0.214286,
+      "cohort": "fragile-state",
+      "suppressed": false,
+      "flag": null,
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Rwanda": {
+      "p_lo": 0.285714,
+      "p_hi": 1.0,
+      "width": 0.714286,
+      "midpoint": 0.642857,
+      "cohort": "fragile-state",
+      "suppressed": false,
+      "flag": null,
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Serbia": {
+      "p_lo": 0.5,
+      "p_hi": 1.0,
+      "width": 0.5,
+      "midpoint": 0.75,
+      "cohort": "fragile-state",
+      "suppressed": false,
+      "flag": null,
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Syria": {
+      "p_lo": 0.857143,
+      "p_hi": 1.0,
+      "width": 0.142857,
+      "midpoint": 0.928571,
+      "cohort": "fragile-state",
+      "suppressed": false,
+      "flag": null,
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Tajikistan": {
+      "p_lo": 0.833333,
+      "p_hi": 1.0,
+      "width": 0.166667,
+      "midpoint": 0.916667,
+      "cohort": "fragile-state",
+      "suppressed": false,
+      "flag": null,
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Turkmenistan": {
+      "p_lo": 0.857143,
+      "p_hi": 1.0,
+      "width": 0.142857,
+      "midpoint": 0.928571,
+      "cohort": "fragile-state",
+      "suppressed": false,
+      "flag": null,
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Uzbekistan": {
+      "p_lo": 0.833333,
+      "p_hi": 1.0,
+      "width": 0.166667,
+      "midpoint": 0.916667,
+      "cohort": "fragile-state",
+      "suppressed": false,
+      "flag": null,
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Venezuela": {
+      "p_lo": 0.285714,
+      "p_hi": 0.428571,
+      "width": 0.142857,
+      "midpoint": 0.357143,
+      "cohort": "fragile-state",
+      "suppressed": false,
+      "flag": null,
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Benin": {
+      "p_lo": 0.0,
+      "p_hi": 1.0,
+      "width": 1.0,
+      "midpoint": 0.5,
+      "cohort": "mid-tier",
+      "suppressed": true,
+      "flag": "UNSHARP_LOW_POWER",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Bolivia": {
+      "p_lo": 0.5,
+      "p_hi": 1.0,
+      "width": 0.5,
+      "midpoint": 0.75,
+      "cohort": "mid-tier",
+      "suppressed": true,
+      "flag": "UNSHARP_LOW_POWER",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Burkina Faso": {
+      "p_lo": 0.5,
+      "p_hi": 1.0,
+      "width": 0.5,
+      "midpoint": 0.75,
+      "cohort": "mid-tier",
+      "suppressed": true,
+      "flag": "UNSHARP_LOW_POWER",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Ecuador": {
+      "p_lo": 0.5,
+      "p_hi": 1.0,
+      "width": 0.5,
+      "midpoint": 0.75,
+      "cohort": "mid-tier",
+      "suppressed": true,
+      "flag": "UNSHARP_LOW_POWER",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "El Salvador": {
+      "p_lo": 0.0,
+      "p_hi": 1.0,
+      "width": 1.0,
+      "midpoint": 0.5,
+      "cohort": "mid-tier",
+      "suppressed": true,
+      "flag": "UNSHARP_LOW_POWER",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Gabon": {
+      "p_lo": 0.0,
+      "p_hi": 1.0,
+      "width": 1.0,
+      "midpoint": 0.5,
+      "cohort": "mid-tier",
+      "suppressed": true,
+      "flag": "UNSHARP_LOW_POWER",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Georgia": {
+      "p_lo": 0.0,
+      "p_hi": 0.333333,
+      "width": 0.333333,
+      "midpoint": 0.166667,
+      "cohort": "mid-tier",
+      "suppressed": true,
+      "flag": "UNSHARP_LOW_POWER",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Guinea-Bissau": {
+      "p_lo": 0.0,
+      "p_hi": 0.333333,
+      "width": 0.333333,
+      "midpoint": 0.166667,
+      "cohort": "mid-tier",
+      "suppressed": true,
+      "flag": "UNSHARP_LOW_POWER",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Kyrgyzstan": {
+      "p_lo": 0.5,
+      "p_hi": 1.0,
+      "width": 0.5,
+      "midpoint": 0.75,
+      "cohort": "mid-tier",
+      "suppressed": true,
+      "flag": "UNSHARP_LOW_POWER",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Maldives": {
+      "p_lo": 0.0,
+      "p_hi": 1.0,
+      "width": 1.0,
+      "midpoint": 0.5,
+      "cohort": "mid-tier",
+      "suppressed": true,
+      "flag": "UNSHARP_LOW_POWER",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Mauritania": {
+      "p_lo": 0.5,
+      "p_hi": 1.0,
+      "width": 0.5,
+      "midpoint": 0.75,
+      "cohort": "mid-tier",
+      "suppressed": true,
+      "flag": "UNSHARP_LOW_POWER",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Mexico": {
+      "p_lo": 0.0,
+      "p_hi": 0.333333,
+      "width": 0.333333,
+      "midpoint": 0.166667,
+      "cohort": "mid-tier",
+      "suppressed": true,
+      "flag": "UNSHARP_LOW_POWER",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Mongolia": {
+      "p_lo": 0.0,
+      "p_hi": 1.0,
+      "width": 1.0,
+      "midpoint": 0.5,
+      "cohort": "mid-tier",
+      "suppressed": true,
+      "flag": "UNSHARP_LOW_POWER",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Montenegro": {
+      "p_lo": 0.0,
+      "p_hi": 1.0,
+      "width": 1.0,
+      "midpoint": 0.5,
+      "cohort": "mid-tier",
+      "suppressed": true,
+      "flag": "UNSHARP_LOW_POWER",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "North Macedonia": {
+      "p_lo": 0.0,
+      "p_hi": 0.333333,
+      "width": 0.333333,
+      "midpoint": 0.166667,
+      "cohort": "mid-tier",
+      "suppressed": true,
+      "flag": "UNSHARP_LOW_POWER",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Philippines": {
+      "p_lo": 0.0,
+      "p_hi": 0.333333,
+      "width": 0.333333,
+      "midpoint": 0.166667,
+      "cohort": "mid-tier",
+      "suppressed": true,
+      "flag": "UNSHARP_LOW_POWER",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Poland": {
+      "p_lo": 0.0,
+      "p_hi": 0.166667,
+      "width": 0.166667,
+      "midpoint": 0.083333,
+      "cohort": "mid-tier",
+      "suppressed": true,
+      "flag": "UNSHARP_LOW_POWER",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Sri Lanka": {
+      "p_lo": 0.0,
+      "p_hi": 1.0,
+      "width": 1.0,
+      "midpoint": 0.5,
+      "cohort": "mid-tier",
+      "suppressed": true,
+      "flag": "UNSHARP_LOW_POWER",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "The Gambia": {
+      "p_lo": 0.5,
+      "p_hi": 1.0,
+      "width": 0.5,
+      "midpoint": 0.75,
+      "cohort": "mid-tier",
+      "suppressed": true,
+      "flag": "UNSHARP_LOW_POWER",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Togo": {
+      "p_lo": 0.0,
+      "p_hi": 1.0,
+      "width": 1.0,
+      "midpoint": 0.5,
+      "cohort": "mid-tier",
+      "suppressed": true,
+      "flag": "UNSHARP_LOW_POWER",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Ukraine": {
+      "p_lo": 0.0,
+      "p_hi": 1.0,
+      "width": 1.0,
+      "midpoint": 0.5,
+      "cohort": "mid-tier",
+      "suppressed": true,
+      "flag": "UNSHARP_LOW_POWER",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Argentina": {
+      "p_lo": 0.25,
+      "p_hi": 0.5,
+      "width": 0.25,
+      "midpoint": 0.375,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Armenia": {
+      "p_lo": 0.25,
+      "p_hi": 0.5,
+      "width": 0.25,
+      "midpoint": 0.375,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Australia": {
+      "p_lo": 0.0,
+      "p_hi": 0.5,
+      "width": 0.5,
+      "midpoint": 0.25,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Austria": {
+      "p_lo": 0.0,
+      "p_hi": 0.5,
+      "width": 0.5,
+      "midpoint": 0.25,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Bulgaria": {
+      "p_lo": 0.0,
+      "p_hi": 0.5,
+      "width": 0.5,
+      "midpoint": 0.25,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Canada": {
+      "p_lo": 0.0,
+      "p_hi": 0.5,
+      "width": 0.5,
+      "midpoint": 0.25,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Chile": {
+      "p_lo": 0.0,
+      "p_hi": 0.5,
+      "width": 0.5,
+      "midpoint": 0.25,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Croatia": {
+      "p_lo": 0.0,
+      "p_hi": 0.5,
+      "width": 0.5,
+      "midpoint": 0.25,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Cyprus": {
+      "p_lo": 0.0,
+      "p_hi": 0.5,
+      "width": 0.5,
+      "midpoint": 0.25,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Dominican Republic": {
+      "p_lo": 0.25,
+      "p_hi": 0.5,
+      "width": 0.25,
+      "midpoint": 0.375,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Finland": {
+      "p_lo": 0.0,
+      "p_hi": 0.5,
+      "width": 0.5,
+      "midpoint": 0.25,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Greece": {
+      "p_lo": 0.0,
+      "p_hi": 0.5,
+      "width": 0.5,
+      "midpoint": 0.25,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Iceland": {
+      "p_lo": 0.0,
+      "p_hi": 0.5,
+      "width": 0.5,
+      "midpoint": 0.25,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Israel": {
+      "p_lo": 0.0,
+      "p_hi": 0.5,
+      "width": 0.5,
+      "midpoint": 0.25,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Japan": {
+      "p_lo": 0.25,
+      "p_hi": 0.5,
+      "width": 0.25,
+      "midpoint": 0.375,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Lithuania": {
+      "p_lo": 0.0,
+      "p_hi": 0.5,
+      "width": 0.5,
+      "midpoint": 0.25,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Moldova": {
+      "p_lo": 0.25,
+      "p_hi": 0.5,
+      "width": 0.25,
+      "midpoint": 0.375,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Portugal": {
+      "p_lo": 0.0,
+      "p_hi": 0.5,
+      "width": 0.5,
+      "midpoint": 0.25,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Romania": {
+      "p_lo": 0.0,
+      "p_hi": 0.5,
+      "width": 0.5,
+      "midpoint": 0.25,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Seychelles": {
+      "p_lo": 0.25,
+      "p_hi": 0.5,
+      "width": 0.25,
+      "midpoint": 0.375,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Slovakia": {
+      "p_lo": 0.0,
+      "p_hi": 0.5,
+      "width": 0.5,
+      "midpoint": 0.25,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Slovenia": {
+      "p_lo": 0.0,
+      "p_hi": 0.5,
+      "width": 0.5,
+      "midpoint": 0.25,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "South Korea": {
+      "p_lo": 0.0,
+      "p_hi": 0.5,
+      "width": 0.5,
+      "midpoint": 0.25,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "Spain": {
+      "p_lo": 0.0,
+      "p_hi": 0.4,
+      "width": 0.4,
+      "midpoint": 0.2,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    },
+    "United States": {
+      "p_lo": 0.0,
+      "p_hi": 0.5,
+      "width": 0.5,
+      "midpoint": 0.25,
+      "cohort": "stable-democracy",
+      "suppressed": true,
+      "flag": "UNVALIDATED_COVERAGE",
+      "label": "estimated probability range, not a precise probability"
+    }
+  }
+}
