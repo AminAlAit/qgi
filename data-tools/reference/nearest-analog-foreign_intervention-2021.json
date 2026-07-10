@@ -1,0 +1,1734 @@
+{
+  "schema_version": 1,
+  "capability": "nearest_analog",
+  "recipe_id": "foreign_intervention",
+  "evaluation_year": 2021,
+  "computed_at_utc": "2026-05-24T16:31:45.248929+00:00",
+  "binding_provenance": {
+    "spec": "docs/specs/internal/ops/ml-track/te-new-capabilities-spec.md §2",
+    "m8_r5": "M8-R5 discrimination/similarity layer; never calibrated point-probability",
+    "analog_floor_pre_registered": 0.7,
+    "top_k": 3,
+    "z_score_logic": "Per-positive pre-event z-trajectories extracted with IDENTICAL logic as build_canonical_profile_from_walk in compute_recipe_country_similarity.py: window ending event_year-1; panel-wide z-score at event_year-1 (per-country fallback when <10 countries in panel)."
+  },
+  "m8_r5_note": "NEAREST ANALOG: resemblance, not destiny. A high weighted cosine means this country's recent trajectory structurally resembles the pre-event trajectory of the historical case, not that the same outcome will recur. Regional-clustering caveat: analogs may be geographic or governance neighbours that share systemic trajectories; the same_cohort flag helps identify this. This capability is part of the M8-R5 discrimination/similarity layer and operates entirely in trajectory-space — it is NOT a calibrated probability and must never be relabelled as such.",
+  "selected_indicators": [
+    "v2elintmon",
+    "RQ.EST",
+    "v2pepwrgen",
+    "v2stfisccap"
+  ],
+  "chosen_window": 18,
+  "shap_importance_normalized": {
+    "v2elintmon": 0.04768813478507333,
+    "RQ.EST": 0.5112186305247967,
+    "v2pepwrgen": 0.272790152204432,
+    "v2stfisccap": 0.168303082485698
+  },
+  "n_scored_countries": 68,
+  "n_positives_used": 110,
+  "n_suppressed_weak_analog": 1,
+  "analog_floor": 0.7,
+  "results": {
+    "Afghanistan": {
+      "analogs": [
+        {
+          "analog_country": "Rwanda",
+          "analog_event_year": 1990,
+          "weighted_cosine": 0.9968880173438618,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Oman",
+          "analog_event_year": 1990,
+          "weighted_cosine": 0.995562839805928,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Kuwait",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9893281271310946,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9968880173438618,
+      "suppressed": false,
+      "flag": null
+    },
+    "Algeria": {
+      "analogs": [
+        {
+          "analog_country": "Djibouti",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9752185389814042,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Serbia",
+          "analog_event_year": 1999,
+          "weighted_cosine": 0.9743269901233227,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Angola",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.9741464147843312,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9752185389814042,
+      "suppressed": false,
+      "flag": null
+    },
+    "Argentina": {
+      "analogs": [
+        {
+          "analog_country": "Italy",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9465012259118386,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Norway",
+          "analog_event_year": 2001,
+          "weighted_cosine": 0.9377789754885402,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Netherlands",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9373268184581303,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9465012259118386,
+      "suppressed": false,
+      "flag": null
+    },
+    "Armenia": {
+      "analogs": [
+        {
+          "analog_country": "Botswana",
+          "analog_event_year": 1998,
+          "weighted_cosine": 0.961014919386322,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Nigeria",
+          "analog_event_year": 1997,
+          "weighted_cosine": 0.9520294613221785,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Botswana",
+          "analog_event_year": 1985,
+          "weighted_cosine": 0.9327283722689292,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.961014919386322,
+      "suppressed": false,
+      "flag": null
+    },
+    "Australia": {
+      "analogs": [
+        {
+          "analog_country": "India",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.99764038180236,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Norway",
+          "analog_event_year": 2001,
+          "weighted_cosine": 0.9971747979357123,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Italy",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9817862759811146,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.99764038180236,
+      "suppressed": false,
+      "flag": null
+    },
+    "Austria": {
+      "analogs": [
+        {
+          "analog_country": "France",
+          "analog_event_year": 1994,
+          "weighted_cosine": 0.9766989082802491,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Netherlands",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.95581871262311,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Italy",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9517557795912645,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9766989082802491,
+      "suppressed": false,
+      "flag": null
+    },
+    "Azerbaijan": {
+      "analogs": [
+        {
+          "analog_country": "Kuwait",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.9967730197684678,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Qatar",
+          "analog_event_year": 1990,
+          "weighted_cosine": 0.9967730197684675,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Kuwait",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9949099031470782,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9967730197684678,
+      "suppressed": false,
+      "flag": null
+    },
+    "Belarus": {
+      "analogs": [
+        {
+          "analog_country": "Botswana",
+          "analog_event_year": 1998,
+          "weighted_cosine": 0.8265505005226748,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Nigeria",
+          "analog_event_year": 1997,
+          "weighted_cosine": 0.814867987729226,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Republic of the Congo",
+          "analog_event_year": 1997,
+          "weighted_cosine": 0.7969283545970112,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.8265505005226748,
+      "suppressed": false,
+      "flag": null
+    },
+    "Benin": {
+      "analogs": [
+        {
+          "analog_country": "France",
+          "analog_event_year": 1994,
+          "weighted_cosine": 0.9448264711255144,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Norway",
+          "analog_event_year": 2001,
+          "weighted_cosine": 0.9205612299118886,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "India",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.91950420274065,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9448264711255144,
+      "suppressed": false,
+      "flag": null
+    },
+    "Bolivia": {
+      "analogs": [
+        {
+          "analog_country": "Liberia",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.8664919071324259,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Sierra Leone",
+          "analog_event_year": 2000,
+          "weighted_cosine": 0.8642558788566289,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Liberia",
+          "analog_event_year": 1990,
+          "weighted_cosine": 0.8500205194706415,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.8664919071324259,
+      "suppressed": false,
+      "flag": null
+    },
+    "Bulgaria": {
+      "analogs": [
+        {
+          "analog_country": "India",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.9910574959097382,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Norway",
+          "analog_event_year": 2001,
+          "weighted_cosine": 0.9891533525234883,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Italy",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9676748103499613,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9910574959097382,
+      "suppressed": false,
+      "flag": null
+    },
+    "Burkina Faso": {
+      "analogs": [
+        {
+          "analog_country": "Mali",
+          "analog_event_year": 2021,
+          "weighted_cosine": 0.8886272010328035,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Libya",
+          "analog_event_year": 2020,
+          "weighted_cosine": 0.8602116291481696,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Mozambique",
+          "analog_event_year": 2021,
+          "weighted_cosine": 0.8542873202625464,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.8886272010328035,
+      "suppressed": false,
+      "flag": null
+    },
+    "Cameroon": {
+      "analogs": [
+        {
+          "analog_country": "Liberia",
+          "analog_event_year": 2014,
+          "weighted_cosine": 0.8565584711007612,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "The Democratic Republic of the Congo",
+          "analog_event_year": 1999,
+          "weighted_cosine": 0.8130239484955116,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Niger",
+          "analog_event_year": 2015,
+          "weighted_cosine": 0.7994946867889913,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.8565584711007612,
+      "suppressed": false,
+      "flag": null
+    },
+    "Canada": {
+      "analogs": [
+        {
+          "analog_country": "Norway",
+          "analog_event_year": 2001,
+          "weighted_cosine": 0.9904787178279044,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "India",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.989408556888065,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Netherlands",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9860264739812367,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9904787178279044,
+      "suppressed": false,
+      "flag": null
+    },
+    "Chile": {
+      "analogs": [
+        {
+          "analog_country": "Norway",
+          "analog_event_year": 2001,
+          "weighted_cosine": 0.9703731619383841,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Netherlands",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9702474278053417,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "India",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.9679163571774029,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.9703731619383841,
+      "suppressed": false,
+      "flag": null
+    },
+    "Comoros": {
+      "analogs": [
+        {
+          "analog_country": "Djibouti",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9838447286703784,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Yemen",
+          "analog_event_year": 2002,
+          "weighted_cosine": 0.9678557043304993,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Bolivia",
+          "analog_event_year": 1997,
+          "weighted_cosine": 0.9667385748850386,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.9838447286703784,
+      "suppressed": false,
+      "flag": null
+    },
+    "Croatia": {
+      "analogs": [
+        {
+          "analog_country": "India",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.9878476448998113,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Norway",
+          "analog_event_year": 2001,
+          "weighted_cosine": 0.9852262344346577,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Italy",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9638731185999205,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9878476448998113,
+      "suppressed": false,
+      "flag": null
+    },
+    "Cyprus": {
+      "analogs": [
+        {
+          "analog_country": "Norway",
+          "analog_event_year": 2001,
+          "weighted_cosine": 0.9849206992957416,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "India",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.9845547816803198,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Italy",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9800581671403042,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9849206992957416,
+      "suppressed": false,
+      "flag": null
+    },
+    "Djibouti": {
+      "analogs": [
+        {
+          "analog_country": "Sierra Leone",
+          "analog_event_year": 1998,
+          "weighted_cosine": 0.8974655414351873,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Liberia",
+          "analog_event_year": 1998,
+          "weighted_cosine": 0.8949526221753573,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Liberia",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.8885707565322694,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.8974655414351873,
+      "suppressed": false,
+      "flag": null
+    },
+    "Dominican Republic": {
+      "analogs": [
+        {
+          "analog_country": "Nigeria",
+          "analog_event_year": 1997,
+          "weighted_cosine": 0.9857095189150984,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Botswana",
+          "analog_event_year": 1998,
+          "weighted_cosine": 0.9850923069138184,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Republic of the Congo",
+          "analog_event_year": 1997,
+          "weighted_cosine": 0.9628725452874926,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.9857095189150984,
+      "suppressed": false,
+      "flag": null
+    },
+    "Ecuador": {
+      "analogs": [
+        {
+          "analog_country": "Angola",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.9614863265869688,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Angola",
+          "analog_event_year": 1985,
+          "weighted_cosine": 0.9494668531684513,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Djibouti",
+          "analog_event_year": 1992,
+          "weighted_cosine": 0.9333376907469852,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.9614863265869688,
+      "suppressed": false,
+      "flag": null
+    },
+    "Egypt": {
+      "analogs": [
+        {
+          "analog_country": "Kuwait",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.9896668380735619,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Qatar",
+          "analog_event_year": 1990,
+          "weighted_cosine": 0.9896668380735619,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Kuwait",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9892621412567463,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9896668380735619,
+      "suppressed": false,
+      "flag": null
+    },
+    "El Salvador": {
+      "analogs": [
+        {
+          "analog_country": "Somalia",
+          "analog_event_year": 1992,
+          "weighted_cosine": 0.790531716350091,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Yemen",
+          "analog_event_year": 2002,
+          "weighted_cosine": 0.7888254136916755,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Afghanistan",
+          "analog_event_year": 1994,
+          "weighted_cosine": 0.7826138070992742,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.790531716350091,
+      "suppressed": false,
+      "flag": null
+    },
+    "Equatorial Guinea": {
+      "analogs": [
+        {
+          "analog_country": "Afghanistan",
+          "analog_event_year": 1994,
+          "weighted_cosine": 0.9954820204853955,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Somalia",
+          "analog_event_year": 1992,
+          "weighted_cosine": 0.9923417209173397,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Iraq",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9923208944794972,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.9954820204853955,
+      "suppressed": false,
+      "flag": null
+    },
+    "Finland": {
+      "analogs": [
+        {
+          "analog_country": "Norway",
+          "analog_event_year": 2001,
+          "weighted_cosine": 0.9855279576240029,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "India",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.9845984419211862,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Netherlands",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9772259864771518,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9855279576240029,
+      "suppressed": false,
+      "flag": null
+    },
+    "Gabon": {
+      "analogs": [
+        {
+          "analog_country": "Venezuela",
+          "analog_event_year": 2019,
+          "weighted_cosine": 0.8180747778163819,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Pakistan",
+          "analog_event_year": 2011,
+          "weighted_cosine": 0.7936278574350365,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Niger",
+          "analog_event_year": 2015,
+          "weighted_cosine": 0.7524752596359131,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.8180747778163819,
+      "suppressed": false,
+      "flag": null
+    },
+    "Georgia": {
+      "analogs": [
+        {
+          "analog_country": "France",
+          "analog_event_year": 2011,
+          "weighted_cosine": 0.7000181882023881,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "France",
+          "analog_event_year": 2013,
+          "weighted_cosine": 0.6833167891368663,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Italy",
+          "analog_event_year": 2011,
+          "weighted_cosine": 0.6821419346398652,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.7000181882023881,
+      "suppressed": false,
+      "flag": null
+    },
+    "Greece": {
+      "analogs": [
+        {
+          "analog_country": "Denmark",
+          "analog_event_year": 2014,
+          "weighted_cosine": 0.7275304406045839,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "France",
+          "analog_event_year": 2013,
+          "weighted_cosine": 0.6751665998236737,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Norway",
+          "analog_event_year": 2001,
+          "weighted_cosine": 0.6718979969657828,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.7275304406045839,
+      "suppressed": false,
+      "flag": null
+    },
+    "Guinea-Bissau": {
+      "analogs": [
+        {
+          "analog_country": "Afghanistan",
+          "analog_event_year": 1994,
+          "weighted_cosine": 0.9962550562735735,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Somalia",
+          "analog_event_year": 1992,
+          "weighted_cosine": 0.9910828266168985,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Iraq",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9872490091806968,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9962550562735735,
+      "suppressed": false,
+      "flag": null
+    },
+    "Iceland": {
+      "analogs": [
+        {
+          "analog_country": "Norway",
+          "analog_event_year": 2001,
+          "weighted_cosine": 0.9754065636623803,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "India",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.9737264878700688,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Netherlands",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.968084501028264,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9754065636623803,
+      "suppressed": false,
+      "flag": null
+    },
+    "Iran": {
+      "analogs": [
+        {
+          "analog_country": "Kuwait",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.9968862315368897,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Qatar",
+          "analog_event_year": 1990,
+          "weighted_cosine": 0.9968862315368897,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Iraq",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9940950174983775,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.9968862315368897,
+      "suppressed": false,
+      "flag": null
+    },
+    "Israel": {
+      "analogs": [
+        {
+          "analog_country": "Norway",
+          "analog_event_year": 2001,
+          "weighted_cosine": 0.9974779728813589,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "India",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.9973563531878489,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Netherlands",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9847658094073366,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9974779728813589,
+      "suppressed": false,
+      "flag": null
+    },
+    "Japan": {
+      "analogs": [
+        {
+          "analog_country": "Republic of the Congo",
+          "analog_event_year": 1997,
+          "weighted_cosine": 0.9725798604588851,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Panama",
+          "analog_event_year": 1989,
+          "weighted_cosine": 0.9561723949988209,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Botswana",
+          "analog_event_year": 1985,
+          "weighted_cosine": 0.9491071669272867,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.9725798604588851,
+      "suppressed": false,
+      "flag": null
+    },
+    "Jordan": {
+      "analogs": [
+        {
+          "analog_country": "Afghanistan",
+          "analog_event_year": 1994,
+          "weighted_cosine": 0.9961958973154028,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Kuwait",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.9958485804354279,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Qatar",
+          "analog_event_year": 1990,
+          "weighted_cosine": 0.9958485804354279,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9961958973154028,
+      "suppressed": false,
+      "flag": null
+    },
+    "Kazakhstan": {
+      "analogs": [
+        {
+          "analog_country": "Rwanda",
+          "analog_event_year": 1994,
+          "weighted_cosine": 0.9755959925529821,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Kuwait",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9660768559466265,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Guinea-Bissau",
+          "analog_event_year": 1998,
+          "weighted_cosine": 0.9653185573571321,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.9755959925529821,
+      "suppressed": false,
+      "flag": null
+    },
+    "Kuwait": {
+      "analogs": [
+        {
+          "analog_country": "Rwanda",
+          "analog_event_year": 1990,
+          "weighted_cosine": 0.9983575502232847,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Oman",
+          "analog_event_year": 1990,
+          "weighted_cosine": 0.9980266376476773,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Qatar",
+          "analog_event_year": 1990,
+          "weighted_cosine": 0.9925952815299128,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9983575502232847,
+      "suppressed": false,
+      "flag": null
+    },
+    "Kyrgyzstan": {
+      "analogs": [
+        {
+          "analog_country": "Yemen",
+          "analog_event_year": 2002,
+          "weighted_cosine": 0.9255249034039673,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Angola",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.9239146069354988,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Djibouti",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.923705611758245,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.9255249034039673,
+      "suppressed": false,
+      "flag": null
+    },
+    "Lithuania": {
+      "analogs": [
+        {
+          "analog_country": "Netherlands",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9843700058892135,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Italy",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9797333982983236,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Norway",
+          "analog_event_year": 2001,
+          "weighted_cosine": 0.9631757765257905,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9843700058892135,
+      "suppressed": false,
+      "flag": null
+    },
+    "Maldives": {
+      "analogs": [
+        {
+          "analog_country": "Panama",
+          "analog_event_year": 1989,
+          "weighted_cosine": 0.8941684997501566,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Botswana",
+          "analog_event_year": 1985,
+          "weighted_cosine": 0.8605557211636653,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Republic of the Congo",
+          "analog_event_year": 1997,
+          "weighted_cosine": 0.8545817309450758,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.8941684997501566,
+      "suppressed": false,
+      "flag": null
+    },
+    "Mauritania": {
+      "analogs": [
+        {
+          "analog_country": "Serbia",
+          "analog_event_year": 1999,
+          "weighted_cosine": 0.9681712723356624,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Bolivia",
+          "analog_event_year": 1988,
+          "weighted_cosine": 0.9610872613553101,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Libya",
+          "analog_event_year": 2020,
+          "weighted_cosine": 0.9566057962900975,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.9681712723356624,
+      "suppressed": false,
+      "flag": null
+    },
+    "Mexico": {
+      "analogs": [
+        {
+          "analog_country": "Nigeria",
+          "analog_event_year": 1997,
+          "weighted_cosine": 0.961397154058155,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Botswana",
+          "analog_event_year": 1998,
+          "weighted_cosine": 0.9556039719388131,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Botswana",
+          "analog_event_year": 1985,
+          "weighted_cosine": 0.9330585308763159,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.961397154058155,
+      "suppressed": false,
+      "flag": null
+    },
+    "Moldova": {
+      "analogs": [
+        {
+          "analog_country": "Liberia",
+          "analog_event_year": 1998,
+          "weighted_cosine": 0.8596304778512811,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Sierra Leone",
+          "analog_event_year": 1993,
+          "weighted_cosine": 0.8444931370412924,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Afghanistan",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.8401128821243029,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.8596304778512811,
+      "suppressed": false,
+      "flag": null
+    },
+    "Mongolia": {
+      "analogs": [
+        {
+          "analog_country": "Lesotho",
+          "analog_event_year": 1998,
+          "weighted_cosine": 0.8313473561762454,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Hungary",
+          "analog_event_year": 1990,
+          "weighted_cosine": 0.8219145305254268,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Albania",
+          "analog_event_year": 1997,
+          "weighted_cosine": 0.716597212140938,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.8313473561762454,
+      "suppressed": false,
+      "flag": null
+    },
+    "Montenegro": {
+      "analogs": [
+        {
+          "analog_country": "Namibia",
+          "analog_event_year": 1998,
+          "weighted_cosine": 0.8926188771453145,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Yemen",
+          "analog_event_year": 2002,
+          "weighted_cosine": 0.7985615233224591,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Djibouti",
+          "analog_event_year": 1992,
+          "weighted_cosine": 0.7981506830821528,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.8926188771453145,
+      "suppressed": false,
+      "flag": null
+    },
+    "North Macedonia": {
+      "analogs": [
+        {
+          "analog_country": "Panama",
+          "analog_event_year": 1989,
+          "weighted_cosine": 0.9323523049356207,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Republic of the Congo",
+          "analog_event_year": 1997,
+          "weighted_cosine": 0.9221901883975796,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Botswana",
+          "analog_event_year": 1985,
+          "weighted_cosine": 0.9197529148395697,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9323523049356207,
+      "suppressed": false,
+      "flag": null
+    },
+    "Philippines": {
+      "analogs": [
+        {
+          "analog_country": "India",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.9557072054692843,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Norway",
+          "analog_event_year": 2001,
+          "weighted_cosine": 0.9488893006885745,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "United Kingdom",
+          "analog_event_year": 1999,
+          "weighted_cosine": 0.9416228910851207,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.9557072054692843,
+      "suppressed": false,
+      "flag": null
+    },
+    "Poland": {
+      "analogs": [
+        {
+          "analog_country": "Norway",
+          "analog_event_year": 2001,
+          "weighted_cosine": 0.9971303910596279,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "India",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.9966261760956076,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Netherlands",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9863917450074234,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.9971303910596279,
+      "suppressed": false,
+      "flag": null
+    },
+    "Portugal": {
+      "analogs": [
+        {
+          "analog_country": "Netherlands",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.979283589955273,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Italy",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9742455398313978,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Norway",
+          "analog_event_year": 2001,
+          "weighted_cosine": 0.9711843422652351,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.979283589955273,
+      "suppressed": false,
+      "flag": null
+    },
+    "Romania": {
+      "analogs": [
+        {
+          "analog_country": "France",
+          "analog_event_year": 1994,
+          "weighted_cosine": 0.9247160129777995,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "France",
+          "analog_event_year": 2013,
+          "weighted_cosine": 0.8971892503545362,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "India",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.8945266643525415,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.9247160129777995,
+      "suppressed": false,
+      "flag": null
+    },
+    "Russia": {
+      "analogs": [
+        {
+          "analog_country": "Kuwait",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.9996833253003401,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Qatar",
+          "analog_event_year": 1990,
+          "weighted_cosine": 0.9996833253003401,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Kuwait",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9972054329181331,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9996833253003401,
+      "suppressed": false,
+      "flag": null
+    },
+    "Rwanda": {
+      "analogs": [
+        {
+          "analog_country": "Lesotho",
+          "analog_event_year": 1998,
+          "weighted_cosine": 0.9781390486847106,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Hungary",
+          "analog_event_year": 1990,
+          "weighted_cosine": 0.97261203685222,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Albania",
+          "analog_event_year": 1997,
+          "weighted_cosine": 0.8246595313074648,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.9781390486847106,
+      "suppressed": false,
+      "flag": null
+    },
+    "Sao Tome and Principe": {
+      "analogs": [
+        {
+          "analog_country": "Lesotho",
+          "analog_event_year": 1998,
+          "weighted_cosine": 0.9988143454573489,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Hungary",
+          "analog_event_year": 1990,
+          "weighted_cosine": 0.9984671520485645,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Venezuela",
+          "analog_event_year": 2019,
+          "weighted_cosine": 0.9266246066743041,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.9988143454573489,
+      "suppressed": false,
+      "flag": null
+    },
+    "Serbia": {
+      "analogs": [
+        {
+          "analog_country": "Uganda",
+          "analog_event_year": 1997,
+          "weighted_cosine": 0.8309835233412166,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Namibia",
+          "analog_event_year": 1998,
+          "weighted_cosine": 0.6716942545043547,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Nigeria",
+          "analog_event_year": 1997,
+          "weighted_cosine": 0.6119375348989206,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.8309835233412166,
+      "suppressed": false,
+      "flag": null
+    },
+    "Seychelles": {
+      "analogs": [
+        {
+          "analog_country": "Republic of the Congo",
+          "analog_event_year": 1997,
+          "weighted_cosine": 0.9926038012851959,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Botswana",
+          "analog_event_year": 1998,
+          "weighted_cosine": 0.9890457059401556,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Botswana",
+          "analog_event_year": 1985,
+          "weighted_cosine": 0.9845828932875226,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.9926038012851959,
+      "suppressed": false,
+      "flag": null
+    },
+    "Slovakia": {
+      "analogs": [
+        {
+          "analog_country": "Denmark",
+          "analog_event_year": 2014,
+          "weighted_cosine": 0.8643213822834221,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "United Kingdom",
+          "analog_event_year": 1999,
+          "weighted_cosine": 0.8575458403245215,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "India",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.845680816559535,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.8643213822834221,
+      "suppressed": false,
+      "flag": null
+    },
+    "Slovenia": {
+      "analogs": [
+        {
+          "analog_country": "Norway",
+          "analog_event_year": 2001,
+          "weighted_cosine": 0.9835496820264312,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Netherlands",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9820918225386657,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Italy",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9803904779097414,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9835496820264312,
+      "suppressed": false,
+      "flag": null
+    },
+    "South Korea": {
+      "analogs": [
+        {
+          "analog_country": "India",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.9956132942683245,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Norway",
+          "analog_event_year": 2001,
+          "weighted_cosine": 0.9948162862978654,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Italy",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9775577974025568,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9956132942683245,
+      "suppressed": false,
+      "flag": null
+    },
+    "Spain": {
+      "analogs": [
+        {
+          "analog_country": "India",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.993421172494496,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Norway",
+          "analog_event_year": 2001,
+          "weighted_cosine": 0.9928411681362986,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Netherlands",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9813892606059109,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.993421172494496,
+      "suppressed": false,
+      "flag": null
+    },
+    "Sri Lanka": {
+      "analogs": [
+        {
+          "analog_country": "Botswana",
+          "analog_event_year": 1998,
+          "weighted_cosine": 0.8942582369253298,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Nigeria",
+          "analog_event_year": 1997,
+          "weighted_cosine": 0.8822764478352669,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Botswana",
+          "analog_event_year": 1985,
+          "weighted_cosine": 0.8522364025653596,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.8942582369253298,
+      "suppressed": false,
+      "flag": null
+    },
+    "Syria": {
+      "analogs": [
+        {
+          "analog_country": "Libya",
+          "analog_event_year": 2020,
+          "weighted_cosine": 0.9543934936225832,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Somalia",
+          "analog_event_year": 1994,
+          "weighted_cosine": 0.9490737944088257,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Eritrea",
+          "analog_event_year": 2017,
+          "weighted_cosine": 0.9483323301137079,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9543934936225832,
+      "suppressed": false,
+      "flag": null
+    },
+    "Tajikistan": {
+      "analogs": [
+        {
+          "analog_country": "Kuwait",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.9947269257454295,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Qatar",
+          "analog_event_year": 1990,
+          "weighted_cosine": 0.9947269257454293,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Oman",
+          "analog_event_year": 1990,
+          "weighted_cosine": 0.9927907578706168,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9947269257454295,
+      "suppressed": false,
+      "flag": null
+    },
+    "The Gambia": {
+      "analogs": [
+        {
+          "analog_country": "Liberia",
+          "analog_event_year": 1998,
+          "weighted_cosine": 0.9899544362079216,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Bolivia",
+          "analog_event_year": 1997,
+          "weighted_cosine": 0.9897086421569823,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Rwanda",
+          "analog_event_year": 1994,
+          "weighted_cosine": 0.9881453115714045,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.9899544362079216,
+      "suppressed": false,
+      "flag": null
+    },
+    "Togo": {
+      "analogs": [
+        {
+          "analog_country": "Kenya",
+          "analog_event_year": 2011,
+          "weighted_cosine": 0.6628997146743559,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Liberia",
+          "analog_event_year": 2014,
+          "weighted_cosine": 0.630567797017357,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Niger",
+          "analog_event_year": 2015,
+          "weighted_cosine": 0.5966950932042185,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.6628997146743559,
+      "suppressed": true,
+      "flag": "WEAK_ANALOG"
+    },
+    "Turkmenistan": {
+      "analogs": [
+        {
+          "analog_country": "Kuwait",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9905504605336677,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Oman",
+          "analog_event_year": 1990,
+          "weighted_cosine": 0.9868120183544574,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Qatar",
+          "analog_event_year": 1990,
+          "weighted_cosine": 0.9852458424337386,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9905504605336677,
+      "suppressed": false,
+      "flag": null
+    },
+    "Ukraine": {
+      "analogs": [
+        {
+          "analog_country": "France",
+          "analog_event_year": 1994,
+          "weighted_cosine": 0.7464200941725356,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Norway",
+          "analog_event_year": 2001,
+          "weighted_cosine": 0.7024905171095939,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "India",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.7018024891772688,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.7464200941725356,
+      "suppressed": false,
+      "flag": null
+    },
+    "United States": {
+      "analogs": [
+        {
+          "analog_country": "Norway",
+          "analog_event_year": 2001,
+          "weighted_cosine": 0.9927510962400651,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "India",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.9920315541282797,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Italy",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9846792340404781,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9927510962400651,
+      "suppressed": false,
+      "flag": null
+    },
+    "Uzbekistan": {
+      "analogs": [
+        {
+          "analog_country": "Kuwait",
+          "analog_event_year": 2003,
+          "weighted_cosine": 0.9976587161028558,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Qatar",
+          "analog_event_year": 1990,
+          "weighted_cosine": 0.9975415287431874,
+          "same_cohort": true
+        },
+        {
+          "analog_country": "Kuwait",
+          "analog_event_year": 1987,
+          "weighted_cosine": 0.9975415287431872,
+          "same_cohort": true
+        }
+      ],
+      "best_weighted_cosine": 0.9976587161028558,
+      "suppressed": false,
+      "flag": null
+    },
+    "Venezuela": {
+      "analogs": [
+        {
+          "analog_country": "Hungary",
+          "analog_event_year": 1990,
+          "weighted_cosine": 0.9976157609658981,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Lesotho",
+          "analog_event_year": 1998,
+          "weighted_cosine": 0.997326927952478,
+          "same_cohort": false
+        },
+        {
+          "analog_country": "Albania",
+          "analog_event_year": 1997,
+          "weighted_cosine": 0.9063464089451589,
+          "same_cohort": false
+        }
+      ],
+      "best_weighted_cosine": 0.9976157609658981,
+      "suppressed": false,
+      "flag": null
+    }
+  }
+}

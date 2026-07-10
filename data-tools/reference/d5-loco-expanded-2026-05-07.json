@@ -1,0 +1,308 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-05-10T15:52:10.787585+00:00",
+  "purpose": "Phase D D5 LOCO regression on the multi-task head trained on D5 trajectory features (per stage-2-d5-walk-methodology-prereg.md, commit 925dc42). Tests F-D5-1 (mass_protest LEAK rescue: LOCO must improve from D2 baseline 0.4449 to >= 0.5000) and F-D5-2 (LOCKED protection: no LOCKED recipe loses more than 0.03 LOCO-AUC vs D2). Same 30-country held-out partition as d2-loco-expanded-2026-05.json for direct comparability.",
+  "method": "Cluster LOCO with D2-style MultiTaskHead retrained per held-out country on D5 backbones (qgi-ml/results/d5_backbones_2026_05_07/, locally trained, gitignored). D5 backbones were trained on the D5-augmented feature panel (~624 wide-panel feature columns, 6x D2 baseline) via train_multitask_v0.py --apply-d5-features. The per-LOCO-fold MT head retraining uses the frozen D5 backbones (not D2 backbones). Architecture per qgi-ml PR #40 (commit 9a6c98d).",
+  "countries_held_out": [
+    "norway",
+    "sweden",
+    "switzerland",
+    "netherlands",
+    "estonia",
+    "ukraine",
+    "sudan",
+    "myanmar",
+    "yemen",
+    "russia",
+    "brazil",
+    "indonesia",
+    "south_korea",
+    "mexico",
+    "turkiye",
+    "iran",
+    "nigeria",
+    "afghanistan",
+    "pakistan",
+    "bangladesh",
+    "india",
+    "china",
+    "france",
+    "germany",
+    "japan",
+    "australia",
+    "canada",
+    "argentina",
+    "venezuela",
+    "egypt"
+  ],
+  "n_recipes": 23,
+  "per_country": {
+    "norway": {
+      "n_test": 4,
+      "elapsed_sec": 17.4,
+      "epochs_run": 15
+    },
+    "sweden": {
+      "n_test": 4,
+      "elapsed_sec": 0.7,
+      "epochs_run": 17
+    },
+    "switzerland": {
+      "n_test": 4,
+      "elapsed_sec": 0.5,
+      "epochs_run": 17
+    },
+    "netherlands": {
+      "n_test": 4,
+      "elapsed_sec": 0.5,
+      "epochs_run": 15
+    },
+    "estonia": {
+      "n_test": 4,
+      "elapsed_sec": 0.5,
+      "epochs_run": 15
+    },
+    "ukraine": {
+      "n_test": 4,
+      "elapsed_sec": 0.5,
+      "epochs_run": 17
+    },
+    "sudan": {
+      "n_test": 4,
+      "elapsed_sec": 0.6,
+      "epochs_run": 17
+    },
+    "myanmar": {
+      "n_test": 4,
+      "elapsed_sec": 0.5,
+      "epochs_run": 15
+    },
+    "yemen": {
+      "n_test": 4,
+      "elapsed_sec": 0.6,
+      "epochs_run": 17
+    },
+    "russia": {
+      "n_test": 4,
+      "elapsed_sec": 0.6,
+      "epochs_run": 15
+    },
+    "brazil": {
+      "n_test": 4,
+      "elapsed_sec": 0.6,
+      "epochs_run": 15
+    },
+    "indonesia": {
+      "n_test": 4,
+      "elapsed_sec": 0.7,
+      "epochs_run": 17
+    },
+    "south_korea": {
+      "n_test": 4,
+      "elapsed_sec": 0.7,
+      "epochs_run": 17
+    },
+    "mexico": {
+      "n_test": 4,
+      "elapsed_sec": 0.5,
+      "epochs_run": 13
+    },
+    "turkiye": {
+      "n_test": 4,
+      "elapsed_sec": 0.5,
+      "epochs_run": 16
+    },
+    "iran": {
+      "n_test": 4,
+      "elapsed_sec": 0.5,
+      "epochs_run": 17
+    },
+    "nigeria": {
+      "n_test": 4,
+      "elapsed_sec": 0.5,
+      "epochs_run": 15
+    },
+    "afghanistan": {
+      "n_test": 4,
+      "elapsed_sec": 0.5,
+      "epochs_run": 15
+    },
+    "pakistan": {
+      "n_test": 4,
+      "elapsed_sec": 0.5,
+      "epochs_run": 15
+    },
+    "bangladesh": {
+      "n_test": 4,
+      "elapsed_sec": 0.6,
+      "epochs_run": 15
+    },
+    "india": {
+      "n_test": 4,
+      "elapsed_sec": 0.6,
+      "epochs_run": 17
+    },
+    "china": {
+      "n_test": 4,
+      "elapsed_sec": 0.6,
+      "epochs_run": 15
+    },
+    "france": {
+      "n_test": 4,
+      "elapsed_sec": 2.8,
+      "epochs_run": 15
+    },
+    "germany": {
+      "n_test": 4,
+      "elapsed_sec": 2.0,
+      "epochs_run": 15
+    },
+    "japan": {
+      "n_test": 4,
+      "elapsed_sec": 3.4,
+      "epochs_run": 17
+    },
+    "australia": {
+      "n_test": 4,
+      "elapsed_sec": 2.6,
+      "epochs_run": 15
+    },
+    "canada": {
+      "n_test": 4,
+      "elapsed_sec": 2.2,
+      "epochs_run": 15
+    },
+    "argentina": {
+      "n_test": 4,
+      "elapsed_sec": 1.8,
+      "epochs_run": 15
+    },
+    "venezuela": {
+      "n_test": 4,
+      "elapsed_sec": 1.6,
+      "epochs_run": 16
+    },
+    "egypt": {
+      "n_test": 4,
+      "elapsed_sec": 1.7,
+      "epochs_run": 16
+    }
+  },
+  "pooled_loco_auc_per_recipe": {
+    "elections_and_voting": {
+      "loco_auc_pooled": 0.711304347826087,
+      "n_total": 120,
+      "n_pos_total": 5
+    },
+    "civil_war_and_insurgency": {
+      "loco_auc_pooled": 0.7711757269279393,
+      "n_total": 120,
+      "n_pos_total": 7
+    },
+    "mass_protest": {
+      "loco_auc_pooled": 0.5847457627118644,
+      "n_total": 120,
+      "n_pos_total": 2
+    },
+    "migration_and_refugees": {
+      "loco_auc_pooled": 0.7339130434782609,
+      "n_total": 120,
+      "n_pos_total": 5
+    },
+    "government_formation": {
+      "loco_auc_pooled": 0.5527065527065527,
+      "n_total": 120,
+      "n_pos_total": 3
+    },
+    "multilateral_agreement": {
+      "loco_auc_pooled": 0.8689458689458689,
+      "n_total": 120,
+      "n_pos_total": 3
+    },
+    "terrorist_attack": {
+      "loco_auc_pooled": 0.6974789915966386,
+      "n_total": 120,
+      "n_pos_total": 1
+    },
+    "foreign_intervention": {
+      "loco_auc_pooled": 0.40789473684210525,
+      "n_total": 120,
+      "n_pos_total": 6
+    },
+    "peacekeeping_and_peace_process": {
+      "loco_auc_pooled": 0.7711864406779662,
+      "n_total": 120,
+      "n_pos_total": 2
+    },
+    "constitutional_change": {
+      "loco_auc_pooled": 0.7058823529411765,
+      "n_total": 120,
+      "n_pos_total": 1
+    },
+    "sanctions_and_arms_embargo": {
+      "loco_auc_pooled": 0.5720338983050848,
+      "n_total": 120,
+      "n_pos_total": 2
+    },
+    "territorial_disputes": {
+      "loco_auc_pooled": 0.6779661016949152,
+      "n_total": 120,
+      "n_pos_total": 2
+    },
+    "trade_agreement": {
+      "loco_auc_pooled": 0.5517241379310345,
+      "n_total": 120,
+      "n_pos_total": 4
+    },
+    "economic_recession": {
+      "loco_auc_pooled": 0.8235294117647058,
+      "n_total": 120,
+      "n_pos_total": 1
+    },
+    "epidemic_and_pandemic": {
+      "loco_auc_pooled": 0.8823529411764706,
+      "n_total": 120,
+      "n_pos_total": 1
+    },
+    "bilateral_treaty": {
+      "loco_auc_pooled": 0.6681286549707602,
+      "n_total": 120,
+      "n_pos_total": 6
+    },
+    "humanitarian_crisis": {
+      "loco_auc_pooled": 0.4843304843304843,
+      "n_total": 120,
+      "n_pos_total": 3
+    },
+    "political_corruption": {
+      "loco_auc_pooled": 0.6398305084745762,
+      "n_total": 120,
+      "n_pos_total": 2
+    },
+    "human_rights_violation": {
+      "loco_auc_pooled": 0.9243697478991597,
+      "n_total": 120,
+      "n_pos_total": 1
+    },
+    "political_repression": {
+      "loco_auc_pooled": 0.6551724137931034,
+      "n_total": 120,
+      "n_pos_total": 4
+    },
+    "natural_disaster": {
+      "loco_auc_pooled": NaN,
+      "n_total": 120,
+      "n_pos_total": 0
+    },
+    "energy_policy": {
+      "loco_auc_pooled": 0.47058823529411764,
+      "n_total": 120,
+      "n_pos_total": 1
+    },
+    "executive_power_consolidation": {
+      "loco_auc_pooled": NaN,
+      "n_total": 120,
+      "n_pos_total": 0
+    }
+  }
+}
