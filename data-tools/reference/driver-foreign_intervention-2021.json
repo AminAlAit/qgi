@@ -1,0 +1,2060 @@
+{
+  "recipe_id": "foreign_intervention",
+  "eval_year": 2021,
+  "capability": "per-country-driver",
+  "capability_spec_section": "#4",
+  "computed_at_utc": "2026-05-24T16:41:43.809081+00:00",
+  "binding_provenance": "docs/specs/internal/ops/ml-track/te-new-capabilities-spec.md §4 (locked 2026-05-24, chat QGI-R&D | 002). Pure transform of recipe-similarity-scores artifact; no model re-fit.",
+  "m8_r5_note": "M8-R5 BINDING: ATTRIBUTION to the similarity score only. signal_share_pct = an indicator's share of this country's total absolute contribution mass (sign indicates direction toward/away from the crisis profile) — this is NOT advice and NOT a probability claim. The model is discriminative, not causal. Never interpret as 'X causes the risk'.",
+  "method": "Rank indicators by weighted_contribution descending. signal_share_pct = weighted_contribution / sum(|weighted_contribution|) * 100 — share of total ABSOLUTE contribution mass, bounded [-100, +100], |shares| sum to 100%. (Denominator is the absolute mass, NOT the signed sum S, which is incoherent near S=0; review 2026-05-24.) No computation beyond sort + normalize of existing per_indicator data.",
+  "selected_indicators": [
+    "v2elintmon",
+    "RQ.EST",
+    "v2pepwrgen",
+    "v2stfisccap"
+  ],
+  "chosen_window": 18,
+  "n_countries": 68,
+  "drivers": {
+    "Afghanistan": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.4773219019803732,
+        "signal_share_pct": 51.93566478996433,
+        "cosine": 0.9336942620623462
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.2704018650901663,
+        "signal_share_pct": 29.42144612605998,
+        "cosine": 0.9912449657915955
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.16789490499124624,
+        "signal_share_pct": 18.268035615777833,
+        "cosine": 0.997574747363962
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.0034451425841517825,
+        "signal_share_pct": 0.3748534681978528,
+        "cosine": 0.07224318165679511
+      }
+    ],
+    "Algeria": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.5011904476993974,
+        "signal_share_pct": 53.63994691343116,
+        "cosine": 0.9803837688483599
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.2610090252517163,
+        "signal_share_pct": 27.93451136727503,
+        "cosine": 0.9568124917358206
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.16799498761930182,
+        "signal_share_pct": 17.979676705703323,
+        "cosine": 0.9981694044942857
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.004165986333572678,
+        "signal_share_pct": 0.4458650135904952,
+        "cosine": 0.08735896994815273
+      }
+    ],
+    "Argentina": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.45035462508788376,
+        "signal_share_pct": 51.381405635748564,
+        "cosine": 0.8809432954850798
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.030490372108201776,
+        "signal_share_pct": 3.4786767804831817,
+        "cosine": 0.6393701964989715
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.16076303123298874,
+        "signal_share_pct": -18.3416136059506,
+        "cosine": -0.9551995653237664
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.2348853635199968,
+        "signal_share_pct": -26.798303977817657,
+        "cosine": -0.8610478113739645
+      }
+    ],
+    "Armenia": [
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.27028837335596423,
+        "signal_share_pct": 28.705621784071905,
+        "cosine": 0.9908289253543402
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.028763490304993526,
+        "signal_share_pct": -3.0547887192971035,
+        "cosine": -0.6031582160767728
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.15576315137387287,
+        "signal_share_pct": -16.542620963369938,
+        "cosine": -0.9254919700422555
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.486771881737916,
+        "signal_share_pct": -51.69696853326104,
+        "cosine": -0.9521794642699454
+      }
+    ],
+    "Australia": [
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.014776456205391404,
+        "signal_share_pct": 1.5522020411291497,
+        "cosine": 0.3098560317359387
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.1681870993358937,
+        "signal_share_pct": -17.667318554059914,
+        "cosine": -0.9993108673466267
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.26952046347834857,
+        "signal_share_pct": -28.311944875153895,
+        "cosine": -0.9880139048288186
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.49948330313658945,
+        "signal_share_pct": -52.46853452965704,
+        "cosine": -0.9770444058813738
+      }
+    ],
+    "Austria": [
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.028778577145449714,
+        "signal_share_pct": 3.1444843747105433,
+        "cosine": 0.6034745807348619
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.16818709933589365,
+        "signal_share_pct": -18.37692333490601,
+        "cosine": -0.9993108673466262
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.2309343815494664,
+        "signal_share_pct": -25.23299017514343,
+        "cosine": -0.8465642167918203
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.4873080879183601,
+        "signal_share_pct": -53.24560211524001,
+        "cosine": -0.9532283426723104
+      }
+    ],
+    "Azerbaijan": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.4503031114656863,
+        "signal_share_pct": 50.097743539432635,
+        "cosine": 0.8808425291610031
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.2699074340047206,
+        "signal_share_pct": 30.02811453854502,
+        "cosine": 0.9894324696972527
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.16663999638265065,
+        "signal_share_pct": 18.539262975592756,
+        "cosine": 0.9901185047921587
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.011998547250619078,
+        "signal_share_pct": -1.3348789464295847,
+        "cosine": -0.25160445684645844
+      }
+    ],
+    "Belarus": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.4648042372594509,
+        "signal_share_pct": 55.76916476755947,
+        "cosine": 0.9092083298730749
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.27088820665926305,
+        "signal_share_pct": 32.502304883972876,
+        "cosine": 0.9930278071631281
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.007655229012156242,
+        "signal_share_pct": -0.9185065321898852,
+        "cosine": -0.16052691191756097
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.09009539403402055,
+        "signal_share_pct": -10.810023816277766,
+        "cosine": -0.5353163632144209
+      }
+    ],
+    "Benin": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.4739342395883055,
+        "signal_share_pct": 54.122499609111806,
+        "cosine": 0.9270676209546266
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.007156332643914458,
+        "signal_share_pct": -0.8172412507258139,
+        "cosine": -0.1500652662589444
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.16296209080258572,
+        "signal_share_pct": -18.60999893872328,
+        "cosine": -0.9682656336162699
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.2316168699897114,
+        "signal_share_pct": -26.45026020143909,
+        "cosine": -0.8490660975772144
+      }
+    ],
+    "Bolivia": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.4937084072147916,
+        "signal_share_pct": 62.69794302974071,
+        "cosine": 0.965748072811764
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.16603006459836323,
+        "signal_share_pct": 21.084801026861,
+        "cosine": 0.986494496394456
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.12642956810543354,
+        "signal_share_pct": 16.055780583255387,
+        "cosine": 0.4634682267074136
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.001271520866685691,
+        "signal_share_pct": 0.16147536014289998,
+        "cosine": 0.026663254338135375
+      }
+    ],
+    "Bulgaria": [
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.027313105137753754,
+        "signal_share_pct": -2.8819814510637745,
+        "cosine": -0.5727442530694851
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.16636800528416307,
+        "signal_share_pct": -17.55455862162986,
+        "cosine": -0.9885024256659152
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.2712450616539345,
+        "signal_share_pct": -28.620811600755935,
+        "cosine": -0.9943359738685158
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.4827934993214838,
+        "signal_share_pct": -50.94264832655043,
+        "cosine": -0.9443973096713382
+      }
+    ],
+    "Burkina Faso": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.4665714882181519,
+        "signal_share_pct": 58.43838144629313,
+        "cosine": 0.9126652675767866
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.20234891079503606,
+        "signal_share_pct": 25.344332289660493,
+        "cosine": 0.7417749840301916
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.12321515529418682,
+        "signal_share_pct": 15.432778099117886,
+        "cosine": 0.7321027843008007
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.006263505815375316,
+        "signal_share_pct": -0.7845081649284922,
+        "cosine": -0.13134306559911482
+      }
+    ],
+    "Cameroon": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.49058710516063614,
+        "signal_share_pct": 70.089752599285,
+        "cosine": 0.9596424618895814
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.1648794095483176,
+        "signal_share_pct": 23.55617769483321,
+        "cosine": 0.9796576932114637
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.01612617217112038,
+        "signal_share_pct": -2.3039321783176656,
+        "cosine": -0.05911566836560597
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.028348584086319125,
+        "signal_share_pct": -4.050137527564115,
+        "cosine": -0.5944578083014561
+      }
+    ],
+    "Canada": [
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.016862661333308805,
+        "signal_share_pct": 1.786767532166941,
+        "cosine": 0.3536028701753065
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.1681870993358937,
+        "signal_share_pct": -17.821104420161202,
+        "cosine": -0.9993108673466266
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.26149447038874335,
+        "signal_share_pct": -27.707953109920876,
+        "cosine": -0.9585920469474151
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.4972081614459771,
+        "signal_share_pct": -52.684174937750996,
+        "cosine": -0.9725939779142303
+      }
+    ],
+    "Chile": [
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.015022016046490696,
+        "signal_share_pct": 1.6276645447192717,
+        "cosine": 0.31500531765802414
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.1681870993358937,
+        "signal_share_pct": -18.223398085915623,
+        "cosine": -0.9993108673466266
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.2533095796863844,
+        "signal_share_pct": -27.44658376194368,
+        "cosine": -0.9285876987837572
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.4863997339912922,
+        "signal_share_pct": -52.70235360742143,
+        "cosine": -0.9514515022505609
+      }
+    ],
+    "Comoros": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.48225313316822066,
+        "signal_share_pct": 52.52295763385697,
+        "cosine": 0.9433402939035278
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.26356260435492523,
+        "signal_share_pct": 28.705023462385604,
+        "cosine": 0.9661734568680782
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.16804728552501128,
+        "signal_share_pct": 18.302297799765686,
+        "cosine": 0.998480140964094
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.0043128659222578,
+        "signal_share_pct": -0.4697211039917393,
+        "cosine": -0.09043897274857879
+      }
+    ],
+    "Croatia": [
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.020696113367274317,
+        "signal_share_pct": -2.215745064608349,
+        "cosine": -0.43398873662285326
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.16620036774316815,
+        "signal_share_pct": -17.793565295468667,
+        "cosine": -0.9875063800883829
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.2690697574151325,
+        "signal_share_pct": -28.806857425253074,
+        "cosine": -0.9863616968602614
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.47808135105723315,
+        "signal_share_pct": -51.18383221466991,
+        "cosine": -0.9351798281812498
+      }
+    ],
+    "Cyprus": [
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.02004691070232279,
+        "signal_share_pct": 2.1726821994311436,
+        "cosine": 0.4203752315470638
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.1681870993358937,
+        "signal_share_pct": -18.228101193602548,
+        "cosine": -0.9993108673466266
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.2548331408941966,
+        "signal_share_pct": -27.618790609058628,
+        "cosine": -0.934172802188335
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.47961315213130773,
+        "signal_share_pct": -51.98042599790767,
+        "cosine": -0.938176199953738
+      }
+    ],
+    "Djibouti": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.484664318907582,
+        "signal_share_pct": 57.0621232014139,
+        "cosine": 0.9480568390280396
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.1681348120894814,
+        "signal_share_pct": 19.7954109424053,
+        "cosine": 0.6163522060117452
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.167898492171705,
+        "signal_share_pct": 19.76758773418255,
+        "cosine": 0.9975960611771482
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.028664951716235076,
+        "signal_share_pct": -3.3748781219982606,
+        "cosine": -0.6010919035820075
+      }
+    ],
+    "Dominican Republic": [
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.26845067343038426,
+        "signal_share_pct": 39.718352772130864,
+        "cosine": 0.9840922454898751
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.209169188414978,
+        "signal_share_pct": 30.947419532850727,
+        "cosine": 0.40915799214956866
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.03222199541222681,
+        "signal_share_pct": -4.767373329524133,
+        "cosine": -0.6756816041862154
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.16604385978238784,
+        "signal_share_pct": -24.566854365494272,
+        "cosine": -0.9865764627127246
+      }
+    ],
+    "Ecuador": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.4884044019746598,
+        "signal_share_pct": 53.72109293793045,
+        "cosine": 0.9553728538282795
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.22851663331748864,
+        "signal_share_pct": 25.135242939412972,
+        "cosine": 0.8377011833852263
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.16808465647470414,
+        "signal_share_pct": 18.488145101497647,
+        "cosine": 0.9987021865091958
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.024142605977134194,
+        "signal_share_pct": -2.65551902115893,
+        "cosine": -0.5062602277472796
+      }
+    ],
+    "Egypt": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.46466944885606626,
+        "signal_share_pct": 51.68996124410533,
+        "cosine": 0.9089446688964663
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.26959629825862685,
+        "signal_share_pct": 29.989968660193224,
+        "cosine": 0.9882919015954372
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.16337073177839992,
+        "signal_share_pct": 18.1734065255114,
+        "cosine": 0.970693640101825
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.0013184393775348107,
+        "signal_share_pct": 0.14666357019005688,
+        "cosine": 0.027647115649981135
+      }
+    ],
+    "El Salvador": [
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.26637493849150184,
+        "signal_share_pct": 43.19213995325741,
+        "cosine": 0.976482971760203
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.07518735354360445,
+        "signal_share_pct": 12.191472348567103,
+        "cosine": 0.4467378281677859
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.03192461687530475,
+        "signal_share_pct": -5.176509951878512,
+        "cosine": -0.6694457021476408
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.24323395460728725,
+        "signal_share_pct": -39.43987774629698,
+        "cosine": -0.47579243025159895
+      }
+    ],
+    "Equatorial Guinea": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.49784981740484047,
+        "signal_share_pct": 53.131720807336414,
+        "cosine": 0.9738491277083695
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.2611025049089318,
+        "signal_share_pct": 27.865482536948434,
+        "cosine": 0.9571551714713611
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.16818709933589365,
+        "signal_share_pct": 17.949328678861082,
+        "cosine": 0.9993108673466263
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.00987110584692807,
+        "signal_share_pct": 1.0534679768540756,
+        "cosine": 0.2069929111594816
+      }
+    ],
+    "Finland": [
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.03204370413593836,
+        "signal_share_pct": 3.3469528787922123,
+        "cosine": 0.6719429115933514
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.1681870993358937,
+        "signal_share_pct": -17.567079445932382,
+        "cosine": -0.9993108673466266
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.2597140531964174,
+        "signal_share_pct": -27.127035448865033,
+        "cosine": -0.952065355357054
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.4974544643374801,
+        "signal_share_pct": -51.95893222641037,
+        "cosine": -0.9730757735233811
+      }
+    ],
+    "Gabon": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.4903562817896316,
+        "signal_share_pct": 59.014268053198926,
+        "cosine": 0.9591909459290469
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.16780636197719007,
+        "signal_share_pct": 20.195457863028885,
+        "cosine": 0.9970486547175976
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.023939990779755407,
+        "signal_share_pct": -2.8811724974978583,
+        "cosine": -0.5020114728254955
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.14880876699380235,
+        "signal_share_pct": -17.90910158627433,
+        "cosine": -0.5455063747399628
+      }
+    ],
+    "Georgia": [
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.02159383133853521,
+        "signal_share_pct": -3.421935837704495,
+        "cosine": -0.1283032432894995
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.03584398284869885,
+        "signal_share_pct": -5.680131865119404,
+        "cosine": -0.7516331475375344
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.1562084521388579,
+        "signal_share_pct": -24.75407407542365,
+        "cosine": -0.5726322995039554
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.4173951196813324,
+        "signal_share_pct": -66.14385822175247,
+        "cosine": -0.8164708693281605
+      }
+    ],
+    "Greece": [
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.021683105555200238,
+        "signal_share_pct": 2.9294333456793975,
+        "cosine": 0.4546855450087173
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.03129523733458388,
+        "signal_share_pct": -4.228052645664217,
+        "cosine": -0.1859457169314963
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.26212463211623616,
+        "signal_share_pct": -35.413591290712866,
+        "cosine": -0.9609021073451253
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.42507790629583675,
+        "signal_share_pct": -57.42892271794352,
+        "cosine": -0.8314992469258577
+      }
+    ],
+    "Guinea-Bissau": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.5003272314640271,
+        "signal_share_pct": 52.409195909741314,
+        "cosine": 0.9786952227277225
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.25950660814996634,
+        "signal_share_pct": 27.183274887131383,
+        "cosine": 0.9513048988494613
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.16818709933589368,
+        "signal_share_pct": 17.617571229919612,
+        "cosine": 0.9993108673466264
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.026634485120511826,
+        "signal_share_pct": -2.7899579732076947,
+        "cosine": -0.5585138785685654
+      }
+    ],
+    "Iceland": [
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.029861226528090104,
+        "signal_share_pct": 3.198018678228936,
+        "cosine": 0.6261772800020865
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.15791319285855385,
+        "signal_share_pct": -16.911875331891242,
+        "cosine": -0.9382667894509474
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.2666135840124311,
+        "signal_share_pct": -28.553255196642723,
+        "cosine": -0.9773578036373833
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.47935346382172506,
+        "signal_share_pct": -51.3368507932371,
+        "cosine": -0.9376682209911636
+      }
+    ],
+    "Iran": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.49334972854697895,
+        "signal_share_pct": 51.24635247109589,
+        "cosine": 0.9650464577954168
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.2685700495365058,
+        "signal_share_pct": 27.897523045696502,
+        "cosine": 0.9845298569841203
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.16694341512461386,
+        "signal_share_pct": 17.341128613572906,
+        "cosine": 0.9919213163478471
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.03383894022713355,
+        "signal_share_pct": 3.5149958696347,
+        "cosine": 0.7095882525001866
+      }
+    ],
+    "Israel": [
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.03229762770313814,
+        "signal_share_pct": 3.323735008022176,
+        "cosine": 0.6772675813113892
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.1681870993358937,
+        "signal_share_pct": -17.30806222359477,
+        "cosine": -0.9993108673466266
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.2681757805461688,
+        "signal_share_pct": -27.59785450181431,
+        "cosine": -0.9830845372496985
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.5030664088261408,
+        "signal_share_pct": -51.770348266568746,
+        "cosine": -0.9840533556253865
+      }
+    ],
+    "Japan": [
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.2576232105175052,
+        "signal_share_pct": 27.619904327269413,
+        "cosine": 0.9444006993494379
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.021034340656288356,
+        "signal_share_pct": 2.2551014535796328,
+        "cosine": 0.4410812197014723
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.15791319285855382,
+        "signal_share_pct": -16.929946917459667,
+        "cosine": -0.9382667894509472
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.49617401664791017,
+        "signal_share_pct": -53.195047301691275,
+        "cosine": -0.9705710766811407
+      }
+    ],
+    "Jordan": [
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.2683799021327179,
+        "signal_share_pct": 30.77284446339287,
+        "cosine": 0.9838328105465882
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.16815936477762206,
+        "signal_share_pct": 19.28140645496518,
+        "cosine": 0.9991460779805493
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.00858524022823853,
+        "signal_share_pct": -0.9843965964850854,
+        "cosine": -0.18002885344397576
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.4270077471675857,
+        "signal_share_pct": -48.961352485156866,
+        "cosine": -0.835274228424024
+      }
+    ],
+    "Kazakhstan": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.2669072646564657,
+        "signal_share_pct": 36.749682146017676,
+        "cosine": 0.5221000345438689
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.2642368143030427,
+        "signal_share_pct": 36.381995632121814,
+        "cosine": 0.9686449901791935
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.1636389776945862,
+        "signal_share_pct": 22.530973162965353,
+        "cosine": 0.9722874666213667
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.03150149621893945,
+        "signal_share_pct": -4.337349058895158,
+        "cosine": -0.6605730410911269
+      }
+    ],
+    "Kuwait": [
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.27094978351522536,
+        "signal_share_pct": 38.812732148122656,
+        "cosine": 0.9932535369245021
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.1681870993358937,
+        "signal_share_pct": 24.09229028569025,
+        "cosine": 0.9993108673466267
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.028279153592606278,
+        "signal_share_pct": 4.050902715350468,
+        "cosine": 0.5930018802383066
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.23067906925815698,
+        "signal_share_pct": -33.044074850836616,
+        "cosine": -0.4512336904102087
+      }
+    ],
+    "Kyrgyzstan": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.4320493397335143,
+        "signal_share_pct": 50.14258611963703,
+        "cosine": 0.8451361392873918
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.24724539567712844,
+        "signal_share_pct": 28.69469388165452,
+        "cosine": 0.9063574827724719
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.15393963630050778,
+        "signal_share_pct": 17.86585642090047,
+        "cosine": 0.9146572601460773
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.028407145347167734,
+        "signal_share_pct": -3.2968635778079696,
+        "cosine": -0.5956858131524015
+      }
+    ],
+    "Lithuania": [
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.0033148406286486977,
+        "signal_share_pct": -0.36700907327886584,
+        "cosine": -0.06951080480686492
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.1681870993358937,
+        "signal_share_pct": -18.62116414625029,
+        "cosine": -0.9993108673466266
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.2353857427446296,
+        "signal_share_pct": -26.06119357930658,
+        "cosine": -0.8628821122847166
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.4963163168633319,
+        "signal_share_pct": -54.950633201164266,
+        "cosine": -0.9708494315902246
+      }
+    ],
+    "Maldives": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.300839836808817,
+        "signal_share_pct": 45.77453552325085,
+        "cosine": 0.5884758865301658
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.1949779318878519,
+        "signal_share_pct": 29.66702935396915,
+        "cosine": 0.7147542912096521
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.0057373912757446915,
+        "signal_share_pct": -0.8729775403024945,
+        "cosine": -0.12031066640795791
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.15566578912057621,
+        "signal_share_pct": -23.68545758247751,
+        "cosine": -0.9249134764587827
+      }
+    ],
+    "Mauritania": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.4991347256277802,
+        "signal_share_pct": 53.81128195183086,
+        "cosine": 0.9763625498456275
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.2574243262289432,
+        "signal_share_pct": 27.752693388630007,
+        "cosine": 0.9436716250520162
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.16425240407819391,
+        "signal_share_pct": 17.707909254362274,
+        "cosine": 0.9759322387464394
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.0067537451219547694,
+        "signal_share_pct": -0.7281154051768567,
+        "cosine": -0.1416231763392166
+      }
+    ],
+    "Mexico": [
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.2616681122027797,
+        "signal_share_pct": 30.766264919621978,
+        "cosine": 0.9592285868394643
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.012381927560303528,
+        "signal_share_pct": 1.4558352576054554,
+        "cosine": 0.25964377965520985
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.16405794900156365,
+        "signal_share_pct": -19.28951249986631,
+        "cosine": -0.9747768524412196
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.4123953560072891,
+        "signal_share_pct": -48.488387322906256,
+        "cosine": -0.8066907803886969
+      }
+    ],
+    "Moldova": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.2643056914001227,
+        "signal_share_pct": 41.091783968439735,
+        "cosine": 0.5170110704470943
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.19233067060273235,
+        "signal_share_pct": 29.901778978146325,
+        "cosine": 0.7050499039224759
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.15791319285855387,
+        "signal_share_pct": 24.55087051790684,
+        "cosine": 0.9382667894509477
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.028658565776821108,
+        "signal_share_pct": -4.455566535507098,
+        "cosine": -0.6009579931356721
+      }
+    ],
+    "Mongolia": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.36271366587419995,
+        "signal_share_pct": 47.68188445652058,
+        "cosine": 0.7095079173891855
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.134811691697447,
+        "signal_share_pct": 17.722176227942825,
+        "cosine": 0.8010054819340756
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.033838940227133546,
+        "signal_share_pct": -4.44842472133625,
+        "cosine": -0.7095882525001865
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.229330607632119,
+        "signal_share_pct": -30.147514594200352,
+        "cosine": -0.8406850679135076
+      }
+    ],
+    "Montenegro": [
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.25899441060617906,
+        "signal_share_pct": 38.6485409850412,
+        "cosine": 0.9494272740904729
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.07948135345671378,
+        "signal_share_pct": 11.860635677151024,
+        "cosine": 0.4722513235220627
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.0366836719133357,
+        "signal_share_pct": -5.474135113982011,
+        "cosine": -0.7692410717816103
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.29496782887038503,
+        "signal_share_pct": -44.01668822382576,
+        "cosine": -0.5769895916500203
+      }
+    ],
+    "North Macedonia": [
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.22848491545017025,
+        "signal_share_pct": 26.197097129489883,
+        "cosine": 0.8375849113458506
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.035172745544111254,
+        "signal_share_pct": -4.032755639533089,
+        "cosine": -0.7375575853958652
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.16818709933589368,
+        "signal_share_pct": -19.283609023154387,
+        "cosine": -0.9993108673466264
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.4403317038054882,
+        "signal_share_pct": -50.48653820782264,
+        "cosine": -0.8613373564916076
+      }
+    ],
+    "Philippines": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.0018607335916546338,
+        "signal_share_pct": -0.4235991350676131,
+        "cosine": -0.0036398000396512913
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.006706830503775303,
+        "signal_share_pct": -1.5268212565120471,
+        "cosine": -0.1406393966550057
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.16381463185767017,
+        "signal_share_pct": -37.292676757999956,
+        "cosine": -0.9733311442563196
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.26688536566683363,
+        "signal_share_pct": -60.75690285042038,
+        "cosine": -0.9783541066644764
+      }
+    ],
+    "Poland": [
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.02896383978622606,
+        "signal_share_pct": -3.004530555387035,
+        "cosine": -0.6073594598900504
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.1681870993358937,
+        "signal_share_pct": -17.446695006817322,
+        "cosine": -0.9993108673466266
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.2679721119949195,
+        "signal_share_pct": -27.79777834785625,
+        "cosine": -0.9823379246993426
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.49888244832095935,
+        "signal_share_pct": -51.75099608993939,
+        "cosine": -0.9758690676214725
+      }
+    ],
+    "Portugal": [
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.015673937584290604,
+        "signal_share_pct": 1.7443335661792132,
+        "cosine": 0.3286758363465421
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.16818709933589365,
+        "signal_share_pct": -18.71733897064609,
+        "cosine": -0.9993108673466263
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.24598163345715454,
+        "signal_share_pct": -27.374998630398473,
+        "cosine": -0.9017247560784861
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.46872041917111174,
+        "signal_share_pct": -52.16332883277622,
+        "cosine": -0.9168688134271281
+      }
+    ],
+    "Romania": [
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.01386772307095783,
+        "signal_share_pct": -1.5768307455153774,
+        "cosine": -0.2908002825746607
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.16037062552528272,
+        "signal_share_pct": -18.23495693646938,
+        "cosine": -0.9528680233109256
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.2225134527331948,
+        "signal_share_pct": -25.30091290150419,
+        "cosine": -0.815694595039636
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.48271627794277916,
+        "signal_share_pct": -54.88729941651106,
+        "cosine": -0.9442462561414123
+      }
+    ],
+    "Russia": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.49002637465746873,
+        "signal_share_pct": 50.9729558531222,
+        "cosine": 0.9585456112083145
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.2700467179291876,
+        "signal_share_pct": 28.090486845543555,
+        "cosine": 0.9899430596996464
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.16818709933589368,
+        "signal_share_pct": 17.49496360375655,
+        "cosine": 0.9993108673466264
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.03308561676367229,
+        "signal_share_pct": -3.441593697577688,
+        "cosine": -0.6937913783541034
+      }
+    ],
+    "Rwanda": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.18638043010311517,
+        "signal_share_pct": 29.801560040312978,
+        "cosine": 0.3645806685718485
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.16796292931508452,
+        "signal_share_pct": 26.856667943952097,
+        "cosine": 0.9979789248919884
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.02317050328455884,
+        "signal_share_pct": -3.70488009077466,
+        "cosine": -0.48587564577617626
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.24789108204173066,
+        "signal_share_pct": -39.636891924960274,
+        "cosine": -0.9087244537183964
+      }
+    ],
+    "Sao Tome and Principe": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.4987736293543649,
+        "signal_share_pct": 53.22170179940865,
+        "cosine": 0.9756562057261955
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.1681870993358937,
+        "signal_share_pct": 17.946425232924394,
+        "cosine": 0.9993108673466266
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.0011453940775644734,
+        "signal_share_pct": 0.1222194166877954,
+        "cosine": 0.024018428959880152
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.2690559981170578,
+        "signal_share_pct": -28.70965355097916,
+        "cosine": -0.9863112577298035
+      }
+    ],
+    "Serbia": [
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.23622829859670416,
+        "signal_share_pct": 55.304798880028,
+        "cosine": 0.8659707716269466
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.11931534068242167,
+        "signal_share_pct": 27.933617432553522,
+        "cosine": 0.2333939601534813
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.034246526300010995,
+        "signal_share_pct": -8.017656058198112,
+        "cosine": -0.2034812779077958
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.037348714555209536,
+        "signal_share_pct": -8.743927629220357,
+        "cosine": -0.7831867344683798
+      }
+    ],
+    "Seychelles": [
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.269055998117058,
+        "signal_share_pct": 51.895506938452876,
+        "cosine": 0.986311257729804
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.0016838859079453727,
+        "signal_share_pct": 0.3247878264409593,
+        "cosine": 0.03531037469874873
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.07953022804307575,
+        "signal_share_pct": -15.339786253085247,
+        "cosine": -0.1555698937682165
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.1681870993358937,
+        "signal_share_pct": -32.43991898202092,
+        "cosine": -0.9993108673466267
+      }
+    ],
+    "Slovakia": [
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.00709566410814629,
+        "signal_share_pct": 0.8241873387169458,
+        "cosine": 0.14879307274494777
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.16818709933589368,
+        "signal_share_pct": -19.535546736073737,
+        "cosine": -0.9993108673466264
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.20352272053671056,
+        "signal_share_pct": -23.63990837940125,
+        "cosine": -0.7460779609968777
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.48212306646173386,
+        "signal_share_pct": -56.00035754580808,
+        "cosine": -0.9430858690865893
+      }
+    ],
+    "Slovenia": [
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.024017730835279864,
+        "signal_share_pct": 2.5727807642434892,
+        "cosine": 0.5036416488823873
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.16688596535094327,
+        "signal_share_pct": -17.876834594483004,
+        "cosine": -0.9915799692208539
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.26110017339575603,
+        "signal_share_pct": -27.96906619781482,
+        "cosine": -0.9571466245602761
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.48152809587261075,
+        "signal_share_pct": -51.58131844345868,
+        "cosine": -0.9419220410224354
+      }
+    ],
+    "South Korea": [
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.030108910965597105,
+        "signal_share_pct": 3.0969437441181364,
+        "cosine": 0.6313711178114975
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.16818709933589368,
+        "signal_share_pct": -17.299396372217544,
+        "cosine": -0.9993108673466264
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.27023310746319984,
+        "signal_share_pct": -27.795649353376206,
+        "cosine": -0.9906263304574285
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.5036845694481102,
+        "signal_share_pct": -51.808010530288115,
+        "cosine": -0.9852625459503457
+      }
+    ],
+    "Spain": [
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.003338367472031649,
+        "signal_share_pct": -0.3686831035138404,
+        "cosine": -0.07000415275366521
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.16818709933589368,
+        "signal_share_pct": -18.574270889481035,
+        "cosine": -0.9993108673466264
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.26218415583362514,
+        "signal_share_pct": -28.955131235469,
+        "cosine": -0.9611203106670119
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.47177463747625187,
+        "signal_share_pct": -52.10191477153613,
+        "cosine": -0.9228432011406682
+      }
+    ],
+    "Sri Lanka": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.3960531183614237,
+        "signal_share_pct": 48.259196026862675,
+        "cosine": 0.7747235619227166
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.2524941725718909,
+        "signal_share_pct": 30.766493697109677,
+        "cosine": 0.9255985618669583
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.0264841650320666,
+        "signal_share_pct": -3.2271037712772963,
+        "cosine": -0.5553617299445375
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.14564760827134451,
+        "signal_share_pct": -17.747206504750356,
+        "cosine": -0.8653888337649508
+      }
+    ],
+    "Syria": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.4957909209362783,
+        "signal_share_pct": 53.34412026790072,
+        "cosine": 0.969821699235255
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.258400376584259,
+        "signal_share_pct": 27.80232590736199,
+        "cosine": 0.9472496514119428
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.14130768203021102,
+        "signal_share_pct": 15.203856437634656,
+        "cosine": 0.8396024597007545
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.03392101734179659,
+        "signal_share_pct": 3.6496973871026337,
+        "cosine": 0.7113093748513324
+      }
+    ],
+    "Tajikistan": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.4915712499746452,
+        "signal_share_pct": 51.52447267752896,
+        "cosine": 0.9615675576416645
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.2690410112578886,
+        "signal_share_pct": 28.199770093159117,
+        "cosine": 0.9862563185795148
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.16741634910001613,
+        "signal_share_pct": 17.547891796805356,
+        "cosine": 0.9947313300945797
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.026025307018905007,
+        "signal_share_pct": -2.727865432506556,
+        "cosine": -0.5457396716436702
+      }
+    ],
+    "The Gambia": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.4864215005477237,
+        "signal_share_pct": 52.77381972850971,
+        "cosine": 0.9514940800345691
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.26190911013165963,
+        "signal_share_pct": 28.41556992809471,
+        "cosine": 0.9601120422242444
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.16707208594229978,
+        "signal_share_pct": 18.126320763487623,
+        "cosine": 0.9926858348331034
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.006307164536892251,
+        "signal_share_pct": -0.6842895799079594,
+        "cosine": -0.1322585705085373
+      }
+    ],
+    "Togo": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.4884008928811259,
+        "signal_share_pct": 77.85197054946413,
+        "cosine": 0.9553659896544714
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.015178967793271046,
+        "signal_share_pct": -2.41955444971028,
+        "cosine": -0.09018829345897998
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.030827819040942887,
+        "signal_share_pct": -4.914009157358038,
+        "cosine": -0.6464463158368731
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.09293789604091533,
+        "signal_share_pct": -14.814465843467561,
+        "cosine": -0.3406937357887708
+      }
+    ],
+    "Turkmenistan": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.49732185180152777,
+        "signal_share_pct": 52.90078371649047,
+        "cosine": 0.9728163687833462
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.2709593665364516,
+        "signal_share_pct": 28.822306506697636,
+        "cosine": 0.9932886665695748
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.1678816211759199,
+        "signal_share_pct": 17.857790281343604,
+        "cosine": 0.9974958194255656
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.003940154927183702,
+        "signal_share_pct": 0.41911949546828453,
+        "cosine": 0.08262338095087321
+      }
+    ],
+    "Ukraine": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.46051674198653536,
+        "signal_share_pct": 58.64618657509774,
+        "cosine": 0.9008215164494049
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.027206615449076627,
+        "signal_share_pct": -3.464725818263814,
+        "cosine": -0.5705112093751349
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.09493096218189445,
+        "signal_share_pct": -12.08933012045783,
+        "cosine": -0.5640476738740745
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.20259152308845274,
+        "signal_share_pct": -25.799757486180614,
+        "cosine": -0.7426643573871698
+      }
+    ],
+    "United States": [
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.01786761791185839,
+        "signal_share_pct": 1.9076121480848764,
+        "cosine": 0.3746763842282013
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": -0.1681870993358937,
+        "signal_share_pct": -17.95626901285908,
+        "cosine": -0.9993108673466267
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.26448035749081605,
+        "signal_share_pct": -28.236888955660266,
+        "cosine": -0.9695377760287018
+      },
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": -0.48611328587269986,
+        "signal_share_pct": -51.89922988339578,
+        "cosine": -0.9508911781514601
+      }
+    ],
+    "Uzbekistan": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.48158586228471295,
+        "signal_share_pct": 51.242222109461586,
+        "cosine": 0.942035038492897
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": 0.2690439216420917,
+        "signal_share_pct": 28.62710363751113,
+        "cosine": 0.9862669875284471
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.1681870993358937,
+        "signal_share_pct": 17.89562646052269,
+        "cosine": 0.9993108673466266
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": -0.021005478960330278,
+        "signal_share_pct": -2.2350477925045884,
+        "cosine": -0.44047600215442095
+      }
+    ],
+    "Venezuela": [
+      {
+        "indicator": "RQ.EST",
+        "indicator_label": "Regulatory Quality (WGI)",
+        "weighted_contribution": 0.5035121635332238,
+        "signal_share_pct": 52.07094336341165,
+        "cosine": 0.9849253009741414
+      },
+      {
+        "indicator": "v2stfisccap",
+        "indicator_label": "Fiscal Capacity",
+        "weighted_contribution": 0.16818709933589365,
+        "signal_share_pct": 17.393146696838322,
+        "cosine": 0.9993108673466263
+      },
+      {
+        "indicator": "v2elintmon",
+        "indicator_label": "International Election Monitoring",
+        "weighted_contribution": 0.025095330174090054,
+        "signal_share_pct": 2.5952451813906077,
+        "cosine": 0.526238450868182
+      },
+      {
+        "indicator": "v2pepwrgen",
+        "indicator_label": "Power Distributed by Gender",
+        "weighted_contribution": -0.2701787917467124,
+        "signal_share_pct": -27.940664758359425,
+        "cosine": -0.9904272187371244
+      }
+    ]
+  }
+}

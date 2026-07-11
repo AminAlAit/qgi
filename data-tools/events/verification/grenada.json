@@ -1,0 +1,38 @@
+[
+  {
+    "year": 2012,
+    "title": "Grenada Wins Its First-Ever Olympic Medal: Kirani James's 400m Gold",
+    "verdict": "TRUE",
+    "reason": "Confirmed via Olympics.com official news: Kirani James won the men's 400m gold at the London 2012 Olympics on August 6, 2012 in 43.94 seconds, a national record, giving Grenada its first-ever Olympic medal of any color at age 19. This matches the event description's date, athlete, event, time, and significance (first Olympic medal for a nation of ~110,000). No material discrepancies found.",
+    "verify_count": 2,
+    "consensus_verdict": "TRUE",
+    "consensus_status": "double_confirmed",
+    "needs_tiebreak": false,
+    "source_independence": "independent",
+    "verifications": [
+      {
+        "pass_n": 1,
+        "verdict": "TRUE",
+        "reason": "Multiple independent, authoritative sources (ESPN, Olympics.com) confirm that Kirani James of Grenada won the men's 400m gold medal at the 2012 London Olympics on August 6, 2012, with a time of 43.94 seconds (a national record). This was Grenada's first-ever Olympic medal of any color, matching all material details in the event description (country, year, event, time, historic significance).",
+        "source": "https://www.espn.co.uk/olympics/summer/2012/trackandfield/story/_/id/8240833/2012-london-olympics-grenada-kirani-james-runs-away-400-meter-gold",
+        "verifier": {
+          "model": "qgi-agent-verified-5",
+          "date": "2026-07-09",
+          "method": "web_search"
+        }
+      },
+      {
+        "pass_n": 2,
+        "verdict": "TRUE",
+        "reason": "Confirmed via Olympics.com official news: Kirani James won the men's 400m gold at the London 2012 Olympics on August 6, 2012 in 43.94 seconds, a national record, giving Grenada its first-ever Olympic medal of any color at age 19. This matches the event description's date, athlete, event, time, and significance (first Olympic medal for a nation of ~110,000). No material discrepancies found.",
+        "source": "https://www.olympics.com/en/news/james-wins-grenada-s-first-ever-olympic-medal",
+        "verifier": {
+          "model": "qgi-agent-verified-5",
+          "date": "2026-07-09",
+          "method": "web_search"
+        }
+      }
+    ],
+    "source": "https://www.olympics.com/en/news/james-wins-grenada-s-first-ever-olympic-medal"
+  }
+]

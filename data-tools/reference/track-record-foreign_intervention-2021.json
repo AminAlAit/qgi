@@ -1,0 +1,68 @@
+{
+  "recipe_id": "foreign_intervention",
+  "eval_year": 2021,
+  "computed_at_utc": "2026-05-24T18:08:17.740211+00:00",
+  "seed_used": 12345,
+  "oof": {
+    "n_samples": 58,
+    "n_pos": 15,
+    "n_neg": 43,
+    "auc": 0.914729
+  },
+  "bins": [
+    {
+      "score_range": "[0.0, 0.5)",
+      "n": 43,
+      "n_positive": 4,
+      "ppv": 0.093023,
+      "wilson_lo": 0.036771,
+      "wilson_hi": 0.21603,
+      "suppressed": false,
+      "flag": null
+    },
+    {
+      "score_range": "[0.5, 0.7)",
+      "n": 3,
+      "n_positive": 2,
+      "ppv": 0.666667,
+      "wilson_lo": 0.207655,
+      "wilson_hi": 0.93851,
+      "suppressed": true,
+      "flag": "INSUFFICIENT_DATA"
+    },
+    {
+      "score_range": "[0.7, 0.85)",
+      "n": 5,
+      "n_positive": 3,
+      "ppv": 0.6,
+      "wilson_lo": 0.23072,
+      "wilson_hi": 0.882382,
+      "suppressed": false,
+      "flag": null
+    },
+    {
+      "score_range": "[0.85, 0.95)",
+      "n": 3,
+      "n_positive": 3,
+      "ppv": 1.0,
+      "wilson_lo": 0.438494,
+      "wilson_hi": 1.0,
+      "suppressed": true,
+      "flag": "INSUFFICIENT_DATA"
+    },
+    {
+      "score_range": "[0.95, 1.0]",
+      "n": 4,
+      "n_positive": 3,
+      "ppv": 0.75,
+      "wilson_lo": 0.300636,
+      "wilson_hi": 0.954414,
+      "suppressed": true,
+      "flag": "INSUFFICIENT_DATA"
+    }
+  ],
+  "baseline_rate": 0.258621,
+  "binding_provenance": "te-new-capabilities-spec.md §#1 (locked 2026-05-24, chat QGI-R&D | 002). Bins pre-registered before results: [0,0.5), [0.5,0.7), [0.7,0.85), [0.85,0.95), [0.95,1.0]. Suppression at n<5. No FDR.",
+  "m8_r5_note": "M8-R5 BINDING: frequency of realized events among similarly-scoring country-years, OUT OF FOLD. This is the discrimination layer's track record, NOT a calibrated probability. ppv = n_positive / n per bin (OOF only). Wilson 95% CI reported; suppressed bins (n<5) flagged INSUFFICIENT_DATA. Never label ppv as 'probability'.",
+  "sampling_disclosure": "The OOF set is built by the walk's 1:3 positive:negative LOCO sampling, NOT a prevalence-matched cohort. Absolute PPV figures reflect this 1:3 construction and must NOT be read as a real-world hit rate. They are comparative (high bins vs low bins vs the in-sample baseline_rate, which is itself the 1:3 base). Prevalence-matched track-record is a Stage-B enrichment (score more negatives OOF) — deferred (#110)."
+}

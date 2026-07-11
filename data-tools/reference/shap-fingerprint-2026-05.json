@@ -1,0 +1,2270 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-05-05T10:24:24.587654+00:00",
+  "purpose": "Stage 2 Prereq D: SHAP attribution + ML indicator fingerprint per recipe (Component 8 prong 3 of docs/specs/internal/ops/ml-track/07-validation-framework.md). Diagnostic for country-fixed-effect contamination per Tariq Sufi-Younes' binding warning. Stage 2 walk reads this to investigate top-K features ranked top by SHAP that have low within-country temporal variance (= fixed-effect proxies).",
+  "method": {
+    "shap_method": "TreeSHAP via lightgbm.Booster.predict(pred_contrib=True)",
+    "global_importance": "mean_abs_shap over explanation set",
+    "explanation_set": "test window predictions (out-of-time)",
+    "variance_reference": "for each engineered feature, per-country std over training window, then median across countries. Computed on the SAME feature space the model sees (post-first-difference) so indicator IDs match the SHAP top-K labels.",
+    "fixed_effect_suspect_threshold": "indicator within_country_std_median < panel_median_within_country_std"
+  },
+  "policy": {
+    "no_alpha_binarization": true,
+    "no_bh_fdr_correction": true,
+    "diagnostic_only_not_a_gate": true,
+    "no_bh_fdr_note": "QGI hard-veto per Kwame Adjei; raw mean_abs_shap values only; downstream consumers must not apply correction."
+  },
+  "training_window": {
+    "year_min": 1789,
+    "year_max": 2021
+  },
+  "test_window": {
+    "year_min": 2022,
+    "year_max": 2025
+  },
+  "panel": {
+    "path": "C:\\Users\\Amin\\Desktop\\trojan\\qgi-6.0-ml\\qgi-ml\\data\\panel_104_2026_05_04.parquet",
+    "n_features_after_engineering": 104,
+    "n_indicators_with_variance_reference": 104,
+    "panel_median_within_country_std": 0.7589038751969595
+  },
+  "portfolio_summary": {
+    "n_recipes": 23,
+    "n_recipes_with_any_suspect_top_k_feature": 23,
+    "median_suspect_count_per_recipe": 3.0
+  },
+  "recipes": {
+    "bilateral_treaty": {
+      "n_samples_explained": 864,
+      "n_features": 104,
+      "n_top_k_fixed_effect_suspect": 3,
+      "top_k": [
+        {
+          "rank": 1,
+          "indicator_id": "SP.POP.TOTL__diff",
+          "mean_abs_shap": 0.5275124098803293,
+          "within_country_std_median": 35931.13383359562,
+          "variance_ratio_vs_panel_median": 47346.09350132829,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 2,
+          "indicator_id": "SL.EMP.TOTL.SP.ZS__diff",
+          "mean_abs_shap": 0.4240674295014422,
+          "within_country_std_median": 0.8741201292345631,
+          "variance_ratio_vs_panel_median": 1.1518192986004998,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 3,
+          "indicator_id": "IT.CEL.SETS.P2__diff",
+          "mean_abs_shap": 0.37670292582352877,
+          "within_country_std_median": 5.4781583337385875,
+          "variance_ratio_vs_panel_median": 7.218514113288502,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 4,
+          "indicator_id": "SP.DYN.TFRT.IN__diff",
+          "mean_abs_shap": 0.30655545903993925,
+          "within_country_std_median": 0.06729838540110476,
+          "variance_ratio_vs_panel_median": 0.08867840526395877,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 5,
+          "indicator_id": "MS.MIL.MPRT.KD__diff",
+          "mean_abs_shap": 0.026252549884986983,
+          "within_country_std_median": 56950242.129180714,
+          "variance_ratio_vs_panel_median": 75042761.00105608,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 6,
+          "indicator_id": "DT.DOD.DECT.GN.ZS__diff",
+          "mean_abs_shap": 0.022982405369990456,
+          "within_country_std_median": 10.08148534497859,
+          "variance_ratio_vs_panel_median": 13.284271795768769,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 7,
+          "indicator_id": "v2x_libdem__diff",
+          "mean_abs_shap": 0.016265413307658363,
+          "within_country_std_median": 0.021961702217941005,
+          "variance_ratio_vs_panel_median": 0.028938714026517855,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 8,
+          "indicator_id": "v2xlg_legcon__diff",
+          "mean_abs_shap": 0.002426737814688409,
+          "within_country_std_median": 0.04602469456257744,
+          "variance_ratio_vs_panel_median": 0.06064627690909153,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 9,
+          "indicator_id": "AG.PRD.FOOD.XD__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 5.109326829408893,
+          "variance_ratio_vs_panel_median": 6.732508551340394,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 10,
+          "indicator_id": "BM.KLT.DINV.WD.GD.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 0.8742432431592502,
+          "variance_ratio_vs_panel_median": 1.151981524580246,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        }
+      ]
+    },
+    "civil_war_and_insurgency": {
+      "n_samples_explained": 864,
+      "n_features": 104,
+      "n_top_k_fixed_effect_suspect": 5,
+      "top_k": [
+        {
+          "rank": 1,
+          "indicator_id": "VC.BTL.DETH__diff",
+          "mean_abs_shap": 0.553140677390628,
+          "within_country_std_median": 507.50758872001825,
+          "variance_ratio_vs_panel_median": 668.7376429436522,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 2,
+          "indicator_id": "PV.EST__diff",
+          "mean_abs_shap": 0.39695385199023775,
+          "within_country_std_median": 0.20251308170661259,
+          "variance_ratio_vs_panel_median": 0.26684945000979743,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 3,
+          "indicator_id": "NE.CON.GOVT.ZS__diff",
+          "mean_abs_shap": 0.19726412165326937,
+          "within_country_std_median": 1.4321565564779872,
+          "variance_ratio_vs_panel_median": 1.8871382836282098,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 4,
+          "indicator_id": "EG.IMP.CONS.ZS__diff",
+          "mean_abs_shap": 0.17941145240576672,
+          "within_country_std_median": 5.124650602425021,
+          "variance_ratio_vs_panel_median": 6.752700532850768,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 5,
+          "indicator_id": "VA.EST__diff",
+          "mean_abs_shap": 0.14634959296718256,
+          "within_country_std_median": 0.09786973750130934,
+          "variance_ratio_vs_panel_median": 0.1289619683071312,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 6,
+          "indicator_id": "v2exremhog__diff",
+          "mean_abs_shap": 0.13468432563015745,
+          "within_country_std_median": 0.23087699136664913,
+          "variance_ratio_vs_panel_median": 0.3042242883615916,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 7,
+          "indicator_id": "SM.POP.NETM__diff",
+          "mean_abs_shap": 0.13008605491090638,
+          "within_country_std_median": 12290.923709279234,
+          "variance_ratio_vs_panel_median": 16195.626496292896,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 8,
+          "indicator_id": "MS.MIL.MPRT.KD__diff",
+          "mean_abs_shap": 0.12176558903924653,
+          "within_country_std_median": 56950242.129180714,
+          "variance_ratio_vs_panel_median": 75042761.00105608,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 9,
+          "indicator_id": "v2cacamps__diff",
+          "mean_abs_shap": 0.08728784648819891,
+          "within_country_std_median": 0.23218970644628997,
+          "variance_ratio_vs_panel_median": 0.30595403981305197,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 10,
+          "indicator_id": "SL.UEM.TOTL.ZS__diff",
+          "mean_abs_shap": 0.0853722162473959,
+          "within_country_std_median": 0.7258853506387147,
+          "variance_ratio_vs_panel_median": 0.9564918224331437,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        }
+      ]
+    },
+    "constitutional_change": {
+      "n_samples_explained": 864,
+      "n_features": 104,
+      "n_top_k_fixed_effect_suspect": 2,
+      "top_k": [
+        {
+          "rank": 1,
+          "indicator_id": "SM.POP.RHCR.EO__diff",
+          "mean_abs_shap": 1.3639599207289224,
+          "within_country_std_median": 644.5076236345672,
+          "variance_ratio_vs_panel_median": 849.2612104099444,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 2,
+          "indicator_id": "v2x_partip__diff",
+          "mean_abs_shap": 0.0832627453059895,
+          "within_country_std_median": 0.022850496254203333,
+          "variance_ratio_vs_panel_median": 0.030109868984755032,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 3,
+          "indicator_id": "AG.PRD.FOOD.XD__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 5.109326829408893,
+          "variance_ratio_vs_panel_median": 6.732508551340394,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 4,
+          "indicator_id": "BM.KLT.DINV.WD.GD.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 0.8742432431592502,
+          "variance_ratio_vs_panel_median": 1.151981524580246,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 5,
+          "indicator_id": "BM.TRF.PWKR.CD.DT__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 44409424.79507914,
+          "variance_ratio_vs_panel_median": 58517852.18984881,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 6,
+          "indicator_id": "BN.CAB.XOKA.GD.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 4.236208933534087,
+          "variance_ratio_vs_panel_median": 5.582009885553236,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 7,
+          "indicator_id": "BX.KLT.DINV.WD.GD.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 2.2615112892600315,
+          "variance_ratio_vs_panel_median": 2.9799706697677597,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 8,
+          "indicator_id": "CC.EST__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 0.12149370018756972,
+          "variance_ratio_vs_panel_median": 0.1600910262265274,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 9,
+          "indicator_id": "DT.DOD.DECT.GN.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 10.08148534497859,
+          "variance_ratio_vs_panel_median": 13.284271795768769,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 10,
+          "indicator_id": "DT.TDS.DECT.EX.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 5.909327770329377,
+          "variance_ratio_vs_panel_median": 7.786661741311732,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        }
+      ]
+    },
+    "economic_recession": {
+      "n_samples_explained": 864,
+      "n_features": 104,
+      "n_top_k_fixed_effect_suspect": 3,
+      "top_k": [
+        {
+          "rank": 1,
+          "indicator_id": "NE.CON.PRVT.ZS__diff",
+          "mean_abs_shap": 0.862912637304143,
+          "within_country_std_median": 3.0597014721766196,
+          "variance_ratio_vs_panel_median": 4.031737842137821,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 2,
+          "indicator_id": "VC.IDP.NWDS__diff",
+          "mean_abs_shap": 0.8409888256464283,
+          "within_country_std_median": 17495.418857323166,
+          "variance_ratio_vs_panel_median": 23053.537383482926,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 3,
+          "indicator_id": "v2xel_frefair__diff",
+          "mean_abs_shap": 0.555265673736655,
+          "within_country_std_median": 0.052218997078783295,
+          "variance_ratio_vs_panel_median": 0.06880844700553258,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 4,
+          "indicator_id": "SE.PRM.ENRR__diff",
+          "mean_abs_shap": 0.0674170069277016,
+          "within_country_std_median": 2.956803692823762,
+          "variance_ratio_vs_panel_median": 3.89615047367676,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 5,
+          "indicator_id": "GC.TAX.TOTL.GD.ZS__diff",
+          "mean_abs_shap": 0.049576517614812216,
+          "within_country_std_median": 1.2082271188124978,
+          "variance_ratio_vs_panel_median": 1.5920687168700052,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 6,
+          "indicator_id": "PV.EST__diff",
+          "mean_abs_shap": 0.038604376429663134,
+          "within_country_std_median": 0.20251308170661259,
+          "variance_ratio_vs_panel_median": 0.26684945000979743,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 7,
+          "indicator_id": "RQ.EST__diff",
+          "mean_abs_shap": 0.009487114171617147,
+          "within_country_std_median": 0.12124537942796461,
+          "variance_ratio_vs_panel_median": 0.1597638164602831,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 8,
+          "indicator_id": "AG.PRD.FOOD.XD__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 5.109326829408893,
+          "variance_ratio_vs_panel_median": 6.732508551340394,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 9,
+          "indicator_id": "BM.KLT.DINV.WD.GD.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 0.8742432431592502,
+          "variance_ratio_vs_panel_median": 1.151981524580246,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 10,
+          "indicator_id": "BM.TRF.PWKR.CD.DT__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 44409424.79507914,
+          "variance_ratio_vs_panel_median": 58517852.18984881,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        }
+      ]
+    },
+    "elections_and_voting": {
+      "n_samples_explained": 864,
+      "n_features": 104,
+      "n_top_k_fixed_effect_suspect": 2,
+      "top_k": [
+        {
+          "rank": 1,
+          "indicator_id": "EG.IMP.CONS.ZS__diff",
+          "mean_abs_shap": 0.6489025894366434,
+          "within_country_std_median": 5.124650602425021,
+          "variance_ratio_vs_panel_median": 6.752700532850768,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 2,
+          "indicator_id": "VC.IDP.NWDS__diff",
+          "mean_abs_shap": 0.40207772875379433,
+          "within_country_std_median": 17495.418857323166,
+          "variance_ratio_vs_panel_median": 23053.537383482926,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 3,
+          "indicator_id": "v2elintmon__diff",
+          "mean_abs_shap": 0.25092353295681946,
+          "within_country_std_median": 0.31622776601683794,
+          "variance_ratio_vs_panel_median": 0.4166901452898325,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 4,
+          "indicator_id": "GC.TAX.TOTL.GD.ZS__diff",
+          "mean_abs_shap": 0.24914337018078306,
+          "within_country_std_median": 1.2082271188124978,
+          "variance_ratio_vs_panel_median": 1.5920687168700052,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 5,
+          "indicator_id": "IT.NET.USER.ZS__diff",
+          "mean_abs_shap": 0.22408967139554828,
+          "within_country_std_median": 2.825369863310895,
+          "variance_ratio_vs_panel_median": 3.7229614390592256,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 6,
+          "indicator_id": "BX.KLT.DINV.WD.GD.ZS__diff",
+          "mean_abs_shap": 0.2155716168887779,
+          "within_country_std_median": 2.2615112892600315,
+          "variance_ratio_vs_panel_median": 2.9799706697677597,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 7,
+          "indicator_id": "EG.ELC.ACCS.UR.ZS__diff",
+          "mean_abs_shap": 0.19305843147088755,
+          "within_country_std_median": 0.23314179420620423,
+          "variance_ratio_vs_panel_median": 0.3072085962740625,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 8,
+          "indicator_id": "SM.POP.RHCR.EO__diff",
+          "mean_abs_shap": 0.18197779921647952,
+          "within_country_std_median": 644.5076236345672,
+          "variance_ratio_vs_panel_median": 849.2612104099444,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 9,
+          "indicator_id": "TX.VAL.TECH.MF.ZS__diff",
+          "mean_abs_shap": 0.18150070852364256,
+          "within_country_std_median": 2.071215700506693,
+          "variance_ratio_vs_panel_median": 2.7292200872859524,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 10,
+          "indicator_id": "NV.IND.MANF.ZS__diff",
+          "mean_abs_shap": 0.17809997453767717,
+          "within_country_std_median": 0.9119339429873058,
+          "variance_ratio_vs_panel_median": 1.2016461804871272,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        }
+      ]
+    },
+    "energy_policy": {
+      "n_samples_explained": 864,
+      "n_features": 104,
+      "n_top_k_fixed_effect_suspect": 3,
+      "top_k": [
+        {
+          "rank": 1,
+          "indicator_id": "v2excrptps__diff",
+          "mean_abs_shap": 1.9791408331297276,
+          "within_country_std_median": 0.1303480810070568,
+          "variance_ratio_vs_panel_median": 0.1717583547365961,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 2,
+          "indicator_id": "MS.MIL.XPRT.KD__diff",
+          "mean_abs_shap": 0.009605287997967919,
+          "within_country_std_median": 46603662.53628464,
+          "variance_ratio_vs_panel_median": 61409177.18227427,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 3,
+          "indicator_id": "GC.DOD.TOTL.GD.ZS__diff",
+          "mean_abs_shap": 0.00663871530795049,
+          "within_country_std_median": 6.473577925586062,
+          "variance_ratio_vs_panel_median": 8.530168493217886,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 4,
+          "indicator_id": "v2x_corr__diff",
+          "mean_abs_shap": 0.00242339970107047,
+          "within_country_std_median": 0.024666096844123936,
+          "variance_ratio_vs_panel_median": 0.03250226761290724,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 5,
+          "indicator_id": "v2cltort__diff",
+          "mean_abs_shap": 0.0022883470646063546,
+          "within_country_std_median": 0.21648419438263763,
+          "variance_ratio_vs_panel_median": 0.2852590446009426,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 6,
+          "indicator_id": "AG.PRD.FOOD.XD__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 5.109326829408893,
+          "variance_ratio_vs_panel_median": 6.732508551340394,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 7,
+          "indicator_id": "BM.KLT.DINV.WD.GD.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 0.8742432431592502,
+          "variance_ratio_vs_panel_median": 1.151981524580246,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 8,
+          "indicator_id": "BM.TRF.PWKR.CD.DT__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 44409424.79507914,
+          "variance_ratio_vs_panel_median": 58517852.18984881,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 9,
+          "indicator_id": "BN.CAB.XOKA.GD.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 4.236208933534087,
+          "variance_ratio_vs_panel_median": 5.582009885553236,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 10,
+          "indicator_id": "BX.KLT.DINV.WD.GD.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 2.2615112892600315,
+          "variance_ratio_vs_panel_median": 2.9799706697677597,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        }
+      ]
+    },
+    "epidemic_and_pandemic": {
+      "n_samples_explained": 864,
+      "n_features": 104,
+      "n_top_k_fixed_effect_suspect": 2,
+      "top_k": [
+        {
+          "rank": 1,
+          "indicator_id": "SL.TLF.CACT.FE.ZS__diff",
+          "mean_abs_shap": 0.4123618183878075,
+          "within_country_std_median": 0.7919223997552041,
+          "variance_ratio_vs_panel_median": 1.0435081775668562,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 2,
+          "indicator_id": "NE.IMP.GNFS.ZS__diff",
+          "mean_abs_shap": 0.3260908168310334,
+          "within_country_std_median": 4.953401217401429,
+          "variance_ratio_vs_panel_median": 6.527046941374315,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 3,
+          "indicator_id": "VC.IDP.NWDS__diff",
+          "mean_abs_shap": 0.0796493666518366,
+          "within_country_std_median": 17495.418857323166,
+          "variance_ratio_vs_panel_median": 23053.537383482926,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 4,
+          "indicator_id": "FM.LBL.BMNY.GD.ZS__diff",
+          "mean_abs_shap": 0.06747858603443921,
+          "within_country_std_median": 4.172966762354319,
+          "variance_ratio_vs_panel_median": 5.4986763129537355,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 5,
+          "indicator_id": "RL.EST__diff",
+          "mean_abs_shap": 0.014263125456302208,
+          "within_country_std_median": 0.10688307333927184,
+          "variance_ratio_vs_panel_median": 0.14083875024558587,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 6,
+          "indicator_id": "MS.MIL.TOTL.TF.ZS__diff",
+          "mean_abs_shap": 0.013727429231547994,
+          "within_country_std_median": 0.1612836850262907,
+          "variance_ratio_vs_panel_median": 0.21252188886824766,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 7,
+          "indicator_id": "AG.PRD.FOOD.XD__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 5.109326829408893,
+          "variance_ratio_vs_panel_median": 6.732508551340394,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 8,
+          "indicator_id": "BM.KLT.DINV.WD.GD.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 0.8742432431592502,
+          "variance_ratio_vs_panel_median": 1.151981524580246,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 9,
+          "indicator_id": "BM.TRF.PWKR.CD.DT__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 44409424.79507914,
+          "variance_ratio_vs_panel_median": 58517852.18984881,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 10,
+          "indicator_id": "BN.CAB.XOKA.GD.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 4.236208933534087,
+          "variance_ratio_vs_panel_median": 5.582009885553236,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        }
+      ]
+    },
+    "executive_power_consolidation": {
+      "n_samples_explained": 864,
+      "n_features": 104,
+      "n_top_k_fixed_effect_suspect": 6,
+      "top_k": [
+        {
+          "rank": 1,
+          "indicator_id": "VA.EST__diff",
+          "mean_abs_shap": 1.559404571398733,
+          "within_country_std_median": 0.09786973750130934,
+          "variance_ratio_vs_panel_median": 0.1289619683071312,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 2,
+          "indicator_id": "GC.TAX.TOTL.GD.ZS__diff",
+          "mean_abs_shap": 0.5302786760459557,
+          "within_country_std_median": 1.2082271188124978,
+          "variance_ratio_vs_panel_median": 1.5920687168700052,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 3,
+          "indicator_id": "IT.NET.USER.ZS__diff",
+          "mean_abs_shap": 0.5128369586273446,
+          "within_country_std_median": 2.825369863310895,
+          "variance_ratio_vs_panel_median": 3.7229614390592256,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 4,
+          "indicator_id": "IT.CEL.SETS.P2__diff",
+          "mean_abs_shap": 0.3994707733874699,
+          "within_country_std_median": 5.4781583337385875,
+          "variance_ratio_vs_panel_median": 7.218514113288502,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 5,
+          "indicator_id": "RQ.EST__diff",
+          "mean_abs_shap": 0.228473943075344,
+          "within_country_std_median": 0.12124537942796461,
+          "variance_ratio_vs_panel_median": 0.1597638164602831,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 6,
+          "indicator_id": "v2x_partip__diff",
+          "mean_abs_shap": 0.15955639730919471,
+          "within_country_std_median": 0.022850496254203333,
+          "variance_ratio_vs_panel_median": 0.030109868984755032,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 7,
+          "indicator_id": "NV.IND.MANF.ZS__diff",
+          "mean_abs_shap": 0.11879164090212357,
+          "within_country_std_median": 0.9119339429873058,
+          "variance_ratio_vs_panel_median": 1.2016461804871272,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 8,
+          "indicator_id": "v2mecenefm__diff",
+          "mean_abs_shap": 0.0830426199008927,
+          "within_country_std_median": 0.2852989659988273,
+          "variance_ratio_vs_panel_median": 0.3759355767221287,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 9,
+          "indicator_id": "v2x_freexp_altinf__diff",
+          "mean_abs_shap": 0.07394641699927025,
+          "within_country_std_median": 0.03897686107070105,
+          "variance_ratio_vs_panel_median": 0.05135941763452628,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 10,
+          "indicator_id": "v2xlg_legcon__diff",
+          "mean_abs_shap": 0.06571918620269127,
+          "within_country_std_median": 0.04602469456257744,
+          "variance_ratio_vs_panel_median": 0.06064627690909153,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        }
+      ]
+    },
+    "foreign_intervention": {
+      "n_samples_explained": 864,
+      "n_features": 104,
+      "n_top_k_fixed_effect_suspect": 3,
+      "top_k": [
+        {
+          "rank": 1,
+          "indicator_id": "FI.RES.TOTL.CD__diff",
+          "mean_abs_shap": 3.1728064224760546,
+          "within_country_std_median": 672211097.4296079,
+          "variance_ratio_vs_panel_median": 885765799.0679622,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 2,
+          "indicator_id": "NE.IMP.GNFS.CD__diff",
+          "mean_abs_shap": 0.2253991504551108,
+          "within_country_std_median": 1443106686.9785936,
+          "variance_ratio_vs_panel_median": 1901567160.4049485,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 3,
+          "indicator_id": "NY.GNP.PCAP.CD__diff",
+          "mean_abs_shap": 0.20409613031309548,
+          "within_country_std_median": 329.91739719824534,
+          "variance_ratio_vs_panel_median": 434.72883454788183,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 4,
+          "indicator_id": "NE.CON.GOVT.ZS__diff",
+          "mean_abs_shap": 0.11120448686470365,
+          "within_country_std_median": 1.4321565564779872,
+          "variance_ratio_vs_panel_median": 1.8871382836282098,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 5,
+          "indicator_id": "v2x_clpol__diff",
+          "mean_abs_shap": 0.08895821968437792,
+          "within_country_std_median": 0.03915221042840447,
+          "variance_ratio_vs_panel_median": 0.051590473718747636,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 6,
+          "indicator_id": "DT.DOD.DECT.GN.ZS__diff",
+          "mean_abs_shap": 0.08584256374787134,
+          "within_country_std_median": 10.08148534497859,
+          "variance_ratio_vs_panel_median": 13.284271795768769,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 7,
+          "indicator_id": "v2x_clpriv__diff",
+          "mean_abs_shap": 0.079223159422452,
+          "within_country_std_median": 0.02804961415054565,
+          "variance_ratio_vs_panel_median": 0.03696069432148556,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 8,
+          "indicator_id": "FI.RES.TOTL.MO__diff",
+          "mean_abs_shap": 0.061010750723580094,
+          "within_country_std_median": 0.9768163508411711,
+          "variance_ratio_vs_panel_median": 1.2871410764474704,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 9,
+          "indicator_id": "NE.IMP.GNFS.ZS__diff",
+          "mean_abs_shap": 0.049469539631060364,
+          "within_country_std_median": 4.953401217401429,
+          "variance_ratio_vs_panel_median": 6.527046941374315,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 10,
+          "indicator_id": "v2elintmon__diff",
+          "mean_abs_shap": 0.04765520207099559,
+          "within_country_std_median": 0.31622776601683794,
+          "variance_ratio_vs_panel_median": 0.4166901452898325,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        }
+      ]
+    },
+    "government_formation": {
+      "n_samples_explained": 864,
+      "n_features": 104,
+      "n_top_k_fixed_effect_suspect": 3,
+      "top_k": [
+        {
+          "rank": 1,
+          "indicator_id": "EG.IMP.CONS.ZS__diff",
+          "mean_abs_shap": 0.7588541022761405,
+          "within_country_std_median": 5.124650602425021,
+          "variance_ratio_vs_panel_median": 6.752700532850768,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 2,
+          "indicator_id": "BX.KLT.DINV.WD.GD.ZS__diff",
+          "mean_abs_shap": 0.34035648466465873,
+          "within_country_std_median": 2.2615112892600315,
+          "variance_ratio_vs_panel_median": 2.9799706697677597,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 3,
+          "indicator_id": "FM.LBL.BMNY.GD.ZS__diff",
+          "mean_abs_shap": 0.3254000072193766,
+          "within_country_std_median": 4.172966762354319,
+          "variance_ratio_vs_panel_median": 5.4986763129537355,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 4,
+          "indicator_id": "BN.CAB.XOKA.GD.ZS__diff",
+          "mean_abs_shap": 0.30000875795174986,
+          "within_country_std_median": 4.236208933534087,
+          "variance_ratio_vs_panel_median": 5.582009885553236,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 5,
+          "indicator_id": "v2jureform__diff",
+          "mean_abs_shap": 0.2842387482983798,
+          "within_country_std_median": 0.4243796086098584,
+          "variance_ratio_vs_panel_median": 0.5592007400142983,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 6,
+          "indicator_id": "SE.PRM.ENRR__diff",
+          "mean_abs_shap": 0.281395333425152,
+          "within_country_std_median": 2.956803692823762,
+          "variance_ratio_vs_panel_median": 3.89615047367676,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 7,
+          "indicator_id": "MS.MIL.XPND.GD.ZS__diff",
+          "mean_abs_shap": 0.2757138656874043,
+          "within_country_std_median": 0.4020273435178231,
+          "variance_ratio_vs_panel_median": 0.5297473852185619,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 8,
+          "indicator_id": "BM.KLT.DINV.WD.GD.ZS__diff",
+          "mean_abs_shap": 0.2573193896138108,
+          "within_country_std_median": 0.8742432431592502,
+          "variance_ratio_vs_panel_median": 1.151981524580246,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 9,
+          "indicator_id": "v2xeg_eqprotec__diff",
+          "mean_abs_shap": 0.25260322686655484,
+          "within_country_std_median": 0.02728248057923755,
+          "variance_ratio_vs_panel_median": 0.0359498501337299,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 10,
+          "indicator_id": "NE.IMP.GNFS.ZS__diff",
+          "mean_abs_shap": 0.24260621655653355,
+          "within_country_std_median": 4.953401217401429,
+          "variance_ratio_vs_panel_median": 6.527046941374315,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        }
+      ]
+    },
+    "human_rights_violation": {
+      "n_samples_explained": 864,
+      "n_features": 104,
+      "n_top_k_fixed_effect_suspect": 3,
+      "top_k": [
+        {
+          "rank": 1,
+          "indicator_id": "EG.IMP.CONS.ZS__diff",
+          "mean_abs_shap": 0.4261064497323109,
+          "within_country_std_median": 5.124650602425021,
+          "variance_ratio_vs_panel_median": 6.752700532850768,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 2,
+          "indicator_id": "AG.PRD.FOOD.XD__diff",
+          "mean_abs_shap": 0.4054899183051109,
+          "within_country_std_median": 5.109326829408893,
+          "variance_ratio_vs_panel_median": 6.732508551340394,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 3,
+          "indicator_id": "BM.KLT.DINV.WD.GD.ZS__diff",
+          "mean_abs_shap": 0.30688557419279916,
+          "within_country_std_median": 0.8742432431592502,
+          "variance_ratio_vs_panel_median": 1.151981524580246,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 4,
+          "indicator_id": "NE.CON.GOVT.ZS__diff",
+          "mean_abs_shap": 0.3010991810756869,
+          "within_country_std_median": 1.4321565564779872,
+          "variance_ratio_vs_panel_median": 1.8871382836282098,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 5,
+          "indicator_id": "GE.EST__diff",
+          "mean_abs_shap": 0.27480955430894705,
+          "within_country_std_median": 0.12462598385331708,
+          "variance_ratio_vs_panel_median": 0.16421840489478687,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 6,
+          "indicator_id": "MS.MIL.XPND.GD.ZS__diff",
+          "mean_abs_shap": 0.2464009782432268,
+          "within_country_std_median": 0.4020273435178231,
+          "variance_ratio_vs_panel_median": 0.5297473852185619,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 7,
+          "indicator_id": "BX.KLT.DINV.WD.GD.ZS__diff",
+          "mean_abs_shap": 0.24366143765834639,
+          "within_country_std_median": 2.2615112892600315,
+          "variance_ratio_vs_panel_median": 2.9799706697677597,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 8,
+          "indicator_id": "CC.EST__diff",
+          "mean_abs_shap": 0.16659258931429052,
+          "within_country_std_median": 0.12149370018756972,
+          "variance_ratio_vs_panel_median": 0.1600910262265274,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 9,
+          "indicator_id": "SM.POP.RHCR.EO__diff",
+          "mean_abs_shap": 0.13347083499626025,
+          "within_country_std_median": 644.5076236345672,
+          "variance_ratio_vs_panel_median": 849.2612104099444,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 10,
+          "indicator_id": "MS.MIL.MPRT.KD__diff",
+          "mean_abs_shap": 0.1318383213018771,
+          "within_country_std_median": 56950242.129180714,
+          "variance_ratio_vs_panel_median": 75042761.00105608,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        }
+      ]
+    },
+    "humanitarian_crisis": {
+      "n_samples_explained": 864,
+      "n_features": 104,
+      "n_top_k_fixed_effect_suspect": 1,
+      "top_k": [
+        {
+          "rank": 1,
+          "indicator_id": "NY.GDP.MKTP.KD__diff",
+          "mean_abs_shap": 0.4859348291674247,
+          "within_country_std_median": 908377955.6711708,
+          "variance_ratio_vs_panel_median": 1196960491.7822013,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 2,
+          "indicator_id": "NE.CON.GOVT.ZS__diff",
+          "mean_abs_shap": 0.05275978624475336,
+          "within_country_std_median": 1.4321565564779872,
+          "variance_ratio_vs_panel_median": 1.8871382836282098,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 3,
+          "indicator_id": "NE.IMP.GNFS.ZS__diff",
+          "mean_abs_shap": 0.021708268359650788,
+          "within_country_std_median": 4.953401217401429,
+          "variance_ratio_vs_panel_median": 6.527046941374315,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 4,
+          "indicator_id": "AG.PRD.FOOD.XD__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 5.109326829408893,
+          "variance_ratio_vs_panel_median": 6.732508551340394,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 5,
+          "indicator_id": "BM.KLT.DINV.WD.GD.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 0.8742432431592502,
+          "variance_ratio_vs_panel_median": 1.151981524580246,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 6,
+          "indicator_id": "BM.TRF.PWKR.CD.DT__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 44409424.79507914,
+          "variance_ratio_vs_panel_median": 58517852.18984881,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 7,
+          "indicator_id": "BN.CAB.XOKA.GD.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 4.236208933534087,
+          "variance_ratio_vs_panel_median": 5.582009885553236,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 8,
+          "indicator_id": "BX.KLT.DINV.WD.GD.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 2.2615112892600315,
+          "variance_ratio_vs_panel_median": 2.9799706697677597,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 9,
+          "indicator_id": "CC.EST__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 0.12149370018756972,
+          "variance_ratio_vs_panel_median": 0.1600910262265274,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 10,
+          "indicator_id": "DT.DOD.DECT.GN.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 10.08148534497859,
+          "variance_ratio_vs_panel_median": 13.284271795768769,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        }
+      ]
+    },
+    "mass_protest": {
+      "n_samples_explained": 864,
+      "n_features": 104,
+      "n_top_k_fixed_effect_suspect": 4,
+      "top_k": [
+        {
+          "rank": 1,
+          "indicator_id": "MS.MIL.MPRT.KD__diff",
+          "mean_abs_shap": 0.659002273515267,
+          "within_country_std_median": 56950242.129180714,
+          "variance_ratio_vs_panel_median": 75042761.00105608,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 2,
+          "indicator_id": "NV.IND.TOTL.ZS__diff",
+          "mean_abs_shap": 0.32665184086377297,
+          "within_country_std_median": 1.6529490788551076,
+          "variance_ratio_vs_panel_median": 2.1780743686756314,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 3,
+          "indicator_id": "v2mecenefm__diff",
+          "mean_abs_shap": 0.22669165292659926,
+          "within_country_std_median": 0.2852989659988273,
+          "variance_ratio_vs_panel_median": 0.3759355767221287,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 4,
+          "indicator_id": "BX.KLT.DINV.WD.GD.ZS__diff",
+          "mean_abs_shap": 0.2047146747917463,
+          "within_country_std_median": 2.2615112892600315,
+          "variance_ratio_vs_panel_median": 2.9799706697677597,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 5,
+          "indicator_id": "GC.XPN.TOTL.GD.ZS__diff",
+          "mean_abs_shap": 0.16838013546250888,
+          "within_country_std_median": 2.2545201778910937,
+          "variance_ratio_vs_panel_median": 2.9707585526638334,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 6,
+          "indicator_id": "v2x_clpol__diff",
+          "mean_abs_shap": 0.13567882295250386,
+          "within_country_std_median": 0.03915221042840447,
+          "variance_ratio_vs_panel_median": 0.051590473718747636,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 7,
+          "indicator_id": "NE.EXP.GNFS.ZS__diff",
+          "mean_abs_shap": 0.10131167467515878,
+          "within_country_std_median": 4.133237024555028,
+          "variance_ratio_vs_panel_median": 5.446324837229646,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 8,
+          "indicator_id": "v2x_jucon__diff",
+          "mean_abs_shap": 0.09481226737452175,
+          "within_country_std_median": 0.02803280995600938,
+          "variance_ratio_vs_panel_median": 0.03693855160343461,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 9,
+          "indicator_id": "RQ.EST__diff",
+          "mean_abs_shap": 0.08775084276281807,
+          "within_country_std_median": 0.12124537942796461,
+          "variance_ratio_vs_panel_median": 0.1597638164602831,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 10,
+          "indicator_id": "BM.KLT.DINV.WD.GD.ZS__diff",
+          "mean_abs_shap": 0.07514320491335995,
+          "within_country_std_median": 0.8742432431592502,
+          "variance_ratio_vs_panel_median": 1.151981524580246,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        }
+      ]
+    },
+    "migration_and_refugees": {
+      "n_samples_explained": 864,
+      "n_features": 104,
+      "n_top_k_fixed_effect_suspect": 4,
+      "top_k": [
+        {
+          "rank": 1,
+          "indicator_id": "NV.IND.TOTL.ZS__diff",
+          "mean_abs_shap": 0.4848408239768424,
+          "within_country_std_median": 1.6529490788551076,
+          "variance_ratio_vs_panel_median": 2.1780743686756314,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 2,
+          "indicator_id": "CC.EST__diff",
+          "mean_abs_shap": 0.3895380492072724,
+          "within_country_std_median": 0.12149370018756972,
+          "variance_ratio_vs_panel_median": 0.1600910262265274,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 3,
+          "indicator_id": "EG.IMP.CONS.ZS__diff",
+          "mean_abs_shap": 0.305609301344941,
+          "within_country_std_median": 5.124650602425021,
+          "variance_ratio_vs_panel_median": 6.752700532850768,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 4,
+          "indicator_id": "NE.EXP.GNFS.ZS__diff",
+          "mean_abs_shap": 0.3018829509171656,
+          "within_country_std_median": 4.133237024555028,
+          "variance_ratio_vs_panel_median": 5.446324837229646,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 5,
+          "indicator_id": "v2x_clpol__diff",
+          "mean_abs_shap": 0.27776517368025244,
+          "within_country_std_median": 0.03915221042840447,
+          "variance_ratio_vs_panel_median": 0.051590473718747636,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 6,
+          "indicator_id": "v2x_partip__diff",
+          "mean_abs_shap": 0.25553694337124205,
+          "within_country_std_median": 0.022850496254203333,
+          "variance_ratio_vs_panel_median": 0.030109868984755032,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 7,
+          "indicator_id": "SP.DYN.LE00.IN__diff",
+          "mean_abs_shap": 0.21799461067835427,
+          "within_country_std_median": 0.47249033800351065,
+          "variance_ratio_vs_panel_median": 0.6225957640299102,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 8,
+          "indicator_id": "NY.GDP.DEFL.KD.ZG__diff",
+          "mean_abs_shap": 0.2047298127146231,
+          "within_country_std_median": 10.482089586025168,
+          "variance_ratio_vs_panel_median": 13.812143973180708,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 9,
+          "indicator_id": "SE.PRM.ENRR__diff",
+          "mean_abs_shap": 0.16725276394524982,
+          "within_country_std_median": 2.956803692823762,
+          "variance_ratio_vs_panel_median": 3.89615047367676,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 10,
+          "indicator_id": "NE.IMP.GNFS.CD__diff",
+          "mean_abs_shap": 0.15885108605367873,
+          "within_country_std_median": 1443106686.9785936,
+          "variance_ratio_vs_panel_median": 1901567160.4049485,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        }
+      ]
+    },
+    "multilateral_agreement": {
+      "n_samples_explained": 864,
+      "n_features": 104,
+      "n_top_k_fixed_effect_suspect": 3,
+      "top_k": [
+        {
+          "rank": 1,
+          "indicator_id": "GC.TAX.TOTL.GD.ZS__diff",
+          "mean_abs_shap": 0.5997769163132703,
+          "within_country_std_median": 1.2082271188124978,
+          "variance_ratio_vs_panel_median": 1.5920687168700052,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 2,
+          "indicator_id": "SL.TLF.CACT.FE.ZS__diff",
+          "mean_abs_shap": 0.5274940829297042,
+          "within_country_std_median": 0.7919223997552041,
+          "variance_ratio_vs_panel_median": 1.0435081775668562,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 3,
+          "indicator_id": "VA.EST__diff",
+          "mean_abs_shap": 0.40343537177687344,
+          "within_country_std_median": 0.09786973750130934,
+          "variance_ratio_vs_panel_median": 0.1289619683071312,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 4,
+          "indicator_id": "v2psprlnks__diff",
+          "mean_abs_shap": 0.046407858339610975,
+          "within_country_std_median": 0.17357693475006328,
+          "variance_ratio_vs_panel_median": 0.22872058033043327,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 5,
+          "indicator_id": "v2x_jucon__diff",
+          "mean_abs_shap": 0.04295661615485657,
+          "within_country_std_median": 0.02803280995600938,
+          "variance_ratio_vs_panel_median": 0.03693855160343461,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 6,
+          "indicator_id": "SH.DYN.MORT__diff",
+          "mean_abs_shap": 0.029997009700812177,
+          "within_country_std_median": 1.787794073788484,
+          "variance_ratio_vs_panel_median": 2.3557582616434725,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 7,
+          "indicator_id": "AG.PRD.FOOD.XD__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 5.109326829408893,
+          "variance_ratio_vs_panel_median": 6.732508551340394,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 8,
+          "indicator_id": "BM.KLT.DINV.WD.GD.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 0.8742432431592502,
+          "variance_ratio_vs_panel_median": 1.151981524580246,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 9,
+          "indicator_id": "BM.TRF.PWKR.CD.DT__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 44409424.79507914,
+          "variance_ratio_vs_panel_median": 58517852.18984881,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 10,
+          "indicator_id": "BN.CAB.XOKA.GD.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 4.236208933534087,
+          "variance_ratio_vs_panel_median": 5.582009885553236,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        }
+      ]
+    },
+    "natural_disaster": {
+      "n_samples_explained": 864,
+      "n_features": 104,
+      "n_top_k_fixed_effect_suspect": 1,
+      "top_k": [
+        {
+          "rank": 1,
+          "indicator_id": "EG.IMP.CONS.ZS__diff",
+          "mean_abs_shap": 1.2213684968293943,
+          "within_country_std_median": 5.124650602425021,
+          "variance_ratio_vs_panel_median": 6.752700532850768,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 2,
+          "indicator_id": "BM.KLT.DINV.WD.GD.ZS__diff",
+          "mean_abs_shap": 1.025463268079024,
+          "within_country_std_median": 0.8742432431592502,
+          "variance_ratio_vs_panel_median": 1.151981524580246,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 3,
+          "indicator_id": "FM.LBL.BMNY.GD.ZS__diff",
+          "mean_abs_shap": 0.47085638790106593,
+          "within_country_std_median": 4.172966762354319,
+          "variance_ratio_vs_panel_median": 5.4986763129537355,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 4,
+          "indicator_id": "FI.RES.TOTL.CD__diff",
+          "mean_abs_shap": 0.2908876837960823,
+          "within_country_std_median": 672211097.4296079,
+          "variance_ratio_vs_panel_median": 885765799.0679622,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 5,
+          "indicator_id": "NY.GNP.PCAP.CD__diff",
+          "mean_abs_shap": 0.26402278157642,
+          "within_country_std_median": 329.91739719824534,
+          "variance_ratio_vs_panel_median": 434.72883454788183,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 6,
+          "indicator_id": "GC.TAX.TOTL.GD.ZS__diff",
+          "mean_abs_shap": 0.2452149660284231,
+          "within_country_std_median": 1.2082271188124978,
+          "variance_ratio_vs_panel_median": 1.5920687168700052,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 7,
+          "indicator_id": "BN.CAB.XOKA.GD.ZS__diff",
+          "mean_abs_shap": 0.24417580391337562,
+          "within_country_std_median": 4.236208933534087,
+          "variance_ratio_vs_panel_median": 5.582009885553236,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 8,
+          "indicator_id": "SI.POV.GINI__diff",
+          "mean_abs_shap": 0.17941065515514087,
+          "within_country_std_median": 2.4769501727737158,
+          "variance_ratio_vs_panel_median": 3.263852318754953,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 9,
+          "indicator_id": "NV.SRV.TOTL.ZS__diff",
+          "mean_abs_shap": 0.1494763020772693,
+          "within_country_std_median": 2.2026041486030636,
+          "variance_ratio_vs_panel_median": 2.9023493232676123,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 10,
+          "indicator_id": "v2x_gender__diff",
+          "mean_abs_shap": 0.1450952931453958,
+          "within_country_std_median": 0.02159256630904137,
+          "variance_ratio_vs_panel_median": 0.028452307353730957,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        }
+      ]
+    },
+    "peacekeeping_and_peace_process": {
+      "n_samples_explained": 864,
+      "n_features": 104,
+      "n_top_k_fixed_effect_suspect": 6,
+      "top_k": [
+        {
+          "rank": 1,
+          "indicator_id": "MS.MIL.TOTL.TF.ZS__diff",
+          "mean_abs_shap": 0.5719033945644211,
+          "within_country_std_median": 0.1612836850262907,
+          "variance_ratio_vs_panel_median": 0.21252188886824766,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 2,
+          "indicator_id": "SP.POP.TOTL__diff",
+          "mean_abs_shap": 0.3117752921778103,
+          "within_country_std_median": 35931.13383359562,
+          "variance_ratio_vs_panel_median": 47346.09350132829,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 3,
+          "indicator_id": "SP.DYN.LE00.IN__diff",
+          "mean_abs_shap": 0.07721120832570255,
+          "within_country_std_median": 0.47249033800351065,
+          "variance_ratio_vs_panel_median": 0.6225957640299102,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 4,
+          "indicator_id": "DT.DOD.DECT.GN.ZS__diff",
+          "mean_abs_shap": 0.05201216817977943,
+          "within_country_std_median": 10.08148534497859,
+          "variance_ratio_vs_panel_median": 13.284271795768769,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 5,
+          "indicator_id": "EG.ELC.ACCS.UR.ZS__diff",
+          "mean_abs_shap": 0.04966454543721062,
+          "within_country_std_median": 0.23314179420620423,
+          "variance_ratio_vs_panel_median": 0.3072085962740625,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 6,
+          "indicator_id": "FR.INR.LEND__diff",
+          "mean_abs_shap": 0.04498095925806309,
+          "within_country_std_median": 1.593866377956072,
+          "variance_ratio_vs_panel_median": 2.100221688211058,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 7,
+          "indicator_id": "v2exremhog__diff",
+          "mean_abs_shap": 0.04271495836594306,
+          "within_country_std_median": 0.23087699136664913,
+          "variance_ratio_vs_panel_median": 0.3042242883615916,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 8,
+          "indicator_id": "v2x_corr__diff",
+          "mean_abs_shap": 0.03722430575520268,
+          "within_country_std_median": 0.024666096844123936,
+          "variance_ratio_vs_panel_median": 0.03250226761290724,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 9,
+          "indicator_id": "v2lgqstexp__diff",
+          "mean_abs_shap": 0.02344154490022858,
+          "within_country_std_median": 0.23768327035714606,
+          "variance_ratio_vs_panel_median": 0.3131928537002921,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 10,
+          "indicator_id": "VC.BTL.DETH__diff",
+          "mean_abs_shap": 0.02081386251536154,
+          "within_country_std_median": 507.50758872001825,
+          "variance_ratio_vs_panel_median": 668.7376429436522,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        }
+      ]
+    },
+    "political_corruption": {
+      "n_samples_explained": 864,
+      "n_features": 104,
+      "n_top_k_fixed_effect_suspect": 3,
+      "top_k": [
+        {
+          "rank": 1,
+          "indicator_id": "IT.NET.USER.ZS__diff",
+          "mean_abs_shap": 0.4445046548878382,
+          "within_country_std_median": 2.825369863310895,
+          "variance_ratio_vs_panel_median": 3.7229614390592256,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 2,
+          "indicator_id": "MS.MIL.XPND.GD.ZS__diff",
+          "mean_abs_shap": 0.2855014592995515,
+          "within_country_std_median": 0.4020273435178231,
+          "variance_ratio_vs_panel_median": 0.5297473852185619,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 3,
+          "indicator_id": "NE.EXP.GNFS.ZS__diff",
+          "mean_abs_shap": 0.28494495817658105,
+          "within_country_std_median": 4.133237024555028,
+          "variance_ratio_vs_panel_median": 5.446324837229646,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 4,
+          "indicator_id": "v2cseeorgs__diff",
+          "mean_abs_shap": 0.22691035929263723,
+          "within_country_std_median": 0.2341720431382572,
+          "variance_ratio_vs_panel_median": 0.3085661449251161,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 5,
+          "indicator_id": "SH.DYN.MORT__diff",
+          "mean_abs_shap": 0.14803095176429665,
+          "within_country_std_median": 1.787794073788484,
+          "variance_ratio_vs_panel_median": 2.3557582616434725,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 6,
+          "indicator_id": "SI.POV.GINI__diff",
+          "mean_abs_shap": 0.09158739238792045,
+          "within_country_std_median": 2.4769501727737158,
+          "variance_ratio_vs_panel_median": 3.263852318754953,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 7,
+          "indicator_id": "EG.IMP.CONS.ZS__diff",
+          "mean_abs_shap": 0.08839589753793034,
+          "within_country_std_median": 5.124650602425021,
+          "variance_ratio_vs_panel_median": 6.752700532850768,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 8,
+          "indicator_id": "VC.IDP.NWDS__diff",
+          "mean_abs_shap": 0.086037143771503,
+          "within_country_std_median": 17495.418857323166,
+          "variance_ratio_vs_panel_median": 23053.537383482926,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 9,
+          "indicator_id": "NV.AGR.TOTL.ZS__diff",
+          "mean_abs_shap": 0.0739220692246822,
+          "within_country_std_median": 1.3405076256497435,
+          "variance_ratio_vs_panel_median": 1.76637340967832,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 10,
+          "indicator_id": "PV.EST__diff",
+          "mean_abs_shap": 0.05892204353092198,
+          "within_country_std_median": 0.20251308170661259,
+          "variance_ratio_vs_panel_median": 0.26684945000979743,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        }
+      ]
+    },
+    "political_repression": {
+      "n_samples_explained": 864,
+      "n_features": 104,
+      "n_top_k_fixed_effect_suspect": 2,
+      "top_k": [
+        {
+          "rank": 1,
+          "indicator_id": "MS.MIL.MPRT.KD__diff",
+          "mean_abs_shap": 0.6738968436321224,
+          "within_country_std_median": 56950242.129180714,
+          "variance_ratio_vs_panel_median": 75042761.00105608,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 2,
+          "indicator_id": "SH.DYN.MORT__diff",
+          "mean_abs_shap": 0.6549361249900153,
+          "within_country_std_median": 1.787794073788484,
+          "variance_ratio_vs_panel_median": 2.3557582616434725,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 3,
+          "indicator_id": "NY.GDP.PCAP.CD__diff",
+          "mean_abs_shap": 0.33430153940852503,
+          "within_country_std_median": 467.14338711299047,
+          "variance_ratio_vs_panel_median": 615.5501406442971,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 4,
+          "indicator_id": "v2stfisccap__diff",
+          "mean_abs_shap": 0.280319345337622,
+          "within_country_std_median": 0.15641397973918847,
+          "variance_ratio_vs_panel_median": 0.20610512721205188,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 5,
+          "indicator_id": "NE.CON.PRVT.ZS__diff",
+          "mean_abs_shap": 0.26534431154253546,
+          "within_country_std_median": 3.0597014721766196,
+          "variance_ratio_vs_panel_median": 4.031737842137821,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 6,
+          "indicator_id": "AG.PRD.FOOD.XD__diff",
+          "mean_abs_shap": 0.17874289579651312,
+          "within_country_std_median": 5.109326829408893,
+          "variance_ratio_vs_panel_median": 6.732508551340394,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 7,
+          "indicator_id": "IT.CEL.SETS.P2__diff",
+          "mean_abs_shap": 0.11031130060380458,
+          "within_country_std_median": 5.4781583337385875,
+          "variance_ratio_vs_panel_median": 7.218514113288502,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 8,
+          "indicator_id": "VC.IDP.NWDS__diff",
+          "mean_abs_shap": 0.10843663828719671,
+          "within_country_std_median": 17495.418857323166,
+          "variance_ratio_vs_panel_median": 23053.537383482926,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 9,
+          "indicator_id": "v2x_clphy__diff",
+          "mean_abs_shap": 0.10110285618863439,
+          "within_country_std_median": 0.04159300108449506,
+          "variance_ratio_vs_panel_median": 0.0548066790062185,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 10,
+          "indicator_id": "TX.VAL.TECH.MF.ZS__diff",
+          "mean_abs_shap": 0.08740962776837599,
+          "within_country_std_median": 2.071215700506693,
+          "variance_ratio_vs_panel_median": 2.7292200872859524,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        }
+      ]
+    },
+    "sanctions_and_arms_embargo": {
+      "n_samples_explained": 864,
+      "n_features": 104,
+      "n_top_k_fixed_effect_suspect": 2,
+      "top_k": [
+        {
+          "rank": 1,
+          "indicator_id": "v2x_clpriv__diff",
+          "mean_abs_shap": 1.0097494480552955,
+          "within_country_std_median": 0.02804961415054565,
+          "variance_ratio_vs_panel_median": 0.03696069432148556,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 2,
+          "indicator_id": "NE.EXP.GNFS.ZS__diff",
+          "mean_abs_shap": 0.9044862423768575,
+          "within_country_std_median": 4.133237024555028,
+          "variance_ratio_vs_panel_median": 5.446324837229646,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 3,
+          "indicator_id": "AG.PRD.FOOD.XD__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 5.109326829408893,
+          "variance_ratio_vs_panel_median": 6.732508551340394,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 4,
+          "indicator_id": "BM.KLT.DINV.WD.GD.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 0.8742432431592502,
+          "variance_ratio_vs_panel_median": 1.151981524580246,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 5,
+          "indicator_id": "BM.TRF.PWKR.CD.DT__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 44409424.79507914,
+          "variance_ratio_vs_panel_median": 58517852.18984881,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 6,
+          "indicator_id": "BN.CAB.XOKA.GD.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 4.236208933534087,
+          "variance_ratio_vs_panel_median": 5.582009885553236,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 7,
+          "indicator_id": "BX.KLT.DINV.WD.GD.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 2.2615112892600315,
+          "variance_ratio_vs_panel_median": 2.9799706697677597,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 8,
+          "indicator_id": "CC.EST__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 0.12149370018756972,
+          "variance_ratio_vs_panel_median": 0.1600910262265274,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 9,
+          "indicator_id": "DT.DOD.DECT.GN.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 10.08148534497859,
+          "variance_ratio_vs_panel_median": 13.284271795768769,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 10,
+          "indicator_id": "DT.TDS.DECT.EX.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "within_country_std_median": 5.909327770329377,
+          "variance_ratio_vs_panel_median": 7.786661741311732,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        }
+      ]
+    },
+    "territorial_disputes": {
+      "n_samples_explained": 864,
+      "n_features": 104,
+      "n_top_k_fixed_effect_suspect": 5,
+      "top_k": [
+        {
+          "rank": 1,
+          "indicator_id": "RL.EST__diff",
+          "mean_abs_shap": 0.44274362702117254,
+          "within_country_std_median": 0.10688307333927184,
+          "variance_ratio_vs_panel_median": 0.14083875024558587,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 2,
+          "indicator_id": "EG.IMP.CONS.ZS__diff",
+          "mean_abs_shap": 0.38404693925703265,
+          "within_country_std_median": 5.124650602425021,
+          "variance_ratio_vs_panel_median": 6.752700532850768,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 3,
+          "indicator_id": "SE.PRM.ENRR__diff",
+          "mean_abs_shap": 0.2571587979311037,
+          "within_country_std_median": 2.956803692823762,
+          "variance_ratio_vs_panel_median": 3.89615047367676,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 4,
+          "indicator_id": "NE.CON.GOVT.ZS__diff",
+          "mean_abs_shap": 0.23973409626869918,
+          "within_country_std_median": 1.4321565564779872,
+          "variance_ratio_vs_panel_median": 1.8871382836282098,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 5,
+          "indicator_id": "v2x_freexp_altinf__diff",
+          "mean_abs_shap": 0.199023032833021,
+          "within_country_std_median": 0.03897686107070105,
+          "variance_ratio_vs_panel_median": 0.05135941763452628,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 6,
+          "indicator_id": "v2x_clpol__diff",
+          "mean_abs_shap": 0.18164297253742526,
+          "within_country_std_median": 0.03915221042840447,
+          "variance_ratio_vs_panel_median": 0.051590473718747636,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 7,
+          "indicator_id": "DT.TDS.DECT.EX.ZS__diff",
+          "mean_abs_shap": 0.1796631632723572,
+          "within_country_std_median": 5.909327770329377,
+          "variance_ratio_vs_panel_median": 7.786661741311732,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 8,
+          "indicator_id": "CC.EST__diff",
+          "mean_abs_shap": 0.1120482000031506,
+          "within_country_std_median": 0.12149370018756972,
+          "variance_ratio_vs_panel_median": 0.1600910262265274,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 9,
+          "indicator_id": "DT.DOD.DECT.GN.ZS__diff",
+          "mean_abs_shap": 0.10552152227164384,
+          "within_country_std_median": 10.08148534497859,
+          "variance_ratio_vs_panel_median": 13.284271795768769,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 10,
+          "indicator_id": "v2exremhog__diff",
+          "mean_abs_shap": 0.10109548563153571,
+          "within_country_std_median": 0.23087699136664913,
+          "variance_ratio_vs_panel_median": 0.3042242883615916,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        }
+      ]
+    },
+    "terrorist_attack": {
+      "n_samples_explained": 864,
+      "n_features": 104,
+      "n_top_k_fixed_effect_suspect": 5,
+      "top_k": [
+        {
+          "rank": 1,
+          "indicator_id": "VC.BTL.DETH__diff",
+          "mean_abs_shap": 0.6304226414971199,
+          "within_country_std_median": 507.50758872001825,
+          "variance_ratio_vs_panel_median": 668.7376429436522,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 2,
+          "indicator_id": "NV.AGR.TOTL.ZS__diff",
+          "mean_abs_shap": 0.6025172732521499,
+          "within_country_std_median": 1.3405076256497435,
+          "variance_ratio_vs_panel_median": 1.76637340967832,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 3,
+          "indicator_id": "SP.DYN.TFRT.IN__diff",
+          "mean_abs_shap": 0.48923738648423254,
+          "within_country_std_median": 0.06729838540110476,
+          "variance_ratio_vs_panel_median": 0.08867840526395877,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 4,
+          "indicator_id": "v2clkill__diff",
+          "mean_abs_shap": 0.43646622483559655,
+          "within_country_std_median": 0.2357184410694631,
+          "variance_ratio_vs_panel_median": 0.31060381791868796,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 5,
+          "indicator_id": "SE.PRM.ENRR__diff",
+          "mean_abs_shap": 0.40756715550759787,
+          "within_country_std_median": 2.956803692823762,
+          "variance_ratio_vs_panel_median": 3.89615047367676,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 6,
+          "indicator_id": "v2exremhog__diff",
+          "mean_abs_shap": 0.4010909863635446,
+          "within_country_std_median": 0.23087699136664913,
+          "variance_ratio_vs_panel_median": 0.3042242883615916,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 7,
+          "indicator_id": "NE.EXP.GNFS.ZS__diff",
+          "mean_abs_shap": 0.35059910898331936,
+          "within_country_std_median": 4.133237024555028,
+          "variance_ratio_vs_panel_median": 5.446324837229646,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 8,
+          "indicator_id": "EN.GHG.CO2.PC.CE.AR5__diff",
+          "mean_abs_shap": 0.32789482804773,
+          "within_country_std_median": 0.20814648988342258,
+          "variance_ratio_vs_panel_median": 0.27427253527912476,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 9,
+          "indicator_id": "NY.GDP.MKTP.KD__diff",
+          "mean_abs_shap": 0.30836739790938605,
+          "within_country_std_median": 908377955.6711708,
+          "variance_ratio_vs_panel_median": 1196960491.7822013,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 10,
+          "indicator_id": "v2x_jucon__diff",
+          "mean_abs_shap": 0.3075599086773807,
+          "within_country_std_median": 0.02803280995600938,
+          "variance_ratio_vs_panel_median": 0.03693855160343461,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        }
+      ]
+    },
+    "trade_agreement": {
+      "n_samples_explained": 864,
+      "n_features": 104,
+      "n_top_k_fixed_effect_suspect": 4,
+      "top_k": [
+        {
+          "rank": 1,
+          "indicator_id": "NY.GDP.MKTP.CD__diff",
+          "mean_abs_shap": 0.7065395665039448,
+          "within_country_std_median": 1722913006.1211243,
+          "variance_ratio_vs_panel_median": 2270265131.6334023,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 2,
+          "indicator_id": "v2pepwrsoc__diff",
+          "mean_abs_shap": 0.15008645050070676,
+          "within_country_std_median": 0.15974494995402105,
+          "variance_ratio_vs_panel_median": 0.2104943131467898,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 3,
+          "indicator_id": "DT.TDS.DECT.EX.ZS__diff",
+          "mean_abs_shap": 0.1395568420128803,
+          "within_country_std_median": 5.909327770329377,
+          "variance_ratio_vs_panel_median": 7.786661741311732,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 4,
+          "indicator_id": "FI.RES.TOTL.CD__diff",
+          "mean_abs_shap": 0.07873661994855047,
+          "within_country_std_median": 672211097.4296079,
+          "variance_ratio_vs_panel_median": 885765799.0679622,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 5,
+          "indicator_id": "RQ.EST__diff",
+          "mean_abs_shap": 0.06398292486100167,
+          "within_country_std_median": 0.12124537942796461,
+          "variance_ratio_vs_panel_median": 0.1597638164602831,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 6,
+          "indicator_id": "SM.POP.RHCR.EO__diff",
+          "mean_abs_shap": 0.061899666324251784,
+          "within_country_std_median": 644.5076236345672,
+          "variance_ratio_vs_panel_median": 849.2612104099444,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 7,
+          "indicator_id": "v2x_clphy__diff",
+          "mean_abs_shap": 0.05040596613528254,
+          "within_country_std_median": 0.04159300108449506,
+          "variance_ratio_vs_panel_median": 0.0548066790062185,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        },
+        {
+          "rank": 8,
+          "indicator_id": "SE.PRM.ENRR__diff",
+          "mean_abs_shap": 0.031124016278151603,
+          "within_country_std_median": 2.956803692823762,
+          "variance_ratio_vs_panel_median": 3.89615047367676,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 9,
+          "indicator_id": "GC.TAX.TOTL.GD.ZS__diff",
+          "mean_abs_shap": 0.028801674798892566,
+          "within_country_std_median": 1.2082271188124978,
+          "variance_ratio_vs_panel_median": 1.5920687168700052,
+          "fixed_effect_suspect": false,
+          "rationale": "above_panel_median_within_country_std"
+        },
+        {
+          "rank": 10,
+          "indicator_id": "v2psprlnks__diff",
+          "mean_abs_shap": 0.02652829009549052,
+          "within_country_std_median": 0.17357693475006328,
+          "variance_ratio_vs_panel_median": 0.22872058033043327,
+          "fixed_effect_suspect": true,
+          "rationale": "below_panel_median_within_country_std"
+        }
+      ]
+    }
+  }
+}

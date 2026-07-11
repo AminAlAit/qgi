@@ -1,0 +1,11 @@
+[project]
+name = "qgi-data-tools"
+version = "6.0.0"
+description = "QGI Local DuckDB, Parquet & Schema Linting Utilities"
+requires-python = ">=3.11"
+
+[tool.ruff]
+extend = "../pyproject.toml"
+
+[tool.pytest.ini_options]
+pythonpath = ["..", ".", "src", "scripts"]

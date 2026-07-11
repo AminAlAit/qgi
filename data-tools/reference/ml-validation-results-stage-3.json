@@ -1,0 +1,3306 @@
+{
+  "schema_version": 3,
+  "stage": "stage_3_validation_audit",
+  "generated_at_utc": "2026-05-05T22:59:22.261417+00:00",
+  "purpose": "Stage 3 validation audit on the 5 LOCKED recipes from Stage 2 walks under D2+D7-Beta architecture. Adds Component 5 (cohort-stratified calibration) per Nasrin's binding requirement on top of existing Components 1+3+4+6 (AUC, ECE, Brier, anchors).",
+  "locked_recipes": [
+    "civil_war_and_insurgency",
+    "bilateral_treaty",
+    "mass_protest",
+    "elections_and_voting",
+    "government_formation"
+  ],
+  "n_predictions_locked": 3840,
+  "cohort_assignment": {
+    "method": "country-level mean non-null fraction across engineered features in train window",
+    "n_countries_per_cohort": {
+      "mid": 74,
+      "low": 71,
+      "high": 71
+    },
+    "thresholds": {
+      "high_pctile": 67,
+      "low_pctile": 33
+    },
+    "consult_attribution": "Nasrin Farrokhzad's binding requirement (post-PoC trio 2026-05-03): 'a model that is well-calibrated only on data-rich countries is commercially useless for political risk insurance, where the actual coverage targets are fragile states.'"
+  },
+  "components_v3_added": [
+    5
+  ],
+  "components_v3_inherited_from_base": [
+    1,
+    3,
+    4,
+    6
+  ],
+  "components_v3_deferred_to_followup": {
+    "components": [
+      2,
+      7,
+      8,
+      9
+    ],
+    "rationale": "Component 2 (fragile-state cohort): merged conceptually with Component 5 cohort calibration. Component 7 (structural-break flags): output already in qgi-data/reference/structural-break-audit-2026-05.json (Phase C). Component 8 (SHAP attribution): output already in qgi-data/reference/shap-fingerprint-2026-05.json (Stage 2 Prereq D). Component 9 (BH/FDR vs multi-task baseline): D2 IS the multi-task model -- comparison would be against itself. Defer to Stage 5 post-buyer-disclosure when alternative model classes are explored."
+  },
+  "components": {
+    "oos_by_time": {
+      "per_recipe": {
+        "elections_and_voting": {
+          "auc_point": 0.7505683971201212,
+          "auc_ci_low": 0.649825580833632,
+          "auc_ci_high": 0.8425738483305386,
+          "baseline_auc": 0.5,
+          "delta_point": 0.25056839712012124,
+          "delta_ci_low": 0.14982558083363193,
+          "delta_ci_high": 0.34257384833053867,
+          "confidence": 0.95,
+          "n": 768,
+          "n_bootstrap": 200,
+          "n_valid_resamples": 200,
+          "method": "percentile"
+        },
+        "civil_war_and_insurgency": {
+          "auc_point": 0.8840388007054674,
+          "auc_ci_low": 0.7940608204195161,
+          "auc_ci_high": 0.9415917615772749,
+          "baseline_auc": 0.5,
+          "delta_point": 0.38403880070546736,
+          "delta_ci_low": 0.29406082041951614,
+          "delta_ci_high": 0.4415917615772748,
+          "confidence": 0.95,
+          "n": 768,
+          "n_bootstrap": 200,
+          "n_valid_resamples": 200,
+          "method": "percentile"
+        },
+        "mass_protest": {
+          "auc_point": 0.8982329842931938,
+          "auc_ci_low": 0.8050732070113324,
+          "auc_ci_high": 0.9817035273639482,
+          "baseline_auc": 0.5,
+          "delta_point": 0.39823298429319376,
+          "delta_ci_low": 0.30507320701133245,
+          "delta_ci_high": 0.48170352736394817,
+          "confidence": 0.95,
+          "n": 768,
+          "n_bootstrap": 200,
+          "n_valid_resamples": 194,
+          "method": "percentile"
+        },
+        "government_formation": {
+          "auc_point": 0.7298013245033113,
+          "auc_ci_low": 0.6069199957817507,
+          "auc_ci_high": 0.8445818321572679,
+          "baseline_auc": 0.5,
+          "delta_point": 0.22980132450331126,
+          "delta_ci_low": 0.10691999578175077,
+          "delta_ci_high": 0.34458183215726795,
+          "confidence": 0.95,
+          "n": 768,
+          "n_bootstrap": 200,
+          "n_valid_resamples": 200,
+          "method": "percentile"
+        },
+        "bilateral_treaty": {
+          "auc_point": 0.7169638308711156,
+          "auc_ci_low": 0.5780105784926264,
+          "auc_ci_high": 0.8366584940159575,
+          "baseline_auc": 0.5,
+          "delta_point": 0.2169638308711156,
+          "delta_ci_low": 0.0780105784926264,
+          "delta_ci_high": 0.33665849401595754,
+          "confidence": 0.95,
+          "n": 768,
+          "n_bootstrap": 200,
+          "n_valid_resamples": 200,
+          "method": "percentile"
+        }
+      }
+    },
+    "calibration": {
+      "per_recipe": {
+        "elections_and_voting": {
+          "ece": 0.019651688639076785,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_low": 0.0,
+              "edge_high": 0.1,
+              "n": 762,
+              "predicted_mean": 0.00017595777176896928,
+              "observed_rate": 0.01706036745406824
+            },
+            {
+              "bin": 1,
+              "edge_low": 0.1,
+              "edge_high": 0.2,
+              "n": 2,
+              "predicted_mean": 0.15780688830324746,
+              "observed_rate": 0.0
+            },
+            {
+              "bin": 2,
+              "edge_low": 0.2,
+              "edge_high": 0.30000000000000004,
+              "n": 1,
+              "predicted_mean": 0.28065707215867114,
+              "observed_rate": 0.0
+            },
+            {
+              "bin": 3,
+              "edge_low": 0.30000000000000004,
+              "edge_high": 0.4,
+              "n": 1,
+              "predicted_mean": 0.39785366320352683,
+              "observed_rate": 0.0
+            },
+            {
+              "bin": 4,
+              "edge_low": 0.4,
+              "edge_high": 0.5,
+              "n": 1,
+              "predicted_mean": 0.4462360393776566,
+              "observed_rate": 1.0
+            },
+            {
+              "bin": 5,
+              "edge_low": 0.5,
+              "edge_high": 0.6000000000000001,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 6,
+              "edge_low": 0.6000000000000001,
+              "edge_high": 0.7000000000000001,
+              "n": 1,
+              "predicted_mean": 0.6786882243078884,
+              "observed_rate": 0.0
+            },
+            {
+              "bin": 7,
+              "edge_low": 0.7000000000000001,
+              "edge_high": 0.8,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 8,
+              "edge_low": 0.8,
+              "edge_high": 0.9,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 9,
+              "edge_low": 0.9,
+              "edge_high": 1.0,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            }
+          ]
+        },
+        "civil_war_and_insurgency": {
+          "ece": 0.00607839366800173,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_low": 0.0,
+              "edge_high": 0.1,
+              "n": 759,
+              "predicted_mean": 0.008355456537578304,
+              "observed_rate": 0.014492753623188406
+            },
+            {
+              "bin": 1,
+              "edge_low": 0.1,
+              "edge_high": 0.2,
+              "n": 9,
+              "predicted_mean": 0.1100002389947488,
+              "observed_rate": 0.1111111111111111
+            },
+            {
+              "bin": 2,
+              "edge_low": 0.2,
+              "edge_high": 0.30000000000000004,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 3,
+              "edge_low": 0.30000000000000004,
+              "edge_high": 0.4,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 4,
+              "edge_low": 0.4,
+              "edge_high": 0.5,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 5,
+              "edge_low": 0.5,
+              "edge_high": 0.6000000000000001,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 6,
+              "edge_low": 0.6000000000000001,
+              "edge_high": 0.7000000000000001,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 7,
+              "edge_low": 0.7000000000000001,
+              "edge_high": 0.8,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 8,
+              "edge_low": 0.8,
+              "edge_high": 0.9,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 9,
+              "edge_low": 0.9,
+              "edge_high": 1.0,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            }
+          ]
+        },
+        "mass_protest": {
+          "ece": 0.003586935830084109,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_low": 0.0,
+              "edge_high": 0.1,
+              "n": 758,
+              "predicted_mean": 0.007279003330313427,
+              "observed_rate": 0.005277044854881266
+            },
+            {
+              "bin": 1,
+              "edge_low": 0.1,
+              "edge_high": 0.2,
+              "n": 10,
+              "predicted_mean": 0.12372821931270181,
+              "observed_rate": 0.0
+            },
+            {
+              "bin": 2,
+              "edge_low": 0.2,
+              "edge_high": 0.30000000000000004,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 3,
+              "edge_low": 0.30000000000000004,
+              "edge_high": 0.4,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 4,
+              "edge_low": 0.4,
+              "edge_high": 0.5,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 5,
+              "edge_low": 0.5,
+              "edge_high": 0.6000000000000001,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 6,
+              "edge_low": 0.6000000000000001,
+              "edge_high": 0.7000000000000001,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 7,
+              "edge_low": 0.7000000000000001,
+              "edge_high": 0.8,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 8,
+              "edge_low": 0.8,
+              "edge_high": 0.9,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 9,
+              "edge_low": 0.9,
+              "edge_high": 1.0,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            }
+          ]
+        },
+        "government_formation": {
+          "ece": 0.014280989849036689,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_low": 0.0,
+              "edge_high": 0.1,
+              "n": 768,
+              "predicted_mean": 0.0026460934842966436,
+              "observed_rate": 0.016927083333333332
+            },
+            {
+              "bin": 1,
+              "edge_low": 0.1,
+              "edge_high": 0.2,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 2,
+              "edge_low": 0.2,
+              "edge_high": 0.30000000000000004,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 3,
+              "edge_low": 0.30000000000000004,
+              "edge_high": 0.4,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 4,
+              "edge_low": 0.4,
+              "edge_high": 0.5,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 5,
+              "edge_low": 0.5,
+              "edge_high": 0.6000000000000001,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 6,
+              "edge_low": 0.6000000000000001,
+              "edge_high": 0.7000000000000001,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 7,
+              "edge_low": 0.7000000000000001,
+              "edge_high": 0.8,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 8,
+              "edge_low": 0.8,
+              "edge_high": 0.9,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 9,
+              "edge_low": 0.9,
+              "edge_high": 1.0,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            }
+          ]
+        },
+        "bilateral_treaty": {
+          "ece": 0.013990059109386735,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_low": 0.0,
+              "edge_high": 0.1,
+              "n": 768,
+              "predicted_mean": 0.0029370242239465973,
+              "observed_rate": 0.016927083333333332
+            },
+            {
+              "bin": 1,
+              "edge_low": 0.1,
+              "edge_high": 0.2,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 2,
+              "edge_low": 0.2,
+              "edge_high": 0.30000000000000004,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 3,
+              "edge_low": 0.30000000000000004,
+              "edge_high": 0.4,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 4,
+              "edge_low": 0.4,
+              "edge_high": 0.5,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 5,
+              "edge_low": 0.5,
+              "edge_high": 0.6000000000000001,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 6,
+              "edge_low": 0.6000000000000001,
+              "edge_high": 0.7000000000000001,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 7,
+              "edge_low": 0.7000000000000001,
+              "edge_high": 0.8,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 8,
+              "edge_low": 0.8,
+              "edge_high": 0.9,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            },
+            {
+              "bin": 9,
+              "edge_low": 0.9,
+              "edge_high": 1.0,
+              "n": 0,
+              "predicted_mean": null,
+              "observed_rate": null
+            }
+          ]
+        }
+      },
+      "per_recipe_bootstrap_diagnostic": {
+        "elections_and_voting": {
+          "n_bootstrap": 200,
+          "n_valid_resamples": 200,
+          "ece_bootstrap_mean": 0.019713999826011932,
+          "ece_bootstrap_median": 0.018975498328212693,
+          "ece_bootstrap_p25": 0.016533688868983563,
+          "ece_bootstrap_p75": 0.022792211872070346,
+          "ece_bootstrap_p95": 0.02840493928420878,
+          "ece_bootstrap_min": 0.008625874233816187,
+          "ece_bootstrap_max": 0.037993861087245395,
+          "method": "resample_only"
+        },
+        "civil_war_and_insurgency": {
+          "n_bootstrap": 200,
+          "n_valid_resamples": 200,
+          "ece_bootstrap_mean": 0.007347359284138628,
+          "ece_bootstrap_median": 0.006950052644597159,
+          "ece_bootstrap_p25": 0.004113937092953298,
+          "ece_bootstrap_p75": 0.010034626344792323,
+          "ece_bootstrap_p95": 0.015418249488357872,
+          "ece_bootstrap_min": 0.0002038515420573313,
+          "ece_bootstrap_max": 0.021621641929674865,
+          "method": "resample_only"
+        },
+        "mass_protest": {
+          "n_bootstrap": 200,
+          "n_valid_resamples": 200,
+          "ece_bootstrap_mean": 0.00425306499077296,
+          "ece_bootstrap_median": 0.0040258022826293715,
+          "ece_bootstrap_p25": 0.002737200825450527,
+          "ece_bootstrap_p75": 0.00560190146611221,
+          "ece_bootstrap_p95": 0.00764624392361189,
+          "ece_bootstrap_min": 0.0008076384579432873,
+          "ece_bootstrap_max": 0.009503334239405546,
+          "method": "resample_only"
+        },
+        "government_formation": {
+          "n_bootstrap": 200,
+          "n_valid_resamples": 200,
+          "ece_bootstrap_mean": 0.01430309892570389,
+          "ece_bootstrap_median": 0.014250312987382122,
+          "ece_bootstrap_p25": 0.011655392751974912,
+          "ece_bootstrap_p75": 0.01695275446399471,
+          "ece_bootstrap_p95": 0.022346859078614553,
+          "ece_bootstrap_min": 0.0036715842457096955,
+          "ece_bootstrap_max": 0.025788792448360753,
+          "method": "resample_only"
+        },
+        "bilateral_treaty": {
+          "n_bootstrap": 200,
+          "n_valid_resamples": 200,
+          "ece_bootstrap_mean": 0.013972817347109144,
+          "ece_bootstrap_median": 0.013074245157243144,
+          "ece_bootstrap_p25": 0.010280562665983142,
+          "ece_bootstrap_p75": 0.017688318936086925,
+          "ece_bootstrap_p95": 0.02174404997510339,
+          "ece_bootstrap_min": 0.003310145383681598,
+          "ece_bootstrap_max": 0.026816961361036933,
+          "method": "resample_only"
+        }
+      },
+      "gate_uses": "in_sample_ece (option a per founder tie-break 2026-05-04)",
+      "diagnostic_only": "per_recipe_bootstrap_diagnostic \u2014 sampling-variability of in-sample ECE; 75th percentile is Ji-Hoon's preferred conservative number for transparency, NOT applied to the F1 0.08 gate"
+    },
+    "brier": {
+      "per_recipe": {
+        "elections_and_voting": {
+          "brier_score": 0.018303865469270066,
+          "uncertainty": 0.017896864149305556,
+          "resolution": 0.0014579334353950766,
+          "reliability": 0.0016554266335820533,
+          "n_bins": 10,
+          "base_rate": 0.018229166666666668
+        },
+        "civil_war_and_insurgency": {
+          "brier_score": 0.014707430715416123,
+          "uncertainty": 0.015380859375,
+          "resolution": 0.00015660219347817767,
+          "reliability": 3.723947357963832e-05,
+          "n_bins": 10,
+          "base_rate": 0.015625
+        },
+        "mass_protest": {
+          "brier_score": 0.005268307557538329,
+          "uncertainty": 0.005181206597222222,
+          "resolution": 0.00018713501405834813,
+          "reliability": 0.00020328732232791045,
+          "n_bins": 10,
+          "base_rate": 0.005208333333333333
+        },
+        "government_formation": {
+          "brier_score": 0.016761839925975897,
+          "uncertainty": 0.01664055718315972,
+          "resolution": 0.00020394667106828895,
+          "reliability": 0.00020394667106828895,
+          "n_bins": 10,
+          "base_rate": 0.016927083333333332
+        },
+        "bilateral_treaty": {
+          "brier_score": 0.016717062757752282,
+          "uncertainty": 0.01664055718315972,
+          "resolution": 0.00019572175388413477,
+          "reliability": 0.00019572175388413477,
+          "n_bins": 10,
+          "base_rate": 0.016927083333333332
+        }
+      }
+    },
+    "anchor_battery": {
+      "active": [
+        {
+          "case_id": 2,
+          "country": "Iceland",
+          "recipe": "civil_war_and_insurgency",
+          "status": "PASS",
+          "observed_percentile": 0.16796875,
+          "country_prob": 0.0002254460772479361,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768
+        },
+        {
+          "case_id": 3,
+          "country": "Norway",
+          "recipe_sentinel": "any_conflict_category",
+          "resolves_to_layer1": "B",
+          "status": "DEFERRED_TO_STAGE_1",
+          "reason": "sentinel case requires Layer-1 recipe lookup; orchestrator wires this in Stage 1"
+        },
+        {
+          "case_id": 5,
+          "country": "Sri Lanka",
+          "recipe": "economic_recession",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 6,
+          "country": "Venezuela",
+          "recipe": "economic_recession",
+          "status": "NOT_YET_IMPLEMENTED",
+          "reason": "rank-stability test requires multi-version comparison; Stage 1 implements when prior validation reports are available",
+          "expected_rank_volatility_max": 0.1
+        },
+        {
+          "case_id": 7,
+          "country": "Switzerland",
+          "recipe_sentinel": "any_conflict_category",
+          "resolves_to_layer1": "B",
+          "status": "DEFERRED_TO_STAGE_1",
+          "reason": "sentinel case requires Layer-1 recipe lookup; orchestrator wires this in Stage 1"
+        },
+        {
+          "case_id": 8,
+          "country": "Yemen",
+          "recipe_sentinel": "any_3_plus_conflict_categories",
+          "resolves_to_layer1": "B",
+          "status": "DEFERRED_TO_STAGE_1",
+          "reason": "sentinel case requires Layer-1 recipe lookup; orchestrator wires this in Stage 1"
+        },
+        {
+          "case_id": 9,
+          "country": "Ukraine",
+          "recipe": "foreign_intervention",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 10,
+          "country": "Sudan",
+          "recipe": "civil_war_and_insurgency",
+          "status": "PASS",
+          "observed_percentile": 0.9895833333333334,
+          "country_prob": 0.05270350256629616,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192
+        },
+        {
+          "case_id": 11,
+          "country": "Myanmar",
+          "recipe": "civil_war_and_insurgency",
+          "status": "PASS",
+          "observed_percentile": 0.8229166666666666,
+          "country_prob": 0.018123474007362275,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192
+        },
+        {
+          "case_id": 12,
+          "country": "Lebanon",
+          "recipe": "economic_recession",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 13,
+          "country": "Iran",
+          "recipe": "mass_protest",
+          "status": "PASS",
+          "observed_percentile": 0.8333333333333334,
+          "country_prob": 0.0390794057319952,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192
+        },
+        {
+          "case_id": 14,
+          "country": "Bangladesh",
+          "recipe": "mass_protest",
+          "status": "PASS",
+          "observed_percentile": 0.9479166666666666,
+          "country_prob": 0.01898384647909274,
+          "country_prob_aggregation": "single_row",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192
+        },
+        {
+          "case_id": 15,
+          "country": "Nigeria",
+          "recipe": "terrorist_attack",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 16,
+          "country": "Israel",
+          "recipe": "foreign_intervention",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 17,
+          "country": "Yemen",
+          "recipe": "humanitarian_crisis",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 18,
+          "country": "Argentina",
+          "recipe": "economic_recession",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 19,
+          "country": "Denmark",
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL",
+          "observed_percentile": 0.47265625,
+          "country_prob": 0.0008484914151701031,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768
+        },
+        {
+          "case_id": 20,
+          "country": "Japan",
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL",
+          "observed_percentile": 0.6627604166666666,
+          "country_prob": 0.003193004545339378,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768
+        },
+        {
+          "case_id": 21,
+          "country": "Costa Rica",
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL",
+          "observed_percentile": 0.58203125,
+          "country_prob": 0.001707324569991217,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768
+        },
+        {
+          "case_id": 22,
+          "country": "Singapore",
+          "recipe": "mass_protest",
+          "status": "FAIL",
+          "observed_percentile": 0.8854166666666666,
+          "country_prob": 0.02437296916348965,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768
+        },
+        {
+          "case_id": 23,
+          "country": "New Zealand",
+          "recipe": "terrorist_attack",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 24,
+          "country": "Uruguay",
+          "recipe": "political_repression",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 25,
+          "country": "Luxembourg",
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL",
+          "observed_percentile": 0.4309895833333333,
+          "country_prob": 0.0006729520129323085,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.25
+          ],
+          "n_total": 768
+        },
+        {
+          "case_id": 26,
+          "country": "Botswana",
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL",
+          "observed_percentile": 0.5442708333333334,
+          "country_prob": 0.0012154929397382695,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768
+        },
+        {
+          "case_id": 27,
+          "country": "Russia",
+          "recipe": "sanctions_and_arms_embargo",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 28,
+          "country": "Russia",
+          "recipe": "foreign_intervention",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 29,
+          "country": "China",
+          "recipe": "territorial_disputes",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 30,
+          "country": "Belarus",
+          "recipe": "political_repression",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 31,
+          "country": "Egypt",
+          "recipe": "economic_recession",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 32,
+          "country": "Ghana",
+          "recipe": "economic_recession",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 33,
+          "country": "Pakistan",
+          "recipe": "economic_recession",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 34,
+          "country": "Turkiye",
+          "recipe": "economic_recession",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 35,
+          "country": "Haiti",
+          "recipe": "humanitarian_crisis",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 36,
+          "country": "Burkina Faso",
+          "recipe": "terrorist_attack",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 37,
+          "country": "Turkiye",
+          "recipe": "natural_disaster",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 38,
+          "country": "El Salvador",
+          "recipe": "political_repression",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 39,
+          "country": "Norway",
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL",
+          "observed_percentile": 0.5416666666666666,
+          "country_prob": 0.0011989384880315753,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.25
+          ],
+          "n_total": 768
+        },
+        {
+          "case_id": 40,
+          "country": "Switzerland",
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL",
+          "observed_percentile": 0.7018229166666666,
+          "country_prob": 0.004395761005782421,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.25
+          ],
+          "n_total": 768
+        },
+        {
+          "case_id": 41,
+          "country": "Sweden",
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL",
+          "observed_percentile": 0.5416666666666666,
+          "country_prob": 0.0012090819475227656,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768
+        },
+        {
+          "case_id": 42,
+          "country": "Finland",
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL",
+          "observed_percentile": 0.6536458333333334,
+          "country_prob": 0.0028116826933844035,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768
+        },
+        {
+          "case_id": 43,
+          "country": "Netherlands",
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL",
+          "observed_percentile": 0.6979166666666666,
+          "country_prob": 0.004087748600199482,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768
+        },
+        {
+          "case_id": 44,
+          "country": "Australia",
+          "recipe": "terrorist_attack",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 45,
+          "country": "Canada",
+          "recipe": "terrorist_attack",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 46,
+          "country": "South Korea",
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL",
+          "observed_percentile": 0.76171875,
+          "country_prob": 0.008400320283984464,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768
+        },
+        {
+          "case_id": 47,
+          "country": "Estonia",
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL",
+          "observed_percentile": 0.5364583333333334,
+          "country_prob": 0.0011652846170785171,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768
+        },
+        {
+          "case_id": 48,
+          "country": "Mauritius",
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL",
+          "observed_percentile": 0.421875,
+          "country_prob": 0.0006503276034141641,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768
+        },
+        {
+          "case_id": 49,
+          "country": "Bhutan",
+          "recipe": "political_repression",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 50,
+          "country": "Chile",
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL",
+          "observed_percentile": 0.7434895833333334,
+          "country_prob": 0.006925423678382323,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768
+        },
+        {
+          "case_id": 51,
+          "country": "Sri Lanka",
+          "recipe": "humanitarian_crisis",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 52,
+          "country": "Pakistan",
+          "recipe": "natural_disaster",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 53,
+          "country": "Niger",
+          "recipe": "executive_power_consolidation",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 54,
+          "country": "Gabon",
+          "recipe": "executive_power_consolidation",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 55,
+          "country": "Tunisia",
+          "recipe": "executive_power_consolidation",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 56,
+          "country": "Venezuela",
+          "recipe": "political_repression",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 57,
+          "country": "Cuba",
+          "recipe": "humanitarian_crisis",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 58,
+          "country": "Hungary",
+          "recipe": "political_repression",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 59,
+          "country": "China",
+          "recipe": "political_repression",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 60,
+          "country": "North Korea",
+          "recipe": "political_repression",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 61,
+          "country": "Saudi Arabia",
+          "recipe": "political_repression",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 62,
+          "country": "Mexico",
+          "recipe": "terrorist_attack",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 63,
+          "country": "Somalia",
+          "recipe": "terrorist_attack",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 64,
+          "country": "Mali",
+          "recipe": "civil_war_and_insurgency",
+          "status": "PASS",
+          "observed_percentile": 0.7708333333333334,
+          "country_prob": 0.01563695685724242,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192
+        },
+        {
+          "case_id": 65,
+          "country": "Democratic Republic of the Congo",
+          "recipe": "civil_war_and_insurgency",
+          "status": "SKIPPED",
+          "reason": "no predictions for country 'democratic_republic_of_the_congo' (slug) in this recipe (or window)"
+        },
+        {
+          "case_id": 66,
+          "country": "Mozambique",
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL",
+          "observed_percentile": 0.24479166666666666,
+          "country_prob": 0.0009073745498786784,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.5,
+            1.0
+          ],
+          "n_total": 192
+        },
+        {
+          "case_id": 67,
+          "country": "Ethiopia",
+          "recipe": "civil_war_and_insurgency",
+          "status": "PASS",
+          "observed_percentile": 0.90625,
+          "country_prob": 0.05106062386529876,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192
+        },
+        {
+          "case_id": 68,
+          "country": "Myanmar",
+          "recipe": "humanitarian_crisis",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 69,
+          "country": "Afghanistan",
+          "recipe": "humanitarian_crisis",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 70,
+          "country": "Russia",
+          "recipe": "political_repression",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 71,
+          "country": "Egypt",
+          "recipe": "political_repression",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 72,
+          "country": "Turkiye",
+          "recipe": "political_repression",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 73,
+          "country": "Yemen",
+          "recipe": "civil_war_and_insurgency",
+          "status": "PASS",
+          "observed_percentile": 0.7552083333333334,
+          "country_prob": 0.014831383100512994,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192
+        },
+        {
+          "case_id": 74,
+          "country": "Israel",
+          "recipe": "humanitarian_crisis",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 75,
+          "country": "Lebanon",
+          "recipe": "humanitarian_crisis",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 76,
+          "country": "Germany",
+          "recipe": "economic_recession",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 77,
+          "country": "Singapore",
+          "recipe": "economic_recession",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 78,
+          "country": "Switzerland",
+          "recipe": "foreign_intervention",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 79,
+          "country": "Sweden",
+          "recipe": "foreign_intervention",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 80,
+          "country": "Iceland",
+          "recipe": "foreign_intervention",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 81,
+          "country": "Norway",
+          "recipe": "humanitarian_crisis",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 82,
+          "country": "Japan",
+          "recipe": "humanitarian_crisis",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 83,
+          "country": "New Zealand",
+          "recipe": "sanctions_and_arms_embargo",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 84,
+          "country": "Australia",
+          "recipe": "sanctions_and_arms_embargo",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 85,
+          "country": "Canada",
+          "recipe": "sanctions_and_arms_embargo",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 86,
+          "country": "Costa Rica",
+          "recipe": "territorial_disputes",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 87,
+          "country": "Iceland",
+          "recipe": "territorial_disputes",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 88,
+          "country": "Uruguay",
+          "recipe": "natural_disaster",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 89,
+          "country": "Ireland",
+          "recipe": "natural_disaster",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 90,
+          "country": "Finland",
+          "recipe": "natural_disaster",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 91,
+          "country": "Malta",
+          "recipe": "political_repression",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 92,
+          "country": "Cyprus",
+          "recipe": "political_repression",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 93,
+          "country": "Slovenia",
+          "recipe": "political_repression",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 94,
+          "country": "Portugal",
+          "recipe": "political_repression",
+          "status": "SKIPPED",
+          "reason": "no predictions for this recipe (or window)"
+        },
+        {
+          "case_id": 95,
+          "country": "Lithuania",
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL",
+          "observed_percentile": 0.6380208333333334,
+          "country_prob": 0.0024864498455077775,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768
+        },
+        {
+          "case_id": 96,
+          "country": "Latvia",
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL",
+          "observed_percentile": 0.6536458333333334,
+          "country_prob": 0.002824118918972566,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768
+        },
+        {
+          "case_id": 97,
+          "country": "Slovakia",
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL",
+          "observed_percentile": 0.6549479166666666,
+          "country_prob": 0.0029067002982455653,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768
+        },
+        {
+          "case_id": 98,
+          "country": "Czech Republic",
+          "recipe": "civil_war_and_insurgency",
+          "status": "SKIPPED",
+          "reason": "no predictions for country 'czech_republic' (slug) in this recipe (or window)"
+        },
+        {
+          "case_id": 99,
+          "country": "Spain",
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL",
+          "observed_percentile": 0.89453125,
+          "country_prob": 0.026432253360117872,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768
+        },
+        {
+          "case_id": 100,
+          "country": "Italy",
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL",
+          "observed_percentile": 0.890625,
+          "country_prob": 0.02517631474196584,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768
+        }
+      ],
+      "deferred": [
+        {
+          "case_id": 1,
+          "country": "Malta",
+          "recipe": "military_coup",
+          "status": "DEFERRED_BY_HARD_GATE",
+          "reason": "Recipe `military_coup` is HARD-GATED in 2026-05-04 mandate (n_positive_verified=3 < 8). Validation script CANNOT score this case in Stage 1/2. Re-activates on recipe re-entry (when verification rate raises n+v above gate, OR on new mandate cycle)."
+        },
+        {
+          "case_id": 4,
+          "country": "Tunisia",
+          "recipe": "democratic_transition",
+          "status": "DEFERRED_BY_HARD_GATE",
+          "reason": "Recipe `democratic_transition` is HARD-GATED in 2026-05-04 mandate (n_positive_verified=5 < 8). Validation script CANNOT score this case in Stage 1/2. Re-activates on recipe re-entry."
+        }
+      ],
+      "n_active": 98,
+      "n_active_pass": 8,
+      "n_active_fail": 21,
+      "n_active_skipped": 65,
+      "n_active_deferred_to_stage_1": 3,
+      "n_active_not_yet_implemented": 1,
+      "n_deferred_by_hard_gate": 2
+    },
+    "anchor_drift_metrics": {
+      "ads": 0.2522539511494253,
+      "ahr": 0.27586206896551724,
+      "ahi": 0.20627477209671027,
+      "ads_pct_pp": 25.22539511494253,
+      "ahr_pct": 27.586206896551722,
+      "ahi_pct": 20.627477209671028,
+      "n_evaluable": 29,
+      "n_excluded_non_evaluable": 69,
+      "per_case_drifts": [
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.17265625
+        },
+        {
+          "id": null,
+          "signed_drift": 0.36276041666666664
+        },
+        {
+          "id": null,
+          "signed_drift": 0.28203125
+        },
+        {
+          "id": null,
+          "signed_drift": 0.5854166666666667
+        },
+        {
+          "id": null,
+          "signed_drift": 0.18098958333333331
+        },
+        {
+          "id": null,
+          "signed_drift": 0.24427083333333338
+        },
+        {
+          "id": null,
+          "signed_drift": 0.29166666666666663
+        },
+        {
+          "id": null,
+          "signed_drift": 0.45182291666666663
+        },
+        {
+          "id": null,
+          "signed_drift": 0.24166666666666664
+        },
+        {
+          "id": null,
+          "signed_drift": 0.3536458333333334
+        },
+        {
+          "id": null,
+          "signed_drift": 0.39791666666666664
+        },
+        {
+          "id": null,
+          "signed_drift": 0.46171875
+        },
+        {
+          "id": null,
+          "signed_drift": 0.23645833333333338
+        },
+        {
+          "id": null,
+          "signed_drift": 0.12187500000000001
+        },
+        {
+          "id": null,
+          "signed_drift": 0.4434895833333334
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": -0.25520833333333337
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.3380208333333334
+        },
+        {
+          "id": null,
+          "signed_drift": 0.3536458333333334
+        },
+        {
+          "id": null,
+          "signed_drift": 0.35494791666666664
+        },
+        {
+          "id": null,
+          "signed_drift": 0.59453125
+        },
+        {
+          "id": null,
+          "signed_drift": 0.590625
+        }
+      ],
+      "policy": "REPORTED only, not gated. ADS = mean |drift| across evaluable anchors (PASS/FAIL only); AHR = fraction in-band; AHI = AHR * (1 - ADS) composite. Founder ratification 2026-05-05."
+    },
+    "predictive_metrics": {
+      "per_recipe": {
+        "elections_and_voting": {
+          "auc_pr": 0.09050231591074599,
+          "brier_skill_score": -0.022741487925989734,
+          "log_loss": 0.5402766479810275
+        },
+        "civil_war_and_insurgency": {
+          "auc_pr": 0.10054445132961443,
+          "brier_skill_score": 0.043783552216754895,
+          "log_loss": 0.06468189854978541
+        },
+        "mass_protest": {
+          "auc_pr": 0.046947261663286,
+          "brier_skill_score": -0.016810941366978804,
+          "log_loss": 0.027520519922334532
+        },
+        "government_formation": {
+          "auc_pr": 0.047223585458007485,
+          "brier_skill_score": -0.007288382322853559,
+          "log_loss": 0.10155229995523347
+        },
+        "bilateral_treaty": {
+          "auc_pr": 0.05828473340994446,
+          "brier_skill_score": -0.004597536834282545,
+          "log_loss": 0.10430603038684082
+        }
+      },
+      "purpose": "REPORTED-only predictive-power metrics (not gated). auc_pr = Average Precision (rank discrimination on rare-event axis); brier_skill_score = Brier vs base- rate baseline (1=perfect, 0=naive, <0=worse); log_loss = cross-entropy (penalizes confident wrong predictions). Founder ratification 2026-05-05."
+    },
+    "recipe_counts": {
+      "per_recipe": {
+        "elections_and_voting": {
+          "n_test": 768,
+          "n_pos_test": 14,
+          "n_neg_test": 754,
+          "positive_rate": 0.018229166666666668
+        },
+        "civil_war_and_insurgency": {
+          "n_test": 768,
+          "n_pos_test": 12,
+          "n_neg_test": 756,
+          "positive_rate": 0.015625
+        },
+        "mass_protest": {
+          "n_test": 768,
+          "n_pos_test": 4,
+          "n_neg_test": 764,
+          "positive_rate": 0.005208333333333333
+        },
+        "government_formation": {
+          "n_test": 768,
+          "n_pos_test": 13,
+          "n_neg_test": 755,
+          "positive_rate": 0.016927083333333332
+        },
+        "bilateral_treaty": {
+          "n_test": 768,
+          "n_pos_test": 13,
+          "n_neg_test": 755,
+          "positive_rate": 0.016927083333333332
+        }
+      },
+      "purpose": "Per-recipe test-set sample counts. n_pos_test is the F5 rubric HARD GATE input (n_pos < 8 -> recipe excluded from head-class assignment per docs/specs/internal/ops/ml-track/06-modular-architecture.md)."
+    },
+    "component_5_cohort_calibration": {
+      "per_recipe": {
+        "civil_war_and_insurgency": {
+          "high": {
+            "recipe_id": "civil_war_and_insurgency",
+            "cohort": "high",
+            "n_countries": 70,
+            "n_observations": 280,
+            "n_positives": 5,
+            "ece": 0.006835218679691953,
+            "skip_reason": null,
+            "table": [
+              {
+                "bin_low": 0.0,
+                "bin_high": 0.1,
+                "n_observations": 278,
+                "mean_predicted_prob": 0.011877822490240744,
+                "observed_event_rate": 0.017985611510791366,
+                "observed_rate_ci_lower": 0.0035971223021582736,
+                "observed_rate_ci_upper": 0.03237410071942446
+              },
+              {
+                "bin_low": 0.1,
+                "bin_high": 0.2,
+                "n_observations": 2,
+                "mean_predicted_prob": 0.10794794130033689,
+                "observed_event_rate": 0.0,
+                "observed_rate_ci_lower": 0.0,
+                "observed_rate_ci_upper": 0.0
+              },
+              {
+                "bin_low": 0.2,
+                "bin_high": 0.30000000000000004,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.30000000000000004,
+                "bin_high": 0.4,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.4,
+                "bin_high": 0.5,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.5,
+                "bin_high": 0.6000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.6000000000000001,
+                "bin_high": 0.7000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.7000000000000001,
+                "bin_high": 0.8,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.8,
+                "bin_high": 0.9,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.9,
+                "bin_high": 1.0,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              }
+            ]
+          },
+          "low": {
+            "recipe_id": "civil_war_and_insurgency",
+            "cohort": "low",
+            "n_countries": 50,
+            "n_observations": 200,
+            "n_positives": 1,
+            "ece": 0.0023165958302474193,
+            "skip_reason": null,
+            "table": [
+              {
+                "bin_low": 0.0,
+                "bin_high": 0.1,
+                "n_observations": 197,
+                "mean_predicted_prob": 0.004434693738048817,
+                "observed_event_rate": 0.005076142131979695,
+                "observed_rate_ci_lower": 0.0,
+                "observed_rate_ci_upper": 0.015228426395939087
+              },
+              {
+                "bin_low": 0.1,
+                "bin_high": 0.2,
+                "n_observations": 3,
+                "mean_predicted_prob": 0.11231794414836699,
+                "observed_event_rate": 0.0,
+                "observed_rate_ci_lower": 0.0,
+                "observed_rate_ci_upper": 0.0
+              },
+              {
+                "bin_low": 0.2,
+                "bin_high": 0.30000000000000004,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.30000000000000004,
+                "bin_high": 0.4,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.4,
+                "bin_high": 0.5,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.5,
+                "bin_high": 0.6000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.6000000000000001,
+                "bin_high": 0.7000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.7000000000000001,
+                "bin_high": 0.8,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.8,
+                "bin_high": 0.9,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.9,
+                "bin_high": 1.0,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              }
+            ]
+          },
+          "mid": {
+            "recipe_id": "civil_war_and_insurgency",
+            "cohort": "mid",
+            "n_countries": 72,
+            "n_observations": 288,
+            "n_positives": 6,
+            "ece": 0.011794185315116827,
+            "skip_reason": null,
+            "table": [
+              {
+                "bin_low": 0.0,
+                "bin_high": 0.1,
+                "n_observations": 284,
+                "mean_predicted_prob": 0.00762719082161757,
+                "observed_event_rate": 0.017605633802816902,
+                "observed_rate_ci_lower": 0.0035211267605633804,
+                "observed_rate_ci_upper": 0.035211267605633804
+              },
+              {
+                "bin_low": 0.1,
+                "bin_high": 0.2,
+                "n_observations": 4,
+                "mean_predicted_prob": 0.1092881089767411,
+                "observed_event_rate": 0.25,
+                "observed_rate_ci_lower": 0.0,
+                "observed_rate_ci_upper": 0.75
+              },
+              {
+                "bin_low": 0.2,
+                "bin_high": 0.30000000000000004,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.30000000000000004,
+                "bin_high": 0.4,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.4,
+                "bin_high": 0.5,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.5,
+                "bin_high": 0.6000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.6000000000000001,
+                "bin_high": 0.7000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.7000000000000001,
+                "bin_high": 0.8,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.8,
+                "bin_high": 0.9,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.9,
+                "bin_high": 1.0,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              }
+            ]
+          }
+        },
+        "bilateral_treaty": {
+          "high": {
+            "recipe_id": "bilateral_treaty",
+            "cohort": "high",
+            "n_countries": 70,
+            "n_observations": 280,
+            "n_positives": 6,
+            "ece": 0.017104459805517554,
+            "skip_reason": null,
+            "table": [
+              {
+                "bin_low": 0.0,
+                "bin_high": 0.1,
+                "n_observations": 280,
+                "mean_predicted_prob": 0.004324111623053875,
+                "observed_event_rate": 0.02142857142857143,
+                "observed_rate_ci_lower": 0.007142857142857143,
+                "observed_rate_ci_upper": 0.04285714285714286
+              },
+              {
+                "bin_low": 0.1,
+                "bin_high": 0.2,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.2,
+                "bin_high": 0.30000000000000004,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.30000000000000004,
+                "bin_high": 0.4,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.4,
+                "bin_high": 0.5,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.5,
+                "bin_high": 0.6000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.6000000000000001,
+                "bin_high": 0.7000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.7000000000000001,
+                "bin_high": 0.8,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.8,
+                "bin_high": 0.9,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.9,
+                "bin_high": 1.0,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              }
+            ]
+          },
+          "low": {
+            "recipe_id": "bilateral_treaty",
+            "cohort": "low",
+            "n_countries": 50,
+            "n_observations": 200,
+            "n_positives": 3,
+            "ece": 0.013529040702515122,
+            "skip_reason": null,
+            "table": [
+              {
+                "bin_low": 0.0,
+                "bin_high": 0.1,
+                "n_observations": 200,
+                "mean_predicted_prob": 0.001470959297484878,
+                "observed_event_rate": 0.015,
+                "observed_rate_ci_lower": 0.0,
+                "observed_rate_ci_upper": 0.035
+              },
+              {
+                "bin_low": 0.1,
+                "bin_high": 0.2,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.2,
+                "bin_high": 0.30000000000000004,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.30000000000000004,
+                "bin_high": 0.4,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.4,
+                "bin_high": 0.5,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.5,
+                "bin_high": 0.6000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.6000000000000001,
+                "bin_high": 0.7000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.7000000000000001,
+                "bin_high": 0.8,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.8,
+                "bin_high": 0.9,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.9,
+                "bin_high": 1.0,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              }
+            ]
+          },
+          "mid": {
+            "recipe_id": "bilateral_treaty",
+            "cohort": "mid",
+            "n_countries": 72,
+            "n_observations": 288,
+            "n_positives": 4,
+            "ece": 0.011282321215142619,
+            "skip_reason": null,
+            "table": [
+              {
+                "bin_low": 0.0,
+                "bin_high": 0.1,
+                "n_observations": 288,
+                "mean_predicted_prob": 0.0026065676737462695,
+                "observed_event_rate": 0.013888888888888888,
+                "observed_rate_ci_lower": 0.003472222222222222,
+                "observed_rate_ci_upper": 0.027777777777777776
+              },
+              {
+                "bin_low": 0.1,
+                "bin_high": 0.2,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.2,
+                "bin_high": 0.30000000000000004,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.30000000000000004,
+                "bin_high": 0.4,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.4,
+                "bin_high": 0.5,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.5,
+                "bin_high": 0.6000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.6000000000000001,
+                "bin_high": 0.7000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.7000000000000001,
+                "bin_high": 0.8,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.8,
+                "bin_high": 0.9,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.9,
+                "bin_high": 1.0,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              }
+            ]
+          }
+        },
+        "mass_protest": {
+          "high": {
+            "recipe_id": "mass_protest",
+            "cohort": "high",
+            "n_countries": 70,
+            "n_observations": 280,
+            "n_positives": 2,
+            "ece": 0.008324999020136135,
+            "skip_reason": null,
+            "table": [
+              {
+                "bin_low": 0.0,
+                "bin_high": 0.1,
+                "n_observations": 272,
+                "mean_predicted_prob": 0.012363188735983292,
+                "observed_event_rate": 0.007352941176470588,
+                "observed_rate_ci_lower": 0.0,
+                "observed_rate_ci_upper": 0.01838235294117647
+              },
+              {
+                "bin_low": 0.1,
+                "bin_high": 0.2,
+                "n_observations": 8,
+                "mean_predicted_prob": 0.12102654868133281,
+                "observed_event_rate": 0.0,
+                "observed_rate_ci_lower": 0.0,
+                "observed_rate_ci_upper": 0.0
+              },
+              {
+                "bin_low": 0.2,
+                "bin_high": 0.30000000000000004,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.30000000000000004,
+                "bin_high": 0.4,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.4,
+                "bin_high": 0.5,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.5,
+                "bin_high": 0.6000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.6000000000000001,
+                "bin_high": 0.7000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.7000000000000001,
+                "bin_high": 0.8,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.8,
+                "bin_high": 0.9,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.9,
+                "bin_high": 1.0,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              }
+            ]
+          },
+          "low": {
+            "recipe_id": "mass_protest",
+            "cohort": "low",
+            "n_countries": 50,
+            "n_observations": 200,
+            "n_positives": 1,
+            "ece": 0.0037871365537636495,
+            "skip_reason": null,
+            "table": [
+              {
+                "bin_low": 0.0,
+                "bin_high": 0.1,
+                "n_observations": 199,
+                "mean_predicted_prob": 0.0020459693397841343,
+                "observed_event_rate": 0.005025125628140704,
+                "observed_rate_ci_lower": 0.0,
+                "observed_rate_ci_upper": 0.01507537688442211
+              },
+              {
+                "bin_low": 0.1,
+                "bin_high": 0.2,
+                "n_observations": 1,
+                "mean_predicted_prob": 0.16457520936977263,
+                "observed_event_rate": 0.0,
+                "observed_rate_ci_lower": 0.0,
+                "observed_rate_ci_upper": 0.0
+              },
+              {
+                "bin_low": 0.2,
+                "bin_high": 0.30000000000000004,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.30000000000000004,
+                "bin_high": 0.4,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.4,
+                "bin_high": 0.5,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.5,
+                "bin_high": 0.6000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.6000000000000001,
+                "bin_high": 0.7000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.7000000000000001,
+                "bin_high": 0.8,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.8,
+                "bin_high": 0.9,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.9,
+                "bin_high": 1.0,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              }
+            ]
+          },
+          "mid": {
+            "recipe_id": "mass_protest",
+            "cohort": "mid",
+            "n_countries": 72,
+            "n_observations": 288,
+            "n_positives": 1,
+            "ece": 0.002958485707915495,
+            "skip_reason": null,
+            "table": [
+              {
+                "bin_low": 0.0,
+                "bin_high": 0.1,
+                "n_observations": 287,
+                "mean_predicted_prob": 0.0060890219148887785,
+                "observed_event_rate": 0.003484320557491289,
+                "observed_rate_ci_lower": 0.0,
+                "observed_rate_ci_upper": 0.010452961672473868
+              },
+              {
+                "bin_low": 0.1,
+                "bin_high": 0.2,
+                "n_observations": 1,
+                "mean_predicted_prob": 0.10449459430658309,
+                "observed_event_rate": 0.0,
+                "observed_rate_ci_lower": 0.0,
+                "observed_rate_ci_upper": 0.0
+              },
+              {
+                "bin_low": 0.2,
+                "bin_high": 0.30000000000000004,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.30000000000000004,
+                "bin_high": 0.4,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.4,
+                "bin_high": 0.5,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.5,
+                "bin_high": 0.6000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.6000000000000001,
+                "bin_high": 0.7000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.7000000000000001,
+                "bin_high": 0.8,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.8,
+                "bin_high": 0.9,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.9,
+                "bin_high": 1.0,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              }
+            ]
+          }
+        },
+        "elections_and_voting": {
+          "high": {
+            "recipe_id": "elections_and_voting",
+            "cohort": "high",
+            "n_countries": 70,
+            "n_observations": 280,
+            "n_positives": 13,
+            "ece": 0.0467540144857291,
+            "skip_reason": null,
+            "table": [
+              {
+                "bin_low": 0.0,
+                "bin_high": 0.1,
+                "n_observations": 277,
+                "mean_predicted_prob": 5.8161291747046214e-05,
+                "observed_event_rate": 0.04332129963898917,
+                "observed_rate_ci_lower": 0.021660649819494584,
+                "observed_rate_ci_upper": 0.06498194945848375
+              },
+              {
+                "bin_low": 0.1,
+                "bin_high": 0.2,
+                "n_observations": 1,
+                "mean_predicted_prob": 0.15561710999220751,
+                "observed_event_rate": 0.0,
+                "observed_rate_ci_lower": 0.0,
+                "observed_rate_ci_upper": 0.0
+              },
+              {
+                "bin_low": 0.2,
+                "bin_high": 0.30000000000000004,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.30000000000000004,
+                "bin_high": 0.4,
+                "n_observations": 1,
+                "mean_predicted_prob": 0.39785366320352683,
+                "observed_event_rate": 0.0,
+                "observed_rate_ci_lower": 0.0,
+                "observed_rate_ci_upper": 0.0
+              },
+              {
+                "bin_low": 0.4,
+                "bin_high": 0.5,
+                "n_observations": 1,
+                "mean_predicted_prob": 0.4462360393776566,
+                "observed_event_rate": 1.0,
+                "observed_rate_ci_lower": 1.0,
+                "observed_rate_ci_upper": 1.0
+              },
+              {
+                "bin_low": 0.5,
+                "bin_high": 0.6000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.6000000000000001,
+                "bin_high": 0.7000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.7000000000000001,
+                "bin_high": 0.8,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.8,
+                "bin_high": 0.9,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.9,
+                "bin_high": 1.0,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              }
+            ]
+          },
+          "low": {
+            "recipe_id": "elections_and_voting",
+            "cohort": "low",
+            "n_countries": 50,
+            "n_observations": 200,
+            "n_positives": 1,
+            "ece": 0.00839343676689996,
+            "skip_reason": null,
+            "table": [
+              {
+                "bin_low": 0.0,
+                "bin_high": 0.1,
+                "n_observations": 199,
+                "mean_predicted_prob": 4.376522092102676e-09,
+                "observed_event_rate": 0.005025125628140704,
+                "observed_rate_ci_lower": 0.0,
+                "observed_rate_ci_upper": 0.01507537688442211
+              },
+              {
+                "bin_low": 0.1,
+                "bin_high": 0.2,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.2,
+                "bin_high": 0.30000000000000004,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.30000000000000004,
+                "bin_high": 0.4,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.4,
+                "bin_high": 0.5,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.5,
+                "bin_high": 0.6000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.6000000000000001,
+                "bin_high": 0.7000000000000001,
+                "n_observations": 1,
+                "mean_predicted_prob": 0.6786882243078884,
+                "observed_event_rate": 0.0,
+                "observed_rate_ci_lower": 0.0,
+                "observed_rate_ci_upper": 0.0
+              },
+              {
+                "bin_low": 0.7000000000000001,
+                "bin_high": 0.8,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.8,
+                "bin_high": 0.9,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.9,
+                "bin_high": 1.0,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              }
+            ]
+          },
+          "mid": {
+            "recipe_id": "elections_and_voting",
+            "cohort": "mid",
+            "n_countries": 72,
+            "n_observations": 288,
+            "n_positives": 0,
+            "ece": 0.0019396597643023786,
+            "skip_reason": null,
+            "table": [
+              {
+                "bin_low": 0.0,
+                "bin_high": 0.1,
+                "n_observations": 286,
+                "mean_predicted_prob": 0.00041247648023121146,
+                "observed_event_rate": 0.0,
+                "observed_rate_ci_lower": 0.0,
+                "observed_rate_ci_upper": 0.0
+              },
+              {
+                "bin_low": 0.1,
+                "bin_high": 0.2,
+                "n_observations": 1,
+                "mean_predicted_prob": 0.15999666661428744,
+                "observed_event_rate": 0.0,
+                "observed_rate_ci_lower": 0.0,
+                "observed_rate_ci_upper": 0.0
+              },
+              {
+                "bin_low": 0.2,
+                "bin_high": 0.30000000000000004,
+                "n_observations": 1,
+                "mean_predicted_prob": 0.28065707215867114,
+                "observed_event_rate": 0.0,
+                "observed_rate_ci_lower": 0.0,
+                "observed_rate_ci_upper": 0.0
+              },
+              {
+                "bin_low": 0.30000000000000004,
+                "bin_high": 0.4,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.4,
+                "bin_high": 0.5,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.5,
+                "bin_high": 0.6000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.6000000000000001,
+                "bin_high": 0.7000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.7000000000000001,
+                "bin_high": 0.8,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.8,
+                "bin_high": 0.9,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.9,
+                "bin_high": 1.0,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              }
+            ]
+          }
+        },
+        "government_formation": {
+          "high": {
+            "recipe_id": "government_formation",
+            "cohort": "high",
+            "n_countries": 70,
+            "n_observations": 280,
+            "n_positives": 5,
+            "ece": 0.01376474340602037,
+            "skip_reason": null,
+            "table": [
+              {
+                "bin_low": 0.0,
+                "bin_high": 0.1,
+                "n_observations": 280,
+                "mean_predicted_prob": 0.004092399451122487,
+                "observed_event_rate": 0.017857142857142856,
+                "observed_rate_ci_lower": 0.0035714285714285713,
+                "observed_rate_ci_upper": 0.03571428571428571
+              },
+              {
+                "bin_low": 0.1,
+                "bin_high": 0.2,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.2,
+                "bin_high": 0.30000000000000004,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.30000000000000004,
+                "bin_high": 0.4,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.4,
+                "bin_high": 0.5,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.5,
+                "bin_high": 0.6000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.6000000000000001,
+                "bin_high": 0.7000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.7000000000000001,
+                "bin_high": 0.8,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.8,
+                "bin_high": 0.9,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.9,
+                "bin_high": 1.0,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              }
+            ]
+          },
+          "low": {
+            "recipe_id": "government_formation",
+            "cohort": "low",
+            "n_countries": 50,
+            "n_observations": 200,
+            "n_positives": 3,
+            "ece": 0.013851432344377234,
+            "skip_reason": null,
+            "table": [
+              {
+                "bin_low": 0.0,
+                "bin_high": 0.1,
+                "n_observations": 200,
+                "mean_predicted_prob": 0.0011485676556227662,
+                "observed_event_rate": 0.015,
+                "observed_rate_ci_lower": 0.0,
+                "observed_rate_ci_upper": 0.03
+              },
+              {
+                "bin_low": 0.1,
+                "bin_high": 0.2,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.2,
+                "bin_high": 0.30000000000000004,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.30000000000000004,
+                "bin_high": 0.4,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.4,
+                "bin_high": 0.5,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.5,
+                "bin_high": 0.6000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.6000000000000001,
+                "bin_high": 0.7000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.7000000000000001,
+                "bin_high": 0.8,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.8,
+                "bin_high": 0.9,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.9,
+                "bin_high": 1.0,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              }
+            ]
+          },
+          "mid": {
+            "recipe_id": "government_formation",
+            "cohort": "mid",
+            "n_countries": 72,
+            "n_observations": 288,
+            "n_positives": 5,
+            "ece": 0.015081199935760512,
+            "skip_reason": null,
+            "table": [
+              {
+                "bin_low": 0.0,
+                "bin_high": 0.1,
+                "n_observations": 288,
+                "mean_predicted_prob": 0.0022799111753506,
+                "observed_event_rate": 0.017361111111111112,
+                "observed_rate_ci_lower": 0.003472222222222222,
+                "observed_rate_ci_upper": 0.034722222222222224
+              },
+              {
+                "bin_low": 0.1,
+                "bin_high": 0.2,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.2,
+                "bin_high": 0.30000000000000004,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.30000000000000004,
+                "bin_high": 0.4,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.4,
+                "bin_high": 0.5,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.5,
+                "bin_high": 0.6000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.6000000000000001,
+                "bin_high": 0.7000000000000001,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.7000000000000001,
+                "bin_high": 0.8,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.8,
+                "bin_high": 0.9,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              },
+              {
+                "bin_low": 0.9,
+                "bin_high": 1.0,
+                "n_observations": 0,
+                "mean_predicted_prob": NaN,
+                "observed_event_rate": NaN,
+                "observed_rate_ci_lower": NaN,
+                "observed_rate_ci_upper": NaN
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

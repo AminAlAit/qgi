@@ -1,0 +1,366 @@
+{
+  "schema_version": 1,
+  "generator": "qgi-ml/scripts/run_csd_diagnostic.py",
+  "protocol_reference": "docs/specs/internal/ops/cascade-track/phase-5-v0.0b-protocol-5-csd-protocol.md",
+  "diagnostic_1_pesaran_cd": {
+    "subsample": [
+      "v2x_libdem",
+      "NY.GDP.PCAP.CD",
+      "FP.CPI.TOTL.ZG",
+      "SL.UEM.TOTL.ZS",
+      "CC.EST",
+      "v2x_polyarchy",
+      "MS.MIL.XPND.GD.ZS",
+      "NE.EXP.GNFS.ZS",
+      "NE.IMP.GNFS.ZS",
+      "SE.PRM.ENRR",
+      "SH.DYN.MORT",
+      "SP.DYN.LE00.IN",
+      "SP.DYN.TFRT.IN",
+      "IT.CEL.SETS.P2",
+      "RL.EST"
+    ],
+    "n_indicators": 15,
+    "p_thresholds": {
+      "csd_flag": 0.1,
+      "severe_csd": 0.001
+    },
+    "summary_by_flag": {
+      "no_csd_flag": 1,
+      "csd_flag": 0,
+      "severe_csd": 14,
+      "insufficient_data": 0,
+      "load_failed": 0
+    },
+    "results": {
+      "v2x_libdem": {
+        "cd_statistic": 595.8054,
+        "p_value": 0.0,
+        "n_countries": 175,
+        "n_pairs": 15202,
+        "mean_pairwise_T": 104.3,
+        "flag": "severe_csd"
+      },
+      "NY.GDP.PCAP.CD": {
+        "cd_statistic": 849.7629,
+        "p_value": 0.0,
+        "n_countries": 210,
+        "n_pairs": 21944,
+        "mean_pairwise_T": 50.0,
+        "flag": "severe_csd"
+      },
+      "FP.CPI.TOTL.ZG": {
+        "cd_statistic": 223.8364,
+        "p_value": 0.0,
+        "n_countries": 185,
+        "n_pairs": 17020,
+        "mean_pairwise_T": 40.5,
+        "flag": "severe_csd"
+      },
+      "SL.UEM.TOTL.ZS": {
+        "cd_statistic": 47.248,
+        "p_value": 0.0,
+        "n_countries": 186,
+        "n_pairs": 17205,
+        "mean_pairwise_T": 36.0,
+        "flag": "severe_csd"
+      },
+      "CC.EST": {
+        "cd_statistic": 7.6876,
+        "p_value": 0.0,
+        "n_countries": 202,
+        "n_pairs": 20301,
+        "mean_pairwise_T": 27.0,
+        "flag": "severe_csd"
+      },
+      "v2x_polyarchy": {
+        "cd_statistic": 712.1965,
+        "p_value": 0.0,
+        "n_countries": 175,
+        "n_pairs": 15225,
+        "mean_pairwise_T": 108.4,
+        "flag": "severe_csd"
+      },
+      "MS.MIL.XPND.GD.ZS": {
+        "cd_statistic": 148.9432,
+        "p_value": 0.0,
+        "n_countries": 158,
+        "n_pairs": 12397,
+        "mean_pairwise_T": 41.9,
+        "flag": "severe_csd"
+      },
+      "NE.EXP.GNFS.ZS": {
+        "cd_statistic": 129.9171,
+        "p_value": 0.0,
+        "n_countries": 179,
+        "n_pairs": 15910,
+        "mean_pairwise_T": 41.7,
+        "flag": "severe_csd"
+      },
+      "NE.IMP.GNFS.ZS": {
+        "cd_statistic": 115.2627,
+        "p_value": 0.0,
+        "n_countries": 179,
+        "n_pairs": 15910,
+        "mean_pairwise_T": 41.7,
+        "flag": "severe_csd"
+      },
+      "SE.PRM.ENRR": {
+        "cd_statistic": 51.475,
+        "p_value": 0.0,
+        "n_countries": 195,
+        "n_pairs": 18802,
+        "mean_pairwise_T": 29.6,
+        "flag": "severe_csd"
+      },
+      "SH.DYN.MORT": {
+        "cd_statistic": 944.2743,
+        "p_value": 0.0,
+        "n_countries": 195,
+        "n_pairs": 18915,
+        "mean_pairwise_T": 59.2,
+        "flag": "severe_csd"
+      },
+      "SP.DYN.LE00.IN": {
+        "cd_statistic": 1050.5539,
+        "p_value": 0.0,
+        "n_countries": 215,
+        "n_pairs": 23005,
+        "mean_pairwise_T": 66.7,
+        "flag": "severe_csd"
+      },
+      "SP.DYN.TFRT.IN": {
+        "cd_statistic": 954.7491,
+        "p_value": 0.0,
+        "n_countries": 215,
+        "n_pairs": 23005,
+        "mean_pairwise_T": 66.7,
+        "flag": "severe_csd"
+      },
+      "IT.CEL.SETS.P2": {
+        "cd_statistic": 937.5832,
+        "p_value": 0.0,
+        "n_countries": 212,
+        "n_pairs": 22340,
+        "mean_pairwise_T": 49.8,
+        "flag": "severe_csd"
+      },
+      "RL.EST": {
+        "cd_statistic": 1.1268,
+        "p_value": 0.259845,
+        "n_countries": 204,
+        "n_pairs": 20706,
+        "mean_pairwise_T": 27.6,
+        "flag": "no_csd_flag"
+      }
+    }
+  },
+  "diagnostic_2_geographic_clustering": {
+    "scope": "25 contested indicators (per Decision 1)",
+    "n_indicators": 25,
+    "csd_suspect_threshold_delta": 0.2,
+    "n_csd_suspect": 3,
+    "results": {
+      "EG.ELC.ACCS.RU.ZS": {
+        "oecd_n_tested": 38,
+        "oecd_frac_rejected_at_diff": 0.2368,
+        "non_oecd_n_tested": 167,
+        "non_oecd_frac_rejected_at_diff": 0.6647,
+        "delta_oecd_minus_non_oecd": -0.4278,
+        "csd_suspect": false
+      },
+      "EG.ELC.ACCS.UR.ZS": {
+        "oecd_n_tested": 38,
+        "oecd_frac_rejected_at_diff": 0.3421,
+        "non_oecd_n_tested": 173,
+        "non_oecd_frac_rejected_at_diff": 0.6994,
+        "delta_oecd_minus_non_oecd": -0.3573,
+        "csd_suspect": false
+      },
+      "FA-01": {
+        "oecd_n_tested": 32,
+        "oecd_frac_rejected_at_diff": 0.5312,
+        "non_oecd_n_tested": 131,
+        "non_oecd_frac_rejected_at_diff": 0.5802,
+        "delta_oecd_minus_non_oecd": -0.0489,
+        "csd_suspect": false
+      },
+      "FA-02": {
+        "oecd_n_tested": 16,
+        "oecd_frac_rejected_at_diff": 0.375,
+        "non_oecd_n_tested": 117,
+        "non_oecd_frac_rejected_at_diff": 0.5897,
+        "delta_oecd_minus_non_oecd": -0.2147,
+        "csd_suspect": false
+      },
+      "FA-03": {
+        "oecd_n_tested": 30,
+        "oecd_frac_rejected_at_diff": 0.5333,
+        "non_oecd_n_tested": 127,
+        "non_oecd_frac_rejected_at_diff": 0.4567,
+        "delta_oecd_minus_non_oecd": 0.0766,
+        "csd_suspect": false
+      },
+      "FA-04": {
+        "oecd_n_tested": 22,
+        "oecd_frac_rejected_at_diff": 0.4545,
+        "non_oecd_n_tested": 81,
+        "non_oecd_frac_rejected_at_diff": 0.5185,
+        "delta_oecd_minus_non_oecd": -0.064,
+        "csd_suspect": false
+      },
+      "FA-05": {
+        "oecd_n_tested": 19,
+        "oecd_frac_rejected_at_diff": 0.6842,
+        "non_oecd_n_tested": 132,
+        "non_oecd_frac_rejected_at_diff": 0.553,
+        "delta_oecd_minus_non_oecd": 0.1312,
+        "csd_suspect": false
+      },
+      "FB.AST.NPER.ZS": {
+        "oecd_n_tested": 31,
+        "oecd_frac_rejected_at_diff": 0.5161,
+        "non_oecd_n_tested": 78,
+        "non_oecd_frac_rejected_at_diff": 0.4872,
+        "delta_oecd_minus_non_oecd": 0.0289,
+        "csd_suspect": false
+      },
+      "FI.RES.TOTL.CD": {
+        "oecd_n_tested": 38,
+        "oecd_frac_rejected_at_diff": 0.7632,
+        "non_oecd_n_tested": 138,
+        "non_oecd_frac_rejected_at_diff": 0.5435,
+        "delta_oecd_minus_non_oecd": 0.2197,
+        "csd_suspect": true
+      },
+      "IT.CEL.SETS.P2": {
+        "oecd_n_tested": 38,
+        "oecd_frac_rejected_at_diff": 0.4474,
+        "non_oecd_n_tested": 174,
+        "non_oecd_frac_rejected_at_diff": 0.4713,
+        "delta_oecd_minus_non_oecd": -0.0239,
+        "csd_suspect": false
+      },
+      "IT.NET.USER.ZS": {
+        "oecd_n_tested": 38,
+        "oecd_frac_rejected_at_diff": 0.5,
+        "non_oecd_n_tested": 165,
+        "non_oecd_frac_rejected_at_diff": 0.4061,
+        "delta_oecd_minus_non_oecd": 0.0939,
+        "csd_suspect": false
+      },
+      "NE.EXP.GNFS.CD": {
+        "oecd_n_tested": 38,
+        "oecd_frac_rejected_at_diff": 0.6316,
+        "non_oecd_n_tested": 142,
+        "non_oecd_frac_rejected_at_diff": 0.4789,
+        "delta_oecd_minus_non_oecd": 0.1527,
+        "csd_suspect": false
+      },
+      "NE.IMP.GNFS.CD": {
+        "oecd_n_tested": 38,
+        "oecd_frac_rejected_at_diff": 0.7105,
+        "non_oecd_n_tested": 142,
+        "non_oecd_frac_rejected_at_diff": 0.6831,
+        "delta_oecd_minus_non_oecd": 0.0274,
+        "csd_suspect": false
+      },
+      "NY.GDP.MKTP.CD": {
+        "oecd_n_tested": 38,
+        "oecd_frac_rejected_at_diff": 0.7368,
+        "non_oecd_n_tested": 172,
+        "non_oecd_frac_rejected_at_diff": 0.5523,
+        "delta_oecd_minus_non_oecd": 0.1845,
+        "csd_suspect": false
+      },
+      "NY.GDP.MKTP.KD": {
+        "oecd_n_tested": 38,
+        "oecd_frac_rejected_at_diff": 0.6842,
+        "non_oecd_n_tested": 169,
+        "non_oecd_frac_rejected_at_diff": 0.6154,
+        "delta_oecd_minus_non_oecd": 0.0688,
+        "csd_suspect": false
+      },
+      "NY.GDP.MKTP.KD.ZG": {
+        "oecd_n_tested": 38,
+        "oecd_frac_rejected_at_diff": 0.9474,
+        "non_oecd_n_tested": 171,
+        "non_oecd_frac_rejected_at_diff": 0.9766,
+        "delta_oecd_minus_non_oecd": -0.0292,
+        "csd_suspect": false
+      },
+      "SH.DYN.MORT": {
+        "oecd_n_tested": 38,
+        "oecd_frac_rejected_at_diff": 0.2632,
+        "non_oecd_n_tested": 157,
+        "non_oecd_frac_rejected_at_diff": 0.4395,
+        "delta_oecd_minus_non_oecd": -0.1763,
+        "csd_suspect": false
+      },
+      "SL.TLF.CACT.FE.ZS": {
+        "oecd_n_tested": 38,
+        "oecd_frac_rejected_at_diff": 0.8158,
+        "non_oecd_n_tested": 148,
+        "non_oecd_frac_rejected_at_diff": 0.6419,
+        "delta_oecd_minus_non_oecd": 0.1739,
+        "csd_suspect": false
+      },
+      "SP.DYN.TFRT.IN": {
+        "oecd_n_tested": 38,
+        "oecd_frac_rejected_at_diff": 0.6579,
+        "non_oecd_n_tested": 177,
+        "non_oecd_frac_rejected_at_diff": 0.3672,
+        "delta_oecd_minus_non_oecd": 0.2907,
+        "csd_suspect": true
+      },
+      "SP.POP.TOTL": {
+        "oecd_n_tested": 38,
+        "oecd_frac_rejected_at_diff": 0.2632,
+        "non_oecd_n_tested": 177,
+        "non_oecd_frac_rejected_at_diff": 0.1695,
+        "delta_oecd_minus_non_oecd": 0.0937,
+        "csd_suspect": false
+      },
+      "TX.VAL.TECH.MF.ZS": {
+        "oecd_n_tested": 38,
+        "oecd_frac_rejected_at_diff": 0.4737,
+        "non_oecd_n_tested": 96,
+        "non_oecd_frac_rejected_at_diff": 0.6042,
+        "delta_oecd_minus_non_oecd": -0.1305,
+        "csd_suspect": false
+      },
+      "VC.BTL.DETH": {
+        "oecd_n_tested": 3,
+        "oecd_frac_rejected_at_diff": 0.3333,
+        "non_oecd_n_tested": 35,
+        "non_oecd_frac_rejected_at_diff": 0.6286,
+        "delta_oecd_minus_non_oecd": -0.2952,
+        "csd_suspect": false
+      },
+      "VC.IDP.NWDS": {
+        "oecd_n_tested": 12,
+        "oecd_frac_rejected_at_diff": 0.5833,
+        "non_oecd_n_tested": 54,
+        "non_oecd_frac_rejected_at_diff": 0.6481,
+        "delta_oecd_minus_non_oecd": -0.0648,
+        "csd_suspect": false
+      },
+      "v2ex_hosw": {
+        "oecd_n_tested": 38,
+        "oecd_frac_rejected_at_diff": 0.7105,
+        "non_oecd_n_tested": 137,
+        "non_oecd_frac_rejected_at_diff": 0.6569,
+        "delta_oecd_minus_non_oecd": 0.0536,
+        "csd_suspect": false
+      },
+      "v2exaphogp": {
+        "oecd_n_tested": 31,
+        "oecd_frac_rejected_at_diff": 0.7097,
+        "non_oecd_n_tested": 87,
+        "non_oecd_frac_rejected_at_diff": 0.4598,
+        "delta_oecd_minus_non_oecd": 0.2499,
+        "csd_suspect": true
+      }
+    }
+  }
+}

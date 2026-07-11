@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generator": "manually authored from T7 phase doc §5 inline JSON",
+  "generated": "2026-05-12",
+  "purpose": "T7 §5 (b) ratified decision — the 4 demeaning-insufficient Class A indicators are EXCLUDED from the headline AUC stratum in the v0.2 Path A evaluator (validate_weight_matrix.py v6). They are reported separately under a 'demeaning-insufficient stratum' sub-section.",
+  "binding_clause": "T8 v6 (qgi-ml `8477d85`) loads this JSON when --rule-v2-evaluation is set; the script filters weights_df via num_to_api mapping before evaluate_weights() runs. v0.2 arms MUST NOT fire under rule_v2_evaluation=True without this file in place.",
+  "exclusion_basis": "amendment A7 / docs/specs/internal/ops/cascade-track/phase-5-v0.2.md §5 decision (b)",
+  "stage_e_pairwise_diagnostic_threshold": 0.25,
+  "rationale_for_option_b_vs_a_vs_c": "Option (a) downweight would smuggle methodology judgment into the rule v2 swing gate (the judgment-call factor of 0.5? 0.25?). Option (c) per-indicator notes buries caveats under the headline verdict. Option (b) Exclude keeps the headline gate clean on the 105 non-demeaning-insufficient indicators and surfaces the 4 separately for cross-reference. Ratified by Tariq + Miriam via T7 PR #81 QA review.",
+  "indicators": [
+    {
+      "id": "FP.CPI.TOTL.ZG",
+      "stage_e_score": 0.66,
+      "rank": 1,
+      "rationale": "highest residual common-factor pairwise correlation after demeaning"
+    },
+    {
+      "id": "NY.GDP.PCAP.CD",
+      "stage_e_score": 0.54,
+      "rank": 2,
+      "rationale": "second-highest residual common-factor pairwise correlation"
+    },
+    {
+      "id": "SH.DYN.MORT",
+      "stage_e_score": 0.36,
+      "rank": 3,
+      "rationale": "above 0.25 demeaning-sufficiency threshold"
+    },
+    {
+      "id": "SP.POP.TOTL",
+      "stage_e_score": 0.31,
+      "rank": 4,
+      "rationale": "above 0.25 demeaning-sufficiency threshold; also OUTLIER_LOG_DIFFERENCE in dscdi_finder dispatch"
+    }
+  ],
+  "provenance": {
+    "charter_path": "docs/specs/internal/ops/cascade-track/phase-5-v0.2-charter.md",
+    "charter_commit_sha": "bcf656c",
+    "charter_section": "§161-167 (amendment A7)",
+    "spec_path": "docs/specs/internal/ops/cascade-track/phase-5-v0.2-spec.md",
+    "spec_commit_sha": "a2f5db4",
+    "spec_section": "§8.3",
+    "phase_doc_path": "docs/specs/internal/ops/cascade-track/phase-5-v0.2.md",
+    "phase_doc_commit_sha": "660e342",
+    "phase_doc_section": "§5 decision (b)",
+    "consumer_script": "qgi-ml/scripts/validate_weight_matrix.py",
+    "consumer_script_version": "v6",
+    "consumer_script_commit_sha": "8477d85",
+    "t6_substrate_audit_path": "qgi-data/reference/audit-v2-demeaned-spotcheck.json",
+    "t6_substrate_audit_commit_sha": "dc657cd",
+    "t6_audit_corroboration": "T6 demeaned-substrate audit confirmed FP.CPI.TOTL.ZG and NY.GDP.PCAP.CD (2 of 4 here) flip I(1)→I(0) under first_diff + demean, indicating demeaning successfully removed the common factor — which reinforces the §5 (b) exclusion decision (these indicators carry diagnostic complexity that should not contaminate the headline stratum)."
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "recipe_id": "terrorist_attack",
+  "evaluation_year": 2021,
+  "computed_at_utc": "2026-05-23T12:14:10.343059+00:00",
+  "design_v1_reference": "docs/specs/internal/ops/ml-track/risk-metric-design-v1.md (3-Reviewer ratified 2026-05-22)",
+  "hard_gates_pass": {
+    "v1_positive_recall": false,
+    "v4_oot_holdout": false
+  },
+  "all_hard_gates_pass": false,
+  "production_graduation_eligible": false,
+  "validations": {
+    "v1": {
+      "name": "validation_1_positive_instance_recall",
+      "n_positive_evaluated": 18,
+      "n_positive_skipped_partial_coverage": 228,
+      "n_non_event_sampled": 1,
+      "median_similarity_positive_at_eventY-1": 49.7351435190331,
+      "median_similarity_non_event": 41.24097249423956,
+      "separation_percentile_points": 8.494171024793545,
+      "hard_gate_threshold": 20,
+      "hard_gate_pass": false,
+      "b1_fix_applied": "QA PR#95 B1: partial-coverage samples explicitly skipped (no weight-renorm inflation)",
+      "m8_r3_publication_anchor": "In the training panel, the median similarity score of countries one year before terrorist_attack events was 49.7/100; the median for non-event countries was 41.2/100. Separation = 8.5 points."
+    },
+    "v2": {
+      "name": "validation_2_xgboost_correlation",
+      "n_matched_pairs": 59,
+      "pearson_correlation": 0.1371515241498254,
+      "spearman_correlation": 0.09908803928446161,
+      "interpretation": "Pearson r = 0.137, Spearman ρ = 0.099. Positive correlation indicates similarity is a defensible proxy for the XGBoost discriminator. Strong (>0.6) is good; moderate (0.3-0.6) is acceptable; weak (<0.3) warrants review."
+    },
+    "v3": {
+      "name": "validation_3_risk_landscape_per_cohort",
+      "evaluation_year": 2021,
+      "cohort_distributions": {
+        "fragile-state": {
+          "n": 10,
+          "median": 45.821590086552185,
+          "mean": 52.186183692462464,
+          "q25": 43.23432103902357,
+          "q75": 55.13072110770341,
+          "max": 83.84599593377978,
+          "min": 30.803676248508527
+        },
+        "mid-tier": {
+          "n": 9,
+          "median": 42.41241136448939,
+          "mean": 42.984644999781295,
+          "q25": 32.42895683268322,
+          "q75": 51.69184658936271,
+          "max": 63.437832207560604,
+          "min": 22.893066247076092
+        },
+        "stable-democracy": {
+          "n": 1,
+          "median": 17.557136109406446,
+          "mean": 17.557136109406446,
+          "q25": 17.557136109406446,
+          "q75": 17.557136109406446,
+          "max": 17.557136109406446,
+          "min": 17.557136109406446
+        },
+        "no-assignment": {
+          "n": 0
+        }
+      },
+      "interpretation": "Per-cohort similarity distributions (Validation 3 per ML/stats synthesis). For domain-coherent risk landscape: fragile-state cohort should show higher median + max similarity to political-violence recipes than stable-democracy. Reporting only — NOT a gate at v0."
+    },
+    "v4": {
+      "name": "validation_4_oot_holdout",
+      "oot_split_year": 2005,
+      "n_holdout_positives": 18,
+      "n_holdout_skipped_partial_coverage": 91,
+      "n_at_or_above_high_threshold": 0,
+      "high_threshold_value": 65,
+      "recall_at_high_threshold": 0.0,
+      "hard_gate_threshold": 0.6,
+      "hard_gate_pass": false,
+      "b1_fix_applied": "QA PR#95 B1: partial-coverage samples explicitly skipped",
+      "b2_fix_applied": "QA PR#95 B2: canonical profile rebuilt from pre-2005 positives only (was previously using all positives including 2005+, which made the OOT 'holdout' in-sample for those events and inflated the gate result optimistically). Genuine OOT.",
+      "interpretation": "OOT holdout: 0/18 = 0.0% of held-out crisis countries had risk score >= 65 (HIGH zone) at event-year-minus-1, scored against a canonical profile built ONLY from pre-2005 positives. Hard gate threshold: 60%. FAIL.",
+      "per_event_details": [
+        {
+          "country": "Afghanistan",
+          "event_year": 2011,
+          "risk_score": 57.372831536281424,
+          "zone": "MODERATE",
+          "high_threshold_pass": false
+        },
+        {
+          "country": "Afghanistan",
+          "event_year": 2015,
+          "risk_score": 53.44503158368088,
+          "zone": "MODERATE",
+          "high_threshold_pass": false
+        },
+        {
+          "country": "Afghanistan",
+          "event_year": 2016,
+          "risk_score": 53.15664259316064,
+          "zone": "MODERATE",
+          "high_threshold_pass": false
+        },
+        {
+          "country": "Afghanistan",
+          "event_year": 2017,
+          "risk_score": 53.348027901864725,
+          "zone": "MODERATE",
+          "high_threshold_pass": false
+        },
+        {
+          "country": "Afghanistan",
+          "event_year": 2021,
+          "risk_score": 53.05850212688701,
+          "zone": "MODERATE",
+          "high_threshold_pass": false
+        },
+        {
+          "country": "The Democratic Republic of the Congo",
+          "event_year": 2014,
+          "risk_score": 25.752354066487413,
+          "zone": "LOW",
+          "high_threshold_pass": false
+        },
+        {
+          "country": "Egypt",
+          "event_year": 2017,
+          "risk_score": 32.32784561381242,
+          "zone": "LOW",
+          "high_threshold_pass": false
+        },
+        {
+          "country": "Kenya",
+          "event_year": 2015,
+          "risk_score": 26.026537985056645,
+          "zone": "LOW",
+          "high_threshold_pass": false
+        },
+        {
+          "country": "Kenya",
+          "event_year": 2019,
+          "risk_score": 28.039927881470454,
+          "zone": "LOW",
+          "high_threshold_pass": false
+        },
+        {
+          "country": "Mozambique",
+          "event_year": 2021,
+          "risk_score": 48.276765571735694,
+          "zone": "MODERATE",
+          "high_threshold_pass": false
+        },
+        {
+          "country": "Nigeria",
+          "event_year": 2014,
+          "risk_score": 27.52363122324072,
+          "zone": "LOW",
+          "high_threshold_pass": false
+        },
+        {
+          "country": "Nigeria",
+          "event_year": 2015,
+          "risk_score": 43.77772876553699,
+          "zone": "MODERATE",
+          "high_threshold_pass": false
+        },
+        {
+          "country": "Pakistan",
+          "event_year": 2014,
+          "risk_score": 58.15548541846107,
+          "zone": "MODERATE",
+          "high_threshold_pass": false
+        },
+        {
+          "country": "Philippines",
+          "event_year": 2017,
+          "risk_score": 25.268642774702133,
+          "zone": "LOW",
+          "high_threshold_pass": false
+        },
+        {
+          "country": "Russia",
+          "event_year": 2014,
+          "risk_score": 27.812056895242115,
+          "zone": "LOW",
+          "high_threshold_pass": false
+        },
+        {
+          "country": "Russia",
+          "event_year": 2015,
+          "risk_score": 29.070459156487406,
+          "zone": "LOW",
+          "high_threshold_pass": false
+        },
+        {
+          "country": "Somalia",
+          "event_year": 2017,
+          "risk_score": 35.61193133860551,
+          "zone": "LOW",
+          "high_threshold_pass": false
+        },
+        {
+          "country": "Thailand",
+          "event_year": 2015,
+          "risk_score": 21.005523624133676,
+          "zone": "LOW",
+          "high_threshold_pass": false
+        }
+      ]
+    }
+  }
+}

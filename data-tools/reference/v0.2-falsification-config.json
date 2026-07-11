@@ -1,0 +1,272 @@
+{
+  "schema_version": 1,
+  "phase": "5",
+  "version": "0.2",
+  "pre_registered": "2026-05-12",
+  "source_of_truth": "docs/specs/internal/ops/cascade-track/phase-5-v0.2-spec.md",
+  "non_amendable_between": [
+    "this commit",
+    "Path A run-completion"
+  ],
+  "amendment_protocol": "Any change requires a new Majles Al Ihsa convening with all 5 seats present (#19 Miriam, #20 Tariq, #10 Roshani, #11 Kwame, #22 Priya). No v0.3 on Path A under ANY outcome.",
+  "rule_v2": {
+    "stratum_definition": {
+      "axis": "n_indicators_used",
+      "operator": ">=",
+      "threshold": 10,
+      "description": "cells (country x event-category) where n_indicators_used >= 10"
+    },
+    "test_statistic": {
+      "name": "mean_auc_a_minus_d",
+      "formula": "mean_auc(arm A) - mean_auc(arm D)",
+      "bootstrap_resamples": 1000
+    },
+    "cardinality_precondition": {
+      "min_cells": 30,
+      "on_breach": "INERT",
+      "binding_clause": "INERT means 'test did not execute on its intended target'. Neither PASS nor FAIL."
+    },
+    "thresholds": {
+      "falsify_below": 0.03,
+      "pass_at_or_above": 0.03,
+      "comparator": "A-D swing on stratum"
+    },
+    "secondary_diagnostic": {
+      "report_full_set_swing": true,
+      "full_set_substitutes_when_inert": false,
+      "description": "Report A-D on full set alongside, but it is not the gate. Do not allow full-set value to substitute when stratum is INERT."
+    },
+    "inert_triggers": [
+      "stratum_cardinality_below_N",
+      "all_4_arms_byte_identical",
+      "bootstrap_nonconvergence_above_10pct_categories"
+    ]
+  },
+  "n_justification": {
+    "value": 30,
+    "authorship_date": "2026-05-12",
+    "derivation_sources": [
+      {
+        "type": "power_calculation",
+        "statement": "Bootstrap-CI on mean AUC is unreliable below ~30 independent units at AUC scales 0.50-0.55. Standard error of difference-of-means at n<30 swallows a 0.03 effect at alpha=0.05 / power=0.80."
+      },
+      {
+        "type": "external_eb_literature_benchmark",
+        "statement": "Partial-pooling shrinkage at 10-12 L1 sectors x 2-3 cells/sector = 20-30 falls at the EB-literature small-sample threshold for hierarchical models."
+      },
+      {
+        "type": "majles_ratification",
+        "statement": "Conventional minimum from peer-reviewable EB methodology; ratified by Miriam (#19) on 2026-05-12.",
+        "ratifier_seat": 19,
+        "ratifier_name": "Miriam Levy-Okafor"
+      }
+    ],
+    "binding_clause": "N is the gate. The gamma-stage sensitivity sweep at {3,5,7,10,15} is a TRANSPARENCY artifact, not a decision artifact -- it documents stratum shape but does NOT shift the gate."
+  },
+  "bayesian_posterior_update_protocol": {
+    "prior": {
+      "value": 0.30,
+      "uncertainty": 0.05,
+      "hypothesis": "cascade methodology carries real signal in the regime it was designed for",
+      "anchor": "post-v0.1a",
+      "rationale": "Meaningful but not modal. Small downward update from 0.35 pre-v0.1a prior, reflecting v0.1a INERT verdict (not a falsification-level update)."
+    },
+    "material_update_threshold": 0.15,
+    "stopping_criterion": {
+      "trigger": "INCONCLUSIVE on non-empty stratum",
+      "consequences": [
+        "cascade methodology direction closes",
+        "proceed to Path B (hierarchical-Bayes redesign) OR ML pivot",
+        "no v0.3 on Path A frequentist track"
+      ]
+    },
+    "operational_requirement": "v0.2 report executive summary MUST state: prior, posterior, magnitude of update, and whether the update is material (>=0.15) -- even if rule v2 returns a clean PASS or FALSIFY."
+  },
+  "inert_canonicalization": {
+    "is_first_class_outcome": true,
+    "distinct_from_pass": true,
+    "distinct_from_fail": true,
+    "auto_decision_rationale_clause": "INERT is neither PASS nor FAIL; cascade does not re-deliberate methodology on an INERT result; cascade fixes the instrumentation and re-runs.",
+    "semantics": "test did not execute on its intended target",
+    "halt_type": "tooling-or-data-readiness halt",
+    "required_fields_when_inert": [
+      "decision",
+      "inert_reason"
+    ]
+  },
+  "exit_criterion_table": {
+    "frozen_at_commit": "this commit (T3 PR)",
+    "non_amendable_between": ["commit", "Path A run-completion"],
+    "single_seed_protection": "Each tier requires 3 conditions to fire. A noisy random-baseline delta or a single category-mean shift will not, by itself, fire HARD-FALSIFY.",
+    "no_v0.3_clause": "No v0.3 on the Path A frequentist track under ANY outcome.",
+    "tiers": [
+      {
+        "name": "HARD-FALSIFY",
+        "conditions_all_must_fire": [
+          "mean_auc_on_stratum < 0.50",
+          "lower_bound_95pct_bootstrap_ci < 0.48",
+          "anchor_battery_evaluable_pass < 4_of_8"
+        ],
+        "typical_a_minus_d_swing": "<0.02",
+        "consequence": "Cascade methodology direction closes PERMANENTLY. No v0.3 path on Path A. ML track absorbs methodology load. Cascade keeps running only as sanity-check baseline for ML.",
+        "tariq_regime": "3 (methodology bottleneck)"
+      },
+      {
+        "name": "SOFT-FALSIFY",
+        "conditions_all_must_fire": [
+          "a_minus_d_swing < 0.03 on pre-registered stratum",
+          "stratum_cardinality >= N (i.e. not INERT)",
+          "random_baseline_delta_negative_at_multi_seed_bootstrap"
+        ],
+        "typical_a_minus_d_swing": "<0.03",
+        "consequence": "Halt; convene Majles. Default next phase: Path B (hierarchical-Bayes redesign). No v0.3 on Path A.",
+        "tariq_regime": "3 boundary"
+      },
+      {
+        "name": "PARTIAL",
+        "conditions_all_must_fire": [
+          "a_minus_d_swing in [0.02, 0.05]",
+          "mean_auc in [0.50, 0.55]",
+          "anchor_battery_mixed"
+        ],
+        "typical_a_minus_d_swing": "0.02-0.05",
+        "consequence": "Methodology has weaknesses worth documenting but is not dead. Path B (hierarchical-Bayes redesign) becomes next phase, not v0.3 of the same Path A design.",
+        "tariq_regime": "2 (partial)"
+      },
+      {
+        "name": "PASS",
+        "conditions_all_must_fire": [
+          "a_minus_d_swing >= 0.05 on pre-registered stratum",
+          "mean_auc >= 0.55",
+          "anchor_battery >= 6_of_8"
+        ],
+        "typical_a_minus_d_swing": ">=0.05",
+        "consequence": "Methodology vindicated. Phase 6 begins on the now-validated EB framework.",
+        "tariq_regime": "1 (substrate fixed it)"
+      }
+    ]
+  },
+  "v0.1a_preservation": {
+    "required_in_v0.2_report": true,
+    "v0.1a_full_set_a_minus_d": 0.0077,
+    "v0.1a_classification_under_rule_v2": "INERT (empty >=10/10 stratum)",
+    "memory_hole_forbidden": true,
+    "enforcement": "Reviewer checklist on the v0.2 report PR"
+  },
+  "architectural_appendix_requirement": {
+    "amendment": "A5 (Priya, the bridge)",
+    "required_path": "docs/specs/internal/ops/cascade-track/phase-5-v0.2-path-b-architecture.md",
+    "must_ship_with": "the same commit hash that defines the gamma-first run (Path A v0.2 spec PR / T6)",
+    "is_blocking": "T6 (Path A v0.2 spec PR) is BLOCKED if appendix does not exist at PR-open time",
+    "deliverable_contents": [
+      "full partial-pooling model statement",
+      "indicator-nested-in-sector and event-category-nested-in-sector hyperprior structure",
+      "country random-intercept specification",
+      "Stan/PyMC reference implementation outline (spec-level, not running code)",
+      "explicit written rationale for NOT running it on the Path A track"
+    ],
+    "tracking_ticket": "AminAlAit/qgi-aws-tf#674"
+  },
+  "tariq_substrate_preconditions": {
+    "amendment_label_fidelity_note": "Labels mirror the charter's amendment table verbatim (charter sections 144-171 + 207). The spot-check audit is Tariq pre-condition #1 and carries NO amendment letter in the charter; A6 = canonical-length re-derivation, A7 = 4-Class-A flag handling, A8 = pre-CIPS-validation label.",
+    "spot_check_audit": {
+      "amendment": null,
+      "tariq_precondition_number": 1,
+      "output_path": "qgi-data/reference/audit-v2-demeaned-spotcheck.json",
+      "indicators": {
+        "demeaning_insufficient_class_a": [
+          "FP.CPI.TOTL.ZG",
+          "NY.GDP.PCAP.CD",
+          "SH.DYN.MORT",
+          "SP.POP.TOTL"
+        ],
+        "v_dem_low_survival_random_5": [
+          "v2elintmon",
+          "v2x_regime",
+          "v2x_gender",
+          "v2pepwrgen",
+          "v2x_partip"
+        ]
+      },
+      "on_classification_flip": "v0.2 disposition file surgically updated before arms fire"
+    },
+    "canonical_length_re_derivation": {
+      "amendment": "A6",
+      "output_path": "qgi-data/reference/v0.2-canonical-length.json",
+      "binding_clause": "canonical_length is fundamentally an autocorrelation property of the indicator series. v0.2 MUST compute it on the TRANSFORMED series (first-differenced for I(1), log-differenced for SP.POP.TOTL, raw for NY.GDP.MKTP.KD.ZG), NOT on the raw indicator panel as v0.1a did. v0.2 wiring code MUST be reviewed and asserted to compute canonical-length on the transformed series before any arm fires."
+    },
+    "four_class_a_flag_handling": {
+      "amendment": "A7",
+      "applies_to": [
+        "FP.CPI.TOTL.ZG",
+        "NY.GDP.PCAP.CD",
+        "SH.DYN.MORT",
+        "SP.POP.TOTL"
+      ],
+      "stage_e_pairwise_diagnostic_scores": {
+        "FP.CPI.TOTL.ZG": 0.66,
+        "NY.GDP.PCAP.CD": 0.54,
+        "SH.DYN.MORT": 0.36,
+        "SP.POP.TOTL": 0.31
+      },
+      "handling_must_be_one_of": [
+        {
+          "option": "a",
+          "description": "Down-weight at scoring time",
+          "commit_requirement": "downweight factor + justification committed to git before gamma"
+        },
+        {
+          "option": "b",
+          "description": "Exclude from headline AUC stratum",
+          "commit_requirement": "eligibility rule committed to git before gamma"
+        },
+        {
+          "option": "c",
+          "description": "Per-indicator architecture notes",
+          "commit_requirement": "JSON note structure + content committed to git before gamma"
+        }
+      ],
+      "decided_before_arms_fire": true
+    },
+    "pre_cips_validation_label": {
+      "amendment": "A8",
+      "label": "pre-CIPS-validation",
+      "is_non_strippable": true,
+      "until_date": "2026-06-04",
+      "semantics": "demeaning is the wrong tool for these 4 indicators; awaiting CIPS audit. Concurrent-remediation per CSD reconvene Step 3 governs any retroactive substrate update.",
+      "applies_to_v0.2_outputs": true
+    }
+  },
+  "validation_script_contract": {
+    "script": "qgi-ml/scripts/validate_weight_matrix.py",
+    "version_when_pre_registered": "v5",
+    "binding_clause": "The v6 validation script (T6 deliverable) MUST read its threshold, stratum, cardinality floor, and INERT predicates from this JSON. No hardcoded numbers that override this config. Enforced via reviewer checklist on T6.",
+    "config_fields_consumed": [
+      "rule_v2.stratum_definition.threshold",
+      "rule_v2.test_statistic.bootstrap_resamples",
+      "rule_v2.cardinality_precondition.min_cells",
+      "rule_v2.thresholds.falsify_below",
+      "rule_v2.inert_triggers",
+      "exit_criterion_table.tiers"
+    ]
+  },
+  "provenance": {
+    "spec_doc_path": "docs/specs/internal/ops/cascade-track/phase-5-v0.2-spec.md",
+    "spec_doc_commit_sha_pre_merge": "4a73618",
+    "spec_doc_commit_sha": "a2f5db4",
+    "charter_path": "docs/specs/internal/ops/cascade-track/phase-5-v0.2-charter.md",
+    "charter_commit_sha": "bcf656c",
+    "t1_signoff_date": "2026-05-12",
+    "t1_signoff_vote": "5-of-5 PROCEED (Priya with reservation via A5 bridge)",
+    "t1_pr": "AminAlAit/docs-specs#77",
+    "t3_docs_pr": "AminAlAit/docs-specs (branch: feat/2026-05-12-cascade-opus-T3-v0.2-prereg)",
+    "t3_data_pr": "AminAlAit/qgi-data (this PR)",
+    "majles_seats_present": [
+      {"seat": 19, "name": "Miriam Levy-Okafor", "role": "Stats 5 / EB"},
+      {"seat": 20, "name": "Tariq Belkacem-Schreiner", "role": "Econometrics 1"},
+      {"seat": 10, "name": "Roshani Chatterjee-Voss", "role": "Stats 1 / Bayesian-causal"},
+      {"seat": 11, "name": "Kwame Adjei-Wojcik", "role": "ML 1 / production / pre-reg"},
+      {"seat": 22, "name": "Priya Venkataraman-Szabo", "role": "Stats 6 / heterogeneity"}
+    ]
+  }
+}

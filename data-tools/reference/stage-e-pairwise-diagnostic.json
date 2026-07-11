@@ -1,0 +1,998 @@
+{
+  "schema_version": 1,
+  "generator": "qgi-pipeline/batch/dscdi-finder/dscdi_finder.py",
+  "threshold_demeaning_insufficient": 0.25,
+  "indicators": {
+    "AG.PRD.FOOD.XD": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 193,
+      "mean_abs_pairwise_corr": 0.131663,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "BM.KLT.DINV.WD.GD.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 174,
+      "mean_abs_pairwise_corr": 0.185138,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "BM.TRF.PWKR.CD.DT": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 201,
+      "mean_abs_pairwise_corr": 0.165845,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "BN.CAB.XOKA.GD.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 185,
+      "mean_abs_pairwise_corr": 0.193638,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "BX.KLT.DINV.WD.GD.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 195,
+      "mean_abs_pairwise_corr": 0.153491,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "CC.EST": {
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 202,
+      "mean_abs_pairwise_corr": 0.196902,
+      "demeaning_applied": true,
+      "demeaning_insufficient": false
+    },
+    "DT.DOD.DECT.GN.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 117,
+      "mean_abs_pairwise_corr": 0.170858,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "DT.TDS.DECT.EX.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 113,
+      "mean_abs_pairwise_corr": 0.158531,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "EG.ELC.ACCS.RU.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "ambiguous",
+      "n_countries": 203,
+      "mean_abs_pairwise_corr": 0.177796,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "EG.ELC.ACCS.UR.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "ambiguous",
+      "n_countries": 211,
+      "mean_abs_pairwise_corr": 0.182852,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "EG.IMP.CONS.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 137,
+      "mean_abs_pairwise_corr": 0.159462,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "EN.GHG.CO2.PC.CE.AR5": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 203,
+      "mean_abs_pairwise_corr": 0.131298,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "FA-01": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "ambiguous",
+      "n_countries": 163,
+      "mean_abs_pairwise_corr": 0.194026,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "FA-02": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "ambiguous",
+      "n_countries": 133,
+      "mean_abs_pairwise_corr": 0.199555,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "FA-03": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "ambiguous",
+      "n_countries": 157,
+      "mean_abs_pairwise_corr": 0.223762,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "FA-04": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "ambiguous",
+      "n_countries": 103,
+      "mean_abs_pairwise_corr": 0.192317,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "FA-05": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "ambiguous",
+      "n_countries": 151,
+      "mean_abs_pairwise_corr": 0.192078,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "FB.AST.NPER.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "ambiguous",
+      "n_countries": 108,
+      "mean_abs_pairwise_corr": 0.271923,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "FI.RES.TOTL.CD": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "ambiguous",
+      "n_countries": 176,
+      "mean_abs_pairwise_corr": 0.215264,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "FI.RES.TOTL.MO": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 168,
+      "mean_abs_pairwise_corr": 0.269024,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "FM.LBL.BMNY.GD.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 163,
+      "mean_abs_pairwise_corr": 0.186208,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "FP.CPI.TOTL.ZG": {
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 185,
+      "mean_abs_pairwise_corr": 0.657615,
+      "demeaning_applied": true,
+      "demeaning_insufficient": true
+    },
+    "FR.INR.LEND": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 127,
+      "mean_abs_pairwise_corr": 0.209472,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "GC.DOD.TOTL.GD.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 47,
+      "mean_abs_pairwise_corr": 0.27591,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "GC.REV.XGRT.GD.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 133,
+      "mean_abs_pairwise_corr": 0.19838,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "GC.TAX.TOTL.GD.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 133,
+      "mean_abs_pairwise_corr": 0.20288,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "GC.XPN.TOTL.GD.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 131,
+      "mean_abs_pairwise_corr": 0.270739,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "GE.EST": {
+      "indicator_class": "B",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 202,
+      "mean_abs_pairwise_corr": 0.194249,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "IT.CEL.SETS.P2": {
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "audit_classification": "ambiguous",
+      "n_countries": 211,
+      "mean_abs_pairwise_corr": 0.221486,
+      "demeaning_applied": true,
+      "demeaning_insufficient": false
+    },
+    "IT.NET.USER.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "ambiguous",
+      "n_countries": 201,
+      "mean_abs_pairwise_corr": 0.267528,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "MS.MIL.MPRT.KD": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 129,
+      "mean_abs_pairwise_corr": 0.177838,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "MS.MIL.TOTL.TF.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 164,
+      "mean_abs_pairwise_corr": 0.261523,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "MS.MIL.XPND.GD.ZS": {
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 158,
+      "mean_abs_pairwise_corr": 0.241455,
+      "demeaning_applied": true,
+      "demeaning_insufficient": false
+    },
+    "MS.MIL.XPRT.KD": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 45,
+      "mean_abs_pairwise_corr": 0.195108,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "NE.CON.GOVT.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.195369,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "NE.CON.PRVT.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 178,
+      "mean_abs_pairwise_corr": 0.168842,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "NE.EXP.GNFS.CD": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "ambiguous",
+      "n_countries": 180,
+      "mean_abs_pairwise_corr": 0.467803,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "NE.EXP.GNFS.ZS": {
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 179,
+      "mean_abs_pairwise_corr": 0.183695,
+      "demeaning_applied": true,
+      "demeaning_insufficient": false
+    },
+    "NE.GDI.TOTL.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 172,
+      "mean_abs_pairwise_corr": 0.169374,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "NE.IMP.GNFS.CD": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "ambiguous",
+      "n_countries": 180,
+      "mean_abs_pairwise_corr": 0.46863,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "NE.IMP.GNFS.ZS": {
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 179,
+      "mean_abs_pairwise_corr": 0.173311,
+      "demeaning_applied": true,
+      "demeaning_insufficient": false
+    },
+    "NV.AGR.TOTL.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 197,
+      "mean_abs_pairwise_corr": 0.172089,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "NV.IND.MANF.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 191,
+      "mean_abs_pairwise_corr": 0.166842,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "NV.IND.TOTL.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 200,
+      "mean_abs_pairwise_corr": 0.179488,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "NV.SRV.TOTL.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 197,
+      "mean_abs_pairwise_corr": 0.18323,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "NY.GDP.DEFL.KD.ZG": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 209,
+      "mean_abs_pairwise_corr": 0.163016,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "NY.GDP.MKTP.CD": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "ambiguous",
+      "n_countries": 210,
+      "mean_abs_pairwise_corr": 0.357589,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "NY.GDP.MKTP.KD": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "ambiguous",
+      "n_countries": 207,
+      "mean_abs_pairwise_corr": 0.312757,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "NY.GDP.MKTP.KD.ZG": {
+      "indicator_class": "A",
+      "transform": "pass_through",
+      "audit_classification": "I(0)",
+      "n_countries": 209,
+      "mean_abs_pairwise_corr": 0.211313,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "NY.GDP.PCAP.CD": {
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 210,
+      "mean_abs_pairwise_corr": 0.535854,
+      "demeaning_applied": true,
+      "demeaning_insufficient": true
+    },
+    "NY.GNP.PCAP.CD": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 201,
+      "mean_abs_pairwise_corr": 0.350061,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "PV.EST": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 204,
+      "mean_abs_pairwise_corr": 0.208737,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "RL.EST": {
+      "indicator_class": "B",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 204,
+      "mean_abs_pairwise_corr": 0.20521,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "RQ.EST": {
+      "indicator_class": "B",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 202,
+      "mean_abs_pairwise_corr": 0.208734,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "SE.PRM.ENRR": {
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 192,
+      "mean_abs_pairwise_corr": 0.192327,
+      "demeaning_applied": true,
+      "demeaning_insufficient": false
+    },
+    "SH.DYN.MORT": {
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "audit_classification": "ambiguous",
+      "n_countries": 195,
+      "mean_abs_pairwise_corr": 0.357026,
+      "demeaning_applied": true,
+      "demeaning_insufficient": true
+    },
+    "SI.POV.GINI": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 63,
+      "mean_abs_pairwise_corr": 0.204745,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "SL.EMP.TOTL.SP.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 186,
+      "mean_abs_pairwise_corr": 0.249889,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "SL.TLF.CACT.FE.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "ambiguous",
+      "n_countries": 186,
+      "mean_abs_pairwise_corr": 0.213744,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "SL.UEM.1524.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 186,
+      "mean_abs_pairwise_corr": 0.213102,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "SL.UEM.TOTL.ZS": {
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 186,
+      "mean_abs_pairwise_corr": 0.211375,
+      "demeaning_applied": true,
+      "demeaning_insufficient": false
+    },
+    "SM.POP.NETM": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 215,
+      "mean_abs_pairwise_corr": 0.111777,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "SM.POP.RHCR.EO": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 186,
+      "mean_abs_pairwise_corr": 0.174113,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "SP.DYN.LE00.IN": {
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 215,
+      "mean_abs_pairwise_corr": 0.177336,
+      "demeaning_applied": true,
+      "demeaning_insufficient": false
+    },
+    "SP.DYN.TFRT.IN": {
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "audit_classification": "ambiguous",
+      "n_countries": 215,
+      "mean_abs_pairwise_corr": 0.22972,
+      "demeaning_applied": true,
+      "demeaning_insufficient": false
+    },
+    "SP.POP.TOTL": {
+      "indicator_class": "A",
+      "transform": "log_diff",
+      "audit_classification": "I(2)_or_higher",
+      "n_countries": 215,
+      "mean_abs_pairwise_corr": 0.306391,
+      "demeaning_applied": true,
+      "demeaning_insufficient": true
+    },
+    "TX.VAL.TECH.MF.ZS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "ambiguous",
+      "n_countries": 127,
+      "mean_abs_pairwise_corr": 0.219059,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "VA.EST": {
+      "indicator_class": "B",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 202,
+      "mean_abs_pairwise_corr": 0.232109,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "VC.BTL.DETH": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "ambiguous",
+      "n_countries": 32,
+      "mean_abs_pairwise_corr": 0.227348,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "VC.IDP.NWDS": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "ambiguous",
+      "n_countries": 41,
+      "mean_abs_pairwise_corr": 0.245648,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2cacamps": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.109252,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2clkill": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.086872,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2cltort": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.095501,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2cseeorgs": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.094496,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2csprtcpt": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.09042,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2csreprss": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.098299,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2elintmon": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 0,
+      "mean_abs_pairwise_corr": 0.0,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2ex_hosw": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "ambiguous",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.058661,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2exaphogp": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "ambiguous",
+      "n_countries": 118,
+      "mean_abs_pairwise_corr": 0.243685,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2excrptps": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.083,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2exl_legitlead": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.103301,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2exremhog": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 134,
+      "mean_abs_pairwise_corr": 0.122853,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2jureform": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.093623,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2lgbicam": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.049399,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2lgqstexp": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.090054,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2mecenefm": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.097809,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2pepwrgen": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.101067,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2pepwrort": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.115324,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2pepwrses": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.087997,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2pepwrsoc": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.085397,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2psprlnks": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.087408,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2stfisccap": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.076989,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2svdomaut": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.074953,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2x_clphy": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.089805,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2x_clpol": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.11438,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2x_clpriv": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.101999,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2x_corr": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.094297,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2x_freexp_altinf": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.107468,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2x_gender": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.109934,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2x_jucon": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.091789,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2x_libdem": {
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.129063,
+      "demeaning_applied": true,
+      "demeaning_insufficient": false
+    },
+    "v2x_neopat": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.094643,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2x_partip": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.095392,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2x_polyarchy": {
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.113657,
+      "demeaning_applied": true,
+      "demeaning_insufficient": false
+    },
+    "v2x_regime": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.054531,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2x_rule": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.093111,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2xeg_eqprotec": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.091737,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2xel_frefair": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.080473,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    },
+    "v2xlg_legcon": {
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "audit_classification": "I(1)",
+      "n_countries": 175,
+      "mean_abs_pairwise_corr": 0.099459,
+      "demeaning_applied": false,
+      "demeaning_insufficient": false
+    }
+  },
+  "summary": {
+    "n_total": 109,
+    "n_class_A": 16,
+    "n_class_B": 4,
+    "n_class_C": 89,
+    "n_demeaning_insufficient": 4
+  },
+  "stage": "E",
+  "wall_time_seconds": 18.1,
+  "failed_indicators": []
+}

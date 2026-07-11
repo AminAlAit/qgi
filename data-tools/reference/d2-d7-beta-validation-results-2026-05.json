@@ -1,0 +1,4819 @@
+{
+  "components": {
+    "anchor_battery": {
+      "active": [
+        {
+          "case_id": 2,
+          "country": "Iceland",
+          "country_prob": 0.0002254460772479361,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.16796875,
+          "recipe": "civil_war_and_insurgency",
+          "status": "PASS"
+        },
+        {
+          "case_id": 3,
+          "country": "Norway",
+          "reason": "sentinel case requires Layer-1 recipe lookup; orchestrator wires this in Stage 1",
+          "recipe_sentinel": "any_conflict_category",
+          "resolves_to_layer1": "B",
+          "status": "DEFERRED_TO_STAGE_1"
+        },
+        {
+          "case_id": 5,
+          "country": "Sri Lanka",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "single_row",
+          "expected_rank_band": [
+            0.5,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.0,
+          "recipe": "economic_recession",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 6,
+          "country": "Venezuela",
+          "expected_rank_volatility_max": 0.1,
+          "reason": "rank-stability test requires multi-version comparison; Stage 1 implements when prior validation reports are available",
+          "recipe": "economic_recession",
+          "status": "NOT_YET_IMPLEMENTED"
+        },
+        {
+          "case_id": 7,
+          "country": "Switzerland",
+          "reason": "sentinel case requires Layer-1 recipe lookup; orchestrator wires this in Stage 1",
+          "recipe_sentinel": "any_conflict_category",
+          "resolves_to_layer1": "B",
+          "status": "DEFERRED_TO_STAGE_1"
+        },
+        {
+          "case_id": 8,
+          "country": "Yemen",
+          "reason": "sentinel case requires Layer-1 recipe lookup; orchestrator wires this in Stage 1",
+          "recipe_sentinel": "any_3_plus_conflict_categories",
+          "resolves_to_layer1": "B",
+          "status": "DEFERRED_TO_STAGE_1"
+        },
+        {
+          "case_id": 9,
+          "country": "Ukraine",
+          "country_prob": 1.2950265156228847e-135,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.85,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.765625,
+          "recipe": "foreign_intervention",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 10,
+          "country": "Sudan",
+          "country_prob": 0.05270350256629616,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.9895833333333334,
+          "recipe": "civil_war_and_insurgency",
+          "status": "PASS"
+        },
+        {
+          "case_id": 11,
+          "country": "Myanmar",
+          "country_prob": 0.018123474007362275,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.8229166666666666,
+          "recipe": "civil_war_and_insurgency",
+          "status": "PASS"
+        },
+        {
+          "case_id": 12,
+          "country": "Lebanon",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.6,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.0,
+          "recipe": "economic_recession",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 13,
+          "country": "Iran",
+          "country_prob": 0.0390794057319952,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.8333333333333334,
+          "recipe": "mass_protest",
+          "status": "PASS"
+        },
+        {
+          "case_id": 14,
+          "country": "Bangladesh",
+          "country_prob": 0.01898384647909274,
+          "country_prob_aggregation": "single_row",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.9479166666666666,
+          "recipe": "mass_protest",
+          "status": "PASS"
+        },
+        {
+          "case_id": 15,
+          "country": "Nigeria",
+          "country_prob": 9.991598125199895e-29,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.6,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.890625,
+          "recipe": "terrorist_attack",
+          "status": "PASS"
+        },
+        {
+          "case_id": 16,
+          "country": "Israel",
+          "country_prob": 4.944911627369985e-91,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.9583333333333334,
+          "recipe": "foreign_intervention",
+          "status": "PASS"
+        },
+        {
+          "case_id": 17,
+          "country": "Yemen",
+          "country_prob": 0.05284400098025799,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.5572916666666666,
+          "recipe": "humanitarian_crisis",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 18,
+          "country": "Argentina",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.5,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.0,
+          "recipe": "economic_recession",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 19,
+          "country": "Denmark",
+          "country_prob": 0.0008484914151701031,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.47265625,
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 20,
+          "country": "Japan",
+          "country_prob": 0.003193004545339378,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.6627604166666666,
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 21,
+          "country": "Costa Rica",
+          "country_prob": 0.001707324569991217,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.58203125,
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 22,
+          "country": "Singapore",
+          "country_prob": 0.02437296916348965,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.8854166666666666,
+          "recipe": "mass_protest",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 23,
+          "country": "New Zealand",
+          "country_prob": 4.3315670731248e-80,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.609375,
+          "recipe": "terrorist_attack",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 24,
+          "country": "Uruguay",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.0,
+          "recipe": "political_repression",
+          "status": "PASS"
+        },
+        {
+          "case_id": 25,
+          "country": "Luxembourg",
+          "country_prob": 0.0006729520129323085,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.25
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.4309895833333333,
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 26,
+          "country": "Botswana",
+          "country_prob": 0.0012154929397382695,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.5442708333333334,
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 27,
+          "country": "Russia",
+          "country_prob": 0.30314395297318697,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.85,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.984375,
+          "recipe": "sanctions_and_arms_embargo",
+          "status": "PASS"
+        },
+        {
+          "case_id": 28,
+          "country": "Russia",
+          "country_prob": 1.135560036705204e-20,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.85,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.9947916666666666,
+          "recipe": "foreign_intervention",
+          "status": "PASS"
+        },
+        {
+          "case_id": 29,
+          "country": "China",
+          "country_prob": 0.035468136959779524,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.5,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.984375,
+          "recipe": "territorial_disputes",
+          "status": "PASS"
+        },
+        {
+          "case_id": 30,
+          "country": "Belarus",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.6,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.0,
+          "recipe": "political_repression",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 31,
+          "country": "Egypt",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.5,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.0,
+          "recipe": "economic_recession",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 32,
+          "country": "Ghana",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.6,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.0,
+          "recipe": "economic_recession",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 33,
+          "country": "Pakistan",
+          "country_prob": 4.769094939247316e-174,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.5,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.921875,
+          "recipe": "economic_recession",
+          "status": "PASS"
+        },
+        {
+          "case_id": 34,
+          "country": "Turkiye",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.5,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.0,
+          "recipe": "economic_recession",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 35,
+          "country": "Haiti",
+          "country_prob": 0.05244053527712822,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.5520833333333334,
+          "recipe": "humanitarian_crisis",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 36,
+          "country": "Burkina Faso",
+          "country_prob": 4.371757898245745e-49,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.6,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.625,
+          "recipe": "terrorist_attack",
+          "status": "PASS"
+        },
+        {
+          "case_id": 37,
+          "country": "Turkiye",
+          "country_prob": 1.892494068569482e-297,
+          "country_prob_aggregation": "single_row",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.8333333333333334,
+          "recipe": "natural_disaster",
+          "status": "PASS"
+        },
+        {
+          "case_id": 38,
+          "country": "El Salvador",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.5,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.0,
+          "recipe": "political_repression",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 39,
+          "country": "Norway",
+          "country_prob": 0.0011989384880315753,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.25
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.5416666666666666,
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 40,
+          "country": "Switzerland",
+          "country_prob": 0.004395761005782421,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.25
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.7018229166666666,
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 41,
+          "country": "Sweden",
+          "country_prob": 0.0012090819475227656,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.5416666666666666,
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 42,
+          "country": "Finland",
+          "country_prob": 0.0028116826933844035,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.6536458333333334,
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 43,
+          "country": "Netherlands",
+          "country_prob": 0.004087748600199482,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.6979166666666666,
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 44,
+          "country": "Australia",
+          "country_prob": 1.1857534938912166e-70,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.6861979166666666,
+          "recipe": "terrorist_attack",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 45,
+          "country": "Canada",
+          "country_prob": 7.173688120610757e-45,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.8932291666666666,
+          "recipe": "terrorist_attack",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 46,
+          "country": "South Korea",
+          "country_prob": 0.008400320283984464,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.76171875,
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 47,
+          "country": "Estonia",
+          "country_prob": 0.0011652846170785171,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.5364583333333334,
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 48,
+          "country": "Mauritius",
+          "country_prob": 0.0006503276034141641,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.421875,
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 49,
+          "country": "Bhutan",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.0,
+          "recipe": "political_repression",
+          "status": "PASS"
+        },
+        {
+          "case_id": 50,
+          "country": "Chile",
+          "country_prob": 0.006925423678382323,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.7434895833333334,
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 51,
+          "country": "Sri Lanka",
+          "country_prob": 0.17675117403268814,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.9010416666666666,
+          "recipe": "humanitarian_crisis",
+          "status": "PASS"
+        },
+        {
+          "case_id": 52,
+          "country": "Pakistan",
+          "country_prob": 4.4744156875697984e-176,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.7395833333333334,
+          "recipe": "natural_disaster",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 53,
+          "country": "Niger",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.0,
+          "recipe": "executive_power_consolidation",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 54,
+          "country": "Gabon",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.0,
+          "recipe": "executive_power_consolidation",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 55,
+          "country": "Tunisia",
+          "country_prob": 5.998104666149334e-256,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.5729166666666666,
+          "recipe": "executive_power_consolidation",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 56,
+          "country": "Venezuela",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.0,
+          "recipe": "political_repression",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 57,
+          "country": "Cuba",
+          "country_prob": 0.07873755227774382,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.5,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.7395833333333334,
+          "recipe": "humanitarian_crisis",
+          "status": "PASS"
+        },
+        {
+          "case_id": 58,
+          "country": "Hungary",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.6,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.0,
+          "recipe": "political_repression",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 59,
+          "country": "China",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.0,
+          "recipe": "political_repression",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 60,
+          "country": "North Korea",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.9,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.0,
+          "recipe": "political_repression",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 61,
+          "country": "Saudi Arabia",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.0,
+          "recipe": "political_repression",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 62,
+          "country": "Mexico",
+          "country_prob": 1.449445018067309e-31,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.6,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.84375,
+          "recipe": "terrorist_attack",
+          "status": "PASS"
+        },
+        {
+          "case_id": 63,
+          "country": "Somalia",
+          "country_prob": 1.011944579453983e-46,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.65625,
+          "recipe": "terrorist_attack",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 64,
+          "country": "Mali",
+          "country_prob": 0.01563695685724242,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.7708333333333334,
+          "recipe": "civil_war_and_insurgency",
+          "status": "PASS"
+        },
+        {
+          "case_id": 65,
+          "country": "Democratic Republic of the Congo",
+          "reason": "no predictions for country 'democratic_republic_of_the_congo' (slug) in this recipe (or window)",
+          "recipe": "civil_war_and_insurgency",
+          "status": "SKIPPED"
+        },
+        {
+          "case_id": 66,
+          "country": "Mozambique",
+          "country_prob": 0.0009073745498786784,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.5,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.24479166666666666,
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 67,
+          "country": "Ethiopia",
+          "country_prob": 0.05106062386529876,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.90625,
+          "recipe": "civil_war_and_insurgency",
+          "status": "PASS"
+        },
+        {
+          "case_id": 68,
+          "country": "Myanmar",
+          "country_prob": 0.07869669049978256,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.734375,
+          "recipe": "humanitarian_crisis",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 69,
+          "country": "Afghanistan",
+          "country_prob": 0.097335459664464,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.9,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.8385416666666666,
+          "recipe": "humanitarian_crisis",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 70,
+          "country": "Russia",
+          "country_prob": 2.0348346915109898e-76,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.9947916666666666,
+          "recipe": "political_repression",
+          "status": "PASS"
+        },
+        {
+          "case_id": 71,
+          "country": "Egypt",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.0,
+          "recipe": "political_repression",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 72,
+          "country": "Turkiye",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.6,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.0,
+          "recipe": "political_repression",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 73,
+          "country": "Yemen",
+          "country_prob": 0.014831383100512994,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.7552083333333334,
+          "recipe": "civil_war_and_insurgency",
+          "status": "PASS"
+        },
+        {
+          "case_id": 74,
+          "country": "Israel",
+          "country_prob": 0.0878754872828722,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.8333333333333334,
+          "recipe": "humanitarian_crisis",
+          "status": "PASS"
+        },
+        {
+          "case_id": 75,
+          "country": "Lebanon",
+          "country_prob": 0.09203005395829678,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.75,
+            1.0
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.8072916666666666,
+          "recipe": "humanitarian_crisis",
+          "status": "PASS"
+        },
+        {
+          "case_id": 76,
+          "country": "Germany",
+          "country_prob": 1.8116496087431032e-208,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.9114583333333334,
+          "recipe": "economic_recession",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 77,
+          "country": "Singapore",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.0,
+          "recipe": "economic_recession",
+          "status": "PASS"
+        },
+        {
+          "case_id": 78,
+          "country": "Switzerland",
+          "country_prob": 2.2239718541270536e-163,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.25
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.6666666666666666,
+          "recipe": "foreign_intervention",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 79,
+          "country": "Sweden",
+          "country_prob": 9.348881470545867e-193,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.5052083333333334,
+          "recipe": "foreign_intervention",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 80,
+          "country": "Iceland",
+          "country_prob": 7.223837466593729e-262,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.25
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.15104166666666666,
+          "recipe": "foreign_intervention",
+          "status": "PASS"
+        },
+        {
+          "case_id": 81,
+          "country": "Norway",
+          "country_prob": 0.050718377344310284,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.5260416666666666,
+          "recipe": "humanitarian_crisis",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 82,
+          "country": "Japan",
+          "country_prob": 0.09428094048053026,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.8177083333333334,
+          "recipe": "humanitarian_crisis",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 83,
+          "country": "New Zealand",
+          "country_prob": 0.055074517615139484,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.5104166666666666,
+          "recipe": "sanctions_and_arms_embargo",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 84,
+          "country": "Australia",
+          "country_prob": 0.03968634083867073,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.3645833333333333,
+          "recipe": "sanctions_and_arms_embargo",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 85,
+          "country": "Canada",
+          "country_prob": 0.13767738081514835,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.8541666666666666,
+          "recipe": "sanctions_and_arms_embargo",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 86,
+          "country": "Costa Rica",
+          "country_prob": 0.000577059095787871,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.6822916666666666,
+          "recipe": "territorial_disputes",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 87,
+          "country": "Iceland",
+          "country_prob": 7.328199661757929e-06,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.25
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.2864583333333333,
+          "recipe": "territorial_disputes",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 88,
+          "country": "Uruguay",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.0,
+          "recipe": "natural_disaster",
+          "status": "PASS"
+        },
+        {
+          "case_id": 89,
+          "country": "Ireland",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.0,
+          "recipe": "natural_disaster",
+          "status": "PASS"
+        },
+        {
+          "case_id": 90,
+          "country": "Finland",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 192,
+          "observed_percentile": 0.0,
+          "recipe": "natural_disaster",
+          "status": "PASS"
+        },
+        {
+          "case_id": 91,
+          "country": "Malta",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.0,
+          "recipe": "political_repression",
+          "status": "PASS"
+        },
+        {
+          "case_id": 92,
+          "country": "Cyprus",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.0,
+          "recipe": "political_repression",
+          "status": "PASS"
+        },
+        {
+          "case_id": 93,
+          "country": "Slovenia",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.0,
+          "recipe": "political_repression",
+          "status": "PASS"
+        },
+        {
+          "case_id": 94,
+          "country": "Portugal",
+          "country_prob": 0.0,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.25
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.0,
+          "recipe": "political_repression",
+          "status": "PASS"
+        },
+        {
+          "case_id": 95,
+          "country": "Lithuania",
+          "country_prob": 0.0024864498455077775,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.6380208333333334,
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 96,
+          "country": "Latvia",
+          "country_prob": 0.002824118918972566,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.6536458333333334,
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 97,
+          "country": "Slovakia",
+          "country_prob": 0.0029067002982455653,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.6549479166666666,
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 98,
+          "country": "Czech Republic",
+          "reason": "no predictions for country 'czech_republic' (slug) in this recipe (or window)",
+          "recipe": "civil_war_and_insurgency",
+          "status": "SKIPPED"
+        },
+        {
+          "case_id": 99,
+          "country": "Spain",
+          "country_prob": 0.026432253360117872,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.89453125,
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL"
+        },
+        {
+          "case_id": 100,
+          "country": "Italy",
+          "country_prob": 0.02517631474196584,
+          "country_prob_aggregation": "mean",
+          "expected_rank_band": [
+            0.0,
+            0.3
+          ],
+          "n_total": 768,
+          "observed_percentile": 0.890625,
+          "recipe": "civil_war_and_insurgency",
+          "status": "FAIL"
+        }
+      ],
+      "deferred": [
+        {
+          "case_id": 1,
+          "country": "Malta",
+          "reason": "Recipe `military_coup` is HARD-GATED in 2026-05-04 mandate (n_positive_verified=3 < 8). Validation script CANNOT score this case in Stage 1/2. Re-activates on recipe re-entry (when verification rate raises n+v above gate, OR on new mandate cycle).",
+          "recipe": "military_coup",
+          "status": "DEFERRED_BY_HARD_GATE"
+        },
+        {
+          "case_id": 4,
+          "country": "Tunisia",
+          "reason": "Recipe `democratic_transition` is HARD-GATED in 2026-05-04 mandate (n_positive_verified=5 < 8). Validation script CANNOT score this case in Stage 1/2. Re-activates on recipe re-entry.",
+          "recipe": "democratic_transition",
+          "status": "DEFERRED_BY_HARD_GATE"
+        }
+      ],
+      "n_active": 98,
+      "n_active_deferred_to_stage_1": 3,
+      "n_active_fail": 59,
+      "n_active_not_yet_implemented": 1,
+      "n_active_pass": 33,
+      "n_active_skipped": 2,
+      "n_deferred_by_hard_gate": 2
+    },
+    "anchor_drift_metrics": {
+      "ads": 0.2561141304347826,
+      "ads_pct_pp": 25.611413043478258,
+      "ahi": 0.26682862712665406,
+      "ahi_pct": 26.682862712665408,
+      "ahr": 0.358695652173913,
+      "ahr_pct": 35.869565217391305,
+      "n_evaluable": 92,
+      "n_excluded_non_evaluable": 6,
+      "per_case_drifts": [
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": -0.5
+        },
+        {
+          "id": null,
+          "signed_drift": -0.08437499999999998
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": -0.6
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": -0.19270833333333337
+        },
+        {
+          "id": null,
+          "signed_drift": -0.5
+        },
+        {
+          "id": null,
+          "signed_drift": 0.17265625
+        },
+        {
+          "id": null,
+          "signed_drift": 0.36276041666666664
+        },
+        {
+          "id": null,
+          "signed_drift": 0.28203125
+        },
+        {
+          "id": null,
+          "signed_drift": 0.5854166666666667
+        },
+        {
+          "id": null,
+          "signed_drift": 0.309375
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.18098958333333331
+        },
+        {
+          "id": null,
+          "signed_drift": 0.24427083333333338
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": -0.6
+        },
+        {
+          "id": null,
+          "signed_drift": -0.5
+        },
+        {
+          "id": null,
+          "signed_drift": -0.6
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": -0.5
+        },
+        {
+          "id": null,
+          "signed_drift": -0.19791666666666663
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": -0.5
+        },
+        {
+          "id": null,
+          "signed_drift": 0.29166666666666663
+        },
+        {
+          "id": null,
+          "signed_drift": 0.45182291666666663
+        },
+        {
+          "id": null,
+          "signed_drift": 0.24166666666666664
+        },
+        {
+          "id": null,
+          "signed_drift": 0.3536458333333334
+        },
+        {
+          "id": null,
+          "signed_drift": 0.39791666666666664
+        },
+        {
+          "id": null,
+          "signed_drift": 0.38619791666666664
+        },
+        {
+          "id": null,
+          "signed_drift": 0.5932291666666667
+        },
+        {
+          "id": null,
+          "signed_drift": 0.46171875
+        },
+        {
+          "id": null,
+          "signed_drift": 0.23645833333333338
+        },
+        {
+          "id": null,
+          "signed_drift": 0.12187500000000001
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.4434895833333334
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": -0.01041666666666663
+        },
+        {
+          "id": null,
+          "signed_drift": -0.75
+        },
+        {
+          "id": null,
+          "signed_drift": -0.75
+        },
+        {
+          "id": null,
+          "signed_drift": -0.17708333333333337
+        },
+        {
+          "id": null,
+          "signed_drift": -0.75
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": -0.6
+        },
+        {
+          "id": null,
+          "signed_drift": -0.75
+        },
+        {
+          "id": null,
+          "signed_drift": -0.9
+        },
+        {
+          "id": null,
+          "signed_drift": -0.75
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": -0.09375
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": -0.25520833333333337
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": -0.015625
+        },
+        {
+          "id": null,
+          "signed_drift": -0.06145833333333339
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": -0.75
+        },
+        {
+          "id": null,
+          "signed_drift": -0.6
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.6114583333333334
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.41666666666666663
+        },
+        {
+          "id": null,
+          "signed_drift": 0.20520833333333338
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.22604166666666664
+        },
+        {
+          "id": null,
+          "signed_drift": 0.5177083333333334
+        },
+        {
+          "id": null,
+          "signed_drift": 0.21041666666666664
+        },
+        {
+          "id": null,
+          "signed_drift": 0.06458333333333333
+        },
+        {
+          "id": null,
+          "signed_drift": 0.5541666666666667
+        },
+        {
+          "id": null,
+          "signed_drift": 0.38229166666666664
+        },
+        {
+          "id": null,
+          "signed_drift": 0.036458333333333315
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.0
+        },
+        {
+          "id": null,
+          "signed_drift": 0.3380208333333334
+        },
+        {
+          "id": null,
+          "signed_drift": 0.3536458333333334
+        },
+        {
+          "id": null,
+          "signed_drift": 0.35494791666666664
+        },
+        {
+          "id": null,
+          "signed_drift": 0.59453125
+        },
+        {
+          "id": null,
+          "signed_drift": 0.590625
+        }
+      ],
+      "policy": "REPORTED only, not gated. ADS = mean |drift| across evaluable anchors (PASS/FAIL only); AHR = fraction in-band; AHI = AHR * (1 - ADS) composite. Founder ratification 2026-05-05."
+    },
+    "brier": {
+      "per_recipe": {
+        "bilateral_treaty": {
+          "base_rate": 0.016927083333333332,
+          "brier_score": 0.016717062757752282,
+          "n_bins": 10,
+          "reliability": 0.00019572175388413477,
+          "resolution": 0.00019572175388413477,
+          "uncertainty": 0.01664055718315972
+        },
+        "civil_war_and_insurgency": {
+          "base_rate": 0.015625,
+          "brier_score": 0.014707430715416123,
+          "n_bins": 10,
+          "reliability": 3.723947357963832e-05,
+          "resolution": 0.00015660219347817767,
+          "uncertainty": 0.015380859375
+        },
+        "constitutional_change": {
+          "base_rate": 0.005208333333333333,
+          "brier_score": 0.006506500379391857,
+          "n_bins": 10,
+          "reliability": 0.001318154710088179,
+          "resolution": 0.0012866752900033067,
+          "uncertainty": 0.005181206597222222
+        },
+        "economic_recession": {
+          "base_rate": 0.0026041666666666665,
+          "brier_score": 0.0039060122969170282,
+          "n_bins": 10,
+          "reliability": 0.0013086361445680836,
+          "resolution": 0.0013018462377714921,
+          "uncertainty": 0.002597384982638889
+        },
+        "elections_and_voting": {
+          "base_rate": 0.018229166666666668,
+          "brier_score": 0.018303865469270066,
+          "n_bins": 10,
+          "reliability": 0.0016554266335820533,
+          "resolution": 0.0014579334353950766,
+          "uncertainty": 0.017896864149305556
+        },
+        "energy_policy": {
+          "base_rate": 0.013020833333333334,
+          "brier_score": 0.018370318600894404,
+          "n_bins": 10,
+          "reliability": 0.005522812116485588,
+          "resolution": 0.006117501204439843,
+          "uncertainty": 0.012851291232638888
+        },
+        "epidemic_and_pandemic": {
+          "base_rate": 0.0026041666666666665,
+          "brier_score": 0.002630520649005678,
+          "n_bins": 10,
+          "reliability": 1.3610765457593234e-06,
+          "resolution": 1.3610765457593234e-06,
+          "uncertainty": 0.002597384982638889
+        },
+        "executive_power_consolidation": {
+          "base_rate": 0.00390625,
+          "brier_score": 0.004443285024710318,
+          "n_bins": 10,
+          "reliability": 0.0005629036169731536,
+          "resolution": 0.000547351014526575,
+          "uncertainty": 0.0038909912109375
+        },
+        "foreign_intervention": {
+          "base_rate": 0.0078125,
+          "brier_score": 0.0078125,
+          "n_bins": 10,
+          "reliability": 6.103515625e-05,
+          "resolution": 6.103515625e-05,
+          "uncertainty": 0.00775146484375
+        },
+        "government_formation": {
+          "base_rate": 0.016927083333333332,
+          "brier_score": 0.016761839925975897,
+          "n_bins": 10,
+          "reliability": 0.00020394667106828895,
+          "resolution": 0.00020394667106828895,
+          "uncertainty": 0.01664055718315972
+        },
+        "human_rights_violation": {
+          "base_rate": 0.009114583333333334,
+          "brier_score": 0.009856631934658418,
+          "n_bins": 10,
+          "reliability": 0.00105622667800506,
+          "resolution": 0.0009446689884947294,
+          "uncertainty": 0.009031507703993056
+        },
+        "humanitarian_crisis": {
+          "base_rate": 0.00390625,
+          "brier_score": 0.010260700402692644,
+          "n_bins": 10,
+          "reliability": 0.006088059057981817,
+          "resolution": 0.00617957566209438,
+          "uncertainty": 0.0038909912109375
+        },
+        "mass_protest": {
+          "base_rate": 0.005208333333333333,
+          "brier_score": 0.005268307557538329,
+          "n_bins": 10,
+          "reliability": 0.00020328732232791045,
+          "resolution": 0.00018713501405834813,
+          "uncertainty": 0.005181206597222222
+        },
+        "migration_and_refugees": {
+          "base_rate": 0.013020833333333334,
+          "brier_score": 0.012853579971498252,
+          "n_bins": 10,
+          "reliability": 6.47003344584908e-07,
+          "resolution": 6.47003344584908e-07,
+          "uncertainty": 0.012851291232638888
+        },
+        "multilateral_agreement": {
+          "base_rate": 0.009114583333333334,
+          "brier_score": 0.009114583333333334,
+          "n_bins": 10,
+          "reliability": 8.30756293402778e-05,
+          "resolution": 8.30756293402778e-05,
+          "uncertainty": 0.009031507703993056
+        },
+        "natural_disaster": {
+          "base_rate": 0.00390625,
+          "brier_score": 0.004323043815751147,
+          "n_bins": 10,
+          "reliability": 0.00042670961169927554,
+          "resolution": 0.0004153723956172695,
+          "uncertainty": 0.0038909912109375
+        },
+        "peacekeeping_and_peace_process": {
+          "base_rate": 0.00390625,
+          "brier_score": 0.0040424311848357205,
+          "n_bins": 10,
+          "reliability": 0.0001262647224737837,
+          "resolution": 0.00012322764553790924,
+          "uncertainty": 0.0038909912109375
+        },
+        "political_corruption": {
+          "base_rate": 0.009114583333333334,
+          "brier_score": 0.009282939069074842,
+          "n_bins": 10,
+          "reliability": 0.00023710888632493606,
+          "resolution": 0.00022025720681637153,
+          "uncertainty": 0.009031507703993056
+        },
+        "political_repression": {
+          "base_rate": 0.0078125,
+          "brier_score": 0.0078125,
+          "n_bins": 10,
+          "reliability": 6.103515625e-05,
+          "resolution": 6.103515625e-05,
+          "uncertainty": 0.00775146484375
+        },
+        "sanctions_and_arms_embargo": {
+          "base_rate": 0.005208333333333333,
+          "brier_score": 0.01713441512486101,
+          "n_bins": 10,
+          "reliability": 0.011824163485019754,
+          "resolution": 0.012975757938892237,
+          "uncertainty": 0.005181206597222222
+        },
+        "territorial_disputes": {
+          "base_rate": 0.0026041666666666665,
+          "brier_score": 0.0027620572837204365,
+          "n_bins": 10,
+          "reliability": 9.48406552937601e-05,
+          "resolution": 9.120636564013471e-05,
+          "uncertainty": 0.002597384982638889
+        },
+        "terrorist_attack": {
+          "base_rate": 0.0026041666666666665,
+          "brier_score": 0.0013020833333333478,
+          "n_bins": 10,
+          "reliability": 1.6976308801293214e-06,
+          "resolution": 0.0013020833200144634,
+          "uncertainty": 0.002597384982638889
+        },
+        "trade_agreement": {
+          "base_rate": 0.0078125,
+          "brier_score": 0.008311666225613105,
+          "n_bins": 10,
+          "reliability": 0.0005428506760055846,
+          "resolution": 0.0004938347299971696,
+          "uncertainty": 0.00775146484375
+        }
+      }
+    },
+    "calibration": {
+      "diagnostic_only": "per_recipe_bootstrap_diagnostic \u2014 sampling-variability of in-sample ECE; 75th percentile is Ji-Hoon's preferred conservative number for transparency, NOT applied to the F1 0.08 gate",
+      "gate_uses": "in_sample_ece (option a per founder tie-break 2026-05-04)",
+      "per_recipe": {
+        "bilateral_treaty": {
+          "ece": 0.013990059109386735,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 768,
+              "observed_rate": 0.016927083333333332,
+              "predicted_mean": 0.0029370242239465973
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "civil_war_and_insurgency": {
+          "ece": 0.00607839366800173,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 759,
+              "observed_rate": 0.014492753623188406,
+              "predicted_mean": 0.008355456537578304
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 9,
+              "observed_rate": 0.1111111111111111,
+              "predicted_mean": 0.1100002389947488
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "constitutional_change": {
+          "ece": 0.008070568064525005,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 762,
+              "observed_rate": 0.005249343832020997,
+              "predicted_mean": 0.00014149521027275505
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 1,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.1495784173802677
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 1,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.2768431657742534
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 3,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.4407039515791953
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 1,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.5574821858909379
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "economic_recession": {
+          "ece": 0.0039061289308415285,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 767,
+              "observed_rate": 0.002607561929595828,
+              "predicted_mean": 2.215074557784693e-09
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 1,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.9999087178484799
+            }
+          ]
+        },
+        "elections_and_voting": {
+          "ece": 0.019651688639076785,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 762,
+              "observed_rate": 0.01706036745406824,
+              "predicted_mean": 0.00017595777176896928
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 2,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.15780688830324746
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 1,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.28065707215867114
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 1,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.39785366320352683
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 1,
+              "observed_rate": 1.0,
+              "predicted_mean": 0.4462360393776566
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 1,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.6786882243078884
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "energy_policy": {
+          "ece": 0.043234365350751126,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 653,
+              "observed_rate": 0.009188361408882083,
+              "predicted_mean": 0.033601378772413475
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 78,
+              "observed_rate": 0.038461538461538464,
+              "predicted_mean": 0.13268239834369758
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 24,
+              "observed_rate": 0.041666666666666664,
+              "predicted_mean": 0.23224368753532568
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 7,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.34622901678085327
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 5,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.4531272351741791
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 1,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.6499773859977722
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "epidemic_and_pandemic": {
+          "ece": 0.0011666518528504223,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 768,
+              "observed_rate": 0.0026041666666666665,
+              "predicted_mean": 0.0014375148138162442
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "executive_power_consolidation": {
+          "ece": 0.00571297042630347,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 762,
+              "observed_rate": 0.003937007874015748,
+              "predicted_mean": 0.00017131047603883336
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 3,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.1758126522971439
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 1,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.29718349168028163
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 2,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.3467392107854717
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "foreign_intervention": {
+          "ece": 0.0078125,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 768,
+              "observed_rate": 0.0078125,
+              "predicted_mean": 5.914375191172938e-23
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "government_formation": {
+          "ece": 0.014280989849036689,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 768,
+              "observed_rate": 0.016927083333333332,
+              "predicted_mean": 0.0026460934842966436
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "human_rights_violation": {
+          "ece": 0.012945182903700227,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 740,
+              "observed_rate": 0.00945945945945946,
+              "predicted_mean": 0.00228318037952472
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 24,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.15895946965488597
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 4,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.2041066697932008
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "humanitarian_crisis": {
+          "ece": 0.05558589085800728,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 657,
+              "observed_rate": 0.0030441400304414,
+              "predicted_mean": 0.03963069722646085
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 78,
+              "observed_rate": 0.01282051282051282,
+              "predicted_mean": 0.13795242554102188
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 26,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.23841003443186098
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 6,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.34685123960177106
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 1,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.6125385761260986
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "mass_protest": {
+          "ece": 0.003586935830084109,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 758,
+              "observed_rate": 0.005277044854881266,
+              "predicted_mean": 0.007279003330313427
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 10,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.12372821931270181
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "migration_and_refugees": {
+          "ece": 0.0008043651811117311,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 768,
+              "observed_rate": 0.013020833333333334,
+              "predicted_mean": 0.013825198514445065
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "multilateral_agreement": {
+          "ece": 0.009114583333333334,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 768,
+              "observed_rate": 0.009114583333333334,
+              "predicted_mean": 9.47172212005827e-81
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "natural_disaster": {
+          "ece": 0.005203920565165449,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 764,
+              "observed_rate": 0.003926701570680628,
+              "predicted_mean": 0.00014477538491723666
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 1,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.19933460065896597
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 2,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.2830509064369517
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 1,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.341782974590965
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "peacekeeping_and_peace_process": {
+          "ece": 0.00374529390611264,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 767,
+              "observed_rate": 0.003911342894393742,
+              "predicted_mean": 0.0005485840989066537
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 1,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.2971497237559105
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "political_corruption": {
+          "ece": 0.009886409834370063,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 764,
+              "observed_rate": 0.009162303664921465,
+              "predicted_mean": 0.00013010356886229704
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 4,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.17304046985175098
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "political_repression": {
+          "ece": 0.0078125,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 768,
+              "observed_rate": 0.0078125,
+              "predicted_mean": 1.0598097351619739e-78
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "sanctions_and_arms_embargo": {
+          "ece": 0.06901597317361544,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 617,
+              "observed_rate": 0.0032414910858995136,
+              "predicted_mean": 0.03965036971177574
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 89,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.1352199125993118
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 36,
+              "observed_rate": 0.027777777777777776,
+              "predicted_mean": 0.24647633441620403
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 12,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.32442732403675717
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 6,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.445444052418073
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 4,
+              "observed_rate": 0.25,
+              "predicted_mean": 0.5450461357831955
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 2,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.6357544958591461
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 2,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.8073916435241699
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "territorial_disputes": {
+          "ece": 0.0012752981922299067,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 764,
+              "observed_rate": 0.002617801047120419,
+              "predicted_mean": 0.0020410963176818123
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 4,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.1347066495853682
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        },
+        "terrorist_attack": {
+          "ece": 0.0013020831152878393,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 767,
+              "observed_rate": 0.001303780964797914,
+              "predicted_mean": 2.2442932776603612e-10
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 1,
+              "observed_rate": 1.0,
+              "predicted_mean": 0.999999995321645
+            }
+          ]
+        },
+        "trade_agreement": {
+          "ece": 0.01036367187113522,
+          "n_bins": 10,
+          "reliability_diagram": [
+            {
+              "bin": 0,
+              "edge_high": 0.1,
+              "edge_low": 0.0,
+              "n": 753,
+              "observed_rate": 0.00796812749003984,
+              "predicted_mean": 0.0005286867547404736
+            },
+            {
+              "bin": 1,
+              "edge_high": 0.2,
+              "edge_low": 0.1,
+              "n": 13,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.1501839343036363
+            },
+            {
+              "bin": 2,
+              "edge_high": 0.30000000000000004,
+              "edge_low": 0.2,
+              "n": 2,
+              "observed_rate": 0.0,
+              "predicted_mean": 0.20250498870207728
+            },
+            {
+              "bin": 3,
+              "edge_high": 0.4,
+              "edge_low": 0.30000000000000004,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 4,
+              "edge_high": 0.5,
+              "edge_low": 0.4,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 5,
+              "edge_high": 0.6000000000000001,
+              "edge_low": 0.5,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 6,
+              "edge_high": 0.7000000000000001,
+              "edge_low": 0.6000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 7,
+              "edge_high": 0.8,
+              "edge_low": 0.7000000000000001,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 8,
+              "edge_high": 0.9,
+              "edge_low": 0.8,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            },
+            {
+              "bin": 9,
+              "edge_high": 1.0,
+              "edge_low": 0.9,
+              "n": 0,
+              "observed_rate": null,
+              "predicted_mean": null
+            }
+          ]
+        }
+      },
+      "per_recipe_bootstrap_diagnostic": {
+        "bilateral_treaty": {
+          "ece_bootstrap_max": 0.03227685245243834,
+          "ece_bootstrap_mean": 0.013978134570555521,
+          "ece_bootstrap_median": 0.013985650818842232,
+          "ece_bootstrap_min": 0.002227216912828502,
+          "ece_bootstrap_p25": 0.010346009657033957,
+          "ece_bootstrap_p75": 0.016684994411345667,
+          "ece_bootstrap_p95": 0.02170945180045003,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "civil_war_and_insurgency": {
+          "ece_bootstrap_max": 0.023993631307275692,
+          "ece_bootstrap_mean": 0.007127504454908801,
+          "ece_bootstrap_median": 0.0066029795146102105,
+          "ece_bootstrap_min": 0.0002038515420573313,
+          "ece_bootstrap_p25": 0.004244389722345291,
+          "ece_bootstrap_p75": 0.009533849069250795,
+          "ece_bootstrap_p95": 0.013898219082847002,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "constitutional_change": {
+          "ece_bootstrap_max": 0.019352550233075534,
+          "ece_bootstrap_mean": 0.008108804298191434,
+          "ece_bootstrap_median": 0.007859837848634532,
+          "ece_bootstrap_min": 0.0009548961626274683,
+          "ece_bootstrap_p25": 0.005937237416322931,
+          "ece_bootstrap_p75": 0.010092355402595114,
+          "ece_bootstrap_p95": 0.013499272679119935,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "economic_recession": {
+          "ece_bootstrap_max": 0.011718274572127499,
+          "ece_bootstrap_mean": 0.003870968906971386,
+          "ece_bootstrap_median": 0.0039061267186511826,
+          "ece_bootstrap_min": 9.125965655290333e-34,
+          "ece_bootstrap_p25": 0.0026040455975081954,
+          "ece_bootstrap_p75": 0.005208212264174863,
+          "ece_bootstrap_p95": 0.00781226228606375,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "elections_and_voting": {
+          "ece_bootstrap_max": 0.03868037636637156,
+          "ece_bootstrap_mean": 0.01995464412737681,
+          "ece_bootstrap_median": 0.019806113416571566,
+          "ece_bootstrap_min": 0.007581091471990386,
+          "ece_bootstrap_p25": 0.01655838078914343,
+          "ece_bootstrap_p75": 0.0231258861472849,
+          "ece_bootstrap_p95": 0.02802083813917031,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "energy_policy": {
+          "ece_bootstrap_max": 0.056477936452817325,
+          "ece_bootstrap_mean": 0.04368782138860964,
+          "ece_bootstrap_median": 0.043651262016889326,
+          "ece_bootstrap_min": 0.02603153243641524,
+          "ece_bootstrap_p25": 0.04066392035171399,
+          "ece_bootstrap_p75": 0.046597963820507474,
+          "ece_bootstrap_p95": 0.05136634181350624,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "epidemic_and_pandemic": {
+          "ece_bootstrap_max": 0.008918043048029407,
+          "ece_bootstrap_mean": 0.0016452318027708652,
+          "ece_bootstrap_median": 0.0012859424604068981,
+          "ece_bootstrap_min": 1.3517532709075852e-06,
+          "ece_bootstrap_p25": 0.000565885314103324,
+          "ece_bootstrap_p75": 0.002411579350521768,
+          "ece_bootstrap_p95": 0.004885633638503106,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "executive_power_consolidation": {
+          "ece_bootstrap_max": 0.01902170284882891,
+          "ece_bootstrap_mean": 0.005689151938335753,
+          "ece_bootstrap_median": 0.005405009985357968,
+          "ece_bootstrap_min": 0.00034176439850315765,
+          "ece_bootstrap_p25": 0.00378030908275778,
+          "ece_bootstrap_p75": 0.00721365508495915,
+          "ece_bootstrap_p95": 0.010191366184298606,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "foreign_intervention": {
+          "ece_bootstrap_max": 0.020833333333333332,
+          "ece_bootstrap_mean": 0.007704427083333334,
+          "ece_bootstrap_median": 0.0078125,
+          "ece_bootstrap_min": 1.4207100642535318e-52,
+          "ece_bootstrap_p25": 0.005208333333333333,
+          "ece_bootstrap_p75": 0.010416666666666666,
+          "ece_bootstrap_p95": 0.013020833333333334,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "government_formation": {
+          "ece_bootstrap_max": 0.028058395373187706,
+          "ece_bootstrap_mean": 0.013978821814376428,
+          "ece_bootstrap_median": 0.014066863747871666,
+          "ece_bootstrap_min": 0.00014876231213681573,
+          "ece_bootstrap_p25": 0.010522627869399968,
+          "ece_bootstrap_p75": 0.01687727276646836,
+          "ece_bootstrap_p95": 0.02183237811014708,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "human_rights_violation": {
+          "ece_bootstrap_max": 0.02456111573346059,
+          "ece_bootstrap_mean": 0.012894327875303797,
+          "ece_bootstrap_median": 0.012627935957820847,
+          "ece_bootstrap_min": 0.004494217789574923,
+          "ece_bootstrap_p25": 0.010473132955316797,
+          "ece_bootstrap_p75": 0.01518469810501946,
+          "ece_bootstrap_p95": 0.01873986697437719,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "humanitarian_crisis": {
+          "ece_bootstrap_max": 0.06406760340056886,
+          "ece_bootstrap_mean": 0.055744523061536405,
+          "ece_bootstrap_median": 0.055804434078406004,
+          "ece_bootstrap_min": 0.04639800179332573,
+          "ece_bootstrap_p25": 0.053611566567875954,
+          "ece_bootstrap_p75": 0.05787460821466083,
+          "ece_bootstrap_p95": 0.06021595552271416,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "mass_protest": {
+          "ece_bootstrap_max": 0.010916342593184768,
+          "ece_bootstrap_mean": 0.004376848896332966,
+          "ece_bootstrap_median": 0.004163360021843164,
+          "ece_bootstrap_min": 0.0008076384579432873,
+          "ece_bootstrap_p25": 0.002834072785864631,
+          "ece_bootstrap_p75": 0.0056422213577551625,
+          "ece_bootstrap_p95": 0.007767249753491434,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "migration_and_refugees": {
+          "ece_bootstrap_max": 0.016474699512169663,
+          "ece_bootstrap_mean": 0.0033204672291096394,
+          "ece_bootstrap_median": 0.00307451669956439,
+          "ece_bootstrap_min": 5.4222997053127164e-05,
+          "ece_bootstrap_p25": 0.0016616969263531303,
+          "ece_bootstrap_p75": 0.004712017378768427,
+          "ece_bootstrap_p95": 0.007490302445208897,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "multilateral_agreement": {
+          "ece_bootstrap_max": 0.022135416666666668,
+          "ece_bootstrap_mean": 0.009088541666666667,
+          "ece_bootstrap_median": 0.009114583333333334,
+          "ece_bootstrap_min": 9.471722072345674e-81,
+          "ece_bootstrap_p25": 0.006510416666666667,
+          "ece_bootstrap_p75": 0.01171875,
+          "ece_bootstrap_p95": 0.015625,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "natural_disaster": {
+          "ece_bootstrap_max": 0.013472933698226447,
+          "ece_bootstrap_mean": 0.005157942313944054,
+          "ece_bootstrap_median": 0.004945988674233383,
+          "ece_bootstrap_min": 0.00040197555439724865,
+          "ece_bootstrap_p25": 0.0034465972156209152,
+          "ece_bootstrap_p75": 0.006527625385383023,
+          "ece_bootstrap_p95": 0.009383808808362214,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "peacekeeping_and_peace_process": {
+          "ece_bootstrap_max": 0.013074478596181794,
+          "ece_bootstrap_mean": 0.00370772091575816,
+          "ece_bootstrap_median": 0.0034481112495102313,
+          "ece_bootstrap_min": 2.3960046681308945e-05,
+          "ece_bootstrap_p25": 0.0020819885268017688,
+          "ece_bootstrap_p75": 0.005155209999079001,
+          "ece_bootstrap_p95": 0.007711504661055434,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "political_corruption": {
+          "ece_bootstrap_max": 0.021762028470349377,
+          "ece_bootstrap_mean": 0.009662666232509954,
+          "ece_bootstrap_median": 0.009513096302284207,
+          "ece_bootstrap_min": 0.0018255929681975961,
+          "ece_bootstrap_p25": 0.007048561666880039,
+          "ece_bootstrap_p75": 0.012013313893029811,
+          "ece_bootstrap_p95": 0.015996054168728166,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "political_repression": {
+          "ece_bootstrap_max": 0.018229166666666668,
+          "ece_bootstrap_mean": 0.0076953125,
+          "ece_bootstrap_median": 0.0078125,
+          "ece_bootstrap_min": 1.0598097351619739e-78,
+          "ece_bootstrap_p25": 0.005208333333333333,
+          "ece_bootstrap_p75": 0.009114583333333334,
+          "ece_bootstrap_p95": 0.013020833333333334,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "sanctions_and_arms_embargo": {
+          "ece_bootstrap_max": 0.08041750271998657,
+          "ece_bootstrap_mean": 0.06925777911710852,
+          "ece_bootstrap_median": 0.0691815621078907,
+          "ece_bootstrap_min": 0.059806319244671606,
+          "ece_bootstrap_p25": 0.06668182606214637,
+          "ece_bootstrap_p75": 0.07174622481003705,
+          "ece_bootstrap_p95": 0.07594283865467635,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "territorial_disputes": {
+          "ece_bootstrap_max": 0.008011486263377547,
+          "ece_bootstrap_mean": 0.002151801552437325,
+          "ece_bootstrap_median": 0.001887224271927034,
+          "ece_bootstrap_min": 8.890316397710749e-05,
+          "ece_bootstrap_p25": 0.0013023582586382592,
+          "ece_bootstrap_p75": 0.002777603141644188,
+          "ece_bootstrap_p95": 0.004481050681267636,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "terrorist_attack": {
+          "ece_bootstrap_max": 0.010416666647261801,
+          "ece_bootstrap_mean": 0.0013450520151819482,
+          "ece_bootstrap_median": 0.0013020831000214968,
+          "ece_bootstrap_min": 1.1233809533663678e-12,
+          "ece_bootstrap_p25": 2.891457828609087e-10,
+          "ece_bootstrap_p75": 0.0026041662868031726,
+          "ece_bootstrap_p95": 0.003906249795943995,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "trade_agreement": {
+          "ece_bootstrap_max": 0.022419397030518765,
+          "ece_bootstrap_mean": 0.01023421770294669,
+          "ece_bootstrap_median": 0.009937649664132532,
+          "ece_bootstrap_min": 0.003530768953851071,
+          "ece_bootstrap_p25": 0.007984469381123056,
+          "ece_bootstrap_p75": 0.01219043430110115,
+          "ece_bootstrap_p95": 0.016199957957934354,
+          "method": "resample_only",
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        }
+      }
+    },
+    "oos_by_time": {
+      "per_recipe": {
+        "bilateral_treaty": {
+          "auc_ci_high": 0.8492562295549274,
+          "auc_ci_low": 0.5661652026394826,
+          "auc_point": 0.7169638308711156,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.34925622955492747,
+          "delta_ci_low": 0.06616520263948257,
+          "delta_point": 0.2169638308711156,
+          "method": "percentile",
+          "n": 768,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "civil_war_and_insurgency": {
+          "auc_ci_high": 0.9427419605627387,
+          "auc_ci_low": 0.8007554848677315,
+          "auc_point": 0.8840388007054674,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.4427419605627387,
+          "delta_ci_low": 0.30075548486773157,
+          "delta_point": 0.38403880070546736,
+          "method": "percentile",
+          "n": 768,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "constitutional_change": {
+          "auc_ci_high": 0.9471937221074274,
+          "auc_ci_low": 0.42549019607843136,
+          "auc_point": 0.5651178010471204,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.4471937221074274,
+          "delta_ci_low": -0.07450980392156864,
+          "delta_point": 0.0651178010471204,
+          "method": "percentile",
+          "n": 768,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 980
+        },
+        "economic_recession": {
+          "auc_ci_high": 0.49114117050557726,
+          "auc_ci_low": 0.47912793052855895,
+          "auc_point": 0.4856396866840731,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": -0.008858829494422765,
+          "delta_ci_low": -0.020872069471441053,
+          "delta_point": -0.01436031331592691,
+          "method": "percentile",
+          "n": 768,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 864
+        },
+        "elections_and_voting": {
+          "auc_ci_high": 0.8550494210770073,
+          "auc_ci_low": 0.6339204992224222,
+          "auc_point": 0.7505683971201212,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.35504942107700727,
+          "delta_ci_low": 0.1339204992224222,
+          "delta_point": 0.25056839712012124,
+          "method": "percentile",
+          "n": 768,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "energy_policy": {
+          "auc_ci_high": 0.869225398017682,
+          "auc_ci_low": 0.5887081865821395,
+          "auc_point": 0.7452506596306069,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.36922539801768195,
+          "delta_ci_low": 0.08870818658213955,
+          "delta_point": 0.24525065963060688,
+          "method": "percentile",
+          "n": 768,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "epidemic_and_pandemic": {
+          "auc_ci_high": 0.9374185136897001,
+          "auc_ci_low": 0.5142112125162973,
+          "auc_point": 0.7310704960835509,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.4374185136897001,
+          "delta_ci_low": 0.014211212516297292,
+          "delta_point": 0.2310704960835509,
+          "method": "percentile",
+          "n": 768,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 857
+        },
+        "executive_power_consolidation": {
+          "auc_ci_high": 0.9869621903520208,
+          "auc_ci_low": 0.4104924780938581,
+          "auc_point": 0.6078431372549019,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.4869621903520208,
+          "delta_ci_low": -0.0895075219061419,
+          "delta_point": 0.10784313725490191,
+          "method": "percentile",
+          "n": 768,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 947
+        },
+        "foreign_intervention": {
+          "auc_ci_high": 0.9447257347963844,
+          "auc_ci_low": 0.5849829329637615,
+          "auc_point": 0.7749343832020997,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.44472573479638444,
+          "delta_ci_low": 0.08498293296376146,
+          "delta_point": 0.27493438320209973,
+          "method": "percentile",
+          "n": 768,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 996
+        },
+        "government_formation": {
+          "auc_ci_high": 0.8542303318067905,
+          "auc_ci_low": 0.5990822873123608,
+          "auc_point": 0.7298013245033113,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.35423033180679053,
+          "delta_ci_low": 0.09908228731236074,
+          "delta_point": 0.22980132450331126,
+          "method": "percentile",
+          "n": 768,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "human_rights_violation": {
+          "auc_ci_high": 0.8790963537646028,
+          "auc_ci_low": 0.5720402225293948,
+          "auc_point": 0.7356861272761405,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.3790963537646029,
+          "delta_ci_low": 0.07204022252939477,
+          "delta_point": 0.23568612727614047,
+          "method": "percentile",
+          "n": 768,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "humanitarian_crisis": {
+          "auc_ci_high": 0.9295958279009127,
+          "auc_ci_low": 0.7286649214659686,
+          "auc_point": 0.8091503267973856,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.42959582790091266,
+          "delta_ci_low": 0.22866492146596856,
+          "delta_point": 0.30915032679738563,
+          "method": "percentile",
+          "n": 768,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 937
+        },
+        "mass_protest": {
+          "auc_ci_high": 0.9795617227950613,
+          "auc_ci_low": 0.7713079839429081,
+          "auc_point": 0.8982329842931938,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.4795617227950613,
+          "delta_ci_low": 0.2713079839429081,
+          "delta_point": 0.39823298429319376,
+          "method": "percentile",
+          "n": 768,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 974
+        },
+        "migration_and_refugees": {
+          "auc_ci_high": 0.7417943438484771,
+          "auc_ci_low": 0.3291335675452648,
+          "auc_point": 0.5521108179419525,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.24179434384847712,
+          "delta_ci_low": -0.1708664324547352,
+          "delta_point": 0.05211081794195249,
+          "method": "percentile",
+          "n": 768,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "multilateral_agreement": {
+          "auc_ci_high": 0.7457349081364829,
+          "auc_ci_low": 0.4900908321276551,
+          "auc_point": 0.5648582691946686,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.2457349081364829,
+          "delta_ci_low": -0.009909167872344901,
+          "delta_point": 0.06485826919466864,
+          "method": "percentile",
+          "n": 768,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 996
+        },
+        "natural_disaster": {
+          "auc_ci_high": 0.9647979139504563,
+          "auc_ci_low": 0.4366840731070496,
+          "auc_point": 0.7766884531590414,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.46479791395045633,
+          "delta_ci_low": -0.0633159268929504,
+          "delta_point": 0.27668845315904145,
+          "method": "percentile",
+          "n": 768,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 949
+        },
+        "peacekeeping_and_peace_process": {
+          "auc_ci_high": 0.9712793733681462,
+          "auc_ci_low": 0.6005221932114883,
+          "auc_point": 0.8226579520697168,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.4712793733681462,
+          "delta_ci_low": 0.10052219321148825,
+          "delta_point": 0.3226579520697168,
+          "method": "percentile",
+          "n": 768,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 941
+        },
+        "political_corruption": {
+          "auc_ci_high": 0.8726002863460873,
+          "auc_ci_low": 0.42558503558081195,
+          "auc_point": 0.6579688379951192,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.37260028634608733,
+          "delta_ci_low": -0.07441496441918802,
+          "delta_point": 0.15796883799511918,
+          "method": "percentile",
+          "n": 768,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        },
+        "political_repression": {
+          "auc_ci_high": 0.8072882401315788,
+          "auc_ci_low": 0.4941320282474529,
+          "auc_point": 0.5795056867891514,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.3072882401315789,
+          "delta_ci_low": -0.0058679717525471214,
+          "delta_point": 0.07950568678915138,
+          "method": "percentile",
+          "n": 768,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 996
+        },
+        "sanctions_and_arms_embargo": {
+          "auc_ci_high": 0.9908735332464146,
+          "auc_ci_low": 0.496359152886568,
+          "auc_point": 0.7457460732984293,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.4908735332464146,
+          "delta_ci_low": -0.0036408471134319617,
+          "delta_point": 0.24574607329842935,
+          "method": "percentile",
+          "n": 768,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 978
+        },
+        "territorial_disputes": {
+          "auc_ci_high": 0.9426336375488917,
+          "auc_ci_low": 0.8841916558018253,
+          "auc_point": 0.9157963446475196,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.44263363754889173,
+          "delta_ci_low": 0.38419165580182535,
+          "delta_point": 0.4157963446475196,
+          "method": "percentile",
+          "n": 768,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 848
+        },
+        "terrorist_attack": {
+          "auc_ci_high": 1.0,
+          "auc_ci_low": 0.9739243807040417,
+          "auc_point": 0.9902088772845953,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.5,
+          "delta_ci_low": 0.47392438070404175,
+          "delta_point": 0.4902088772845953,
+          "method": "percentile",
+          "n": 768,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 872
+        },
+        "trade_agreement": {
+          "auc_ci_high": 0.8985343415289326,
+          "auc_ci_low": 0.44989534142627385,
+          "auc_point": 0.678477690288714,
+          "baseline_auc": 0.5,
+          "confidence": 0.95,
+          "delta_ci_high": 0.39853434152893263,
+          "delta_ci_low": -0.05010465857372612,
+          "delta_point": 0.17847769028871396,
+          "method": "percentile",
+          "n": 768,
+          "n_bootstrap": 1000,
+          "n_valid_resamples": 1000
+        }
+      }
+    },
+    "predictive_metrics": {
+      "per_recipe": {
+        "bilateral_treaty": {
+          "auc_pr": 0.05828473340994446,
+          "brier_skill_score": -0.004597536834282545,
+          "log_loss": 0.10430603038684082
+        },
+        "civil_war_and_insurgency": {
+          "auc_pr": 0.10054445132961443,
+          "brier_skill_score": 0.043783552216754895,
+          "log_loss": 0.06468189854978541
+        },
+        "constitutional_change": {
+          "auc_pr": 0.011021155307160208,
+          "brier_skill_score": -0.25578863866964086,
+          "log_loss": 0.1839989826478183
+        },
+        "economic_recession": {
+          "auc_pr": 0.006684189991169888,
+          "brier_skill_score": -0.5038249327785831,
+          "log_loss": 0.10205613251421973
+        },
+        "elections_and_voting": {
+          "auc_pr": 0.09050231591074599,
+          "brier_skill_score": -0.022741487925989734,
+          "log_loss": 0.5402766479810275
+        },
+        "energy_policy": {
+          "auc_pr": 0.035856563428308307,
+          "brier_skill_score": -0.42945313963772325,
+          "log_loss": 0.0936912492022162
+        },
+        "epidemic_and_pandemic": {
+          "auc_pr": 0.011421810103351686,
+          "brier_skill_score": -0.01275731806731395,
+          "log_loss": 0.0215589804084008
+        },
+        "executive_power_consolidation": {
+          "auc_pr": 0.02986589712259274,
+          "brier_skill_score": -0.14194167599770746,
+          "log_loss": 0.0988500590660909
+        },
+        "foreign_intervention": {
+          "auc_pr": 0.029823405030313756,
+          "brier_skill_score": -0.007874015748031482,
+          "log_loss": 0.26983419058524066
+        },
+        "government_formation": {
+          "auc_pr": 0.047223585458007485,
+          "brier_skill_score": -0.007288382322853559,
+          "log_loss": 0.10155229995523347
+        },
+        "human_rights_violation": {
+          "auc_pr": 0.026414907631538535,
+          "brier_skill_score": -0.09136062966547143,
+          "log_loss": 0.1000500685375944
+        },
+        "humanitarian_crisis": {
+          "auc_pr": 0.014265284953221144,
+          "brier_skill_score": -1.6370402415328043,
+          "log_loss": 0.07275724028076942
+        },
+        "mass_protest": {
+          "auc_pr": 0.046947261663286,
+          "brier_skill_score": -0.016810941366978804,
+          "log_loss": 0.027520519922334532
+        },
+        "migration_and_refugees": {
+          "auc_pr": 0.017752906920794388,
+          "brier_skill_score": -0.0001780940777025286,
+          "log_loss": 0.06981541425182768
+        },
+        "multilateral_agreement": {
+          "auc_pr": 0.0631472089591036,
+          "brier_skill_score": -0.009198423127463995,
+          "log_loss": 0.31480655568278065
+        },
+        "natural_disaster": {
+          "auc_pr": 0.024121578920143126,
+          "brier_skill_score": -0.11103921376104764,
+          "log_loss": 0.13676401136035707
+        },
+        "peacekeeping_and_peace_process": {
+          "auc_pr": 0.024026344026344026,
+          "brier_skill_score": -0.03892066717409315,
+          "log_loss": 0.04508078268245939
+        },
+        "political_corruption": {
+          "auc_pr": 0.040499325424338234,
+          "brier_skill_score": -0.02783935676328131,
+          "log_loss": 0.2947353948594785
+        },
+        "political_repression": {
+          "auc_pr": 0.03468698465502828,
+          "brier_skill_score": -0.007874015748031482,
+          "log_loss": 0.26983419058524066
+        },
+        "sanctions_and_arms_embargo": {
+          "auc_pr": 0.047609404702057136,
+          "brier_skill_score": -2.3070318280778865,
+          "log_loss": 0.09402542522348246
+        },
+        "territorial_disputes": {
+          "auc_pr": 0.02209219011225221,
+          "brier_skill_score": -0.06339926587018452,
+          "log_loss": 0.017478690138692767
+        },
+        "terrorist_attack": {
+          "auc_pr": 0.5588235294117647,
+          "brier_skill_score": 0.49869451697127387,
+          "log_loss": 0.04497236532776964
+        },
+        "trade_agreement": {
+          "auc_pr": 0.020113299571946335,
+          "brier_skill_score": -0.07227038929484353,
+          "log_loss": 0.22329826746755418
+        }
+      },
+      "purpose": "REPORTED-only predictive-power metrics (not gated). auc_pr = Average Precision (rank discrimination on rare-event axis); brier_skill_score = Brier vs base- rate baseline (1=perfect, 0=naive, <0=worse); log_loss = cross-entropy (penalizes confident wrong predictions). Founder ratification 2026-05-05."
+    },
+    "recipe_counts": {
+      "per_recipe": {
+        "bilateral_treaty": {
+          "n_neg_test": 755,
+          "n_pos_test": 13,
+          "n_test": 768,
+          "positive_rate": 0.016927083333333332
+        },
+        "civil_war_and_insurgency": {
+          "n_neg_test": 756,
+          "n_pos_test": 12,
+          "n_test": 768,
+          "positive_rate": 0.015625
+        },
+        "constitutional_change": {
+          "n_neg_test": 764,
+          "n_pos_test": 4,
+          "n_test": 768,
+          "positive_rate": 0.005208333333333333
+        },
+        "economic_recession": {
+          "n_neg_test": 766,
+          "n_pos_test": 2,
+          "n_test": 768,
+          "positive_rate": 0.0026041666666666665
+        },
+        "elections_and_voting": {
+          "n_neg_test": 754,
+          "n_pos_test": 14,
+          "n_test": 768,
+          "positive_rate": 0.018229166666666668
+        },
+        "energy_policy": {
+          "n_neg_test": 758,
+          "n_pos_test": 10,
+          "n_test": 768,
+          "positive_rate": 0.013020833333333334
+        },
+        "epidemic_and_pandemic": {
+          "n_neg_test": 766,
+          "n_pos_test": 2,
+          "n_test": 768,
+          "positive_rate": 0.0026041666666666665
+        },
+        "executive_power_consolidation": {
+          "n_neg_test": 765,
+          "n_pos_test": 3,
+          "n_test": 768,
+          "positive_rate": 0.00390625
+        },
+        "foreign_intervention": {
+          "n_neg_test": 762,
+          "n_pos_test": 6,
+          "n_test": 768,
+          "positive_rate": 0.0078125
+        },
+        "government_formation": {
+          "n_neg_test": 755,
+          "n_pos_test": 13,
+          "n_test": 768,
+          "positive_rate": 0.016927083333333332
+        },
+        "human_rights_violation": {
+          "n_neg_test": 761,
+          "n_pos_test": 7,
+          "n_test": 768,
+          "positive_rate": 0.009114583333333334
+        },
+        "humanitarian_crisis": {
+          "n_neg_test": 765,
+          "n_pos_test": 3,
+          "n_test": 768,
+          "positive_rate": 0.00390625
+        },
+        "mass_protest": {
+          "n_neg_test": 764,
+          "n_pos_test": 4,
+          "n_test": 768,
+          "positive_rate": 0.005208333333333333
+        },
+        "migration_and_refugees": {
+          "n_neg_test": 758,
+          "n_pos_test": 10,
+          "n_test": 768,
+          "positive_rate": 0.013020833333333334
+        },
+        "multilateral_agreement": {
+          "n_neg_test": 761,
+          "n_pos_test": 7,
+          "n_test": 768,
+          "positive_rate": 0.009114583333333334
+        },
+        "natural_disaster": {
+          "n_neg_test": 765,
+          "n_pos_test": 3,
+          "n_test": 768,
+          "positive_rate": 0.00390625
+        },
+        "peacekeeping_and_peace_process": {
+          "n_neg_test": 765,
+          "n_pos_test": 3,
+          "n_test": 768,
+          "positive_rate": 0.00390625
+        },
+        "political_corruption": {
+          "n_neg_test": 761,
+          "n_pos_test": 7,
+          "n_test": 768,
+          "positive_rate": 0.009114583333333334
+        },
+        "political_repression": {
+          "n_neg_test": 762,
+          "n_pos_test": 6,
+          "n_test": 768,
+          "positive_rate": 0.0078125
+        },
+        "sanctions_and_arms_embargo": {
+          "n_neg_test": 764,
+          "n_pos_test": 4,
+          "n_test": 768,
+          "positive_rate": 0.005208333333333333
+        },
+        "territorial_disputes": {
+          "n_neg_test": 766,
+          "n_pos_test": 2,
+          "n_test": 768,
+          "positive_rate": 0.0026041666666666665
+        },
+        "terrorist_attack": {
+          "n_neg_test": 766,
+          "n_pos_test": 2,
+          "n_test": 768,
+          "positive_rate": 0.0026041666666666665
+        },
+        "trade_agreement": {
+          "n_neg_test": 762,
+          "n_pos_test": 6,
+          "n_test": 768,
+          "positive_rate": 0.0078125
+        }
+      },
+      "purpose": "Per-recipe test-set sample counts. n_pos_test is the F5 rubric HARD GATE input (n_pos < 8 -> recipe excluded from head-class assignment per docs/specs/internal/ops/ml-track/06-modular-architecture.md)."
+    }
+  },
+  "components_deferred": {
+    "rationale": "Stage 1 v0 baseline minimum is components 1+3+4+6 per Stage 0 spec",
+    "stage_2_or_3": [
+      2,
+      5,
+      7,
+      8,
+      9
+    ]
+  },
+  "components_implemented_v1": [
+    1,
+    3,
+    4,
+    6
+  ],
+  "generated_at_utc": "2026-05-05T22:32:53.773499+00:00",
+  "model_metadata_uri": "results\\d2_d7_beta_2026_05",
+  "n_predictions": 17664,
+  "n_recipes": 23,
+  "params": {
+    "n_bins": 10,
+    "n_bootstrap": 1000,
+    "seed": 0
+  },
+  "schema_version": 1,
+  "validation_run_id": "2026-05-05T223253Z_validation",
+  "validation_script_fingerprint": {
+    "file_sha256": "3c9036c5facd4d823674bc924acf8ac96f4380694d0c441cbbb2727510101152",
+    "fingerprinted_at_utc": "2026-05-05T22:32:33.281577+00:00",
+    "git_commit_sha": "45533bde03b06ad01f3bcb2e7bcdee60f180c689",
+    "git_dirty": true,
+    "script_path": "C:\\Users\\Amin\\Desktop\\trojan\\qgi-6.0-ml\\qgi-ml\\scripts\\validate_ml_model.py"
+  }
+}

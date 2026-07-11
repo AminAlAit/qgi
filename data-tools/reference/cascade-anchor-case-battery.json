@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "generated": "2026-05-11",
+  "owner": "cascade-track",
+  "source_of_truth": "docs/specs/internal/majles/2026-05-03_Ihsa_post_phase4_DECISION_v2.md Section 2 (8-case battery, Kwame's list, adopted unanimously)",
+  "phase_doc": "docs/specs/internal/ops/cascade-track/phase-5-v0.1a.md Step 3",
+  "purpose": "Regression suite for the cascade methodology (NOT the ML model). Each phase gate (v0.1a, v0.2, Phase 6) evaluates this 8-case battery and reports pass/fail per case from the validate_weight_matrix.py output.",
+  "naming_note": "Filename is `cascade-anchor-case-battery.json` (NOT `anchor-case-battery.json`) because ML-Opus owns the latter at `qgi-data/reference/anchor-case-battery.json` for the parallel ML model regression suite (98 cases, schema_version 2, last updated 2026-05-04). The two batteries are independent: cascade's 8-case battery tracks the cascade EB weight matrix; ML-Opus's 98-case battery tracks the per-recipe ML model. Both are 'regression suites, not validation' per Kwame's standing warning.",
+  "important_caveat": "Per Kwame's warning: passing all 8 cases tells us we did NOT BREAK anchor cases; it does NOT tell us the methodology is correct. Any external claim built on cascade-side AUC numbers must distinguish regression-test pass from validation pass.",
+  "evaluation_semantics": {
+    "rank_basis": "anomaly_score percentile rank within (event_category) cell, ASCENDING by anomaly_score (lowest score = rank 1). Percentile = rank / n_countries, so: percentile=0.05 = BOTTOM 5% (least predicted-risk); percentile=0.95 = TOP 5% (most predicted-risk). Under the v4 risk-direction convention (qgi-ml PR #43 B1 fix), HIGH anomaly_score = HIGH event probability â€” so HIGH percentile = HIGH predicted-risk. All predicate interpretations below use this convention (high percentile = high risk).",
+    "predicate_types": {
+      "percentile_below": "country's predicted-risk percentile must be BELOW the given threshold for the named event_category. e.g. percentile_below 0.30 means: country is among the LEAST predicted-risk 30% on that category (below the 30th-percentile risk threshold). Used for: high-confidence negatives (Malta-Coup, Iceland-CW).",
+      "percentile_above": "country's predicted-risk percentile must be ABOVE the given threshold. e.g. percentile_above 0.50 means: country is in the upper half by predicted risk. Used for: true-positive recovery (Tunisia, Sri Lanka, Yemen).",
+      "rank_floor_all_categories": "country's predicted-risk percentile must be BELOW the given threshold for ALL specified event_categories. Used for: boring/stable-state floors (Norway, Switzerland).",
+      "multi_category_count_above": "country's predicted-risk percentile must be ABOVE the given threshold for AT LEAST N of the specified event_categories. Used for: failed-state recovery (Yemen/Somalia >=3 conflict).",
+      "rank_stability_across_versions": "country's predicted-risk rank percentile must change by NO MORE THAN the given delta across phase versions or arms. Requires comparison across two runs. Used for: rank-stability anchor (Venezuela)."
+    }
+  },
+  "cases": [
+    {
+      "case_id": 1,
+      "country": "Malta",
+      "country_id": 134,
+      "in_evaluation_universe": false,
+      "universe_note": "Malta is NOT in qgi-data/events/countries_100.json â€” the v0.1a evaluation cannot rank Malta. Implementation must emit `passed=null, reason='country_outside_evaluation_universe'` rather than fail. If/when Malta is added to the country list, this flag flips to true and the predicate becomes evaluable.",
+      "event_categories": [
+        "military_coup"
+      ],
+      "test_type": "high_confidence_negative",
+      "asymmetric_battery_role": "negative (Roshani): missing this case is less costly than missing a positive (cases 4, 5, 8). Soft at v0.1a; strict at Phase 6.",
+      "predicate": {
+        "type": "percentile_below",
+        "threshold": 0.3,
+        "interpretation": "Malta should be BELOW the 30th percentile on military_coup predicted risk (among the 30% LEAST predicted-risk countries on this category)."
+      },
+      "rationale": "Structural negative: small island democracy, no standing army, no historical coup. The whole point of the |z_score| -> direction * z_score fix was so that a country whose democracy z is HIGH (like Malta) doesn't get scored as anomalous-and-therefore-risky. If Malta is still above the 30th percentile post-fix, the formula change didn't propagate to Malta's case.",
+      "phase_gate": "Phase 6",
+      "evaluation_scope": "per_arm",
+      "v0_1a_expected": "directional movement DOWN vs Phase 4 v0.2 (no strict percentile floor at v0.1a; Phase 6 per-category formulas is the strict gate). Tolerance: percentile delta <= 0 (no upward movement).",
+      "v0_1a_baseline_source": "qgi-data/reference/phase4-validation.json (D-arm) percentile rank of Malta on military_coup â€” comparison only valid if Malta was in the evaluation universe at Phase 4 v0.2 (it was not). At v0.1a, this case is informational only."
+    },
+    {
+      "case_id": 2,
+      "country": "Iceland",
+      "country_id": 99,
+      "in_evaluation_universe": false,
+      "universe_note": "Iceland is NOT in qgi-data/events/countries_100.json â€” same as Malta (case 1). Implementation emits `passed=null, reason='country_outside_evaluation_universe'`.",
+      "event_categories": [
+        "civil_war_and_insurgency"
+      ],
+      "test_type": "high_confidence_negative",
+      "asymmetric_battery_role": "negative (Roshani): missing this case is less costly than missing a positive. Soft at v0.1a; strict at Phase 6.",
+      "predicate": {
+        "type": "percentile_below",
+        "threshold": 0.3,
+        "interpretation": "Iceland should be BELOW the 30th percentile on civil_war_and_insurgency predicted risk."
+      },
+      "rationale": "Extreme structural negative: rule-of-law maximum, no historical conflict, zero base rate. Same mechanism as Malta â€” if directional indicators are scored correctly, Iceland's high democracy + high rule-of-law + high gender equality should NOT register as anomaly.",
+      "phase_gate": "Phase 6",
+      "evaluation_scope": "per_arm",
+      "v0_1a_expected": "directional movement DOWN vs Phase 4 v0.2. Tolerance: percentile delta <= 0.",
+      "v0_1a_baseline_source": "qgi-data/reference/phase4-validation.json (D-arm) â€” but Iceland is outside the universe, so this case is informational-only at v0.1a."
+    },
+    {
+      "case_id": 3,
+      "country": "Norway",
+      "country_id": 165,
+      "in_evaluation_universe": true,
+      "event_categories": [
+        "civil_war_and_insurgency",
+        "military_coup",
+        "interstate_war",
+        "political_violence",
+        "ethnic_and_communal_conflict",
+        "terrorist_attack",
+        "territorial_disputes"
+      ],
+      "test_type": "boring_country_floor",
+      "asymmetric_battery_role": "negative-floor (Roshani): a soft floor test; missing this is less costly than missing a positive. But because it's a multi-category floor, breaching it on ANY one category is informative â€” the formula is mis-scoring a stable state.",
+      "predicate": {
+        "type": "rank_floor_all_categories",
+        "threshold": 0.2,
+        "interpretation": "Norway should be in the BOTTOM QUINTILE (below the 20th percentile by predicted risk) on EVERY conflict category in the list."
+      },
+      "rationale": "Boring-country test: Norway is a high-trust, high-democracy, stable Nordic state with no recent history of any conflict-category event. Should rank near the floor across ALL conflict categories. Any conflict category where Norway breaches the 20th percentile is a signal the formula is mis-scoring a stable state.",
+      "phase_gate": "v0.1a",
+      "evaluation_scope": "per_arm",
+      "v0_1a_expected": "must pass - this is the floor test"
+    },
+    {
+      "case_id": 4,
+      "country": "Tunisia",
+      "country_id": 227,
+      "in_evaluation_universe": true,
+      "asymmetric_battery_role": "positive â€” MUST PASS (Roshani's asymmetric battery: catching positives matters more than missing negatives). Tunisia is a true-positive case where the event DID happen; the methodology surfacing it is the whole point.",
+      "evaluation_scope": "per_arm",
+      "event_categories": [
+        "democratic_transition"
+      ],
+      "test_type": "true_positive_recovery",
+      "predicate": {
+        "type": "percentile_above",
+        "threshold": 0.5,
+        "evaluation_window": {
+          "start_year": 2010,
+          "end_year": 2011
+        },
+        "interpretation": "For the 2010-2011 window (the Tunisian revolution), Tunisia should be in the TOP HALF (above the 50th percentile) on democratic_transition predicted risk. This is a true-positive case - the event DID happen - so the methodology must surface it."
+      },
+      "rationale": "True-positive recovery test: the Tunisian revolution of 2010-2011 (Arab Spring origin) was a major democratic_transition event. Tests whether the fix catches genuine risk, not just avoids false positives (Roshani's asymmetric battery point). For v0.1a runs with cutoff_year=2014, the predicate is evaluated against the country's overall post-cutoff democratic_transition trajectory which the 2010-2011 event sits within the pre-cutoff window for - reframe as 'in the v0.1a run with cutoff=2014, does Tunisia rank in the top half of democratic_transition predicted-risk?'",
+      "phase_gate": "v0.1a",
+      "v0_1a_expected": "must pass (asymmetric battery: catching positives matters more than missing negatives)"
+    },
+    {
+      "case_id": 5,
+      "country": "Sri Lanka",
+      "country_id": 211,
+      "in_evaluation_universe": true,
+      "asymmetric_battery_role": "positive â€” MUST PASS. Sri Lanka 2022 is a true-positive non-conflict case (debt default + IMF bailout + mass protests). Catching it on ANY of the three economic categories is sufficient.",
+      "evaluation_scope": "per_arm",
+      "event_categories": [
+        "economic_recession",
+        "currency_crisis",
+        "banking_and_financial_crisis"
+      ],
+      "test_type": "true_positive_non_conflict",
+      "predicate_satisfies_any": true,
+      "category_split_note": "DECISION v2 names this as 'Economic Crisis 2022' (single category). The canonical taxonomy has no single `economic_crisis` label, so the case is evaluated against 3 closest-equivalents: `economic_recession`, `currency_crisis`, `banking_and_financial_crisis`. With `predicate_satisfies_any: true`, the case passes if Sri Lanka is in the top half on AT LEAST ONE of the three (matching the DECISION v2 intent of a single-category test against the closest available evidence).",
+      "predicate": {
+        "type": "percentile_above",
+        "threshold": 0.5,
+        "evaluation_window": {
+          "start_year": 2022,
+          "end_year": 2022
+        },
+        "interpretation": "Sri Lanka should be in the TOP HALF on economic_crisis predicted risk. Large macroeconomic z-scores (debt-to-GDP, inflation, currency depreciation) should surface Sri Lanka as high-risk."
+      },
+      "rationale": "True-positive non-conflict test: Sri Lanka's 2022 economic crisis had clear leading indicators in macroeconomic data 2-3 years prior. Tests whether the methodology surfaces non-conflict crisis events correctly. v0.1a cutoff_year=2014 means the 2022 event is in the long post-cutoff window; the methodology must surface Sri Lanka as high-risk on economic_crisis based on indicator trajectories visible in the pre-2014 window.",
+      "phase_gate": "v0.1a",
+      "v0_1a_expected": "must pass"
+    },
+    {
+      "case_id": 6,
+      "country": "Venezuela",
+      "country_id": 242,
+      "in_evaluation_universe": true,
+      "asymmetric_battery_role": "stability check â€” distinct from positive/negative role; checks formula consistency, not directional improvement. A passing stability test does NOT validate the methodology; a failing one signals volatility buyers cannot trust.",
+      "evaluation_scope": "cross_arm",
+      "evaluation_scope_note": "MUST be evaluated in Step 5 cross-arm comparison (NOT inside per-arm evaluate_weights). Per-arm evaluator should skip this case with `passed=null, reason='evaluation_scope=cross_arm; computed in step 5 comparison'`.",
+      "event_categories": [
+        "economic_recession",
+        "currency_crisis",
+        "banking_and_financial_crisis"
+      ],
+      "deviation_from_decision_v2": "DECISION v2 names one category ('Economic Instability'); JSON expands to 3 canonical-equivalents under the same logic as case 5. The rank-stability test is applied per-category and the case passes if Venezuela's rank delta is within tolerance on ALL three categories (more conservative than satisfies_any â€” for a stability test we want stability everywhere, not just somewhere).",
+      "test_type": "rank_stability_anchor",
+      "predicate": {
+        "type": "rank_stability_across_versions",
+        "max_percentile_delta": 0.15,
+        "comparison_arms": [
+          "D",
+          "A"
+        ],
+        "interpretation": "Venezuela's predicted-risk percentile on each named category should change by NO MORE THAN 15 percentile points between the v0.1a baseline arm (arm D = Phase 4 v0.2 equivalent) and the v0.1a treatment arm (arm A = signed + filter). Large rank swings indicate the methodology is unstable, not better."
+      },
+      "rationale": "Rank-stability anchor: Venezuela has been in protracted economic instability and political crisis since 2014. Across methodology versions, its predicted-risk rank should be HIGH and STABLE â€” small deltas indicate methodology is converging; large deltas indicate volatility.",
+      "phase_gate": "v0.1a",
+      "v0_1a_expected": "must pass - checks formula stability, not directional improvement"
+    },
+    {
+      "case_id": 7,
+      "country": "Switzerland",
+      "country_id": 216,
+      "in_evaluation_universe": true,
+      "asymmetric_battery_role": "negative-floor (Roshani): looser threshold than Norway because Switzerland's linguistic-fragmentation indicators can elevate ethnic_and_communal_conflict spuriously. Soft test.",
+      "evaluation_scope": "per_arm",
+      "event_categories": [
+        "civil_war_and_insurgency",
+        "military_coup",
+        "interstate_war",
+        "political_violence",
+        "ethnic_and_communal_conflict",
+        "terrorist_attack",
+        "territorial_disputes"
+      ],
+      "test_type": "stable_state_floor",
+      "predicate": {
+        "type": "rank_floor_all_categories",
+        "threshold": 0.5,
+        "interpretation": "Switzerland should NEVER be above the 50th percentile (the MEDIAN) on any conflict category. Looser threshold than Norway (case 3) because Switzerland has more linguistic-fragmentation indicators that can spuriously elevate score; the floor is 'never above median' not 'bottom quintile.'"
+      },
+      "rationale": "Stable-state floor: Switzerland is the canonical neutral/stable democracy. Unlike Norway, it has internal linguistic divisions that could spuriously trigger ethnic_conflict signal if directional indicators are mis-handled. The looser floor (median vs quintile) is calibrated to that fact while still detecting gross mis-scoring.",
+      "phase_gate": "v0.1a",
+      "v0_1a_expected": "must pass"
+    },
+    {
+      "case_id": 8,
+      "country": "Yemen",
+      "country_id": 248,
+      "in_evaluation_universe": true,
+      "country_alternatives": [
+        "Somalia"
+      ],
+      "country_alternatives_universe_note": "Somalia is NOT in countries_100.json. If Yemen fails the fallback condition (see country_fallback_rule), Somalia cannot be evaluated either; the case becomes informational (`passed=null, reason='primary insufficient and fallback outside evaluation universe'`).",
+      "country_fallback_rule": {
+        "min_categories_with_data": 3,
+        "min_n_countries_per_category": 5,
+        "interpretation": "Try Yemen first. If Yemen has fewer than 3 event_categories where the (country, category) cell has n_countries >= 5 (the data-sufficiency floor used by compute_per_category_auc), fall back to Somalia â€” but only if Somalia is in_evaluation_universe."
+      },
+      "asymmetric_battery_role": "positive â€” MUST PASS (Roshani). Failed-state recovery on multiple categories is the most informative positive case in the battery.",
+      "evaluation_scope": "per_arm",
+      "event_categories": [
+        "civil_war_and_insurgency",
+        "interstate_war",
+        "political_violence",
+        "humanitarian_crisis",
+        "ethnic_and_communal_conflict",
+        "territorial_disputes",
+        "terrorist_attack",
+        "economic_recession"
+      ],
+      "deviation_from_decision_v2": "DECISION v2 says '>=3 CONFLICT categories.' This JSON includes `economic_recession` and `humanitarian_crisis` alongside the strict-conflict categories. Rationale: a failed state typically scores high on multi-dimensional crisis (economic collapse + humanitarian disaster + conflict), and the test's intent is multi-dimensional crisis integration, not pure-conflict aggregation. If a future Majles convening prefers the strict-conflict reading, drop `economic_recession` and `humanitarian_crisis` from this list.",
+      "test_type": "failed_state_recovery",
+      "predicate": {
+        "type": "multi_category_count_above",
+        "threshold": 0.75,
+        "min_categories": 3,
+        "interpretation": "Yemen (or Somalia, see note) should be in the TOP QUARTILE (above 75th percentile) on AT LEAST 3 of the named conflict/crisis event categories. Yemen is a failed state with active multi-dimensional crisis; a methodology that doesn't surface that on multiple categories simultaneously is broken."
+      },
+      "rationale": "Failed-state recovery test: Yemen has been in active civil war + humanitarian crisis + territorial-disputes for the entire post-2014 window. The methodology should surface failed-state countries on MULTIPLE conflict categories simultaneously, not just one.",
+      "phase_gate": "v0.1a",
+      "v0_1a_expected": "must pass - checks multi-category aggregation"
+    }
+  ],
+  "implementation_notes": {
+    "country_name_resolution": "All country names must match the canonical names in qgi_data.countries (name_1 column). Validation script must validate at load time; raise FileNotFoundError-like error with a clear hint on mismatch.",
+    "event_category_resolution": "All event_categories must match the canonical labels in qgi_data.events.event_category. Validate at load time.",
+    "phase_gate_semantics": "phase_gate='v0.1a' means: this case must pass at the v0.1a evaluation. phase_gate='Phase 6' means: the case is reported at v0.1a (informational, with v0_1a_expected behavior noted in the JSON output) but the strict pass/fail gate is at Phase 6. Cases 1 (Malta) and 2 (Iceland) are Phase-6-gated because the directional fix alone may not be sufficient to move them below the 30th percentile; per-category formula tuning is expected to be required.",
+    "evaluation_window_semantics": "evaluation_window restricts the predicate to a specific (start_year, end_year) range â€” used by Tunisia (case 4) and Sri Lanka (case 5) where the true-positive event has a specific window. For cases without an evaluation_window, the predicate is evaluated against the country's standing-state predicted risk in the full post-cutoff window.",
+    "pass_fail_format": "The validation script must output per-case results as part of the per-arm JSON. Schema: {case_id: int, country: str, country_resolved_to: str | null (Yemen vs Somalia fallback; null if outside universe), event_categories: list, test_type: str, evaluation_scope: 'per_arm' | 'cross_arm', phase_gate: str, predicate_type: str, actual_values: dict (per-category percentiles or null), passed: bool | null, reason: str}. `passed=null` is used for: country outside evaluation universe (cases 1, 2), evaluation_scope=cross_arm at per-arm time (case 6), or primary+fallback both insufficient (case 8 if Yemen fails and Somalia is outside universe).",
+    "curated_events_field_note": "The Athena column is `event_category` (post-`ingest_events.py` ingestion). The source-of-truth curated JSON files (e.g., `events/curated/tunisia.json`) use the field name `category`, not `event_category`. Implementers should grep against the post-ingest column name, not the source-JSON field name.",
+    "note_country_id_added_2026-05-16": "country_id integers added 2026-05-16 per qgi-aws-tf#743 follow-up — resolved from s3://qgi-data-lake-771606957899/pipeline-A-indicator-extractor/countries/countries.csv (the canonical name→id master used by pipeline-A and by the v6 cell-tensor extractor). These IDs match the country_id values in qgi-data/reference/phase4-validation-arm{A,B,C,D}-v6.json per_cell.cells[].country_id. Path B's §5.2.3 anchor battery uses these IDs to index country_intercept[k] in the posterior tensor."
+  }
+}

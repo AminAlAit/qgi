@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "generated": "2026-05-12T00:21:31.396677+00:00",
+  "thresholds_swept": [
+    3,
+    5,
+    7,
+    10,
+    15
+  ],
+  "table": [
+    {
+      "threshold": 3,
+      "arm_A": {
+        "n_cells": 2395,
+        "n_categories": 48,
+        "mean_auc": 0.5023697447356339,
+        "median_auc": 0.5086542113703718
+      },
+      "arm_B": {
+        "n_cells": 2395,
+        "n_categories": 48,
+        "mean_auc": 0.5023697447356339,
+        "median_auc": 0.5086542113703718
+      },
+      "arm_C": {
+        "n_cells": 2395,
+        "n_categories": 48,
+        "mean_auc": 0.5096863568778476,
+        "median_auc": 0.5075757575757576
+      },
+      "arm_D": {
+        "n_cells": 2395,
+        "n_categories": 48,
+        "mean_auc": 0.5096863568778476,
+        "median_auc": 0.5075757575757576
+      },
+      "a_minus_d_mean_auc": -0.007316612142213685
+    },
+    {
+      "threshold": 5,
+      "arm_A": {
+        "n_cells": 424,
+        "n_categories": 14,
+        "mean_auc": 0.5315171840771076,
+        "median_auc": 0.5208333333333333
+      },
+      "arm_B": {
+        "n_cells": 424,
+        "n_categories": 14,
+        "mean_auc": 0.5315171840771076,
+        "median_auc": 0.5208333333333333
+      },
+      "arm_C": {
+        "n_cells": 424,
+        "n_categories": 14,
+        "mean_auc": 0.46908736261566175,
+        "median_auc": 0.4745762711864407
+      },
+      "arm_D": {
+        "n_cells": 424,
+        "n_categories": 14,
+        "mean_auc": 0.46908736261566175,
+        "median_auc": 0.4745762711864407
+      },
+      "a_minus_d_mean_auc": 0.06242982146144582
+    },
+    {
+      "threshold": 7,
+      "arm_A": {
+        "n_cells": 37,
+        "n_categories": 3,
+        "mean_auc": 0.667989417989418,
+        "median_auc": 0.7777777777777778
+      },
+      "arm_B": {
+        "n_cells": 37,
+        "n_categories": 3,
+        "mean_auc": 0.667989417989418,
+        "median_auc": 0.7777777777777778
+      },
+      "arm_C": {
+        "n_cells": 37,
+        "n_categories": 3,
+        "mean_auc": 0.6015873015873016,
+        "median_auc": 0.5714285714285714
+      },
+      "arm_D": {
+        "n_cells": 37,
+        "n_categories": 3,
+        "mean_auc": 0.6015873015873016,
+        "median_auc": 0.5714285714285714
+      },
+      "a_minus_d_mean_auc": 0.06640211640211646
+    },
+    {
+      "threshold": 10,
+      "arm_A": {
+        "n_cells": 0,
+        "n_categories": 0,
+        "mean_auc": null,
+        "median_auc": null
+      },
+      "arm_B": {
+        "n_cells": 0,
+        "n_categories": 0,
+        "mean_auc": null,
+        "median_auc": null
+      },
+      "arm_C": {
+        "n_cells": 0,
+        "n_categories": 0,
+        "mean_auc": null,
+        "median_auc": null
+      },
+      "arm_D": {
+        "n_cells": 0,
+        "n_categories": 0,
+        "mean_auc": null,
+        "median_auc": null
+      },
+      "a_minus_d_mean_auc": null
+    },
+    {
+      "threshold": 15,
+      "arm_A": {
+        "n_cells": 0,
+        "n_categories": 0,
+        "mean_auc": null,
+        "median_auc": null
+      },
+      "arm_B": {
+        "n_cells": 0,
+        "n_categories": 0,
+        "mean_auc": null,
+        "median_auc": null
+      },
+      "arm_C": {
+        "n_cells": 0,
+        "n_categories": 0,
+        "mean_auc": null,
+        "median_auc": null
+      },
+      "arm_D": {
+        "n_cells": 0,
+        "n_categories": 0,
+        "mean_auc": null,
+        "median_auc": null
+      },
+      "a_minus_d_mean_auc": null
+    }
+  ],
+  "n30_floor_breach_by_threshold": {
+    "3": {
+      "any_arm_below_n30": false,
+      "arms_below_n30": [],
+      "any_arm_data_missing": false,
+      "arms_data_missing": [],
+      "arms_below": []
+    },
+    "5": {
+      "any_arm_below_n30": false,
+      "arms_below_n30": [],
+      "any_arm_data_missing": false,
+      "arms_data_missing": [],
+      "arms_below": []
+    },
+    "7": {
+      "any_arm_below_n30": false,
+      "arms_below_n30": [],
+      "any_arm_data_missing": false,
+      "arms_data_missing": [],
+      "arms_below": []
+    },
+    "10": {
+      "any_arm_below_n30": true,
+      "arms_below_n30": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "any_arm_data_missing": false,
+      "arms_data_missing": [],
+      "arms_below": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "15": {
+      "any_arm_below_n30": true,
+      "arms_below_n30": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "any_arm_data_missing": false,
+      "arms_data_missing": [],
+      "arms_below": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    }
+  },
+  "n30_floor_note": "N=30 is Miriam's hard floor per Phase 5 v0.2 charter A4. This summary records WHICH thresholds \u00d7 arms fall below it, but does NOT make a routing decision; \u03b3-stage decision-gate logic is the Majles convening's responsibility (charter \u00a7\u03b3.gate).",
+  "input_arm_files": {
+    "A": "qgi-data\\reference\\phase4-validation-armA.json",
+    "B": "qgi-data\\reference\\phase4-validation-armB.json",
+    "C": "qgi-data\\reference\\phase4-validation-armC.json",
+    "D": "qgi-data\\reference\\phase4-validation-armD.json"
+  }
+}
