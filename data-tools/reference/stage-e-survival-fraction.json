@@ -1,0 +1,1109 @@
+{
+  "schema_version": 1,
+  "generator": "qgi-ml/scripts/run_stage_e_survival_fraction.py",
+  "stage": "E",
+  "n_indicators_attempted": 109,
+  "n_indicators_succeeded": 109,
+  "n_indicators_failed": 0,
+  "wall_time_seconds": 18.1,
+  "summary_by_survival_band": {
+    "high_>0.8": 7,
+    "mid_0.4_to_0.8": 45,
+    "low_<0.4": 57,
+    "amplifies_>1.0": 2
+  },
+  "interpretation": "Per Tariq's I5 RECONVENE: High survival (>80%) = Granger-Newbold concern was overstated for QGI's panel. Mid survival (40-80%) = substantial substrate cleanup. Low survival (<40%) = Granger-Newbold was severe; Phase 4 v0.2 sub-random AUC was substantially driven by spurious structure.",
+  "results": {
+    "AG.PRD.FOOD.XD": {
+      "scdi_baseline_mean_abs_corr": 0.64689,
+      "dscdi_primary_mean_abs_corr": 0.131663,
+      "survival_fraction": 0.203532,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "BM.KLT.DINV.WD.GD.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.211757,
+      "dscdi_primary_mean_abs_corr": 0.185138,
+      "survival_fraction": 0.874296,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "BM.TRF.PWKR.CD.DT": {
+      "scdi_baseline_mean_abs_corr": 0.500371,
+      "dscdi_primary_mean_abs_corr": 0.165845,
+      "survival_fraction": 0.331443,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "BN.CAB.XOKA.GD.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.276535,
+      "dscdi_primary_mean_abs_corr": 0.193638,
+      "survival_fraction": 0.70023,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "BX.KLT.DINV.WD.GD.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.254373,
+      "dscdi_primary_mean_abs_corr": 0.153491,
+      "survival_fraction": 0.60341,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "CC.EST": {
+      "scdi_baseline_mean_abs_corr": 0.416751,
+      "dscdi_primary_mean_abs_corr": 0.196902,
+      "survival_fraction": 0.472468,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "demeaning_applied": true
+    },
+    "DT.DOD.DECT.GN.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.411994,
+      "dscdi_primary_mean_abs_corr": 0.170858,
+      "survival_fraction": 0.41471,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "DT.TDS.DECT.EX.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.318297,
+      "dscdi_primary_mean_abs_corr": 0.158531,
+      "survival_fraction": 0.49806,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "EG.ELC.ACCS.RU.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.609924,
+      "dscdi_primary_mean_abs_corr": 0.177796,
+      "survival_fraction": 0.291505,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "ambiguous",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "EG.ELC.ACCS.UR.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.602941,
+      "dscdi_primary_mean_abs_corr": 0.182852,
+      "survival_fraction": 0.303266,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "ambiguous",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "EG.IMP.CONS.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.473777,
+      "dscdi_primary_mean_abs_corr": 0.159462,
+      "survival_fraction": 0.336576,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "EN.GHG.CO2.PC.CE.AR5": {
+      "scdi_baseline_mean_abs_corr": 0.502109,
+      "dscdi_primary_mean_abs_corr": 0.131298,
+      "survival_fraction": 0.261492,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "FA-01": {
+      "scdi_baseline_mean_abs_corr": 0.258062,
+      "dscdi_primary_mean_abs_corr": 0.194026,
+      "survival_fraction": 0.75186,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "ambiguous",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "FA-02": {
+      "scdi_baseline_mean_abs_corr": 0.301133,
+      "dscdi_primary_mean_abs_corr": 0.199555,
+      "survival_fraction": 0.662683,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "ambiguous",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "FA-03": {
+      "scdi_baseline_mean_abs_corr": 0.206136,
+      "dscdi_primary_mean_abs_corr": 0.223762,
+      "survival_fraction": 1.085505,
+      "survival_amplifies_correlation": true,
+      "audit_classification": "ambiguous",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "FA-04": {
+      "scdi_baseline_mean_abs_corr": 0.846049,
+      "dscdi_primary_mean_abs_corr": 0.192317,
+      "survival_fraction": 0.227312,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "ambiguous",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "FA-05": {
+      "scdi_baseline_mean_abs_corr": 0.932922,
+      "dscdi_primary_mean_abs_corr": 0.192078,
+      "survival_fraction": 0.205888,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "ambiguous",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "FB.AST.NPER.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.470008,
+      "dscdi_primary_mean_abs_corr": 0.271923,
+      "survival_fraction": 0.57855,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "ambiguous",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "FI.RES.TOTL.CD": {
+      "scdi_baseline_mean_abs_corr": 0.735035,
+      "dscdi_primary_mean_abs_corr": 0.215264,
+      "survival_fraction": 0.292862,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "ambiguous",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "FI.RES.TOTL.MO": {
+      "scdi_baseline_mean_abs_corr": 0.393237,
+      "dscdi_primary_mean_abs_corr": 0.269024,
+      "survival_fraction": 0.684125,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "FM.LBL.BMNY.GD.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.553879,
+      "dscdi_primary_mean_abs_corr": 0.186208,
+      "survival_fraction": 0.336188,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "FP.CPI.TOTL.ZG": {
+      "scdi_baseline_mean_abs_corr": 0.322075,
+      "dscdi_primary_mean_abs_corr": 0.657615,
+      "survival_fraction": 2.041808,
+      "survival_amplifies_correlation": true,
+      "audit_classification": "I(1)",
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "demeaning_applied": true
+    },
+    "FR.INR.LEND": {
+      "scdi_baseline_mean_abs_corr": 0.514367,
+      "dscdi_primary_mean_abs_corr": 0.209472,
+      "survival_fraction": 0.407243,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "GC.DOD.TOTL.GD.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.507591,
+      "dscdi_primary_mean_abs_corr": 0.27591,
+      "survival_fraction": 0.543568,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "GC.REV.XGRT.GD.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.403016,
+      "dscdi_primary_mean_abs_corr": 0.19838,
+      "survival_fraction": 0.492238,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "GC.TAX.TOTL.GD.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.395197,
+      "dscdi_primary_mean_abs_corr": 0.20288,
+      "survival_fraction": 0.513364,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "GC.XPN.TOTL.GD.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.409107,
+      "dscdi_primary_mean_abs_corr": 0.270739,
+      "survival_fraction": 0.661781,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "GE.EST": {
+      "scdi_baseline_mean_abs_corr": 0.421664,
+      "dscdi_primary_mean_abs_corr": 0.194249,
+      "survival_fraction": 0.460673,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "B",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "IT.CEL.SETS.P2": {
+      "scdi_baseline_mean_abs_corr": 0.897578,
+      "dscdi_primary_mean_abs_corr": 0.221486,
+      "survival_fraction": 0.246759,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "ambiguous",
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "demeaning_applied": true
+    },
+    "IT.NET.USER.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.887267,
+      "dscdi_primary_mean_abs_corr": 0.267528,
+      "survival_fraction": 0.30152,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "ambiguous",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "MS.MIL.MPRT.KD": {
+      "scdi_baseline_mean_abs_corr": 0.221674,
+      "dscdi_primary_mean_abs_corr": 0.177838,
+      "survival_fraction": 0.802251,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "MS.MIL.TOTL.TF.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.489775,
+      "dscdi_primary_mean_abs_corr": 0.261523,
+      "survival_fraction": 0.533966,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "MS.MIL.XPND.GD.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.419263,
+      "dscdi_primary_mean_abs_corr": 0.241455,
+      "survival_fraction": 0.575903,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "demeaning_applied": true
+    },
+    "MS.MIL.XPRT.KD": {
+      "scdi_baseline_mean_abs_corr": 0.239433,
+      "dscdi_primary_mean_abs_corr": 0.195108,
+      "survival_fraction": 0.814875,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "NE.CON.GOVT.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.371062,
+      "dscdi_primary_mean_abs_corr": 0.195369,
+      "survival_fraction": 0.526512,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "NE.CON.PRVT.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.394031,
+      "dscdi_primary_mean_abs_corr": 0.168842,
+      "survival_fraction": 0.428499,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "NE.EXP.GNFS.CD": {
+      "scdi_baseline_mean_abs_corr": 0.787326,
+      "dscdi_primary_mean_abs_corr": 0.467803,
+      "survival_fraction": 0.594167,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "ambiguous",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "NE.EXP.GNFS.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.436032,
+      "dscdi_primary_mean_abs_corr": 0.183695,
+      "survival_fraction": 0.421288,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "demeaning_applied": true
+    },
+    "NE.GDI.TOTL.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.300801,
+      "dscdi_primary_mean_abs_corr": 0.169374,
+      "survival_fraction": 0.563076,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "NE.IMP.GNFS.CD": {
+      "scdi_baseline_mean_abs_corr": 0.833057,
+      "dscdi_primary_mean_abs_corr": 0.46863,
+      "survival_fraction": 0.562543,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "ambiguous",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "NE.IMP.GNFS.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.391638,
+      "dscdi_primary_mean_abs_corr": 0.173311,
+      "survival_fraction": 0.442528,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "demeaning_applied": true
+    },
+    "NV.AGR.TOTL.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.559837,
+      "dscdi_primary_mean_abs_corr": 0.172089,
+      "survival_fraction": 0.307392,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "NV.IND.MANF.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.483969,
+      "dscdi_primary_mean_abs_corr": 0.166842,
+      "survival_fraction": 0.344736,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "NV.IND.TOTL.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.435368,
+      "dscdi_primary_mean_abs_corr": 0.179488,
+      "survival_fraction": 0.412267,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "NV.SRV.TOTL.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.437926,
+      "dscdi_primary_mean_abs_corr": 0.18323,
+      "survival_fraction": 0.418405,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "NY.GDP.DEFL.KD.ZG": {
+      "scdi_baseline_mean_abs_corr": 0.224563,
+      "dscdi_primary_mean_abs_corr": 0.163016,
+      "survival_fraction": 0.725925,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "NY.GDP.MKTP.CD": {
+      "scdi_baseline_mean_abs_corr": 0.881758,
+      "dscdi_primary_mean_abs_corr": 0.357589,
+      "survival_fraction": 0.405541,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "ambiguous",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "NY.GDP.MKTP.KD": {
+      "scdi_baseline_mean_abs_corr": 0.830336,
+      "dscdi_primary_mean_abs_corr": 0.312757,
+      "survival_fraction": 0.376663,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "ambiguous",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "NY.GDP.MKTP.KD.ZG": {
+      "scdi_baseline_mean_abs_corr": 0.211313,
+      "dscdi_primary_mean_abs_corr": 0.211313,
+      "survival_fraction": 1.0,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(0)",
+      "indicator_class": "A",
+      "transform": "pass_through",
+      "demeaning_applied": false
+    },
+    "NY.GDP.PCAP.CD": {
+      "scdi_baseline_mean_abs_corr": 0.818516,
+      "dscdi_primary_mean_abs_corr": 0.535854,
+      "survival_fraction": 0.654665,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "demeaning_applied": true
+    },
+    "NY.GNP.PCAP.CD": {
+      "scdi_baseline_mean_abs_corr": 0.821095,
+      "dscdi_primary_mean_abs_corr": 0.350061,
+      "survival_fraction": 0.426334,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "PV.EST": {
+      "scdi_baseline_mean_abs_corr": 0.355977,
+      "dscdi_primary_mean_abs_corr": 0.208737,
+      "survival_fraction": 0.586378,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "RL.EST": {
+      "scdi_baseline_mean_abs_corr": 0.39341,
+      "dscdi_primary_mean_abs_corr": 0.20521,
+      "survival_fraction": 0.521619,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "B",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "RQ.EST": {
+      "scdi_baseline_mean_abs_corr": 0.405075,
+      "dscdi_primary_mean_abs_corr": 0.208734,
+      "survival_fraction": 0.515298,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "B",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "SE.PRM.ENRR": {
+      "scdi_baseline_mean_abs_corr": 0.418649,
+      "dscdi_primary_mean_abs_corr": 0.192327,
+      "survival_fraction": 0.459398,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "demeaning_applied": true
+    },
+    "SH.DYN.MORT": {
+      "scdi_baseline_mean_abs_corr": 0.895521,
+      "dscdi_primary_mean_abs_corr": 0.357026,
+      "survival_fraction": 0.39868,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "ambiguous",
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "demeaning_applied": true
+    },
+    "SI.POV.GINI": {
+      "scdi_baseline_mean_abs_corr": 0.446564,
+      "dscdi_primary_mean_abs_corr": 0.204745,
+      "survival_fraction": 0.45849,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "SL.EMP.TOTL.SP.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.437256,
+      "dscdi_primary_mean_abs_corr": 0.249889,
+      "survival_fraction": 0.571494,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "SL.TLF.CACT.FE.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.530903,
+      "dscdi_primary_mean_abs_corr": 0.213744,
+      "survival_fraction": 0.402605,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "ambiguous",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "SL.UEM.1524.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.382635,
+      "dscdi_primary_mean_abs_corr": 0.213102,
+      "survival_fraction": 0.556932,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "SL.UEM.TOTL.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.380452,
+      "dscdi_primary_mean_abs_corr": 0.211375,
+      "survival_fraction": 0.555591,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "demeaning_applied": true
+    },
+    "SM.POP.NETM": {
+      "scdi_baseline_mean_abs_corr": 0.231901,
+      "dscdi_primary_mean_abs_corr": 0.111777,
+      "survival_fraction": 0.482003,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "SM.POP.RHCR.EO": {
+      "scdi_baseline_mean_abs_corr": 0.378313,
+      "dscdi_primary_mean_abs_corr": 0.174113,
+      "survival_fraction": 0.460236,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "SP.DYN.LE00.IN": {
+      "scdi_baseline_mean_abs_corr": 0.849372,
+      "dscdi_primary_mean_abs_corr": 0.177336,
+      "survival_fraction": 0.208785,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "demeaning_applied": true
+    },
+    "SP.DYN.TFRT.IN": {
+      "scdi_baseline_mean_abs_corr": 0.77829,
+      "dscdi_primary_mean_abs_corr": 0.22972,
+      "survival_fraction": 0.29516,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "ambiguous",
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "demeaning_applied": true
+    },
+    "SP.POP.TOTL": {
+      "scdi_baseline_mean_abs_corr": 0.836038,
+      "dscdi_primary_mean_abs_corr": 0.306391,
+      "survival_fraction": 0.36648,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(2)_or_higher",
+      "indicator_class": "A",
+      "transform": "log_diff",
+      "demeaning_applied": true
+    },
+    "TX.VAL.TECH.MF.ZS": {
+      "scdi_baseline_mean_abs_corr": 0.346976,
+      "dscdi_primary_mean_abs_corr": 0.219059,
+      "survival_fraction": 0.631337,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "ambiguous",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "VA.EST": {
+      "scdi_baseline_mean_abs_corr": 0.381757,
+      "dscdi_primary_mean_abs_corr": 0.232109,
+      "survival_fraction": 0.608003,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "B",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "VC.BTL.DETH": {
+      "scdi_baseline_mean_abs_corr": 0.294718,
+      "dscdi_primary_mean_abs_corr": 0.227348,
+      "survival_fraction": 0.77141,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "ambiguous",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "VC.IDP.NWDS": {
+      "scdi_baseline_mean_abs_corr": 0.273179,
+      "dscdi_primary_mean_abs_corr": 0.245648,
+      "survival_fraction": 0.899222,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "ambiguous",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2cacamps": {
+      "scdi_baseline_mean_abs_corr": 0.39563,
+      "dscdi_primary_mean_abs_corr": 0.109252,
+      "survival_fraction": 0.276148,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2clkill": {
+      "scdi_baseline_mean_abs_corr": 0.407114,
+      "dscdi_primary_mean_abs_corr": 0.086872,
+      "survival_fraction": 0.213385,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2cltort": {
+      "scdi_baseline_mean_abs_corr": 0.426996,
+      "dscdi_primary_mean_abs_corr": 0.095501,
+      "survival_fraction": 0.223657,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2cseeorgs": {
+      "scdi_baseline_mean_abs_corr": 0.488452,
+      "dscdi_primary_mean_abs_corr": 0.094496,
+      "survival_fraction": 0.19346,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2csprtcpt": {
+      "scdi_baseline_mean_abs_corr": 0.484635,
+      "dscdi_primary_mean_abs_corr": 0.09042,
+      "survival_fraction": 0.186574,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2csreprss": {
+      "scdi_baseline_mean_abs_corr": 0.418351,
+      "dscdi_primary_mean_abs_corr": 0.098299,
+      "survival_fraction": 0.234969,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2elintmon": {
+      "scdi_baseline_mean_abs_corr": 0.570862,
+      "dscdi_primary_mean_abs_corr": 0.0,
+      "survival_fraction": 0.0,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2ex_hosw": {
+      "scdi_baseline_mean_abs_corr": 0.246689,
+      "dscdi_primary_mean_abs_corr": 0.058661,
+      "survival_fraction": 0.237794,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "ambiguous",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2exaphogp": {
+      "scdi_baseline_mean_abs_corr": 0.374463,
+      "dscdi_primary_mean_abs_corr": 0.243685,
+      "survival_fraction": 0.650758,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "ambiguous",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2excrptps": {
+      "scdi_baseline_mean_abs_corr": 0.432632,
+      "dscdi_primary_mean_abs_corr": 0.083,
+      "survival_fraction": 0.191849,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2exl_legitlead": {
+      "scdi_baseline_mean_abs_corr": 0.394788,
+      "dscdi_primary_mean_abs_corr": 0.103301,
+      "survival_fraction": 0.261662,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2exremhog": {
+      "scdi_baseline_mean_abs_corr": 0.361653,
+      "dscdi_primary_mean_abs_corr": 0.122853,
+      "survival_fraction": 0.3397,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2jureform": {
+      "scdi_baseline_mean_abs_corr": 0.256315,
+      "dscdi_primary_mean_abs_corr": 0.093623,
+      "survival_fraction": 0.365264,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2lgbicam": {
+      "scdi_baseline_mean_abs_corr": 0.31661,
+      "dscdi_primary_mean_abs_corr": 0.049399,
+      "survival_fraction": 0.156026,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2lgqstexp": {
+      "scdi_baseline_mean_abs_corr": 0.393487,
+      "dscdi_primary_mean_abs_corr": 0.090054,
+      "survival_fraction": 0.228862,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2mecenefm": {
+      "scdi_baseline_mean_abs_corr": 0.430251,
+      "dscdi_primary_mean_abs_corr": 0.097809,
+      "survival_fraction": 0.22733,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2pepwrgen": {
+      "scdi_baseline_mean_abs_corr": 0.709816,
+      "dscdi_primary_mean_abs_corr": 0.101067,
+      "survival_fraction": 0.142385,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2pepwrort": {
+      "scdi_baseline_mean_abs_corr": 0.54998,
+      "dscdi_primary_mean_abs_corr": 0.115324,
+      "survival_fraction": 0.209687,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2pepwrses": {
+      "scdi_baseline_mean_abs_corr": 0.52013,
+      "dscdi_primary_mean_abs_corr": 0.087997,
+      "survival_fraction": 0.169183,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2pepwrsoc": {
+      "scdi_baseline_mean_abs_corr": 0.548505,
+      "dscdi_primary_mean_abs_corr": 0.085397,
+      "survival_fraction": 0.155691,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2psprlnks": {
+      "scdi_baseline_mean_abs_corr": 0.440884,
+      "dscdi_primary_mean_abs_corr": 0.087408,
+      "survival_fraction": 0.198257,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2stfisccap": {
+      "scdi_baseline_mean_abs_corr": 0.447381,
+      "dscdi_primary_mean_abs_corr": 0.076989,
+      "survival_fraction": 0.172087,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2svdomaut": {
+      "scdi_baseline_mean_abs_corr": 0.475781,
+      "dscdi_primary_mean_abs_corr": 0.074953,
+      "survival_fraction": 0.157537,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2x_clphy": {
+      "scdi_baseline_mean_abs_corr": 0.425082,
+      "dscdi_primary_mean_abs_corr": 0.089805,
+      "survival_fraction": 0.211265,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2x_clpol": {
+      "scdi_baseline_mean_abs_corr": 0.509112,
+      "dscdi_primary_mean_abs_corr": 0.11438,
+      "survival_fraction": 0.224667,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2x_clpriv": {
+      "scdi_baseline_mean_abs_corr": 0.56671,
+      "dscdi_primary_mean_abs_corr": 0.101999,
+      "survival_fraction": 0.179985,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2x_corr": {
+      "scdi_baseline_mean_abs_corr": 0.45575,
+      "dscdi_primary_mean_abs_corr": 0.094297,
+      "survival_fraction": 0.206905,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2x_freexp_altinf": {
+      "scdi_baseline_mean_abs_corr": 0.511436,
+      "dscdi_primary_mean_abs_corr": 0.107468,
+      "survival_fraction": 0.21013,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2x_gender": {
+      "scdi_baseline_mean_abs_corr": 0.795456,
+      "dscdi_primary_mean_abs_corr": 0.109934,
+      "survival_fraction": 0.138202,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2x_jucon": {
+      "scdi_baseline_mean_abs_corr": 0.404254,
+      "dscdi_primary_mean_abs_corr": 0.091789,
+      "survival_fraction": 0.227058,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2x_libdem": {
+      "scdi_baseline_mean_abs_corr": 0.547266,
+      "dscdi_primary_mean_abs_corr": 0.129063,
+      "survival_fraction": 0.235832,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "demeaning_applied": true
+    },
+    "v2x_neopat": {
+      "scdi_baseline_mean_abs_corr": 0.446079,
+      "dscdi_primary_mean_abs_corr": 0.094643,
+      "survival_fraction": 0.212167,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2x_partip": {
+      "scdi_baseline_mean_abs_corr": 0.625335,
+      "dscdi_primary_mean_abs_corr": 0.095392,
+      "survival_fraction": 0.152545,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2x_polyarchy": {
+      "scdi_baseline_mean_abs_corr": 0.601053,
+      "dscdi_primary_mean_abs_corr": 0.113657,
+      "survival_fraction": 0.189096,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "A",
+      "transform": "first_diff",
+      "demeaning_applied": true
+    },
+    "v2x_regime": {
+      "scdi_baseline_mean_abs_corr": 0.462421,
+      "dscdi_primary_mean_abs_corr": 0.054531,
+      "survival_fraction": 0.117925,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2x_rule": {
+      "scdi_baseline_mean_abs_corr": 0.441989,
+      "dscdi_primary_mean_abs_corr": 0.093111,
+      "survival_fraction": 0.210664,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2xeg_eqprotec": {
+      "scdi_baseline_mean_abs_corr": 0.582703,
+      "dscdi_primary_mean_abs_corr": 0.091737,
+      "survival_fraction": 0.157434,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2xel_frefair": {
+      "scdi_baseline_mean_abs_corr": 0.441411,
+      "dscdi_primary_mean_abs_corr": 0.080473,
+      "survival_fraction": 0.182308,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    },
+    "v2xlg_legcon": {
+      "scdi_baseline_mean_abs_corr": 0.426012,
+      "dscdi_primary_mean_abs_corr": 0.099459,
+      "survival_fraction": 0.233466,
+      "survival_amplifies_correlation": false,
+      "audit_classification": "I(1)",
+      "indicator_class": "C",
+      "transform": "first_diff",
+      "demeaning_applied": false
+    }
+  },
+  "failed_indicators": []
+}

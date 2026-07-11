@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "purpose": "Pre-convening empirical artifact for T12 6-seat Majles (convergence 2026-05-15). Resolves k-factor disagreement.",
+  "generated_at": "2026-05-15T17:19:05.754263+00:00",
+  "cutoff_year": 2014,
+  "stratum_threshold_n_indicators_used": 10,
+  "input_provenance_sha256": "b77dc37d9eaf027eeac55926e3b9f70f6a716c909a334adf9665db7422165fef",
+  "per_arm_summary": {
+    "A": {
+      "signed_scoring": true,
+      "591_filter_applied": true,
+      "n_cells_total": 12250,
+      "n_cells_data_sufficient": 0,
+      "n_cells_thin_coverage": 12250,
+      "full_distribution": {
+        "n": 12250,
+        "n_finite": 12250,
+        "min": -7.056489608659942,
+        "max": 5.791716569652404,
+        "mean": 6.960418636017308e-18,
+        "std": 0.5084541943593421,
+        "p1": -1.8818248098677084,
+        "p5": -0.6089466795181319,
+        "p10": -0.3585531321153817,
+        "p25": -0.10370717465225221,
+        "p50": 0.05344043015255211,
+        "p75": 0.14277748425237943,
+        "p90": 0.3323643040925411,
+        "p95": 0.5343403321096959,
+        "p99": 1.2827413873833058
+      },
+      "stratum_data_sufficient": {
+        "n": 0,
+        "all_nan": true
+      },
+      "stratum_thin_coverage": {
+        "n": 12250,
+        "n_finite": 12250,
+        "min": -7.056489608659942,
+        "max": 5.791716569652404,
+        "mean": 6.960418636017308e-18,
+        "std": 0.5084541943593421,
+        "p1": -1.8818248098677084,
+        "p5": -0.6089466795181319,
+        "p10": -0.3585531321153817,
+        "p25": -0.10370717465225221,
+        "p50": 0.05344043015255211,
+        "p75": 0.14277748425237943,
+        "p90": 0.3323643040925411,
+        "p95": 0.5343403321096959,
+        "p99": 1.2827413873833058
+      },
+      "headline_p5_p95_range_full": [
+        -0.6089466795181319,
+        0.5343403321096959
+      ],
+      "headline_p5_p95_range_data_sufficient": [
+        null,
+        null
+      ]
+    },
+    "B": {
+      "signed_scoring": true,
+      "591_filter_applied": false,
+      "n_cells_total": 12250,
+      "n_cells_data_sufficient": 0,
+      "n_cells_thin_coverage": 12250,
+      "full_distribution": {
+        "n": 12250,
+        "n_finite": 12250,
+        "min": -7.056489608659942,
+        "max": 5.791716569652404,
+        "mean": 6.960418636017308e-18,
+        "std": 0.5084541943593421,
+        "p1": -1.8818248098677084,
+        "p5": -0.6089466795181319,
+        "p10": -0.3585531321153817,
+        "p25": -0.10370717465225221,
+        "p50": 0.05344043015255211,
+        "p75": 0.14277748425237943,
+        "p90": 0.3323643040925411,
+        "p95": 0.5343403321096959,
+        "p99": 1.2827413873833058
+      },
+      "stratum_data_sufficient": {
+        "n": 0,
+        "all_nan": true
+      },
+      "stratum_thin_coverage": {
+        "n": 12250,
+        "n_finite": 12250,
+        "min": -7.056489608659942,
+        "max": 5.791716569652404,
+        "mean": 6.960418636017308e-18,
+        "std": 0.5084541943593421,
+        "p1": -1.8818248098677084,
+        "p5": -0.6089466795181319,
+        "p10": -0.3585531321153817,
+        "p25": -0.10370717465225221,
+        "p50": 0.05344043015255211,
+        "p75": 0.14277748425237943,
+        "p90": 0.3323643040925411,
+        "p95": 0.5343403321096959,
+        "p99": 1.2827413873833058
+      },
+      "headline_p5_p95_range_full": [
+        -0.6089466795181319,
+        0.5343403321096959
+      ],
+      "headline_p5_p95_range_data_sufficient": [
+        null,
+        null
+      ]
+    },
+    "C": {
+      "signed_scoring": false,
+      "591_filter_applied": true,
+      "n_cells_total": 12250,
+      "n_cells_data_sufficient": 0,
+      "n_cells_thin_coverage": 12250,
+      "full_distribution": {
+        "n": 12250,
+        "n_finite": 12250,
+        "min": 0.006250926342037277,
+        "max": 8.00708846722309,
+        "mean": 0.3352614716118335,
+        "std": 0.4879786945632196,
+        "p1": 0.013062805548743457,
+        "p5": 0.04545597022209184,
+        "p10": 0.06222524318492148,
+        "p25": 0.10673791980202121,
+        "p50": 0.19427317483657275,
+        "p75": 0.37894239348566117,
+        "p90": 0.6967977488269451,
+        "p95": 1.019914781366787,
+        "p99": 2.399872576235191
+      },
+      "stratum_data_sufficient": {
+        "n": 0,
+        "all_nan": true
+      },
+      "stratum_thin_coverage": {
+        "n": 12250,
+        "n_finite": 12250,
+        "min": 0.006250926342037277,
+        "max": 8.00708846722309,
+        "mean": 0.3352614716118335,
+        "std": 0.4879786945632196,
+        "p1": 0.013062805548743457,
+        "p5": 0.04545597022209184,
+        "p10": 0.06222524318492148,
+        "p25": 0.10673791980202121,
+        "p50": 0.19427317483657275,
+        "p75": 0.37894239348566117,
+        "p90": 0.6967977488269451,
+        "p95": 1.019914781366787,
+        "p99": 2.399872576235191
+      },
+      "headline_p5_p95_range_full": [
+        0.04545597022209184,
+        1.019914781366787
+      ],
+      "headline_p5_p95_range_data_sufficient": [
+        null,
+        null
+      ]
+    },
+    "D": {
+      "signed_scoring": false,
+      "591_filter_applied": false,
+      "n_cells_total": 12250,
+      "n_cells_data_sufficient": 0,
+      "n_cells_thin_coverage": 12250,
+      "full_distribution": {
+        "n": 12250,
+        "n_finite": 12250,
+        "min": 0.006250926342037277,
+        "max": 8.00708846722309,
+        "mean": 0.3352614716118335,
+        "std": 0.4879786945632196,
+        "p1": 0.013062805548743457,
+        "p5": 0.04545597022209184,
+        "p10": 0.06222524318492148,
+        "p25": 0.10673791980202121,
+        "p50": 0.19427317483657275,
+        "p75": 0.37894239348566117,
+        "p90": 0.6967977488269451,
+        "p95": 1.019914781366787,
+        "p99": 2.399872576235191
+      },
+      "stratum_data_sufficient": {
+        "n": 0,
+        "all_nan": true
+      },
+      "stratum_thin_coverage": {
+        "n": 12250,
+        "n_finite": 12250,
+        "min": 0.006250926342037277,
+        "max": 8.00708846722309,
+        "mean": 0.3352614716118335,
+        "std": 0.4879786945632196,
+        "p1": 0.013062805548743457,
+        "p5": 0.04545597022209184,
+        "p10": 0.06222524318492148,
+        "p25": 0.10673791980202121,
+        "p50": 0.19427317483657275,
+        "p75": 0.37894239348566117,
+        "p90": 0.6967977488269451,
+        "p95": 1.019914781366787,
+        "p99": 2.399872576235191
+      },
+      "headline_p5_p95_range_full": [
+        0.04545597022209184,
+        1.019914781366787
+      ],
+      "headline_p5_p95_range_data_sufficient": [
+        null,
+        null
+      ]
+    }
+  },
+  "pooled_summary": {
+    "n": 49000,
+    "n_finite": 49000,
+    "min": -7.056489608659942,
+    "max": 8.00708846722309,
+    "mean": 0.1676307358059167,
+    "std": 0.5257469641154316,
+    "p1": -1.1695756661217362,
+    "p5": -0.35854655185947054,
+    "p10": -0.16113047607391812,
+    "p25": 0.03986973969981458,
+    "p50": 0.12051671045013505,
+    "p75": 0.26497985363567716,
+    "p90": 0.540155868200846,
+    "p95": 0.8116398268761831,
+    "p99": 1.8521906770893737
+  },
+  "signed_pooled_summary": {
+    "n": 24500,
+    "n_finite": 24500,
+    "min": -7.056489608659942,
+    "max": 5.791716569652404,
+    "mean": 7.540453522352084e-18,
+    "std": 0.5084438172136835,
+    "p1": -1.8827506523586817,
+    "p5": -0.6096277921783926,
+    "p10": -0.3585531321153817,
+    "p25": -0.10372223376275311,
+    "p50": 0.05344043015255211,
+    "p75": 0.14277748425237943,
+    "p90": 0.33236430409254164,
+    "p95": 0.5345693021806026,
+    "p99": 1.2841350214583074
+  },
+  "unsigned_pooled_summary": {
+    "n": 24500,
+    "n_finite": 24500,
+    "min": 0.006250926342037277,
+    "max": 8.00708846722309,
+    "mean": 0.3352614716118335,
+    "std": 0.4879687353062246,
+    "p1": 0.013062805548743457,
+    "p5": 0.045420768858494394,
+    "p10": 0.06222524318492148,
+    "p25": 0.10673720356249142,
+    "p50": 0.19427317483657275,
+    "p75": 0.3789481878769352,
+    "p90": 0.6967977488269452,
+    "p95": 1.0201731177098015,
+    "p99": 2.4026303836300835
+  },
+  "k_factor_estimates": {
+    "definition": "k = (anomaly_score p95-p5 range) / (AUC tau_arm 95% prior range = 0.20)",
+    "pooled_all_arms": 5.850931893678268,
+    "signed_arms_only_AB": 5.720985471794975,
+    "unsigned_arms_only_CD": 4.873761744256535,
+    "interpretation": "Recommended tau_arm prior scale for anomaly_score response: 0.05 (AUC-calibrated) * k. Convening picks among {pooled, signed, unsigned} based on model identification concerns; signed_pooled is the methodology variant under test."
+  },
+  "convening_pre_registration_notes": "Per Kwame round-2 ruling: this artifact lands at qgi-data BEFORE any \u00a72.1/\u00a72.4 amendment commit on the trio's real-data feature branch. The 6-seat convening reads this JSON as binding ground truth; no analyst-tunable k after this commit. Any future re-derivation requires a new Majles convening.",
+  "spec_references": {
+    "T10_spec": "docs/specs/internal/ops/cascade-track/phase-5-v0.2-path-b-architecture.md @ ca77505",
+    "convergence_signoffs": "c:/tmp/v0.2-T12-convergence/signoff_*.md",
+    "T11_falsification_report": "docs-specs `dfe2cd4` ratified `3b9221c`"
+  }
+}

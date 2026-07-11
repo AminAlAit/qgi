@@ -1,0 +1,986 @@
+{
+  "schema_version": 1,
+  "capability": "momentum",
+  "recipe_id": "foreign_intervention",
+  "evaluation_year": 2021,
+  "computed_at_utc": "2026-05-24T16:31:54.323680+00:00",
+  "binding_provenance": {
+    "spec": "docs/specs/internal/ops/ml-track/te-new-capabilities-spec.md §3",
+    "m8_r5": "M8-R5 discrimination/similarity layer; RETROSPECTIVE/observed only; NOT a forecast",
+    "momentum_eps": 0.05,
+    "min_years_available": 3,
+    "canonical_fixed": "Recipe canonical profile FIXED from walk; same for all offset years",
+    "z_dist_rebaked_per_offset_year": "Panel-wide z-score distribution is independently pre-baked at each offset year (eval_year, eval_year-1, eval_year-2, eval_year-3) per Kwame production-ML rider: avoid on-the-fly recomputation at query time."
+  },
+  "m8_r5_note": "MOMENTUM (RETROSPECTIVE/observed only): This capability reports where this country HAS BEEN moving in similarity-to-crisis-profile space over the past 1-3 years. It is explicitly NOT a forecast or projection — it does not claim the observed direction will continue. This is the honest cousin of the forward-projection that was deliberately SUPPRESSED at the honesty gate: that capability claimed to project future trajectory; this one reports only observed past movement. M8-R5 binding: discrimination layer only; never calibrated probability.",
+  "selected_indicators": [
+    "v2elintmon",
+    "RQ.EST",
+    "v2pepwrgen",
+    "v2stfisccap"
+  ],
+  "chosen_window": 18,
+  "n_offsets": 4,
+  "n_scored_countries": 68,
+  "n_suppressed_insufficient_history": 0,
+  "summary": {
+    "rising": 27,
+    "falling": 32,
+    "flat": 9,
+    "suppressed": 0
+  },
+  "results": {
+    "Afghanistan": {
+      "scores_by_year": {
+        "2021": 95.95319073229687,
+        "2020": 96.01006607527727,
+        "2019": 94.1056490491264,
+        "2018": 95.00362449298423
+      },
+      "slope_per_year": 0.4753115744088802,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Algeria": {
+      "scores_by_year": {
+        "2021": 96.7180223451994,
+        "2020": 97.31833049138324,
+        "2019": 96.16500685694076,
+        "2018": 95.54150903867057
+      },
+      "slope_per_year": 0.468286355402897,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Argentina": {
+      "scores_by_year": {
+        "2021": 54.259830122154995,
+        "2020": 54.578889470954394,
+        "2019": 54.57558408375193,
+        "2018": 54.95913917984942
+      },
+      "slope_per_year": -0.20946217858808183,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Armenia": {
+      "scores_by_year": {
+        "2021": 29.949492496959092,
+        "2020": 29.862225801928783,
+        "2019": 30.194832815274303,
+        "2018": 30.791961509977778
+      },
+      "slope_per_year": -0.28600140524015777,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Australia": {
+      "scores_by_year": {
+        "2021": 3.8792795127279844,
+        "2020": 4.1763961317060065,
+        "2019": 4.248087247759186,
+        "2018": 4.2991361190448
+      },
+      "slope_per_year": -0.13312609350036247,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Austria": {
+      "scores_by_year": {
+        "2021": 7.117450417086479,
+        "2020": 6.2642025643615264,
+        "2019": 5.4887254116778745,
+        "2018": 5.828353353238336
+      },
+      "slope_per_year": 0.464276834422808,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Azerbaijan": {
+      "scores_by_year": {
+        "2021": 93.74259973012192,
+        "2020": 93.48100168103453,
+        "2019": 93.64694239609292,
+        "2018": 92.62090946602308
+      },
+      "slope_per_year": 0.3199130077238138,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Belarus": {
+      "scores_by_year": {
+        "2021": 81.89709104362686,
+        "2020": 79.63008010485704,
+        "2019": 79.65975903452885,
+        "2018": 79.43956635517735
+      },
+      "slope_per_year": 0.7342895135676727,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Benin": {
+      "scores_by_year": {
+        "2021": 53.6099473076047,
+        "2020": 53.26290183322404,
+        "2019": 51.93176566635211,
+        "2018": 51.9138285811033
+      },
+      "slope_per_year": 0.6419492346376117,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Bolivia": {
+      "scores_by_year": {
+        "2021": 89.3719780392637,
+        "2020": 91.72895565746053,
+        "2019": 94.48042616941133,
+        "2018": 94.8233172594543
+      },
+      "slope_per_year": -1.9105488172522613,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Bulgaria": {
+      "scores_by_year": {
+        "2021": 2.6140164301332423,
+        "2020": 2.213098676906844,
+        "2019": 1.9422494185950268,
+        "2018": 1.9861846710530928
+      },
+      "slope_per_year": 0.21543445355522656,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Burkina Faso": {
+      "scores_by_year": {
+        "2021": 89.29360242459997,
+        "2020": 90.22373170560705,
+        "2019": 91.59259297059232,
+        "2018": 91.80151269972234
+      },
+      "slope_per_year": -0.889259209035238,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Cameroon": {
+      "scores_by_year": {
+        "2021": 80.54958792257571,
+        "2020": 80.75918701969415,
+        "2019": 80.28053200580747,
+        "2018": 85.45248999688259
+      },
+      "slope_per_year": -1.423005120903396,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Canada": {
+      "scores_by_year": {
+        "2021": 4.49864650813473,
+        "2020": 4.149827136286699,
+        "2019": 1.046620610806942,
+        "2018": 4.753063062703067
+      },
+      "slope_per_year": 0.23399568617747463,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Chile": {
+      "scores_by_year": {
+        "2021": 5.35628015164602,
+        "2020": 5.180266970283193,
+        "2019": 5.3591085315975455,
+        "2018": 5.966421701524583
+      },
+      "slope_per_year": -0.2009266210950041,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Comoros": {
+      "scores_by_year": {
+        "2021": 95.47750785629496,
+        "2020": 95.73282866850799,
+        "2019": 96.14060830173557,
+        "2018": 96.13164167369726
+      },
+      "slope_per_year": -0.2370181085434467,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Croatia": {
+      "scores_by_year": {
+        "2021": 3.2976205208595957,
+        "2020": 3.2797730016140503,
+        "2019": 4.198186815467913,
+        "2018": 4.578255716919699
+      },
+      "slope_per_year": -0.4760319402034174,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Cyprus": {
+      "scores_by_year": {
+        "2021": 5.870675917046237,
+        "2020": 5.245557168080106,
+        "2019": 5.293382574891082,
+        "2018": 5.339342233893846
+      },
+      "slope_per_year": 0.15461756426461964,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Djibouti": {
+      "scores_by_year": {
+        "2021": 89.60163357262667,
+        "2020": 92.4306705422529,
+        "2019": 93.91871491317313,
+        "2018": 93.42414401167962
+      },
+      "slope_per_year": -1.295557568807908,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Dominican Republic": {
+      "scores_by_year": {
+        "2021": 63.96770033253738,
+        "2020": 65.3121175527759,
+        "2019": 66.5826763949582,
+        "2018": 66.78118276305287
+      },
+      "slope_per_year": -0.9711006133728752,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Ecuador": {
+      "scores_by_year": {
+        "2021": 93.04315428948591,
+        "2020": 94.55619691472036,
+        "2019": 94.69709074370915,
+        "2018": 94.59734026244635
+      },
+      "slope_per_year": -0.48034517478701133,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Egypt": {
+      "scores_by_year": {
+        "2021": 94.94774591353139,
+        "2020": 95.26412527791818,
+        "2019": 95.20083863363062,
+        "2018": 94.64648480162263
+      },
+      "slope_per_year": 0.09670699800138323,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "El Salvador": {
+      "scores_by_year": {
+        "2021": 53.32018602762572,
+        "2020": 52.89063059139944,
+        "2019": 53.431221533359405,
+        "2018": 56.8312080695914
+      },
+      "slope_per_year": -1.1073657067857006,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Equatorial Guinea": {
+      "scores_by_year": {
+        "2021": 96.8505263748297,
+        "2020": 96.71931811010552,
+        "2019": 96.90199379794055,
+        "2018": 96.73119001069655
+      },
+      "slope_per_year": 0.017533340456441237,
+      "direction": "flat",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Finland": {
+      "scores_by_year": {
+        "2021": 5.33440436330736,
+        "2020": 5.246680912460805,
+        "2019": 4.7673347026388315,
+        "2018": 5.109722906752129
+      },
+      "slope_per_year": 0.11533905794876675,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Gabon": {
+      "scores_by_year": {
+        "2021": 74.2706942996632,
+        "2020": 69.99221819364523,
+        "2019": 68.2831965384661,
+        "2018": 67.99749810440179
+      },
+      "slope_per_year": 2.0528610240963387,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Georgia": {
+      "scores_by_year": {
+        "2021": 18.447930699628785,
+        "2020": 21.872048706447046,
+        "2019": 21.094910506040865,
+        "2018": 23.021083673893493
+      },
+      "slope_per_year": -1.2942320722387943,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Greece": {
+      "scores_by_year": {
+        "2021": 15.15926649042717,
+        "2020": 14.942741314576235,
+        "2019": 11.083374904551164,
+        "2018": 13.743354100722721
+      },
+      "slope_per_year": 0.8107103579138417,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Guinea-Bissau": {
+      "scores_by_year": {
+        "2021": 95.06932269146877,
+        "2020": 95.48175366213674,
+        "2019": 95.52941145315647,
+        "2018": 94.96972662317673
+      },
+      "slope_per_year": 0.025113041385640144,
+      "direction": "flat",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Iceland": {
+      "scores_by_year": {
+        "2021": 6.299049291769005,
+        "2020": 6.090694758037274,
+        "2019": 6.344775293582311,
+        "2018": 7.1240390142786385
+      },
+      "slope_per_year": -0.27290497030739386,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Iran": {
+      "scores_by_year": {
+        "2021": 98.1351066717616,
+        "2020": 97.73583337006373,
+        "2019": 98.08388990121182,
+        "2018": 98.04365639771737
+      },
+      "slope_per_year": -0.0073705709015385425,
+      "direction": "flat",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Israel": {
+      "scores_by_year": {
+        "2021": 4.643416949746737,
+        "2020": 4.386148175469246,
+        "2019": 4.391822636435677,
+        "2018": 4.766537306659813
+      },
+      "slope_per_year": -0.03750355317056595,
+      "direction": "flat",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Japan": {
+      "scores_by_year": {
+        "2021": 31.22851708336648,
+        "2020": 31.837085539479492,
+        "2019": 5.596353561458861,
+        "2018": 17.782327586695274
+      },
+      "slope_per_year": 6.657930046803425,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Jordan": {
+      "scores_by_year": {
+        "2021": 50.047313975725785,
+        "2020": 51.105747118274536,
+        "2019": 50.724556605305416,
+        "2018": 49.974860797707365
+      },
+      "slope_per_year": 0.05985500470243821,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Kazakhstan": {
+      "scores_by_year": {
+        "2021": 83.16407802175776,
+        "2020": 84.68512504916598,
+        "2019": 87.21156254272002,
+        "2018": 88.12345907079029
+      },
+      "slope_per_year": -1.740458064065163,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Kuwait": {
+      "scores_by_year": {
+        "2021": 61.83684835927842,
+        "2020": 62.17510098899821,
+        "2019": 62.036717945778086,
+        "2018": 62.30676577685954
+      },
+      "slope_per_year": -0.12713692095232432,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Kyrgyzstan": {
+      "scores_by_year": {
+        "2021": 90.24136131819913,
+        "2020": 90.25821612895697,
+        "2019": 90.14961538126191,
+        "2018": 90.49986600353796
+      },
+      "slope_per_year": -0.06669133083214404,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Lithuania": {
+      "scores_by_year": {
+        "2021": 4.839800021374807,
+        "2020": 5.5779425624172765,
+        "2019": 6.141421288942917,
+        "2018": 6.979469216903011
+      },
+      "slope_per_year": -0.6982486313110252,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Maldives": {
+      "scores_by_year": {
+        "2021": 66.7207294150174,
+        "2020": 61.069893894810136,
+        "2019": 58.98919870891736,
+        "2018": 55.94452927104479
+      },
+      "slope_per_year": 3.4409295617810605,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Mauritania": {
+      "scores_by_year": {
+        "2021": 95.70288554064813,
+        "2020": 94.9784629812147,
+        "2019": 94.63281613718718,
+        "2018": 95.01732016472566
+      },
+      "slope_per_year": 0.24023429717949227,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Mexico": {
+      "scores_by_year": {
+        "2021": 34.87983673771152,
+        "2020": 34.095864768157426,
+        "2019": 33.5909071617555,
+        "2018": 32.95934890258603
+      },
+      "slope_per_year": 0.62664211117784,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Moldova": {
+      "scores_by_year": {
+        "2021": 79.2945494542294,
+        "2020": 82.77033653332495,
+        "2019": 83.39040808953112,
+        "2018": 84.34336407744591
+      },
+      "slope_per_year": -1.5766515425855716,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Mongolia": {
+      "scores_by_year": {
+        "2021": 61.717790485619716,
+        "2020": 62.00224830495189,
+        "2019": 61.84769939624577,
+        "2018": 62.96153208260795
+      },
+      "slope_per_year": -0.35766758822585915,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Montenegro": {
+      "scores_by_year": {
+        "2021": 50.34121316395861,
+        "2020": 53.55457204047411,
+        "2019": 55.27707170470209,
+        "2018": 59.83551674771144
+      },
+      "slope_per_year": -3.020541041548647,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "North Macedonia": {
+      "scores_by_year": {
+        "2021": 29.23966833823386,
+        "2020": 30.2022346889352,
+        "2019": 31.257526928212688,
+        "2018": 33.18484226495331
+      },
+      "slope_per_year": -1.2890814019435843,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Philippines": {
+      "scores_by_year": {
+        "2021": 28.036621919003313,
+        "2020": 29.39585739348051,
+        "2019": 32.777151656738454,
+        "2018": 33.05012932456866
+      },
+      "slope_per_year": -1.8421816479953979,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Poland": {
+      "scores_by_year": {
+        "2021": 1.7997250281000687,
+        "2020": 1.4969939748431471,
+        "2019": 3.4350689306848645,
+        "2018": 4.135197839490257
+      },
+      "slope_per_year": -0.894449339001228,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Portugal": {
+      "scores_by_year": {
+        "2021": 6.639239281006532,
+        "2020": 6.586991740581838,
+        "2019": 6.555767399780709,
+        "2018": 6.56732071181117
+      },
+      "slope_per_year": 0.024698004838721487,
+      "direction": "flat",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Romania": {
+      "scores_by_year": {
+        "2021": 6.026596036389275,
+        "2020": 5.372741327802349,
+        "2019": 4.886980126853702,
+        "2018": 4.549113494141032
+      },
+      "slope_per_year": 0.4918208827693376,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Russia": {
+      "scores_by_year": {
+        "2021": 94.75872875794389,
+        "2020": 95.06608806068746,
+        "2019": 94.79422305766758,
+        "2018": 94.0512727690627
+      },
+      "slope_per_year": 0.23942329696634204,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Rwanda": {
+      "scores_by_year": {
+        "2021": 54.164088704595514,
+        "2020": 55.869012890068426,
+        "2019": 57.20774682115399,
+        "2018": 59.54207066766743
+      },
+      "slope_per_year": -1.7472679820301316,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Sao Tome and Principe": {
+      "scores_by_year": {
+        "2021": 69.95250623253825,
+        "2020": 70.41765574384726,
+        "2019": 70.40993908975067,
+        "2018": 70.06183919746279
+      },
+      "slope_per_year": -0.03202822406770025,
+      "direction": "flat",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Serbia": {
+      "scores_by_year": {
+        "2021": 64.19741992119526,
+        "2020": 68.7120180604293,
+        "2019": 71.29056873728943,
+        "2018": 74.25852772689943
+      },
+      "slope_per_year": -3.276187409397264,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Seychelles": {
+      "scores_by_year": {
+        "2021": 51.15112783230169,
+        "2020": 49.98346170909766,
+        "2019": 22.5581526188943,
+        "2018": 22.79280905981359
+      },
+      "slope_per_year": 11.250026540766765,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Slovakia": {
+      "scores_by_year": {
+        "2021": 7.6631388886904075,
+        "2020": 5.764066384301075,
+        "2019": 5.691123489916267,
+        "2018": 5.161718011560662
+      },
+      "slope_per_year": 0.7577205525774044,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Slovenia": {
+      "scores_by_year": {
+        "2021": 5.725174810798489,
+        "2020": 5.891762344711732,
+        "2019": 5.795794433764772,
+        "2018": 6.229696560293463
+      },
+      "slope_per_year": -0.14175973375379627,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "South Korea": {
+      "scores_by_year": {
+        "2021": 4.4002067359196655,
+        "2020": 3.820920253938398,
+        "2019": 3.9687169261738875,
+        "2018": 4.7196267914298815
+      },
+      "slope_per_year": -0.11060568387661376,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Spain": {
+      "scores_by_year": {
+        "2021": 4.725786994109882,
+        "2020": 4.157252139438183,
+        "2019": 2.304903936283881,
+        "2018": 5.454379765428246
+      },
+      "slope_per_year": -0.03334301108007916,
+      "direction": "flat",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Sri Lanka": {
+      "scores_by_year": {
+        "2021": 73.82077588149517,
+        "2020": 75.12685020103893,
+        "2019": 75.08775989928974,
+        "2018": 71.08196509040233
+      },
+      "slope_per_year": 0.8255522675027691,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Syria": {
+      "scores_by_year": {
+        "2021": 96.47099984462724,
+        "2020": 97.00980261203617,
+        "2019": 96.77402213247287,
+        "2018": 95.79259813968642
+      },
+      "slope_per_year": 0.22709855943857776,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Tajikistan": {
+      "scores_by_year": {
+        "2021": 95.10016516568226,
+        "2020": 98.5895578115485,
+        "2019": 98.68802116833399,
+        "2018": 94.48637487746232
+      },
+      "slope_per_year": 0.17429075078743067,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "The Gambia": {
+      "scores_by_year": {
+        "2021": 95.45477660423954,
+        "2020": 95.72167748217403,
+        "2019": 95.58305048501514,
+        "2018": 95.09770155235073
+      },
+      "slope_per_year": 0.12098521528253343,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Togo": {
+      "scores_by_year": {
+        "2021": 67.47281050029983,
+        "2020": 66.98997456929054,
+        "2019": 66.97372483768605,
+        "2018": 68.99285782785961
+      },
+      "slope_per_year": -0.45438922510748514,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Turkmenistan": {
+      "scores_by_year": {
+        "2021": 97.00514972205414,
+        "2020": 96.94060481508096,
+        "2019": 96.97521707290498,
+        "2018": 96.86557328463272
+      },
+      "slope_per_year": 0.0384117054440253,
+      "direction": "flat",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Ukraine": {
+      "scores_by_year": {
+        "2021": 56.789382063355575,
+        "2020": 56.447169415831986,
+        "2019": 56.93683398209159,
+        "2018": 59.76208630807632
+      },
+      "slope_per_year": -0.9407777300421841,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "United States": {
+      "scores_by_year": {
+        "2021": 4.954343760622438,
+        "2020": 5.1522956056238245,
+        "2019": 5.284555521092848,
+        "2018": 5.8636432980235025
+      },
+      "slope_per_year": -0.2860158527672218,
+      "direction": "falling",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Uzbekistan": {
+      "scores_by_year": {
+        "2021": 94.8905702151184,
+        "2020": 95.30185937793638,
+        "2019": 95.78726824633921,
+        "2018": 94.86008058973239
+      },
+      "slope_per_year": -0.039393999224479614,
+      "direction": "flat",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    },
+    "Venezuela": {
+      "scores_by_year": {
+        "2021": 71.33079006482475,
+        "2020": 71.24479368439698,
+        "2019": 71.29162294539327,
+        "2018": 70.87045215476624
+      },
+      "slope_per_year": 0.13341844691792487,
+      "direction": "rising",
+      "n_years_available": 4,
+      "suppressed": false,
+      "flag": null,
+      "observation_label": "RETROSPECTIVE/observed — NOT a forecast or projection"
+    }
+  }
+}

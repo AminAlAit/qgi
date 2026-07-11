@@ -1,0 +1,662 @@
+{
+  "schema_version": 1,
+  "generated": "2026-05-03",
+  "source": "Majles Al Ihsa consultation 2026-05-03 — Miriam Oduya-Schwarzkopf (#19, Stats 3 / Empirical Bayes / hierarchical priors)",
+  "purpose": "indicator-to-sector mapping for Empirical Bayes hyperprior estimation. The (sector x L1) cells determine which indicators share a Beta(alpha(s,L1), beta(s,L1)) prior. Wrong cells -> wrong pooling -> wrong shrinkage.",
+  "cohort_counts": {
+    "n_indicators_in_taxonomy": 142,
+    "n_indicators_currently_ingested": 109,
+    "n_indicators_with_direction_annotations": 104,
+    "cohort_glossary": "n_indicators_in_taxonomy: planned/curated catalog scope at the time of generation (this file). Includes future not-yet-ingested indicators. n_indicators_currently_ingested: indicators with rows in qgi_data.scdis (source-of-truth: indicator-stationarity-audit-v2.json, 109 results as of 2026-05-11). n_indicators_with_direction_annotations: indicators with a curated direction (+1/0/-1) for signed-scoring in Phase 5 (source-of-truth: indicator-directions.json, 104 entries as of 2026-05-11). These three cohorts are NOT stale snapshots of the same number; they are three different populations. Coverage delta from build_indicator_directions.py: audited=109 in_directions=104 covered=87 audited_but_missing=22 in_directions_but_not_audited=17. Reconciliation work tracked at #653."
+  },
+  "n_sectors": 10,
+  "sectors": {
+    "CONFLICT": {
+      "name": "Armed Conflict & Violence",
+      "definition": "Indicators whose primary signal is the incidence, intensity, or direct human cost of organized armed violence (state and non-state).",
+      "n_indicators": 12
+    },
+    "DISPLACE": {
+      "name": "Displacement & Migration",
+      "definition": "Indicators measuring forced or voluntary population movement across or within borders as the primary measured phenomenon.",
+      "n_indicators": 10
+    },
+    "GOV_INST": {
+      "name": "Governance & Institutional Quality",
+      "definition": "Indicators measuring how effectively formal political and legal institutions function — democracy indices, rule of law, judicial independence, electoral process, legislative constraints.",
+      "n_indicators": 22
+    },
+    "REPRESSION": {
+      "name": "State Repression & Civil Liberties",
+      "definition": "Indicators measuring the degree to which the state suppresses physical, political, or expressive freedom of its population — torture, killings, censorship, repression of civil society.",
+      "n_indicators": 9
+    },
+    "ECON_FISC": {
+      "name": "Economic & Fiscal Stress",
+      "definition": "Indicators measuring government balance-sheet fragility, sovereign debt, banking system health, and macro-economic vulnerability to crisis.",
+      "n_indicators": 14
+    },
+    "LABOR_SOC": {
+      "name": "Labor Market & Social Conditions",
+      "definition": "Indicators measuring employment quality, wage dynamics, inequality, poverty, and the social infrastructure that determines population resilience to economic shocks.",
+      "n_indicators": 25
+    },
+    "FOOD_RES": {
+      "name": "Food Security & Natural Resources",
+      "definition": "Indicators measuring agricultural output, food availability, dietary security, land use, water stress, and environmental resource base.",
+      "n_indicators": 16
+    },
+    "DIPLO_GEO": {
+      "name": "Diplomatic & Geopolitical Signal",
+      "definition": "Indicators capturing how countries relate to each other through events, media coverage, and the internationalization of conflict — primarily GDELT-derived news-event aggregates plus sovereignty indicators.",
+      "n_indicators": 21
+    },
+    "SOC_MOBIL": {
+      "name": "Social Mobilization & Identity",
+      "definition": "Indicators measuring organized citizen action, political participation, power distribution across social groups, and gender/ethnic inclusion — the substrate for mass protest and social reform events.",
+      "n_indicators": 9
+    },
+    "STRUCT_DEV": {
+      "name": "Structural Development Context",
+      "definition": "Indicators measuring long-run human capital, education, and basic development trajectories that serve as slow-moving structural moderators rather than active event precursors.",
+      "n_indicators": 4
+    }
+  },
+  "known_weaknesses": [
+    "DIPLO_GEO contains 21 indicators with substantial within-sector correlation (multiple GDELT facets of the same media-coverage process). Likely violates Beta exchangeability. Phase 4 surfaces this as high posterior variance; fix is to split into DIPLO_MEDIA + DIPLO_STRUCT.",
+    "STRUCT_DEV has only 4 indicators — below comfortable EB floor. Defensible because the 4 share a genuinely distinct (near-flat) frequency profile that would corrupt other sectors if pooled. Phase 4 test: compare STRUCT_DEV EB prior to flat Beta(1,1) — if no measurable shrinkage improvement, dissolve and reassign WB-06/WB-07 to GOV_INST and UD-05/UD-06 to LABOR_SOC."
+  ],
+  "indicator_to_sector": {
+    "WB-01": {
+      "sector": "CONFLICT",
+      "confidence": "high"
+    },
+    "WB-02": {
+      "sector": "CONFLICT",
+      "confidence": "high"
+    },
+    "WB-03": {
+      "sector": "DISPLACE",
+      "confidence": "high"
+    },
+    "WB-04": {
+      "sector": "DISPLACE",
+      "confidence": "high"
+    },
+    "WB-05": {
+      "sector": "DISPLACE",
+      "confidence": "high"
+    },
+    "WB-06": {
+      "sector": "STRUCT_DEV",
+      "confidence": "high",
+      "rationale": "Business startup cost moderates at structural/institutional speed, not crisis speed; does not spike in banking crises."
+    },
+    "WB-07": {
+      "sector": "STRUCT_DEV",
+      "confidence": "high",
+      "rationale": "Contract enforcement time is essentially flat; almost never spikes with crises. Structural moderator, not active precursor."
+    },
+    "WB-08": {
+      "sector": "LABOR_SOC",
+      "confidence": "medium",
+      "rationale": "Diaspora-economy linkage; tracks labor market in destination countries. Not DISPLACE (no conflict driver) nor ECON_FISC (no sovereign balance-sheet signal)."
+    },
+    "WB-09": {
+      "sector": "ECON_FISC",
+      "confidence": "medium",
+      "rationale": "Banking_crisis link decisive — co-varies with NPLs and bank assets more than with youth unemployment. Borderline with LABOR_SOC."
+    },
+    "WB-10": {
+      "sector": "ECON_FISC",
+      "confidence": "high"
+    },
+    "WB-11": {
+      "sector": "ECON_FISC",
+      "confidence": "high"
+    },
+    "WB-12": {
+      "sector": "ECON_FISC",
+      "confidence": "high"
+    },
+    "WB-13": {
+      "sector": "ECON_FISC",
+      "confidence": "high"
+    },
+    "WB-14": {
+      "sector": "ECON_FISC",
+      "confidence": "high"
+    },
+    "WB-15": {
+      "sector": "ECON_FISC",
+      "confidence": "medium",
+      "rationale": "ODA donor generosity is a fiscal-policy output. Borderline with DIPLO_GEO; if recipient-side coverage expands, reassign."
+    },
+    "WB-P1": {
+      "sector": "LABOR_SOC",
+      "confidence": "high",
+      "rationale": "Remittances received — household income at population scale (recipient side of WB-08)."
+    },
+    "WB-P2": {
+      "sector": "DISPLACE",
+      "confidence": "high"
+    },
+    "WB-P3": {
+      "sector": "LABOR_SOC",
+      "confidence": "high"
+    },
+    "WB-P4": {
+      "sector": "LABOR_SOC",
+      "confidence": "high"
+    },
+    "WB-P5": {
+      "sector": "LABOR_SOC",
+      "confidence": "high"
+    },
+    "WB-P6": {
+      "sector": "GOV_INST",
+      "confidence": "medium",
+      "rationale": "Women in parliament framed as institutional quality proxy; co-varies with VD-01/VD-32 more than with VD-26 across event categories. Borderline with SOC_MOBIL."
+    },
+    "WB-P7": {
+      "sector": "ECON_FISC",
+      "confidence": "high"
+    },
+    "UC-01": {
+      "sector": "CONFLICT",
+      "confidence": "high"
+    },
+    "UC-02": {
+      "sector": "CONFLICT",
+      "confidence": "high"
+    },
+    "UC-03": {
+      "sector": "CONFLICT",
+      "confidence": "high"
+    },
+    "UC-04": {
+      "sector": "CONFLICT",
+      "confidence": "high"
+    },
+    "VD-01": {
+      "sector": "GOV_INST",
+      "confidence": "high"
+    },
+    "VD-02": {
+      "sector": "GOV_INST",
+      "confidence": "high"
+    },
+    "VD-03": {
+      "sector": "GOV_INST",
+      "confidence": "high"
+    },
+    "VD-04": {
+      "sector": "GOV_INST",
+      "confidence": "high"
+    },
+    "VD-05": {
+      "sector": "REPRESSION",
+      "confidence": "high"
+    },
+    "VD-06": {
+      "sector": "GOV_INST",
+      "confidence": "medium",
+      "rationale": "Polarization is a political-process indicator (institutional dysfunction), not rights-violation or mobilization."
+    },
+    "VD-07": {
+      "sector": "GOV_INST",
+      "confidence": "high"
+    },
+    "VD-08": {
+      "sector": "REPRESSION",
+      "confidence": "high"
+    },
+    "VD-09": {
+      "sector": "SOC_MOBIL",
+      "confidence": "high"
+    },
+    "VD-10": {
+      "sector": "GOV_INST",
+      "confidence": "high"
+    },
+    "VD-11": {
+      "sector": "GOV_INST",
+      "confidence": "medium",
+      "rationale": "State capacity (institutional) vs balance-sheet stress (fiscal). Co-varies with VD-03/VD-04 not WB-10. GOV_INST."
+    },
+    "VD-12": {
+      "sector": "REPRESSION",
+      "confidence": "high"
+    },
+    "VD-13": {
+      "sector": "REPRESSION",
+      "confidence": "high"
+    },
+    "VD-14": {
+      "sector": "REPRESSION",
+      "confidence": "high"
+    },
+    "VD-15": {
+      "sector": "REPRESSION",
+      "confidence": "high"
+    },
+    "VD-16": {
+      "sector": "REPRESSION",
+      "confidence": "medium",
+      "rationale": "Property-rights/freedom-of-movement collapse → migration. State withdrawal of rights, not citizen-organized action."
+    },
+    "VD-17": {
+      "sector": "REPRESSION",
+      "confidence": "high"
+    },
+    "VD-18": {
+      "sector": "GOV_INST",
+      "confidence": "high"
+    },
+    "VD-19": {
+      "sector": "GOV_INST",
+      "confidence": "high"
+    },
+    "VD-20": {
+      "sector": "GOV_INST",
+      "confidence": "high"
+    },
+    "VD-21": {
+      "sector": "SOC_MOBIL",
+      "confidence": "medium",
+      "rationale": "Legitimacy collapse triggers protest/coup; co-varies with VD-09/VD-28 (mobilization triggers). Borderline with GOV_INST."
+    },
+    "VD-22": {
+      "sector": "GOV_INST",
+      "confidence": "high"
+    },
+    "VD-23": {
+      "sector": "REPRESSION",
+      "confidence": "high"
+    },
+    "VD-24": {
+      "sector": "SOC_MOBIL",
+      "confidence": "high"
+    },
+    "VD-25": {
+      "sector": "SOC_MOBIL",
+      "confidence": "high"
+    },
+    "VD-26": {
+      "sector": "SOC_MOBIL",
+      "confidence": "high"
+    },
+    "VD-27": {
+      "sector": "SOC_MOBIL",
+      "confidence": "high"
+    },
+    "VD-28": {
+      "sector": "SOC_MOBIL",
+      "confidence": "high"
+    },
+    "VD-29": {
+      "sector": "SOC_MOBIL",
+      "confidence": "high"
+    },
+    "VD-30": {
+      "sector": "SOC_MOBIL",
+      "confidence": "high",
+      "rationale": "Strongest structural predictor of civil war onset (Cederman/Wimmer), but moves on decade timescales. SOC_MOBIL prior captures slow structural conditions; CONFLICT prior would over-shrink toward crisis-frequency."
+    },
+    "VD-31": {
+      "sector": "GOV_INST",
+      "confidence": "high"
+    },
+    "VD-32": {
+      "sector": "GOV_INST",
+      "confidence": "high"
+    },
+    "VD-33": {
+      "sector": "GOV_INST",
+      "confidence": "high"
+    },
+    "VD-34": {
+      "sector": "GOV_INST",
+      "confidence": "high"
+    },
+    "VD-35": {
+      "sector": "GOV_INST",
+      "confidence": "high"
+    },
+    "VD-36": {
+      "sector": "DIPLO_GEO",
+      "confidence": "high"
+    },
+    "VD-37": {
+      "sector": "GOV_INST",
+      "confidence": "high"
+    },
+    "VD-38": {
+      "sector": "GOV_INST",
+      "confidence": "high"
+    },
+    "VD-39": {
+      "sector": "GOV_INST",
+      "confidence": "high"
+    },
+    "FA-01": {
+      "sector": "FOOD_RES",
+      "confidence": "high"
+    },
+    "FA-02": {
+      "sector": "FOOD_RES",
+      "confidence": "high"
+    },
+    "FA-03": {
+      "sector": "FOOD_RES",
+      "confidence": "high",
+      "rationale": "Food price volatility — supply-chain phenomenon, not sovereign balance-sheet. Co-varies with FA-01/FA-14, not WB-13."
+    },
+    "FA-04": {
+      "sector": "FOOD_RES",
+      "confidence": "high"
+    },
+    "FA-05": {
+      "sector": "FOOD_RES",
+      "confidence": "high"
+    },
+    "FA-06": {
+      "sector": "FOOD_RES",
+      "confidence": "high"
+    },
+    "FA-07": {
+      "sector": "FOOD_RES",
+      "confidence": "high"
+    },
+    "FA-08": {
+      "sector": "FOOD_RES",
+      "confidence": "high"
+    },
+    "FA-09": {
+      "sector": "FOOD_RES",
+      "confidence": "high"
+    },
+    "FA-10": {
+      "sector": "FOOD_RES",
+      "confidence": "high"
+    },
+    "FA-11": {
+      "sector": "FOOD_RES",
+      "confidence": "high"
+    },
+    "FA-12": {
+      "sector": "FOOD_RES",
+      "confidence": "high"
+    },
+    "FA-13": {
+      "sector": "FOOD_RES",
+      "confidence": "high"
+    },
+    "FA-14": {
+      "sector": "FOOD_RES",
+      "confidence": "high"
+    },
+    "FA-15": {
+      "sector": "FOOD_RES",
+      "confidence": "high"
+    },
+    "UN-01": {
+      "sector": "DISPLACE",
+      "confidence": "high"
+    },
+    "UN-02": {
+      "sector": "DISPLACE",
+      "confidence": "high"
+    },
+    "UN-03": {
+      "sector": "DISPLACE",
+      "confidence": "high"
+    },
+    "UN-04": {
+      "sector": "DISPLACE",
+      "confidence": "high"
+    },
+    "UN-05": {
+      "sector": "DISPLACE",
+      "confidence": "medium",
+      "rationale": "Voluntary returns mirror UN-01/UN-03 with lag — same country-level conditions drive both."
+    },
+    "UN-06": {
+      "sector": "DISPLACE",
+      "confidence": "medium",
+      "rationale": "Stateless persons — chronic sub-stock of displacement, not active repression event. Borderline with REPRESSION."
+    },
+    "ID-01": {
+      "sector": "CONFLICT",
+      "confidence": "high",
+      "rationale": "Measurement object is conflict activity, not population management."
+    },
+    "ID-02": {
+      "sector": "FOOD_RES",
+      "confidence": "medium",
+      "rationale": "Disaster displacement tracks climate exposure + agricultural fragility (FOOD_RES vulnerabilities), not conflict."
+    },
+    "ID-03": {
+      "sector": "CONFLICT",
+      "confidence": "medium",
+      "rationale": "Chronic conflict-origin stock; signal is unresolved conflict, not population management."
+    },
+    "IL-01": {
+      "sector": "LABOR_SOC",
+      "confidence": "high"
+    },
+    "IL-02": {
+      "sector": "LABOR_SOC",
+      "confidence": "high"
+    },
+    "IL-03": {
+      "sector": "LABOR_SOC",
+      "confidence": "high"
+    },
+    "IL-04": {
+      "sector": "LABOR_SOC",
+      "confidence": "high"
+    },
+    "IL-05": {
+      "sector": "LABOR_SOC",
+      "confidence": "high"
+    },
+    "IL-06": {
+      "sector": "LABOR_SOC",
+      "confidence": "high"
+    },
+    "IL-07": {
+      "sector": "LABOR_SOC",
+      "confidence": "high"
+    },
+    "IL-08": {
+      "sector": "LABOR_SOC",
+      "confidence": "high"
+    },
+    "IL-09": {
+      "sector": "LABOR_SOC",
+      "confidence": "high"
+    },
+    "IL-10": {
+      "sector": "LABOR_SOC",
+      "confidence": "high"
+    },
+    "IL-11": {
+      "sector": "LABOR_SOC",
+      "confidence": "high"
+    },
+    "IL-12": {
+      "sector": "LABOR_SOC",
+      "confidence": "high"
+    },
+    "IL-13": {
+      "sector": "LABOR_SOC",
+      "confidence": "high"
+    },
+    "UD-01": {
+      "sector": "LABOR_SOC",
+      "confidence": "high"
+    },
+    "UD-02": {
+      "sector": "LABOR_SOC",
+      "confidence": "high"
+    },
+    "UD-03": {
+      "sector": "LABOR_SOC",
+      "confidence": "high"
+    },
+    "UD-04": {
+      "sector": "LABOR_SOC",
+      "confidence": "high"
+    },
+    "UD-05": {
+      "sector": "STRUCT_DEV",
+      "confidence": "high",
+      "rationale": "Mean years of schooling — slow-moving human capital stock; does not spike with crises."
+    },
+    "UD-06": {
+      "sector": "STRUCT_DEV",
+      "confidence": "high",
+      "rationale": "Same rationale as UD-05; forward-looking human capital."
+    },
+    "UD-07": {
+      "sector": "LABOR_SOC",
+      "confidence": "high"
+    },
+    "OE-01": {
+      "sector": "ECON_FISC",
+      "confidence": "high"
+    },
+    "OE-02": {
+      "sector": "ECON_FISC",
+      "confidence": "high"
+    },
+    "OE-03": {
+      "sector": "ECON_FISC",
+      "confidence": "high"
+    },
+    "OE-04": {
+      "sector": "LABOR_SOC",
+      "confidence": "high"
+    },
+    "OE-05": {
+      "sector": "LABOR_SOC",
+      "confidence": "high"
+    },
+    "OE-06": {
+      "sector": "ECON_FISC",
+      "confidence": "high"
+    },
+    "OE-07": {
+      "sector": "ECON_FISC",
+      "confidence": "high"
+    },
+    "OW-01": {
+      "sector": "GOV_INST",
+      "confidence": "high"
+    },
+    "OW-04": {
+      "sector": "ECON_FISC",
+      "confidence": "medium",
+      "rationale": "CO2 growth as economic activity proxy (resource boom / deindustrialization), not environmental governance."
+    },
+    "GD-01": {
+      "sector": "CONFLICT",
+      "confidence": "high"
+    },
+    "GD-02": {
+      "sector": "DIPLO_GEO",
+      "confidence": "high"
+    },
+    "GD-03": {
+      "sector": "DIPLO_GEO",
+      "confidence": "high"
+    },
+    "GD-04": {
+      "sector": "DIPLO_GEO",
+      "confidence": "high"
+    },
+    "GD-05": {
+      "sector": "DIPLO_GEO",
+      "confidence": "high"
+    },
+    "GD-06": {
+      "sector": "DIPLO_GEO",
+      "confidence": "high"
+    },
+    "GD-07": {
+      "sector": "DIPLO_GEO",
+      "confidence": "high",
+      "rationale": "GDELT protest counts are media-coverage artifacts (50× source duplication), not ground-truth mobilization. Co-varies with GD-04/GD-15, not VD-25/VD-28."
+    },
+    "GD-08": {
+      "sector": "DIPLO_GEO",
+      "confidence": "high"
+    },
+    "GD-09": {
+      "sector": "DIPLO_GEO",
+      "confidence": "high"
+    },
+    "GD-10": {
+      "sector": "DIPLO_GEO",
+      "confidence": "high"
+    },
+    "GD-11": {
+      "sector": "DIPLO_GEO",
+      "confidence": "high"
+    },
+    "GD-12": {
+      "sector": "DIPLO_GEO",
+      "confidence": "high"
+    },
+    "GD-13": {
+      "sector": "DIPLO_GEO",
+      "confidence": "high"
+    },
+    "GD-14": {
+      "sector": "CONFLICT",
+      "confidence": "medium",
+      "rationale": "Material conflict events are the 'hard signal' GDELT indicator — actual fighting. Co-varies with WB-01/UC-01 more than with GD-02 diplomatic score."
+    },
+    "GD-15": {
+      "sector": "DIPLO_GEO",
+      "confidence": "high"
+    },
+    "GD-16": {
+      "sector": "DIPLO_GEO",
+      "confidence": "high"
+    },
+    "GD-17": {
+      "sector": "DIPLO_GEO",
+      "confidence": "high"
+    },
+    "GD-18": {
+      "sector": "DIPLO_GEO",
+      "confidence": "high"
+    },
+    "GD-19": {
+      "sector": "DIPLO_GEO",
+      "confidence": "high"
+    },
+    "GD-20": {
+      "sector": "DIPLO_GEO",
+      "confidence": "high"
+    },
+    "GD-21": {
+      "sector": "DIPLO_GEO",
+      "confidence": "high"
+    },
+    "GD-22": {
+      "sector": "DIPLO_GEO",
+      "confidence": "high"
+    },
+    "GD-23": {
+      "sector": "CONFLICT",
+      "confidence": "high"
+    },
+    "GD-24": {
+      "sector": "CONFLICT",
+      "confidence": "high"
+    }
+  }
+}

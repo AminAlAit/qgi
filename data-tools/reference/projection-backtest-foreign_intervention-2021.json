@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "pre_reg": "TE-PROJ-1 (ratified 2026-05-24)",
+  "recipe_id": "foreign_intervention",
+  "evaluation_year": 2021,
+  "generated_at_utc": "2026-05-24T00:03:34.177091+00:00",
+  "holdout_k": 5,
+  "horizons_evaluated": [
+    1,
+    2,
+    3
+  ],
+  "mc_draws": 200,
+  "rng_seed": 42,
+  "gate_pass": false,
+  "coverage_gate_pass": false,
+  "skill_gate_pass": false,
+  "suppressed": true,
+  "suppression_message": "QGI's projection engine did not outperform naive persistence for this recipe on historical holdout data. Projected risk scores are not displayed. Current risk score (observed window): [see current_risk_score per country].",
+  "gate_thresholds": {
+    "coverage_floor": 0.8,
+    "skill_floor": 0.0,
+    "note": "NOT adjustable based on this recipe's result. Amendment requires TE-PROJ-N with prior-walk provenance."
+  },
+  "per_indicator_backtest": {
+    "v2elintmon": {
+      "method": "PERSISTENCE_BOOTSTRAP",
+      "flat_series_count": 46,
+      "per_horizon": {
+        "1": {
+          "n_obs": 249,
+          "coverage_90pct": 0.8755,
+          "coverage_pass": true,
+          "coverage_floor": 0.8,
+          "mae_model": 0.144578,
+          "mae_persistence": 0.144578,
+          "skill": 0.0,
+          "near_random_walk": true
+        },
+        "2": {
+          "n_obs": 49,
+          "coverage_90pct": 0.9388,
+          "coverage_pass": true,
+          "coverage_floor": 0.8,
+          "mae_model": 0.163265,
+          "mae_persistence": 0.163265,
+          "skill": 0.0,
+          "near_random_walk": true
+        },
+        "3": {
+          "n_obs": 40,
+          "coverage_90pct": 0.95,
+          "coverage_pass": true,
+          "coverage_floor": 0.8,
+          "mae_model": 0.15,
+          "mae_persistence": 0.15,
+          "skill": 0.0,
+          "near_random_walk": true
+        }
+      },
+      "near_random_walk_any_horizon": true
+    },
+    "RQ.EST": {
+      "method": "ETS_A_A_N",
+      "flat_series_count": 0,
+      "per_horizon": {
+        "1": {
+          "n_obs": 850,
+          "coverage_90pct": 0.9282,
+          "coverage_pass": true,
+          "coverage_floor": 0.8,
+          "mae_model": 0.083824,
+          "mae_persistence": 0.071674,
+          "skill": -0.1695,
+          "near_random_walk": true
+        },
+        "2": {
+          "n_obs": 850,
+          "coverage_90pct": 0.9412,
+          "coverage_pass": true,
+          "coverage_floor": 0.8,
+          "mae_model": 0.127409,
+          "mae_persistence": 0.103844,
+          "skill": -0.2269,
+          "near_random_walk": true
+        },
+        "3": {
+          "n_obs": 850,
+          "coverage_90pct": 0.9471,
+          "coverage_pass": true,
+          "coverage_floor": 0.8,
+          "mae_model": 0.164225,
+          "mae_persistence": 0.126545,
+          "skill": -0.2978,
+          "near_random_walk": true
+        }
+      },
+      "near_random_walk_any_horizon": true
+    },
+    "v2pepwrgen": {
+      "method": "ETS_A_A_N",
+      "flat_series_count": 0,
+      "per_horizon": {
+        "1": {
+          "n_obs": 850,
+          "coverage_90pct": 0.8118,
+          "coverage_pass": true,
+          "coverage_floor": 0.8,
+          "mae_model": 0.116923,
+          "mae_persistence": 0.104674,
+          "skill": -0.117,
+          "near_random_walk": true
+        },
+        "2": {
+          "n_obs": 850,
+          "coverage_90pct": 0.7729,
+          "coverage_pass": false,
+          "coverage_floor": 0.8,
+          "mae_model": 0.196787,
+          "mae_persistence": 0.181455,
+          "skill": -0.0845,
+          "near_random_walk": true
+        },
+        "3": {
+          "n_obs": 850,
+          "coverage_90pct": 0.7541,
+          "coverage_pass": false,
+          "coverage_floor": 0.8,
+          "mae_model": 0.257453,
+          "mae_persistence": 0.239827,
+          "skill": -0.0735,
+          "near_random_walk": true
+        }
+      },
+      "near_random_walk_any_horizon": true
+    },
+    "v2stfisccap": {
+      "method": "ETS_A_A_N",
+      "flat_series_count": 61,
+      "per_horizon": {
+        "1": {
+          "n_obs": 850,
+          "coverage_90pct": 0.8953,
+          "coverage_pass": true,
+          "coverage_floor": 0.8,
+          "mae_model": 0.078528,
+          "mae_persistence": 0.066198,
+          "skill": -0.1863,
+          "near_random_walk": true
+        },
+        "2": {
+          "n_obs": 850,
+          "coverage_90pct": 0.86,
+          "coverage_pass": true,
+          "coverage_floor": 0.8,
+          "mae_model": 0.144419,
+          "mae_persistence": 0.125724,
+          "skill": -0.1487,
+          "near_random_walk": true
+        },
+        "3": {
+          "n_obs": 850,
+          "coverage_90pct": 0.8447,
+          "coverage_pass": true,
+          "coverage_floor": 0.8,
+          "mae_model": 0.201608,
+          "mae_persistence": 0.178293,
+          "skill": -0.1308,
+          "near_random_walk": true
+        }
+      },
+      "near_random_walk_any_horizon": true
+    }
+  },
+  "risk_score_backtest": {
+    "1": {
+      "n_obs": 131,
+      "mae_model": 2.5907,
+      "mae_persistence": 1.0947,
+      "skill": -1.3666,
+      "skill_pass": false,
+      "skill_floor": 0.0
+    },
+    "2": {
+      "n_obs": 130,
+      "mae_model": 3.8598,
+      "mae_persistence": 1.8812,
+      "skill": -1.0518,
+      "skill_pass": false,
+      "skill_floor": 0.0
+    },
+    "3": {
+      "n_obs": 128,
+      "mae_model": 4.7429,
+      "mae_persistence": 2.6519,
+      "skill": -0.7885,
+      "skill_pass": false,
+      "skill_floor": 0.0
+    }
+  },
+  "flat_series_pi_degenerate_total": 107,
+  "coverage_cells_pass": {
+    "v2elintmon": {
+      "1": true,
+      "2": true,
+      "3": true
+    },
+    "RQ.EST": {
+      "1": true,
+      "2": true,
+      "3": true
+    },
+    "v2pepwrgen": {
+      "1": true,
+      "2": false,
+      "3": false
+    },
+    "v2stfisccap": {
+      "1": true,
+      "2": true,
+      "3": true
+    }
+  },
+  "method_overrides": {
+    "v2elintmon": "PERSISTENCE_BOOTSTRAP",
+    "RQ.EST": "ETS_A_A_N",
+    "v2pepwrgen": "ETS_A_A_N",
+    "v2stfisccap": "ETS_A_A_N"
+  },
+  "ratification_required": {
+    "seats": [
+      "Ji-Hoon Yamamoto-Costa #21",
+      "Kwame Asante #11",
+      "Priya Chandrasekaran #22"
+    ],
+    "threshold": "3/3",
+    "note": "Required before projections appear in buyer-facing surfaces. Same discipline as F-ML-1 DECISION files."
+  }
+}

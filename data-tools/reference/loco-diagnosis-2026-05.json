@@ -1,0 +1,725 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-05-05T20:51:12.415932+00:00",
+  "purpose": "Phase C step C1 LOCO diagnosis -- tests whether Stage 1 v0's mean AUC=0.778 is real generalizing signal or country-fixed-effect leakage (model memorizing country IDs). For each held-out country, retrains the full Stage 1 pipeline on all-except-X, predicts on X's 2022-2025 test rows. Pooled LOCO-AUC across all held-out countries gives the answer.",
+  "method": {
+    "algorithm": "leave-one-country-out CV with full backbone+head retrain",
+    "panel": "data\\panel_104_2026_05_04.parquet",
+    "rubric": "..\\qgi-data\\reference\\ml-recipe-ranking-2026-05.json",
+    "label_window": [
+      2014,
+      2025
+    ],
+    "train_year_max": 2021,
+    "test_year_range": [
+      2022,
+      2025
+    ],
+    "calibration": "RAW predictions (uncalibrated) -- diagnosis is on backbone+head generalization, not calibrator quality"
+  },
+  "consult_attribution": "Diagnosis recommended by Priya Venkataraman-Szabo (Stats 6/ML 2, Majles seat #22) at 2026-05-05 trio convening on the F5_FALLBACK verdict from elections_and_voting walk. The diagnostic question: if LOCO-AUC craters vs Stage 1's in-sample AUC=0.778, the model is memorizing country identity rather than learning dynamic risk signals; Tariq's binding warning on country-fixed-effect contamination then becomes a MUST-FIX-FIRST blocker before any Stage 2 walks.",
+  "countries_held_out": [
+    "norway",
+    "sweden",
+    "switzerland",
+    "netherlands",
+    "estonia",
+    "ukraine",
+    "sudan",
+    "myanmar",
+    "yemen",
+    "russia",
+    "brazil",
+    "indonesia",
+    "south_korea",
+    "mexico",
+    "turkiye"
+  ],
+  "recipes_evaluated": [
+    "elections_and_voting",
+    "civil_war_and_insurgency",
+    "migration_and_refugees",
+    "government_formation",
+    "bilateral_treaty",
+    "energy_policy"
+  ],
+  "per_country": {
+    "norway": {
+      "n_test_rows": 4,
+      "n_pos_total": 0,
+      "per_recipe_auc": {
+        "elections_and_voting": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "civil_war_and_insurgency": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "migration_and_refugees": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "government_formation": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "bilateral_treaty": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "energy_policy": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        }
+      },
+      "elapsed_sec": 1.5
+    },
+    "sweden": {
+      "n_test_rows": 4,
+      "n_pos_total": 0,
+      "per_recipe_auc": {
+        "elections_and_voting": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "civil_war_and_insurgency": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "migration_and_refugees": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "government_formation": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "bilateral_treaty": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "energy_policy": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        }
+      },
+      "elapsed_sec": 0.4
+    },
+    "switzerland": {
+      "n_test_rows": 4,
+      "n_pos_total": 0,
+      "per_recipe_auc": {
+        "elections_and_voting": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "civil_war_and_insurgency": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "migration_and_refugees": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "government_formation": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "bilateral_treaty": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "energy_policy": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        }
+      },
+      "elapsed_sec": 0.5
+    },
+    "netherlands": {
+      "n_test_rows": 4,
+      "n_pos_total": 0,
+      "per_recipe_auc": {
+        "elections_and_voting": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "civil_war_and_insurgency": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "migration_and_refugees": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "government_formation": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "bilateral_treaty": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "energy_policy": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        }
+      },
+      "elapsed_sec": 0.6
+    },
+    "estonia": {
+      "n_test_rows": 4,
+      "n_pos_total": 0,
+      "per_recipe_auc": {
+        "elections_and_voting": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "civil_war_and_insurgency": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "migration_and_refugees": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "government_formation": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "bilateral_treaty": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "energy_policy": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        }
+      },
+      "elapsed_sec": 0.4
+    },
+    "ukraine": {
+      "n_test_rows": 4,
+      "n_pos_total": 6,
+      "per_recipe_auc": {
+        "elections_and_voting": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "civil_war_and_insurgency": {
+          "auc": 1.0,
+          "n": 4,
+          "n_pos": 3,
+          "n_neg": 1
+        },
+        "migration_and_refugees": {
+          "auc": 1.0,
+          "n": 4,
+          "n_pos": 1,
+          "n_neg": 3
+        },
+        "government_formation": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "bilateral_treaty": {
+          "auc": 0.0,
+          "n": 4,
+          "n_pos": 1,
+          "n_neg": 3
+        },
+        "energy_policy": {
+          "auc": 1.0,
+          "n": 4,
+          "n_pos": 1,
+          "n_neg": 3
+        }
+      },
+      "elapsed_sec": 0.5
+    },
+    "sudan": {
+      "n_test_rows": 4,
+      "n_pos_total": 0,
+      "per_recipe_auc": {
+        "elections_and_voting": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "civil_war_and_insurgency": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "migration_and_refugees": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "government_formation": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "bilateral_treaty": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "energy_policy": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        }
+      },
+      "elapsed_sec": 0.5
+    },
+    "myanmar": {
+      "n_test_rows": 4,
+      "n_pos_total": 0,
+      "per_recipe_auc": {
+        "elections_and_voting": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "civil_war_and_insurgency": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "migration_and_refugees": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "government_formation": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "bilateral_treaty": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "energy_policy": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        }
+      },
+      "elapsed_sec": 0.6
+    },
+    "yemen": {
+      "n_test_rows": 4,
+      "n_pos_total": 0,
+      "per_recipe_auc": {
+        "elections_and_voting": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "civil_war_and_insurgency": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "migration_and_refugees": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "government_formation": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "bilateral_treaty": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "energy_policy": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        }
+      },
+      "elapsed_sec": 0.5
+    },
+    "russia": {
+      "n_test_rows": 4,
+      "n_pos_total": 0,
+      "per_recipe_auc": {
+        "elections_and_voting": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "civil_war_and_insurgency": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "migration_and_refugees": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "government_formation": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "bilateral_treaty": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "energy_policy": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        }
+      },
+      "elapsed_sec": 0.4
+    },
+    "brazil": {
+      "n_test_rows": 4,
+      "n_pos_total": 0,
+      "per_recipe_auc": {
+        "elections_and_voting": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "civil_war_and_insurgency": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "migration_and_refugees": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "government_formation": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "bilateral_treaty": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "energy_policy": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        }
+      },
+      "elapsed_sec": 0.5
+    },
+    "indonesia": {
+      "n_test_rows": 4,
+      "n_pos_total": 0,
+      "per_recipe_auc": {
+        "elections_and_voting": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "civil_war_and_insurgency": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "migration_and_refugees": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "government_formation": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "bilateral_treaty": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "energy_policy": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        }
+      },
+      "elapsed_sec": 0.5
+    },
+    "south_korea": {
+      "n_test_rows": 4,
+      "n_pos_total": 0,
+      "per_recipe_auc": {
+        "elections_and_voting": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "civil_war_and_insurgency": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "migration_and_refugees": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "government_formation": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "bilateral_treaty": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "energy_policy": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        }
+      },
+      "elapsed_sec": 0.4
+    },
+    "mexico": {
+      "n_test_rows": 4,
+      "n_pos_total": 7,
+      "per_recipe_auc": {
+        "elections_and_voting": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 4,
+          "n_neg": 0
+        },
+        "civil_war_and_insurgency": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "migration_and_refugees": {
+          "auc": 0.5,
+          "n": 4,
+          "n_pos": 2,
+          "n_neg": 2
+        },
+        "government_formation": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "bilateral_treaty": {
+          "auc": 0.0,
+          "n": 4,
+          "n_pos": 1,
+          "n_neg": 3
+        },
+        "energy_policy": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        }
+      },
+      "elapsed_sec": 0.3
+    },
+    "turkiye": {
+      "n_test_rows": 4,
+      "n_pos_total": 0,
+      "per_recipe_auc": {
+        "elections_and_voting": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "civil_war_and_insurgency": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "migration_and_refugees": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "government_formation": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "bilateral_treaty": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        },
+        "energy_policy": {
+          "auc": NaN,
+          "n": 4,
+          "n_pos": 0,
+          "n_neg": 4
+        }
+      },
+      "elapsed_sec": 0.3
+    }
+  },
+  "pooled_loco_auc_per_recipe": {
+    "elections_and_voting": {
+      "loco_auc_pooled": 0.8973214285714286,
+      "n_total": 60,
+      "n_pos_total": 4
+    },
+    "civil_war_and_insurgency": {
+      "loco_auc_pooled": 0.3391812865497076,
+      "n_total": 60,
+      "n_pos_total": 3
+    },
+    "migration_and_refugees": {
+      "loco_auc_pooled": 0.8070175438596491,
+      "n_total": 60,
+      "n_pos_total": 3
+    },
+    "government_formation": {
+      "loco_auc_pooled": NaN,
+      "n_total": 60,
+      "n_pos_total": 0
+    },
+    "bilateral_treaty": {
+      "loco_auc_pooled": 0.008620689655172414,
+      "n_total": 60,
+      "n_pos_total": 2
+    },
+    "energy_policy": {
+      "loco_auc_pooled": 0.9830508474576272,
+      "n_total": 60,
+      "n_pos_total": 1
+    }
+  }
+}
