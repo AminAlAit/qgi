@@ -1,0 +1,28 @@
+# Phase 5 v0.2 Path B — hierarchical-Bayes evaluator dependencies.
+#
+# Locked at T10 commit ca77505 + 2026-05-14 trio ratification (Priya #22,
+# Kwame #11, Ji-Hoon #21). Patch-level pinning per Ji-Hoon §3.4 sign-off:
+# patch-level pinning preferred over minor-level for production
+# reproducibility on the T12 real-data MCMC run.
+#
+# Amending these pins requires a new Majles convening with Priya,
+# Kwame, and Ji-Hoon present per spec §3.4.
+#
+# Spec: docs/specs/internal/ops/cascade-track/phase-5-v0.2-path-b-architecture.md (ca77505)
+# Script: qgi-ml/scripts/validate_weight_matrix_bayes.py
+#
+# Python version: 3.12.x required. pytensor (pymc's backend) does not yet
+# publish Python 3.14 wheels on Windows as of 2026-05-14. Build the venv
+# with `py -3.12 -m venv .venv-path-b` until that changes.
+
+pymc==5.16.*
+numpyro==0.15.*
+arviz==0.18.*
+
+# N-4 (QA review of #60; #684): jax/jaxlib pinned alongside numpyro.
+# PR #60 surfaced the numpyro==0.15 / jax import mismatch (pjit_p not
+# exported in current jax); pinning the pair prevents §3.2 fallback from
+# silently breaking at install. Patch-exact pins live in
+# requirements-path-b.lock.txt (PR #66, 2026-05-15).
+jax==0.7.*
+jaxlib==0.7.*
