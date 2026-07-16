@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "filed": "2026-05-10",
+  "purpose": "F-H-1 Orchestration Implementation Contract dispatch table per qgi-docs/internal/ops/ml-track/stage-2-hybrid-d2-d5-walk-methodology-prereg.md (commit 7db3596). Production prediction pipelines for any LOCKED recipe MUST consult this table at run-start and route predictions through the assigned architecture. Mid-walk re-assignment is forbidden per F-H-5.",
+  "pre_reg_lineage": {
+    "d2_walk": "1e107ae",
+    "tier_threshold": "2c87f06",
+    "d5_walk": "925dc42",
+    "hybrid": "7db3596"
+  },
+  "selection_rule": "better-LOCO wins with 0.03 hysteresis tie-band; ties broken by D2 (Assignment confidence MODERATE) per buyer-disclosure preference for the stronger tier label",
+  "assignments": {
+    "civil_war_and_insurgency": {
+      "architecture": "D2",
+      "backbone_dir": "results/d2_d7_canonical_2026_05/backbone",
+      "predictions_canonical": "qgi-data/reference/d2-d7-beta-validation-results-2026-05.json",
+      "loco_auc": 0.7686,
+      "n_pos_loco": 7,
+      "tier": "STRONG",
+      "assignment_confidence": "MODERATE",
+      "advisory_only": false,
+      "f_rule_anomaly": false,
+      "notes": "Within hysteresis (D5 +0.003); D2 retained on disclosure preference."
+    },
+    "terrorist_attack": {
+      "architecture": "D2",
+      "backbone_dir": "results/d2_d7_canonical_2026_05/backbone",
+      "predictions_canonical": "qgi-data/reference/d2-d7-beta-validation-results-2026-05.json",
+      "loco_auc": 0.8403,
+      "n_pos_loco": 1,
+      "tier": "STRONG",
+      "assignment_confidence": "LOW",
+      "advisory_only": true,
+      "f_rule_anomaly": false,
+      "notes": "F-H-3 ADVISORY-ONLY (n_pos_loco=1; cannot anchor standalone pricing)."
+    },
+    "energy_policy": {
+      "architecture": "D2",
+      "backbone_dir": "results/d2_d7_canonical_2026_05/backbone",
+      "predictions_canonical": "qgi-data/reference/d2-d7-beta-validation-results-2026-05.json",
+      "loco_auc": 0.7647,
+      "n_pos_loco": 1,
+      "tier": "STRONG",
+      "assignment_confidence": "LOW",
+      "advisory_only": true,
+      "f_rule_anomaly": false,
+      "notes": "F-H-3 ADVISORY-ONLY (n_pos_loco=1). Curation flagged in issue #633 (n_pos_train=3)."
+    },
+    "peacekeeping_and_peace_process": {
+      "architecture": "D2",
+      "backbone_dir": "results/d2_d7_canonical_2026_05/backbone",
+      "predictions_canonical": "qgi-data/reference/d2-d7-beta-validation-results-2026-05.json",
+      "loco_auc": 0.7458,
+      "n_pos_loco": 2,
+      "tier": "MODERATE",
+      "assignment_confidence": "LOW",
+      "advisory_only": false,
+      "f_rule_anomaly": false,
+      "notes": "Within hysteresis (D5 +0.025); D2 retained. n_pos_loco=2 escapes F-H-3 ADVISORY-ONLY gate."
+    },
+    "foreign_intervention": {
+      "architecture": "D2",
+      "backbone_dir": "results/d2_d7_canonical_2026_05/backbone",
+      "predictions_canonical": "qgi-data/reference/d2-d7-beta-validation-results-2026-05.json",
+      "loco_auc": 0.633,
+      "n_pos_loco": 6,
+      "tier": "MODERATE",
+      "assignment_confidence": "HIGH",
+      "advisory_only": false,
+      "f_rule_anomaly": false,
+      "notes": "D5 catastrophic regression (-0.225 LOCO); D2 preserved."
+    },
+    "humanitarian_crisis": {
+      "architecture": "D2",
+      "backbone_dir": "results/d2_d7_canonical_2026_05/backbone",
+      "predictions_canonical": "qgi-data/reference/d2-d7-beta-validation-results-2026-05.json",
+      "loco_auc": 0.7151,
+      "n_pos_loco": 3,
+      "tier": "MODERATE",
+      "assignment_confidence": "HIGH",
+      "advisory_only": false,
+      "f_rule_anomaly": false,
+      "notes": "D5 LEAK (-0.231 LOCO) predicted by skewed-training audit (Venezuela 71.4%). D2 preserved."
+    },
+    "government_formation": {
+      "architecture": "D2",
+      "backbone_dir": "results/d2_d7_canonical_2026_05/backbone",
+      "predictions_canonical": "qgi-data/reference/d2-d7-beta-validation-results-2026-05.json",
+      "loco_auc": 0.5755,
+      "n_pos_loco": 3,
+      "tier": "MARGINAL",
+      "assignment_confidence": "MODERATE",
+      "advisory_only": false,
+      "f_rule_anomaly": false,
+      "notes": "Within hysteresis (D5 -0.023); D2 retained."
+    },
+    "epidemic_and_pandemic": {
+      "architecture": "D5",
+      "backbone_dir": "results/d5_backbones_2026_05_07/backbone",
+      "predictions_canonical": "qgi-data/reference/d5-d7-beta-validation-results-2026-05-07.json",
+      "loco_auc": 0.8824,
+      "n_pos_loco": 1,
+      "tier": "STRONG",
+      "assignment_confidence": "LOW",
+      "advisory_only": true,
+      "f_rule_anomaly": true,
+      "notes": "F-H-3 ADVISORY-ONLY (n_pos_loco=1). F-rule anomaly: in-sample F2 fails under D5 (AUC 0.5627 < 0.57); LOCO drives tier. Pending Majles clarification on hybrid F-rule applicability."
+    },
+    "human_rights_violation": {
+      "architecture": "D5",
+      "backbone_dir": "results/d5_backbones_2026_05_07/backbone",
+      "predictions_canonical": "qgi-data/reference/d5-d7-beta-validation-results-2026-05-07.json",
+      "loco_auc": 0.9244,
+      "n_pos_loco": 1,
+      "tier": "STRONG",
+      "assignment_confidence": "LOW",
+      "advisory_only": true,
+      "f_rule_anomaly": false,
+      "notes": "F-H-3 ADVISORY-ONLY (n_pos_loco=1). Biggest D5 promotion (+0.387 LOCO from D2)."
+    },
+    "multilateral_agreement": {
+      "architecture": "D5",
+      "backbone_dir": "results/d5_backbones_2026_05_07/backbone",
+      "predictions_canonical": "qgi-data/reference/d5-d7-beta-validation-results-2026-05-07.json",
+      "loco_auc": 0.8689,
+      "n_pos_loco": 7,
+      "tier": "STRONG",
+      "assignment_confidence": "HIGH",
+      "advisory_only": false,
+      "f_rule_anomaly": false,
+      "notes": "D5 architecture-rescued from D2 FALSIFIED. Cleanest D5 win."
+    },
+    "bilateral_treaty": {
+      "architecture": "D5",
+      "backbone_dir": "results/d5_backbones_2026_05_07/backbone",
+      "predictions_canonical": "qgi-data/reference/d5-d7-beta-validation-results-2026-05-07.json",
+      "loco_auc": 0.6681,
+      "n_pos_loco": 6,
+      "tier": "MODERATE",
+      "assignment_confidence": "HIGH",
+      "advisory_only": false,
+      "f_rule_anomaly": false,
+      "notes": "Most statistically-robust MODERATE LOCK on the D5 side."
+    },
+    "elections_and_voting": {
+      "architecture": "D5",
+      "backbone_dir": "results/d5_backbones_2026_05_07/backbone",
+      "predictions_canonical": "qgi-data/reference/d5-d7-beta-validation-results-2026-05-07.json",
+      "loco_auc": 0.7113,
+      "n_pos_loco": 5,
+      "tier": "MODERATE",
+      "assignment_confidence": "MODERATE",
+      "advisory_only": false,
+      "f_rule_anomaly": false,
+      "notes": "Highest n_pos_test in the LOCKed set."
+    },
+    "mass_protest": {
+      "architecture": "D5",
+      "backbone_dir": "results/d5_backbones_2026_05_07/backbone",
+      "predictions_canonical": "qgi-data/reference/d5-d7-beta-validation-results-2026-05-07.json",
+      "loco_auc": 0.5847,
+      "n_pos_loco": 2,
+      "tier": "MARGINAL",
+      "assignment_confidence": "LOW",
+      "advisory_only": false,
+      "f_rule_anomaly": false,
+      "notes": "F-D5-1 LEAK rescue case. D2 LOCO 0.4449 (LEAK) -> D5 LOCO 0.5847 (MARGINAL). Architectural validation of the level-encoding hypothesis."
+    }
+  },
+  "falsified": [
+    "constitutional_change",
+    "economic_recession",
+    "executive_power_consolidation",
+    "migration_and_refugees",
+    "natural_disaster",
+    "political_corruption",
+    "political_repression",
+    "sanctions_and_arms_embargo",
+    "territorial_disputes",
+    "trade_agreement"
+  ],
+  "metadata": {
+    "n_locked": 13,
+    "n_falsified": 10,
+    "n_strong": 6,
+    "n_moderate": 5,
+    "n_marginal": 2,
+    "n_advisory_only": 4,
+    "n_f_rule_anomaly": 1,
+    "comment": "n_locked + n_falsified = 23 (total D2-eligible recipes). Per KI-2 Majles amendment 2026-05-11 (Option C carried 3-1; Priya dissent for Option B): territorial_disputes FALSIFIED under hybrid due to degenerate D5 predictions (max 1.91e-6 across 768 cells; AHI = 1.0000 is an artifact, not strength). epidemic_and_pandemic retains LOCKED STRONG with f_rule_anomaly flag (LOCO 0.8824 genuine; F2 anomaly disclosed via inherited ADVISORY-ONLY)."
+  },
+  "amendments": [
+    {
+      "date": "2026-05-11",
+      "amendment_id": "KI-2",
+      "change": "FALSIFY territorial_disputes under hybrid (degenerate predictions). LOCKed count 14 → 13.",
+      "majles_vote": "Option C carried 3-1 (Kwame, Ji-Hoon, Nasrin for C; Priya for B logged as dissent)",
+      "pre_reg_amendment_commit": "TBD (this commit + sister qgi-docs amendment commit)",
+      "reference": "qgi-docs/internal/majles/in-progress/2026-05-11_ml_majles_stage_5_and_frontend_shipping.md Topic 3"
+    }
+  ]
+}

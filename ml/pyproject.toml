@@ -1,0 +1,15 @@
+[project]
+name = "qgi-ml"
+version = "6.0.0"
+description = "QGI Endogenous Geopolitical Trajectory Engine & Backtesting Suite"
+requires-python = ">=3.11"
+
+[tool.ruff]
+extend = "../pyproject.toml"
+
+[tool.pytest.ini_options]
+pythonpath = ["..", ".", "src", "shared", "scripts", "scripts/enrichment", "../data-tools/src"]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks integration tests",
+]

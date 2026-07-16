@@ -1,0 +1,104 @@
+# QGI-R&D | 002 Phase 1 — Shape feature production lockfile (Chunk B)
+# Patch-pinned per Stage 6 §4.5 binding ("requirements-shape.lock.txt").
+#
+# Spec authority:
+#   - Stage 6 §3 (Priya #22) — Bayesian FPCA + hierarchical Bayes math primitive
+#   - Stage 6 §4.2 (Ji-Hoon #21) — deterministic kernel API contract
+#   - Stage 6 §4.5 (Ji-Hoon #21) — patch-pinning + provenance discipline
+#
+# Direct analogue of `requirements-path-b.lock.txt` (Path B Bayes lockfile,
+# 6-seat ratified 2026-05-15, qgi-aws-tf#691). The shape feature reuses the
+# same Python 3.12 + PyMC + JAX stack; this lockfile adds scikit-learn for
+# IsotonicRegression (§3.5.2) and pins shape-specific dependencies.
+#
+# Python interpreter constraint: Python 3.12.x (>= 3.12, < 3.13).
+#   - Python 3.14 NOT supported: pytensor (a PyMC dependency) has no Py3.14
+#     wheels on Windows as of 2026-05.
+#   - Python < 3.12: type-syntax `dict[str, Any]` used throughout requires 3.12+.
+#
+# Amendment authority: any change to these pins requires
+#   - Spec trio Majles (Priya #22 + Ji-Hoon #21 + Kwame #11 + Miriam #14)
+#   - 8-seat Majles ratification
+#   - Lakatosian guard F-Shape-1 (§6.2) fires
+# Tiny changes exempt per standard peer review policy (single-file
+# version bumps with zero logic change).
+#
+# How to install:
+#   py -3.12 -m venv .venv-shape
+#   .venv-shape/Scripts/python.exe -m pip install -r requirements-shape.lock.txt
+#
+# Verify after install (must produce empty diff):
+#   .venv-shape/Scripts/python.exe -m pip freeze | diff - requirements-shape.lock.txt
+#
+# Run shape kernel tests:
+#   .venv-shape/Scripts/python.exe -m pytest tests/test_shape_kernel_math.py \
+#       tests/test_shape_prototype_fit.py \
+#       tests/test_shape_kernel_determinism.py -v
+#
+# ============================================================================
+
+# Core PyMC / Bayes stack (mirrors requirements-path-b.lock.txt; §3.1.3 binding)
+absl-py==2.4.0
+arviz==0.18.0
+attrs==26.1.0
+cachetools==7.1.1
+cloudpickle==3.1.2
+colorama==0.4.6
+cons==0.4.7
+contourpy==1.3.3
+cycler==0.12.1
+dm-tree==0.1.10
+etuples==0.3.10
+filelock==3.29.0
+fonttools==4.63.0
+h5netcdf==1.8.1
+jax==0.7.1
+jaxlib==0.7.1
+kiwisolver==1.5.0
+logical-unification==0.4.7
+markdown-it-py==4.2.0
+matplotlib==3.10.9
+mdurl==0.1.2
+miniKanren==1.0.5
+ml_dtypes==0.5.4
+multipledispatch==1.0.0
+numpy==1.26.4
+numpyro==0.15.3
+opt_einsum==3.4.0
+packaging==26.2
+pandas==3.0.3
+pillow==12.2.0
+Pygments==2.20.0
+pymc==5.16.2
+pyparsing==3.3.2
+pytensor==2.25.5
+python-dateutil==2.9.0.post0
+rich==15.0.0
+scipy==1.17.1
+setuptools==82.0.1
+six==1.17.0
+threadpoolctl==3.6.0
+toolz==1.1.0
+tqdm==4.67.3
+typing_extensions==4.15.0
+tzdata==2026.2
+wrapt==2.1.2
+xarray==2026.4.0
+xarray-einstats==0.9.1
+
+# Shape-specific additions (§3.5.2 isotonic regression + downstream fitting)
+joblib==1.5.3
+scikit-learn==1.8.0
+
+# pyarrow — required for stable parquet serialization in _sha256_of_dataframe
+# (discovered missing during Chunk C.2: ad-hoc install; lockfile now reflects
+# production reality). Version matches the .venv-path-b installation verified
+# 2026-05-18.
+pyarrow==24.0.0
+
+# Numba (§4.2 DTW acceleration) — INTENTIONALLY OMITTED in Chunk B:
+#   The DTW path runs over T_r <= 15, K_r <= 8 indicators; pure-NumPy DTW
+#   is sub-millisecond at this scale (measured on a 5x5 fixture). Numba
+#   adds ~6 MB of LLVM dependency for zero measurable speedup at production
+#   scale. Adding it is a future optimization (Chunk C+ ticket if a
+#   profiling pass shows DTW dominates wall-time) gated by spec trio.
