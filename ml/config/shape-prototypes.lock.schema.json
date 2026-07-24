@@ -1,0 +1,293 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qgintelligence.com/schemas/shape-prototypes.lock.schema.json",
+  "title": "QGI Stage 6 Shape Prototype Lock File",
+  "description": "Per-recipe canonical shape prototype lock per Stage 6 pre-reg (qgi-docs commit e4f9e7a) §4.3. Production shape-feature emits MUST consult this artifact at run-start, SHA-verify the file content, and pin the prototype SHA in every result JSON. Prototype rotation requires F-H-4 amendment + Lakatosian guard F-Shape-1 (§6.2) + 8-seat ratification.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "filed",
+    "purpose",
+    "pre_reg_lineage",
+    "metadata",
+    "recipes",
+    "amendments"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1,
+      "description": "Schema version. Loader raises on any other value (forward-compat guard)."
+    },
+    "filed": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "description": "YYYY-MM-DD date this artifact was filed."
+    },
+    "purpose": {
+      "type": "string",
+      "description": "Free-text statement of artifact purpose; reproduced verbatim per §4.3 spec."
+    },
+    "pre_reg_lineage": {
+      "type": "object",
+      "additionalProperties": {"type": "string"},
+      "required": ["stage_6"],
+      "properties": {
+        "stage_6": {
+          "type": "string",
+          "description": "Commit SHA of Stage 6 pre-reg merge in qgi-docs."
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "file_sha256",
+        "n_recipes_with_prototype",
+        "n_recipes_substrate_inadequate"
+      ],
+      "properties": {
+        "file_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$",
+          "description": "SHA-256 of the canonical-serialized JSON content of THIS file with metadata.file_sha256 cleared to the empty string. Loader recomputes and verifies on load; mismatch raises PrototypeIntegrityError."
+        },
+        "n_recipes_with_prototype": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Count of recipes with a fitted prototype entry."
+        },
+        "n_recipes_substrate_inadequate": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Count of recipes whose G1-G4 substrate gates failed; these are routed to ingredient+length fallback."
+        }
+      }
+    },
+    "recipes": {
+      "type": "object",
+      "additionalProperties": {"$ref": "#/$defs/recipe_prototype"},
+      "description": "Map of recipe_id -> ShapePrototype entry."
+    },
+    "amendments": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/amendment"},
+      "description": "F-H-4 amendment audit trail (chronological)."
+    }
+  },
+  "$defs": {
+    "recipe_prototype": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "recipe_id",
+        "indicator_ids",
+        "canonical_length_T",
+        "per_indicator_trajectory_signature",
+        "fit_method",
+        "fit_method_commit_sha",
+        "n_training_positives",
+        "training_data_snapshot_sha",
+        "substrate_audit",
+        "cohort_calibration_ref",
+        "schema_version"
+      ],
+      "properties": {
+        "recipe_id": {"type": "string", "minLength": 1},
+        "indicator_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "minItems": 1
+        },
+        "canonical_length_T": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["point", "posterior_iqr", "method"],
+          "properties": {
+            "point": {"type": "integer", "minimum": 1},
+            "posterior_iqr": {
+              "type": "array",
+              "items": {"type": "integer", "minimum": 1},
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "method": {"type": "string", "minLength": 1}
+          }
+        },
+        "per_indicator_trajectory_signature": {
+          "type": "object",
+          "additionalProperties": {"$ref": "#/$defs/indicator_signature"},
+          "minProperties": 0,
+          "description": "Per-indicator trajectory signature. Required to be non-empty when cascade_outcome='fit_locked'. May be empty {} when cascade_outcome='advisory_only_shape_unfittable' (F-H-4-A5: no prototype emitted; orchestrator routes to non-shape head per §4.2). Backward-compatible (pre-A5 entries always had ≥1 signature)."
+        },
+        "fit_method": {
+          "type": "string",
+          "enum": ["fpca", "hierarchical_bayes_gp_fallback"],
+          "description": "Per §3.1.5: 'fpca' (primary, N>=10) or 'hierarchical_bayes_gp_fallback' (sparse / FPCA-failed recipes)."
+        },
+        "fit_method_commit_sha": {
+          "type": "string",
+          "description": "qgi-ml commit SHA at which the fit method was run."
+        },
+        "n_training_positives": {"type": "integer", "minimum": 0},
+        "training_data_snapshot_sha": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["s3_path", "sha256"],
+          "properties": {
+            "s3_path": {"type": "string"},
+            "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+          }
+        },
+        "substrate_audit": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "g1_n_pos_geq_10",
+            "g2_n_countries_geq_5",
+            "g3_density_geq_0_85",
+            "g4_censoring_clean"
+          ],
+          "properties": {
+            "g1_n_pos_geq_10": {"type": "boolean"},
+            "g2_n_countries_geq_5": {"type": "boolean"},
+            "g3_density_geq_0_85": {"type": "boolean"},
+            "g4_censoring_clean": {"type": "boolean"}
+          }
+        },
+        "cohort_calibration_ref": {"type": "string"},
+        "schema_version": {"type": "integer", "const": 1},
+        "divergences_observed": {
+          "type": "object",
+          "description": "F-H-4-A4 (qgi-docs 2026-05-20, 8-seat ratified 8/8). Sampler-diagnostic provenance written at gate-evaluation time per Marcus #8 rider. Reports observed divergences regardless of pass/fail so Lloyd's audit can re-evaluate under a different gate. Optional for backward compatibility with pre-A4 emissions.",
+          "additionalProperties": false,
+          "required": ["n_divergences", "n_post_warmup_draws", "divergence_rate"],
+          "properties": {
+            "n_divergences": {"type": "integer", "minimum": 0},
+            "n_post_warmup_draws": {"type": "integer", "minimum": 1},
+            "divergence_rate": {"type": "number", "minimum": 0.0, "maximum": 1.0}
+          }
+        },
+        "cascade_outcome": {
+          "type": "string",
+          "enum": ["fit_locked", "advisory_only_shape_unfittable", "phase_1_hard_falsified"],
+          "description": "F-H-4-A5 (qgi-docs 2026-05-20, 8-seat ratified) + stage-6-phase-1-closure-DECISION-2026-05-21 (8-seat ratified). Cascade disposition for the shape feature on this recipe. 'fit_locked' = shape prototype valid and locked (default). 'advisory_only_shape_unfittable' = §3.1.5 cascade exit clause invoked. 'phase_1_hard_falsified' = Stage 7 §6.1 HARD-FALSIFY routing: prototype is mathematically sound but the FEATURE derived from it failed F-S-1/F-S-3 + F-H-7 with margin; the production cascade reverts to ingredient+length-only. Future revival requires fresh pre-reg + fresh fit per F-Shape-1."
+        },
+        "advisory_only_reason": {
+          "type": "string",
+          "description": "F-H-4-A5: when cascade_outcome='advisory_only_shape_unfittable', the specific reason category. Currently the only enumerated reason is 'gp_fallback_nuts_gate_failure_after_operational_exhaustion'."
+        },
+        "falsification_mode": {
+          "type": "string",
+          "enum": ["baseline_regression", "below_chance_no_baseline"],
+          "description": "Marcus #8 R-M8-1 rider on stage-6-phase-1-closure-DECISION-2026-05-21. Required when cascade_outcome='phase_1_hard_falsified'. 'baseline_regression' = WITH-shape LOCO regresses below an existing Hybrid LOCK baseline (e.g., civil_war_and_insurgency vs Hybrid D2/D5 at 0.7686). 'below_chance_no_baseline' = WITH-shape LOCO operates below random (0.5) without a Hybrid LOCK baseline to compare against (e.g., economic_recession rescue-mode failure)."
+        },
+        "falsification_ref": {
+          "type": "string",
+          "description": "Marcus R-M8-1 rider: path to the binding DECISION artifact that ratified the falsification. Required when cascade_outcome='phase_1_hard_falsified'."
+        },
+        "nuts_gate_failure_diagnostics": {
+          "type": "object",
+          "description": "F-H-4-A5 (Marcus rider): exact sampler diagnostics observed on the failing fit attempt, preserved for Lloyd's audit and for substrate-class characterization in Phase 2 pre-screening. Required when cascade_outcome='advisory_only_shape_unfittable'.",
+          "additionalProperties": true,
+          "properties": {
+            "rhat_max": {"type": "number"},
+            "ess_min": {"type": "number"},
+            "n_divergences": {"type": "integer", "minimum": 0},
+            "n_post_warmup_draws": {"type": "integer", "minimum": 1},
+            "divergence_rate": {"type": "number", "minimum": 0.0},
+            "sampler_config": {
+              "type": "object",
+              "additionalProperties": true,
+              "properties": {
+                "n_chains": {"type": "integer", "minimum": 1},
+                "n_tune": {"type": "integer", "minimum": 1},
+                "n_draws": {"type": "integer", "minimum": 1},
+                "target_accept": {"type": "number"},
+                "init": {"type": "string"}
+              }
+            }
+          }
+        },
+        "operational_tooling_exhausted": {
+          "type": "boolean",
+          "description": "F-H-4-A5 (Marcus rider): true when the recipe routes to ADVISORY-ONLY after operational-tooling exhaustion per §3.1.5 exit clause. Auditable flag; the nuts_gate_failure_diagnostics block must accompany this with the exact sampler config used for the final attempt."
+        },
+        "substrate_class_note": {
+          "type": "string",
+          "description": "F-H-4-A5: human-readable note characterizing the substrate class that drove ADVISORY-ONLY routing (e.g., 'slowly-varying structural/demographic indicators against T_r=5 window'). Tracks first-principles reasoning per Rasmussen & Williams 2006 §5.4.4."
+        },
+        "existing_lock_unaffected": {
+          "type": "object",
+          "description": "F-H-4-A5: companion cascade LOCK status (STRONG/MODERATE/MARGINAL Hybrid D2/D5) for ADVISORY-ONLY shape recipes; preserved here so consumers know the non-shape head is still routable.",
+          "additionalProperties": true,
+          "properties": {
+            "lock_tier": {"type": "string"},
+            "loco_auc": {"type": "number"},
+            "note": {"type": "string"}
+          }
+        }
+      }
+    },
+    "indicator_signature": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fpca_component_scores",
+        "fpca_cumulative_variance_explained",
+        "fpca_basis",
+        "posterior_mean_trajectory",
+        "posterior_cov_diag"
+      ],
+      "properties": {
+        "fpca_component_scores": {
+          "type": "array",
+          "items": {"type": "number"},
+          "description": "LKJ posterior mean of μ_r in FPCA score space (the Bayesian prototype location). Per QA B4 (2026-05-17): NOT the near-zero training-score sample mean."
+        },
+        "fpca_cumulative_variance_explained": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "fpca_basis": {"type": "string", "minLength": 1},
+        "posterior_mean_trajectory": {
+          "type": "array",
+          "items": {"type": "number"}
+        },
+        "posterior_cov_diag": {
+          "type": "array",
+          "items": {"type": "number", "minimum": 0.0},
+          "description": "Per-time-step diagonal of the trajectory-space Mahalanobis denominator. Per QA B5 + Priya adjudication (2026-05-17): back-projected LKJ posterior-mean Σ_r through V_r then Phi."
+        },
+        "cov_diag_source": {
+          "type": "string",
+          "description": "Provenance tag for posterior_cov_diag (Lloyd's audit surface). Expected value: 'posterior_mean_lkj_back_projected' (FPCA primary) or 'posterior_gp_f_r_empirical_cov_diag' (GP fallback). Optional for backwards compatibility with pre-B5 emissions."
+        },
+        "gp_fallback_variant": {
+          "type": "string",
+          "enum": ["v2_no_instance_gp", "v3_no_instance_gp_lognormal_ell"],
+          "description": "F-H-4-A1 + F-H-4-A3 amendment provenance (qgi-docs 2026-05-18 / 2026-05-19, each 8-seat ratified). Present only on GP-fallback indicator signatures. 'v2_no_instance_gp' = post-F-H-4-A1 §3.1.4 model without g_c^(k), with InvGamma(2,1) on ell_recipe. 'v3_no_instance_gp_lognormal_ell' = post-F-H-4-A3 model with ell_recipe ~ LogNormal(log(1.5), 0.5) to address SE-kernel saturation multimodality at T_r=5 (Rasmussen & Williams 2006 §5.4.5; Stein 1999 §2.7). New emissions after the F-H-4-A3 merge MUST use 'v3_no_instance_gp_lognormal_ell'."
+        },
+        "gp_fallback_amendment": {
+          "type": "string",
+          "description": "F-H-4 amendment ID under which this GP-fallback prototype was fit. Expected value: 'F-H-4-A1' for post-2026-05-18 GP-fallback emissions. Optional for backwards compatibility with pre-amendment emissions (which never reached fit completion due to PyTensor kernel-argument crash)."
+        }
+      }
+    },
+    "amendment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["date", "amendment_id", "change", "ratification", "pre_reg_amendment_commit"],
+      "properties": {
+        "date": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+        "amendment_id": {"type": "string", "minLength": 1},
+        "change": {"type": "string"},
+        "ratification": {"type": "string"},
+        "pre_reg_amendment_commit": {"type": "string"}
+      }
+    }
+  }
+}

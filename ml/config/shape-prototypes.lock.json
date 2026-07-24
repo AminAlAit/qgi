@@ -1,0 +1,361 @@
+{
+  "schema_version": 1,
+  "filed": "2026-05-21",
+  "purpose": "Per-recipe canonical shape prototype lock per Stage 6 pre-reg (qgi-docs commit e4f9e7a) §4.3. Production shape-feature emits MUST consult this artifact at run-start, SHA-verify the file content, and pin the prototype SHA in every result JSON. Prototype rotation requires F-H-4 amendment + Lakatosian guard F-Shape-1 + 8-seat ratification.",
+  "pre_reg_lineage": {
+    "stage_6": "e4f9e7a"
+  },
+  "metadata": {
+    "file_sha256": "5bf997bd28b29bad34276c532df5efdb2461b26b4a2f62ad058c5eef04808a20",
+    "n_recipes_with_prototype": 2,
+    "n_recipes_substrate_inadequate": 0,
+    "prototypes_advisory_only": true,
+    "revival_constraint": "fresh_fit_required_no_reuse_of_phase1_prototypes",
+    "ratification_provenance": "stage-6-phase-1-closure-DECISION-2026-05-21 (8/8 RATIFY)"
+  },
+  "recipes": {
+    "civil_war_and_insurgency": {
+      "recipe_id": "civil_war_and_insurgency",
+      "indicator_ids": [
+        "v2cacamps",
+        "v2x_clphy",
+        "v2csreprss",
+        "SM.POP.NETM",
+        "SP.DYN.LE00.IN"
+      ],
+      "canonical_length_T": {
+        "point": 5,
+        "posterior_iqr": [
+          5,
+          5
+        ],
+        "method": "tariq_v1_emit_acf_panel_pooled"
+      },
+      "per_indicator_trajectory_signature": {
+        "v2cacamps": {
+          "fpca_component_scores": [],
+          "fpca_cumulative_variance_explained": 0.0,
+          "fpca_basis": "gp_fallback_no_fpca_basis",
+          "posterior_mean_trajectory": [
+            7.2735640228411365,
+            11.456351932903056,
+            17.395353392778475,
+            27.84232145498398,
+            35.52915682169961
+          ],
+          "posterior_cov_diag": [
+            22.058756297492508,
+            17.575131110387826,
+            13.328944859723226,
+            17.575131113313226,
+            22.05875629905256
+          ],
+          "cov_diag_source": "posterior_gp_f_r_empirical_cov_diag",
+          "gp_fallback_variant": "v3_no_instance_gp_lognormal_ell",
+          "gp_fallback_amendment": "F-H-4-A1+F-H-4-A3"
+        },
+        "v2x_clphy": {
+          "fpca_component_scores": [],
+          "fpca_cumulative_variance_explained": 0.0,
+          "fpca_basis": "gp_fallback_no_fpca_basis",
+          "posterior_mean_trajectory": [
+            2.1157013281514265,
+            -1.3594535655265052,
+            0.7281102383497982,
+            15.291512670102913,
+            4.154913893962386
+          ],
+          "posterior_cov_diag": [
+            0.09288695633431053,
+            0.09287032190631726,
+            0.09286599493762242,
+            0.09287032190616447,
+            0.09288695633435054
+          ],
+          "cov_diag_source": "posterior_gp_f_r_empirical_cov_diag",
+          "gp_fallback_variant": "v3_no_instance_gp_lognormal_ell",
+          "gp_fallback_amendment": "F-H-4-A1+F-H-4-A3"
+        },
+        "v2csreprss": {
+          "fpca_component_scores": [],
+          "fpca_cumulative_variance_explained": 0.0,
+          "fpca_basis": "gp_fallback_no_fpca_basis",
+          "posterior_mean_trajectory": [
+            32.66497126821024,
+            55.88068169507028,
+            81.78276280140582,
+            109.43782783855558,
+            144.53677382717595
+          ],
+          "posterior_cov_diag": [
+            115.74439203571617,
+            88.93762047827985,
+            67.81273418050436,
+            88.93762047885251,
+            115.7443920357653
+          ],
+          "cov_diag_source": "posterior_gp_f_r_empirical_cov_diag",
+          "gp_fallback_variant": "v3_no_instance_gp_lognormal_ell",
+          "gp_fallback_amendment": "F-H-4-A1+F-H-4-A3"
+        },
+        "SM.POP.NETM": {
+          "fpca_component_scores": [],
+          "fpca_cumulative_variance_explained": 0.0,
+          "fpca_basis": "gp_fallback_no_fpca_basis",
+          "posterior_mean_trajectory": [
+            0.19462015695780355,
+            -1.1985516761003239,
+            0.04076570274278038,
+            -1.5492643321757236,
+            -0.9642493103319014
+          ],
+          "posterior_cov_diag": [
+            0.014645610482035784,
+            0.01464560936816774,
+            0.014645609367447505,
+            0.014645609368167414,
+            0.014645610482036595
+          ],
+          "cov_diag_source": "posterior_gp_f_r_empirical_cov_diag",
+          "gp_fallback_variant": "v3_no_instance_gp_lognormal_ell",
+          "gp_fallback_amendment": "F-H-4-A1+F-H-4-A3"
+        },
+        "SP.DYN.LE00.IN": {
+          "fpca_component_scores": [],
+          "fpca_cumulative_variance_explained": 0.0,
+          "fpca_basis": "gp_fallback_no_fpca_basis",
+          "posterior_mean_trajectory": [
+            1.161403878027393,
+            1.2417933238474934,
+            1.3705584149044447,
+            1.5340108991537504,
+            1.7027964901627475
+          ],
+          "posterior_cov_diag": [
+            0.0034386559221185465,
+            0.0017092192876571072,
+            0.0018852550947126004,
+            0.001709219287661477,
+            0.003438655922116289
+          ],
+          "cov_diag_source": "posterior_gp_f_r_empirical_cov_diag",
+          "gp_fallback_variant": "v3_no_instance_gp_lognormal_ell",
+          "gp_fallback_amendment": "F-H-4-A1+F-H-4-A3"
+        }
+      },
+      "fit_method": "hierarchical_bayes_gp_fallback",
+      "fit_method_commit_sha": "663e030bce5176c3f02297990fd471bf11eda741",
+      "n_training_positives": 256,
+      "training_data_snapshot_sha": {
+        "s3_path": "local-laptop-scale",
+        "sha256": "bf2ab25e6b76aac94e871256204ab47d0ced562e8fe7fb9f9c61369408019c94"
+      },
+      "substrate_audit": {
+        "g1_n_pos_geq_10": true,
+        "g2_n_countries_geq_5": true,
+        "g3_density_geq_0_85": true,
+        "g4_censoring_clean": true
+      },
+      "cohort_calibration_ref": "qgi-docs/methodology/ml-validation/civil_war_and_insurgency/shape-calibration-table.md",
+      "schema_version": 1,
+      "divergences_observed": {
+        "n_divergences": 3,
+        "n_post_warmup_draws": 4000,
+        "divergence_rate": 0.00075
+      },
+      "cascade_outcome": "phase_1_hard_falsified",
+      "falsification_mode": "baseline_regression",
+      "falsification_ref": "qgi-docs/internal/decisions/stage-6-phase-1-closure-DECISION-2026-05-21.md"
+    },
+    "economic_recession": {
+      "recipe_id": "economic_recession",
+      "indicator_ids": [
+        "NE.CON.GOVT.ZS",
+        "NE.CON.PRVT.ZS",
+        "NE.GDI.TOTL.ZS",
+        "NY.GDP.MKTP.KD",
+        "v2xel_frefair"
+      ],
+      "canonical_length_T": {
+        "point": 5,
+        "posterior_iqr": [
+          5,
+          5
+        ],
+        "method": "tariq_v1_emit_acf_panel_pooled"
+      },
+      "per_indicator_trajectory_signature": {
+        "NE.CON.GOVT.ZS": {
+          "fpca_component_scores": [],
+          "fpca_cumulative_variance_explained": 0.0,
+          "fpca_basis": "gp_fallback_no_fpca_basis",
+          "posterior_mean_trajectory": [
+            0.18058068085258763,
+            0.18804553836680285,
+            0.21653912285167143,
+            0.2853668871626789,
+            0.4006926306967853
+          ],
+          "posterior_cov_diag": [
+            0.0021867164832042405,
+            0.0011776272956666878,
+            0.0012037193292913195,
+            0.0011776272956646632,
+            0.0021867164832035557
+          ],
+          "cov_diag_source": "posterior_gp_f_r_empirical_cov_diag",
+          "gp_fallback_variant": "v3_no_instance_gp_lognormal_ell",
+          "gp_fallback_amendment": "F-H-4-A1+F-H-4-A3"
+        },
+        "NE.CON.PRVT.ZS": {
+          "fpca_component_scores": [],
+          "fpca_cumulative_variance_explained": 0.0,
+          "fpca_basis": "gp_fallback_no_fpca_basis",
+          "posterior_mean_trajectory": [
+            -0.18795227485657975,
+            -0.26853073497293695,
+            -0.32040524303989704,
+            -0.3077752195595088,
+            -0.21564759265877598
+          ],
+          "posterior_cov_diag": [
+            0.0015914528372164341,
+            0.0009700005192736356,
+            0.0008750682383227939,
+            0.000970000519272995,
+            0.0015914528372113956
+          ],
+          "cov_diag_source": "posterior_gp_f_r_empirical_cov_diag",
+          "gp_fallback_variant": "v3_no_instance_gp_lognormal_ell",
+          "gp_fallback_amendment": "F-H-4-A1+F-H-4-A3"
+        },
+        "NE.GDI.TOTL.ZS": {
+          "fpca_component_scores": [],
+          "fpca_cumulative_variance_explained": 0.0,
+          "fpca_basis": "gp_fallback_no_fpca_basis",
+          "posterior_mean_trajectory": [
+            0.21397553512548526,
+            0.3257678336037653,
+            0.34055385650110215,
+            0.23363772691544893,
+            0.06744373125731325
+          ],
+          "posterior_cov_diag": [
+            0.0012188575963761625,
+            0.0011486635250322133,
+            0.0010935198111267966,
+            0.0011486635250328248,
+            0.0012188575963770951
+          ],
+          "cov_diag_source": "posterior_gp_f_r_empirical_cov_diag",
+          "gp_fallback_variant": "v3_no_instance_gp_lognormal_ell",
+          "gp_fallback_amendment": "F-H-4-A1+F-H-4-A3"
+        },
+        "NY.GDP.MKTP.KD": {
+          "fpca_component_scores": [],
+          "fpca_cumulative_variance_explained": 0.0,
+          "fpca_basis": "gp_fallback_no_fpca_basis",
+          "posterior_mean_trajectory": [
+            1.975201442450223,
+            2.254500669732009,
+            2.5480466599784344,
+            2.8293947608400134,
+            3.0685807695404703
+          ],
+          "posterior_cov_diag": [
+            0.0001549959458411172,
+            0.00010297804742816185,
+            8.12931400842507e-05,
+            0.00010297804739891325,
+            0.0001549959457879315
+          ],
+          "cov_diag_source": "posterior_gp_f_r_empirical_cov_diag",
+          "gp_fallback_variant": "v3_no_instance_gp_lognormal_ell",
+          "gp_fallback_amendment": "F-H-4-A1+F-H-4-A3"
+        },
+        "v2xel_frefair": {
+          "fpca_component_scores": [],
+          "fpca_cumulative_variance_explained": 0.0,
+          "fpca_basis": "gp_fallback_no_fpca_basis",
+          "posterior_mean_trajectory": [
+            0.7981896082675388,
+            1.3931498575944923,
+            1.6449353377345712,
+            1.8058344600578284,
+            1.8852449401173228
+          ],
+          "posterior_cov_diag": [
+            0.02697907541655185,
+            0.020862969889162804,
+            0.016593527779378236,
+            0.02086296988916486,
+            0.026979075416556923
+          ],
+          "cov_diag_source": "posterior_gp_f_r_empirical_cov_diag",
+          "gp_fallback_variant": "v3_no_instance_gp_lognormal_ell",
+          "gp_fallback_amendment": "F-H-4-A1+F-H-4-A3"
+        }
+      },
+      "fit_method": "hierarchical_bayes_gp_fallback",
+      "fit_method_commit_sha": "663e030bce5176c3f02297990fd471bf11eda741",
+      "n_training_positives": 101,
+      "training_data_snapshot_sha": {
+        "s3_path": "local-laptop-scale",
+        "sha256": "df196cafa538753fe4b2d5cb46bb8d7fb7743e34d83427f461c81c162a912d36"
+      },
+      "substrate_audit": {
+        "g1_n_pos_geq_10": true,
+        "g2_n_countries_geq_5": true,
+        "g3_density_geq_0_85": true,
+        "g4_censoring_clean": true
+      },
+      "cohort_calibration_ref": "qgi-docs/methodology/ml-validation/economic_recession/shape-calibration-table.md",
+      "schema_version": 1,
+      "divergences_observed": {
+        "n_divergences": 0,
+        "n_post_warmup_draws": 4000,
+        "divergence_rate": 0.0
+      },
+      "cascade_outcome": "phase_1_hard_falsified",
+      "falsification_mode": "below_chance_no_baseline",
+      "falsification_ref": "qgi-docs/internal/decisions/stage-6-phase-1-closure-DECISION-2026-05-21.md"
+    }
+  },
+  "amendments": [
+    {
+      "date": "2026-05-18",
+      "amendment_id": "F-H-4-A1",
+      "change": "Drop instance-level GP from 3.1.4 fallback model.",
+      "ratification": "8-seat ratified 8/8 APPROVE",
+      "pre_reg_amendment_commit": "396aa67"
+    },
+    {
+      "date": "2026-05-19",
+      "amendment_id": "F-H-4-A3",
+      "change": "Change ell_recipe prior from InvGamma(2,1) to LogNormal(log(1.5), 0.5).",
+      "ratification": "8-seat ratified 8/8 APPROVE",
+      "pre_reg_amendment_commit": "0851fd7"
+    },
+    {
+      "date": "2026-05-20",
+      "amendment_id": "F-H-4-A4",
+      "change": "Relax 3.1.3 divergence gate to <=5 absolute AND <=0.5% rate.",
+      "ratification": "8-seat ratified 8/8 APPROVE",
+      "pre_reg_amendment_commit": "cfe8cc4"
+    },
+    {
+      "date": "2026-05-20",
+      "amendment_id": "F-H-4-A5",
+      "change": "Add 3.1.5 cascade exit clause for NUTS-gate failure: route to ADVISORY-ONLY.",
+      "ratification": "8-seat ratified 8/8 APPROVE with Tariq + Marcus operational riders",
+      "pre_reg_amendment_commit": "a97fe08"
+    },
+    {
+      "date": "2026-05-21",
+      "amendment_id": "BUG-FIX-GP-POSTERIOR-FORMULA",
+      "change": "Corrected GP posterior conditioning-noise formula (sigma^2/N i.i. of sigma^2). Operational tooling, NOT amendment. F-Shape-1 compliant.",
+      "ratification": "Spec-trio reviewed 2026-05-21; no methodology change",
+      "pre_reg_amendment_commit": "d0fb2fd"
+    }
+  ]
+}

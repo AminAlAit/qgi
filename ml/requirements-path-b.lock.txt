@@ -1,0 +1,73 @@
+# Path B (T12 #676) production lockfile — patch-pinned per Ji-Hoon §3.4
+# ratification (2026-05-14) + Ji-Hoon round-2 expansion (2026-05-15
+# 6-seat Majles at qgi-aws-tf#691): includes pytensor + xarray + jax/jaxlib
+# alongside the top-three pymc/numpyro/arviz pins.
+#
+# Generated 2026-05-15 from .venv-path-b/ (Python 3.12.3 on Windows).
+# Python 3.14 is NOT supported (pytensor has no Py3.14 wheels on Windows
+# as of this date; the venv must be built with `py -3.12 -m venv .venv-path-b`).
+#
+# Spec reference: docs-specs `0db64f9` §3.4 (post-6-seat amendment).
+# Sweep config that depends on this lockfile being honored:
+# qgi-data/reference/v0.2-bayes-sweep-config.json @ qgi-data `b059cd6`.
+#
+# Amendment authority: any change to these pins requires a fresh Majles
+# convening with Priya #22, Kwame #11, Ji-Hoon #21 present (per spec
+# §2 line 66 binding clause). The §2.5 sweep config and the 5/5
+# round-2 ratification cite this lockfile as binding ground truth.
+#
+# How to use:
+#   py -3.12 -m venv .venv-path-b
+#   .venv-path-b/Scripts/python.exe -m pip install -r requirements-path-b.lock.txt
+# (Verify: `.venv-path-b/Scripts/python.exe -m pip freeze | diff - requirements-path-b.lock.txt`
+#  should produce no output.)
+#
+# ============================================================================
+
+absl-py==2.4.0
+arviz==0.18.0
+attrs==26.1.0
+cachetools==7.1.1
+cloudpickle==3.1.2
+colorama==0.4.6
+cons==0.4.7
+contourpy==1.3.3
+cycler==0.12.1
+dm-tree==0.1.10
+etuples==0.3.10
+filelock==3.29.0
+fonttools==4.63.0
+h5netcdf==1.8.1
+jax==0.7.1
+jaxlib==0.7.1
+kiwisolver==1.5.0
+logical-unification==0.4.7
+markdown-it-py==4.2.0
+matplotlib==3.10.9
+mdurl==0.1.2
+miniKanren==1.0.5
+ml_dtypes==0.5.4
+multipledispatch==1.0.0
+numpy==1.26.4
+numpyro==0.15.3
+opt_einsum==3.4.0
+packaging==26.2
+pandas==3.0.3
+pillow==12.2.0
+Pygments==2.20.0
+pymc==5.16.2
+pyparsing==3.3.2
+pytensor==2.25.5
+python-dateutil==2.9.0.post0
+rich==15.0.0
+scipy==1.17.1
+setuptools==82.0.1
+six==1.17.0
+threadpoolctl==3.6.0
+toolz==1.1.0
+tqdm==4.67.3
+typing_extensions==4.15.0
+tzdata==2026.2
+wrapt==2.1.2
+xarray==2026.4.0
+xarray-einstats==0.9.1
