@@ -1,0 +1,113 @@
+{
+  "_meta": {
+    "description": "Golden test set — human-adjudicated expected risk tiers for canonical countries. Any scoring change must not regress these without explicit re-adjudication.",
+    "ticket": "#379 (T3)",
+    "authored": "2026-04-22",
+    "sign_off_required": "Marcus (Methodology 1) on any change",
+    "review_cadence": "quarterly",
+    "format_note": "JSON chosen for stdlib loading consistency with V1.9.1.json. Expected tier is the name of a tier constant the scorer returns.",
+    "tolerance_policy": "Where a country's expected tier is ambiguous (e.g., UK Brexit legacy), the field is an array of acceptable labels and the test passes if the actual tier is in the set."
+  },
+  "expectations": {
+    "syria": {
+      "expected_tier": "HIGH",
+      "rationale": "Active civil war; a risk tier that doesn't flag Syria HIGH is broken.",
+      "alpha_2": "SY"
+    },
+    "somalia": {
+      "expected_tier": "HIGH",
+      "rationale": "Active civil war + state fragility.",
+      "alpha_2": "SO"
+    },
+    "yemen": {
+      "expected_tier": "HIGH",
+      "rationale": "Active civil war + humanitarian crisis.",
+      "alpha_2": "YE"
+    },
+    "afghanistan": {
+      "expected_tier": "HIGH",
+      "rationale": "State collapse / Taliban-era.",
+      "alpha_2": "AF"
+    },
+    "lebanon": {
+      "expected_tier": "HIGH",
+      "rationale": "Economic collapse + institutional breakdown.",
+      "alpha_2": "LB"
+    },
+    "ukraine": {
+      "expected_tier": "HIGH",
+      "rationale": "Active interstate war.",
+      "alpha_2": "UA"
+    },
+    "venezuela": {
+      "expected_tier": "HIGH",
+      "rationale": "Economic collapse + political repression; primary case validating Layer-3 composite rule.",
+      "alpha_2": "VE"
+    },
+    "iran": {
+      "expected_tier": "HIGH",
+      "rationale": "Repression + external risk; Layer-3 composite expected.",
+      "alpha_2": "IR"
+    },
+    "ethiopia": {
+      "expected_tier": "HIGH",
+      "rationale": "Post-Tigray conflict aftermath.",
+      "alpha_2": "ET"
+    },
+    "pakistan": {
+      "expected_tier": "MODERATE",
+      "rationale": "Unstable but not war state.",
+      "alpha_2": "PK"
+    },
+    "turkey": {
+      "expected_tier": "MODERATE",
+      "rationale": "Democratic backsliding but functioning state.",
+      "alpha_2": "TR"
+    },
+    "nigeria": {
+      "expected_tier": "MODERATE",
+      "rationale": "Moderate instability; Boko Haram contained regionally.",
+      "alpha_2": "NG"
+    },
+    "united_kingdom": {
+      "expected_tier": ["INDICATIVE", "MODERATE"],
+      "rationale": "Brexit legacy debatable; either classification defensible.",
+      "alpha_2": "GB"
+    },
+    "denmark": {
+      "expected_tier": "INDICATIVE",
+      "rationale": "Stable democracy; primary face-validity fix case from #376 — must NOT be HIGH.",
+      "alpha_2": "DK"
+    },
+    "sweden": {
+      "expected_tier": "INDICATIVE",
+      "rationale": "Stable democracy.",
+      "alpha_2": "SE"
+    },
+    "germany": {
+      "expected_tier": "INDICATIVE",
+      "rationale": "Stable democracy.",
+      "alpha_2": "DE"
+    },
+    "france": {
+      "expected_tier": "INDICATIVE",
+      "rationale": "Stable democracy.",
+      "alpha_2": "FR"
+    },
+    "costa_rica": {
+      "expected_tier": "INDICATIVE",
+      "rationale": "Stable democracy.",
+      "alpha_2": "CR"
+    },
+    "singapore": {
+      "expected_tier": "INDICATIVE",
+      "rationale": "Technocratic stability.",
+      "alpha_2": "SG"
+    },
+    "cape_verde": {
+      "expected_tier": "INDICATIVE",
+      "rationale": "Stable middle-income democracy; #376 origin case — must NOT be HIGH under V1.9.1.",
+      "alpha_2": "CV"
+    }
+  }
+}
