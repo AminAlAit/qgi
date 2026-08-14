@@ -1,0 +1,14 @@
+# Dependencies for the THROWAWAY scripts that implement #592 (SCDI
+# compaction). The qgi-ml repo has no top-level requirements.txt or
+# pyproject.toml — anyone running these scripts cold needs at least
+# the deps below.
+#
+# Pinned to versions tested 2026-05-03 against staging. Newer versions
+# of pyarrow/s3fs may work but have not been verified for these scripts.
+#
+# Usage:
+#   pip install -r scripts/requirements-592.txt
+
+boto3>=1.42,<2.0
+pyarrow>=15.0,<22.0
+s3fs>=2024.0,<2027.0
