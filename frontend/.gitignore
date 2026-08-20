@@ -1,0 +1,100 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+/playwright-report/
+/test-results/
+/blob-report/
+/.playwright/
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# TE sample fixtures from S3. 2026-06-01 (founder): the cards-v3 canonical
+# shapes are now COMMITTED (the build imports them for match-page overlays);
+# the rest of the dataset stays out of git.
+/data/te-sample-10/*
+!/data/te-sample-10/cards-v3/
+/data/te-wave-*/
+
+# Playwright clicky-clicky screenshots (large; regenerate as needed)
+/screenshots/
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+preview-screenshots/
+
+# te-fleet-run-1 dataset. 2026-06-04: superseded by te-fleet-run-2 (the live
+# vintage); nothing imports run-1 anymore, so it is dropped from git to slim the
+# repo (~60MB). Still in S3 (frontend-data/te-fleet-run-1/) + git history +
+# reproducible via qgi-ml/scripts/bake_te_fleet_run_1.py.
+/data/te-fleet-run-1/
+
+# te-fleet-run-2 dataset (the LIVE vintage, ~96MB). 2026-06-15: moved out of git
+# and FETCHED from S3 at build by scripts/fetch-build-data.mjs (prebuild step),
+# pinned + per-file checksum-verified via data/build-manifest.json. REQUIRED at
+# build — a failed/partial fetch fails the build loudly (no stale deploy). Still
+# in S3 (frontend-data/te-fleet-run-2/), git history, and reproducible via the
+# fleet bake. Bump the live vintage by regenerating the manifest (npm run
+# gen:build-manifest) — a tiny reviewable diff, not a 96MB commit.
+/data/te-fleet-run-2/
+# Wildcard so future vintages (run-3+) are auto-ignored — never accidentally commit ~96MB of fetched scores.
+/data/te-fleet-run-*/
+
+# Orphaned data removed 2026-06-15 (build-fetch slim-down, qgi-aws-tf #994):
+# committed but imported by NOTHING reachable from any live route (verified by a
+# zero-false-negative import scan). Removed to slim the repo (~92MB) + ignored so
+# they cannot silently re-bloat it. pair-windows/ + salience/ were data for the
+# retired /patterns routes (now redirect stubs). All recoverable from git history.
+/data/analogues-enriched.json
+/data/analogues.json
+/data/country-events.json
+/data/indicator-trajectories.json
+/data/structural-twins.json
+/data/early-warning.json
+/data/salience/
+# Dead cascade-patterns data (removed 2026-06-15, qgi-aws-tf #996): the only
+# importer was the retired lib/cascade-patterns module, now deleted. NOTE:
+# ranking.json was wrongly removed here too — the X-card engine renderer
+# (twitter-x/engine/render_cards_v3.mjs, twins card) reads it by path, so it is
+# RESTORED and tracked again. The #996 orphan scan checked frontend src only.
+/data/country-partners-index.json
+/data/cascade-patterns-featured.json
+/data/pair-windows/
+
+# localhost-only live-pulse demo snapshot; S3 is the live source on Vercel, never commit
+data/hf-pulse-live.json
+
+.vercel
+data/hf-pulse-articles.json

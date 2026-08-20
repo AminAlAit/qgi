@@ -1,0 +1,79 @@
+{
+  "name": "qgi-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "prebuild": "node scripts/fetch-build-data.mjs",
+    "build": "next build",
+    "gen:build-manifest": "node scripts/gen-build-manifest.mjs",
+    "start": "next start",
+    "lint": "eslint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "lhci": "lhci autorun",
+    "linkcheck": "linkinator http://localhost:3000/ --config .linkinatorrc.json",
+    "dump:countries": "npx -y tsx scripts/dump-countries.ts",
+    "prepare": "husky",
+    "typecheck": "tsc --noEmit"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{js,jsx,json,md,yml,yaml,css}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@aws-sdk/client-athena": "^3.1022.0",
+    "@aws-sdk/client-cognito-identity-provider": "^3.1085.0",
+    "@aws-sdk/client-dynamodb": "^3.1025.0",
+    "@aws-sdk/client-s3": "^3.1022.0",
+    "@aws-sdk/util-dynamodb": "^3.996.2",
+    "@sentry/nextjs": "^10.50.0",
+    "@vercel/oidc-aws-credentials-provider": "^3.1.4",
+    "country-flag-icons": "^1.6.16",
+    "echarts": "^5.6.0",
+    "echarts-for-react": "^3.0.6",
+    "jose": "^6.2.2",
+    "lucide-react": "^1.16.0",
+    "next": "16.2.2",
+    "next-auth": "^5.0.0-beta.30",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-joyride": "^3.1.0",
+    "server-only": "^0.0.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@lhci/cli": "^0.15.1",
+    "@playwright/test": "^1.59.1",
+    "@tailwindcss/postcss": "^4",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.2",
+    "husky": "^9.1.7",
+    "jsdom": "^26",
+    "linkinator": "^6.1.5",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vitest": "^3"
+  }
+}
