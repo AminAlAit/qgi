@@ -1,0 +1,2330 @@
+{
+  "generated_note": "Indicator display catalog, 250 across 8 providers. 109 base (WB+FAOSTAT status=process + V-Dem fleet cards, 2026-05-31) + 136 activated from the 250-run selection (qgi-ml/enrichment/250-run/selected-141.json, post-license-audit; of the 141, 5 excluded = 1 already live + 4 same-measure duplicates) + 5 vetted top-ups from the reachable pool (SI.POV.DDAY, SL.EMP.VULN.ZS, SH.STA.ODFC.ZS, FS-019, LOSS) to reach the round 250. New rows carry recipe_count:0 (tracked, not yet recipe-carrying) until the te-fleet run adds them to a trend.",
+  "total": 250,
+  "indicators": [
+    {
+      "code": "FA-01",
+      "numeric_id": 1001,
+      "name": "Average dietary energy supply adequacy (%)",
+      "provider": "FAOSTAT",
+      "theme": "Food security",
+      "description": "3-year avg of adequacy of calorie supply vs minimum requirement. FAOSTAT FS.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "FA-02",
+      "numeric_id": 1002,
+      "name": "Prevalence of undernourishment (%)",
+      "provider": "FAOSTAT",
+      "theme": "Food security",
+      "description": "Share of population with insufficient habitual food consumption. 3-year avg. FAOSTAT FS.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "FA-03",
+      "numeric_id": 1003,
+      "name": "Cereal import dependency ratio (%)",
+      "provider": "FAOSTAT",
+      "theme": "Food security",
+      "description": "Cereal imports / (production + imports - exports). Trade vulnerability signal. FAOSTAT FS.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "FA-04",
+      "numeric_id": 1004,
+      "name": "Population using safely managed drinking water (%)",
+      "provider": "FAOSTAT",
+      "theme": "Development",
+      "description": "SDG 6.1.1 indicator. Core development + governance signal. FAOSTAT FS.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "FA-05",
+      "numeric_id": 1005,
+      "name": "Population using at least basic sanitation services (%)",
+      "provider": "FAOSTAT",
+      "theme": "Development",
+      "description": "SDG 6.2.1 tier-3 indicator. Dev / governance signal. FAOSTAT FS.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2pepwrort",
+      "name": "Power Distributed by Sexual Orientation",
+      "provider": "V-Dem",
+      "theme": "Rights & liberties",
+      "description": "Only global indicator tracking LGBTQ+ political inclusion. Sharp movements predict social_policy_reform. Hungary/Russia (declining) vs Taiwan/Ireland (rising) follow distinct recipes. Fills a complete event-category gap.",
+      "recipe_count": 6,
+      "in_play": true
+    },
+    {
+      "code": "v2csprtcpt",
+      "name": "Civil Society Participatory Environment",
+      "provider": "V-Dem",
+      "theme": "Civil society & media",
+      "description": "**Single biggest gap for Social Mobilization family.** Measures actual mobilization capacity (vs legal permission). Low + sudden liberalization = explosion of mobilization (Eastern Europe 1989). Directly serves mass_protest, labor_action, social_policy_reform.",
+      "recipe_count": 6,
+      "in_play": true
+    },
+    {
+      "code": "v2cseeorgs",
+      "name": "CSO Entry/Exit Freedom",
+      "provider": "V-Dem",
+      "theme": "Civil society & media",
+      "description": "Foundational enabler/disabler of mobilization. Civil society can't organize protests without right to form. Distinct from VD-05 (repression of *existing* organizations).",
+      "recipe_count": 5,
+      "in_play": true
+    },
+    {
+      "code": "v2excrptps",
+      "name": "Executive Corruption",
+      "provider": "V-Dem",
+      "theme": "Corruption & state capacity",
+      "description": "How corrupt is the executive branch specifically (not the country in general)? More targeted than WB's Control of Corruption which is economy-wide perception.",
+      "recipe_count": 5,
+      "in_play": true
+    },
+    {
+      "code": "v2x_clpriv",
+      "name": "Private Civil Liberties Index",
+      "provider": "V-Dem",
+      "theme": "Rights & liberties",
+      "description": "Property rights + freedom of movement + religion + equality before law. Property rights collapse precedes migration_and_refugees + economic_crisis. Religious freedom restrictions precede sectarian violence.",
+      "recipe_count": 4,
+      "in_play": true
+    },
+    {
+      "code": "v2x_gender",
+      "name": "Women's Political Empowerment Index",
+      "provider": "V-Dem",
+      "theme": "Rights & liberties",
+      "description": "Primary substrate for gender_policy_reform (currently zero substrate). Cross-family: low scores predict democratic backsliding + authoritarian consolidation.",
+      "recipe_count": 4,
+      "in_play": true
+    },
+    {
+      "code": "v2x_rule",
+      "name": "Rule of Law Index",
+      "provider": "V-Dem",
+      "theme": "Institutions & rule of law",
+      "description": "**Most cross-cutting V-Dem variable.** Distinct from VD-03/04 (formal constraints): measures *actual functioning* of legal system. Adds signal to 6 of 8 recipe families. 200+ years of expert-coded depth vs WB WGI's perception measure.",
+      "recipe_count": 4,
+      "in_play": true
+    },
+    {
+      "code": "v2x_partip",
+      "name": "Political Participation",
+      "provider": "V-Dem",
+      "theme": "Democracy & elections",
+      "description": "How actively do citizens engage in politics beyond voting? High participation + weak institutions = revolution risk. Low participation = coup risk (no one defends the regime).",
+      "recipe_count": 4,
+      "in_play": true
+    },
+    {
+      "code": "v2x_clpol",
+      "name": "Political Civil Liberties Index",
+      "provider": "V-Dem",
+      "theme": "Rights & liberties",
+      "description": "Captures pre-violence repression: assembly→association→expression. Regimes that restrict political liberties before violence have a different trajectory. The gap between VD-15 and VD-12 is itself informative.",
+      "recipe_count": 4,
+      "in_play": true
+    },
+    {
+      "code": "v2pepwrgen",
+      "name": "Power Distributed by Gender",
+      "provider": "V-Dem",
+      "theme": "Rights & liberties",
+      "description": "Static power-distribution measure. Combo with VD-26 distinguishes \"formal rights but no power\" (high VD-26 trajectory + low VD-27) — backlash regime type with specific instability patterns.",
+      "recipe_count": 4,
+      "in_play": true
+    },
+    {
+      "code": "v2csreprss",
+      "name": "Civil Society Repression",
+      "provider": "V-Dem",
+      "theme": "Civil society & media",
+      "description": "Is the government shutting down NGOs, arresting activists, restricting assembly? Escalating repression precedes political_violence and democratic breakdown.",
+      "recipe_count": 4,
+      "in_play": true
+    },
+    {
+      "code": "v2lgbicam",
+      "name": "Bicameralism",
+      "provider": "V-Dem",
+      "theme": "Institutions & rule of law",
+      "description": "Static institutional moderator. UK government collapse (bicameral) ≠ Turkey executive consolidation. Allows recipe filtering by institutional structure.",
+      "recipe_count": 3,
+      "in_play": true
+    },
+    {
+      "code": "v2clkill",
+      "name": "Freedom from Political Killings",
+      "provider": "V-Dem",
+      "theme": "Rights & liberties",
+      "description": "Direct antecedent for political_violence + human_rights_violation. A drop precedes regime-crisis events 1-2 years out. Isolates the \"targeted assassination\" channel that VD-12 blends into a composite.",
+      "recipe_count": 3,
+      "in_play": true
+    },
+    {
+      "code": "v2pepwrsoc",
+      "name": "Power Distributed by Socioeconomic Position",
+      "provider": "V-Dem",
+      "theme": "Rights & liberties",
+      "description": "Class-politics indicator entirely missing today. High elite capture predicts mass_protest + populist executive_transition. Arab Spring + LatAm pink tide + global populist wave all show high VD-28.",
+      "recipe_count": 3,
+      "in_play": true
+    },
+    {
+      "code": "v2x_neopat",
+      "name": "Neopatrimonialism Index",
+      "provider": "V-Dem",
+      "theme": "Corruption & state capacity",
+      "description": "Patronage-network architecture. When network collapses (resource curse reversal, succession crisis), entire structure disintegrates rapidly. Primary recipe substrate for SSA + Central Asia + parts of MENA.",
+      "recipe_count": 3,
+      "in_play": true
+    },
+    {
+      "code": "v2x_libdem",
+      "name": "Liberal Democracy Index",
+      "provider": "V-Dem",
+      "theme": "Democracy & elections",
+      "description": "Electoral democracy + rule of law + civil liberties. The gap between VD-01 and VD-02 reveals \"democratic facade\" regimes — elections without genuine freedom. Use as the stable-democracy salience discount factor.",
+      "recipe_count": 3,
+      "in_play": true
+    },
+    {
+      "code": "v2svdomaut",
+      "name": "Domestic Autonomy / Sovereignty",
+      "provider": "V-Dem",
+      "theme": "Institutions & rule of law",
+      "description": "One of few V-Dem indicators serving Diplomacy & Geopolitics. Sovereignty collapse from 0.7 to 0.3 = foreign_intervention happening in real time. No WB indicator captures this.",
+      "recipe_count": 3,
+      "in_play": true
+    },
+    {
+      "code": "v2xlg_legcon",
+      "name": "Legislative Constraints on Executive",
+      "provider": "V-Dem",
+      "theme": "Institutions & rule of law",
+      "description": "Can parliament block the president? When this drops alongside VD-03, institutional checks are collapsing — strong signal for authoritarian consolidation.",
+      "recipe_count": 3,
+      "in_play": true
+    },
+    {
+      "code": "v2xel_frefair",
+      "name": "Free and Fair Elections Index",
+      "provider": "V-Dem",
+      "theme": "Democracy & elections",
+      "description": "elections + election_violence have no dedicated indicator today. VD-32 isolates electoral process specifically (vs VD-01 broader composite). Declining VD-32 with stable VD-01 = pre-fraud signal.",
+      "recipe_count": 3,
+      "in_play": true
+    },
+    {
+      "code": "v2cltort",
+      "name": "Freedom from Torture",
+      "provider": "V-Dem",
+      "theme": "Rights & liberties",
+      "description": "Leading indicator for political_repression + human_rights_violation. Regimes escalate torture before mass killings or crackdowns become visible. Independent measurement path from VD-12.",
+      "recipe_count": 3,
+      "in_play": true
+    },
+    {
+      "code": "v2mecenefm",
+      "name": "Print/Broadcast Media Censorship",
+      "provider": "V-Dem",
+      "theme": "Civil society & media",
+      "description": "Historically deep signal for political_repression + democratic_transition where VD-08's alternative-information component is signal-poor pre-1990. Critical for pre-internet recipes.",
+      "recipe_count": 3,
+      "in_play": true
+    },
+    {
+      "code": "v2jureform",
+      "name": "Judicial Reform Attempts",
+      "provider": "V-Dem",
+      "theme": "Institutions & rule of law",
+      "description": "Captures the executive *trying* to attack judicial independence (action), not just the outcome (VD-03). Reform attempts precede independence erosion 1-3 years. Direct substrate for judicial_reform.",
+      "recipe_count": 2,
+      "in_play": true
+    },
+    {
+      "code": "v2pepwrses",
+      "name": "Power Distributed by Social Group (Ethnic)",
+      "provider": "V-Dem",
+      "theme": "Rights & liberties",
+      "description": "**Strongest structural predictor of civil war onset** in political-science literature (Cederman, Wimmer). Tamils/Kurds/Tutsis all follow this recipe. Pairs with WB ethnic fractionalization.",
+      "recipe_count": 2,
+      "in_play": true
+    },
+    {
+      "code": "v2exl_legitlead",
+      "name": "Legitimacy of Political Leadership",
+      "provider": "V-Dem",
+      "theme": "Institutions & rule of law",
+      "description": "Legitimacy collapse without losing power = pre-coup/pre-protest danger zone. Distinct from VD-01 (institutional quality) — measures perceived legitimacy. Cross-family signal.",
+      "recipe_count": 2,
+      "in_play": true
+    },
+    {
+      "code": "v2psprlnks",
+      "name": "Party Linkages to Voters",
+      "provider": "V-Dem",
+      "theme": "Democracy & elections",
+      "description": "Distinguishes clientelistic (Venezuela/Iraq) vs programmatic (austerity-resilient) vs identity (channels stress to ethnic/religious mobilization). No other indicator enables this differentiation.",
+      "recipe_count": 2,
+      "in_play": true
+    },
+    {
+      "code": "v2x_polyarchy",
+      "name": "Electoral Democracy Index",
+      "provider": "V-Dem",
+      "theme": "Democracy & elections",
+      "description": "Core democracy score. When this declines, a country is backsliding — precedes constitutional_change, protest, political_crisis. When it rises, democratic transition is underway.",
+      "recipe_count": 1,
+      "in_play": true
+    },
+    {
+      "code": "v2x_corr",
+      "name": "Political Corruption Index",
+      "provider": "V-Dem",
+      "theme": "Corruption & state capacity",
+      "description": "Whole-of-government corruption (vs VD-07 executive-only). Gap between VD-07 and VD-18 reveals centralized (kleptocratic) vs diffuse (failed-state) corruption — different recipe trajectories.",
+      "recipe_count": 1,
+      "in_play": true
+    },
+    {
+      "code": "v2x_regime",
+      "name": "Regime Type",
+      "provider": "V-Dem",
+      "theme": "Democracy & elections",
+      "description": "0=closed autocracy, 1=electoral autocracy, 2=electoral democracy, 3=liberal democracy. Regime transitions between categories ARE the events QGI predicts. Use as a state variable for filtering.",
+      "recipe_count": 1,
+      "in_play": true
+    },
+    {
+      "code": "v2x_clphy",
+      "name": "Physical Violence Index",
+      "provider": "V-Dem",
+      "theme": "Rights & liberties",
+      "description": "Physical integrity rights — freedom from torture, extrajudicial killing, political imprisonment. Escalating violations are a 1-2 year leading indicator for political_violence and civil_war.",
+      "recipe_count": 1,
+      "in_play": true
+    },
+    {
+      "code": "v2xeg_eqprotec",
+      "name": "Equal Protection Index",
+      "provider": "V-Dem",
+      "theme": "Rights & liberties",
+      "description": "Group-differentiated rights (ethnic/religious/gender). Decline precedes sectarian violence + minority persecution. Combines with WB ethnic fractionalization for compound communal-violence recipe.",
+      "recipe_count": 1,
+      "in_play": true
+    },
+    {
+      "code": "v2stfisccap",
+      "name": "Fiscal Capacity",
+      "provider": "V-Dem",
+      "theme": "Corruption & state capacity",
+      "description": "Can the government actually tax + deliver services? Substitute for the legacy v2stcapacity (renamed/retired in V-Dem v16, 2026-04). Low capacity + external stress = state failure → civil_war, humanitarian_crisis.",
+      "recipe_count": 1,
+      "in_play": true
+    },
+    {
+      "code": "v2x_freexp_altinf",
+      "name": "Freedom of Expression",
+      "provider": "V-Dem",
+      "theme": "Rights & liberties",
+      "description": "Media freedom + access to alternative information sources. When a government starts controlling media, it's preparing for something. 1-3 year leading indicator for authoritarian moves.",
+      "recipe_count": 1,
+      "in_play": true
+    },
+    {
+      "code": "v2lgqstexp",
+      "name": "Legislature Questions Officials in Practice",
+      "provider": "V-Dem",
+      "theme": "Institutions & rule of law",
+      "description": "Operational measure of legislative accountability (vs VD-04 formal capability). Parliament that stops asking questions before formal constitutional change = early warning.",
+      "recipe_count": 1,
+      "in_play": true
+    },
+    {
+      "code": "v2x_jucon",
+      "name": "Judicial constraints on the executive index",
+      "provider": "V-Dem",
+      "theme": "Institutions & rule of law",
+      "description": "Can courts block the president? When this drops, executive power grab is underway. 2-4 year leading indicator for constitutional_change and democratic backsliding.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2cacamps",
+      "name": "Political polarization (antagonistic camps)",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Is society splitting into irreconcilable camps? High polarization precedes constitutional crises, government formation failures, and election violence.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "SP.POP.TOTL",
+      "numeric_id": 2,
+      "name": "Population, total",
+      "provider": "World Bank",
+      "theme": "Demographic",
+      "description": "Total population is based on the de facto definition of population.",
+      "recipe_count": 7,
+      "in_play": true
+    },
+    {
+      "code": "NY.GDP.DEFL.KD.ZG",
+      "numeric_id": 29,
+      "name": "Inflation, GDP deflator (annual %)",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "Inflation as measured by the annual growth rate of the GDP implicit deflator.",
+      "recipe_count": 5,
+      "in_play": true
+    },
+    {
+      "code": "NY.GDP.MKTP.KD.ZG",
+      "numeric_id": 1,
+      "name": "GDP growth (annual %)",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "Annual percentage growth rate of GDP at market prices based on constant local currency.",
+      "recipe_count": 4,
+      "in_play": true
+    },
+    {
+      "code": "NY.GNP.PCAP.CD",
+      "numeric_id": 31,
+      "name": "GNI per capita, Atlas method (current US$)",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "GNI per capita is the gross national income, converted to U.S. dollars using the World Bank Atlas method, divided by the midyear population.",
+      "recipe_count": 4,
+      "in_play": true
+    },
+    {
+      "code": "SM.POP.NETM",
+      "numeric_id": 69,
+      "name": "Net migration",
+      "provider": "World Bank",
+      "theme": "Demographic",
+      "description": "Net migration is the net total of migrants during the period, that is, the number of immigrants minus the number of emigrants.",
+      "recipe_count": 4,
+      "in_play": true
+    },
+    {
+      "code": "SP.DYN.LE00.IN",
+      "numeric_id": 4,
+      "name": "Life expectancy at birth, total (years)",
+      "provider": "World Bank",
+      "theme": "Health",
+      "description": "Indicates the number of years a newborn infant would live if prevailing patterns of mortality at the time of its birth were to stay the same throughout its life.",
+      "recipe_count": 3,
+      "in_play": true
+    },
+    {
+      "code": "MS.MIL.MPRT.KD",
+      "numeric_id": 10,
+      "name": "Arms imports (SIPRI trend indicator values)",
+      "provider": "World Bank",
+      "theme": "Military",
+      "description": "Arms transfers cover the supply of military weapons through sales, aid, gifts, and licenses and leases.",
+      "recipe_count": 3,
+      "in_play": true
+    },
+    {
+      "code": "SH.DYN.MORT",
+      "numeric_id": 14,
+      "name": "Mortality rate, under-5",
+      "provider": "World Bank",
+      "theme": "Health",
+      "description": "The probability per 1,000 that a newborn baby will die before reaching age five.",
+      "recipe_count": 3,
+      "in_play": true
+    },
+    {
+      "code": "SP.DYN.TFRT.IN",
+      "numeric_id": 15,
+      "name": "Fertility rate, total (births per woman)",
+      "provider": "World Bank",
+      "theme": "Demographic",
+      "description": "The number of children that would be born to a woman if she were to live to the end of her childbearing years and bear children in accordance with age-specific fertility rates of the specified year.",
+      "recipe_count": 3,
+      "in_play": true
+    },
+    {
+      "code": "AG.PRD.FOOD.XD",
+      "numeric_id": 143,
+      "name": "Food production index",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "Food production index covers food crops that are considered edible and that contain nutrients.",
+      "recipe_count": 3,
+      "in_play": true
+    },
+    {
+      "code": "NE.IMP.GNFS.CD",
+      "numeric_id": 19,
+      "name": "Imports of goods and services (current US$)",
+      "provider": "World Bank",
+      "theme": "Trade",
+      "description": "The value of all goods and other market services received from the rest of the world.",
+      "recipe_count": 2,
+      "in_play": true
+    },
+    {
+      "code": "MS.MIL.XPND.GD.ZS",
+      "numeric_id": 26,
+      "name": "Military expenditure (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Military",
+      "description": "Military expenditures data from SIPRI as a share of GDP.",
+      "recipe_count": 2,
+      "in_play": true
+    },
+    {
+      "code": "NV.SRV.TOTL.ZS",
+      "numeric_id": 36,
+      "name": "Services, value added (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "Value added in services as a percentage of GDP.",
+      "recipe_count": 2,
+      "in_play": true
+    },
+    {
+      "code": "NE.CON.GOVT.ZS",
+      "numeric_id": 38,
+      "name": "General government final consumption expenditure (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "General government final consumption expenditure as a percentage of GDP.",
+      "recipe_count": 2,
+      "in_play": true
+    },
+    {
+      "code": "BN.CAB.XOKA.GD.ZS",
+      "numeric_id": 42,
+      "name": "Current account balance (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Trade",
+      "description": "Current account balance as a percentage of GDP.",
+      "recipe_count": 2,
+      "in_play": true
+    },
+    {
+      "code": "NY.GDP.MKTP.CD",
+      "numeric_id": 5,
+      "name": "GDP (current US$)",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "GDP at purchaser's prices is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products.",
+      "recipe_count": 1,
+      "in_play": true
+    },
+    {
+      "code": "NY.GDP.PCAP.CD",
+      "numeric_id": 9,
+      "name": "GDP per capita (current US$)",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "GDP per capita is gross domestic product divided by midyear population.",
+      "recipe_count": 1,
+      "in_play": true
+    },
+    {
+      "code": "EG.ELC.ACCS.UR.ZS",
+      "numeric_id": 12,
+      "name": "Access to electricity, urban (% of urban population)",
+      "provider": "World Bank",
+      "theme": "Infrastructure",
+      "description": "The percentage of the urban population with access to electricity.",
+      "recipe_count": 1,
+      "in_play": true
+    },
+    {
+      "code": "NE.EXP.GNFS.ZS",
+      "numeric_id": 18,
+      "name": "Exports of goods and services (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Trade",
+      "description": "The value of all goods and other market services provided to the rest of the world as a percentage of GDP.",
+      "recipe_count": 1,
+      "in_play": true
+    },
+    {
+      "code": "NE.IMP.GNFS.ZS",
+      "numeric_id": 20,
+      "name": "Imports of goods and services (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Trade",
+      "description": "The value of all goods and other market services received from the rest of the world as a percentage of GDP.",
+      "recipe_count": 1,
+      "in_play": true
+    },
+    {
+      "code": "FP.CPI.TOTL.ZG",
+      "numeric_id": 30,
+      "name": "Inflation, consumer prices (annual %)",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "Inflation as measured by the consumer price index.",
+      "recipe_count": 1,
+      "in_play": true
+    },
+    {
+      "code": "NV.AGR.TOTL.ZS",
+      "numeric_id": 33,
+      "name": "Agriculture, forestry, and fishing, value added (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "Value added in agriculture, forestry, and fishing as a percentage of GDP.",
+      "recipe_count": 1,
+      "in_play": true
+    },
+    {
+      "code": "NV.IND.MANF.ZS",
+      "numeric_id": 35,
+      "name": "Manufacturing, value added (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "Value added in manufacturing as a percentage of GDP.",
+      "recipe_count": 1,
+      "in_play": true
+    },
+    {
+      "code": "NE.GDI.TOTL.ZS",
+      "numeric_id": 37,
+      "name": "Gross capital formation (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "Gross capital formation (formerly gross domestic investment) consists of outlays on additions to the fixed assets of the economy plus net changes in the level of inventories.",
+      "recipe_count": 1,
+      "in_play": true
+    },
+    {
+      "code": "NE.CON.PRVT.ZS",
+      "numeric_id": 39,
+      "name": "Households and NPISHs Final consumption expenditure (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "Household final consumption expenditure as a percentage of GDP.",
+      "recipe_count": 1,
+      "in_play": true
+    },
+    {
+      "code": "FI.RES.TOTL.CD",
+      "numeric_id": 43,
+      "name": "Total reserves (includes gold, current US$)",
+      "provider": "World Bank",
+      "theme": "Finance",
+      "description": "Total reserves comprise holdings of monetary gold, special drawing rights, reserves of IMF members held by the IMF, and holdings of foreign exchange.",
+      "recipe_count": 1,
+      "in_play": true
+    },
+    {
+      "code": "FM.LBL.BMNY.GD.ZS",
+      "numeric_id": 50,
+      "name": "Broad money (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Finance",
+      "description": "Broad money (IFS line 35L..ZK) is the sum of currency outside banks; demand deposits other than those of the central government.",
+      "recipe_count": 1,
+      "in_play": true
+    },
+    {
+      "code": "SL.TLF.CACT.FE.ZS",
+      "numeric_id": 84,
+      "name": "Labor force participation rate, female (% of female population ages 15-64) (modeled ILO estimate)",
+      "provider": "World Bank",
+      "theme": "Social",
+      "description": "Labor force participation rate, female is the proportion of the female population ages 15-64 that is economically active.",
+      "recipe_count": 1,
+      "in_play": true
+    },
+    {
+      "code": "SM.POP.RHCR.EO",
+      "numeric_id": 180,
+      "name": "Refugees under the mandate of the UNHCR by country or territory of origin",
+      "provider": "World Bank",
+      "theme": "Demographic",
+      "description": "Number of refugees originating from a country, recognised under the UNHCR mandate. Direct measure of conflict-driven displacement output.",
+      "recipe_count": 1,
+      "in_play": true
+    },
+    {
+      "code": "PV.EST",
+      "numeric_id": 3,
+      "name": "Political Stability and Absence of Violence/Terrorism (estimate)",
+      "provider": "World Bank",
+      "theme": "Governance",
+      "description": "Measures perceptions of the likelihood of political instability and/or politically-motivated violence.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "SE.PRM.ENRR",
+      "numeric_id": 6,
+      "name": "School enrollment, primary (% gross)",
+      "provider": "World Bank",
+      "theme": "Education",
+      "description": "Gross enrollment ratio is the ratio of total enrollment, regardless of age, to the population of the age group that officially corresponds to the level of education shown.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "SL.EMP.TOTL.SP.ZS",
+      "numeric_id": 7,
+      "name": "Employment to population ratio, 15+, total (%)",
+      "provider": "World Bank",
+      "theme": "Social",
+      "description": "The proportion of a country's population that is employed.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "SL.UEM.TOTL.ZS",
+      "numeric_id": 8,
+      "name": "Unemployment, total (% of total labor force)",
+      "provider": "World Bank",
+      "theme": "Social",
+      "description": "The share of the labor force that is without work but available for and seeking employment.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "EG.ELC.ACCS.RU.ZS",
+      "numeric_id": 11,
+      "name": "Access to electricity, rural (% of rural population)",
+      "provider": "World Bank",
+      "theme": "Infrastructure",
+      "description": "The percentage of the rural population with access to electricity.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "IT.NET.USER.ZS",
+      "numeric_id": 13,
+      "name": "Individuals using the Internet (% of population)",
+      "provider": "World Bank",
+      "theme": "Infrastructure",
+      "description": "Individuals who have used the Internet (from any location) in the last 3 months.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "IT.CEL.SETS.P2",
+      "numeric_id": 16,
+      "name": "Mobile cellular subscriptions",
+      "provider": "World Bank",
+      "theme": "Infrastructure",
+      "description": "Subscriptions to a public mobile telephone service that provide access to the PSTN using cellular technology.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "NE.EXP.GNFS.CD",
+      "numeric_id": 17,
+      "name": "Exports of goods and services (current US$)",
+      "provider": "World Bank",
+      "theme": "Trade",
+      "description": "The value of all goods and other market services provided to the rest of the world.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "VA.EST",
+      "numeric_id": 21,
+      "name": "Voice and Accountability (estimate)",
+      "provider": "World Bank",
+      "theme": "Governance",
+      "description": "Captures perceptions of the extent to which a country's citizens are able to participate in selecting their government.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "GE.EST",
+      "numeric_id": 22,
+      "name": "Government Effectiveness (estimate)",
+      "provider": "World Bank",
+      "theme": "Governance",
+      "description": "Captures perceptions of the quality of public services, the quality of the civil service and the degree of its independence from political pressures.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "RQ.EST",
+      "numeric_id": 23,
+      "name": "Regulatory Quality (estimate)",
+      "provider": "World Bank",
+      "theme": "Governance",
+      "description": "Captures perceptions of the ability of the government to formulate and implement sound policies and regulations that permit and promote private sector development.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "RL.EST",
+      "numeric_id": 24,
+      "name": "Rule of Law (estimate)",
+      "provider": "World Bank",
+      "theme": "Governance",
+      "description": "Captures perceptions of the extent to which agents have confidence in and abide by the rules of society, and in particular the quality of contract enforcement.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "CC.EST",
+      "numeric_id": 25,
+      "name": "Control of Corruption (estimate)",
+      "provider": "World Bank",
+      "theme": "Governance",
+      "description": "Captures perceptions of the extent to which public power is exercised for private gain, including both petty and grand forms of corruption.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "MS.MIL.XPRT.KD",
+      "numeric_id": 28,
+      "name": "Arms exports (SIPRI trend indicator values)",
+      "provider": "World Bank",
+      "theme": "Military",
+      "description": "Exports of military weapons through sales, aid, gifts, and licenses.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "NY.GDP.MKTP.KD",
+      "numeric_id": 32,
+      "name": "GDP",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "Gross domestic product at purchaser's prices, constant 2015 US$.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "NV.IND.TOTL.ZS",
+      "numeric_id": 34,
+      "name": "Industry (including construction), value added (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "Value added in mining, manufacturing, construction, electricity, water, and gas as a percentage of GDP.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "BX.KLT.DINV.WD.GD.ZS",
+      "numeric_id": 40,
+      "name": "Foreign direct investment, net inflows (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Finance",
+      "description": "Foreign direct investment, net inflows as a percentage of GDP.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "BM.KLT.DINV.WD.GD.ZS",
+      "numeric_id": 41,
+      "name": "Foreign direct investment, net outflows (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Finance",
+      "description": "Foreign direct investment, net outflows as a percentage of GDP.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "FI.RES.TOTL.MO",
+      "numeric_id": 44,
+      "name": "Total reserves in months of imports",
+      "provider": "World Bank",
+      "theme": "Finance",
+      "description": "Total reserves expressed in terms of the number of months of imports of goods and services they could pay for.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "DT.DOD.DECT.GN.ZS",
+      "numeric_id": 45,
+      "name": "External debt stocks (% of GNI)",
+      "provider": "World Bank",
+      "theme": "Finance",
+      "description": "Total external debt stocks as a percentage of gross national income.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "DT.TDS.DECT.EX.ZS",
+      "numeric_id": 46,
+      "name": "Total debt service (% of exports of goods, services and primary income)",
+      "provider": "World Bank",
+      "theme": "Finance",
+      "description": "The sum of principal repayments and interest actually paid in currency, goods, or services on long-term debt, interest paid on short-term debt, and repayments to the IMF.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "GC.REV.XGRT.GD.ZS",
+      "numeric_id": 47,
+      "name": "Revenue, excluding grants (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Governance",
+      "description": "Revenue is cash receipts from taxes, social contributions, and other revenues such as fines, fees, rent, and income from property or sales.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "GC.TAX.TOTL.GD.ZS",
+      "numeric_id": 48,
+      "name": "Tax revenue (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Governance",
+      "description": "Tax revenue refers to compulsory transfers to the central government for public purposes.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "GC.XPN.TOTL.GD.ZS",
+      "numeric_id": 49,
+      "name": "Expense (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Governance",
+      "description": "Expense is cash payments for operating activities of the government in providing goods and services.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "FR.INR.LEND",
+      "numeric_id": 51,
+      "name": "Lending interest rate (%)",
+      "provider": "World Bank",
+      "theme": "Finance",
+      "description": "Lending rate is the bank rate that usually meets the short- and medium-term financing needs of the private sector.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "TX.VAL.TECH.MF.ZS",
+      "numeric_id": 52,
+      "name": "High-technology exports (% of manufactured exports)",
+      "provider": "World Bank",
+      "theme": "Trade",
+      "description": "High-technology exports are products with high R&D intensity, such as in aerospace, computers, pharmaceuticals, scientific instruments, and electrical machinery.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "SL.UEM.1524.ZS",
+      "numeric_id": 85,
+      "name": "Unemployment, youth total (% of total labor force ages 15-24) (modeled ILO estimate)",
+      "provider": "World Bank",
+      "theme": "Social",
+      "description": "Youth unemployment refers to the share of the labor force ages 15-24 without work but available for and seeking employment.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "SI.POV.GINI",
+      "numeric_id": 89,
+      "name": "Gini index",
+      "provider": "World Bank",
+      "theme": "Social",
+      "description": "Gini index measures the extent to which the distribution of income (or, in some cases, consumption expenditure) among individuals or households within an economy deviates from a perfectly equal distribution.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "EG.IMP.CONS.ZS",
+      "numeric_id": 96,
+      "name": "Energy imports, net (% of energy use)",
+      "provider": "World Bank",
+      "theme": "Energy",
+      "description": "Net energy imports are estimated as energy use less production, both measured in oil equivalents.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "EN.GHG.CO2.PC.CE.AR5",
+      "numeric_id": 97,
+      "name": "CO2 emissions excluding LULUCF per capita",
+      "provider": "World Bank",
+      "theme": "Environment",
+      "description": "Per-capita carbon dioxide emissions (excluding land-use change and forestry), scaled with IPCC AR5 GWPs. Replaces the retired EN.ATM.CO2E.PC.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "VC.BTL.DETH",
+      "numeric_id": 261,
+      "name": "Battle-related deaths (number of people)",
+      "provider": "World Bank",
+      "theme": "Conflict",
+      "description": "Number of battle deaths from intra- or inter-state armed conflict; sourced from UCDP via WB.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "SM.POP.REFG.OR",
+      "numeric_id": 262,
+      "name": "Refugee population by country or territory of origin",
+      "provider": "World Bank",
+      "theme": "Demographic",
+      "description": "Number of refugees originating from this country (UNHCR via WB).",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "VC.IDP.NWDS",
+      "numeric_id": 263,
+      "name": "Internally displaced persons, new displacement associated with conflict and violence (number of cases)",
+      "provider": "World Bank",
+      "theme": "Conflict",
+      "description": "New internal displacements from conflict (IDMC via WB).",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "IC.REG.COST.PC.ZS",
+      "numeric_id": 264,
+      "name": "Cost of business start-up procedures (% of GNI per capita)",
+      "provider": "World Bank",
+      "theme": "Governance",
+      "description": "Cost to start a business as percentage of GNI per capita; institutional quality proxy (WB Doing Business / B-READY).",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "IC.LGL.DURS",
+      "numeric_id": 265,
+      "name": "Time required to enforce a contract (days)",
+      "provider": "World Bank",
+      "theme": "Governance",
+      "description": "Days needed to enforce a commercial contract through the courts; rule of law proxy (WB Doing Business / B-READY).",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "BM.TRF.PWKR.CD.DT",
+      "numeric_id": 266,
+      "name": "Personal remittances, paid (current US$)",
+      "provider": "World Bank",
+      "theme": "Finance",
+      "description": "Outbound remittances paid by workers in this country to other countries.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "GC.DOD.TOTL.GD.ZS",
+      "numeric_id": 267,
+      "name": "Central government debt, total (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Finance",
+      "description": "Gross central government debt as percentage of GDP; fiscal sustainability indicator.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "FB.AST.NPER.ZS",
+      "numeric_id": 268,
+      "name": "Bank nonperforming loans to total gross loans (%)",
+      "provider": "World Bank",
+      "theme": "Finance",
+      "description": "Ratio of NPLs to total gross loans; banking sector stress indicator.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "GFDD.DI.01",
+      "numeric_id": 269,
+      "name": "Private credit by deposit money banks to GDP (%)",
+      "provider": "World Bank",
+      "theme": "Finance",
+      "description": "Bank assets as a percentage of GDP; financial development depth indicator (WB Global Financial Development DB).",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "DC.ODA.TOTL.GD.ZS",
+      "numeric_id": 270,
+      "name": "Net official development assistance and official aid received (% of GNI)",
+      "provider": "World Bank",
+      "theme": "Finance",
+      "description": "Net ODA received as percentage of GNI; donor-dependence indicator (OECD DAC via WB).",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2regendtype",
+      "name": "Regime End Type",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "How current regime ended: coup/election/negotiation/collapse",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "MS.MIL.TOTL.P1",
+      "name": "Armed forces personnel, total",
+      "provider": "World Bank",
+      "theme": "Military",
+      "description": "Absolute military size; military power indicator",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "NY.GDP.MINR.RT.ZS",
+      "name": "Mineral rents (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "Mineral resource rents; extractive dependency",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "NV.IND.MANF.KD.ZG",
+      "name": "Manufacturing, value added (annual % growth)",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "Manufacturing growth; industrialization pace",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "IQ.CPA.PUBS.XQ",
+      "name": "CPIA public sector management and institutions cluster average (1=low to 6=high)",
+      "provider": "World Bank",
+      "theme": "Governance",
+      "description": "Public institution quality; state capacity composite",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2xca_academ",
+      "name": "Academic Freedom Index",
+      "provider": "V-Dem",
+      "theme": "Rights & liberties",
+      "description": "Academic freedom: research, teaching, autonomy, campus safety",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "TC-002",
+      "name": "Cereal imports (metric tonnes)",
+      "provider": "FAOSTAT",
+      "theme": "Trade",
+      "description": "Volume of cereal imports; food import dependency and price shock vulnerability.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2xcl_rol",
+      "name": "Equality Before Law and Individual Liberty Index",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "V-Dem v2xcl_rol — country-year political indicator",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "FR.INR.RINR",
+      "name": "Real interest rate (%)",
+      "provider": "World Bank",
+      "theme": "Finance",
+      "description": "Real lending cost; investment incentive measure",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "IQ.CPA.IRAI.XQ",
+      "name": "CPIA average (IDA resource allocation index)",
+      "provider": "World Bank",
+      "theme": "Governance",
+      "description": "Composite IDA country policy assessment; governance quality",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2xcl_prpty",
+      "name": "Property Rights Index",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "V-Dem v2xcl_prpty — country-year political indicator",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "IC.FRM.BRIB.ZS",
+      "name": "Bribery incidence (% of firms experiencing at least one bribe payment request)",
+      "provider": "World Bank",
+      "theme": "Governance",
+      "description": "Business bribery rate; corruption direct measure",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UNHCR_RECOG_RATE",
+      "name": "Refugee Recognition Rate (derived: recognized / total decisions, annual)",
+      "provider": "UNHCR",
+      "theme": "Governance",
+      "description": "Share of decided claims that receive refugee status; internationally accepted measure of origin-country threat level",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "OWID_POP_YOUNG",
+      "name": "Youth Bulge (Population 15-24, % Total)",
+      "provider": "OWID",
+      "theme": "Demographic",
+      "description": "Share of 15-24 year olds in total population; UN WPP via OWID; political instability risk signal",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "SDGB-012",
+      "name": "SDG 6.4.2 Level of water stress — freshwater withdrawal as % of available freshwater (%)",
+      "provider": "FAOSTAT",
+      "theme": "Environment",
+      "description": "Water stress ratio; agricultural water security and conflict risk from scarcity.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "FD.AST.PRVT.GD.ZS",
+      "name": "Domestic credit to private sector (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Finance",
+      "description": "Credit depth; financial development and leverage",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "EMP_NIFL_SEX_RT",
+      "name": "Informal employment rate by sex (%)",
+      "provider": "ILOSTAT",
+      "theme": "Economic",
+      "description": "Share of employed in informal arrangements; instability, social protection deficit proxy",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2lgoppart",
+      "name": "Legislature Opposition Parties Operate Freely",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Opposition parties operate freely in legislature",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "DT.INT.DECT.GN.ZS",
+      "name": "Interest payments on external debt (% of GNI)",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "Interest payments relative to GNI",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "GC.XPN.INTP.RV.ZS",
+      "name": "Interest payments (% of revenue)",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "Debt servicing share of revenue; fiscal stress",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "TT.PRI.MRCH.XD.WD",
+      "name": "Net barter terms of trade index (2000 = 100)",
+      "provider": "World Bank",
+      "theme": "Trade",
+      "description": "Export vs import price ratio; commodity terms of trade",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2x_liberal",
+      "name": "Liberal Component Index",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "V-Dem v2x_liberal — country-year political indicator",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2exembez",
+      "name": "Executive Embezzlement and Theft",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Executive embezzles public funds for private use",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2exl_legitideol",
+      "name": "Ideology-Based Legitimation",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Legitimacy based on official state ideology",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2stcritapparm",
+      "name": "Military Appointment Criteria (Merit vs. Loyalty)",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Military officers appointed by merit, not political loyalty",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UCDP_OS_GOVT_PERP",
+      "name": "Government-Perpetrated One-Sided Violence Active (binary, country-year)",
+      "provider": "UCDP",
+      "theme": "Governance",
+      "description": "Binary: government is perpetrator of one-sided violence against civilians; state repression / democide signal",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UNHCR_REF_RATIO_POP",
+      "name": "Refugees as Share of Origin Country Population (derived)",
+      "provider": "UNHCR",
+      "theme": "Social",
+      "description": "Refugees from country / total population; normalizes for country size, key comparability metric for ML features",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2smorgviol",
+      "name": "Social Media Used to Organize Offline Violence",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Social media used to coordinate real-world political violence",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "STR_NWRK_NOC_NB",
+      "name": "Workers involved in strikes and lockouts — total (thousands)",
+      "provider": "ILOSTAT",
+      "theme": "Social",
+      "description": "Total workers in strikes; breadth of industrial unrest",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "EAR_XTLP_SEX_RT",
+      "name": "Low pay rate by sex (%)",
+      "provider": "ILOSTAT",
+      "theme": "Economic",
+      "description": "Share of workers earning below 2/3 of median wage; low-pay prevalence and inequality",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "EN.CLC.MDAT.ZS",
+      "name": "Droughts, floods, extreme temperatures (% of population, average 1990-2009)",
+      "provider": "World Bank",
+      "theme": "Environment",
+      "description": "Climate disaster exposure; climate fragility baseline",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "DT.DOD.DECT.EX.ZS",
+      "name": "External debt stocks (% of exports of goods, services and primary income)",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "External debt vs export capacity; debt sustainability",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "GC.NFN.TOTL.GD.ZS",
+      "name": "Net lending (+) / net borrowing (-) (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "Fiscal balance (net); primary/deficit signal",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "BN.CAB.XOKA.CD",
+      "name": "Current account balance (BoP, current US$)",
+      "provider": "World Bank",
+      "theme": "Trade",
+      "description": "Absolute current account balance; external position level",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "BX.TRF.PWKR.DT.GD.ZS",
+      "name": "Personal remittances, received (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "Remittance dependency; diaspora economy signal",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "FR.INR.RISK",
+      "name": "Risk premium on lending (lending rate minus treasury bill rate, %)",
+      "provider": "World Bank",
+      "theme": "Finance",
+      "description": "Banking risk spread; credit market tightness",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "NE.GDI.TOTL.KD.ZG",
+      "name": "Gross capital formation (annual % growth)",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "Investment growth momentum",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "NY.ADJ.SVNG.GN.ZS",
+      "name": "Adjusted net savings, including particulate emission damage (% of GNI)",
+      "provider": "World Bank",
+      "theme": "Environment",
+      "description": "Genuine savings rate; long-run wealth sustainability",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2x_diagacc",
+      "name": "Diagonal Accountability Index",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Civil society and media as accountability mechanism",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2x_accountability",
+      "name": "Accountability Index",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Overall accountability: vertical + horizontal + diagonal",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UCDP_SB_CONFLICT_COUNT",
+      "name": "Number of Active State-Based Conflicts (country-year count)",
+      "provider": "UCDP",
+      "theme": "Conflict",
+      "description": "Count of distinct state-based conflict dyads active in country-year; multi-front war complexity signal",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UNHCR_REF_COA",
+      "name": "Refugees by Country of Asylum (total stock, end-year)",
+      "provider": "UNHCR",
+      "theme": "Social",
+      "description": "End-year stock of refugees hosted in each country; measures humanitarian burden and regional spillover",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UNHCR_ASYAPP_NEW_COO",
+      "name": "New Asylum Applications by Country of Origin (annual flow)",
+      "provider": "UNHCR",
+      "theme": "Social",
+      "description": "Annual asylum claims originating from each country; push-factor signal reflecting persecution or conflict intensity",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UNHCR_ASY_BACKLOG_YEARS",
+      "name": "Asylum Backlog Duration (pending stock / annual decisions, derived)",
+      "provider": "UNHCR",
+      "theme": "Governance",
+      "description": "Implied years to clear pending asylum backlog at current decision rate; institutional capacity and rule-of-law proxy",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "STR_DAYS_NOC_NB",
+      "name": "Working days lost through strikes and lockouts — total",
+      "provider": "ILOSTAT",
+      "theme": "Social",
+      "description": "Total working days lost; headline economic cost of industrial conflict",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "ILR_TUMT_NOC_RT",
+      "name": "Trade union membership rate (union density) (%)",
+      "provider": "ILOSTAT",
+      "theme": "Social",
+      "description": "Share of employees in trade unions; worker bargaining power and social dialogue signal",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "MPI",
+      "name": "Multidimensional Poverty Index",
+      "provider": "UNDP",
+      "theme": "Social",
+      "description": "Composite index of acute poverty across health, education, and living standards; 0-1 scale from household surveys",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2xcs_ccsi",
+      "name": "Core Civil Society Index",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Core civil society: organizational freedom, participation, consultation",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2x_regime_amb",
+      "name": "Regimes of the World — Ambiguous Cases",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "V-Dem v2x_regime_amb — country-year political indicator",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2jucomp",
+      "name": "Compliance with Judiciary",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "V-Dem v2jucomp — country-year political indicator",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2jupurge",
+      "name": "Judicial Purges",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Politically-motivated removal of judges",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2catrauni",
+      "name": "Engagement in Independent Trade Unions",
+      "provider": "V-Dem",
+      "theme": "Rights & liberties",
+      "description": "V-Dem v2catrauni — country-year political indicator",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UCDP_OS_DEATHS_BEST",
+      "name": "One-Sided Violence Deaths — Best Estimate (country-year aggregate)",
+      "provider": "UCDP",
+      "theme": "Conflict",
+      "description": "Best-estimate civilian fatalities from one-sided violence aggregated to country-year; targeted killing and atrocity intensity",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UCDP_SB_INTENSITY_WAR",
+      "name": "State-Based War Intensity Flag (≥1000 deaths, binary, country-year)",
+      "provider": "UCDP",
+      "theme": "Conflict",
+      "description": "Binary: state-based conflict reaches 'war' threshold (≥1,000 battle deaths); from incompatibility coding in PRIO-ACD dataset",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "ET-001",
+      "name": "Mean surface temperature change on land (degrees C vs 1951-1980 baseline)",
+      "provider": "FAOSTAT",
+      "theme": "Environment",
+      "description": "Country-level temperature anomaly (1961-2025); climate change exposure and agricultural risk.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "FS-004",
+      "name": "Prevalence of severe food insecurity (FIES)",
+      "provider": "FAOSTAT",
+      "theme": "Social",
+      "description": "% population with severe food insecurity only (sub-indicator of FIES suite); access pillar proxy.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2svstterr",
+      "name": "State Territorial Control",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Full territorial control; no warlords or rebel-held areas",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2svinlaut",
+      "name": "International Autonomy (Degree of External Constraint)",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "International constraints on government autonomy",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "MS.MIL.XPND.ZS",
+      "name": "Military expenditure (% of central government expenditure)",
+      "provider": "World Bank",
+      "theme": "Military",
+      "description": "Military share of govt spending; resource allocation",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2x_pubcorr",
+      "name": "Public Sector Corruption Index",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Public sector corruption in service delivery",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2xnp_regcorr",
+      "name": "Regime Corruption Index",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "V-Dem v2xnp_regcorr — country-year political indicator",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2xnp_client",
+      "name": "Clientelism Index",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Clientelism: vote buying, patron-client linkages, particularism",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2regdur",
+      "name": "Regime Duration (Years in Power)",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Years of current regime; longer = more entrenched/stable",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "OWID_AUTOCRATIZATION",
+      "name": "Autocratization Episode (binary, ERT)",
+      "provider": "OWID",
+      "theme": "Governance",
+      "description": "Whether country is in an ongoing autocratization episode; V-Dem Episodes of Regime Transformation; regime change signal",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UCDP_OS_DEATHS_GOVT",
+      "name": "Government-Perpetrated Civilian Deaths Best Estimate (one-sided, country-year)",
+      "provider": "UCDP",
+      "theme": "Governance",
+      "description": "Fatalities from government one-sided violence; state atrocity magnitude, distinct from battlefield deaths",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UNHCR_IDP_RATIO_POP",
+      "name": "IDPs as Share of Country Population (derived)",
+      "provider": "UNHCR",
+      "theme": "Social",
+      "description": "UNHCR IDP stock / total population; normalized internal displacement burden, comparability-adjusted",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UNHCR_FORCDISP_TOTAL",
+      "name": "Total Forcibly Displaced (refugees + asylum-seekers + IDPs, derived)",
+      "provider": "UNHCR",
+      "theme": "Social",
+      "description": "Aggregate forced displacement burden for a country; single composite signal for ML feature engineering",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "FS-003",
+      "name": "Prevalence of moderate or severe food insecurity (FIES)",
+      "provider": "FAOSTAT",
+      "theme": "Social",
+      "description": "% population experiencing moderate/severe food insecurity per Food Insecurity Experience Scale; SDG 2.1.2.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "NY.GDP.OIL.RT.ZS",
+      "name": "Oil rents (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "Oil rent share of GDP; petro-state exposure",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "NY.GDP.TOTL.RT.ZS",
+      "name": "Total natural resources rents (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "Natural resource dependency; Dutch disease risk",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "LAP_2GDP_NOC_RT",
+      "name": "Labour income share as a percent of GDP — ILO modelled (%)",
+      "provider": "ILOSTAT",
+      "theme": "Economic",
+      "description": "Wage/labour share of GDP; functional income distribution; SDG 10.4.1 primary input",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "SDGB-009",
+      "name": "SDG 2.c.1 Indicator of food price anomalies (IFPA)",
+      "provider": "FAOSTAT",
+      "theme": "Economic",
+      "description": "Food price volatility anomaly indicator; early warning for food price spikes and political instability.",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "OWID_SLUM_SHARE",
+      "name": "Urban Slum Population Share (%)",
+      "provider": "OWID",
+      "theme": "Social",
+      "description": "Share of urban population living in slums; UN-HABITAT via OWID; urban fragility and inequality signal",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2exrescon",
+      "name": "Executive Respects Constitution",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Executive respects constitutional and judicial constraints",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "INEQ_INC",
+      "name": "Inequality in Income",
+      "provider": "UNDP",
+      "theme": "Economic",
+      "description": "Atkinson measure of income inequality used in IHDI computation; distinct from Gini",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2x_horacc",
+      "name": "Horizontal Accountability Index",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "V-Dem v2x_horacc — country-year political indicator",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2x_veracc",
+      "name": "Vertical Accountability Index",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Vertical accountability through elections and parties",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2x_cspart",
+      "name": "Civil Society Participation Index",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "V-Dem v2x_cspart — country-year political indicator",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2juhcind",
+      "name": "High Court Independence",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "High court independent from executive interference",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2lgotovst",
+      "name": "Executive Oversight by Legislature",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "V-Dem v2lgotovst — country-year political indicator",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2mecenefi",
+      "name": "Internet Censorship Effort",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Government internet censorship effort",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2smfordom",
+      "name": "Foreign Government Domestic Disinformation",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Foreign governments run domestic disinformation campaigns",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2smpolsoc",
+      "name": "Online Political Polarization of Society",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Online political polarization causing social fragmentation",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2csantimv",
+      "name": "Anti-System Movements Active",
+      "provider": "V-Dem",
+      "theme": "Rights & liberties",
+      "description": "Anti-system movements challenging regime",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2regantireg",
+      "name": "Strength of Anti-Regime Sentiment",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Strength of anti-regime sentiment in population and elites",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "OWID_REGIMETYPE",
+      "name": "Political Regime Type (Regimes of the World, V-Dem RoW)",
+      "provider": "OWID",
+      "theme": "Governance",
+      "description": "4-category classification: closed autocracy/electoral autocracy/electoral democracy/liberal democracy; V-Dem RoW 1900-2025; NOT in existing 109",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "OWID_STATECAP",
+      "name": "State Capacity Index (Hanson & Sigman)",
+      "provider": "OWID",
+      "theme": "Governance",
+      "description": "Composite Bayesian latent variable index of coercive+extractive+administrative state capacity; 177 countries 1960-2015; NOT in 109",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UCDP_GED_TOTAL_DEATHS",
+      "name": "GED Total Deaths Best Estimate (all types combined, country-year)",
+      "provider": "UCDP",
+      "theme": "Conflict",
+      "description": "Aggregate of best-estimate deaths from all GED events (SB+NS+OS) in country-year; total lethality from organized violence",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UCDP_SB_ONSET",
+      "name": "State-Based Conflict Onset (binary: new conflict in year, country-year)",
+      "provider": "UCDP",
+      "theme": "Conflict",
+      "description": "Binary flag for new conflict onset from UCDP Onset Dataset; leading rather than contemporaneous conflict signal",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UCDP_YEARS_SINCE_LAST_CONFLICT",
+      "name": "Years Since Last Active Conflict (country-year, derived)",
+      "provider": "UCDP",
+      "theme": "Conflict",
+      "description": "Years elapsed since last UCDP-recorded organized violence above threshold; post-conflict stability duration, recurrence risk proxy",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UNHCR_REF_COO",
+      "name": "Refugees by Country of Origin (total stock, end-year)",
+      "provider": "UNHCR",
+      "theme": "Social",
+      "description": "End-year stock of people recognized as refugees originating from each country; core displacement pressure signal",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UNHCR_STA",
+      "name": "Stateless Persons (end-year stock)",
+      "provider": "UNHCR",
+      "theme": "Social",
+      "description": "Count of persons without any nationality; indicator of ethnic/citizenship discrimination and governance failure",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "EIP_NEET_SEX_AGE_RT",
+      "name": "Share of youth not in employment, education or training (NEET) by sex and age (%)",
+      "provider": "ILOSTAT",
+      "theme": "Social",
+      "description": "NEET rate; SDG 8.6.1 indicator; catches discouraged youth outside all productive activity",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "GC.BAL.CASH.GD.ZS",
+      "name": "Cash surplus/deficit (% of GDP)",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "Fiscal cash balance; short-term fiscal health",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2x_civlib",
+      "name": "Civil Liberties Index",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "V-Dem v2x_civlib — country-year political indicator",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2x_frassoc",
+      "name": "Freedom of Association Index",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "V-Dem v2x_frassoc — country-year political indicator",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2jupoatck",
+      "name": "Government Attacks on Judiciary",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "V-Dem v2jupoatck — country-year political indicator",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2mecrit",
+      "name": "Print and Broadcast Media Critical of Government",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Media criticizes government and reports opposition views",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2meharjrn",
+      "name": "Harassment of Journalists",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Physical harassment/imprisonment of journalists",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2smgovdom",
+      "name": "Government Domestic Disinformation",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "V-Dem v2smgovdom — country-year political indicator",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2smarrest",
+      "name": "Arrests for Online Political Content",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Arrests of individuals for online political speech",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2caassemb",
+      "name": "Freedom of Peaceful Assembly",
+      "provider": "V-Dem",
+      "theme": "Rights & liberties",
+      "description": "Citizens can freely assemble for protests and meetings",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2casoe",
+      "name": "State of Emergency Declared",
+      "provider": "V-Dem",
+      "theme": "Rights & liberties",
+      "description": "State of emergency declared restricting civil liberties",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UCDP_SB_DEATHS_BEST",
+      "name": "State-Based Conflict Battle Deaths — Best Estimate (country-year aggregate)",
+      "provider": "UCDP",
+      "theme": "Conflict",
+      "description": "Best-estimate battle-related deaths from state-based conflicts aggregated to country-year; core conflict intensity metric",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UCDP_GED_CIV_DEATHS",
+      "name": "GED Civilian Deaths Best Estimate (all violence types, country-year)",
+      "provider": "UCDP",
+      "theme": "Conflict",
+      "description": "Sum of deaths_civilians across all GED events in country-year; direct civilian harm signal from all organized violence",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UCDP_NS_DEATHS_BEST",
+      "name": "Non-State Conflict Deaths — Best Estimate (country-year aggregate)",
+      "provider": "UCDP",
+      "theme": "Conflict",
+      "description": "Best-estimate fatalities from non-state (communal/militia) conflicts aggregated to country-year; sub-state violence level",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "VC.IHR.PSRC.P5",
+      "name": "Intentional homicides (per 100,000 people)",
+      "provider": "World Bank",
+      "theme": "Social",
+      "description": "Homicide rate; violence and security environment",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "SP.POP.0014.TO.ZS",
+      "name": "Population ages 0-14 (% of total population)",
+      "provider": "World Bank",
+      "theme": "Demographic",
+      "description": "Youth bulge; demographic dividend/pressure signal",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "SDG_0131_SEX_SOC_RT",
+      "name": "SDG 1.3.1 — Proportion of population covered by social protection floors/systems (%)",
+      "provider": "ILOSTAT",
+      "theme": "Social",
+      "description": "Social protection coverage breadth; SDG custodian ILO; fragility and welfare-state signal",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "GII",
+      "name": "Gender Inequality Index",
+      "provider": "UNDP",
+      "theme": "Social",
+      "description": "Composite index of reproductive health, empowerment, and labour market gender inequality; 0=equal, 1=maximum inequality",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "IHDI",
+      "name": "Inequality-Adjusted Human Development Index",
+      "provider": "UNDP",
+      "theme": "Social",
+      "description": "HDI adjusted for inequality in health, education, and income; discount from HDI captures inequality penalty",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UNHCR_IDP",
+      "name": "Internally Displaced Persons (UNHCR-reported, end-year stock)",
+      "provider": "UNHCR",
+      "theme": "Social",
+      "description": "UNHCR's own IDP stock estimates (separate from IDMC); measures internal displacement in countries UNHCR has operational mandate",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2jucorrdc",
+      "name": "Judicial Corruption in Decision-Making",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "V-Dem v2jucorrdc — country-year political indicator",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2meslfcen",
+      "name": "Media Self-Censorship",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Journalist self-censorship due to political pressure",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UNHCR_IDP_CHANGE_RATE",
+      "name": "UNHCR IDP Stock Annual Change Rate (%, derived)",
+      "provider": "UNHCR",
+      "theme": "Social",
+      "description": "Percentage change in UNHCR-reported IDP stock year-on-year; acceleration of displacement crisis or recovery signal",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UCDP_GED_OS_EVENTS",
+      "name": "GED One-Sided Violence Events Count (country-year aggregate)",
+      "provider": "UCDP",
+      "theme": "Conflict",
+      "description": "Count of georeferenced one-sided violence events; civilian targeting frequency, atrocity event density",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "MS.MIL.XPND.CN",
+      "name": "Military expenditure (current LCU)",
+      "provider": "World Bank",
+      "theme": "Military",
+      "description": "Nominal military spending; defence budget context",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2cltrnslw",
+      "name": "Transparent Laws with Predictable Enforcement",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Laws publicly known and consistently applied",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2mebias",
+      "name": "Media Bias (Pro-Government)",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Systematic pro-government bias in mainstream media",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2merange",
+      "name": "Print and Broadcast Media Perspectives Diversity",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Diversity of political perspectives in media",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UCDP_GED_NS_EVENTS",
+      "name": "GED Non-State Violence Events Count (country-year aggregate)",
+      "provider": "UCDP",
+      "theme": "Conflict",
+      "description": "Count of georeferenced non-state conflict events in country-year; communal violence frequency signal",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2clrspct",
+      "name": "Rigorous and Impartial Public Administration",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Impartial professional public administration",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UCDP_GED_GEOREGION_SPREAD",
+      "name": "GED Geographic Spread (count of distinct ADM1 regions with events, country-year)",
+      "provider": "UCDP",
+      "theme": "Conflict",
+      "description": "Number of distinct first-level administrative regions with GED events; spatial diffusion of conflict, territorial control signal",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2jucnind",
+      "name": "Lower Court Independence",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "V-Dem v2jucnind — country-year political indicator",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2juhccomp",
+      "name": "Compliance with High Court",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "V-Dem v2juhccomp — country-year political indicator",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UCDP_OS_ACTOR_COUNT",
+      "name": "Number of Active One-Sided Violence Actors (country-year)",
+      "provider": "UCDP",
+      "theme": "Conflict",
+      "description": "Count of distinct actors committing one-sided violence in country-year; plurality of targeting actors, repression breadth",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2exthftps",
+      "name": "Public Sector Theft",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "V-Dem v2exthftps — country-year political indicator",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2juaccnt",
+      "name": "Judicial Accountability Mechanisms",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Mechanisms for holding judiciary accountable",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UCDP_SB_INTRA_INTERNATIONALISED",
+      "name": "Internationalized intrastate conflict (active)",
+      "provider": "UCDP",
+      "theme": "Conflict",
+      "description": "ACD type_of_conflict=4: foreign-state involvement in internal conflict",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UCDP_CONFLICT_TERMINATED",
+      "name": "Conflict episode terminated",
+      "provider": "UCDP",
+      "theme": "Governance",
+      "description": "ACD ep_end=1: conflict de-escalation/resolution flag",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UCDP_SB_INCOMPAT_TERR",
+      "name": "Territorial-incompatibility conflict (active)",
+      "provider": "UCDP",
+      "theme": "Conflict",
+      "description": "ACD incompatibility=2 (territory)",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2elpeace",
+      "name": "Election other electoral violence",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Non-state electoral violence (V-Dem)",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "UCDP_GED_UNREST_EVENTS",
+      "name": "Non-state + one-sided violence event tempo",
+      "provider": "UCDP",
+      "theme": "Conflict",
+      "description": "GED event count, type_of_violence in {2,3}",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "v2strenarm",
+      "name": "Remuneration in the armed forces",
+      "provider": "V-Dem",
+      "theme": "Governance",
+      "description": "Coercive-capacity proxy: military professionalization (V-Dem)",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "IQ.CPA.PADM.XQ",
+      "name": "CPIA quality of public administration",
+      "provider": "World Bank",
+      "theme": "Economic",
+      "description": "Administrative state capacity",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "FS-007",
+      "name": "Dietary energy from cereals/roots/tubers (%)",
+      "provider": "FAOSTAT",
+      "theme": "Social",
+      "description": "Diet quality/affordability proxy (FAOSTAT FS item 21012)",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "SI.POV.DDAY",
+      "name": "Poverty headcount ratio at $2.15 a day (2017 PPP) (% of population)",
+      "provider": "World Bank",
+      "theme": "Social",
+      "description": "Share of the population living on less than $2.15/day (2017 PPP) — the extreme-poverty rate; a core social-fragility signal (World Bank).",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "SL.EMP.VULN.ZS",
+      "name": "Vulnerable employment, total (% of total employment) (modeled ILO estimate)",
+      "provider": "World Bank",
+      "theme": "Social",
+      "description": "Own-account and contributing family workers as a share of total employment; a precarious-work / labour-fragility signal (World Bank, modeled ILO estimate).",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "SH.STA.ODFC.ZS",
+      "name": "People practicing open defecation (% of population)",
+      "provider": "World Bank",
+      "theme": "Health",
+      "description": "Share of the population without any sanitation facility, practising open defecation; an extreme service-deprivation / state-capacity signal (World Bank / WHO-UNICEF JMP).",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "FS-019",
+      "name": "Percentage of children under 5 who are stunted (chronic malnutrition)",
+      "provider": "FAOSTAT",
+      "theme": "Food security",
+      "description": "Prevalence of stunting (low height-for-age) among children under five; chronic undernutrition and a long-run structural food-insecurity outcome (FAOSTAT).",
+      "recipe_count": 0,
+      "in_play": false
+    },
+    {
+      "code": "LOSS",
+      "name": "Overall Loss in HDI Due to Inequality (%)",
+      "provider": "UNDP",
+      "theme": "Social",
+      "description": "Percentage difference between the Human Development Index and the inequality-adjusted IHDI — the overall inequality penalty on human development (UNDP HDR).",
+      "recipe_count": 0,
+      "in_play": false
+    }
+  ]
+}
