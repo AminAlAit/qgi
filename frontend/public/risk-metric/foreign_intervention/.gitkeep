@@ -1,0 +1,6 @@
+Place audit chart PNG files here. Run scripts/copy-risk-metric-artifacts.ts to populate.
+Expected files:
+- Iran-vs-foreign_intervention.png
+- Algeria-vs-foreign_intervention.png
+- Syria-vs-foreign_intervention.png
+Source: C:\tmp\qgi-rnd-002\risk-metric-artifacts\audit-charts\foreign_intervention\

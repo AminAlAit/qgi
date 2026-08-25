@@ -1,0 +1,30 @@
+{
+  "evaluation_year": 2021,
+  "indicators": {
+    "v2elintmon": {
+      "mean": 0.7407407407407407,
+      "std": 0.4423430404998887,
+      "n_countries": 54,
+      "fallback_used": false
+    },
+    "RQ.EST": {
+      "mean": -0.029146653589194285,
+      "std": 1.0000167416122714,
+      "n_countries": 204,
+      "fallback_used": false
+    },
+    "v2pepwrgen": {
+      "mean": 1.0398628571428572,
+      "std": 1.0848649704328412,
+      "n_countries": 175,
+      "fallback_used": false
+    },
+    "v2stfisccap": {
+      "mean": 1.06432,
+      "std": 1.225108618407589,
+      "n_countries": 175,
+      "fallback_used": false
+    }
+  },
+  "purpose": "Pre-baked panel-wide z-score distribution per Kwame production-ML rider on risk-metric design v1."
+}

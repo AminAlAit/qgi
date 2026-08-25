@@ -1,0 +1,654 @@
+{
+  "metadata": {
+    "schema_version": "1.0",
+    "generated_at": "2026-05-11T16:00:00Z",
+    "dispatch_sha": "55de0c76914fea94cbecb99a1e80cefbc49bd3b61e5ca956dac4ceb2869c0f97",
+    "n_recipes": 4,
+    "top_4_recipes": [
+      "civil_war_and_insurgency",
+      "multilateral_agreement",
+      "elections_and_voting",
+      "bilateral_treaty"
+    ],
+    "source_artifacts": [
+      {
+        "path": "../qgi-data/reference/tear-sheets-2026-05.json",
+        "sha256": "30326cd177914f015f52291c598dbe94fc641d0312a2105d30aeb5f5dd65aebd"
+      },
+      {
+        "path": "../qgi-data/reference/honest-disclosures-2026-05-11.json",
+        "sha256": "f2623cf1d90456793d09971aacb6fb40ac53f6b18353bc24ae0ab324cc05f217"
+      },
+      {
+        "path": "../qgi-data/reference/shap-fingerprint-2026-05.json",
+        "sha256": "ce8010fecf015d25e702e41e32e3cf2c27ee0e04eacf93975c5108b396365309"
+      },
+      {
+        "path": "config/hybrid_architecture_dispatch.json",
+        "sha256": "bc113e2cd1732b814376be71171c95e5960c77f0dbc1a3e4e6c9ba8980670f5c"
+      }
+    ],
+    "interpretation_hint_decision": "docs/specs/internal/majles/2026-05-11_Asas_interpretation_hint_DECISION.md"
+  },
+  "recipes": [
+    {
+      "recipe_id": "civil_war_and_insurgency",
+      "display_name": "Civil war and insurgency",
+      "tier": "STRONG",
+      "architecture": "D2",
+      "loco_auc": 0.7686,
+      "n_pos_loco": 7,
+      "assignment_confidence": "MODERATE",
+      "in_sample_f1_ece": 0.0061,
+      "in_sample_f2_auc": 0.884,
+      "in_sample_f2_ci_lower": 0.794,
+      "in_sample_f2_ci_upper": 0.942,
+      "ece_overall": 0.0061,
+      "ece_high_cohort": 0.0068,
+      "ece_mid_cohort": 0.0118,
+      "ece_low_cohort": 0.0023,
+      "zero_positive_cohort_flag": null,
+      "anchor_ahi_value": 0.1052,
+      "anchor_ahi_status": "measured",
+      "anchor_ahi_n_evaluable": null,
+      "anchor_ahi_reason": null,
+      "advisory_only_flag": false,
+      "f_rule_anomaly_flag": false,
+      "top_1_training_country": "syria",
+      "top_1_training_country_share": 0.222,
+      "concentration_alert_level": "caution",
+      "interpretation_hint": "risk_elevation",
+      "mechanism_narrative": "civil_war_and_insurgency predicts active-conflict onset or escalation. The D2 multi-task head — trained on indicators including battle-related deaths, refugee flows, internal displacement, political polarization, and fiscal-capacity collapse — learns a multi-indicator signature of state stress that precedes open conflict by 1-3 years. The D5 trajectory features were within hysteresis (+0.003 LOCO) so D2 is preserved; civil-war signals are predominantly level-based (a country IS in/near civil war or is NOT) rather than rate-of-change-based, which is why D5 trajectory features didn't add meaningful signal.",
+      "mechanism_narrative_excerpt": "civil_war_and_insurgency predicts active-conflict onset or escalation. The D2 multi-task head — trained on indicators including battle-related deaths, refugee flows, internal displacement, political polarization, and fiscal-capacity collapse — learns a multi-indicator signature o…",
+      "buyer_disclosure_recommendation": "**Pricing-grade** — the flagship LOCK. Most defensible recipe for standalone risk pricing. Use as primary signal for civil-conflict risk premium calculation.",
+      "open_followups": [],
+      "paper_section_anchor": "section-4-civil_war_and_insurgency",
+      "top_k_indicators": [
+        {
+          "rank": 1,
+          "indicator_id": "VC.BTL.DETH__diff",
+          "mean_abs_shap": 0.553140677390628,
+          "fixed_effect_suspect": false
+        },
+        {
+          "rank": 2,
+          "indicator_id": "PV.EST__diff",
+          "mean_abs_shap": 0.39695385199023775,
+          "fixed_effect_suspect": true
+        },
+        {
+          "rank": 3,
+          "indicator_id": "NE.CON.GOVT.ZS__diff",
+          "mean_abs_shap": 0.19726412165326937,
+          "fixed_effect_suspect": false
+        },
+        {
+          "rank": 4,
+          "indicator_id": "EG.IMP.CONS.ZS__diff",
+          "mean_abs_shap": 0.17941145240576672,
+          "fixed_effect_suspect": false
+        },
+        {
+          "rank": 5,
+          "indicator_id": "VA.EST__diff",
+          "mean_abs_shap": 0.14634959296718256,
+          "fixed_effect_suspect": true
+        },
+        {
+          "rank": 6,
+          "indicator_id": "v2exremhog__diff",
+          "mean_abs_shap": 0.13468432563015745,
+          "fixed_effect_suspect": true
+        },
+        {
+          "rank": 7,
+          "indicator_id": "SM.POP.NETM__diff",
+          "mean_abs_shap": 0.13008605491090638,
+          "fixed_effect_suspect": false
+        },
+        {
+          "rank": 8,
+          "indicator_id": "MS.MIL.MPRT.KD__diff",
+          "mean_abs_shap": 0.12176558903924653,
+          "fixed_effect_suspect": false
+        },
+        {
+          "rank": 9,
+          "indicator_id": "v2cacamps__diff",
+          "mean_abs_shap": 0.08728784648819891,
+          "fixed_effect_suspect": true
+        },
+        {
+          "rank": 10,
+          "indicator_id": "SL.UEM.TOTL.ZS__diff",
+          "mean_abs_shap": 0.0853722162473959,
+          "fixed_effect_suspect": true
+        }
+      ],
+      "model_version": "v1.0-55de0c7 (2026-05-11)"
+    },
+    {
+      "recipe_id": "multilateral_agreement",
+      "display_name": "Multilateral agreement",
+      "tier": "STRONG",
+      "architecture": "D5",
+      "loco_auc": 0.8689,
+      "n_pos_loco": 7,
+      "assignment_confidence": "HIGH",
+      "in_sample_f1_ece": 0.0091,
+      "in_sample_f2_auc": 0.8149,
+      "in_sample_f2_ci_lower": 0.613,
+      "in_sample_f2_ci_upper": 0.977,
+      "ece_overall": 0.0091,
+      "ece_high_cohort": 0.0214,
+      "ece_mid_cohort": 0.0,
+      "ece_low_cohort": 0.005,
+      "zero_positive_cohort_flag": "**mid** (n_pos=0 in mid cohort; ECE measures over-prediction bias only)",
+      "anchor_ahi_value": null,
+      "anchor_ahi_status": "not_measured",
+      "anchor_ahi_n_evaluable": null,
+      "anchor_ahi_reason": "Not measured — no anchor cases in the v2 regression suite for this recipe (recipe-set vintage mismatch; suite designed pre-Stage-5 recipe consolidation). Remediation = anchor battery v3, deferred to future Majles cycle. See [per-recipe AHI analysis](../internal/ops/ml-track/results/d5-per-recipe-anchor-ahi-analysis-2026-05-11.md).",
+      "advisory_only_flag": false,
+      "f_rule_anomaly_flag": false,
+      "top_1_training_country": null,
+      "top_1_training_country_share": null,
+      "concentration_alert_level": "none",
+      "interpretation_hint": "ambiguous",
+      "mechanism_narrative": "multilateral_agreement predicts a country joining or substantively engaging with multi-party international agreements (climate, trade, security). Under D2, this recipe was FALSIFIED on F2 (in-sample AUC 0.5649 was below the 0.57 threshold) despite LOCO 0.7493. Under D5, trajectory features on diplomatic-engagement indicators (treaty participation rates, sovereignty index changes, multilateral-forum representation deltas) provided the in-sample signal that level features alone could not — multilateral agreement is an event-driven recipe where the *change in diplomatic posture* matters more than the absolute level. The D5 rescue is genuine: F1+F2+LOCO all pass; the +0.120 LOCO lift from D2 baseline is the architecture's strongest validation case.",
+      "mechanism_narrative_excerpt": "multilateral_agreement predicts a country joining or substantively engaging with multi-party international agreements (climate, trade, security). Under D2, this recipe was FALSIFIED on F2 (in-sample AUC 0.5649 was below the 0.57 threshold) despite LOCO 0.7493.",
+      "buyer_disclosure_recommendation": "**Pricing-grade** — second flagship LOCK. The D5 architecture rescue case; demonstrates that trajectory features unlock genuine signal for change-of-state recipes.",
+      "open_followups": [
+        "investigate whether the OECD (high-coverage) cohort calibration could be improved; the high-cohort ECE (0.0214) is the highest among multilateral_agreement's cohorts."
+      ],
+      "paper_section_anchor": "section-4-multilateral_agreement",
+      "top_k_indicators": [
+        {
+          "rank": 1,
+          "indicator_id": "GC.TAX.TOTL.GD.ZS__diff",
+          "mean_abs_shap": 0.5997769163132703,
+          "fixed_effect_suspect": false
+        },
+        {
+          "rank": 2,
+          "indicator_id": "SL.TLF.CACT.FE.ZS__diff",
+          "mean_abs_shap": 0.5274940829297042,
+          "fixed_effect_suspect": false
+        },
+        {
+          "rank": 3,
+          "indicator_id": "VA.EST__diff",
+          "mean_abs_shap": 0.40343537177687344,
+          "fixed_effect_suspect": true
+        },
+        {
+          "rank": 4,
+          "indicator_id": "v2psprlnks__diff",
+          "mean_abs_shap": 0.046407858339610975,
+          "fixed_effect_suspect": true
+        },
+        {
+          "rank": 5,
+          "indicator_id": "v2x_jucon__diff",
+          "mean_abs_shap": 0.04295661615485657,
+          "fixed_effect_suspect": true
+        },
+        {
+          "rank": 6,
+          "indicator_id": "SH.DYN.MORT__diff",
+          "mean_abs_shap": 0.029997009700812177,
+          "fixed_effect_suspect": false
+        },
+        {
+          "rank": 7,
+          "indicator_id": "AG.PRD.FOOD.XD__diff",
+          "mean_abs_shap": 0.0,
+          "fixed_effect_suspect": false
+        },
+        {
+          "rank": 8,
+          "indicator_id": "BM.KLT.DINV.WD.GD.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "fixed_effect_suspect": false
+        },
+        {
+          "rank": 9,
+          "indicator_id": "BM.TRF.PWKR.CD.DT__diff",
+          "mean_abs_shap": 0.0,
+          "fixed_effect_suspect": false
+        },
+        {
+          "rank": 10,
+          "indicator_id": "BN.CAB.XOKA.GD.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "fixed_effect_suspect": false
+        }
+      ],
+      "model_version": "v1.0-55de0c7 (2026-05-11)"
+    },
+    {
+      "recipe_id": "elections_and_voting",
+      "display_name": "Elections and voting",
+      "tier": "MODERATE",
+      "architecture": "D5",
+      "loco_auc": 0.7113,
+      "n_pos_loco": 5,
+      "assignment_confidence": "MODERATE",
+      "in_sample_f1_ece": 0.0122,
+      "in_sample_f2_auc": 0.7413,
+      "in_sample_f2_ci_lower": 0.641,
+      "in_sample_f2_ci_upper": 0.824,
+      "ece_overall": 0.0122,
+      "ece_high_cohort": 0.034,
+      "ece_mid_cohort": 0.0073,
+      "ece_low_cohort": 0.0043,
+      "zero_positive_cohort_flag": null,
+      "anchor_ahi_value": null,
+      "anchor_ahi_status": "not_measured",
+      "anchor_ahi_n_evaluable": null,
+      "anchor_ahi_reason": "Not measured — no anchor cases in the v2 regression suite for this recipe (recipe-set vintage mismatch). Remediation = anchor battery v3, deferred to future Majles cycle. See [per-recipe AHI analysis](../internal/ops/ml-track/results/d5-per-recipe-anchor-ahi-analysis-2026-05-11.md).",
+      "advisory_only_flag": false,
+      "f_rule_anomaly_flag": false,
+      "top_1_training_country": "south_africa",
+      "top_1_training_country_share": 0.143,
+      "concentration_alert_level": "low",
+      "interpretation_hint": "ambiguous",
+      "mechanism_narrative": "elections_and_voting predicts national-election outcomes — contested elections, post-election violence, contested transfers of power, electoral-system reforms. The D5 head uses V-Dem electoral indicators (free-and-fair-election index, civil-society participation, freedom of expression) and political-participation trajectory features. The +0.042 LOCO lift from D2 reflects modest trajectory-feature contribution; elections are partly trajectory-driven (the rate of democratic backsliding matters) but also strongly level-driven (institutional quality at baseline). Largest n_pos_test = 14 of any STRONG/MODERATE LOCK — among the most statistically-stable LOCKs.",
+      "mechanism_narrative_excerpt": "elections_and_voting predicts national-election outcomes — contested elections, post-election violence, contested transfers of power, electoral-system reforms.",
+      "buyer_disclosure_recommendation": "**Pricing-grade-with-disclosure** — most robust MODERATE LOCK. Usable as primary signal for election-event risk premium.",
+      "open_followups": [],
+      "paper_section_anchor": "section-4-elections_and_voting",
+      "top_k_indicators": [
+        {
+          "rank": 1,
+          "indicator_id": "EG.IMP.CONS.ZS__diff",
+          "mean_abs_shap": 0.6489025894366434,
+          "fixed_effect_suspect": false
+        },
+        {
+          "rank": 2,
+          "indicator_id": "VC.IDP.NWDS__diff",
+          "mean_abs_shap": 0.40207772875379433,
+          "fixed_effect_suspect": false
+        },
+        {
+          "rank": 3,
+          "indicator_id": "v2elintmon__diff",
+          "mean_abs_shap": 0.25092353295681946,
+          "fixed_effect_suspect": true
+        },
+        {
+          "rank": 4,
+          "indicator_id": "GC.TAX.TOTL.GD.ZS__diff",
+          "mean_abs_shap": 0.24914337018078306,
+          "fixed_effect_suspect": false
+        },
+        {
+          "rank": 5,
+          "indicator_id": "IT.NET.USER.ZS__diff",
+          "mean_abs_shap": 0.22408967139554828,
+          "fixed_effect_suspect": false
+        },
+        {
+          "rank": 6,
+          "indicator_id": "BX.KLT.DINV.WD.GD.ZS__diff",
+          "mean_abs_shap": 0.2155716168887779,
+          "fixed_effect_suspect": false
+        },
+        {
+          "rank": 7,
+          "indicator_id": "EG.ELC.ACCS.UR.ZS__diff",
+          "mean_abs_shap": 0.19305843147088755,
+          "fixed_effect_suspect": true
+        },
+        {
+          "rank": 8,
+          "indicator_id": "SM.POP.RHCR.EO__diff",
+          "mean_abs_shap": 0.18197779921647952,
+          "fixed_effect_suspect": false
+        },
+        {
+          "rank": 9,
+          "indicator_id": "TX.VAL.TECH.MF.ZS__diff",
+          "mean_abs_shap": 0.18150070852364256,
+          "fixed_effect_suspect": false
+        },
+        {
+          "rank": 10,
+          "indicator_id": "NV.IND.MANF.ZS__diff",
+          "mean_abs_shap": 0.17809997453767717,
+          "fixed_effect_suspect": false
+        }
+      ],
+      "model_version": "v1.0-55de0c7 (2026-05-11)"
+    },
+    {
+      "recipe_id": "bilateral_treaty",
+      "display_name": "Bilateral treaty",
+      "tier": "MODERATE",
+      "architecture": "D5",
+      "loco_auc": 0.6681,
+      "n_pos_loco": 6,
+      "assignment_confidence": "HIGH",
+      "in_sample_f1_ece": 0.0167,
+      "in_sample_f2_auc": 0.7405,
+      "in_sample_f2_ci_lower": 0.625,
+      "in_sample_f2_ci_upper": 0.853,
+      "ece_overall": 0.0167,
+      "ece_high_cohort": 0.0207,
+      "ece_mid_cohort": 0.0132,
+      "ece_low_cohort": 0.0161,
+      "zero_positive_cohort_flag": null,
+      "anchor_ahi_value": null,
+      "anchor_ahi_status": "not_measured",
+      "anchor_ahi_n_evaluable": null,
+      "anchor_ahi_reason": "Not measured — no anchor cases in the v2 regression suite for this recipe (recipe-set vintage mismatch). Remediation = anchor battery v3, deferred to future Majles cycle. See [per-recipe AHI analysis](../internal/ops/ml-track/results/d5-per-recipe-anchor-ahi-analysis-2026-05-11.md).",
+      "advisory_only_flag": false,
+      "f_rule_anomaly_flag": false,
+      "top_1_training_country": "colombia",
+      "top_1_training_country_share": 0.25,
+      "concentration_alert_level": "caution",
+      "interpretation_hint": "ambiguous",
+      "mechanism_narrative": "bilateral_treaty predicts country-pair-level treaty conclusions (trade, defense, investment, cultural). The D5 head uses diplomatic-relations indicators, trade-flow deltas, and sovereignty/influence trajectory features. The +0.066 LOCO lift from D2 reflects that bilateral-treaty events are partially trajectory-driven (recent diplomatic warming or cooling matters more than absolute relations level). n_pos_LOCO = 6 makes this one of the more statistically-robust LOCKs in the MODERATE tier.",
+      "mechanism_narrative_excerpt": "bilateral_treaty predicts country-pair-level treaty conclusions (trade, defense, investment, cultural). The D5 head uses diplomatic-relations indicators, trade-flow deltas, and sovereignty/influence trajectory features.",
+      "buyer_disclosure_recommendation": "**Pricing-grade-with-disclosure** — usable as primary signal for bilateral-engagement risk premium, with top-1-country caveat (Colombia concentration).",
+      "open_followups": [],
+      "paper_section_anchor": "section-4-bilateral_treaty",
+      "top_k_indicators": [
+        {
+          "rank": 1,
+          "indicator_id": "SP.POP.TOTL__diff",
+          "mean_abs_shap": 0.5275124098803293,
+          "fixed_effect_suspect": false
+        },
+        {
+          "rank": 2,
+          "indicator_id": "SL.EMP.TOTL.SP.ZS__diff",
+          "mean_abs_shap": 0.4240674295014422,
+          "fixed_effect_suspect": false
+        },
+        {
+          "rank": 3,
+          "indicator_id": "IT.CEL.SETS.P2__diff",
+          "mean_abs_shap": 0.37670292582352877,
+          "fixed_effect_suspect": false
+        },
+        {
+          "rank": 4,
+          "indicator_id": "SP.DYN.TFRT.IN__diff",
+          "mean_abs_shap": 0.30655545903993925,
+          "fixed_effect_suspect": true
+        },
+        {
+          "rank": 5,
+          "indicator_id": "MS.MIL.MPRT.KD__diff",
+          "mean_abs_shap": 0.026252549884986983,
+          "fixed_effect_suspect": false
+        },
+        {
+          "rank": 6,
+          "indicator_id": "DT.DOD.DECT.GN.ZS__diff",
+          "mean_abs_shap": 0.022982405369990456,
+          "fixed_effect_suspect": false
+        },
+        {
+          "rank": 7,
+          "indicator_id": "v2x_libdem__diff",
+          "mean_abs_shap": 0.016265413307658363,
+          "fixed_effect_suspect": true
+        },
+        {
+          "rank": 8,
+          "indicator_id": "v2xlg_legcon__diff",
+          "mean_abs_shap": 0.002426737814688409,
+          "fixed_effect_suspect": true
+        },
+        {
+          "rank": 9,
+          "indicator_id": "AG.PRD.FOOD.XD__diff",
+          "mean_abs_shap": 0.0,
+          "fixed_effect_suspect": false
+        },
+        {
+          "rank": 10,
+          "indicator_id": "BM.KLT.DINV.WD.GD.ZS__diff",
+          "mean_abs_shap": 0.0,
+          "fixed_effect_suspect": false
+        }
+      ],
+      "model_version": "v1.0-55de0c7 (2026-05-11)"
+    }
+  ],
+  "disclosures": {
+    "schema_version": "1.0",
+    "generated_at": "2026-05-11",
+    "purpose": "Structured extraction of Stage 5 buyer-disclosure paper Section 5 (honest disclosures + limitations + known issues + falsified-under-hybrid). Emitted as a separate ML-Opus track artifact (per Majles 2026-05-11 Q8: B) instead of having the frontend bake script parse the Stage 5 paper markdown, which would be fragile if paper format changes. Frontend bake script (qgi-aws-tf #643) consumes this artifact.",
+    "source_paper": "docs/specs/methodology/stage-5-buyer-disclosure-methodology-paper.md",
+    "ml_opus_track_commit": "TBD (Stage 5 paper + amendments as of 2026-05-11)",
+    "what_was_tested": [
+      {
+        "id": "test-1",
+        "label": "Out-of-time validation",
+        "description": "train ≤ 2021, test 2022-2025 (no future leakage)"
+      },
+      {
+        "id": "test-2",
+        "label": "Out-of-country generalization (LOCO)",
+        "description": "30-country held-out panel covering 4 regime types (OECD democracies, post-Soviet, MENA, Sub-Saharan)"
+      },
+      {
+        "id": "test-3",
+        "label": "Pre-registered methodology",
+        "description": "every architecture choice + threshold committed to git before next training run; degree-of-freedom inflation guarded by 4 layered pre-regs"
+      }
+    ],
+    "what_was_not_tested": [
+      {
+        "id": "gap-1",
+        "label": "Years beyond 2025",
+        "description": "the test window ends in 2025; predictions for 2026+ are extrapolations. Re-walks under additional years will refine LOCKs as test data accumulates."
+      },
+      {
+        "id": "gap-2",
+        "label": "Strong scientific validation across regimes we haven't sampled",
+        "description": "Caribbean states, Pacific islands, some Central Asian states are sparsely represented in the test panel."
+      },
+      {
+        "id": "gap-3",
+        "label": "Anchor regression suite vintage v3",
+        "description": "post-KI-2 amendment 2026-05-11, the v2 anchor battery has coverage for 5 of 13 LOCKed recipes (was 6 of 14; territorial_disputes' AHI = 1.0000 was an artifact and is no longer in the LOCKed set). 8 LOCKed recipes have no anchor cases (regression suite designed pre-Stage-5 recipe consolidation). Per-recipe AHI partitioning landed 2026-05-11 (Section 3.3); coverage-gap remediation = v3 anchor battery design, deferred to future Majles cycle (ticket #649)."
+      },
+      {
+        "id": "gap-4",
+        "label": "Comparison against alternative model classes",
+        "description": "D2 + D5 are the only candidates; F2 vs LightGBM-only or transformer comparison is deferred."
+      }
+    ],
+    "falsified_under_hybrid": [
+      {
+        "id": "ki-2-territorial_disputes",
+        "recipe_id": "territorial_disputes",
+        "date": "2026-05-11",
+        "amendment_id": "KI-2",
+        "majles_vote": "Option C carried 3-1 (Kwame, Ji-Hoon, Nasrin for C; Priya for B dissent logged)",
+        "dispositive_evidence": [
+          "D5 predictions degenerate: max 1.91e-6 across 768 test cells; both positives (China 2024, Ukraine 2022) at exactly 0.0",
+          "Per-recipe anchor AHI = 1.0000 is a measurement-method artifact, not a methodology strength — every country trivially falls in [0, 0.3] percentile expected band when predictions ≈ 0",
+          "In-sample F2 AUC 0.4974 [0.495, 0.499] is bootstrap noise on near-constant output, not meaningful discrimination",
+          "LOCO-AUC 0.6780 rests on n_pos_LOCO = 2 — statistically fragile"
+        ],
+        "methodology_integrity_statement": "The FALSIFICATION is not a downgrade because the recipe is hard — it is a falsification because the measurement methodology used cannot distinguish model skill from arithmetic artifacts on this recipe under D5.",
+        "buyer_disclosure_implication": "territorial_disputes is NOT part of the production candidate set; not in dispatch.assignments; appears only in dispatch.falsified list."
+      }
+    ],
+    "recipes_with_known_issues": [
+      {
+        "recipe_id": "political_corruption",
+        "status": "NOT LOCKED (FALSIFIED)",
+        "issue": "Democratic-regime corruption learned from 42% South Africa training concentration → systematic LOCO inversion on authoritarian states. Diagnosed in political-corruption-loco-diagnostic.md.",
+        "mitigation": "Defer from Stage 5 disclosure entirely until training corpus rebalanced."
+      },
+      {
+        "recipe_id": "energy_policy",
+        "status": "STRONG / ADVISORY-ONLY",
+        "issue": "n_pos_train = 3 (China, Mexico, South Africa one each). STRONG tier rests on noise.",
+        "mitigation": "Curation issue #633 commissioned; re-walk after corpus expansion."
+      },
+      {
+        "recipe_id": "humanitarian_crisis",
+        "status": "MODERATE",
+        "issue": "Venezuela = 71% of training positives. Catastrophic D5 regression (-0.231 LOCO) confirmed the regime-fingerprint risk. Currently D2-pinned.",
+        "mitigation": "Disclose top-1 country concentration; advise composite-signal use; investigate authoritarian-regime humanitarian-crisis events for corpus rebalancing (#638)."
+      },
+      {
+        "recipe_id": "terrorist_attack",
+        "status": "STRONG / ADVISORY-ONLY",
+        "issue": "n_pos_LOCO = 1; LOCO statistic noise-dominated. Tier label mathematically met but discrimination evidence is fragile.",
+        "mitigation": "F-H-3 ADVISORY-ONLY restriction explicit; cannot anchor standalone pricing; composite-signal use only."
+      },
+      {
+        "recipe_id": "epidemic_and_pandemic",
+        "status": "STRONG / ADVISORY-ONLY / f_rule_anomaly",
+        "issue": "n_pos_LOCO = 1; LOCO 0.8824 genuine but in-sample F2 AUC 0.5627 fails. Cross-Opus flag: 95% base rate makes recipe mechanically unscorable per cascade-Opus v0.1a findings.",
+        "mitigation": "F-H-3 ADVISORY-ONLY restriction + f_rule_anomaly flag. Combined-disclosure question (3 strikes: f_rule_anomaly + 95% base rate + n_pos_LOCO=1) flagged for next ML Majles agenda (Kwame's lane)."
+      },
+      {
+        "recipe_id": "human_rights_violation",
+        "status": "STRONG / ADVISORY-ONLY",
+        "issue": "n_pos_LOCO = 1; LOCO 0.9244 is the largest D5 lift but rests on single observation.",
+        "mitigation": "F-H-3 ADVISORY-ONLY restriction explicit."
+      },
+      {
+        "recipe_id": "foreign_intervention",
+        "status": "MODERATE",
+        "issue": "Iran 28.6% training concentration (caution-level). Catastrophic D5 regression (-0.225 LOCO); D2-pinned.",
+        "mitigation": "Disclose top-1 country; composite-signal use recommended."
+      }
+    ],
+    "advisory_only_recipes": [
+      "terrorist_attack",
+      "energy_policy",
+      "epidemic_and_pandemic",
+      "human_rights_violation"
+    ],
+    "advisory_only_disclosure_language": {
+      "binding_text": "Tier: {STRONG/MODERATE} under {D2/D5} (LOCO {value}). Actuarial use restriction: LOCO statistic is computed on n_pos_loco = 1 (sole positive in the LOCO partition). This recipe is classified ADVISORY-ONLY for standalone pricing until a repeat LOCO walk confirms the tier on n_pos_loco ≥ 2. May be used as a supporting signal in multi-recipe composite scores, but SHALL NOT be the sole basis for a political-risk pricing recommendation.",
+      "rationale": "Lloyd's RDS guidance, ICA framework, and Solvency II internal model validation each require that discrimination metrics for pricing-grade use rest on multiple observations. A discrimination metric computed on a single event is a point estimate with an unbounded confidence interval — not a validated statistic. Presenting these as STRONG without an ADVISORY-ONLY flag is a material misrepresentation risk."
+    },
+    "f_rule_anomaly_recipes": [
+      {
+        "recipe_id": "epidemic_and_pandemic",
+        "anomaly": "In-sample F2 AUC 0.5627 [0.111, 1.000] under D5 fails the ≥ 0.57 threshold; CI does not exclude 0.5. LOCO 0.8824 is genuine.",
+        "disclosure": "Disclosed via inherited ADVISORY-ONLY restriction (F-H-3 n_pos_loco = 1). Combined-disclosure stack flagged for next ML Majles."
+      }
+    ],
+    "per_recipe_ahi_coverage": {
+      "total_locked_recipes": 13,
+      "with_anchor_coverage": 5,
+      "without_anchor_coverage": 8,
+      "uncovered_recipes": [
+        "bilateral_treaty",
+        "elections_and_voting",
+        "energy_policy",
+        "epidemic_and_pandemic",
+        "government_formation",
+        "human_rights_violation",
+        "multilateral_agreement",
+        "peacekeeping_and_peace_process"
+      ],
+      "covered_recipes": [
+        {
+          "recipe_id": "civil_war_and_insurgency",
+          "anchor_ahi": 0.1052,
+          "n_evaluable": 26
+        },
+        {
+          "recipe_id": "foreign_intervention",
+          "anchor_ahi": 0.6138,
+          "n_evaluable": 6
+        },
+        {
+          "recipe_id": "terrorist_attack",
+          "anchor_ahi": 0.4322,
+          "n_evaluable": 7
+        },
+        {
+          "recipe_id": "humanitarian_crisis",
+          "anchor_ahi": 0.2521,
+          "n_evaluable": 10
+        },
+        {
+          "recipe_id": "mass_protest",
+          "anchor_ahi": 0.2385,
+          "n_evaluable": 3
+        }
+      ],
+      "disclosure_for_uncovered": "Per-recipe AHI: Not measured. No anchor cases in the v2 regression suite for this recipe (recipe-set vintage mismatch; suite designed pre-Stage-5 recipe consolidation). Remediation = anchor battery v3, deferred to future Majles cycle (ticket #649).",
+      "remediation_ticket": "qgi-aws-tf #649"
+    },
+    "diagnostic_deep_dives": [
+      {
+        "title": "political_corruption South Africa regime-fingerprint pattern",
+        "path": "docs/specs/internal/ops/ml-track/results/political-corruption-loco-diagnostic.md"
+      },
+      {
+        "title": "terrorist_attack n_pos=1 noise pattern",
+        "path": "docs/specs/internal/ops/ml-track/results/terrorist-attack-d5-regression-diagnostic.md"
+      },
+      {
+        "title": "Cross-recipe training-positive concentration audit",
+        "path": "docs/specs/internal/ops/ml-track/results/skewed-training-positive-audit.md"
+      },
+      {
+        "title": "Per-recipe AHI partitioning analysis",
+        "path": "docs/specs/internal/ops/ml-track/results/d5-per-recipe-anchor-ahi-analysis-2026-05-11.md"
+      }
+    ],
+    "cross_opus_corroboration": {
+      "civil_war_and_insurgency": {
+        "cascade_v0_1a_auc": 0.69,
+        "cascade_n": 89,
+        "ml_hybrid_loco_auc": 0.7686,
+        "ml_n_pos_loco": 7,
+        "interpretation": "Independent corroboration across two methodologies. Worth a joint cross-Opus Majles post-cascade-v0.2."
+      },
+      "foreign_intervention": {
+        "cascade_v0_1a_auc": 0.73,
+        "ml_hybrid_loco_auc": 0.633,
+        "ml_n_pos_loco": 6,
+        "interpretation": "Same family of corroborating signal."
+      },
+      "epidemic_and_pandemic_concern": {
+        "cascade_observation": "Mechanically unscorable at 95% base rate (cascade v0.1a per-recipe diagnostic).",
+        "ml_observations": "f_rule_anomaly + ADVISORY-ONLY + n_pos_LOCO=1",
+        "interpretation": "Three independent concerns; flagged for next ML Majles agenda (Kwame's lane: should the LOCKed STRONG status survive?)"
+      }
+    },
+    "majles_amendments_2026_05_11": [
+      {
+        "amendment_id": "KI-1",
+        "name": "F-H-3 wording amendment",
+        "vote": "4-0 approve",
+        "change": "n_pos_total < 3 → n_pos_loco == 1 (sole positive in LOCO partition)",
+        "behavior_change": "None (textual cleanup only)"
+      },
+      {
+        "amendment_id": "KI-2",
+        "name": "FALSIFY territorial_disputes under hybrid",
+        "vote": "Option C carried 3-1 (Priya dissent for Option B logged)",
+        "change": "Hybrid LOCKed count 14 → 13; territorial_disputes moved to falsified list"
+      },
+      {
+        "amendment_id": "KI-4",
+        "name": "Sign-convention mismatch resolved (cascade-canonical)",
+        "vote": "4-0 ratification of cascade-Opus recommendation",
+        "change": "ML-side catalog flipped 28 signed entries to match cascade-polarity ('+1' = protective factor)"
+      }
+    ],
+    "consumed_by_frontend": {
+      "bake_script_ticket": "qgi-aws-tf #643",
+      "consumer_path": "qgi-ml/scripts/bake_ml_recipes_for_frontend.py",
+      "emits": "qgi-frontend/data/ml-recipe-stack.json",
+      "schema_version": "1.0"
+    }
+  }
+}

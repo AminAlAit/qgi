@@ -1,0 +1,2316 @@
+{
+  "recipe_id": "fiscal_policy_change",
+  "tier": "directional",
+  "tier_provenance": "draft from qgi-recipe-fleet-post-pass Lambda 2026-05-28; NOT Majles-ratified",
+  "verdict": "HARD_FAIL",
+  "stats": {
+    "loco_auc": 0.6622591491012544,
+    "ci95_lo": 0.6090164129112489,
+    "ci95_hi": 0.7119368094831862,
+    "ci80_lo": 0.628007708834664,
+    "ci80_hi": 0.6945150415923285,
+    "n_bootstrap": 2000
+  },
+  "greedy_walk": {
+    "selected_indicators": [
+      "NV.IND.MANF.ZS",
+      "v2x_clphy",
+      "SP.DYN.TFRT.IN"
+    ],
+    "chosen_window": 10,
+    "final_global_auc": 0.6622591491012544,
+    "early_abort_floor_unreachable": false,
+    "history": [
+      {
+        "step": 1,
+        "candidate": "NV.IND.MANF.ZS",
+        "window": 12,
+        "auc": 0.6247449723112795,
+        "lift_over_previous": 0.12474497231127946,
+        "selected_after": [
+          "NV.IND.MANF.ZS"
+        ]
+      },
+      {
+        "step": 2,
+        "candidate": "v2x_clphy",
+        "window": 10,
+        "auc": 0.643395189447821,
+        "lift_over_previous": 0.01865021713654158,
+        "selected_after": [
+          "NV.IND.MANF.ZS",
+          "v2x_clphy"
+        ]
+      },
+      {
+        "step": 3,
+        "candidate": "SP.DYN.TFRT.IN",
+        "window": 10,
+        "auc": 0.6622591491012544,
+        "lift_over_previous": 0.01886395965343335,
+        "selected_after": [
+          "NV.IND.MANF.ZS",
+          "v2x_clphy",
+          "SP.DYN.TFRT.IN"
+        ]
+      },
+      {
+        "step": 4,
+        "candidate": "v2x_corr",
+        "window": 10,
+        "auc": 0.6635523082891503,
+        "lift_over_previous": 0.0012931591878959647,
+        "selected_after": [
+          "NV.IND.MANF.ZS",
+          "v2x_clphy",
+          "SP.DYN.TFRT.IN",
+          "v2x_corr"
+        ]
+      }
+    ]
+  },
+  "coverage_audit": {
+    "n_pos_total": 232,
+    "n_pos_survive": 148,
+    "n_neg_total": 696,
+    "n_neg_survive": 418,
+    "n_countries_survive": 86,
+    "pos_coverage": 0.6379310344827587,
+    "neg_coverage": 0.6005747126436781,
+    "coverage_pass": true
+  },
+  "per_cohort": {
+    "fragile-state": {
+      "loco_auc": 0.6059981684981685,
+      "ece": 0.13270800820121295,
+      "low_confidence": false
+    },
+    "mid-tier": {
+      "loco_auc": 0.6003787878787878,
+      "ece": 0.193660779677807,
+      "low_confidence": false
+    },
+    "stable-democracy": {
+      "loco_auc": 0.7043956043956044,
+      "ece": 0.09614839303558545,
+      "low_confidence": false
+    }
+  },
+  "architecture": "XGBoost",
+  "architecture_provenance": {
+    "default_per_n_pos_rule": "LR (<60) | XGBoost (>=60)",
+    "amendment_reference": "F-ML-N \u00a74.2 amendment 2026-05-22 (qgi-aws-tf#864): XGBoost binding for N_pos>=60; \u00a74.2 fold-variance MLP trigger removed entirely",
+    "amendment_artifact": "docs/specs/internal/decisions/artifacts/F-ML-N-\u00a74.2-amendment-2026-05-22.md",
+    "lock_gate_eval_ts": "2026-05-28T12:36:15.598154+00:00"
+  },
+  "borderline_lock": false,
+  "temporal_confound_auc": 0.518,
+  "stability_diagnostic": {
+    "fold_variance": 0.08222955236624427,
+    "fold_auc_mean": 0.6075488283234762,
+    "label": "MODERATE",
+    "per_country_loco_auc": {
+      "Algeria": 0.6666666666666666,
+      "Argentina": 0.4,
+      "Austria": 1.0,
+      "Bangladesh": 0.6666666666666666,
+      "Belarus": 0.0,
+      "Bhutan": 0.8571428571428571,
+      "Bolivia": 0.8571428571428571,
+      "Botswana": 0.9,
+      "Brazil": 0.4,
+      "Burkina Faso": 0.5714285714285714,
+      "Cameroon": 1.0,
+      "Chad": 0.5,
+      "Chile": 0.4444444444444444,
+      "Costa Rica": 0.75,
+      "Cuba": 0.0,
+      "Dominican Republic": 0.75,
+      "Egypt": 0.5333333333333333,
+      "Eritrea": 0.75,
+      "Estonia": 1.0,
+      "Ethiopia": 0.4,
+      "Finland": 1.0,
+      "France": 0.0,
+      "Germany": 0.5,
+      "Ghana": 1.0,
+      "Greece": 1.0,
+      "India": 0.5142857142857142,
+      "Indonesia": 0.5,
+      "Iran": 0.25,
+      "Iraq": 0.3333333333333333,
+      "Ireland": 1.0,
+      "Ivory Coast": 1.0,
+      "Jamaica": 0.875,
+      "Japan": 0.3333333333333333,
+      "Jordan": 0.9,
+      "Kazakhstan": 1.0,
+      "Kenya": 0.6363636363636364,
+      "Kyrgyzstan": 0.5714285714285714,
+      "Latvia": 0.875,
+      "Lithuania": 1.0,
+      "Mali": 0.6,
+      "Mauritius": 0.5,
+      "Mexico": 0.5,
+      "Mongolia": 0.3333333333333333,
+      "Morocco": 0.5,
+      "Namibia": 0.5,
+      "Netherlands": 0.375,
+      "New Zealand": 1.0,
+      "Nigeria": 0.4,
+      "Norway": 0.3333333333333333,
+      "Oman": 0.5,
+      "Pakistan": 0.5,
+      "Panama": 1.0,
+      "Portugal": 0.2,
+      "Rwanda": 0.2,
+      "Saudi Arabia": 0.375,
+      "Slovakia": 0.0,
+      "South Korea": 0.5,
+      "Spain": 1.0,
+      "Suriname": 1.0,
+      "Sweden": 0.375,
+      "Switzerland": 0.8,
+      "Timor-Leste": 0.6666666666666666,
+      "Tunisia": 0.7142857142857143,
+      "Turkiye": 1.0,
+      "United Arab Emirates": 0.5,
+      "United Kingdom": 0.5,
+      "United States": 0.2222222222222222,
+      "Uruguay": 0.5555555555555556,
+      "Venezuela": 0.6,
+      "Zambia": 0.4,
+      "Zimbabwe": 0.75
+    },
+    "thresholds": {
+      "LOW_upper": 0.04,
+      "MODERATE_upper": 0.1
+    },
+    "informational_only": true,
+    "amendment_reference": "F-ML-N \u00a74.2 amendment 2026-05-22 (qgi-aws-tf#864); see docs/specs/internal/decisions/artifacts/F-ML-N-\u00a74.2-amendment-2026-05-22.md"
+  },
+  "per_recipe_floor_provenance": {
+    "hybrid_baseline": 0.7686,
+    "lock_floor": 0.7,
+    "cohort_loco_floor": 0.64,
+    "note": "Marcus M8-1 path-(a)/(b)/(c) provenance: see F-ML-1 \u00a77 (civil_war_and_insurgency / cascade-inherited) or docs/specs/internal/ops/ml-track/per-recipe-pre-reg/ (other recipes; recipe_id with `_` -> `-` is the markdown filename stem)."
+  },
+  "n_positives": 232,
+  "n_negatives": 696,
+  "walked_at_utc": "2026-05-28T12:41:11.556069+00:00",
+  "elapsed_seconds": 2461.8717272281647,
+  "raw_summary_s3": "s3://qgi-data-lake-771606957899/ml-results/fiscal_policy_change/f-ml-1-poc-summary.json",
+  "score_distribution": {
+    "computed": true,
+    "histogram": [
+      {
+        "bin_lo": 0,
+        "bin_hi": 5,
+        "count": 8
+      },
+      {
+        "bin_lo": 5,
+        "bin_hi": 10,
+        "count": 8
+      },
+      {
+        "bin_lo": 10,
+        "bin_hi": 15,
+        "count": 9
+      },
+      {
+        "bin_lo": 15,
+        "bin_hi": 20,
+        "count": 8
+      },
+      {
+        "bin_lo": 20,
+        "bin_hi": 25,
+        "count": 8
+      },
+      {
+        "bin_lo": 25,
+        "bin_hi": 30,
+        "count": 9
+      },
+      {
+        "bin_lo": 30,
+        "bin_hi": 35,
+        "count": 8
+      },
+      {
+        "bin_lo": 35,
+        "bin_hi": 40,
+        "count": 9
+      },
+      {
+        "bin_lo": 40,
+        "bin_hi": 45,
+        "count": 8
+      },
+      {
+        "bin_lo": 45,
+        "bin_hi": 50,
+        "count": 8
+      },
+      {
+        "bin_lo": 50,
+        "bin_hi": 55,
+        "count": 9
+      },
+      {
+        "bin_lo": 55,
+        "bin_hi": 60,
+        "count": 8
+      },
+      {
+        "bin_lo": 60,
+        "bin_hi": 65,
+        "count": 9
+      },
+      {
+        "bin_lo": 65,
+        "bin_hi": 70,
+        "count": 8
+      },
+      {
+        "bin_lo": 70,
+        "bin_hi": 75,
+        "count": 8
+      },
+      {
+        "bin_lo": 75,
+        "bin_hi": 80,
+        "count": 9
+      },
+      {
+        "bin_lo": 80,
+        "bin_hi": 85,
+        "count": 8
+      },
+      {
+        "bin_lo": 85,
+        "bin_hi": 90,
+        "count": 9
+      },
+      {
+        "bin_lo": 90,
+        "bin_hi": 95,
+        "count": 8
+      },
+      {
+        "bin_lo": 95,
+        "bin_hi": 100,
+        "count": 9
+      }
+    ],
+    "median": 50.3,
+    "p90": 90.1,
+    "p99": 99.0,
+    "max": 100.0,
+    "n_countries_scored": 168,
+    "source": "countries/country-index.json + scores/fiscal_policy_change.scores.json"
+  },
+  "precedents_corpus": {
+    "events": [
+      {
+        "country_iso": null,
+        "country_name": "Afghanistan",
+        "year": 1957,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Afghanistan",
+        "year": 1990,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Afghanistan",
+        "year": 2000,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Afghanistan",
+        "year": 2004,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Algeria",
+        "year": 1959,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Algeria",
+        "year": 1966,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Algeria",
+        "year": 1994,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Algeria",
+        "year": 2005,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Algeria",
+        "year": 2015,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Algeria",
+        "year": 2017,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Argentina",
+        "year": 1950,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Argentina",
+        "year": 1952,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Argentina",
+        "year": 1958,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Argentina",
+        "year": 1959,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Argentina",
+        "year": 1979,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Argentina",
+        "year": 1985,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Argentina",
+        "year": 1993,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Argentina",
+        "year": 2000,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Argentina",
+        "year": 2005,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Argentina",
+        "year": 2016,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Argentina",
+        "year": 2021,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Australia",
+        "year": 2000,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Australia",
+        "year": 2011,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Austria",
+        "year": 2010,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Bangladesh",
+        "year": 2006,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Belarus",
+        "year": 2005,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Bhutan",
+        "year": 1961,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Bhutan",
+        "year": 2013,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Bolivia",
+        "year": 1985,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Botswana",
+        "year": 1975,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Botswana",
+        "year": 1993,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Brazil",
+        "year": 1951,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Brazil",
+        "year": 1952,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Brazil",
+        "year": 1956,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Brazil",
+        "year": 1959,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Brazil",
+        "year": 1965,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Brazil",
+        "year": 1990,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Brazil",
+        "year": 1994,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Brazil",
+        "year": 1999,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Brazil",
+        "year": 2000,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Brazil",
+        "year": 2008,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Brazil",
+        "year": 2010,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Brazil",
+        "year": 2016,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Brazil",
+        "year": 2017,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Brazil",
+        "year": 2019,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Brunei",
+        "year": 2009,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Burkina Faso",
+        "year": 1996,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Burkina Faso",
+        "year": 2000,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Cameroon",
+        "year": 2000,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Cameroon",
+        "year": 2006,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Chad",
+        "year": 2000,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Chile",
+        "year": 1975,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Chile",
+        "year": 2008,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Chile",
+        "year": 2014,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "China",
+        "year": 1978,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "China",
+        "year": 1980,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "China",
+        "year": 1990,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "China",
+        "year": 1992,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "China",
+        "year": 1994,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "China",
+        "year": 2008,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "China",
+        "year": 2010,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "China",
+        "year": 2013,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "China",
+        "year": 2015,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "China",
+        "year": 2021,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Costa Rica",
+        "year": 2018,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Costa Rica",
+        "year": 2021,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Cuba",
+        "year": 2002,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Democratic Republic Of Congo",
+        "year": 1973,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Democratic Republic Of Congo",
+        "year": 1974,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Dominican Republic",
+        "year": 1981,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Egypt",
+        "year": 1957,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Egypt",
+        "year": 1973,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Egypt",
+        "year": 1975,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Egypt",
+        "year": 1984,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Egypt",
+        "year": 1991,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Egypt",
+        "year": 2004,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Eritrea",
+        "year": 1956,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Eritrea",
+        "year": 2005,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Eritrea",
+        "year": 2014,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Estonia",
+        "year": 2015,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Ethiopia",
+        "year": 1952,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Ethiopia",
+        "year": 1961,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Ethiopia",
+        "year": 1993,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Ethiopia",
+        "year": 1999,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Ethiopia",
+        "year": 2014,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Finland",
+        "year": 2010,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Finland",
+        "year": 2015,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "France",
+        "year": 1982,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Germany",
+        "year": 1953,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Germany",
+        "year": 2003,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Ghana",
+        "year": 1966,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Ghana",
+        "year": 1972,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Greece",
+        "year": 2009,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Greece",
+        "year": 2012,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Hungary",
+        "year": 1995,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "India",
+        "year": 1950,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "India",
+        "year": 1951,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "India",
+        "year": 1956,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "India",
+        "year": 1961,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "India",
+        "year": 1966,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "India",
+        "year": 1993,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "India",
+        "year": 2014,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "India",
+        "year": 2016,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "India",
+        "year": 2017,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Indonesia",
+        "year": 1967,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Indonesia",
+        "year": 1983,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Indonesia",
+        "year": 1986,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Indonesia",
+        "year": 2014,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Iran",
+        "year": 2016,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Iraq",
+        "year": 1985,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Ireland",
+        "year": 1987,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Ireland",
+        "year": 2009,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Israel",
+        "year": 1952,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Israel",
+        "year": 1985,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Italy",
+        "year": 1984,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Ivory Coast",
+        "year": 1978,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Jamaica",
+        "year": 1977,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Jamaica",
+        "year": 1985,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Jamaica",
+        "year": 2012,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Jamaica",
+        "year": 2013,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Jamaica",
+        "year": 2018,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Jamaica",
+        "year": 2020,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Japan",
+        "year": 1960,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Japan",
+        "year": 1985,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Japan",
+        "year": 2012,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Jordan",
+        "year": 2015,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Jordan",
+        "year": 2016,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Kazakhstan",
+        "year": 1992,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Kazakhstan",
+        "year": 1993,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Kazakhstan",
+        "year": 2000,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Kenya",
+        "year": 1965,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Kenya",
+        "year": 1980,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Kuwait",
+        "year": 1966,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Kuwait",
+        "year": 1980,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Kyrgyzstan",
+        "year": 1993,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Latvia",
+        "year": 2008,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Latvia",
+        "year": 2009,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Lithuania",
+        "year": 2010,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Malawi",
+        "year": 1980,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Malawi",
+        "year": 2006,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Mali",
+        "year": 1967,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Mali",
+        "year": 1980,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Mali",
+        "year": 2000,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Mauritius",
+        "year": 1979,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Mauritius",
+        "year": 2007,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Mexico",
+        "year": 1954,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Mexico",
+        "year": 1965,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Mexico",
+        "year": 2002,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Mexico",
+        "year": 2013,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Mongolia",
+        "year": 1991,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Mongolia",
+        "year": 2006,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Mongolia",
+        "year": 2012,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Morocco",
+        "year": 1982,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Morocco",
+        "year": 1987,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Morocco",
+        "year": 2014,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Namibia",
+        "year": 2011,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Nepal",
+        "year": 1956,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Netherlands",
+        "year": 2018,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "New Zealand",
+        "year": 1991,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "New Zealand",
+        "year": 1994,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "New Zealand",
+        "year": 2018,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Nigeria",
+        "year": 1972,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Nigeria",
+        "year": 1974,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Nigeria",
+        "year": 1985,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Norway",
+        "year": 1990,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Norway",
+        "year": 1996,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Norway",
+        "year": 1999,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Norway",
+        "year": 2004,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Norway",
+        "year": 2006,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Norway",
+        "year": 2018,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Oman",
+        "year": 2010,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Oman",
+        "year": 2021,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Pakistan",
+        "year": 1967,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Panama",
+        "year": 2021,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Poland",
+        "year": 1950,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Poland",
+        "year": 1971,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Poland",
+        "year": 1990,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Portugal",
+        "year": 1977,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Portugal",
+        "year": 1983,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Portugal",
+        "year": 2009,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Romania",
+        "year": 1961,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Romania",
+        "year": 1972,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Russia",
+        "year": 1951,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Russia",
+        "year": 1959,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Russia",
+        "year": 1965,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Russia",
+        "year": 1985,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Russia",
+        "year": 1986,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Rwanda",
+        "year": 2000,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Saudi Arabia",
+        "year": 1970,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Saudi Arabia",
+        "year": 1976,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Saudi Arabia",
+        "year": 2016,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Saudi Arabia",
+        "year": 2019,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Slovakia",
+        "year": 2004,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Somalia",
+        "year": 2018,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "South Korea",
+        "year": 1993,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Spain",
+        "year": 2010,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Suriname",
+        "year": 2020,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Sweden",
+        "year": 1996,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Switzerland",
+        "year": 2014,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Syria",
+        "year": 1990,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Syria",
+        "year": 2005,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Tanzania",
+        "year": 1981,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Timor Leste",
+        "year": 2005,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Togo",
+        "year": 1961,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Trinidad And Tobago",
+        "year": 1988,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Tunisia",
+        "year": 1969,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Turkiye",
+        "year": 2001,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "United Arab Emirates",
+        "year": 1999,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "United Arab Emirates",
+        "year": 2010,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "United Arab Emirates",
+        "year": 2015,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "United Arab Emirates",
+        "year": 2018,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "United Kingdom",
+        "year": 1980,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "United Kingdom",
+        "year": 2010,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "United States",
+        "year": 1981,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "United States",
+        "year": 2009,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "United States",
+        "year": 2010,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "United States",
+        "year": 2017,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Uruguay",
+        "year": 1959,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Uruguay",
+        "year": 2002,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Venezuela",
+        "year": 1996,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Venezuela",
+        "year": 2001,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Venezuela",
+        "year": 2005,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Vietnam",
+        "year": 1987,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Yemen",
+        "year": 1992,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Zambia",
+        "year": 1987,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Zambia",
+        "year": 1989,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Zambia",
+        "year": 2005,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Zambia",
+        "year": 2012,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Zambia",
+        "year": 2019,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Zambia",
+        "year": 2021,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Zimbabwe",
+        "year": 1997,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      },
+      {
+        "country_iso": null,
+        "country_name": "Zimbabwe",
+        "year": 2001,
+        "label": null,
+        "brief_url": null,
+        "in_training_set": true
+      }
+    ],
+    "total_events_in_corpus": 232,
+    "source": "qgi-ml/data/shape_inputs_v2/{recipe}/positives.csv",
+    "notes": "country_iso/label/brief_url are FE editorial concerns."
+  },
+  "trajectory_alignment": {
+    "window_years": 10,
+    "indicators": [
+      {
+        "code": "v2x_clphy",
+        "name": null,
+        "provider": "VDEM",
+        "shape": {
+          "mean": [
+            -0.17343239064929272,
+            -0.2852844177055601,
+            -0.39255984183171627,
+            -0.39255984183171627,
+            -0.39255984183171627,
+            -0.8824577903883519,
+            -0.9654447782042921,
+            -0.761160929172482,
+            -0.18695767783982667,
+            -0.18695767783982667
+          ],
+          "p25": [
+            -0.5112617410904219,
+            -0.5112617410904219,
+            -0.7779128075268148,
+            -0.7779128075268148,
+            -0.7779128075268148,
+            -0.9185215049948836,
+            -1.1928477466065164,
+            -1.1928477466065164,
+            -1.1928477466065164,
+            -1.1928477466065164
+          ],
+          "p75": [
+            0.10607901920820222,
+            -0.03335567492599646,
+            -0.03335567492599646,
+            -0.03335567492599646,
+            -0.03335567492599646,
+            -0.7229071702675224,
+            -0.7229071702675224,
+            -0.03335567492599646,
+            -0.03335567492599646,
+            -0.03335567492599646
+          ]
+        },
+        "samples_used": 5,
+        "window_years": 10
+      },
+      {
+        "code": "SP.DYN.TFRT.IN",
+        "name": null,
+        "provider": "WB",
+        "shape": {
+          "mean": [
+            0.6522619031326801,
+            0.7988176964804019,
+            1.022314353270794,
+            1.107179414416636,
+            0.9843672049767234,
+            0.8439361433719398,
+            0.6280581698890747,
+            0.2295095306417482,
+            -0.25073739719206034,
+            -0.8012116464577174
+          ],
+          "p25": [
+            0.3042871193478396,
+            0.5702185424000685,
+            0.9421719682169738,
+            0.8129648999429417,
+            0.5907511769834591,
+            0.38010458457628377,
+            0.11961330568467732,
+            -0.31989544985459906,
+            -0.79329568440783,
+            -1.4609064814266544
+          ],
+          "p75": [
+            1.3021137376717147,
+            1.1736561803635168,
+            1.0718148316416478,
+            1.3473326817929447,
+            1.242165172130429,
+            1.1004225646919412,
+            1.0519189092025045,
+            0.8689013294653689,
+            0.6367531981111413,
+            0.34698505742984964
+          ]
+        },
+        "samples_used": 3,
+        "window_years": 10
+      }
+    ],
+    "source": "descriptive_emit.ranked_trajectory_signature.per_indicator_signatures (mean/p25/p75 aggregated across positive events)"
+  },
+  "indicator_sensitivity": {
+    "computed": true,
+    "leave_one_out": [
+      {
+        "code": "NV.IND.MANF.ZS",
+        "name": null,
+        "auc_with": 0.5967,
+        "auc_without": 0.5647,
+        "auc_drop": 0.0321
+      },
+      {
+        "code": "v2x_clphy",
+        "name": null,
+        "auc_with": 0.5967,
+        "auc_without": 0.5588,
+        "auc_drop": 0.038
+      },
+      {
+        "code": "SP.DYN.TFRT.IN",
+        "name": null,
+        "auc_with": 0.5967,
+        "auc_without": 0.5692,
+        "auc_drop": 0.0275
+      }
+    ],
+    "cv_auc_full": 0.5967,
+    "method": "5-fold stratified-CV AUC under feature-ablation: refit XGBoost dropping each selected indicator on the same positives+time-matched-negatives sample; report mean CV AUC vs. full-set CV AUC. NOT LOCO. In-sample full-fit overfits to AUC\u22481.0 on small recipes (banking 300 rows) so CV is required."
+  },
+  "reliability_multipass": {
+    "walks_completed": 1,
+    "v1_separation_pp": null,
+    "v4_oot_recall_pct": null,
+    "verdict": "HARD_FAIL"
+  },
+  "calibration": {
+    "computed": false,
+    "bins": null,
+    "ece": null,
+    "notes": "Beta calibration not yet fitted; verdict=HARD_FAIL signals pending."
+  },
+  "engine": "trajectory-engine-v1",
+  "contract_version": "v3-2026-05-28",
+  "per_country_scores_pointer": "scores/fiscal_policy_change.scores.json"
+}

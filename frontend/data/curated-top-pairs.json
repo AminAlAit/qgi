@@ -1,0 +1,169 @@
+{
+  "produced_at_utc": "2026-05-30T00:00:00Z",
+  "curated_by": "Selene Rao + Sard majles 5-seat consult",
+  "rubric": "interesting = shocking. Four vectors: (1) unexpected_nominee — country topping a list common knowledge would cross off; (2) alliance_fracture — country's brand contradicts the recipe match; (3) quiet_leader — country topping a list it never makes news for; (4) cross_domain_pattern — country lit on multiple recipes whose constellation suggests a multi-front story (sometimes internally contradictory).",
+  "baseline_beaten": "TOP_PAIRS_RAW (Iran/Yemen/Pakistan/Argentina obvious-suspects roster) — this list deliberately overlaps with that baseline in at most one or two slots.",
+  "pairs": [
+    {
+      "rank": 1,
+      "country": "Switzerland",
+      "recipe_id": "ethnic_and_communal_conflict",
+      "score": 93.7,
+      "vectors": ["alliance_fracture", "unexpected_nominee"],
+      "rationale": "The Alpine neutrality brand the world's analysts use as the dictionary entry for stability sits at rank twelve on a list otherwise crowded with Sri Lanka, Yemen, and Bosnia."
+    },
+    {
+      "rank": 2,
+      "country": "United Kingdom",
+      "recipe_id": "economic_nationalization",
+      "score": 98.3,
+      "vectors": ["alliance_fracture", "cross_domain_pattern"],
+      "rationale": "A G7 democracy sits fourth on a recipe whose neighbours are Mali, Sri Lanka, and Mauritania; Britain has been quietly buying back rail, steel, and energy assets for three years."
+    },
+    {
+      "rank": 3,
+      "country": "Saudi Arabia",
+      "recipe_id": "diplomatic_rupture",
+      "score": 100.0,
+      "vectors": ["alliance_fracture", "cross_domain_pattern"],
+      "rationale": "The Kingdom tops a recipe that catches countries about to break with a long-standing partner, even as it courts Beijing, Tehran, and Washington in parallel."
+    },
+    {
+      "rank": 4,
+      "country": "Brunei",
+      "recipe_id": "economic_liberalization",
+      "score": 99.1,
+      "vectors": ["unexpected_nominee", "alliance_fracture"],
+      "rationale": "The textbook closed petro-sultanate ranks second on a recipe associated with reformist post-Soviet republics; either the data sees a sultan's pivot, or it sees fiscal fear."
+    },
+    {
+      "rank": 5,
+      "country": "Mali",
+      "recipe_id": "economic_nationalization",
+      "score": 100.0,
+      "vectors": ["unexpected_nominee", "cross_domain_pattern"],
+      "rationale": "Bamako now controls gold mines that two years ago were Canadian and Australian; the recipe ranks the junta first globally, before any headline confirms the scale."
+    },
+    {
+      "rank": 6,
+      "country": "Trinidad and Tobago",
+      "recipe_id": "banking_and_financial_crisis",
+      "score": 98.7,
+      "vectors": ["quiet_leader", "unexpected_nominee"],
+      "rationale": "A Caribbean petro-economy nobody screens for banking risk lands third on the list — a small open dollar economy carrying the kind of credit gap that breaks suddenly."
+    },
+    {
+      "rank": 7,
+      "country": "Latvia",
+      "recipe_id": "economic_nationalization",
+      "score": 98.9,
+      "vectors": ["alliance_fracture", "unexpected_nominee"],
+      "rationale": "A eurozone member, NATO frontline, and EU Commission darling sits third on a recipe whose flavour is Caracas and Bamako; Russia-asset seizures and bank takeovers are the visible mechanism."
+    },
+    {
+      "rank": 8,
+      "country": "South Korea",
+      "recipe_id": "diplomatic_rupture",
+      "score": 96.7,
+      "vectors": ["alliance_fracture", "cross_domain_pattern"],
+      "rationale": "Asia's most committed US treaty ally ranks sixth on a recipe that catches countries about to sever a partner; the post-martial-law settling is still finding its level."
+    },
+    {
+      "rank": 9,
+      "country": "Liechtenstein",
+      "recipe_id": "bilateral_treaty",
+      "score": 97.5,
+      "vectors": ["quiet_leader", "unexpected_nominee"],
+      "rationale": "The principality fewer than forty thousand people call home ranks sixth on the world's bilateral-treaty list; tax-information pacts and the EEA frontier are doing the work."
+    },
+    {
+      "rank": 10,
+      "country": "Iceland",
+      "recipe_id": "diplomatic_rupture",
+      "score": 92.1,
+      "vectors": ["alliance_fracture", "unexpected_nominee"],
+      "rationale": "A 380-thousand-person Nordic democracy ranks thirteenth on a list that should be all autocracies; Arctic militarization, whaling sanctions, and the Chinese cable saga are the substrate."
+    },
+    {
+      "rank": 11,
+      "country": "Canada",
+      "recipe_id": "economic_nationalization",
+      "score": 96.0,
+      "vectors": ["alliance_fracture"],
+      "rationale": "A G7 country sits seventh on a recipe associated with the global south; the Trans Mountain pipeline buyout was the trailer, not the film."
+    },
+    {
+      "rank": 12,
+      "country": "Lesotho",
+      "recipe_id": "government_formation",
+      "score": 98.3,
+      "vectors": ["quiet_leader"],
+      "rationale": "A 2-million-person Southern African kingdom ranks fourth on a list that no Eurasia Group brief mentions all year — twelve coalition collapses since 1993 made it a slow-motion case study."
+    },
+    {
+      "rank": 13,
+      "country": "Tanzania",
+      "recipe_id": "bilateral_treaty",
+      "score": 100.0,
+      "vectors": ["quiet_leader"],
+      "rationale": "The East African anchor tops a list led by Ethiopia and Indonesia; LNG deals, Chinese rail concessions, and the new investment treaty round make the signal real."
+    },
+    {
+      "rank": 14,
+      "country": "Eswatini",
+      "recipe_id": "banking_and_financial_crisis",
+      "score": 96.2,
+      "vectors": ["quiet_leader", "unexpected_nominee"],
+      "rationale": "Africa's last absolute monarchy ranks seventh on a banking-stress list — a rand-pegged microeconomy whose fiscal arithmetic looks more like Lebanon's than its neighbours'."
+    },
+    {
+      "rank": 15,
+      "country": "Japan",
+      "recipe_id": "economic_nationalization",
+      "score": 86.3,
+      "vectors": ["alliance_fracture"],
+      "rationale": "A G7 country lands inside the top twenty-five on a recipe associated with Latin American populism; Toshiba's take-private and the chip-fab subsidies are the visible bridge."
+    },
+    {
+      "rank": 16,
+      "country": "China",
+      "recipe_id": "banking_and_financial_crisis",
+      "score": 93.6,
+      "vectors": ["cross_domain_pattern"],
+      "rationale": "Beijing sits eleventh on a Western-data-trained list normally led by African and Caribbean candidates; the property-developer collapse is doing exactly what the recipe captures."
+    },
+    {
+      "rank": 17,
+      "country": "Bhutan",
+      "recipe_id": "government_formation",
+      "score": 97.7,
+      "vectors": ["quiet_leader"],
+      "rationale": "The Himalayan Buddhist kingdom ranks fifth on a list nobody scans for it; the gradual monarchy-to-parliament handover keeps producing the exact movement shape the recipe wants."
+    },
+    {
+      "rank": 18,
+      "country": "Sri Lanka",
+      "recipe_id": "ethnic_and_communal_conflict",
+      "score": 100.0,
+      "vectors": ["cross_domain_pattern"],
+      "rationale": "Colombo tops this list and ranks second on nationalization; the post-2022 collapse left both the Tamil question and the IMF programme unresolved, and the data sees the compound."
+    },
+    {
+      "rank": 19,
+      "country": "Mexico",
+      "recipe_id": "terrorist_attack",
+      "score": 97.7,
+      "vectors": ["unexpected_nominee"],
+      "rationale": "We file what happens in Sinaloa under cartel violence; the recipe says the indicator shape matches what produced bombings in Iraq and Mozambique."
+    },
+    {
+      "rank": 20,
+      "country": "Norway",
+      "recipe_id": "fiscal_policy_change",
+      "score": 93.5,
+      "vectors": ["alliance_fracture", "unexpected_nominee"],
+      "rationale": "The sovereign-wealth-fund anchor of Western fiscal discipline ranks twelfth on a recipe that catches countries about to rewrite who gets taxed and what gets spent."
+    }
+  ],
+  "gaps": []
+}

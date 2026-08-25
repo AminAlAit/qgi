@@ -1,0 +1,136 @@
+{
+  "version": "1.0",
+  "generated": "2026-04-16",
+  "source": "docs/specs/methodology/event-taxonomy-layered-design.md (APPROVED 2026-04-16)",
+  "summary": {
+    "layer1_count": 8,
+    "layer2_count": 52,
+    "layer3_count": 71
+  },
+  "layer1": [
+    {
+      "id": "A",
+      "label": "Political Power & Regime",
+      "display_label": "Political Power",
+      "definition": "Events that alter who holds power, how that power is structured, and the legitimacy of the state's governing authority.",
+      "color_hint": "#7B5EE6",
+      "layer2": [
+        { "id": "A1", "label": "Electoral Politics", "definition": "Competitive elections, voting processes, party formation, disputed results", "layer3": ["elections_and_voting"] },
+        { "id": "A2", "label": "Government Formation", "definition": "Cabinet formation, leadership succession, institutional appointments", "layer3": ["government_formation"] },
+        { "id": "A3", "label": "Constitutional Change", "definition": "Constitutional rewrites, referenda, devolution, federalism reforms", "layer3": ["constitutional_change", "decentralization_and_federalism"] },
+        { "id": "A4", "label": "Democratic Transition", "definition": "Transitions to/from democracy, post-authoritarian openings, decolonization", "layer3": ["democratic_transition"] },
+        { "id": "A5", "label": "Executive Power Consolidation", "definition": "Leaders extending personal authority, term limit removals, judiciary capture", "layer3": ["executive_power_consolidation"] },
+        { "id": "A6", "label": "Military Coup", "definition": "Coups, junta rule, military governments, coup attempts", "layer3": ["military_coup"] },
+        { "id": "A7", "label": "Transitional Justice", "definition": "Truth commissions, war crimes trials, reparations, post-atrocity accountability", "layer3": ["transitional_justice"] },
+        { "id": "A8", "label": "Peacekeeping & Peace Process", "definition": "Formal peace negotiations, disarmament processes, UN peace missions", "layer3": ["peacekeeping_and_peace_process"] }
+      ]
+    },
+    {
+      "id": "B",
+      "label": "Conflict & Political Violence",
+      "display_label": "Conflict & Violence",
+      "definition": "Events involving organized armed force \u2014 from interstate wars and insurgencies to terrorism and state-sanctioned political killing.",
+      "color_hint": "#E64545",
+      "layer2": [
+        { "id": "B1", "label": "Interstate War", "definition": "Declared or undeclared armed conflict between sovereign states", "layer3": ["interstate_war"] },
+        { "id": "B2", "label": "Civil War & Insurgency", "definition": "Internal armed conflict, guerrilla warfare, rebel movements", "layer3": ["civil_war_and_insurgency"] },
+        { "id": "B3", "label": "Terrorism & Extremism", "definition": "Non-state political violence targeting civilians, extremist attacks", "layer3": ["terrorist_attack"] },
+        { "id": "B4", "label": "Foreign Military Intervention", "definition": "External states deploying military force into another country's territory", "layer3": ["foreign_intervention"] },
+        { "id": "B5", "label": "Ethnic & Communal Violence", "definition": "Intercommunal violence, sectarian conflict, gang warfare, organized crime violence", "layer3": ["ethnic_and_communal_conflict"] },
+        { "id": "B6", "label": "Political Violence", "definition": "Assassinations, death squads, targeted killings of political figures", "layer3": ["political_violence"] }
+      ]
+    },
+    {
+      "id": "C",
+      "label": "State Authority & Governance",
+      "display_label": "Governance & Rights",
+      "definition": "Events concerning how the state exercises authority over its citizens \u2014 including repression, corruption, surveillance, media control, and failures of rule of law.",
+      "color_hint": "#E68F29",
+      "layer2": [
+        { "id": "C1", "label": "Political Repression", "definition": "State suppression of opposition, political prisoners, censorship, forced disappearances", "layer3": ["political_repression"] },
+        { "id": "C2", "label": "Political Corruption", "definition": "Bribery, kleptocracy, state capture, cartel infiltration of government", "layer3": ["political_corruption"] },
+        { "id": "C3", "label": "Human Rights Violations", "definition": "Systemic abuses \u2014 torture, extrajudicial killings, mass atrocities", "layer3": ["human_rights_violation"] },
+        { "id": "C4", "label": "Human Rights Reform", "definition": "Landmark rights expansions \u2014 new constitutional protections, minority rights, gender rights", "layer3": ["human_rights_reform"] },
+        { "id": "C5", "label": "Military Policy & Security Reform", "definition": "Defense doctrine changes, military professionalization, nuclear programs, security sector reform", "layer3": ["military_policy_and_reform"] }
+      ]
+    },
+    {
+      "id": "D",
+      "label": "Economic & Financial Stress",
+      "display_label": "Economic Stress",
+      "definition": "Events with primary economic causation or consequence \u2014 crises, reforms, trade shifts, and financial shocks that reshape a country's material conditions and fiscal position.",
+      "color_hint": "#3FA9F5",
+      "layer2": [
+        { "id": "D1", "label": "Currency & Banking Crisis", "definition": "Currency devaluations, banking system failures, capital flight", "layer3": ["currency_crisis", "banking_and_financial_crisis"] },
+        { "id": "D2", "label": "Economic Recession & Austerity", "definition": "GDP contractions, sovereign debt crises, IMF programs, austerity packages", "layer3": ["economic_recession"] },
+        { "id": "D3", "label": "Fiscal & Monetary Policy", "definition": "Budget policy changes, central bank decisions, tax reforms, debt restructuring", "layer3": ["fiscal_policy_change", "monetary_policy_change"] },
+        { "id": "D4", "label": "Economic Liberalization", "definition": "Market opening, privatization, Washington Consensus-style reforms", "layer3": ["economic_liberalization"] },
+        { "id": "D5", "label": "Economic Nationalization", "definition": "State takeovers of industry, resource nationalism, expropriation", "layer3": ["economic_nationalization"] },
+        { "id": "D6", "label": "Economic Recovery & Growth", "definition": "Post-crisis rebounds, growth milestones, economic miracles", "layer3": ["economic_recovery", "economic_growth_milestone"] },
+        { "id": "D7", "label": "Trade & Investment", "definition": "Trade agreements, trade disputes, FDI, industrial policy, sanctions", "layer3": ["trade_agreement", "trade_dispute", "foreign_direct_investment", "industrial_policy", "sanctions_and_arms_embargo"] },
+        { "id": "D8", "label": "Foreign Aid & Development", "definition": "Official development assistance, multilateral lending, development programs", "layer3": ["foreign_aid_and_development"] }
+      ]
+    },
+    {
+      "id": "E",
+      "label": "Social Mobilization & Civil Society",
+      "display_label": "Social Mobilization",
+      "definition": "Events where citizens organize collectively \u2014 through protest, labor action, social movements, religious movements, or identity politics \u2014 to contest power or demand change.",
+      "color_hint": "#3FBF8F",
+      "layer2": [
+        { "id": "E1", "label": "Mass Protest", "definition": "Large-scale street demonstrations, civic strikes, popular uprisings", "layer3": ["mass_protest"] },
+        { "id": "E2", "label": "Labor Action", "definition": "Strikes, trade union activity, labor rights movements", "layer3": ["labor_action"] },
+        { "id": "E3", "label": "Social Policy Reform", "definition": "Changes to welfare systems, education, housing, healthcare policy", "layer3": ["social_policy_reform", "public_health_reform"] },
+        { "id": "E4", "label": "Poverty & Inequality", "definition": "Documented poverty crises, inequality deteriorations, social exclusion events", "layer3": ["poverty_and_inequality_crisis"] },
+        { "id": "E5", "label": "Religious & Social Movements", "definition": "Religious revivals, liberation theology, faith-based political organizing", "layer3": ["religious_and_social_movement"] },
+        { "id": "E6", "label": "Migration & Refugees", "definition": "Forced displacement, refugee crises, emigration waves, diaspora formation", "layer3": ["migration_and_refugees"] }
+      ]
+    },
+    {
+      "id": "F",
+      "label": "Diplomatic & Geopolitical Relations",
+      "display_label": "Diplomacy & Geopolitics",
+      "definition": "Events governing how countries relate to each other and to multilateral institutions \u2014 treaties, ruptures, integration, sanctions, and territorial disputes.",
+      "color_hint": "#9F7AEA",
+      "layer2": [
+        { "id": "F1", "label": "Bilateral Treaties", "definition": "State-to-state agreements \u2014 diplomatic normalization, security pacts, bilateral cooperation", "layer3": ["bilateral_treaty"] },
+        { "id": "F2", "label": "Multilateral Agreements", "definition": "UN resolutions, international conventions, multilateral security arrangements", "layer3": ["multilateral_agreement"] },
+        { "id": "F3", "label": "Diplomatic Rupture", "definition": "Embassy closures, expulsions, severing of diplomatic relations \u2014 includes sanctions (dual-labeled with D7)", "layer3": ["diplomatic_rupture", "sanctions_and_arms_embargo"] },
+        { "id": "F4", "label": "Territorial Disputes", "definition": "Border conflicts, sovereignty contests, maritime claims", "layer3": ["territorial_disputes"] },
+        { "id": "F5", "label": "Regional Integration", "definition": "Accession to regional blocs, common market membership, supra-national governance", "layer3": ["regional_integration"] }
+      ]
+    },
+    {
+      "id": "G",
+      "label": "Humanitarian & Environmental Crisis",
+      "display_label": "Humanitarian Crisis",
+      "definition": "Events where large populations face acute threats to survival \u2014 from natural disasters to famines to epidemics.",
+      "color_hint": "#E94989",
+      "layer2": [
+        { "id": "G1", "label": "Natural Disaster", "definition": "Earthquakes, floods, cyclones, volcanic eruptions, wildfires \u2014 acute physical events", "layer3": ["earthquake", "flood_and_cyclone", "volcanic_eruption", "natural_disaster"] },
+        { "id": "G2", "label": "Drought & Famine", "definition": "Prolonged water scarcity, crop failure, mass hunger, food insecurity crises", "layer3": ["drought_and_famine"] },
+        { "id": "G3", "label": "Epidemic & Pandemic", "definition": "Infectious disease outbreaks and public health crises with mass casualties", "layer3": ["epidemic_and_pandemic"] },
+        { "id": "G4", "label": "Humanitarian Crisis", "definition": "Multi-cause human suffering emergencies \u2014 post-conflict, displacement, siege", "layer3": ["humanitarian_crisis"] },
+        { "id": "G5", "label": "Water & Resource Crisis", "definition": "Water system failures, scarcity conflicts, access disputes not driven by conflict actors", "layer3": ["water_crisis"] }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "Structural & Development Context",
+      "display_label": "Structural Trends",
+      "definition": "Events that shape a country's long-run structural trajectory \u2014 energy systems, environmental policy, digital transformation, resource governance, infrastructure.",
+      "color_hint": "#7A8FA0",
+      "layer2": [
+        { "id": "H1", "label": "Energy Policy & Resources", "definition": "Hydrocarbon policy, energy transitions, nationalization of energy, oil discoveries", "layer3": ["energy_policy", "oil_and_gas", "renewable_energy"] },
+        { "id": "H2", "label": "Environmental Policy", "definition": "Deforestation governance, conservation policy, environmental agreements", "layer3": ["environmental_policy"] },
+        { "id": "H3", "label": "Climate Agreements", "definition": "International climate commitments, NDCs, multilateral climate action", "layer3": ["climate_agreement"] },
+        { "id": "H4", "label": "Resource Conflict", "definition": "Mining, water, land conflicts driven by resource extraction or scarcity", "layer3": ["resource_conflict"] },
+        { "id": "H5", "label": "Infrastructure & Urban Development", "definition": "Major infrastructure projects, urban development waves, transport networks", "layer3": ["infrastructure_project", "urban_development"] },
+        { "id": "H6", "label": "Education & Knowledge", "definition": "Education reforms, research milestones, intellectual movements", "layer3": ["education_reform", "education_and_research"] },
+        { "id": "H7", "label": "Digital & Technology", "definition": "Cyber policy, technology breakthroughs, cyberattacks, digital governance", "layer3": ["digital_policy", "technology_breakthrough", "cyberattack"] },
+        { "id": "H8", "label": "Cultural & Heritage", "definition": "National identity events, cultural milestones, sports, heritage", "layer3": ["cultural_and_heritage", "sport_and_international_event"] },
+        { "id": "H9", "label": "Agricultural Policy", "definition": "Agrarian reform, land redistribution, agricultural development policy", "layer3": ["agricultural_policy"] }
+      ]
+    }
+  ]
+}
