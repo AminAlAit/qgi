@@ -1,0 +1,52 @@
+{
+  "total_events": 10847,
+  "events_with_source": 9219,
+  "unique_urls": 7378,
+  "unique_domains": 785,
+  "slices": [
+    {
+      "domain": "wikipedia.org",
+      "count": 7103
+    },
+    {
+      "domain": "hrw.org",
+      "count": 123
+    },
+    {
+      "domain": "aljazeera.com",
+      "count": 94
+    },
+    {
+      "domain": "britannica.com",
+      "count": 75
+    },
+    {
+      "domain": "imf.org",
+      "count": 56
+    },
+    {
+      "domain": "un.org",
+      "count": 55
+    },
+    {
+      "domain": "europa.eu",
+      "count": 43
+    },
+    {
+      "domain": "worldbank.org",
+      "count": 33
+    },
+    {
+      "domain": "reliefweb.int",
+      "count": 32
+    },
+    {
+      "domain": "sahistory.org.za",
+      "count": 25
+    },
+    {
+      "domain": "Other",
+      "count": 1580
+    }
+  ]
+}
