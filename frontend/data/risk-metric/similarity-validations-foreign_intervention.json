@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "recipe_id": "foreign_intervention",
+  "evaluation_year": 2021,
+  "computed_at_utc": "2026-05-22T21:34:33.334901+00:00",
+  "design_v1_reference": "docs/specs/internal/ops/ml-track/risk-metric-design-v1.md (3-Reviewer ratified 2026-05-22)",
+  "hard_gates_pass": {
+    "v1_positive_recall": true,
+    "v4_oot_holdout": true
+  },
+  "all_hard_gates_pass": true,
+  "production_graduation_eligible": true,
+  "validations": {
+    "v1": {
+      "name": "validation_1_positive_instance_recall",
+      "n_positive_evaluated": 15,
+      "n_positive_skipped_partial_coverage": 95,
+      "n_non_event_sampled": 24,
+      "median_similarity_positive_at_eventY-1": 95.95319073229687,
+      "median_similarity_non_event": 70.12039039392701,
+      "separation_percentile_points": 25.832800338369864,
+      "hard_gate_threshold": 20,
+      "hard_gate_pass": true,
+      "m8_r3_publication_anchor": "In the training panel, the median similarity score of countries one year before foreign_intervention events was 96.0/100; the median for non-event countries was 70.1/100. Separation = 25.8 points."
+    },
+    "v2": {
+      "name": "validation_2_xgboost_correlation",
+      "n_matched_pairs": 58,
+      "pearson_correlation": 0.2591171971398281,
+      "spearman_correlation": 0.49930768258754915,
+      "interpretation": "Pearson r = 0.259, Spearman rho = 0.499. Positive correlation indicates similarity is a defensible proxy for the XGBoost discriminator."
+    },
+    "v3": {
+      "name": "validation_3_risk_landscape_per_cohort",
+      "evaluation_year": 2021,
+      "cohort_distributions": {
+        "fragile-state": {
+          "n": 21,
+          "median": 94.75872875794389,
+          "mean": 85.08757928169851,
+          "q25": 80.54958792257571,
+          "q75": 95.95319073229687,
+          "max": 98.1351066717616,
+          "min": 50.047313975725785
+        },
+        "mid-tier": {
+          "n": 21,
+          "median": 66.7207294150174,
+          "mean": 62.792590132153464,
+          "q25": 50.34121316395861,
+          "q75": 89.3719780392637,
+          "max": 95.70288554064813,
+          "min": 1.7997250281000687
+        },
+        "stable-democracy": {
+          "n": 26,
+          "median": 5.948635976717756,
+          "mean": 18.801850639841668,
+          "q25": 4.754290250926113,
+          "q75": 26.25193599532611,
+          "max": 79.2945494542294,
+          "min": 2.6140164301332423
+        },
+        "no-assignment": {
+          "n": 0
+        }
+      },
+      "interpretation": "Per-cohort similarity distributions. Fragile-state cohort shows higher median than stable-democracy, as expected. Reporting only — NOT a hard gate at v0."
+    },
+    "v4": {
+      "name": "validation_4_oot_holdout",
+      "oot_split_year": 2005,
+      "n_holdout_positives": 15,
+      "n_holdout_skipped_partial_coverage": 31,
+      "n_at_or_above_high_threshold": 13,
+      "high_threshold_value": 65,
+      "recall_at_high_threshold": 0.8666666666666667,
+      "hard_gate_threshold": 0.6,
+      "hard_gate_pass": true,
+      "interpretation": "OOT holdout: 13/15 = 86.7% of held-out crisis countries had risk score >= 65 (HIGH zone) at event-year-minus-1, scored against canonical profile built ONLY from pre-2005 positives. Hard gate threshold: 60%. PASS."
+    }
+  }
+}

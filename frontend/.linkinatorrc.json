@@ -1,0 +1,28 @@
+{
+  "$comment": "linkinator config (#441 Part B). Crawls the local dev server and verifies every internal link + a curated set of important external links resolves to 2xx. Skips known-flaky hosts so CI doesn't flake on third-party uptime.",
+  "concurrency": 12,
+  "recurse": true,
+  "verbosity": "error",
+  "skip": [
+    "https://fonts\\.gstatic\\.com",
+    "https://www\\.google-analytics\\.com",
+    "https://va\\.vercel-scripts\\.com",
+    "https://vitals\\.vercel-insights\\.com",
+    "^mailto:",
+    "^tel:",
+    "linkedin\\.com",
+    "twitter\\.com",
+    "x\\.com",
+    "github\\.com/AminAlAit/.*/issues/[0-9]+#",
+    "^http://localhost:[0-9]+/api/auth/",
+    "^https://qgintelligence\\.com",
+    "^https://qgi-frontend\\.vercel\\.app",
+    "unhcr\\.org",
+    "fundforpeace\\.org",
+    "v-dem\\.net"
+  ],
+  "timeout": 10000,
+  "retry": true,
+  "retryErrors": true,
+  "retryErrorsCount": 2
+}

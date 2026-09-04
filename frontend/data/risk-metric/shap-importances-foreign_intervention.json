@@ -1,0 +1,37 @@
+{
+  "recipe_id": "foreign_intervention",
+  "computed_at_utc": "2026-05-22T19:29:25.893401+00:00",
+  "walk_summary_reference": "F-ML-1 PoC walk, 2026-05-21",
+  "seed_used": 12345,
+  "chosen_window_from_walk": 18,
+  "binding_rider_provenance": "Miriam M14-R5 BINDING (risk-metric design v1, 3-Reviewer ratified 2026-05-22)",
+  "selected_indicators": [
+    "v2elintmon",
+    "RQ.EST",
+    "v2pepwrgen",
+    "v2stfisccap"
+  ],
+  "shap_importance_raw": {
+    "v2elintmon": 0.2641852796077728,
+    "RQ.EST": 2.83207631111145,
+    "v2pepwrgen": 1.511217474937439,
+    "v2stfisccap": 0.9323744177818298
+  },
+  "shap_importance_normalized": {
+    "v2elintmon": 0.04768813478507333,
+    "RQ.EST": 0.5112186305247967,
+    "v2pepwrgen": 0.272790152204432,
+    "v2stfisccap": 0.168303082485698
+  },
+  "shap_direction_signs": {
+    "v2elintmon": -1,
+    "RQ.EST": -1,
+    "v2pepwrgen": -1,
+    "v2stfisccap": -1
+  },
+  "n_samples_for_shap": 58,
+  "n_positives_in_sample": 15,
+  "n_negatives_in_sample": 43,
+  "shap_method": "TreeExplainer (exact, polynomial-time for XGBoost trees)",
+  "model_refit": "full-data refit; mirrors F-ML-1 driver descriptive-emit refit pattern"
+}

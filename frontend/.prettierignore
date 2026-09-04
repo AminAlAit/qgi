@@ -1,0 +1,16 @@
+# Generated / baked data — Prettier noise on 2MB+ JSONs obscures
+# meaningful review diffs. These files are produced by qgi-ml scripts
+# and should retain their generator's formatting.
+data/**/*.json
+data/**/*.jsonl
+
+# Next.js build output
+.next/
+out/
+node_modules/
+
+# Public assets
+public/*.svg
+public/*.png
+public/*.jpg
+public/*.ico
