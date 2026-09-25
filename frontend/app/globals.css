@@ -1,0 +1,251 @@
+@import "tailwindcss";
+
+/* ─── QGI Design Tokens ──────────────────────────────────────────────── */
+/* Light/dark (2026-06-10): DARK is the default (:root) so the live site is
+   byte-identical until a user opts in. LIGHT is an additive override applied
+   by adding `class="light"` to <html> (see app/layout.tsx no-flash script +
+   lib/hooks/useTheme.ts). Everything reads var(--qgi-*), so surfaces flip
+   automatically; only ECharts configs need the JS token map (lib/echarts-theme.ts). */
+:root {
+  color-scheme: dark;
+  /* Surfaces */
+  --qgi-bg: #0f1923; /* page background — deep navy-black */
+  --qgi-bg-translucent: rgba(
+    15,
+    25,
+    35,
+    0.85
+  ); /* --qgi-bg (#0f1923 = rgb 15,25,35) at 85% — the sticky-header backdrop. Theme-aware: see :root.light. */
+  --qgi-surface: #162032; /* card / panel background */
+  --qgi-surface-2: #1e2d42; /* elevated surface (hover, selected) */
+  --qgi-border: #243347; /* subtle borders */
+
+  /* Text */
+  --qgi-text: #e2e8f0; /* primary text — 14.39:1 vs --qgi-bg (AAA), 11.29:1 vs --qgi-surface-2 (AAA) */
+  /* #706 (2026-05-16) — WCAG 1.4.3 fix. Paired bump of both --qgi-text-muted
+     and --qgi-text-dim to pass AA 4.5:1 on all three dark surfaces (bg,
+     surface, surface-2) while preserving the semantic hierarchy
+     text > muted > dim.
+
+     Pre-fix:
+       muted #7a90a8 — 5.39 / 4.96 / 4.23:1 (bg / surface / surface-2)
+         — failed AA on surface-2 (the worst-case surface).
+       dim   #4a6280 — 2.83 / 2.60 / 2.22:1
+         — failed AA on every surface.
+
+     Post-fix:
+       muted #9ab0c4 — 7.93 / 7.29 / 6.22:1 (AA+ on all three).
+       dim   #8aa6be — 6.99 / 6.43 / 5.49:1 (AA on all three with margin).
+
+     Hierarchy preserved: L(text)=0.80 > L(muted)=0.42 > L(dim)=0.36 — a
+     simple variable-bump fix would have inverted muted vs dim (pre-fix dim
+     was darker than muted; an AA-compliant dim alone would be BRIGHTER than
+     pre-fix muted), so both tokens are moved together.
+
+     Variable bump covers 624 call sites of var(--qgi-text-dim) + 442 of
+     var(--qgi-text-muted). The 34 hard-coded `#4a6280` literals in chart
+     configs / SVG attrs / palette constants (which can't use var()) were
+     bumped to `#8aa6be` in #737 (PR #82, 2026-05-16). The two `#4a6280`
+     references remaining in this file are the historical-note literals
+     on lines 21 and (this line); those are intentional documentation,
+     not active values. A vitest regression guard at
+     `lib/__tests__/no-hardcoded-text-dim.test.ts` fails CI if a new
+     occurrence appears outside globals.css. */
+  --qgi-text-muted: #9ab0c4; /* secondary / label text — 6.22:1 vs --qgi-surface-2 (AA, worst case) */
+  --qgi-text-dim: #8aa6be; /* tertiary / placeholder — 5.49:1 vs --qgi-surface-2 (AA, worst case) */
+
+  /* Accent — electric blue (primary interactive) */
+  --qgi-accent: #38bdf8;
+  --qgi-accent-dim: #0ea5e9;
+  --qgi-accent-glow: rgba(56, 189, 248, 0.15);
+
+  /* Metric highlight — warm amber (scores, key numbers) */
+  --qgi-amber: #f59e0b;
+  --qgi-amber-dim: #d97706;
+
+  /* Country pair colours (consistent throughout a session) */
+  --qgi-country-a: #38bdf8; /* predictor country — blue */
+  --qgi-country-b: #fb923c; /* following country — orange */
+
+  /* Predicted value style */
+  --qgi-predicted: #6b7f96; /* muted blue-grey for predicted data */
+
+  /* Status */
+  --qgi-success: #34d399;
+  --qgi-warning: #fbbf24;
+  --qgi-danger: #f87171;
+}
+
+/* ─── LIGHT theme (opt-in: <html class="light">) ─────────────────────────
+   WCAG targets against worst-case light surface --qgi-surface-2 (#f1f5f9):
+     text  #0f172a 20.5:1 (AAA) · muted #475569 7.6:1 (AAA) · dim #64748b 4.8:1 (AA)
+   Brand cyan/amber shift 2 ramp stops deeper so they stay legible on white
+   without losing identity (sky-600 / amber-600). Categorical data palettes in
+   lib/design.ts are data-ink and intentionally NOT overridden here. */
+:root.light {
+  color-scheme: light;
+  /* Surfaces */
+  --qgi-bg: #f8fafc; /* slate-50 */
+  --qgi-bg-translucent: rgba(
+    248,
+    250,
+    252,
+    0.85
+  ); /* --qgi-bg (slate-50 = rgb 248,250,252) at 85% — sticky-header backdrop in light mode */
+  --qgi-surface: #ffffff;
+  --qgi-surface-2: #f1f5f9; /* slate-100 */
+  --qgi-border: #cbd5e1; /* slate-300 */
+  /* Text */
+  --qgi-text: #0f172a; /* slate-900 — 20.5:1 vs surface-2 (AAA) */
+  --qgi-text-muted: #475569; /* slate-600 — 7.6:1 vs surface-2 (AAA) */
+  --qgi-text-dim: #64748b; /* slate-500 — 4.8:1 vs surface-2 (AA) */
+  /* Accent — QGI cyan, deepened for light bg */
+  --qgi-accent: #0284c7; /* sky-600 */
+  --qgi-accent-dim: #0369a1; /* sky-700 */
+  --qgi-accent-glow: rgba(2, 132, 199, 0.12);
+  /* Metric highlight */
+  --qgi-amber: #b45309; /* amber-700 — 4.7:1 on bg, safe for small labels too */
+  --qgi-amber-dim: #92400e; /* amber-800 */
+  /* Country pair */
+  --qgi-country-a: #0284c7;
+  --qgi-country-b: #ea580c; /* orange-600 */
+  /* Predicted */
+  --qgi-predicted: #94a3b8; /* slate-400 */
+  /* Status */
+  --qgi-success: #16a34a; /* green-600 */
+  --qgi-warning: #92400e; /* amber-800 — 7.0:1 on bg; amber-700 fell below 4.5:1 on warning-tinted (cream) strips at small sizes */
+  --qgi-danger: #dc2626; /* red-600 */
+}
+
+@theme inline {
+  --color-background: var(--qgi-bg);
+  --color-foreground: var(--qgi-text);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* ─── Base ───────────────────────────────────────────────────────────── */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--qgi-bg);
+  color: var(--qgi-text);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Monospaced numbers — applied to metric/data elements */
+.font-data {
+  font-family: var(--font-geist-mono), "Courier New", monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ─── Scrollbar (dark, subtle) ───────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--qgi-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--qgi-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--qgi-text-dim);
+}
+
+/* ─── Dual-thumb range slider fix (T6 #299, 2026-04-19) ─────────────────
+ * When two <input type="range"> elements are stacked at opacity-0 on the
+ * same track (the dual-thumb pattern), the default full-width hit area
+ * makes them collide — both thumbs move together because the top input
+ * always wins clicks.
+ *
+ * Fix: make the INPUT ITSELF non-interactive (pointer-events: none) but
+ * restore pointer-events on the THUMB pseudo-elements only. The user
+ * can grab the min thumb OR the max thumb independently, and the rest
+ * of the track falls through to whichever input has the mouse-down
+ * focus (the browser's normal slider behavior).
+ *
+ * Opt-in via class `.qgi-dual-thumb-input` so other single-thumb
+ * sliders in the app are unaffected.
+ */
+.qgi-dual-thumb-input {
+  pointer-events: none;
+}
+.qgi-dual-thumb-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--qgi-accent);
+  border: 2px solid var(--qgi-bg);
+  cursor: grab;
+  box-shadow: 0 0 0 1px var(--qgi-accent);
+}
+.qgi-dual-thumb-input::-moz-range-thumb {
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--qgi-accent);
+  border: 2px solid var(--qgi-bg);
+  cursor: grab;
+  box-shadow: 0 0 0 1px var(--qgi-accent);
+}
+.qgi-dual-thumb-input:active::-webkit-slider-thumb,
+.qgi-dual-thumb-input:active::-moz-range-thumb {
+  cursor: grabbing;
+}
+
+/* #686B (2026-05-18) — Global prefers-reduced-motion guard.
+   Users with the OS-level reduced-motion preference (vestibular
+   sensitivity, screen-reader workflows) get all transitions and
+   animations effectively disabled. Tailwind's `motion-safe:` prefix
+   would have required touching ~20 `transition-*` sites in
+   BaseClient.tsx + the same surface across the rest of the app;
+   the CSS-level guard ships once and covers every component without
+   per-callsite churn. WCAG 2.3.3 (Animation from Interactions). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* V4.1 follow-up 2026-05-29 — soft "in active rotation" pulse on the recipe
+   card status dot. The shadow ring expands and fades on every cycle; the
+   dot's solid fill stays put so the family hue reads steady. Color is
+   inherited from the dot's `background`, so each family glows in its
+   own hue (no hard-coded color).
+
+   The animation is gated by `.qgi-pulse-dot` so non-In-Play statuses get a
+   static dot. Reduced-motion users get a 0.01ms duration via the rule
+   above — visually inert, no perceived motion. */
+@keyframes qgi-pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 currentColor;
+  }
+  70% {
+    box-shadow: 0 0 0 6px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+.qgi-pulse-dot {
+  animation: qgi-pulse-ring 1.8s ease-out infinite;
+  /* color carries the family hue forward to box-shadow (currentColor). */
+  color: currentColor;
+}
