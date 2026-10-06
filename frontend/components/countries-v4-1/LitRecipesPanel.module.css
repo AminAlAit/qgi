@@ -1,0 +1,48 @@
+/* LitRecipesPanel row layout.
+ *
+ * Desktop (>=640px): a 4-column tabular grid — label | bar | score | status.
+ * Phone (<640px): the same four cells reflow to a 2-line stack
+ *   line 1:  label .......... score
+ *   line 2:  bar (stretches)  status
+ *
+ * grid-template-areas place each cell explicitly, so DOM order is irrelevant
+ * and there is no display:contents reorder bug. Pure CSS (a CSS Module) keeps
+ * the component a server component with no matchMedia hook and no SSR/first-
+ * paint reflow.
+ */
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(120px, 1fr) 36px 190px;
+  grid-template-areas: "label bar score chip";
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  padding: 8px;
+  border-radius: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.label {
+  grid-area: label;
+}
+.bar {
+  grid-area: bar;
+}
+.score {
+  grid-area: score;
+}
+.chip {
+  grid-area: chip;
+  justify-self: end;
+}
+
+@media (max-width: 639px) {
+  .row {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "label score"
+      "bar chip";
+    gap: 5px 8px;
+  }
+}

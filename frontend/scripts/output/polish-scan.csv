@@ -1,0 +1,3 @@
+file,line,leak_type,snippet,suggestion
+components/precedents-v2/PrecedentsV2Detail.tsx,133,methodology-jargon,…rfectly calibrated. ECE.,Calibration error — explain inline or relabel 'calibration gap'
+components/signals-v2/SignalsV2Detail.tsx,185,methodology-jargon,…rfectly calibrated. ECE.,Calibration error — explain inline or relabel 'calibration gap'
