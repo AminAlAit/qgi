@@ -1,0 +1,8 @@
+# QGI Monorepo Code Ownership
+* @AminAlAit
+/frontend/ @AminAlAit
+/pipeline/ @AminAlAit
+/ml/ @AminAlAit
+/infra/ @AminAlAit
+/data-tools/ @AminAlAit
+/docs/ @AminAlAit

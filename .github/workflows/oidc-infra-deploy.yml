@@ -1,0 +1,237 @@
+name: Infrastructure OIDC Deployment
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'infra/**'
+      - '.github/workflows/oidc-infra-deploy.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'infra/**'
+      - '.github/workflows/oidc-infra-deploy.yml'
+  workflow_dispatch:
+    inputs:
+      target_env:
+        description: 'Target environment to deploy'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+          - staging
+          - qa
+          - prod
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: infra-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    name: Terraform Format and Validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.10.0
+
+      - name: Check Canonical Formatting
+        run: terraform fmt -check -recursive infra/
+
+      - name: Validate Management Environment
+        run: |
+          terraform -chdir=infra/management init -backend=false
+          terraform -chdir=infra/management validate
+
+      - name: Validate Staging Environment
+        run: |
+          terraform -chdir=infra/environments/staging init -backend=false
+          terraform -chdir=infra/environments/staging validate
+
+      - name: Validate QA Environment
+        run: |
+          terraform -chdir=infra/environments/qa init -backend=false
+          terraform -chdir=infra/environments/qa validate
+
+      - name: Validate Prod Environment
+        run: |
+          terraform -chdir=infra/environments/prod init -backend=false
+          terraform -chdir=infra/environments/prod validate
+
+  plan-staging:
+    name: Staging Plan
+    needs: validate
+    if: github.event_name != 'workflow_dispatch' || github.event.inputs.target_env == 'staging'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.10.0
+
+      # GitHub Actions OIDC Federation — Zero Static Credentials
+      # Scoped to aud: sts.amazonaws.com and sub: repo:AminAlAit/qgi:*
+      - name: Configure AWS Credentials (OIDC Staging)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_STAGING_DEPLOY_ROLE_ARN || 'arn:aws:iam::771606957899:role/github-actions-qgi-staging-deploy' }}
+          aws-region: eu-central-1
+          audience: sts.amazonaws.com
+
+      - name: Terraform Init
+        run: terraform -chdir=infra/environments/staging init
+
+      - name: Terraform Plan
+        run: terraform -chdir=infra/environments/staging plan -no-color
+
+  deploy-staging:
+    name: Staging Deploy
+    needs: plan-staging
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event.inputs.target_env == 'staging')
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.10.0
+
+      - name: Configure AWS Credentials (OIDC Staging)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_STAGING_DEPLOY_ROLE_ARN || 'arn:aws:iam::771606957899:role/github-actions-qgi-staging-deploy' }}
+          aws-region: eu-central-1
+          audience: sts.amazonaws.com
+
+      - name: Terraform Init
+        run: terraform -chdir=infra/environments/staging init
+
+      - name: Terraform Apply
+        run: terraform -chdir=infra/environments/staging apply -auto-approve
+
+  plan-qa:
+    name: QA Plan
+    needs: validate
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.target_env == 'qa'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.10.0
+
+      - name: Configure AWS Credentials (OIDC QA)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_QA_DEPLOY_ROLE_ARN || 'arn:aws:iam::928648269104:role/github-actions-qgi-qa-deploy' }}
+          aws-region: eu-central-1
+          audience: sts.amazonaws.com
+
+      - name: Terraform Init
+        run: terraform -chdir=infra/environments/qa init
+
+      - name: Terraform Plan
+        run: terraform -chdir=infra/environments/qa plan -no-color
+
+  deploy-qa:
+    name: QA Deploy
+    needs: plan-qa
+    if: github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch' && github.event.inputs.target_env == 'qa'
+    runs-on: ubuntu-latest
+    environment: qa
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.10.0
+
+      - name: Configure AWS Credentials (OIDC QA)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_QA_DEPLOY_ROLE_ARN || 'arn:aws:iam::928648269104:role/github-actions-qgi-qa-deploy' }}
+          aws-region: eu-central-1
+          audience: sts.amazonaws.com
+
+      - name: Terraform Init
+        run: terraform -chdir=infra/environments/qa init
+
+      - name: Terraform Apply
+        run: terraform -chdir=infra/environments/qa apply -auto-approve
+
+  plan-prod:
+    name: Production Plan
+    needs: validate
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.target_env == 'prod'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.10.0
+
+      - name: Configure AWS Credentials (OIDC Production)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_PROD_DEPLOY_ROLE_ARN || 'arn:aws:iam::297797204453:role/github-actions-qgi-prod-deploy' }}
+          aws-region: eu-central-1
+          audience: sts.amazonaws.com
+
+      - name: Terraform Init
+        run: terraform -chdir=infra/environments/prod init
+
+      - name: Terraform Plan
+        run: terraform -chdir=infra/environments/prod plan -no-color
+
+  deploy-prod:
+    name: Production Deploy
+    needs: plan-prod
+    if: github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch' && github.event.inputs.target_env == 'prod'
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.10.0
+
+      - name: Configure AWS Credentials (OIDC Production)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_PROD_DEPLOY_ROLE_ARN || 'arn:aws:iam::297797204453:role/github-actions-qgi-prod-deploy' }}
+          aws-region: eu-central-1
+          audience: sts.amazonaws.com
+
+      - name: Terraform Init
+        run: terraform -chdir=infra/environments/prod init
+
+      - name: Terraform Apply
+        run: terraform -chdir=infra/environments/prod apply -auto-approve
