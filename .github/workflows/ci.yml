@@ -51,7 +51,7 @@ jobs:
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v3
         with:
-          terraform_version: "1.9.8"
+          terraform_version: "1.10.0"
 
       - name: Validate Terraform formatting and 5-Account configurations
         run: |

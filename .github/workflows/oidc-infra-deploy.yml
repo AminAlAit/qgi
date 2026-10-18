@@ -72,7 +72,7 @@ jobs:
   plan-staging:
     name: Staging Plan
     needs: validate
-    if: github.event_name != 'workflow_dispatch' || github.event.inputs.target_env == 'staging'
+    if: (github.event_name == 'workflow_dispatch' && github.event.inputs.target_env == 'staging') || vars.AWS_STAGING_DEPLOY_ROLE_ARN != ''
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
