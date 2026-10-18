@@ -31,3 +31,8 @@ declare module "@/data/te-fleet-run-2/MANIFEST.json" {
   const value: Record<string, unknown>;
   export default value;
 }
+
+declare module "@/data/te-fleet-run-2/indicator-panels.json" {
+  const value: Record<string, Record<string, Record<string, number>>>;
+  export default value;
+}

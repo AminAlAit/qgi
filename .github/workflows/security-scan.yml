@@ -1,0 +1,34 @@
+name: Security & Secret Scan
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  schedule:
+    - cron: "0 4 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  secret-and-hygiene-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Scan tracked files for exposed credentials
+        run: |
+          SECRET_PATTERNS='(AKIA[0-9A-Z]{16}|ASIA[0-9A-Z]{16}|-----BEGIN [A-Z ]*PRIVATE KEY-----|ghp_[A-Za-z0-9]{36}|github_pat_[A-Za-z0-9_]{82})'
+          while IFS= read -r file; do
+            if [[ "$file" =~ tests/ ]] || [[ "$file" =~ fixtures/ ]]; then
+              continue
+            fi
+            if [ -f "$file" ] && grep -E -n "${SECRET_PATTERNS}" "$file"; then
+              echo "Sensitive credential signature detected in $file"
+              exit 1
+            fi
+          done < <(git ls-files)
