@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# QGI Pre-Push Verification Hook
+echo "========================================================"
+echo " Running QGI Local Full-Stack Verification Gate Hook... "
+echo "========================================================"
+
+if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "win32" || "$OSTYPE" == "cygwin" ]]; then
+    if command -v pwsh >/dev/null 2>&1; then
+        pwsh -ExecutionPolicy Bypass -File "./scripts/verify-monorepo.ps1"
+    else
+        powershell.exe -ExecutionPolicy Bypass -File "./scripts/verify-monorepo.ps1"
+    fi
+    exit $?
+else
+    ./scripts/verify-monorepo.sh
+    exit $?
+fi
