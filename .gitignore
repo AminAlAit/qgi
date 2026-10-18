@@ -29,6 +29,8 @@ venv/
 .mypy_cache/
 .ruff_cache/
 *.parquet
+!pipeline/tests/golden/**/*.parquet
+!data-tools/test-fixtures/**/*.parquet
 *.duckdb
 *.arrow
 *.feather

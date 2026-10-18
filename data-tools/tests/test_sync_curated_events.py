@@ -296,7 +296,7 @@ def test_download_ignores_non_json_s3_objects(tmp_path, monkeypatch):
 
 # ─── role assumption ──────────────────────────────────────────────────────────
 
-def test_main_uses_assume_role_when_role_arn_provided(monkeypatch):
+def test_main_uses_assume_role_when_role_arn_provided(monkeypatch, tmp_path):
     """When --role-arn is given, STS assume_role is called and temp creds used."""
     fake_creds = {
         "AccessKeyId": "ASIA_FAKE",
@@ -319,8 +319,8 @@ def test_main_uses_assume_role_when_role_arn_provided(monkeypatch):
             return sts_mock
         return s3_mock
 
-    monkeypatch.setattr(sut, "CURATED_DIR", Path("/nonexistent_for_download"))
-    monkeypatch.setattr(sut, "VERIFICATION_DIR", Path("/nonexistent_for_download_verif"))
+    monkeypatch.setattr(sut, "CURATED_DIR", tmp_path / "nonexistent_for_download")
+    monkeypatch.setattr(sut, "VERIFICATION_DIR", tmp_path / "nonexistent_for_download_verif")
 
     with patch("sync_curated_events.boto3") as mock_boto3:
         mock_boto3.client.side_effect = _boto3_client
