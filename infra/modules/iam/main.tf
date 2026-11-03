@@ -27,8 +27,8 @@ resource "aws_iam_role" "github_actions_lambda_deploy" {
         StringLike = {
           # Allow from main branch and version tags
           "token.actions.githubusercontent.com:sub" = [
-            "repo:AminAlAit/qgi-pipeline:ref:refs/heads/main",
-            "repo:AminAlAit/qgi-pipeline:ref:refs/tags/*",
+            "repo:AminAlAit/qgi:ref:refs/heads/main",
+            "repo:AminAlAit/qgi:ref:refs/tags/*",
           ]
         }
       }
@@ -79,8 +79,8 @@ resource "aws_iam_role" "github_actions_ecr_push" {
         }
         StringLike = {
           "token.actions.githubusercontent.com:sub" = [
-            "repo:AminAlAit/qgi-pipeline:ref:refs/heads/main",
-            "repo:AminAlAit/qgi-pipeline:ref:refs/tags/*",
+            "repo:AminAlAit/qgi:ref:refs/heads/main",
+            "repo:AminAlAit/qgi:ref:refs/tags/*",
           ]
         }
       }
@@ -792,9 +792,9 @@ resource "aws_iam_role" "github_actions_frontend_s3_read" {
         StringLike = {
           # Allow the workflow from main or any workflow_dispatch caller
           # on the repo. Dispatch events from the Lambda carry a sub like
-          # `repo:AminAlAit/qgi-frontend:ref:refs/heads/main` so matching
+          # `repo:AminAlAit/qgi:ref:refs/heads/main` so matching
           # main is sufficient.
-          "token.actions.githubusercontent.com:sub" = "repo:AminAlAit/qgi-frontend:ref:refs/heads/main"
+          "token.actions.githubusercontent.com:sub" = "repo:AminAlAit/qgi:ref:refs/heads/main"
         }
       }
     }]
@@ -844,7 +844,7 @@ resource "aws_iam_role" "github_actions_frontend_te_fleet_sync" {
           "token.actions.githubusercontent.com:aud" = "sts.amazonaws.com"
         }
         StringLike = {
-          "token.actions.githubusercontent.com:sub" = "repo:AminAlAit/qgi-frontend:ref:refs/heads/main"
+          "token.actions.githubusercontent.com:sub" = "repo:AminAlAit/qgi:ref:refs/heads/main"
         }
       }
     }]

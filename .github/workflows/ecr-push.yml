@@ -1,0 +1,225 @@
+name: ECR push — container images
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'pipeline/batch/**'
+      - '.github/workflows/ecr-push.yml'
+  workflow_dispatch:
+    inputs:
+      image:
+        description: 'Which image to rebuild'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - scdi-finder
+          - dscdi-finder
+          - indicator-fetcher
+          - indicator-fetcher-fao
+          - indicator-fetcher-faostat
+          - indicator-fetcher-idmc
+          - indicator-fetcher-ilostat
+          - indicator-fetcher-oecd
+          - indicator-fetcher-owid
+          - indicator-fetcher-ucdp
+          - indicator-fetcher-undp
+          - indicator-fetcher-unhcr
+          - qgi-vdem-ingest
+          - recipe-fleet
+
+jobs:
+  # ------------------------------------------------------------------
+  # Management-account push — scdi-finder + dscdi-finder only.
+  # Uses the existing github-actions-qgi-ecr-push role in 111111111111.
+  # ------------------------------------------------------------------
+  build-push-management:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    env:
+      ECR_REGISTRY: 111111111111.dkr.ecr.eu-central-1.amazonaws.com
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::111111111111:role/github-actions-qgi-ecr-push
+          aws-region: eu-central-1
+
+      - uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Detect changed image dirs
+        id: changed
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            case "${{ inputs.image }}" in
+              all)                   echo "scdi=1" >> "$GITHUB_OUTPUT"; echo "dscdi=1" >> "$GITHUB_OUTPUT" ;;
+              scdi-finder)           echo "scdi=1"    >> "$GITHUB_OUTPUT" ;;
+              dscdi-finder)          echo "dscdi=1"   >> "$GITHUB_OUTPUT" ;;
+              *)                     : ;; # Phase 1 fetchers and recipe-fleet push to staging only
+            esac
+          else
+            git diff --name-only HEAD~1 HEAD > /tmp/changed.txt
+            grep -q '^pipeline/batch/scdi-finder/'  /tmp/changed.txt && echo "scdi=1"  >> "$GITHUB_OUTPUT" || true
+            grep -q '^pipeline/batch/dscdi-finder/' /tmp/changed.txt && echo "dscdi=1" >> "$GITHUB_OUTPUT" || true
+          fi
+
+      - name: Build and push scdi-finder
+        if: steps.changed.outputs.scdi == '1'
+        run: |
+          IMAGE_TAG=${GITHUB_SHA::8}
+          IMAGE_REPO=$ECR_REGISTRY/qgi-pipeline-b-scdi-finder
+          docker buildx build --platform linux/arm64 -t $IMAGE_REPO:$IMAGE_TAG --push pipeline/batch/scdi-finder/
+          docker buildx build --platform linux/arm64 -t $IMAGE_REPO:latest      --push pipeline/batch/scdi-finder/
+
+      - name: Build and push dscdi-finder
+        if: steps.changed.outputs.dscdi == '1'
+        run: |
+          IMAGE_TAG=${GITHUB_SHA::8}
+          IMAGE_REPO=$ECR_REGISTRY/qgi-pipeline-b-dscdi-finder
+          docker buildx build --platform linux/arm64 -t $IMAGE_REPO:$IMAGE_TAG --push pipeline/batch/dscdi-finder/
+          docker buildx build --platform linux/arm64 -t $IMAGE_REPO:latest      --push pipeline/batch/dscdi-finder/
+
+  # ------------------------------------------------------------------
+  # Staging-account push — Phase 1 fetchers + recipe-fleet in 222222222222 ECR.
+  # Zero cross-repo checkouts needed: ml/ and data-tools/ reside directly
+  # in the unified AminAlAit/qgi monorepo checkout.
+  # ------------------------------------------------------------------
+  build-push-staging:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    env:
+      ECR_REGISTRY: 222222222222.dkr.ecr.eu-central-1.amazonaws.com
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::222222222222:role/github-actions-qgi-ecr-push
+          aws-region: eu-central-1
+
+      - uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Detect changed image dirs
+        id: changed
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            case "${{ inputs.image }}" in
+              all)
+                echo "fetcher=1" >> "$GITHUB_OUTPUT"
+                echo "fao=1" >> "$GITHUB_OUTPUT"
+                echo "vdem=1" >> "$GITHUB_OUTPUT"
+                echo "recipe_fleet=1" >> "$GITHUB_OUTPUT"
+                for slug in faostat idmc ilostat oecd owid ucdp undp unhcr; do
+                  echo "fetcher_${slug}=1" >> "$GITHUB_OUTPUT"
+                done
+                ;;
+              indicator-fetcher)         echo "fetcher=1" >> "$GITHUB_OUTPUT" ;;
+              indicator-fetcher-fao)     echo "fao=1" >> "$GITHUB_OUTPUT" ;;
+              indicator-fetcher-faostat) echo "fetcher_faostat=1" >> "$GITHUB_OUTPUT" ;;
+              indicator-fetcher-idmc)    echo "fetcher_idmc=1" >> "$GITHUB_OUTPUT" ;;
+              indicator-fetcher-ilostat) echo "fetcher_ilostat=1" >> "$GITHUB_OUTPUT" ;;
+              indicator-fetcher-oecd)    echo "fetcher_oecd=1" >> "$GITHUB_OUTPUT" ;;
+              indicator-fetcher-owid)    echo "fetcher_owid=1" >> "$GITHUB_OUTPUT" ;;
+              indicator-fetcher-ucdp)    echo "fetcher_ucdp=1" >> "$GITHUB_OUTPUT" ;;
+              indicator-fetcher-undp)    echo "fetcher_undp=1" >> "$GITHUB_OUTPUT" ;;
+              indicator-fetcher-unhcr)   echo "fetcher_unhcr=1" >> "$GITHUB_OUTPUT" ;;
+              qgi-vdem-ingest)           echo "vdem=1" >> "$GITHUB_OUTPUT" ;;
+              recipe-fleet)              echo "recipe_fleet=1" >> "$GITHUB_OUTPUT" ;;
+              *)                         : ;;
+            esac
+          else
+            git diff --name-only HEAD~1 HEAD > /tmp/changed.txt
+            grep -q '^pipeline/batch/indicator-fetcher/'     /tmp/changed.txt && echo "fetcher=1"      >> "$GITHUB_OUTPUT" || true
+            grep -q '^pipeline/batch/indicator-fetcher-fao/' /tmp/changed.txt && echo "fao=1"          >> "$GITHUB_OUTPUT" || true
+            grep -q '^pipeline/batch/qgi-vdem-ingest/'       /tmp/changed.txt && echo "vdem=1"         >> "$GITHUB_OUTPUT" || true
+            grep -q '^pipeline/batch/recipe-fleet/'          /tmp/changed.txt && echo "recipe_fleet=1" >> "$GITHUB_OUTPUT" || true
+            for slug in faostat idmc ilostat oecd owid ucdp undp unhcr; do
+              if grep -qE "^pipeline/batch/(indicator-fetcher-${slug}|_fetcher_base)/" /tmp/changed.txt; then
+                echo "fetcher_${slug}=1" >> "$GITHUB_OUTPUT"
+              fi
+            done
+          fi
+
+      - name: Build and push indicator-fetcher (WB) — staging
+        if: steps.changed.outputs.fetcher == '1'
+        run: |
+          IMAGE_TAG=${GITHUB_SHA::8}
+          IMAGE_REPO=$ECR_REGISTRY/qgi-pipeline-a-indicator-fetcher
+          docker buildx build --platform linux/arm64 -t $IMAGE_REPO:$IMAGE_TAG --push pipeline/batch/indicator-fetcher/
+          docker buildx build --platform linux/arm64 -t $IMAGE_REPO:latest      --push pipeline/batch/indicator-fetcher/
+
+      - name: Build and push indicator-fetcher-fao (FAOSTAT) — staging
+        if: steps.changed.outputs.fao == '1'
+        run: |
+          IMAGE_TAG=${GITHUB_SHA::8}
+          IMAGE_REPO=$ECR_REGISTRY/qgi-pipeline-a-indicator-fetcher-fao
+          docker buildx build --platform linux/arm64 -t $IMAGE_REPO:$IMAGE_TAG --push pipeline/batch/indicator-fetcher-fao/
+          docker buildx build --platform linux/arm64 -t $IMAGE_REPO:latest      --push pipeline/batch/indicator-fetcher-fao/
+
+      - name: Build and push specialized indicator fetchers (_fetcher_base context) — staging
+        run: |
+          IMAGE_TAG=${GITHUB_SHA::8}
+          for slug in faostat idmc ilostat oecd owid ucdp undp unhcr; do
+            flag_var="FETCHER_$(echo "$slug" | tr '[:lower:]' '[:upper:]')"
+            if [ "${!flag_var}" = "1" ]; then
+              IMAGE_REPO="$ECR_REGISTRY/qgi-pipeline-a-indicator-fetcher-${slug}"
+              docker buildx build --platform linux/arm64 \
+                -f "pipeline/batch/indicator-fetcher-${slug}/Dockerfile" \
+                -t "$IMAGE_REPO:$IMAGE_TAG" --push pipeline/batch/
+              docker buildx build --platform linux/arm64 \
+                -f "pipeline/batch/indicator-fetcher-${slug}/Dockerfile" \
+                -t "$IMAGE_REPO:latest" --push pipeline/batch/
+            fi
+          done
+        env:
+          FETCHER_FAOSTAT: ${{ steps.changed.outputs.fetcher_faostat }}
+          FETCHER_IDMC: ${{ steps.changed.outputs.fetcher_idmc }}
+          FETCHER_ILOSTAT: ${{ steps.changed.outputs.fetcher_ilostat }}
+          FETCHER_OECD: ${{ steps.changed.outputs.fetcher_oecd }}
+          FETCHER_OWID: ${{ steps.changed.outputs.fetcher_owid }}
+          FETCHER_UCDP: ${{ steps.changed.outputs.fetcher_ucdp }}
+          FETCHER_UNDP: ${{ steps.changed.outputs.fetcher_undp }}
+          FETCHER_UNHCR: ${{ steps.changed.outputs.fetcher_unhcr }}
+
+      - name: Stage data-tools assets + build and push qgi-vdem-ingest — staging
+        if: steps.changed.outputs.vdem == '1'
+        run: |
+          bash pipeline/batch/qgi-vdem-ingest/stage-qgi-data-assets.sh data-tools
+          IMAGE_TAG=${GITHUB_SHA::8}
+          IMAGE_REPO=$ECR_REGISTRY/qgi-pipeline-a-vdem-ingest
+          docker buildx build --platform linux/arm64 \
+            --build-arg QGI_DATA_SHA="$GITHUB_SHA" \
+            -t $IMAGE_REPO:$IMAGE_TAG --push pipeline/batch/qgi-vdem-ingest/
+          docker buildx build --platform linux/arm64 \
+            --build-arg QGI_DATA_SHA="$GITHUB_SHA" \
+            -t $IMAGE_REPO:latest      --push pipeline/batch/qgi-vdem-ingest/
+
+      - name: Build and push qgi-recipe-fleet — staging
+        if: steps.changed.outputs.recipe_fleet == '1'
+        run: |
+          IMAGE_TAG=${GITHUB_SHA::8}
+          IMAGE_REPO=$ECR_REGISTRY/qgi-recipe-fleet
+          docker buildx build --platform linux/arm64 \
+            --build-context qgi-ml=ml \
+            --build-arg QGI_ML_SHA="$GITHUB_SHA" \
+            -t $IMAGE_REPO:$IMAGE_TAG --push pipeline/batch/recipe-fleet/
+          docker buildx build --platform linux/arm64 \
+            --build-context qgi-ml=ml \
+            --build-arg QGI_ML_SHA="$GITHUB_SHA" \
+            -t $IMAGE_REPO:latest      --push pipeline/batch/recipe-fleet/

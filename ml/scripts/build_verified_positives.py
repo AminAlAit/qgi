@@ -52,7 +52,7 @@ from typing import Any
 
 SCRIPTS_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPTS_DIR.parent
-QGDATA_ROOT = REPO_ROOT.parent / "qgi-data"
+QGDATA_ROOT = REPO_ROOT.parent / "data-tools"
 
 # F-ML-1 training window (matches prepare_shape_input_panels.py) + tier thresholds
 # (matches build_recipe_manifest.py).

@@ -1,0 +1,51 @@
+name: Synthetic monitoring
+
+# Runs the smallest, fastest Playwright spec (`tests/e2e/synthetic/smoke.spec.ts`)
+# against qgintelligence.com on an hourly cron or manual dispatch.
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: synthetic-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  smoke:
+    name: Prod smoke (qgintelligence.com)
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    defaults:
+      run:
+        working-directory: frontend
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: frontend/.nvmrc
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright (chromium only)
+        run: npx playwright install --with-deps chromium
+
+      - name: Run synthetic smoke suite
+        run: npx playwright test tests/e2e/synthetic --project=chromium
+        env:
+          PLAYWRIGHT_BASE_URL: "https://qgintelligence.com"
+          CI: "true"
+
+      - name: Upload Playwright report on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: synthetic-report-${{ github.run_id }}
+          path: frontend/playwright-report/
+          retention-days: 7

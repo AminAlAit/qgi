@@ -36,8 +36,8 @@ from pathlib import Path
 from typing import Iterable
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-DEFAULT_VERIFICATION_DIR = REPO_ROOT / "qgi-data" / "events" / "verification"
-DEFAULT_CURATED_DIR = REPO_ROOT / "qgi-data" / "events" / "curated"
+DEFAULT_VERIFICATION_DIR = REPO_ROOT / "data-tools" / "events" / "verification"
+DEFAULT_CURATED_DIR = REPO_ROOT / "data-tools" / "events" / "curated"
 
 # --------------------------------------------------------------------- #
 # Heuristics                                                            #

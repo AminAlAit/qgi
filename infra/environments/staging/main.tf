@@ -269,7 +269,7 @@ data "aws_subnets" "default" {
 module "gha_runner_frontend" {
   source = "../../modules/gha-runner"
 
-  repo                   = "AminAlAit/qgi-frontend"
+  repo                   = "AminAlAit/qgi"
   runner_label           = "qgi-frontend" # MUST match runs-on label in workflow YAML
   runner_pat_secret_name = "qgi-gha-runner-registration-frontend-pat"
 

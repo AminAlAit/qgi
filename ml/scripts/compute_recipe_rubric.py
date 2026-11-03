@@ -67,10 +67,10 @@ from pathlib import Path
 from typing import Any
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_CURATED_DIR = REPO_ROOT / "qgi-data" / "events" / "curated"
-DEFAULT_CATEGORY_MAPPING = REPO_ROOT / "qgi-data" / "events" / "taxonomy_hierarchy.json"
-DEFAULT_INDICATOR_SECTORS = REPO_ROOT / "qgi-data" / "reference" / "indicator-sectors.json"
-DEFAULT_OUTPUT = REPO_ROOT / "qgi-data" / "reference" / "ml-recipe-ranking-2026-05.json"
+DEFAULT_CURATED_DIR = REPO_ROOT / "data-tools" / "events" / "curated"
+DEFAULT_CATEGORY_MAPPING = REPO_ROOT / "data-tools" / "events" / "taxonomy_hierarchy.json"
+DEFAULT_INDICATOR_SECTORS = REPO_ROOT / "data-tools" / "reference" / "indicator-sectors.json"
+DEFAULT_OUTPUT = REPO_ROOT / "data-tools" / "reference" / "ml-recipe-ranking-2026-05.json"
 
 TRAINING_WINDOW = (2014, 2025)
 HARD_GATE_MIN_N_POSITIVE = 8

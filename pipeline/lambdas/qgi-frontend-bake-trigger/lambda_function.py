@@ -29,7 +29,7 @@ Observability:
 
 Environment:
   GITHUB_OWNER             — default "AminAlAit"
-  GITHUB_REPO              — default "qgi-frontend"
+  GITHUB_REPO              — default "qgi"
   GITHUB_WORKFLOW_FILE     — default "bake-country-risks.yml"
   GITHUB_REF               — default "main"
   GITHUB_PAT_SECRET_NAME   — default "qgi-github-frontend-dispatch-pat"
@@ -49,7 +49,7 @@ logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
 GITHUB_OWNER = os.environ.get("GITHUB_OWNER", "AminAlAit")
-GITHUB_REPO = os.environ.get("GITHUB_REPO", "qgi-frontend")
+GITHUB_REPO = os.environ.get("GITHUB_REPO", "qgi")
 GITHUB_WORKFLOW_FILE = os.environ.get("GITHUB_WORKFLOW_FILE", "bake-country-risks.yml")
 GITHUB_REF = os.environ.get("GITHUB_REF", "main")
 GITHUB_PAT_SECRET_NAME = os.environ.get("GITHUB_PAT_SECRET_NAME", "qgi-github-frontend-dispatch-pat")
