@@ -34,7 +34,7 @@ from datetime import date
 HERE = os.path.dirname(os.path.abspath(__file__))
 FRONTEND = os.path.dirname(HERE)
 REPO = os.path.dirname(FRONTEND)
-RESULTS = os.path.join(REPO, "qgi-ml", "gpr-build", "gpr-full-results.json")
+RESULTS = os.path.join(REPO, "ml", "gpr-build", "gpr-full-results.json")
 OUT = os.path.join(FRONTEND, "data", "gpr-country.json")
 
 # All-country coverage; 44 of them carry a published academic answer key.

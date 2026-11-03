@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-05-17T21:51:22.101849+00:00",
+  "recipe_id": "economic_recession",
+  "canonical_length_T": 5,
+  "key_indicators_requested": [
+    "v2xel_frefair",
+    "NE.CON.PRVT.ZS",
+    "NY.GDP.MKTP.KD",
+    "NE.CON.GOVT.ZS",
+    "NE.GDI.TOTL.ZS"
+  ],
+  "key_indicators_available_locally": [
+    "NE.CON.GOVT.ZS",
+    "NE.CON.PRVT.ZS",
+    "NE.GDI.TOTL.ZS",
+    "NY.GDP.MKTP.KD",
+    "v2xel_frefair"
+  ],
+  "key_indicators_missing_from_local_panel": [],
+  "indicator_coverage_fraction": 1.0,
+  "counts": {
+    "n_pos_input": 273,
+    "n_country_not_in_panel": 0,
+    "n_baseline_too_short": 171,
+    "n_pos_after_baseline_filter": 102,
+    "n_alignment_dropouts": 0,
+    "n_pos_final": 102,
+    "n_instances_in_parquet": 102
+  },
+  "dropout_sample": [
+    {
+      "country_id": "afghanistan",
+      "event_year": 1961,
+      "reason": "BASELINE_TOO_SHORT:NE.CON.GOVT.ZS (country not in panel)"
+    },
+    {
+      "country_id": "afghanistan",
+      "event_year": 1962,
+      "reason": "BASELINE_TOO_SHORT:NE.CON.GOVT.ZS (country not in panel)"
+    },
+    {
+      "country_id": "andorra",
+      "event_year": 2020,
+      "reason": "BASELINE_TOO_SHORT:NE.CON.GOVT.ZS (country not in panel)"
+    },
+    {
+      "country_id": "angola",
+      "event_year": 2014,
+      "reason": "BASELINE_TOO_SHORT:NE.CON.GOVT.ZS (n_obs=7<20, baseline=[1989,2008])"
+    },
+    {
+      "country_id": "angola",
+      "event_year": 2016,
+      "reason": "BASELINE_TOO_SHORT:NE.CON.GOVT.ZS (n_obs=9<20, baseline=[1991,2010])"
+    }
+  ],
+  "baseline_too_short_examples": [
+    {
+      "country_id": "afghanistan",
+      "event_year": 1961,
+      "reason": "BASELINE_TOO_SHORT:NE.CON.GOVT.ZS (country not in panel)"
+    },
+    {
+      "country_id": "afghanistan",
+      "event_year": 1962,
+      "reason": "BASELINE_TOO_SHORT:NE.CON.GOVT.ZS (country not in panel)"
+    },
+    {
+      "country_id": "andorra",
+      "event_year": 2020,
+      "reason": "BASELINE_TOO_SHORT:NE.CON.GOVT.ZS (country not in panel)"
+    },
+    {
+      "country_id": "angola",
+      "event_year": 2014,
+      "reason": "BASELINE_TOO_SHORT:NE.CON.GOVT.ZS (n_obs=7<20, baseline=[1989,2008])"
+    },
+    {
+      "country_id": "angola",
+      "event_year": 2016,
+      "reason": "BASELINE_TOO_SHORT:NE.CON.GOVT.ZS (n_obs=9<20, baseline=[1991,2010])"
+    }
+  ],
+  "source_shas": {
+    "qgi_ml_commit": "94af5a290b776099458d1e419f5c4d56ff604aae",
+    "qgi_data_commit": "45cf568bc8883c520d4ef1eb9cc2ad2f8d4669f8",
+    "aligned_parquet_sha256": "d660fa0be75de3f8785584299988a567ccbd6e5529041cd16b8ad308cfbb5311",
+    "positives_csv_sha256": "0d0aa6f180bfe18f141a0de5333e2d1cfab59f4e05573b064f20b9f9e2f4e253",
+    "indicator_panel_sha256": "bbe8643d59f94700dbf38cd9a103cb079ca42e5bd402b6fab62507d6a777ff97"
+  },
+  "fitter_input_contract": {
+    "indicator_panel": "data\\shape_inputs_v2\\economic_recession\\indicator_panel.parquet",
+    "positive_instances": "data\\shape_inputs_v2\\economic_recession\\positives.csv",
+    "indicator_ids": "NE.CON.GOVT.ZS,NE.CON.PRVT.ZS,NE.GDI.TOTL.ZS,NY.GDP.MKTP.KD,v2xel_frefair",
+    "T_r": 5
+  },
+  "honesty_disclosure": "Local panel snapshot contains only 5/5 key indicators for economic_recession. Missing: []. G3/G4 substrate verdicts are BLOCKED-on-substrate-availability per Tariq's audit. Re-run on full 104-indicator production panel required (see substrate-audit-phase-1.json P0 actions)."
+}

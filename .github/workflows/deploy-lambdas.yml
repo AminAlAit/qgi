@@ -1,0 +1,247 @@
+name: Deploy Lambdas
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'pipeline/lambdas/**'
+      - '.github/workflows/deploy-lambdas.yml'
+  # Allow deploying all functions to a specific environment on demand
+  workflow_dispatch:
+    inputs:
+      deploy_all:
+        description: 'Deploy ALL Lambda functions (not just changed)'
+        required: false
+        default: false
+        type: boolean
+      environment:
+        description: 'Target environment'
+        required: false
+        default: 'staging'
+        type: choice
+        options: [staging, qa, prod]
+      function:
+        description: 'Single Lambda directory name override (e.g. qgi-frontend-bake-trigger)'
+        required: false
+        default: ''
+        type: string
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      # Staging: push to main or workflow_dispatch targeting staging
+      - name: Configure AWS credentials (staging)
+        if: github.ref == 'refs/heads/main' || (github.event_name == 'workflow_dispatch' && inputs.environment == 'staging')
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::222222222222:role/github-actions-qgi-lambda-deploy
+          aws-region: eu-central-1
+
+      # QA: rc-* tags or workflow_dispatch targeting qa
+      - name: Configure AWS credentials (qa)
+        if: startsWith(github.ref, 'refs/tags/rc-') || (github.event_name == 'workflow_dispatch' && inputs.environment == 'qa')
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::333333333333:role/github-actions-qgi-lambda-deploy
+          aws-region: eu-central-1
+
+      # Prod: v* tags or workflow_dispatch targeting prod
+      - name: Configure AWS credentials (prod)
+        if: startsWith(github.ref, 'refs/tags/v') || (github.event_name == 'workflow_dispatch' && inputs.environment == 'prod')
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::444444444444:role/github-actions-qgi-lambda-deploy
+          aws-region: eu-central-1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Deploy Lambdas
+        run: |
+          if [ -n "${{ inputs.function }}" ]; then
+            CHANGED="${{ inputs.function }}"
+          elif [ "${{ inputs.deploy_all }}" = "true" ]; then
+            CHANGED=$(ls pipeline/lambdas/)
+          else
+            # Use the GitHub push event's before..after SHA range rather than
+            # HEAD~1..HEAD so multi-commit pushes don't silently drop commits
+            # (2026-04-08: c-dispatcher fix #108 was lost this way). Fall back
+            # to HEAD~1..HEAD if before_sha is empty (first push) or all-zeros
+            # (workflow_dispatch on a branch tip).
+            BEFORE="${{ github.event.before }}"
+            if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+              BEFORE="HEAD~1"
+            fi
+            echo "Deploy range: $BEFORE..HEAD"
+            # If pipeline/lambdas/_shared/ changed, every Lambda needs a redeploy
+            # because each bundle contains its own copy of _shared/ (#558).
+            # Detect that condition explicitly and fall back to deploy-all.
+            if git diff --name-only "$BEFORE" HEAD | grep -q '^pipeline/lambdas/_shared/'; then
+              echo "pipeline/lambdas/_shared/ changed — redeploying ALL Lambdas"
+              CHANGED=$(ls -1 pipeline/lambdas/ \
+                | grep -v '^_shared$' \
+                | grep -v '^_' \
+                | sort -u)
+            else
+              CHANGED=$(git diff --name-only "$BEFORE" HEAD \
+                | grep '^pipeline/lambdas/' \
+                | grep -v '^pipeline/lambdas/_shared/' \
+                | cut -d/ -f3 | sort -u)
+            fi
+          fi
+
+          DEPLOYED=0
+          SKIPPED=0
+          FAILED=0
+          for NAME in $CHANGED; do
+            LAMBDA_DIR="pipeline/lambdas/$NAME"
+            [ -f "$LAMBDA_DIR/lambda_function.py" ] || { echo "skip $NAME (no lambda_function.py)"; continue; }
+            # pipeline-c-poc is being retired (issue #61) — skip
+            [ "$NAME" = "pipeline-c-poc" ] && { echo "skip $NAME (retired)"; continue; }
+
+            if [[ "$NAME" == qgi-* ]]; then
+              AWS_NAME="$NAME"
+            else
+              AWS_NAME="qgi-$NAME"
+            fi
+
+            # Verify the function exists in AWS before building. Stale repo
+            # dirs (e.g. pipeline-a-checker after #FAR-1) otherwise crash the
+            # whole workflow on deploy_all=true. Skip with a warning instead.
+            if ! aws lambda get-function --function-name "$AWS_NAME" --query 'Configuration.FunctionName' --output text >/dev/null 2>&1; then
+              echo "::warning::AWS Lambda '$AWS_NAME' does not exist (stale repo dir?) — skipping"
+              SKIPPED=$((SKIPPED + 1))
+              continue
+            fi
+
+            echo "Deploying $AWS_NAME..."
+            WORK=$(mktemp -d)
+            # Bundle the whole Lambda dir, not just *.py — catches sibling
+            # modules (#536: country_risks.py was the trigger), JSON configs,
+            # SQL templates, etc. Exclude test/cache artifacts and the
+            # requirements file (pip-installed separately below).
+            rsync -a "$LAMBDA_DIR/" "$WORK/" \
+              --exclude '__pycache__/' \
+              --exclude '.pytest_cache/' \
+              --exclude 'test_*.py' \
+              --exclude '*_test.py' \
+              --exclude 'tests/' \
+              --exclude '*.zip' \
+              --exclude 'requirements.txt'
+            # Bundle the cross-Lambda _shared/ package (#558). Each Lambda
+            # gets its own copy at the zip root, so `from _shared.<module>
+            # import ...` resolves consistently in production and in local
+            # tests.
+            if [ -d "pipeline/lambdas/_shared" ]; then
+              rsync -a "pipeline/lambdas/_shared" "$WORK/" \
+                --exclude '__pycache__/' \
+                --exclude '.pytest_cache/' \
+                --exclude 'test_*.py' \
+                --exclude '*_test.py' \
+                --exclude 'tests/'
+            fi
+            if [ -f "$LAMBDA_DIR/requirements.txt" ] && [ -s "$LAMBDA_DIR/requirements.txt" ]; then
+              pip install -q -r "$LAMBDA_DIR/requirements.txt" \
+                --platform manylinux2014_aarch64 \
+                --only-binary=:all: \
+                --python-version 3.13 \
+                -t "$WORK/"
+            fi
+            ZIP="$WORK/function.zip"
+            (cd "$WORK" && zip -qr "$ZIP" . --exclude "function.zip")
+
+            if aws lambda update-function-code \
+                --function-name "$AWS_NAME" \
+                --zip-file "fileb://$ZIP" \
+                --architectures arm64 \
+                --query 'FunctionName' --output text; then
+              DEPLOYED=$((DEPLOYED + 1))
+            else
+              echo "::error::Failed to deploy $AWS_NAME"
+              FAILED=$((FAILED + 1))
+            fi
+
+            rm -rf "$WORK"
+          done
+
+          echo "Summary: deployed=$DEPLOYED skipped=$SKIPPED failed=$FAILED"
+          [ "$FAILED" -eq 0 ] || exit 1
+
+      # #536 Layer 2: post-deploy verification. Fails LOUDLY if any deployed
+      # Lambda's LastModified predates this workflow's commit timestamp.
+      - name: Verify deploys actually landed
+        if: success()
+        run: |
+          DEPLOY_FLOOR_TS="${{ github.event.head_commit.timestamp }}"
+          if [ -z "$DEPLOY_FLOOR_TS" ]; then
+            DEPLOY_FLOOR_TS="$GITHUB_RUN_STARTED_AT"
+            echo "::warning::head_commit.timestamp empty (likely workflow_dispatch); using run-started $DEPLOY_FLOOR_TS"
+          fi
+          echo "Deploy floor timestamp: $DEPLOY_FLOOR_TS"
+
+          normalize_ts() {
+            echo "$1" | sed -E 's/\.[0-9]+(Z|[+-][0-9:]+)?$//; s/Z$//; s/[+-][0-9:]+$//'
+          }
+          FLOOR_NORM=$(normalize_ts "$DEPLOY_FLOOR_TS")
+
+          if [ -n "${{ inputs.function }}" ]; then
+            CHANGED="${{ inputs.function }}"
+          elif [ "${{ inputs.deploy_all }}" = "true" ]; then
+            CHANGED=$(ls pipeline/lambdas/ | grep -v '^_')
+          else
+            BEFORE="${{ github.event.before }}"
+            if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+              BEFORE="HEAD~1"
+              if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+                echo "::warning::workflow_dispatch + deploy_all=false: verify step may check the wrong Lambda set. Prefer deploy_all=true for manual re-deploys."
+              fi
+            fi
+            if git diff --name-only "$BEFORE" HEAD | grep -q '^pipeline/lambdas/_shared/'; then
+              CHANGED=$(ls -1 pipeline/lambdas/ | grep -v '^_' | sort -u)
+            else
+              CHANGED=$(git diff --name-only "$BEFORE" HEAD \
+                | grep '^pipeline/lambdas/' \
+                | grep -v '^pipeline/lambdas/_shared/' \
+                | cut -d/ -f3 | sort -u)
+            fi
+          fi
+
+          DRIFT=0
+          for NAME in $CHANGED; do
+            [ -f "pipeline/lambdas/$NAME/lambda_function.py" ] || continue
+            [ "$NAME" = "pipeline-c-poc" ] && continue
+            if [[ "$NAME" == qgi-* ]]; then
+              AWS_NAME="$NAME"
+            else
+              AWS_NAME="qgi-$NAME"
+            fi
+            LAST_MOD=$(aws lambda get-function-configuration \
+              --function-name "$AWS_NAME" \
+              --query 'LastModified' --output text 2>/dev/null) || {
+              echo "::error::$AWS_NAME — get-function-configuration failed; treating as drift"
+              DRIFT=$((DRIFT + 1))
+              continue
+            }
+            LAST_MOD_NORM=$(normalize_ts "$LAST_MOD")
+            if [[ "$LAST_MOD_NORM" < "$FLOOR_NORM" ]]; then
+              echo "::error::$AWS_NAME LastModified=$LAST_MOD predates commit floor $DEPLOY_FLOOR_TS — deploy did NOT land"
+              DRIFT=$((DRIFT + 1))
+            else
+              echo "✓ $AWS_NAME LastModified=$LAST_MOD"
+            fi
+          done
+
+          if [ "$DRIFT" -gt 0 ]; then
+            echo "::error::$DRIFT Lambda(s) failed to deploy. See #536 for runbook."
+            exit 1
+          fi

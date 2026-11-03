@@ -605,7 +605,7 @@ resource "aws_lambda_function" "recipe_fleet_frontend_sync" {
   environment {
     variables = {
       GITHUB_OWNER           = "AminAlAit"
-      GITHUB_REPO            = "qgi-frontend"
+      GITHUB_REPO            = "qgi"
       GITHUB_WORKFLOW_FILE   = "sync-te-fleet-vintage.yml"
       GITHUB_REF             = "main"
       GITHUB_PAT_SECRET_NAME = "qgi-github-frontend-dispatch-pat"

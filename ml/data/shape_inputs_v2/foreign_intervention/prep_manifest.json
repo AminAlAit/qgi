@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-05-17T21:51:23.298122+00:00",
+  "recipe_id": "foreign_intervention",
+  "canonical_length_T": 5,
+  "key_indicators_requested": [
+    "v2x_clpol",
+    "v2x_clpriv",
+    "SM.POP.NETM",
+    "SP.DYN.LE00.IN",
+    "SP.DYN.TFRT.IN"
+  ],
+  "key_indicators_available_locally": [
+    "SM.POP.NETM",
+    "SP.DYN.LE00.IN",
+    "SP.DYN.TFRT.IN",
+    "v2x_clpol",
+    "v2x_clpriv"
+  ],
+  "key_indicators_missing_from_local_panel": [],
+  "indicator_coverage_fraction": 1.0,
+  "counts": {
+    "n_pos_input": 202,
+    "n_country_not_in_panel": 3,
+    "n_baseline_too_short": 89,
+    "n_pos_after_baseline_filter": 110,
+    "n_alignment_dropouts": 0,
+    "n_pos_final": 110,
+    "n_instances_in_parquet": 110
+  },
+  "dropout_sample": [
+    {
+      "country_id": "afghanistan",
+      "event_year": 1973,
+      "reason": "BASELINE_TOO_SHORT:SM.POP.NETM (n_obs=8<20, baseline=[1948,1967])"
+    },
+    {
+      "country_id": "afghanistan",
+      "event_year": 1979,
+      "reason": "BASELINE_TOO_SHORT:SM.POP.NETM (n_obs=14<20, baseline=[1954,1973])"
+    },
+    {
+      "country_id": "algeria",
+      "event_year": 1976,
+      "reason": "BASELINE_TOO_SHORT:SM.POP.NETM (n_obs=11<20, baseline=[1951,1970])"
+    },
+    {
+      "country_id": "angola",
+      "event_year": 1975,
+      "reason": "BASELINE_TOO_SHORT:SM.POP.NETM (n_obs=10<20, baseline=[1950,1969])"
+    },
+    {
+      "country_id": "angola",
+      "event_year": 1978,
+      "reason": "BASELINE_TOO_SHORT:SM.POP.NETM (n_obs=13<20, baseline=[1953,1972])"
+    }
+  ],
+  "baseline_too_short_examples": [
+    {
+      "country_id": "afghanistan",
+      "event_year": 1973,
+      "reason": "BASELINE_TOO_SHORT:SM.POP.NETM (n_obs=8<20, baseline=[1948,1967])"
+    },
+    {
+      "country_id": "afghanistan",
+      "event_year": 1979,
+      "reason": "BASELINE_TOO_SHORT:SM.POP.NETM (n_obs=14<20, baseline=[1954,1973])"
+    },
+    {
+      "country_id": "algeria",
+      "event_year": 1976,
+      "reason": "BASELINE_TOO_SHORT:SM.POP.NETM (n_obs=11<20, baseline=[1951,1970])"
+    },
+    {
+      "country_id": "angola",
+      "event_year": 1975,
+      "reason": "BASELINE_TOO_SHORT:SM.POP.NETM (n_obs=10<20, baseline=[1950,1969])"
+    },
+    {
+      "country_id": "angola",
+      "event_year": 1978,
+      "reason": "BASELINE_TOO_SHORT:SM.POP.NETM (n_obs=13<20, baseline=[1953,1972])"
+    }
+  ],
+  "source_shas": {
+    "qgi_ml_commit": "94af5a290b776099458d1e419f5c4d56ff604aae",
+    "qgi_data_commit": "45cf568bc8883c520d4ef1eb9cc2ad2f8d4669f8",
+    "aligned_parquet_sha256": "0386fba2c93e4f0361fcac5493a8a6093176132c88e637bf9f6a98aaef036529",
+    "positives_csv_sha256": "82dfca09c893f06b66c19f9f9a6d2c807b59d84fd892759e9092502e5841cf02",
+    "indicator_panel_sha256": "87638df188e50defd5062326e9303c59c239ebbe064cfaebdc0812a6ac7b0b20"
+  },
+  "fitter_input_contract": {
+    "indicator_panel": "data\\shape_inputs_v2\\foreign_intervention\\indicator_panel.parquet",
+    "positive_instances": "data\\shape_inputs_v2\\foreign_intervention\\positives.csv",
+    "indicator_ids": "SM.POP.NETM,SP.DYN.LE00.IN,SP.DYN.TFRT.IN,v2x_clpol,v2x_clpriv",
+    "T_r": 5
+  },
+  "honesty_disclosure": "Local panel snapshot contains only 5/5 key indicators for foreign_intervention. Missing: []. G3/G4 substrate verdicts are BLOCKED-on-substrate-availability per Tariq's audit. Re-run on full 104-indicator production panel required (see substrate-audit-phase-1.json P0 actions)."
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-05-22T18:21:09.375912+00:00",
+  "recipe_id": "terrorist_attack",
+  "canonical_length_T": 5,
+  "key_indicators_requested": [
+    "v2x_polyarchy",
+    "v2x_libdem",
+    "v2x_clpol",
+    "v2csreprss",
+    "v2pepwrgen"
+  ],
+  "key_indicators_available_locally": [
+    "v2csreprss",
+    "v2pepwrgen",
+    "v2x_clpol",
+    "v2x_libdem",
+    "v2x_polyarchy"
+  ],
+  "key_indicators_missing_from_local_panel": [],
+  "indicator_coverage_fraction": 1.0,
+  "counts": {
+    "n_pos_input": 257,
+    "n_country_not_in_panel": 1,
+    "n_baseline_too_short": 10,
+    "n_pos_after_baseline_filter": 246,
+    "n_alignment_dropouts": 0,
+    "n_pos_final": 246,
+    "n_instances_in_parquet": 246
+  },
+  "dropout_sample": [
+    {
+      "country_id": "armenia",
+      "event_year": 1972,
+      "reason": "BASELINE_TOO_SHORT:v2csreprss (country not in panel)"
+    },
+    {
+      "country_id": "armenia",
+      "event_year": 1983,
+      "reason": "BASELINE_TOO_SHORT:v2csreprss (country not in panel)"
+    },
+    {
+      "country_id": "belarus",
+      "event_year": 2010,
+      "reason": "BASELINE_TOO_SHORT:v2csreprss (n_obs=15<20, baseline=[1985,2004])"
+    },
+    {
+      "country_id": "germany",
+      "event_year": 1972,
+      "reason": "BASELINE_TOO_SHORT:v2csreprss (n_obs=18<20, baseline=[1947,1966])"
+    },
+    {
+      "country_id": "israel",
+      "event_year": 1972,
+      "reason": "BASELINE_TOO_SHORT:v2csreprss (n_obs=19<20, baseline=[1947,1966])"
+    }
+  ],
+  "baseline_too_short_examples": [
+    {
+      "country_id": "armenia",
+      "event_year": 1972,
+      "reason": "BASELINE_TOO_SHORT:v2csreprss (country not in panel)"
+    },
+    {
+      "country_id": "armenia",
+      "event_year": 1983,
+      "reason": "BASELINE_TOO_SHORT:v2csreprss (country not in panel)"
+    },
+    {
+      "country_id": "belarus",
+      "event_year": 2010,
+      "reason": "BASELINE_TOO_SHORT:v2csreprss (n_obs=15<20, baseline=[1985,2004])"
+    },
+    {
+      "country_id": "germany",
+      "event_year": 1972,
+      "reason": "BASELINE_TOO_SHORT:v2csreprss (n_obs=18<20, baseline=[1947,1966])"
+    },
+    {
+      "country_id": "israel",
+      "event_year": 1972,
+      "reason": "BASELINE_TOO_SHORT:v2csreprss (n_obs=19<20, baseline=[1947,1966])"
+    }
+  ],
+  "source_shas": {
+    "qgi_ml_commit": "d7529d9219aff97176ea49d51d22d047aaae5004",
+    "qgi_data_commit": "1d802253bc8bd7ce92f61b089a88d6004de293e6",
+    "aligned_parquet_sha256": "a2f75c361616cf08ef04cfccf68390f9aaf5296bd0f6b3af47df349c28c30148",
+    "positives_csv_sha256": "3b3fbe123d6646fbfcef240693e2402d22fcd4e9d63d7ad0ecb6c447ca5e535d",
+    "indicator_panel_sha256": "7355ff3c57a5ee5dd9dce5ef742cb9943a88b9a74fec6535ae6ecd2517a73cb5"
+  },
+  "fitter_input_contract": {
+    "indicator_panel": "data\\shape_inputs_v2\\terrorist_attack\\indicator_panel.parquet",
+    "positive_instances": "data\\shape_inputs_v2\\terrorist_attack\\positives.csv",
+    "indicator_ids": "v2csreprss,v2pepwrgen,v2x_clpol,v2x_libdem,v2x_polyarchy",
+    "T_r": 5
+  },
+  "honesty_disclosure": "Local panel snapshot contains only 5/5 key indicators for terrorist_attack. Missing: []. G3/G4 substrate verdicts are BLOCKED-on-substrate-availability per Tariq's audit. Re-run on full 104-indicator production panel required (see substrate-audit-phase-1.json P0 actions)."
+}
