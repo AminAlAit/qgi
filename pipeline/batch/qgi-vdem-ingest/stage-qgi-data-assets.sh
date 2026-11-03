@@ -3,10 +3,10 @@
 # expects in `_staged/` into place, for local docker builds.
 #
 # Usage:
-#   ./stage-qgi-data-assets.sh <path-to-qgi-data-checkout>
+#   ./stage-qgi-data-assets.sh <path-to-data-tools-checkout>
 #
-# Example (sibling repos):
-#   ./stage-qgi-data-assets.sh ../../../qgi-data
+# Example (monorepo):
+#   ./stage-qgi-data-assets.sh ../../../data-tools
 #
 # CI uses an equivalent inline `cp` step in `.github/workflows/ecr-push.yml`
 # (see the `qgi-vdem-ingest` build steps there). This script is for

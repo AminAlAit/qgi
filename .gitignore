@@ -37,6 +37,18 @@ venv/
 data/raw/*
 data/processed/*
 !data/fixtures/
+ml/data/*
+!ml/data/shape_inputs_v2/
+!ml/data/shape_inputs_v2/**
+ml/enrichment/
+ml/experiments/
+ml/output/
+ml/results/
+ml/backtest_*.json
+frontend/data/te-fleet-run-1/
+frontend/.vercel/
+pipeline/batch/qgi-vdem-ingest/_staged/
+data-tools/workflows/events/
 
 # Node.js / Frontend
 node_modules/

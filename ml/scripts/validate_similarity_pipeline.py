@@ -66,7 +66,7 @@ def load_panels(selected: list[str], panel_dir: Path) -> dict:
 
 
 def load_cohort_assignments() -> dict:
-    with open(REPO_ROOT.parent / "qgi-data" / "reference" / "cohort-assignments.json", encoding="utf-8") as f:
+    with open(REPO_ROOT.parent / "data-tools" / "reference" / "cohort-assignments.json", encoding="utf-8") as f:
         return json.load(f)["assignments"]
 
 

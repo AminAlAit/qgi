@@ -1,0 +1,100 @@
+name: Bake country-risks.json from S3
+
+# #417 Option C — triggered by the qgi-frontend-bake-trigger Lambda in the
+# staging AWS account whenever the pipeline publishes a new
+# dashboard/country-risks.json. Pulls the file from S3 via OIDC (read-only
+# on the one key), writes to frontend/data/country-risks.json, and opens
+# an automated PR against main.
+
+on:
+  schedule:
+    - cron: '30 6 * * *'
+  workflow_dispatch:
+    inputs:
+      bucket:
+        description: "S3 bucket the file came from (for commit message traceability)"
+        required: false
+        default: "qgi-data-lake-771606957899"
+      key:
+        description: "S3 key"
+        required: false
+        default: "dashboard/country-risks.json"
+      etag:
+        description: "S3 ETag for traceability"
+        required: false
+        default: ""
+      message:
+        description: "Commit message (override)"
+        required: false
+        default: ""
+
+jobs:
+  bake:
+    name: Pull country-risks.json and open PR
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    permissions:
+      id-token: write # OIDC to AWS
+      contents: write # git commit + push branch
+      pull-requests: write # gh pr create
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Configure AWS credentials via OIDC
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::771606957899:role/github-actions-qgi-frontend-s3-read
+          aws-region: eu-central-1
+
+      - name: Pull country-risks.json from S3
+        env:
+          S3_BUCKET: ${{ inputs.bucket || 'qgi-data-lake-771606957899' }}
+          S3_KEY: ${{ inputs.key || 'dashboard/country-risks.json' }}
+        run: |
+          aws s3 cp \
+            "s3://${S3_BUCKET}/${S3_KEY}" \
+            data/country-risks.json
+
+      - name: Commit + open PR if changed
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          S3_BUCKET: ${{ inputs.bucket || 'qgi-data-lake-771606957899' }}
+          S3_KEY: ${{ inputs.key || 'dashboard/country-risks.json' }}
+          ETAG: ${{ inputs.etag }}
+          CUSTOM_MSG: ${{ inputs.message }}
+        run: |
+          git config user.name  "qgi-bake-bot"
+          git config user.email "bake-bot@qgintelligence.com"
+
+          if git diff --quiet data/country-risks.json; then
+            echo "No change in frontend/data/country-risks.json — nothing to commit."
+            exit 0
+          fi
+
+          default_msg="chore(data): bake country-risks.json from s3://${S3_BUCKET}/${S3_KEY}"
+          if [ -n "$ETAG" ]; then
+            default_msg="$default_msg (etag ${ETAG:0:8})"
+          fi
+          msg="$CUSTOM_MSG"
+          if [ -z "$msg" ]; then
+            msg="$default_msg"
+          fi
+
+          branch="chore/bake-country-risks-$(date -u +%Y%m%d-%H%M%S)"
+          git checkout -b "$branch"
+          git add data/country-risks.json
+          git commit -m "$msg"
+          git push origin "$branch"
+
+          gh pr create \
+            --title "$msg" \
+            --body "Automated S3 country-risks.json bake from \`s3://${S3_BUCKET}/${S3_KEY}\`." \
+            --base main \
+            --head "$branch"

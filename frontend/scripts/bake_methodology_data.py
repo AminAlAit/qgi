@@ -31,7 +31,7 @@ from urllib.parse import urlparse
 SCRIPT_DIR = Path(__file__).resolve().parent
 FRONTEND_DIR = SCRIPT_DIR.parent
 REPO_ROOT = FRONTEND_DIR.parent
-QGI_DATA = REPO_ROOT / "qgi-data"
+QGI_DATA = REPO_ROOT / "data-tools"
 EVENTS_CURATED = QGI_DATA / "events" / "curated"
 EVENTS_VERIFICATION = QGI_DATA / "events" / "verification"
 TAXONOMY = QGI_DATA / "events" / "taxonomy_hierarchy.json"

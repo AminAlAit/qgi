@@ -70,7 +70,7 @@ logger = logging.getLogger("prepare_shape_input_panels")
 # ---------------------------------------------------------------------------
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-QGDATA_ROOT = REPO_ROOT.parent / "qgi-data"
+QGDATA_ROOT = REPO_ROOT.parent / "data-tools"
 
 # Local indicator panel paths (Tariq's audit scope: union of both parquets).
 PANEL_PATHS = [

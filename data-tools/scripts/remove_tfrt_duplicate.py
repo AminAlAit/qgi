@@ -39,7 +39,7 @@ import openpyxl
 SCRIPT_DIR = Path(__file__).parent
 XLSX_PATH = SCRIPT_DIR.parent / "indicators" / "control-surface.xlsx"
 INDEXES_JSON = (
-    SCRIPT_DIR.parent.parent / "qgi-frontend" / "data" / "indexes.json"
+    SCRIPT_DIR.parent.parent / "frontend" / "data" / "indexes.json"
 )
 
 DUPLICATE_ID_STRING = "SP.DYN.TFRT.IN"

@@ -51,7 +51,7 @@ import s3fs
 SCRIPT_PATH = Path(__file__).resolve()
 REPO_ROOT = SCRIPT_PATH.parents[2]
 DSCDI_MODULE_PATH = (
-    REPO_ROOT / "qgi-pipeline" / "batch" / "dscdi-finder" / "src" / "dscdi_finder.py"
+    REPO_ROOT / "pipeline" / "batch" / "dscdi-finder" / "src" / "dscdi_finder.py"
 )
 
 _spec = importlib.util.spec_from_file_location("dscdi_finder", DSCDI_MODULE_PATH)

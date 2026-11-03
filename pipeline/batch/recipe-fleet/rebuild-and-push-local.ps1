@@ -63,7 +63,7 @@ if (-not $QgiPipelineRoot) {
     $QgiPipelineRoot = (Resolve-Path "$PSScriptRoot\..\..").Path
 }
 if (-not $QgiMlRoot) {
-    $QgiMlRoot = (Resolve-Path "$QgiPipelineRoot\..\qgi-ml").Path
+    $QgiMlRoot = (Resolve-Path "$QgiPipelineRoot\..\ml").Path
 }
 
 Write-Host "[paths] qgi-pipeline = $QgiPipelineRoot" -ForegroundColor Cyan
