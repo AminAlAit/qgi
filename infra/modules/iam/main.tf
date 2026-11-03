@@ -25,10 +25,13 @@ resource "aws_iam_role" "github_actions_lambda_deploy" {
           "token.actions.githubusercontent.com:aud" = "sts.amazonaws.com"
         }
         StringLike = {
-          # Allow from main branch and version tags
+          # Allow from main branch and version tags (supports both standard and
+          # GitHub immutable @owner_id/@repo_id OIDC subject claim formats)
           "token.actions.githubusercontent.com:sub" = [
             "repo:AminAlAit/qgi:ref:refs/heads/main",
             "repo:AminAlAit/qgi:ref:refs/tags/*",
+            "repo:AminAlAit@22429612/qgi@1435774593:ref:refs/heads/main",
+            "repo:AminAlAit@22429612/qgi@1435774593:ref:refs/tags/*",
           ]
         }
       }
@@ -46,7 +49,7 @@ resource "aws_iam_role_policy" "github_actions_lambda_deploy" {
     Version = "2012-10-17"
     Statement = [{
       Effect   = "Allow"
-      Action   = ["lambda:UpdateFunctionCode", "lambda:GetFunction"]
+      Action   = ["lambda:UpdateFunctionCode", "lambda:GetFunction", "lambda:GetFunctionConfiguration"]
       Resource = "arn:aws:lambda:${var.region}:${var.aws_account_id}:function:qgi-*"
     }]
   })
@@ -81,6 +84,8 @@ resource "aws_iam_role" "github_actions_ecr_push" {
           "token.actions.githubusercontent.com:sub" = [
             "repo:AminAlAit/qgi:ref:refs/heads/main",
             "repo:AminAlAit/qgi:ref:refs/tags/*",
+            "repo:AminAlAit@22429612/qgi@1435774593:ref:refs/heads/main",
+            "repo:AminAlAit@22429612/qgi@1435774593:ref:refs/tags/*",
           ]
         }
       }
@@ -792,9 +797,11 @@ resource "aws_iam_role" "github_actions_frontend_s3_read" {
         StringLike = {
           # Allow the workflow from main or any workflow_dispatch caller
           # on the repo. Dispatch events from the Lambda carry a sub like
-          # `repo:AminAlAit/qgi:ref:refs/heads/main` so matching
-          # main is sufficient.
-          "token.actions.githubusercontent.com:sub" = "repo:AminAlAit/qgi:ref:refs/heads/main"
+          # `repo:AminAlAit/qgi:ref:refs/heads/main` (or immutable ID form).
+          "token.actions.githubusercontent.com:sub" = [
+            "repo:AminAlAit/qgi:ref:refs/heads/main",
+            "repo:AminAlAit@22429612/qgi@1435774593:ref:refs/heads/main",
+          ]
         }
       }
     }]
@@ -844,7 +851,10 @@ resource "aws_iam_role" "github_actions_frontend_te_fleet_sync" {
           "token.actions.githubusercontent.com:aud" = "sts.amazonaws.com"
         }
         StringLike = {
-          "token.actions.githubusercontent.com:sub" = "repo:AminAlAit/qgi:ref:refs/heads/main"
+          "token.actions.githubusercontent.com:sub" = [
+            "repo:AminAlAit/qgi:ref:refs/heads/main",
+            "repo:AminAlAit@22429612/qgi@1435774593:ref:refs/heads/main",
+          ]
         }
       }
     }]
