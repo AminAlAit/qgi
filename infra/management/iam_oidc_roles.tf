@@ -263,7 +263,7 @@ resource "aws_iam_role_policy" "qgi_lambda_deploy" {
 
 # ---------------------------------------------------------------------------
 # qgi — Key rotation role
-# Used by the key rotation workflow to refresh terraform-deployer keys
+# Used by the rotate-codespace-keys.yml workflow to refresh claude-code-terraform-deployer keys
 # ---------------------------------------------------------------------------
 
 data "aws_iam_policy_document" "key_rotator_assume" {
@@ -283,22 +283,23 @@ data "aws_iam_policy_document" "key_rotator_assume" {
     }
 
     condition {
-      test     = "StringLike"
+      test     = "StringEquals"
       variable = "${local.oidc_provider_url}:sub"
-      values   = ["repo:AminAlAit/qgi:*"]
+      # Only the main branch of this repo can rotate keys
+      values = ["repo:AminAlAit/qgi:ref:refs/heads/main"]
     }
   }
 }
 
 resource "aws_iam_role" "key_rotator" {
-  name               = "github-actions-key-rotator"
+  name               = "github-actions-codespace-key-rotator"
   assume_role_policy = data.aws_iam_policy_document.key_rotator_assume.json
-  description        = "OIDC role for AminAlAit/qgi - rotates terraform-deployer IAM keys"
+  description        = "OIDC role for AminAlAit/qgi - rotates claude-code-terraform-deployer IAM keys"
 }
 
 data "aws_iam_policy_document" "key_rotator" {
   statement {
-    sid    = "RotateDeployerKeys"
+    sid    = "RotateCodespaceKeys"
     effect = "Allow"
     actions = [
       "iam:CreateAccessKey",
@@ -306,13 +307,13 @@ data "aws_iam_policy_document" "key_rotator" {
       "iam:ListAccessKeys",
     ]
     resources = [
-      "arn:aws:iam::${data.aws_caller_identity.current.account_id}:user/terraform-deployer",
+      "arn:aws:iam::${data.aws_caller_identity.current.account_id}:user/claude-code-terraform-deployer",
     ]
   }
 }
 
 resource "aws_iam_role_policy" "key_rotator" {
-  name   = "key-rotation-policy"
+  name   = "codespace-key-rotation-policy"
   role   = aws_iam_role.key_rotator.id
   policy = data.aws_iam_policy_document.key_rotator.json
 }

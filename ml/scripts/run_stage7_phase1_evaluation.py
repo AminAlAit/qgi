@@ -649,7 +649,7 @@ def _main(argv: list[str] | None = None) -> int:
     dispatch = load_dispatch()
     assert_dispatch_invariants(dispatch)
     cohort_assignments = json.loads(
-        (REPO_ROOT.parent / "qgi-data" / "reference" / "cohort-assignments.json").read_text(
+        (REPO_ROOT.parent / "data-tools" / "reference" / "cohort-assignments.json").read_text(
             encoding="utf-8"
         )
     )["assignments"]

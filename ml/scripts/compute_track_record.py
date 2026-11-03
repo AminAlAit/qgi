@@ -292,7 +292,7 @@ def _build_parser() -> argparse.ArgumentParser:
                         default=REPO_ROOT / "data" / "parquet_panels",
                         help="Directory containing per-indicator parquet panels.")
     parser.add_argument("--cohort-sidecar", type=Path,
-                        default=REPO_ROOT.parent / "qgi-data" / "reference" / "cohort-assignments.json",
+                        default=REPO_ROOT.parent / "data-tools" / "reference" / "cohort-assignments.json",
                         help="Path to cohort-assignments.json.")
     parser.add_argument("--output-dir", type=Path, required=True,
                         help="Output directory for track-record-*.json.")

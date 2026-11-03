@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-05-23T14:46:30.862602+00:00",
+  "recipe_id": "elections_and_voting",
+  "canonical_length_T": 5,
+  "key_indicators_requested": [
+    "v2x_polyarchy",
+    "v2xel_frefair"
+  ],
+  "key_indicators_available_locally": [
+    "v2x_polyarchy",
+    "v2xel_frefair"
+  ],
+  "key_indicators_missing_from_local_panel": [],
+  "indicator_coverage_fraction": 1.0,
+  "counts": {
+    "n_pos_input": 1142,
+    "n_country_not_in_panel": 132,
+    "n_baseline_too_short": 93,
+    "n_pos_after_baseline_filter": 917,
+    "n_alignment_dropouts": 0,
+    "n_pos_final": 917,
+    "n_instances_in_parquet": 917
+  },
+  "dropout_sample": [
+    {
+      "country_id": "andorra",
+      "event_year": 1933,
+      "reason": "COUNTRY_NOT_IN_PANEL"
+    },
+    {
+      "country_id": "andorra",
+      "event_year": 1970,
+      "reason": "COUNTRY_NOT_IN_PANEL"
+    },
+    {
+      "country_id": "andorra",
+      "event_year": 1994,
+      "reason": "COUNTRY_NOT_IN_PANEL"
+    },
+    {
+      "country_id": "antigua_and_barbuda",
+      "event_year": 1984,
+      "reason": "COUNTRY_NOT_IN_PANEL"
+    },
+    {
+      "country_id": "antigua_and_barbuda",
+      "event_year": 1989,
+      "reason": "COUNTRY_NOT_IN_PANEL"
+    }
+  ],
+  "baseline_too_short_examples": [
+    {
+      "country_id": "armenia",
+      "event_year": 1990,
+      "reason": "BASELINE_TOO_SHORT:v2x_polyarchy (country not in panel)"
+    },
+    {
+      "country_id": "armenia",
+      "event_year": 2003,
+      "reason": "BASELINE_TOO_SHORT:v2x_polyarchy (n_obs=8<20, baseline=[1978,1997])"
+    },
+    {
+      "country_id": "austria",
+      "event_year": 1949,
+      "reason": "BASELINE_TOO_SHORT:v2x_polyarchy (n_obs=15<20, baseline=[1924,1943])"
+    },
+    {
+      "country_id": "austria",
+      "event_year": 1966,
+      "reason": "BASELINE_TOO_SHORT:v2x_polyarchy (n_obs=16<20, baseline=[1941,1960])"
+    },
+    {
+      "country_id": "azerbaijan",
+      "event_year": 1992,
+      "reason": "BASELINE_TOO_SHORT:v2x_polyarchy (country not in panel)"
+    }
+  ],
+  "source_shas": {
+    "qgi_ml_commit": "a090a927aa735b5bc25512d6f9be0616438ce4ca",
+    "qgi_data_commit": "43a9ec08f312aac29fa76c94d851f233a9e037e0",
+    "aligned_parquet_sha256": "932fbce85b9446f1ef95d16b19e576e3e907c8e454c2b1b38b26675e9076e58b",
+    "positives_csv_sha256": "db4428cb3b4b2ff0de089e0ddfb269892c93adb44a38cd6775138286d0beacee",
+    "indicator_panel_sha256": "be3dc6a39260fe157b5ea7be763693f4068994297bd4704cd38a9bf9c0502549"
+  },
+  "fitter_input_contract": {
+    "indicator_panel": "data\\shape_inputs_v2\\elections_and_voting\\indicator_panel.parquet",
+    "positive_instances": "data\\shape_inputs_v2\\elections_and_voting\\positives.csv",
+    "indicator_ids": "v2x_polyarchy,v2xel_frefair",
+    "T_r": 5
+  },
+  "honesty_disclosure": "Local panel snapshot contains only 2/2 key indicators for elections_and_voting. Missing: []. G3/G4 substrate verdicts are BLOCKED-on-substrate-availability per Tariq's audit. Re-run on full 104-indicator production panel required (see substrate-audit-phase-1.json P0 actions)."
+}

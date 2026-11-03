@@ -59,12 +59,12 @@ import s3fs
 SCRIPT_PATH = Path(__file__).resolve()
 REPO_ROOT = SCRIPT_PATH.parents[2]
 DSCDI_MODULE_PATH = (
-    REPO_ROOT / "qgi-pipeline" / "batch" / "dscdi-finder" / "src" / "dscdi_finder.py"
+    REPO_ROOT / "pipeline" / "batch" / "dscdi-finder" / "src" / "dscdi_finder.py"
 )
 INDICATOR_PREFIX = "pipeline-A-indicator-extractor/output/parquet-completed/"
-DEFAULT_AUDIT_PATH = REPO_ROOT / "qgi-data" / "reference" / "indicator-stationarity-audit-v2.json"
-DEFAULT_PAIRWISE_OUTPUT = REPO_ROOT / "qgi-data" / "reference" / "stage-e-pairwise-diagnostic.json"
-DEFAULT_SURVIVAL_OUTPUT = REPO_ROOT / "qgi-data" / "reference" / "stage-e-survival-fraction.json"
+DEFAULT_AUDIT_PATH = REPO_ROOT / "data-tools" / "reference" / "indicator-stationarity-audit-v2.json"
+DEFAULT_PAIRWISE_OUTPUT = REPO_ROOT / "data-tools" / "reference" / "stage-e-pairwise-diagnostic.json"
+DEFAULT_SURVIVAL_OUTPUT = REPO_ROOT / "data-tools" / "reference" / "stage-e-survival-fraction.json"
 
 # Load DSCDI module
 _spec = importlib.util.spec_from_file_location("dscdi_finder", DSCDI_MODULE_PATH)

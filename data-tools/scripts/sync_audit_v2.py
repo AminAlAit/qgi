@@ -104,7 +104,7 @@ def main() -> int:
         print(
             f"ERROR: expected schema_version={EXPECTED_SCHEMA_VERSION}, got {schema!r}. "
             f"If the audit output schema was bumped, update EXPECTED_SCHEMA_VERSION here "
-            f"AND the dscdi-finder consumer (qgi-pipeline/batch/dscdi-finder/src/dscdi_finder.py "
+            f"AND the dscdi-finder consumer (pipeline/batch/dscdi-finder/src/dscdi_finder.py "
             f"load_audit_classifications) in lockstep.",
             file=sys.stderr,
         )

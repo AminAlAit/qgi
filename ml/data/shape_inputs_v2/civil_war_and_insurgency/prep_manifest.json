@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-05-17T21:51:21.046631+00:00",
+  "recipe_id": "civil_war_and_insurgency",
+  "canonical_length_T": 5,
+  "key_indicators_requested": [
+    "v2cacamps",
+    "v2x_clphy",
+    "v2csreprss",
+    "SM.POP.NETM",
+    "SP.DYN.LE00.IN"
+  ],
+  "key_indicators_available_locally": [
+    "SM.POP.NETM",
+    "SP.DYN.LE00.IN",
+    "v2cacamps",
+    "v2csreprss",
+    "v2x_clphy"
+  ],
+  "key_indicators_missing_from_local_panel": [],
+  "indicator_coverage_fraction": 1.0,
+  "counts": {
+    "n_pos_input": 574,
+    "n_country_not_in_panel": 2,
+    "n_baseline_too_short": 316,
+    "n_pos_after_baseline_filter": 256,
+    "n_alignment_dropouts": 0,
+    "n_pos_final": 256,
+    "n_instances_in_parquet": 256
+  },
+  "dropout_sample": [
+    {
+      "country_id": "afghanistan",
+      "event_year": 1974,
+      "reason": "BASELINE_TOO_SHORT:SM.POP.NETM (n_obs=9<20, baseline=[1949,1968])"
+    },
+    {
+      "country_id": "afghanistan",
+      "event_year": 1975,
+      "reason": "BASELINE_TOO_SHORT:SM.POP.NETM (n_obs=10<20, baseline=[1950,1969])"
+    },
+    {
+      "country_id": "afghanistan",
+      "event_year": 1978,
+      "reason": "BASELINE_TOO_SHORT:SM.POP.NETM (n_obs=13<20, baseline=[1953,1972])"
+    },
+    {
+      "country_id": "afghanistan",
+      "event_year": 1979,
+      "reason": "BASELINE_TOO_SHORT:SM.POP.NETM (n_obs=14<20, baseline=[1954,1973])"
+    },
+    {
+      "country_id": "afghanistan",
+      "event_year": 1980,
+      "reason": "BASELINE_TOO_SHORT:SM.POP.NETM (n_obs=15<20, baseline=[1955,1974])"
+    }
+  ],
+  "baseline_too_short_examples": [
+    {
+      "country_id": "afghanistan",
+      "event_year": 1974,
+      "reason": "BASELINE_TOO_SHORT:SM.POP.NETM (n_obs=9<20, baseline=[1949,1968])"
+    },
+    {
+      "country_id": "afghanistan",
+      "event_year": 1975,
+      "reason": "BASELINE_TOO_SHORT:SM.POP.NETM (n_obs=10<20, baseline=[1950,1969])"
+    },
+    {
+      "country_id": "afghanistan",
+      "event_year": 1978,
+      "reason": "BASELINE_TOO_SHORT:SM.POP.NETM (n_obs=13<20, baseline=[1953,1972])"
+    },
+    {
+      "country_id": "afghanistan",
+      "event_year": 1979,
+      "reason": "BASELINE_TOO_SHORT:SM.POP.NETM (n_obs=14<20, baseline=[1954,1973])"
+    },
+    {
+      "country_id": "afghanistan",
+      "event_year": 1980,
+      "reason": "BASELINE_TOO_SHORT:SM.POP.NETM (n_obs=15<20, baseline=[1955,1974])"
+    }
+  ],
+  "source_shas": {
+    "qgi_ml_commit": "94af5a290b776099458d1e419f5c4d56ff604aae",
+    "qgi_data_commit": "45cf568bc8883c520d4ef1eb9cc2ad2f8d4669f8",
+    "aligned_parquet_sha256": "b7b6bcc1815ab11779b34c91fe79a52d0575fd015e8cff89d750bf4373805990",
+    "positives_csv_sha256": "b9bc328e2979e519bdb5d06c3a70811888c5d20b1e3f10697ef8818ac437bf00",
+    "indicator_panel_sha256": "f1ccb5fb36e6111b88354cb3ecc6ab1054059aa3ff75e57cd657dc5794efe5a1"
+  },
+  "fitter_input_contract": {
+    "indicator_panel": "data\\shape_inputs_v2\\civil_war_and_insurgency\\indicator_panel.parquet",
+    "positive_instances": "data\\shape_inputs_v2\\civil_war_and_insurgency\\positives.csv",
+    "indicator_ids": "SM.POP.NETM,SP.DYN.LE00.IN,v2cacamps,v2csreprss,v2x_clphy",
+    "T_r": 5
+  },
+  "honesty_disclosure": "Local panel snapshot contains only 5/5 key indicators for civil_war_and_insurgency. Missing: []. G3/G4 substrate verdicts are BLOCKED-on-substrate-availability per Tariq's audit. Re-run on full 104-indicator production panel required (see substrate-audit-phase-1.json P0 actions)."
+}

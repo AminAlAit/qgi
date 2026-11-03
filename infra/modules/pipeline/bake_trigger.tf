@@ -87,7 +87,7 @@ resource "aws_lambda_function" "frontend_bake_trigger" {
   environment {
     variables = {
       GITHUB_OWNER           = "AminAlAit"
-      GITHUB_REPO            = "qgi-frontend"
+      GITHUB_REPO            = "qgi"
       GITHUB_WORKFLOW_FILE   = "bake-country-risks.yml"
       GITHUB_REF             = "main"
       GITHUB_PAT_SECRET_NAME = aws_secretsmanager_secret.github_frontend_dispatch_pat.name
