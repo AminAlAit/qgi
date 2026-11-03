@@ -118,7 +118,10 @@ data "aws_iam_policy_document" "qgi_ecr_assume" {
     condition {
       test     = "StringLike"
       variable = "${local.oidc_provider_url}:sub"
-      values   = ["repo:AminAlAit/qgi:*"]
+      values = [
+        "repo:AminAlAit/qgi:*",
+        "repo:AminAlAit@22429612/qgi@1435774593:*",
+      ]
     }
   }
 }
@@ -226,7 +229,10 @@ data "aws_iam_policy_document" "qgi_lambda_deploy_assume" {
     condition {
       test     = "StringLike"
       variable = "${local.oidc_provider_url}:sub"
-      values   = ["repo:AminAlAit/qgi:*"]
+      values = [
+        "repo:AminAlAit/qgi:*",
+        "repo:AminAlAit@22429612/qgi@1435774593:*",
+      ]
     }
   }
 }
@@ -286,7 +292,10 @@ data "aws_iam_policy_document" "key_rotator_assume" {
       test     = "StringEquals"
       variable = "${local.oidc_provider_url}:sub"
       # Only the main branch of this repo can rotate keys
-      values = ["repo:AminAlAit/qgi:ref:refs/heads/main"]
+      values = [
+        "repo:AminAlAit/qgi:ref:refs/heads/main",
+        "repo:AminAlAit@22429612/qgi@1435774593:ref:refs/heads/main",
+      ]
     }
   }
 }

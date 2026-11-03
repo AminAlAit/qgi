@@ -66,6 +66,15 @@ jobs:
         with:
           python-version: '3.13'
 
+      - name: Record pre-deploy timestamp
+        id: floor
+        run: |
+          FLOOR_TS="${{ github.event.head_commit.timestamp }}"
+          if [ -z "$FLOOR_TS" ]; then
+            FLOOR_TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          fi
+          echo "floor_ts=$FLOOR_TS" >> "$GITHUB_OUTPUT"
+
       - name: Deploy Lambdas
         run: |
           if [ -n "${{ inputs.function }}" ]; then
@@ -182,11 +191,7 @@ jobs:
       - name: Verify deploys actually landed
         if: success()
         run: |
-          DEPLOY_FLOOR_TS="${{ github.event.head_commit.timestamp }}"
-          if [ -z "$DEPLOY_FLOOR_TS" ]; then
-            DEPLOY_FLOOR_TS="$GITHUB_RUN_STARTED_AT"
-            echo "::warning::head_commit.timestamp empty (likely workflow_dispatch); using run-started $DEPLOY_FLOOR_TS"
-          fi
+          DEPLOY_FLOOR_TS="${{ steps.floor.outputs.floor_ts }}"
           echo "Deploy floor timestamp: $DEPLOY_FLOOR_TS"
 
           normalize_ts() {
@@ -202,9 +207,6 @@ jobs:
             BEFORE="${{ github.event.before }}"
             if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
               BEFORE="HEAD~1"
-              if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-                echo "::warning::workflow_dispatch + deploy_all=false: verify step may check the wrong Lambda set. Prefer deploy_all=true for manual re-deploys."
-              fi
             fi
             if git diff --name-only "$BEFORE" HEAD | grep -q '^pipeline/lambdas/_shared/'; then
               CHANGED=$(ls -1 pipeline/lambdas/ | grep -v '^_' | sort -u)
@@ -225,16 +227,16 @@ jobs:
             else
               AWS_NAME="qgi-$NAME"
             fi
-            LAST_MOD=$(aws lambda get-function-configuration \
+            LAST_MOD=$(aws lambda get-function \
               --function-name "$AWS_NAME" \
-              --query 'LastModified' --output text 2>/dev/null) || {
-              echo "::error::$AWS_NAME — get-function-configuration failed; treating as drift"
+              --query 'Configuration.LastModified' --output text 2>/dev/null) || {
+              echo "::error::$AWS_NAME — get-function failed; treating as drift"
               DRIFT=$((DRIFT + 1))
               continue
             }
             LAST_MOD_NORM=$(normalize_ts "$LAST_MOD")
             if [[ "$LAST_MOD_NORM" < "$FLOOR_NORM" ]]; then
-              echo "::error::$AWS_NAME LastModified=$LAST_MOD predates commit floor $DEPLOY_FLOOR_TS — deploy did NOT land"
+              echo "::error::$AWS_NAME LastModified=$LAST_MOD predates floor $DEPLOY_FLOOR_TS — deploy did NOT land"
               DRIFT=$((DRIFT + 1))
             else
               echo "✓ $AWS_NAME LastModified=$LAST_MOD"
