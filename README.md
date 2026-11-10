@@ -11,7 +11,7 @@ QGI is an enterprise-grade cloud data platform and quantitative risk modeling en
 
 Live Interactive Platform: **[https://qgintelligence.com](https://qgintelligence.com)**
 
-> **Historical Lineage:** Looking for the original 2024 rapid-research prototype built in Python and Streamlit? View the preserved showcase at **[AminAlAit/qgi-streamlit](https://github.com/AminAlAit/qgi-streamlit)**.
+> **Historical Lineage:** Looking for the original 2024 rapid-research prototype built in Python and Streamlit? View the preserved QGI 3.0 showcase at **[AminAlAit/qgi-3.0](https://github.com/AminAlAit/qgi-3.0)** *(formerly `AminAlAit/qgi-streamlit`)*.
 
 ---
 
@@ -132,11 +132,11 @@ pwsh -ExecutionPolicy Bypass -File ./scripts/verify-monorepo.ps1
 
 ---
 
-## Historical Evolution: 2024 Prototype to 2026 Distributed Monorepo
+## Historical Evolution: 2023–2024 Prototypes to 2026 Distributed Monorepo (QGI 7.0)
 
-QGI began in January 2024 as an exploratory Streamlit prototype ([AminAlAit/qgi-streamlit](https://github.com/AminAlAit/qgi-streamlit)). As indicator density expanded across 214 sovereign entities and six decades of historical records, memory constraints and execution latencies mandated an enterprise re-architecture. The modern monorepo reflects the lessons learned from that prototype: separating compute from state, enforcing multi-tenant cloud blast-radius isolation, and optimizing vectorized columnar pipelines for sub-second terminal queries.
+QGI evolved through seven architectural generations — from initial 2023 pairwise country correlation prototypes (`qgi-1.0` / `trojan`, `qgi-2.0` / `trojan-2.0`) and the 2024 public Streamlit prototype ([AminAlAit/qgi-3.0](https://github.com/AminAlAit/qgi-3.0), formerly `qgi-streamlit`), through local SCDI formalization (`qgi-4.0`) and multi-repo AWS cloud migrations (`qgi-5.0`, `qgi-6.0`), to this unified **QGI 7.0** production monorepo (`AminAlAit/qgi`). As indicator density expanded across 214 sovereign entities and six decades of historical records, memory constraints and execution latencies mandated an enterprise re-architecture: separating compute from state, enforcing multi-tenant cloud blast-radius isolation, and optimizing vectorized columnar pipelines for sub-second terminal queries.
 
-| Architectural Dimension | 2024 Prototype (`qgi-streamlit`) | 2026 Production Monorepo (`qgi`) |
+| Architectural Dimension | 2024 Prototype (`qgi-3.0` / `qgi-streamlit`) | 2026 Production Monorepo (`qgi` / QGI 7.0) |
 | :--- | :--- | :--- |
 | **Cloud Topology** | Single-VM monolithic process | 5-Account isolated AWS cloud estate (Terraform) |
 | **Correlation Scale** | $O(10^5)$ pairwise checks, Pandas in-memory | **14+ Billion** pairwise rolling correlations, DuckDB SIMD |
