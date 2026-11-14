@@ -28,14 +28,16 @@ jobs:
       - name: Configure AWS credentials via OIDC
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::111111111111:role/github-actions-codespace-key-rotator
+          role-to-assume: arn:aws:iam::${{ secrets.AWS_MGMT_ACCOUNT_ID }}:role/github-actions-codespace-key-rotator
           aws-region: eu-central-1
 
       - name: List current access keys
         id: list_keys
+        env:
+          IAM_USER: ${{ secrets.IAM_DEPLOYER_USERNAME || 'qgi-terraform-deployer' }}
         run: |
           KEYS=$(aws iam list-access-keys \
-            --user-name qgi-terraform-deployer \
+            --user-name "$IAM_USER" \
             --query 'AccessKeyMetadata[].{Id:AccessKeyId,Created:CreateDate}' \
             --output json)
           echo "Current keys: $KEYS"
@@ -50,28 +52,34 @@ jobs:
 
       - name: Dry run — report key age
         if: inputs.dry_run == true
+        env:
+          IAM_USER: ${{ secrets.IAM_DEPLOYER_USERNAME || 'qgi-terraform-deployer' }}
         run: |
           aws iam list-access-keys \
-            --user-name qgi-terraform-deployer \
+            --user-name "$IAM_USER" \
             --query 'AccessKeyMetadata[].{Id:AccessKeyId,Status:Status,Created:CreateDate}' \
             --output table
           echo "Dry run complete. No keys were rotated."
 
       - name: Delete oldest key first if at 2-key IAM quota limit
         if: inputs.dry_run != true && steps.list_keys.outputs.key_count == '2'
+        env:
+          IAM_USER: ${{ secrets.IAM_DEPLOYER_USERNAME || 'qgi-terraform-deployer' }}
         run: |
           OLD_KEY_ID="${{ steps.list_keys.outputs.old_key_id }}"
           aws iam delete-access-key \
-            --user-name qgi-terraform-deployer \
+            --user-name "$IAM_USER" \
             --access-key-id "$OLD_KEY_ID"
           echo "Deleted oldest key ($OLD_KEY_ID) before creating new key to respect IAM 2-key quota."
 
       - name: Create new access key
         if: inputs.dry_run != true
         id: create_key
+        env:
+          IAM_USER: ${{ secrets.IAM_DEPLOYER_USERNAME || 'qgi-terraform-deployer' }}
         run: |
           NEW_KEY=$(aws iam create-access-key \
-            --user-name qgi-terraform-deployer \
+            --user-name "$IAM_USER" \
             --query 'AccessKey.{Id:AccessKeyId,Secret:SecretAccessKey}' \
             --output json)
           NEW_KEY_ID=$(echo "$NEW_KEY" | python3 -c "import sys,json; print(json.load(sys.stdin)['Id'])")
@@ -102,17 +110,21 @@ jobs:
 
       - name: Delete old access key (if key_count was 1 before creation)
         if: inputs.dry_run != true && steps.list_keys.outputs.key_count == '1' && steps.list_keys.outputs.old_key_id != ''
+        env:
+          IAM_USER: ${{ secrets.IAM_DEPLOYER_USERNAME || 'qgi-terraform-deployer' }}
         run: |
           OLD_KEY_ID="${{ steps.list_keys.outputs.old_key_id }}"
           aws iam delete-access-key \
-            --user-name qgi-terraform-deployer \
+            --user-name "$IAM_USER" \
             --access-key-id "$OLD_KEY_ID"
           echo "Deleted old key: $OLD_KEY_ID"
 
       - name: Verify final state
         if: inputs.dry_run != true
+        env:
+          IAM_USER: ${{ secrets.IAM_DEPLOYER_USERNAME || 'qgi-terraform-deployer' }}
         run: |
           aws iam list-access-keys \
-            --user-name qgi-terraform-deployer \
+            --user-name "$IAM_USER" \
             --query 'AccessKeyMetadata[].{Id:AccessKeyId,Status:Status,Created:CreateDate}' \
             --output table

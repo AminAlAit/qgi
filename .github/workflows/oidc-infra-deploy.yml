@@ -88,7 +88,7 @@ jobs:
       - name: Configure AWS Credentials (OIDC Staging)
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ vars.AWS_STAGING_DEPLOY_ROLE_ARN || 'arn:aws:iam::222222222222:role/github-actions-qgi-staging-deploy' }}
+          role-to-assume: ${{ secrets.AWS_STAGING_DEPLOY_ROLE_ARN || vars.AWS_STAGING_DEPLOY_ROLE_ARN }}
           aws-region: eu-central-1
           audience: sts.amazonaws.com
 
@@ -116,7 +116,7 @@ jobs:
       - name: Configure AWS Credentials (OIDC Staging)
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ vars.AWS_STAGING_DEPLOY_ROLE_ARN || 'arn:aws:iam::222222222222:role/github-actions-qgi-staging-deploy' }}
+          role-to-assume: ${{ secrets.AWS_STAGING_DEPLOY_ROLE_ARN || vars.AWS_STAGING_DEPLOY_ROLE_ARN }}
           aws-region: eu-central-1
           audience: sts.amazonaws.com
 
@@ -143,7 +143,7 @@ jobs:
       - name: Configure AWS Credentials (OIDC QA)
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ vars.AWS_QA_DEPLOY_ROLE_ARN || 'arn:aws:iam::333333333333:role/github-actions-qgi-qa-deploy' }}
+          role-to-assume: ${{ secrets.AWS_QA_DEPLOY_ROLE_ARN || vars.AWS_QA_DEPLOY_ROLE_ARN }}
           aws-region: eu-central-1
           audience: sts.amazonaws.com
 
@@ -171,7 +171,7 @@ jobs:
       - name: Configure AWS Credentials (OIDC QA)
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ vars.AWS_QA_DEPLOY_ROLE_ARN || 'arn:aws:iam::333333333333:role/github-actions-qgi-qa-deploy' }}
+          role-to-assume: ${{ secrets.AWS_QA_DEPLOY_ROLE_ARN || vars.AWS_QA_DEPLOY_ROLE_ARN }}
           aws-region: eu-central-1
           audience: sts.amazonaws.com
 
@@ -198,7 +198,7 @@ jobs:
       - name: Configure AWS Credentials (OIDC Production)
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ vars.AWS_PROD_DEPLOY_ROLE_ARN || 'arn:aws:iam::444444444444:role/github-actions-qgi-prod-deploy' }}
+          role-to-assume: ${{ secrets.AWS_PROD_DEPLOY_ROLE_ARN || vars.AWS_PROD_DEPLOY_ROLE_ARN }}
           aws-region: eu-central-1
           audience: sts.amazonaws.com
 
@@ -226,7 +226,7 @@ jobs:
       - name: Configure AWS Credentials (OIDC Production)
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ vars.AWS_PROD_DEPLOY_ROLE_ARN || 'arn:aws:iam::444444444444:role/github-actions-qgi-prod-deploy' }}
+          role-to-assume: ${{ secrets.AWS_PROD_DEPLOY_ROLE_ARN || vars.AWS_PROD_DEPLOY_ROLE_ARN }}
           aws-region: eu-central-1
           audience: sts.amazonaws.com
 

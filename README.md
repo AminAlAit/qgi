@@ -11,7 +11,7 @@ QGI is an enterprise-grade cloud data platform and quantitative risk modeling en
 
 Live Interactive Platform: **[https://qgintelligence.com](https://qgintelligence.com)**
 
-> **Historical Lineage:** Looking for the original 2024 rapid-research prototype built in Python and Streamlit? View the preserved QGI 3.0 showcase at **[AminAlAit/qgi-3.0](https://github.com/AminAlAit/qgi-3.0)** *(formerly `AminAlAit/qgi-streamlit`)*.
+> **Generation 7.0 of 7.0 (Flagship Production Monorepo):** `AminAlAit/qgi` is the active seventh-generation unified monorepo powering **[https://qgintelligence.com](https://qgintelligence.com)**. For historical prototypes—including the 2024 public Streamlit showcase (`qgi-3.0`, formerly `qgi-streamlit`)—see the seven-generation roadmap below.
 
 ---
 
@@ -135,6 +135,18 @@ pwsh -ExecutionPolicy Bypass -File ./scripts/verify-monorepo.ps1
 ## Historical Evolution: 2023–2024 Prototypes to 2026 Distributed Monorepo (QGI 7.0)
 
 QGI evolved through seven architectural generations — from initial 2023 pairwise country correlation prototypes (`qgi-1.0` / `trojan`, `qgi-2.0` / `trojan-2.0`) and the 2024 public Streamlit prototype ([AminAlAit/qgi-3.0](https://github.com/AminAlAit/qgi-3.0), formerly `qgi-streamlit`), through local SCDI formalization (`qgi-4.0`) and multi-repo AWS cloud migrations (`qgi-5.0`, `qgi-6.0`), to this unified **QGI 7.0** production monorepo (`AminAlAit/qgi`). As indicator density expanded across 214 sovereign entities and six decades of historical records, memory constraints and execution latencies mandated an enterprise re-architecture: separating compute from state, enforcing multi-tenant cloud blast-radius isolation, and optimizing vectorized columnar pipelines for sub-second terminal queries.
+
+### Seven-Generation Evolutionary Roadmap (`v1.0` → `v7.0`)
+
+| Generation | Repository | Era & Focus | Status |
+| :--- | :--- | :--- | :--- |
+| **QGI 1.0** (`v1.0`) | [AminAlAit/qgi-1.0](https://github.com/AminAlAit/qgi-1.0) | 2023 — Initial pairwise country correlation scripts (`trojan`) | Public Archive |
+| **QGI 2.0** (`v2.0`) | [AminAlAit/qgi-2.0](https://github.com/AminAlAit/qgi-2.0) | 2023 — Expanded cross-indicator correlation matrix prototype | Public Archive |
+| **QGI 3.0** (`v3.0`) | [AminAlAit/qgi-3.0](https://github.com/AminAlAit/qgi-3.0) | 2024 — Interactive Python & Streamlit prototype (formerly `qgi-streamlit`) | Public Archive |
+| **QGI 4.0** (`v4.0`) | [AminAlAit/qgi-4.0](https://github.com/AminAlAit/qgi-4.0) | 2025 — Local SCDI formalization and ingestion foundation | Public Archive |
+| **QGI 5.0** (`v5.0`) | [AminAlAit/qgi-5.0](https://github.com/AminAlAit/qgi-5.0) | 2025 — First AWS S3/Batch/DynamoDB multi-account cloud architecture | Public Active |
+| **QGI 6.0** (`v6.0`) | [AminAlAit/qgi-6.0](https://github.com/AminAlAit/qgi-6.0) | 2026 — Decoupled Medallion lakehouse, ML calibration & Next.js platform | Public Active |
+| **QGI 7.0** (`v7.0`) | [AminAlAit/qgi](https://github.com/AminAlAit/qgi) | 2026 — Unified 5-component production monorepo & live CI/CD (`qgintelligence.com`) | **Flagship Active** |
 
 | Architectural Dimension | 2024 Prototype (`qgi-3.0` / `qgi-streamlit`) | 2026 Production Monorepo (`qgi` / QGI 7.0) |
 | :--- | :--- | :--- |

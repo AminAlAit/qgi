@@ -32,15 +32,13 @@ on:
 jobs:
   # ------------------------------------------------------------------
   # Management-account push — scdi-finder + dscdi-finder only.
-  # Uses the existing github-actions-qgi-ecr-push role in 111111111111.
+  # Uses the existing github-actions-qgi-ecr-push role in the management AWS account.
   # ------------------------------------------------------------------
   build-push-management:
     runs-on: ubuntu-latest
     permissions:
       id-token: write
       contents: read
-    env:
-      ECR_REGISTRY: 111111111111.dkr.ecr.eu-central-1.amazonaws.com
     steps:
       - uses: actions/checkout@v4
         with:
@@ -48,7 +46,7 @@ jobs:
 
       - uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::111111111111:role/github-actions-qgi-ecr-push
+          role-to-assume: arn:aws:iam::${{ secrets.AWS_MGMT_ACCOUNT_ID }}:role/github-actions-qgi-ecr-push
           aws-region: eu-central-1
 
       - uses: aws-actions/amazon-ecr-login@v2
@@ -74,6 +72,8 @@ jobs:
 
       - name: Build and push scdi-finder
         if: steps.changed.outputs.scdi == '1'
+        env:
+          ECR_REGISTRY: ${{ secrets.AWS_MGMT_ACCOUNT_ID }}.dkr.ecr.eu-central-1.amazonaws.com
         run: |
           IMAGE_TAG=${GITHUB_SHA::8}
           IMAGE_REPO=$ECR_REGISTRY/qgi-pipeline-b-scdi-finder
@@ -82,6 +82,8 @@ jobs:
 
       - name: Build and push dscdi-finder
         if: steps.changed.outputs.dscdi == '1'
+        env:
+          ECR_REGISTRY: ${{ secrets.AWS_MGMT_ACCOUNT_ID }}.dkr.ecr.eu-central-1.amazonaws.com
         run: |
           IMAGE_TAG=${GITHUB_SHA::8}
           IMAGE_REPO=$ECR_REGISTRY/qgi-pipeline-b-dscdi-finder
@@ -89,7 +91,7 @@ jobs:
           docker buildx build --platform linux/arm64 -t $IMAGE_REPO:latest      --push pipeline/batch/dscdi-finder/
 
   # ------------------------------------------------------------------
-  # Staging-account push — Phase 1 fetchers + recipe-fleet in 222222222222 ECR.
+  # Staging-account push — Phase 1 fetchers + recipe-fleet in staging ECR.
   # Zero cross-repo checkouts needed: ml/ and data-tools/ reside directly
   # in the unified AminAlAit/qgi monorepo checkout.
   # ------------------------------------------------------------------
@@ -98,8 +100,6 @@ jobs:
     permissions:
       id-token: write
       contents: read
-    env:
-      ECR_REGISTRY: 222222222222.dkr.ecr.eu-central-1.amazonaws.com
     steps:
       - uses: actions/checkout@v4
         with:
@@ -107,7 +107,7 @@ jobs:
 
       - uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::222222222222:role/github-actions-qgi-ecr-push
+          role-to-assume: arn:aws:iam::${{ secrets.AWS_STAGING_ACCOUNT_ID }}:role/github-actions-qgi-ecr-push
           aws-region: eu-central-1
 
       - uses: aws-actions/amazon-ecr-login@v2
@@ -158,6 +158,8 @@ jobs:
 
       - name: Build and push indicator-fetcher (WB) — staging
         if: steps.changed.outputs.fetcher == '1'
+        env:
+          ECR_REGISTRY: ${{ secrets.AWS_STAGING_ACCOUNT_ID }}.dkr.ecr.eu-central-1.amazonaws.com
         run: |
           IMAGE_TAG=${GITHUB_SHA::8}
           IMAGE_REPO=$ECR_REGISTRY/qgi-pipeline-a-indicator-fetcher
@@ -166,6 +168,8 @@ jobs:
 
       - name: Build and push indicator-fetcher-fao (FAOSTAT) — staging
         if: steps.changed.outputs.fao == '1'
+        env:
+          ECR_REGISTRY: ${{ secrets.AWS_STAGING_ACCOUNT_ID }}.dkr.ecr.eu-central-1.amazonaws.com
         run: |
           IMAGE_TAG=${GITHUB_SHA::8}
           IMAGE_REPO=$ECR_REGISTRY/qgi-pipeline-a-indicator-fetcher-fao
@@ -188,6 +192,7 @@ jobs:
             fi
           done
         env:
+          ECR_REGISTRY: ${{ secrets.AWS_STAGING_ACCOUNT_ID }}.dkr.ecr.eu-central-1.amazonaws.com
           FETCHER_FAOSTAT: ${{ steps.changed.outputs.fetcher_faostat }}
           FETCHER_IDMC: ${{ steps.changed.outputs.fetcher_idmc }}
           FETCHER_ILOSTAT: ${{ steps.changed.outputs.fetcher_ilostat }}
@@ -199,6 +204,8 @@ jobs:
 
       - name: Stage data-tools assets + build and push qgi-vdem-ingest — staging
         if: steps.changed.outputs.vdem == '1'
+        env:
+          ECR_REGISTRY: ${{ secrets.AWS_STAGING_ACCOUNT_ID }}.dkr.ecr.eu-central-1.amazonaws.com
         run: |
           bash pipeline/batch/qgi-vdem-ingest/stage-qgi-data-assets.sh data-tools
           IMAGE_TAG=${GITHUB_SHA::8}
@@ -212,6 +219,8 @@ jobs:
 
       - name: Build and push qgi-recipe-fleet — staging
         if: steps.changed.outputs.recipe_fleet == '1'
+        env:
+          ECR_REGISTRY: ${{ secrets.AWS_STAGING_ACCOUNT_ID }}.dkr.ecr.eu-central-1.amazonaws.com
         run: |
           IMAGE_TAG=${GITHUB_SHA::8}
           IMAGE_REPO=$ECR_REGISTRY/qgi-recipe-fleet

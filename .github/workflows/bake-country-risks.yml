@@ -12,9 +12,9 @@ on:
   workflow_dispatch:
     inputs:
       bucket:
-        description: "S3 bucket the file came from (for commit message traceability)"
+        description: "S3 bucket override (defaults to S3_STAGING_BUCKET secret)"
         required: false
-        default: "qgi-data-lake-222222222222"
+        default: ""
       key:
         description: "S3 key"
         required: false
@@ -50,12 +50,12 @@ jobs:
       - name: Configure AWS credentials via OIDC
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::222222222222:role/github-actions-qgi-frontend-s3-read
+          role-to-assume: arn:aws:iam::${{ secrets.AWS_STAGING_ACCOUNT_ID }}:role/github-actions-qgi-frontend-s3-read
           aws-region: eu-central-1
 
       - name: Pull country-risks.json from S3
         env:
-          S3_BUCKET: ${{ inputs.bucket || 'qgi-data-lake-222222222222' }}
+          S3_BUCKET: ${{ inputs.bucket || secrets.S3_STAGING_BUCKET }}
           S3_KEY: ${{ inputs.key || 'dashboard/country-risks.json' }}
         run: |
           aws s3 cp \
@@ -65,7 +65,6 @@ jobs:
       - name: Commit + open PR if changed
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          S3_BUCKET: ${{ inputs.bucket || 'qgi-data-lake-222222222222' }}
           S3_KEY: ${{ inputs.key || 'dashboard/country-risks.json' }}
           ETAG: ${{ inputs.etag }}
           CUSTOM_MSG: ${{ inputs.message }}
@@ -78,7 +77,7 @@ jobs:
             exit 0
           fi
 
-          default_msg="chore(data): bake country-risks.json from s3://${S3_BUCKET}/${S3_KEY}"
+          default_msg="chore(data): update country-risks.json snapshot"
           if [ -n "$ETAG" ]; then
             default_msg="$default_msg (etag ${ETAG:0:8})"
           fi
@@ -87,14 +86,19 @@ jobs:
             msg="$default_msg"
           fi
 
-          branch="chore/bake-country-risks-$(date -u +%Y%m%d-%H%M%S)"
-          git checkout -b "$branch"
+          branch="chore/bake-country-risks"
+          git fetch origin "$branch" 2>/dev/null || true
+          git checkout -B "$branch"
           git add data/country-risks.json
           git commit -m "$msg"
-          git push origin "$branch"
+          git push --force-with-lease origin "$branch"
 
-          gh pr create \
-            --title "$msg" \
-            --body "Automated S3 country-risks.json bake from \`s3://${S3_BUCKET}/${S3_KEY}\`." \
-            --base main \
-            --head "$branch"
+          if gh pr list --head "$branch" --state open --json number --jq '.[0].number' | grep -q .; then
+            echo "Open PR already exists for $branch — updated branch in place."
+          else
+            gh pr create \
+              --title "$msg" \
+              --body "Automated \`frontend/data/country-risks.json\` snapshot update." \
+              --base main \
+              --head "$branch"
+          fi

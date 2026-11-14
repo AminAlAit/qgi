@@ -43,7 +43,7 @@ jobs:
         if: github.ref == 'refs/heads/main' || (github.event_name == 'workflow_dispatch' && inputs.environment == 'staging')
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::222222222222:role/github-actions-qgi-lambda-deploy
+          role-to-assume: arn:aws:iam::${{ secrets.AWS_STAGING_ACCOUNT_ID }}:role/github-actions-qgi-lambda-deploy
           aws-region: eu-central-1
 
       # QA: rc-* tags or workflow_dispatch targeting qa
@@ -51,7 +51,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/rc-') || (github.event_name == 'workflow_dispatch' && inputs.environment == 'qa')
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::333333333333:role/github-actions-qgi-lambda-deploy
+          role-to-assume: arn:aws:iam::${{ secrets.AWS_QA_ACCOUNT_ID }}:role/github-actions-qgi-lambda-deploy
           aws-region: eu-central-1
 
       # Prod: v* tags or workflow_dispatch targeting prod
@@ -59,7 +59,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/v') || (github.event_name == 'workflow_dispatch' && inputs.environment == 'prod')
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::444444444444:role/github-actions-qgi-lambda-deploy
+          role-to-assume: arn:aws:iam::${{ secrets.AWS_PROD_ACCOUNT_ID }}:role/github-actions-qgi-lambda-deploy
           aws-region: eu-central-1
 
       - uses: actions/setup-python@v5
