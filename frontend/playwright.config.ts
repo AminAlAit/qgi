@@ -30,7 +30,7 @@ export default defineConfig({
   // fail or hit the wrong target). The synthetic workflow invokes
   // Playwright with an explicit `tests/e2e/synthetic` path that
   // overrides this ignore.
-  testIgnore: ["**/synthetic/**"],
+  testIgnore: process.env.PLAYWRIGHT_SYNTHETIC === "1" ? [] : ["**/synthetic/**"],
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
