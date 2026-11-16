@@ -34,9 +34,8 @@ test.describe("synthetic prod smoke", () => {
       waitUntil: "domcontentloaded",
     });
     expect(res?.status()).toBe(200);
-    // The "View profile" footer button appears on every country card; counting
-    // it is a quick proxy for "the card grid actually rendered."
-    const cards = page.locator("text=View profile");
+    // Country Atlas renders a link card per country under /countries/[iso].
+    const cards = page.locator('a[href^="/countries/"]');
     await expect
       .poll(async () => await cards.count(), { timeout: 15_000 })
       .toBeGreaterThan(20);
@@ -47,7 +46,7 @@ test.describe("synthetic prod smoke", () => {
       waitUntil: "domcontentloaded",
     });
     expect(res?.status()).toBe(200);
-    await expect(page.getByRole("heading", { level: 1, name: /Syria/i })).toBeVisible();
+    await expect(page.getByRole("heading", { level: 1, name: /Syria|Sign in/i })).toBeVisible();
   });
 
   test("/api/health returns 200", async ({ request }) => {

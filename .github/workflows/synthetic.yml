@@ -40,6 +40,7 @@ jobs:
         run: npx playwright test tests/e2e/synthetic --project=chromium
         env:
           PLAYWRIGHT_BASE_URL: "https://qgintelligence.com"
+          PLAYWRIGHT_SYNTHETIC: "1"
           CI: "true"
 
       - name: Upload Playwright report on failure
