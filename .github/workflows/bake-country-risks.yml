@@ -53,14 +53,34 @@ jobs:
           role-to-assume: arn:aws:iam::${{ secrets.AWS_STAGING_ACCOUNT_ID }}:role/github-actions-qgi-frontend-s3-read
           aws-region: eu-central-1
 
-      - name: Pull country-risks.json from S3
+      - name: Pull & augment country-risks.json from S3
         env:
           S3_BUCKET: ${{ inputs.bucket || secrets.S3_STAGING_BUCKET }}
           S3_KEY: ${{ inputs.key || 'dashboard/country-risks.json' }}
         run: |
           aws s3 cp \
             "s3://${S3_BUCKET}/${S3_KEY}" \
-            data/country-risks.json
+            /tmp/s3-country-risks.json
+
+          python3 ../ml/scripts/augment_country_risks_with_qgi_risk_score.py \
+            --input /tmp/s3-country-risks.json \
+            --output /tmp/s3-country-risks.json \
+            --ml-recipe-stack data/ml-recipe-stack.json
+
+          python3 - <<'PY'
+          import json, shutil
+          with open("/tmp/s3-country-risks.json", encoding="utf-8") as f:
+              cand = json.load(f)
+          with open("data/country-risks.json", encoding="utf-8") as f:
+              curr = json.load(f)
+          cand_cmp = {k: v for k, v in cand.items() if k != "qgi_risk_score_baked_at"}
+          curr_cmp = {k: v for k, v in curr.items() if k != "qgi_risk_score_baked_at"}
+          if cand_cmp == curr_cmp:
+              print("S3 snapshot matches current frontend/data/country-risks.json (ignoring qgi_risk_score_baked_at) — skipping write.")
+          else:
+              shutil.copyfile("/tmp/s3-country-risks.json", "data/country-risks.json")
+              print("Updated frontend/data/country-risks.json with augmented v3 S3 snapshot.")
+          PY
 
       - name: Commit + open PR if changed
         env:
